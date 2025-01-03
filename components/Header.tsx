@@ -14,10 +14,10 @@ export default function Header() {
           </Link>
           <nav>
             <ul className="flex space-x-6">
-              <li><Link href="/about" className="text-white hover:text-pink-500 transition-colors">About</Link></li>
-              <li><Link href="/features" className="text-white hover:text-pink-500 transition-colors">Features</Link></li>
-              <li><Link href="/testimonials" className="text-white hover:text-pink-500 transition-colors">Testimonials</Link></li>
-              <li><Link href="/faq" className="text-white hover:text-pink-500 transition-colors">FAQ</Link></li>
+              <li><Link href="/#about" className="text-white hover:text-pink-500 transition-colors">About</Link></li>
+              <li><Link href="/#features" className="text-white hover:text-pink-500 transition-colors">Features</Link></li>
+              <li><Link href="/#testimonials" className="text-white hover:text-pink-500 transition-colors">Testimonials</Link></li>
+              <li><Link href="/#faq" className="text-white hover:text-pink-500 transition-colors">FAQ</Link></li>
               <li><Link href="/free-tools" className="text-white hover:text-pink-500 transition-colors">Free Tools</Link></li>
             </ul>
           </nav>

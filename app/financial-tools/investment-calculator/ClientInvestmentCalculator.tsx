@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import InvestmentCalculator from '@/components/InvestmentCalculator'
@@ -14,7 +15,7 @@ export default function ClientInvestmentCalculator() {
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/tools" 
+          href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -36,7 +37,7 @@ export default function ClientInvestmentCalculator() {
             <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
             <ul className="space-y-4 text-gray-300">
               <li>
-                <strong className="text-pink-500">Initial Investment:</strong> Enter the amount you're starting with or have already invested.
+                <strong className="text-pink-500">Initial Investment:</strong> {`Enter the amount you're starting with or have already invested.`}
               </li>
               <li>
                 <strong className="text-pink-500">Monthly Contribution:</strong> The amount you plan to add to your investment each month.
@@ -53,7 +54,7 @@ export default function ClientInvestmentCalculator() {
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Invest in Your Affiliate Marketing Career</h2>
             <p className="text-gray-300 mb-4">
-              While planning your financial future is crucial, investing in your skills can lead to exponential growth in your earning potential. John Crestani's Super Affiliate System Pro teaches you how to:
+             {` While planning your financial future is crucial, investing in your skills can lead to exponential growth in your earning potential. John Crestani's Super Affiliate System Pro teaches you how to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li>Identify lucrative affiliate marketing opportunities</li>
@@ -70,7 +71,7 @@ export default function ClientInvestmentCalculator() {
           </div>
         </div>
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

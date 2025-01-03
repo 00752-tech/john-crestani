@@ -16,12 +16,12 @@ export default function CompoundInterestCalculator() {
       weekly: 52,
       monthly: 12,
       quarterly: 4,
-      annually: 1
-    }[compoundingFrequency]
-
-    const r = annualRate / 100 / periodsPerYear
-    const n = periodsPerYear * years
-    const monthlyToPerPeriod = monthlyContribution * 12 / periodsPerYear
+      annually: 1,
+    }[compoundingFrequency] ?? 1; // Default to 1 if compoundingFrequency is invalid
+    
+    const r = annualRate / 100 / periodsPerYear;
+    const n = periodsPerYear * years;
+    const monthlyToPerPeriod = monthlyContribution * 12 / periodsPerYear;
 
     const amount = principal * Math.pow(1 + r, n) +
       monthlyToPerPeriod * (Math.pow(1 + r, n) - 1) / r
@@ -128,7 +128,7 @@ export default function CompoundInterestCalculator() {
       </div>
       <div className="mt-6 text-sm text-gray-400">
         <p>This calculator shows the power of compound interest over time. While traditional investments can grow your wealth slowly, consider accelerating your earnings through affiliate marketing.</p>
-        <p className="mt-2">Want to learn how to generate higher returns? Check out John Crestani's <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p className="mt-2">{`Want to learn how to generate higher returns? Check out John Crestani's`} <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

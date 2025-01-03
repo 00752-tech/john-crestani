@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import NicheProfitabilityCalculator from '@/components/NicheProfitabilityCalculator'
@@ -19,7 +20,7 @@ export default function ClientNicheProfitabilityCalculator() {
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/tools" 
+          href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -62,7 +63,7 @@ export default function ClientNicheProfitabilityCalculator() {
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Master Niche Selection with John Crestani</h2>
             <p className="text-gray-300 mb-4">
-              While this calculator provides valuable insights, successful niche selection requires more than just numbers. John Crestani's Super Affiliate System Pro teaches you:
+              {`While this calculator provides valuable insights, successful niche selection requires more than just numbers. John Crestani's Super Affiliate System Pro teaches you:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li>How to identify untapped, profitable niches</li>
@@ -79,7 +80,7 @@ export default function ClientNicheProfitabilityCalculator() {
           </div>
         </div>
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

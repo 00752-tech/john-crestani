@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import DropshippingCalculator from '@/components/DropshippingCalculator'
@@ -19,7 +20,7 @@ export default function ClientDropshippingCalculator() {
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/tools" 
+          href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -82,7 +83,7 @@ export default function ClientDropshippingCalculator() {
           </div>
         </div>
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

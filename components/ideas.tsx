@@ -1,4 +1,4 @@
-const calculatorIdeas = [
+export const calculatorIdeas = [
   {
     name: "Debt Payoff Calculator",
     description: "Help users plan their debt repayment strategy while introducing affiliate marketing as an additional income stream to accelerate debt repayment.",

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import ROASCalculator from '@/components/ROASCalculator'
@@ -19,7 +20,7 @@ export default function ClientROASCalculator() {
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/tools" 
+          href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -45,13 +46,13 @@ export default function ClientROASCalculator() {
             <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
             <ul className="space-y-4 text-gray-300">
               <li>
-                <strong className="text-pink-500">Ad Spend:</strong> Enter the total amount you've spent on your advertising campaign.
+                <strong className="text-pink-500">Ad Spend:</strong> {`Enter the total amount you've spent on your advertising campaign.`}
               </li>
               <li>
                 <strong className="text-pink-500">Revenue:</strong> Input the total revenue generated from the campaign.
               </li>
               <li>
-                <strong className="text-pink-500">Interpreting ROAS:</strong> A ROAS of 1 means you're breaking even. Anything above 1 indicates profit, while below 1 means you're losing money on your ads.
+                <strong className="text-pink-500">Interpreting ROAS:</strong> {`A ROAS of 1 means you're breaking even. Anything above 1 indicates profit, while below 1 means you're losing money on your ads.`}
               </li>
             </ul>
           </div>
@@ -59,7 +60,7 @@ export default function ClientROASCalculator() {
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Maximize Your ROAS with John Crestani</h2>
             <p className="text-gray-300 mb-4">
-              Improving your ROAS is crucial for profitable affiliate marketing. John Crestani's Super Affiliate System Pro teaches you how to:
+              {`Improving your ROAS is crucial for profitable affiliate marketing. John Crestani's Super Affiliate System Pro teaches you how to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li>Create high-converting ad campaigns</li>
@@ -76,7 +77,7 @@ export default function ClientROASCalculator() {
           </div>
         </div>
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

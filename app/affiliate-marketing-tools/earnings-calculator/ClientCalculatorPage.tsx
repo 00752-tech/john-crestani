@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import AffiliateEarningsCalculator from '@/components/AffiliateEarningsCalculator'
@@ -60,7 +61,7 @@ export default function ClientCalculatorPage() {
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Want to Achieve These Numbers?</h2>
             <p className="text-gray-300 mb-4">
-              John Crestani's Super Affiliate System Pro teaches you proven strategies to:
+              {`John Crestani's Super Affiliate System Pro teaches you proven strategies to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li>Drive targeted traffic to your affiliate offers</li>
@@ -80,7 +81,7 @@ export default function ClientCalculatorPage() {
           <RelatedTools currentToolUrl="/affiliate-marketing-tools/earnings-calculator" category="affiliate" />
         </div>
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

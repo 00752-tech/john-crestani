@@ -16,7 +16,7 @@ export default function Features() {
   return (
     <section id="features" className="py-20 bg-black text-white">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center gradient-text">What's Inside Super Affiliate System Pro 2025</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center gradient-text">{`What's Inside Super Affiliate System Pro 2025`}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             {features.map((feature, index) => (

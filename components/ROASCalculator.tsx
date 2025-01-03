@@ -51,8 +51,8 @@ export default function ROASCalculator() {
         <p className="text-4xl font-bold text-pink-500">{roasValue.toFixed(2)}x</p>
       </div>
       <div className="mt-6 text-sm text-gray-400">
-        <p>ROAS (Return on Ad Spend) is a marketing metric that measures the revenue generated for every dollar spent on advertising. A ROAS of 1x means you're breaking even, while anything above 1x indicates profit.</p>
-        <p className="mt-2">Want to learn how to maximize your ROAS? Check out John Crestani's <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p>{`ROAS (Return on Ad Spend) is a marketing metric that measures the revenue generated for every dollar spent on advertising. A ROAS of 1x means you're breaking even, while anything above 1x indicates profit.`}</p>
+        <p className="mt-2">{`Want to learn how to maximize your ROAS? Check out John Crestani's `}<a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

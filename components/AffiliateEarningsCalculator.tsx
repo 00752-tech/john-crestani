@@ -63,7 +63,7 @@ export default function AffiliateEarningsCalculator() {
       </div>
       <div className="mt-6 text-sm text-gray-400">
         <p>This calculator provides an estimate based on the given inputs. Actual earnings may vary depending on various factors such as niche, product quality, and marketing strategies.</p>
-        <p className="mt-2">Want to learn how to achieve these numbers? Check out John Crestani's <a href="#" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p className="mt-2">{`Want to learn how to achieve these numbers? Check out John Crestani's`} <a href="#" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

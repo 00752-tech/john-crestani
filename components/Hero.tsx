@@ -19,7 +19,7 @@ export default function Hero() {
             Master Affiliate Marketing in 2025
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            <span className="gradient-text-purple">John Crestani's Super</span>{' '}
+            <span className="gradient-text-purple">{`John Crestani's Super`}</span>{' '}
             <span className="gradient-text-green">Affiliate System Pro</span>
           </h2>
           <p className="text-xl mb-8">Now Updated for the Digital Landscape of 2025</p>

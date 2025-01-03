@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import InfluencerEarningsCalculator from '@/components/InfluencerEarningsCalculator'
@@ -18,7 +19,7 @@ export default function ClientInfluencerEarningsCalculator() {
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/tools" 
+          href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -47,7 +48,7 @@ export default function ClientInfluencerEarningsCalculator() {
                 <strong className="text-pink-500">Enter your number of followers:</strong> Input your total follower count across all platforms.
               </li>
               <li>
-                <strong className="text-pink-500">Input your engagement rate:</strong> This is the percentage of your followers who interact with your posts. If you're unsure, 3% is a good starting point.
+                <strong className="text-pink-500">Input your engagement rate:</strong> {`This is the percentage of your followers who interact with your posts. If you're unsure, 3% is a good starting point.`}
               </li>
               <li>
                 <strong className="text-pink-500">Set your sponsored posts per month:</strong> Enter the number of sponsored posts you plan to create each month.
@@ -61,7 +62,7 @@ export default function ClientInfluencerEarningsCalculator() {
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Maximize Your Influence with John Crestani</h2>
             <p className="text-gray-300 mb-4">
-              While being an influencer can be lucrative, combining it with affiliate marketing can significantly boost your earnings. John Crestani's Super Affiliate System Pro teaches you how to:
+             {` While being an influencer can be lucrative, combining it with affiliate marketing can significantly boost your earnings. John Crestani's Super Affiliate System Pro teaches you how to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li>Leverage your influence to promote high-converting affiliate offers</li>
@@ -110,7 +111,7 @@ export default function ClientInfluencerEarningsCalculator() {
           }}
         />
 
-        <JsonLd<FAQPage>
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",

@@ -102,7 +102,7 @@ export default function AffiliateLinkCTROptimizer() {
       </div>
       <div className="mt-6 text-sm text-gray-400">
         <p>This optimizer provides estimates based on general best practices. Actual results may vary depending on your specific niche, audience, and content.</p>
-        <p className="mt-2">Want to learn advanced techniques for optimizing your affiliate links? Check out John Crestani's <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p className="mt-2">{`Want to learn advanced techniques for optimizing your affiliate links? Check out John Crestani's`} <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

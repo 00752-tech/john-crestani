@@ -24,7 +24,7 @@ export default function ShareButtons({ url, title }: ShareButtonsProps) {
         <Share2 className="w-5 h-5 mr-2" />
         Share
       </span>
-      <FacebookShareButton url={url} quote={title}>
+      <FacebookShareButton url={url} title={title} >
         <FacebookIcon size={32} round />
       </FacebookShareButton>
       <TwitterShareButton url={url} title={title}>

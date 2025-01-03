@@ -109,7 +109,7 @@ export default function NicheProfitabilityCalculator() {
       </div>
       <div className="mt-6 text-sm text-gray-400">
         <p>This calculator provides estimates based on the given inputs. Actual profitability may vary depending on various factors such as competition, market trends, and your marketing strategy.</p>
-        <p className="mt-2">Want to learn how to find and dominate profitable niches? Check out John Crestani's <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p className="mt-2">{`Want to learn how to find and dominate profitable niches? Check out John Crestani's`} <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

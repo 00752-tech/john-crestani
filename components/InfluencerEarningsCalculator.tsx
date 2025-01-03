@@ -72,7 +72,7 @@ export default function InfluencerEarningsCalculator() {
           <li>Higher engagement rates typically lead to better earning potential.</li>
           <li>Consistent posting and audience growth can increase your earnings over time.</li>
         </ul>
-        <p className="mt-4">Want to learn how to maximize your influence and earnings? Check out John Crestani's <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
+        <p className="mt-4">{`Want to learn how to maximize your influence and earnings? Check out John Crestani's`} <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
       </div>
     </div>
   )

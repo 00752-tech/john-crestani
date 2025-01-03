@@ -1,4 +1,8 @@
-let myString = "This string contains &quot;double quotes&quot; and &apos;single quotes&apos;.";
+/* eslint-disable prefer-const */
+import React from 'react'
+
+const AboutPage = () => {
+  let myString = "This string contains &quot;double quotes&quot; and &apos;single quotes&apos;.";
 console.log(myString);
 
 let anotherString = 'This string also contains &quot;double quotes&quot; and &apos;single quotes&apos;.';
@@ -20,3 +24,10 @@ myFunction();
 `;
 console.log(myJavascript);
 
+
+  return (
+    <div>AboutPage</div>
+  )
+}
+
+export default AboutPage

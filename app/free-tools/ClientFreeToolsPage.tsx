@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2, Search } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'

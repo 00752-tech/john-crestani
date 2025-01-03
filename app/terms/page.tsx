@@ -64,14 +64,14 @@ export default function TermsAndConditions() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-white">5. Disclaimer</h2>
             <p>
-              The materials on JohnCrestani.me's website are provided on an 'as is' basis. JohnCrestani.me makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              {`The materials on JohnCrestani.me's website are provided on an 'as is' basis. JohnCrestani.me makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.`}
             </p>
           </section>
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-white">6. Limitations</h2>
             <p>
-              In no event shall JohnCrestani.me or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on JohnCrestani.me's website.
+            {`  In no event shall JohnCrestani.me or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on JohnCrestani.me's website.`}
             </p>
           </section>
 

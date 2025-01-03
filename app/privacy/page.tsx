@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-white">1. Introduction</h2>
             <p>
-              Welcome to JohnCrestani.me ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website (JohnCrestani.me) and tell you about your privacy rights and how the law protects you.
+             {` Welcome to JohnCrestani.me ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website (JohnCrestani.me) and tell you about your privacy rights and how the law protects you.`}
             </p>
           </section>
 
