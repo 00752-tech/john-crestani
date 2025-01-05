@@ -1,7 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google"
+import { GoogleTagManager } from "@next/third-parties/google";
+import StructuredData from "./structure-data";
+import { CookieConsent } from "@/components/CookieConcent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Crestani 2025: Is His Training Still Top Tier?",
+    title: "John Crestani 2025: Uncover the latest in affiliate marketing training. Is it worth your time?",
     description:
       "Discover if John Crestani's affiliate marketing strategies remain unbeaten in 2025. Get the inside scoop and claim your free webinar invite.",
     images: [
@@ -46,8 +48,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-     <GoogleTagManager gtmId="G-R5SXJEQF8Z" />
-      <body className={inter.className}>{children}</body>
+      <head>
+        <StructuredData />
+      </head>
+      <GoogleTagManager gtmId="G-R5SXJEQF8Z" />
+      <CookieConsent />
+      <body  className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { TrendingUp } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function InvestmentCalculator() {
   const [initialInvestment, setInitialInvestment] = useState<number>(1000)
@@ -18,7 +19,12 @@ export default function InvestmentCalculator() {
   }
 
   return (
-    <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
+    >
       <h2 className="text-2xl font-bold mb-4 flex items-center">
         <TrendingUp className="mr-2 text-pink-500" />
         Investment Calculator
@@ -73,15 +79,32 @@ export default function InvestmentCalculator() {
           />
         </div>
       </div>
-      <div className="mt-6">
+      <motion.div 
+        className="mt-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
         <h3 className="text-xl font-semibold mb-2">Estimated Future Value</h3>
-        <p className="text-4xl font-bold text-pink-500">${calculateInvestment().toLocaleString()}</p>
-      </div>
-      <div className="mt-6 text-sm text-gray-400">
+        <motion.p 
+          key={calculateInvestment()}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          className="text-4xl font-bold text-pink-500"
+        >
+          ${calculateInvestment().toLocaleString()}
+        </motion.p>
+      </motion.div>
+      <motion.div 
+        className="mt-6 text-sm text-gray-400"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
         <p>This calculator provides an estimate based on the given inputs. Actual investment returns may vary depending on market conditions and other factors.</p>
         <p className="mt-2">{`Want to learn how to leverage your investments for affiliate marketing? Check out John Crestani's `}<a href="#" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

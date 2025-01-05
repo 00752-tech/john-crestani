@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import RelatedTools from '@/components/RelatedTools'
+import { motion } from 'framer-motion'
 
 export default function ClientNicheProfitabilityCalculator() {
   const handleLearnMore = () => {
@@ -19,57 +20,157 @@ export default function ClientNicheProfitabilityCalculator() {
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link 
-          href="/free-tools" 
-          className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
         >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Tools
-        </Link>
+          <Link 
+            href="/free-tools" 
+            className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Tools
+          </Link>
+        </motion.div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+        >
           Niche Profitability Calculator
-        </h1>
+        </motion.h1>
         
         <div className="max-w-3xl mx-auto mb-12">
-          <p className="text-xl text-center mb-8 text-gray-300">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-xl text-center mb-8 text-gray-300"
+          >
             Estimate the potential profitability of different niches for your affiliate marketing campaigns. Input key metrics to see projected clicks, costs, conversions, revenue, and profit.
-          </p>
+          </motion.p>
           
-          <NicheProfitabilityCalculator />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <NicheProfitabilityCalculator />
+          </motion.div>
           
           <div className="mt-8">
             <ShareButtons url={pageUrl} title={pageTitle} />
           </div>
           
-          <div className="mt-12 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-gray-900 p-8 rounded-lg"
+          >
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl font-semibold mb-4"
+            >
+              How to Use This Calculator
+            </motion.h2>
             <ul className="space-y-4 text-gray-300">
-              <li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
                 <strong className="text-pink-500">Monthly Search Volume:</strong> Enter the estimated monthly search volume for your main niche keyword. You can find this data using tools like Google Keyword Planner or SEMrush.
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
                 <strong className="text-pink-500">Average CPC:</strong> Input the average cost-per-click for ads in your niche. This data is also available in keyword research tools.
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
                 <strong className="text-pink-500">Conversion Rate:</strong> Estimate the percentage of visitors who will make a purchase. Industry averages range from 1-5%, but this can vary based on your niche and marketing strategy.
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
                 <strong className="text-pink-500">Average Commission:</strong> Enter the average commission you expect to earn per sale in your chosen niche.
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="mt-8 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">Master Niche Selection with John Crestani</h2>
-            <p className="text-gray-300 mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 bg-gray-900 p-8 rounded-lg"
+          >
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl font-semibold mb-4"
+            >
+              Master Niche Selection with John Crestani
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-gray-300 mb-4"
+            >
               {`While this calculator provides valuable insights, successful niche selection requires more than just numbers. John Crestani's Super Affiliate System Pro teaches you:`}
-            </p>
+            </motion.p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li>How to identify untapped, profitable niches</li>
-              <li>Strategies to dominate competitive markets</li>
-              <li>Techniques to maximize conversions in any niche</li>
-              <li>Ways to scale your affiliate marketing business across multiple niches</li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                How to identify untapped, profitable niches
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                Strategies to dominate competitive markets
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                Techniques to maximize conversions in any niche
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
+                Ways to scale your affiliate marketing business across multiple niches
+              </motion.li>
             </ul>
             <button 
               onClick={handleLearnMore}
@@ -77,7 +178,7 @@ export default function ClientNicheProfitabilityCalculator() {
             >
               Learn Niche Mastery Techniques
             </button>
-          </div>
+          </motion.div>
         </div>
 
         <JsonLd<any>
