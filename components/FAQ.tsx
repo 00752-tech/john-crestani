@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -30,20 +31,42 @@ export default function FAQ() {
         <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-700 rounded-lg">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="border border-gray-700 rounded-lg"
+            >
               <button
-                className="flex justify-between items-center w-full p-4 text-left"
+                className="flex justify-between items-center w-full p-4 text-left transition-all duration-150 ease-linear"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-semibold text-pink-500">{faq.question}</span>
-                {openIndex === index ? <ChevronUp className="text-pink-500" /> : <ChevronDown className="text-pink-500" />}
+                <motion.div
+                  whileInView={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ChevronDown className="text-pink-500" />
+                </motion.div>
               </button>
-              {openIndex === index && (
-                <div className="p-4 bg-gray-900">
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    whileInView={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-4 bg-gray-900">
+                      <p className="text-gray-300">{faq.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -5,6 +5,7 @@ import InvestmentCalculator from '@/components/InvestmentCalculator'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
+import { motion } from 'framer-motion'
 
 export default function ClientInvestmentCalculator() {
   const handleInvestInFuture = () => {
@@ -12,8 +13,18 @@ export default function ClientInvestmentCalculator() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white pt-32 pb-20">
-      <div className="container mx-auto px-4">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-black text-white pt-32 pb-20"
+    >
+      <motion.div 
+        initial={{ y: 20 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="container mx-auto px-4"
+      >
         <Link 
           href="/free-tools" 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
@@ -22,11 +33,21 @@ export default function ClientInvestmentCalculator() {
           Back to Tools
         </Link>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4">
+        <motion.h1 
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+        >
           Investment Calculator
-        </h1>
+        </motion.h1>
         
-        <div className="max-w-3xl mx-auto mb-12">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="max-w-3xl mx-auto mb-12"
+        >
           <p className="text-xl text-center mb-8 text-gray-300">
             Use this calculator to estimate the future value of your investments. Input your initial investment, monthly contributions, expected annual return, and investment length to see potential growth over time.
           </p>
@@ -34,42 +55,70 @@ export default function ClientInvestmentCalculator() {
           <InvestmentCalculator />
           
           <div className="mt-12 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
+            <motion.h2 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-2xl font-semibold mb-4"
+            >
+              How to Use This Calculator
+            </motion.h2>
             <ul className="space-y-4 text-gray-300">
-              <li>
-                <strong className="text-pink-500">Initial Investment:</strong> {`Enter the amount you're starting with or have already invested.`}
-              </li>
-              <li>
-                <strong className="text-pink-500">Monthly Contribution:</strong> The amount you plan to add to your investment each month.
-              </li>
-              <li>
-                <strong className="text-pink-500">Annual Return:</strong> The expected yearly return on your investment as a percentage. This can vary based on the type of investment and market conditions.
-              </li>
-              <li>
-                <strong className="text-pink-500">Investment Length:</strong> The number of years you plan to keep your money invested.
-              </li>
+              {[
+                { label: 'Initial Investment', desc: `Enter the amount you're starting with or have already invested.` },
+                { label: 'Monthly Contribution', desc: 'The amount you plan to add to your investment each month.' },
+                { label: 'Annual Return', desc: 'The expected yearly return on your investment as a percentage. This can vary based on the type of investment and market conditions.' },
+                { label: 'Investment Length', desc: 'The number of years you plan to keep your money invested.' }
+              ].map((item, index) => (
+                <motion.li
+                  key={item.label}
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
+                >
+                  <strong className="text-pink-500">{item.label}:</strong> {item.desc}
+                </motion.li>
+              ))}
             </ul>
           </div>
 
           <div className="mt-8 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">Invest in Your Affiliate Marketing Career</h2>
+            <motion.h2 
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-2xl font-semibold mb-4"
+            >
+              Invest in Your Affiliate Marketing Career
+            </motion.h2>
             <p className="text-gray-300 mb-4">
-             {` While planning your financial future is crucial, investing in your skills can lead to exponential growth in your earning potential. John Crestani's Super Affiliate System Pro teaches you how to:`}
+              {`While planning your financial future is crucial, investing in your skills can lead to exponential growth in your earning potential. John Crestani's Super Affiliate System Pro teaches you how to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li>Identify lucrative affiliate marketing opportunities</li>
-              <li>Create high-converting campaigns</li>
-              <li>Scale your affiliate business for long-term success</li>
-              <li>Diversify your income streams</li>
+              {[
+                'Identify lucrative affiliate marketing opportunities',
+                'Create high-converting campaigns',
+                'Scale your affiliate business for long-term success',
+                'Diversify your income streams'
+              ].map((text, index) => (
+                <motion.li
+                  key={text}
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
+                >
+                  {text}
+                </motion.li>
+              ))}
             </ul>
-            <button 
+            <motion.button 
               onClick={handleInvestInFuture}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
             >
               Invest in Your Future with Super Affiliate System Pro
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         <JsonLd<any>
           item={{
@@ -103,8 +152,8 @@ export default function ClientInvestmentCalculator() {
             ]
           }}
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

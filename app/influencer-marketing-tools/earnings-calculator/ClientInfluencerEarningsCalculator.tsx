@@ -7,6 +7,7 @@ import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
+import { motion } from 'framer-motion'
 
 export default function ClientInfluencerEarningsCalculator() {
   const handleLearnMore = () => {
@@ -18,57 +19,133 @@ export default function ClientInfluencerEarningsCalculator() {
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link 
-          href="/free-tools" 
-          className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Tools
-        </Link>
+          <Link 
+            href="/free-tools" 
+            className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Tools
+          </Link>
+        </motion.div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4">
+        <motion.h1 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           Influencer Earnings Calculator
-        </h1>
+        </motion.h1>
         
         <div className="max-w-3xl mx-auto mb-12">
-          <p className="text-xl text-center mb-8 text-gray-300">
+          <motion.p 
+            className="text-xl text-center mb-8 text-gray-300"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             Estimate your potential earnings as an influencer based on your follower count, engagement rate, and the number of sponsored posts you create each month.
-          </p>
+          </motion.p>
           
-          <InfluencerEarningsCalculator />
-          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <InfluencerEarningsCalculator />
+          </motion.div>
+
           <div className="mt-8">
             <ShareButtons url={pageUrl} title={pageTitle} />
           </div>
 
-          <div className="mt-12 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
+          <motion.div 
+            className="mt-12 bg-gray-900 p-8 rounded-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <motion.h2 
+              className="text-2xl font-semibold mb-4"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              How to Use This Calculator
+            </motion.h2>
             <ol className="space-y-4 text-gray-300 list-decimal list-inside">
-              <li>
-                <strong className="text-pink-500">Enter your number of followers:</strong> Input your total follower count across all platforms.
-              </li>
-              <li>
-                <strong className="text-pink-500">Input your engagement rate:</strong> {`This is the percentage of your followers who interact with your posts. If you're unsure, 3% is a good starting point.`}
-              </li>
-              <li>
-                <strong className="text-pink-500">Set your sponsored posts per month:</strong> Enter the number of sponsored posts you plan to create each month.
-              </li>
-              <li>
-                <strong className="text-pink-500">View your estimated earnings:</strong> The calculator will display your potential monthly earnings based on the information provided.
-              </li>
+              {[
+                { text: "Enter your number of followers:", desc: "Input your total follower count across all platforms." },
+                { text: "Input your engagement rate:", desc: "This is the percentage of your followers who interact with your posts. If you're unsure, 3% is a good starting point." },
+                { text: "Set your sponsored posts per month:", desc: "Enter the number of sponsored posts you plan to create each month." },
+                { text: "View your estimated earnings:", desc: "The calculator will display your potential monthly earnings based on the information provided." }
+              ].map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                >
+                  <strong className="text-pink-500">{item.text}</strong> {item.desc}
+                </motion.li>
+              ))}
             </ol>
-          </div>
+          </motion.div>
 
-          <div className="mt-8 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">Maximize Your Influence with John Crestani</h2>
-            <p className="text-gray-300 mb-4">
-             {` While being an influencer can be lucrative, combining it with affiliate marketing can significantly boost your earnings. John Crestani's Super Affiliate System Pro teaches you how to:`}
-            </p>
+          <motion.div 
+            className="mt-8 bg-gray-900 p-8 rounded-lg"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <motion.h2 
+              className="text-2xl font-semibold mb-4"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Maximize Your Influence with John Crestani
+            </motion.h2>
+            <motion.p 
+              className="text-gray-300 mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              {`While being an influencer can be lucrative, combining it with affiliate marketing can significantly boost your earnings. John Crestani's Super Affiliate System Pro teaches you how to:`}
+            </motion.p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li>Leverage your influence to promote high-converting affiliate offers</li>
-              <li>Create content that engages your audience and drives sales</li>
-              <li>Negotiate better deals with brands and affiliate programs</li>
-              <li>Scale your online presence and income</li>
+              {[
+                "Leverage your influence to promote high-converting affiliate offers",
+                "Create content that engages your audience and drives sales",
+                "Negotiate better deals with brands and affiliate programs",
+                "Scale your online presence and income"
+              ].map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                >
+                  {item}
+                </motion.li>
+              ))}
             </ul>
             <button 
               onClick={handleLearnMore}
@@ -76,7 +153,7 @@ export default function ClientInfluencerEarningsCalculator() {
             >
               Learn How to Boost Your Influence and Income
             </button>
-          </div>
+          </motion.div>
         </div>
 
         <JsonLd<any>

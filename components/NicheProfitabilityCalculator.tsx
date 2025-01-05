@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { TrendingUp } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function NicheProfitabilityCalculator() {
   const [monthlySearchVolume, setMonthlySearchVolume] = useState<number>(10000)
@@ -28,12 +29,24 @@ export default function NicheProfitabilityCalculator() {
   const results = calculateProfitability()
 
   return (
-    <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+
+      transition={{ duration: 0.5 }}
+      className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
+    >
       <h2 className="text-2xl font-bold mb-4 flex items-center">
         <TrendingUp className="mr-2 text-pink-500" />
         Niche Profitability Calculator
       </h2>
-      <div className="space-y-4">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+  
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="space-y-4"
+      >
         <div>
           <label htmlFor="monthlySearchVolume" className="block text-sm font-medium text-gray-300">
             Monthly Search Volume
@@ -84,8 +97,14 @@ export default function NicheProfitabilityCalculator() {
             className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white"
           />
         </div>
-      </div>
-      <div className="mt-6 grid grid-cols-2 gap-4">
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+  
+        transition={{ delay: 0.4, duration: 0.5 }}
+        className="mt-6 grid grid-cols-2 gap-4"
+      >
         <div>
           <h3 className="text-lg font-semibold mb-2">Estimated Clicks</h3>
           <p className="text-2xl font-bold text-blue-500">{results.clicks}</p>
@@ -106,12 +125,18 @@ export default function NicheProfitabilityCalculator() {
           <h3 className="text-lg font-semibold mb-2">Estimated Profit</h3>
           <p className="text-3xl font-bold text-pink-500">${results.profit}</p>
         </div>
-      </div>
-      <div className="mt-6 text-sm text-gray-400">
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+  
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className="mt-6 text-sm text-gray-400"
+      >
         <p>This calculator provides estimates based on the given inputs. Actual profitability may vary depending on various factors such as competition, market trends, and your marketing strategy.</p>
         <p className="mt-2">{`Want to learn how to find and dominate profitable niches? Check out John Crestani's`} <a href="/api/sale" className="text-pink-500 hover:underline">Super Affiliate System Pro</a>.</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

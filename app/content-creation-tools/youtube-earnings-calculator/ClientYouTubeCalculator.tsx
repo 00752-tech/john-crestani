@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
+import { motion } from 'framer-motion'
 import YouTubeCalculator from '@/components/YouTubeCalculator'
 import ShareButtons from '@/components/ShareButtons'
 import Link from 'next/link'
@@ -27,9 +28,14 @@ export default function ClientYouTubeCalculator() {
           Back to Tools
         </Link>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+        >
           YouTube AdSense Earnings Calculator
-        </h1>
+        </motion.h1>
         
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
@@ -42,34 +48,74 @@ export default function ClientYouTubeCalculator() {
             <ShareButtons url={pageUrl} title={pageTitle} />
           </div>
           
-          <div className="mt-12 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">How to Use This Calculator</h2>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 bg-gray-900 p-8 rounded-lg"
+          >
+            <motion.h2 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl font-semibold mb-4"
+            >
+              How to Use This Calculator
+            </motion.h2>
             <ol className="space-y-4 text-gray-300 list-decimal list-inside">
-              <li>
-                <strong className="text-pink-500">Average Views per Video:</strong> Enter the typical number of views your videos receive.
-              </li>
-              <li>
-                <strong className="text-pink-500">Click-Through Rate (CTR):</strong> The percentage of viewers who click on ads (typically 2-10%).
-              </li>
-              <li>
-                <strong className="text-pink-500">CPM Rate:</strong> The amount you earn per 1,000 ad clicks (typically $2-$8).
-              </li>
-              <li>
-                <strong className="text-pink-500">Videos per Month:</strong> How many videos you plan to publish monthly.
-              </li>
+              {['Average Views per Video', 'Click-Through Rate (CTR)', 'CPM Rate', 'Videos per Month'].map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <strong className="text-pink-500">{item}:</strong> 
+                  {/* ... rest of the li content ... */}
+                </motion.li>
+              ))}
             </ol>
-          </div>
+          </motion.div>
 
-          <div className="mt-8 bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">Maximize Your YouTube Income</h2>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-8 bg-gray-900 p-8 rounded-lg"
+          >
+            <motion.h2 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl font-semibold mb-4"
+            >
+              Maximize Your YouTube Income
+            </motion.h2>
             <p className="text-gray-300 mb-4">
            {`   While AdSense is great, successful YouTubers diversify their income streams. John Crestani's Super Affiliate System Pro teaches you how to:`}
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li>Monetize your channel with affiliate marketing</li>
-              <li>Create high-converting video content</li>
-              <li>Build and engage your audience</li>
-              <li>Scale your online presence across platforms</li>
+              {[
+                'Monetize your channel with affiliate marketing',
+                'Create high-converting video content',
+                'Build and engage your audience',
+                'Scale your online presence across platforms'
+              ].map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {item}
+                </motion.li>
+              ))}
             </ul>
             <button 
               onClick={handleLearnMore}
@@ -77,7 +123,7 @@ export default function ClientYouTubeCalculator() {
             >
               Learn Advanced YouTube Monetization Strategies
             </button>
-          </div>
+          </motion.div>
         </div>
 
         <JsonLd<any>

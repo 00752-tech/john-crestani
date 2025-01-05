@@ -1,20 +1,46 @@
+"use client"
+import { motion } from 'framer-motion';
+import CountUp from 'react-countup';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
+
 export default function Stats() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const stats = [
-    { number: "$2.9M+", label: "Student Earnings" },
-    { number: "10,000+", label: "Active Students" },
-    { number: "8+ Years", label: "of Proven Results" },
-    { number: "24/7", label: "Support" },
+    { number: 2900000, label: "Student Earnings", prefix: "$", suffix: "+" },
+    { number: 10000, label: "Active Students", suffix: "+" },
+    { number: 8, label: "of Proven Results", suffix: "+ Years" },
+    { number: 24, label: "Support", suffix: "/7" },
   ]
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-gray-900" ref={ref}>
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <h3 className="text-4xl font-bold text-pink-500 mb-2">{stat.number}</h3>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="text-center"
+            >
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-500 mb-2">
+                {/* {isInView && ( */}
+                  <CountUp
+                    start={0}
+                    end={stat.number}
+                    duration={2}
+                    prefix={stat.prefix || ''}
+                    suffix={stat.suffix || ''}
+                    separator=","
+                  />
+                {/* )} */}
+              </h3>
               <p className="text-white text-lg">{stat.label}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
