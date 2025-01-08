@@ -8,19 +8,20 @@ import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 
-export default function ClientDropshippingCalculator() {
+export default function ClientDropshippingCalculator({backUrl="/free-tools", pageUrlPath="/ecommerce-tools/dropshipping-profit-calculator"}: {backUrl?: string, pageUrlPath?: string}) {
   const handleLearnAdvancedStrategies = () => {
     window.location.href = '/api/sale'
   }
 
-  const pageUrl = '/ecommerce-tools/dropshipping-profit-calculator';
+
+  const pageUrl =`https://johncrestani.me${pageUrlPath}`;
   const pageTitle = 'Dropshipping Profit Calculator | Super Affiliate System Pro';
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/free-tools" 
+          href={backUrl}
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

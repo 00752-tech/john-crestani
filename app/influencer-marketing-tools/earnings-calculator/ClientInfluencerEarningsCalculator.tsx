@@ -9,11 +9,11 @@ import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
 
-export default function ClientInfluencerEarningsCalculator() {
+export default function ClientInfluencerEarningsCalculator({backUrl="/free-tools", pageUrlPath="/influencer-marketing-tools/earnings-calculator"}: {backUrl: string, pageUrlPath : string}) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }
-  const pageUrl = '/influencer-marketing-tools/earnings-calculator';
+  const pageUrl = `https://johncrestani.me${pageUrlPath}`;
   const pageTitle = 'Influencer Earnings Calculator | Super Affiliate System Pro';
 
   return (
@@ -26,7 +26,7 @@ export default function ClientInfluencerEarningsCalculator() {
           transition={{ duration: 0.5 }}
         >
           <Link 
-            href="/free-tools" 
+            href={backUrl} 
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

@@ -26,7 +26,7 @@ export default function ToolsPage() {
     {
       name: "Dropshipping Calculator",
       description: "Calculate potential profits for your dropshipping business by analyzing costs, pricing, and order volume.",
-      url: "/tools/dropshipping-calculator",
+      url: "/tools/dropshipping-profit-calculator",
       icon: DollarSign
     },
     {
@@ -44,7 +44,7 @@ export default function ToolsPage() {
     {
       name: "YouTube Earnings Calculator",
       description: "Calculate potential YouTube AdSense earnings based on views, CTR, and CPM rates.",
-      url: "/tools/youtube-calculator",
+      url: "/tools/youtube-earning-calculator",
       icon: Youtube
     },
     {

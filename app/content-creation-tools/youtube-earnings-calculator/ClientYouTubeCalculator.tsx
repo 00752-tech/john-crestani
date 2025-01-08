@@ -9,19 +9,19 @@ import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import RelatedTools from '@/components/RelatedTools'
 
-export default function ClientYouTubeCalculator() {
+export default function ClientYouTubeCalculator({backUrl="/free-tools", pageUrlPath="/content-creation-tools/youtube-earnings-calculator"}: {backUrl: string, pageUrlPath: string}  ) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }
 
-  const pageUrl = 'https://johncrestani.me/tools/youtube-calculator'
+  const pageUrl = `https://johncrestani.me${pageUrlPath}`
   const pageTitle = 'Calculate Your YouTube Earnings with Our Free Calculator'
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
         <Link 
-          href="/free-tools" 
+          href={backUrl} 
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />

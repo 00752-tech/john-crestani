@@ -9,12 +9,12 @@ import { JsonLd } from 'react-schemaorg'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
 
-export default function ClientNicheProfitabilityCalculator() {
+export default function ClientNicheProfitabilityCalculator({backUrl="/free-tools", pageUrlPath="/tools/niche-profitability-calculator"}: {backUrl: string, pageUrlPath: string}) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }
 
-  const pageUrl = 'https://johncrestani.me/tools/niche-profitability-calculator'
+  const pageUrl = `https://johncrestani.me${pageUrlPath}`
   const pageTitle = 'Calculate Niche Profitability for Affiliate Marketing | Free Tool'
 
   return (
@@ -26,7 +26,7 @@ export default function ClientNicheProfitabilityCalculator() {
           viewport={{ once: true }}
         >
           <Link 
-            href="/free-tools" 
+            href={backUrl} 
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

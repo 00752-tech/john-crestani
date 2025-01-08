@@ -9,12 +9,12 @@ import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "react-schemaorg";
 import RelatedTools from "@/components/RelatedTools";
 
-export default function ClientLinkCTROptimizer() {
+export default function ClientLinkCTROptimizer({backUrl="/free-tools", pageUrlPath="affiliate-marketing-tools/link-ctr-optimizer"}: {backUrl: string, pageUrlPath: string}) {
   const handleLearnMore = () => {
     window.location.href = "/api/sale";
   };
 
-  const pageUrl = "https://johncrestani.me/tools/affiliate-link-ctr-optimizer";
+  const pageUrl = `https://johncrestani.me${pageUrlPath}`;
   const pageTitle = "Optimize Your Affiliate Link CTR | Free Calculator";
 
   return (
@@ -29,7 +29,7 @@ export default function ClientLinkCTROptimizer() {
           whileInView={{ x: 0, opacity: 1 }}
         >
           <Link
-            href="/free-tools"
+            href={backUrl}
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
