@@ -9,7 +9,7 @@ import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
 
-export default function ClientROASCalculator({backUrl="/free-tools"}: {backUrl: string}) {
+export default function ClientROASCalculator({backUrl="/free-tools"}: {backUrl?: string}) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }

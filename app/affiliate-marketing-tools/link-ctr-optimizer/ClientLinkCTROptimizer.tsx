@@ -9,7 +9,13 @@ import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "react-schemaorg";
 import RelatedTools from "@/components/RelatedTools";
 
-export default function ClientLinkCTROptimizer({backUrl="/free-tools", pageUrlPath="affiliate-marketing-tools/link-ctr-optimizer"}: {backUrl: string, pageUrlPath: string}) {
+export default function ClientLinkCTROptimizer({
+  backUrl = "/free-tools",
+  pageUrlPath = "affiliate-marketing-tools/link-ctr-optimizer",
+}: {
+  backUrl?: string;
+  pageUrlPath?: string;
+}) {
   const handleLearnMore = () => {
     window.location.href = "/api/sale";
   };

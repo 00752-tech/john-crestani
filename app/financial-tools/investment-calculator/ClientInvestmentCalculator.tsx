@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import { motion } from 'framer-motion'
 
-export default function ClientInvestmentCalculator({backUrl="/free-tools"}: {backUrl: string}) {
+export default function ClientInvestmentCalculator({backUrl="/free-tools"}: {backUrl?: string}) {
   const handleInvestInFuture = () => {
     window.location.href = '/api/sale'
   }

@@ -26,7 +26,7 @@ const item = {
   show: { opacity: 1, x: 0 }
 }
 
-export default function ClientCalculatorPage({pageUrlPath="/affiliate-marketing-tools/earnings-calculator", backUrl="/free-tools"}: {pageUrlPath: string, backUrl: string}) {
+export default function ClientCalculatorPage({pageUrlPath="/affiliate-marketing-tools/earnings-calculator", backUrl="/free-tools"}: {pageUrlPath?: string, backUrl?: string}) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }
