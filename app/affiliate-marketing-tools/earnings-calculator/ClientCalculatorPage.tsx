@@ -26,12 +26,12 @@ const item = {
   show: { opacity: 1, x: 0 }
 }
 
-export default function ClientCalculatorPage() {
+export default function ClientCalculatorPage({pageUrlPath="/affiliate-marketing-tools/earnings-calculator", backUrl="/free-tools"}: {pageUrlPath?: string, backUrl?: string}) {
   const handleLearnMore = () => {
     window.location.href = '/api/sale'
   }
 
-  const pageUrl = 'https://johncrestani.me/affiliate-marketing-tools/earnings-calculator'
+  const pageUrl = `https://johncrestani.me${pageUrlPath}`
   const pageTitle = 'Calculate Your Affiliate Marketing Earnings for Free | Super Affiliate System Pro'
 
   return (
@@ -44,7 +44,7 @@ export default function ClientCalculatorPage() {
           transition={{ duration: 0.5 }}
         >
           <Link 
-            href="/free-tools" 
+            href={backUrl}
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
