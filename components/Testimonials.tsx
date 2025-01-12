@@ -30,7 +30,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-900 text-white">
+    <section id="testimonials" className="py-20 pt-32 bg-gray-900 text-white">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, x: 80 }}

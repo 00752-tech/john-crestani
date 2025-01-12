@@ -16,7 +16,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="px-4 py-20 bg-black text-white">
+    <section id="features" className="px-4 py-20 pt-32 bg-black text-white">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}

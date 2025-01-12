@@ -4,7 +4,7 @@ import { motion } from "framer-motion"; // Add this import
 
 export default function About() {
   return (
-    <section id="about" className=" px-4  py-20 bg-gray-900 text-white">
+    <section id="about" className=" px-4  py-20 pt-32 bg-gray-900 text-white">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -108,7 +108,7 @@ export default function About() {
                 alt="John Crestani Success"
                 width={500}
                 height={300}
-                className="rounded-lg shadow-md object-cover"
+                className="rounded-lg shadow-md object-cover border"
               />
             </motion.div>
           </motion.div>
