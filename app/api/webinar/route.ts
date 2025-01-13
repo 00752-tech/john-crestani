@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
 export async function GET() {
-  redirect('https://79e49jv4zkegkohcffe66mbw4l.hop.clickbank.net/?&traffic_source=website&traffic_type=organic&campaign=webinar')
+  redirect('https://c092dm095hi7goi4ai989o5tas.hop.clickbank.net/?&traffic_source=2025')
 }
 
