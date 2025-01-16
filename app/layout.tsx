@@ -32,7 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Crestani 2025: Uncover the latest in affiliate marketing training. Is it worth your time?",
+    title:
+      "John Crestani 2025: Uncover the latest in affiliate marketing training. Is it worth your time?",
     description:
       "Discover if John Crestani's affiliate marketing strategies remain unbeaten in 2025. Get the inside scoop and claim your free webinar invite.",
     images: [
@@ -49,11 +50,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo"
+        />
         <StructuredData />
       </head>
       <GoogleTagManager gtmId="G-R5SXJEQF8Z" />
       <CookieConsent />
-      <body  className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
