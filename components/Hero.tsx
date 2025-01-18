@@ -73,7 +73,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              New for 2025
+              Fresh for 2025!
             </motion.div>
           </div>
         </motion.div>
