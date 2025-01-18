@@ -9,8 +9,8 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 2900000, label: "Student Earnings", prefix: "$", suffix: "+" },
-    { number: 10000, label: "Active Students", suffix: "+" },
+    { number: 2978329, label: "Student Earnings", prefix: "$", suffix: "+" },
+    { number: 10836, label: "Active Students", suffix: "+" },
     { number: 8, label: "of Proven Results", suffix: "+ Years" },
     { number: 24, label: "Support", suffix: "/7" },
   ]
