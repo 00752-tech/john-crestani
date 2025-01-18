@@ -46,7 +46,7 @@ export default function Hero() {
               onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
-              Watch Video
+              Join with a click!
             </button>
           </motion.div>
         </motion.div>
