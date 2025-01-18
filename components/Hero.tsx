@@ -40,7 +40,7 @@ export default function Hero() {
               onClick={handleGetStarted}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
             >
-              Get Started Now
+              Discover Your Ideal Side Hustle!
             </button>
             <button 
               onClick={handleWatchVideo}
