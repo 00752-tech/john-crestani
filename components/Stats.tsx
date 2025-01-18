@@ -13,7 +13,7 @@ export default function Stats() {
     { number: 10836, label: "Active Students", suffix: "+" },
     { number: 8, label: "of Proven Results", suffix: "+ Years" },
     { number: 24, label: "Support", suffix: "/7" },
-    { number: 4.6, label: "Trustpilot Rating", suffix: " Stars" },
+    { number: "4.6", label: "Trustpilot Rating", suffix: " Stars" },
   ]
 
   return (
@@ -29,7 +29,7 @@ export default function Stats() {
               className="text-center"
             >
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-500 mb-2">
-                {/* {isInView && ( */}
+                {typeof stat.number === 'string' ? stat.number : (
                   <CountUp
                     start={0}
                     end={stat.number}
@@ -38,7 +38,7 @@ export default function Stats() {
                     suffix={stat.suffix || ''}
                     separator=","
                   />
-                {/* )} */}
+                )}
               </h3>
               <p className="text-white text-lg">{stat.label}</p>
             </motion.div>
