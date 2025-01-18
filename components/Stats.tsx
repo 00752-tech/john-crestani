@@ -13,6 +13,7 @@ export default function Stats() {
     { number: 10836, label: "Active Students", suffix: "+" },
     { number: 8, label: "of Proven Results", suffix: "+ Years" },
     { number: 24, label: "Support", suffix: "/7" },
+    { number: 4.6, label: "Rated on Trustpilot", suffix: " Stars" },
   ]
 
   return (
@@ -47,4 +48,3 @@ export default function Stats() {
     </section>
   )
 }
-
