@@ -73,7 +73,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Fresh for 2025!
+              Unwrap the Top 2025 Affiliate Secrets!
             </motion.div>
           </div>
         </motion.div>
