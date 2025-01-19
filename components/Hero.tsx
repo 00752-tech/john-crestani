@@ -22,21 +22,17 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-             <div className="flex flex-col items-start mb-4">
-  <div className="flex items-center text-2xl text-gray-500 mb-2">
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22c6.23-.05 7.87-5.6 7.4-8.5h-3.4c-.38 0-.62-.23-.63-.62V9.49c-.04-2.2-1.56-4.2-3.4-5.12C10.66 3.84 9.16 2.84 8 2c0 0-1.03 2.11-.13 4.26C5.47 7.19 4 9.44 4 12c0 5.48 4.62 10 8 10z" />
-    </svg>
-    <span className="text-lg text-gray-500 text-left">AWARD-WINNING EDUCATOR IN AFFILIATE MARKETING</span>
-  </div>
-</div>
-
-
-  <h1 className="text-3xl text-white">Unlock the Secrets of Affiliate Success</h1>
-</div>
-                    <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-medium mb-4 leading-snug sm:leading-tight text-white">
-          <span className="block mb-1 sm:mb-1">Break through the affiliate income</span>
-          <span className="block mb-1">barrier with Crestani&apos;s training</span>
+          <div className="flex flex-col items-start mb-4">
+            <div className="flex items-center text-2xl text-gray-500 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22c6.23-.05 7.87-5.6 7.4-8.5h-3.4c-.38 0-.62-.23-.63-.62V9.49c-.04-2.2-1.56-4.2-3.4-5.12C10.66 3.84 9.16 2.84 8 2c0 0-1.03 2.11-.13 4.26C5.47 7.19 4 9.44 4 12c0 5.48 4.62 10 8 10z" />
+              </svg>
+              <span className="text-lg text-gray-500 text-left">AWARD-WINNING EDUCATOR IN AFFILIATE MARKETING</span>
+            </div>
+          </div>
+          
+          <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-tight">
+            Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
           </h1>
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
