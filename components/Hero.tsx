@@ -71,7 +71,7 @@ export default function Hero() {
         >
           <div className="relative">
             <Image 
-              src="https://tinyurl.com/johncrestaniinblack" 
+              src="https://drive.google.com/file/d/1mC9PY5Pj4SEGsY3gTrhU3-AxEWr1l6tP/view?usp=sharing" 
               alt="John Crestani" 
               width={600} 
               height={600} 
