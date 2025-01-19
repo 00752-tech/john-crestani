@@ -57,7 +57,7 @@ export default function Hero() {
               onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
-              Get instant access - free webinar! →
+              Get instant access - free webinar!   →
             </button>
           </motion.div>
         </motion.div>
