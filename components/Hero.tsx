@@ -37,7 +37,7 @@ export default function Hero() {
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
           </h2>
-          <p className="text-base text-center sm:text-left sm:text-xl mb-8">
+          <p className="text-base text-center sm:text-left sm:text-xl mb-10 leading-relaxed">
             Say goodbye to stagnant earnings and hello to a proven system that teaches you how to select lucrative offers, craft compelling promotions, and drive sales, all under the guidance of affiliate marketing guru, John Crestani.
           </p>
           <motion.div 
