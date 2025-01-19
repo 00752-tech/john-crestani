@@ -22,9 +22,10 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-center sm:text-left text-lg sm:text-xl uppercase text-white mb-4 tracking-wider">
-            Struggling to Convert Clicks into Cash?
+          <div className="text-center sm:text-left text-sm sm:text-base uppercase text-white mb-2 tracking-wider">
+          Struggling to Convert Clicks into Cash?
           </div>
+
           <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-relaxed">
             Break through the <b>affiliate income</b> <br className="hidden sm:block" />
             barrier with Crestani&apos;s training
