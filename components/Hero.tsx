@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
           
           <h1 
-  className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-medium mb-4 text-white leading-normal"
+  className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-medium mb-4 text-white leading-relaxed"
 >
   Break through the affiliate income barrier with Crestani&apos;s training
 </h1>
