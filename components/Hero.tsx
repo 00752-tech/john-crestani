@@ -22,7 +22,7 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-center sm:text-left text-3xl sm:text-4xl md:text-6xl font-medium mb-4 text-white">
+          <h1 className="text-center sm:text-left text-2xl sm:text-4xl md:text-6xl font-light mb-4 text-white">
   Innovate, Disrupt, Prosper in 2025: The Crestani Affiliate Advantage</h1>
 
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
