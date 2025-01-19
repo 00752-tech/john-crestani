@@ -22,9 +22,19 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-             <div className="text-center sm:text-left text-1x1 sm:text-md uppercase text-white mb-4 tracking-wider">
-              Struggling to Convert Clicks into Cash?
-              </div>
+             <div className="flex flex-col items-center mb-4">
+  <div className="flex flex-col items-center mb-4">
+  <div className="flex items-center text-2xl text-gray-500 mb-2">
+    <svg className="h-6 w-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C8.5 2 5 4.5 5 7c0 1.5-1.5 3-3 4-3 5.5-1 8 1 10.5 2 13 4 15.5 7 18 9.5 11" />
+    </svg>
+    <span className="text-lg text-gray-500">AWARD-WINNING EDUCATOR IN AFFILIATE MARKETING</span>
+  </div>
+  <h1 className="text-3xl text-white text-center">Unlock the Secrets of Affiliate Success</h1>
+</div>
+
+  <h1 className="text-3xl text-white">Unlock the Secrets of Affiliate Success</h1>
+</div>
                     <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-medium mb-4 leading-snug sm:leading-tight text-white">
           <span className="block mb-1 sm:mb-1">Break through the affiliate income</span>
           <span className="block mb-1">barrier with Crestani&apos;s training</span>
