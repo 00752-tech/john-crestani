@@ -22,13 +22,13 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          
-<h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-snug">
-  Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
-</h1>
-
-
-
+          <div className="text-center sm:text-left text-lg sm:text-xl uppercase text-white mb-4 tracking-wider">
+            Struggling to Convert Clicks into Cash?
+          </div>
+          <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-relaxed">
+            Break through the <b>affiliate income</b> <br className="hidden sm:block" />
+            barrier with Crestani&apos;s training
+          </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
           </h2>
