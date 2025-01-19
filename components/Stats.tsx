@@ -11,7 +11,7 @@ export default function Stats() {
   const stats = [
     { number: 2978323, label: "Student Earnings", prefix: "$", suffix: "+" },
     { number: 10836, label: "Active Students", suffix: "+" },
-    { number: 8, label: "of Proven Results", suffix: "+ Years" },
+    { number: 8, label: "of Trusted Results!", suffix: "+ Years" },
     { number: 24, label: "Support", suffix: "/7" },
     { number: "4.6", label: "Trustpilot Rating", suffix: " Stars" },
   ]
