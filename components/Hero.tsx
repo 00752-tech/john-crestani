@@ -40,13 +40,13 @@ export default function Hero() {
               onClick={handleGetStarted}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
             >
-              Innovate | Disrupt | Prosper
+              Unlock Pro Earnings - Join Now!
             </button>
             <button 
               onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
-              Join with a click!
+              What&apos;s the #1 Affiliate Secret for 2025? Find Out...
             </button>
           </motion.div>
         </motion.div>
