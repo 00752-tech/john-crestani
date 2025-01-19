@@ -29,7 +29,7 @@ export default function Hero() {
           <span className="block mb-1 sm:mb-1">Break through the affiliate income</span>
           <span className="block mb-1">barrier with Crestani&apos;s training</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
+          <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
           </h2>
           <p className="text-base text-center sm:text-left sm:text-xl mb-8">
@@ -46,13 +46,13 @@ export default function Hero() {
               onClick={handleGetStarted}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
             >
-              Get Instant Access to Pro
+              See how others succeeded
             </button>
             <button 
               onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
-              Unlock Free Insights
+              Get instant access - free webinar! →
             </button>
           </motion.div>
         </motion.div>
