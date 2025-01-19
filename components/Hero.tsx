@@ -31,8 +31,8 @@ export default function Hero() {
             </div>
           </div>
           
-          <h1 style="text-align: left; font-size: 2.8rem; font-weight: medium; margin-bottom: 1.625rem; line-height: 1.625; color: white;">
-  Break through the affiliate income barrier with Crestani&apos; training
+          <h1 className="text-left text-2xl md:text-[2.8rem] font-medium mb-4 leading-tight text-white">
+  Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
 </h1>
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
