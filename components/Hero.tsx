@@ -31,9 +31,11 @@ export default function Hero() {
             </div>
           </div>
           
-          <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-tight">
-            Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
-          </h1>
+          <h1 
+  className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-medium mb-4 text-white leading-normal"
+>
+  Break through the affiliate income barrier with Crestani's training
+</h1>
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
           </h2>
