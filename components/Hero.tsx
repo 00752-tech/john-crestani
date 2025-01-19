@@ -26,7 +26,7 @@ export default function Hero() {
             Struggling to Convert Clicks into Cash?
           </div>
           <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-4 text-white leading-relaxed">
-            Break through the affiliate income <br className="hidden sm:block" />
+            Break through the <b>affiliate income</b> <br className="hidden sm:block" />
             barrier with Crestani&apos;s training
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
