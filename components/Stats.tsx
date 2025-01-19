@@ -9,11 +9,11 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 2978323, label: "Student Earnings", prefix: "$", suffix: "+" },
-    { number: 10836, label: "Active Students", suffix: "+" },
+    { number: 2978323, label: "Earned by Our Students!", prefix: "$", suffix: "+" },
+    { number: 10836, label: "Thriving Students!", suffix: "+" },
     { number: 8, label: "of Trusted Results!", suffix: "+ Years" },
-    { number: 24, label: "Support", suffix: "/7" },
-    { number: "4.6", label: "Trustpilot Rating", suffix: " Stars" },
+    { number: 24, label: "Support Anytime, Anywhere", suffix: "/7" },
+    { number: "4.6", label: "Stars on Trustpilot", suffix: " Stars" },
   ]
 
   return (
