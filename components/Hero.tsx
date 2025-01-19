@@ -23,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className=" text-center sm:text-left text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-white">
-            Crestani's 2025 Affiliate Blueprint: Disrupt & Prosper
+            "Crestani's" 2025 Affiliate Blueprint: Disrupt & Prosper
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
            {` John Crestani's Super Affiliate System Pro`}
