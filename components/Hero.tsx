@@ -23,19 +23,18 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center sm:text-left text-xl sm:text-2xl uppercase text-white mb-4 tracking-wider">
-  Struggling to Convert Clicks into Cash?
-</div>
-<h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-6 text-white leading-tight">
-  Break through the <b>affiliate income</b> <br className="hidden sm:block" />
-  barrier with Crestani&apos;s training
-</h1>
-
-
-
+            Struggling to Convert Clicks into Cash?
+          </div>
+          <h1 className="text-center sm:text-left text-2xl sm:text-3xl md:text-[2.8rem] font-light mb-6 text-white leading-relaxed">
+            Break through the <b>affiliate income</b> <br className="hidden sm:block" />
+            barrier with Crestani&apos;s training
+          </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
-           {` John Crestani's Super Affiliate System Pro`}
+            {` John Crestani's Super Affiliate System Pro`}
           </h2>
-          <p className="text-base text-center sm:text-left sm:text-xl mb-8">Say goodbye to stagnant earnings and hello to a proven system that teaches you how to select lucrative offers, craft compelling promotions, and drive sales, all under the guidance of affiliate marketing guru, John Crestani.</p>
+          <p className="text-base text-center sm:text-left sm:text-xl mb-8">
+            Say goodbye to stagnant earnings and hello to a proven system that teaches you how to select lucrative offers, craft compelling promotions, and drive sales, all under the guidance of affiliate marketing guru, John Crestani.
+          </p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4"
             initial={{ y: 20, opacity: 0 }}
