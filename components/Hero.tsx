@@ -40,13 +40,13 @@ export default function Hero() {
               onClick={handleGetStarted}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
             >
-              Unlock Pro Earnings - Join Now!
+              Get Instant Access to Pro
             </button>
             <button 
               onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
-              What&apos;s the #1 Affiliate Secret for 2025? Find Out...
+              Unlock Free Insights
             </button>
           </motion.div>
         </motion.div>
@@ -73,7 +73,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Unwrap the Top 2025 Affiliate Secrets!
+              Unlock the New
             </motion.div>
           </div>
         </motion.div>
