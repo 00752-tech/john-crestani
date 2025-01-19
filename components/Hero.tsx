@@ -23,12 +23,12 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-center sm:text-left text-3xl sm:text-4xl md:text-6xl font-light mb-4 text-white">
-  Innovate, Disrupt, Prosper in 2025: The Crestani Affiliate Advantage</h1>
+  Break Through the Affiliate Income Barrier with Crestani’s Training</h1>
 
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 gradient-text">
            {` John Crestani's Super Affiliate System Pro`}
           </h2>
-          <p className="text-base text-center sm:text-left sm:text-xl mb-8">Now Updated for the Digital Landscape of 2025</p>
+          <p className="text-base text-center sm:text-left sm:text-xl mb-8">Say goodbye to stagnant earnings and hello to a proven system that teaches you how to select lucrative offers, craft compelling promotions, and drive sales, all under the guidance of affiliate marketing guru, John Crestani.</p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4"
             initial={{ y: 20, opacity: 0 }}
