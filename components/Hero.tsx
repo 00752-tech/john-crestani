@@ -84,7 +84,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              2025 Affiliate Edge
+              Market Dominance 2025
             </motion.div>
           </div>
         </motion.div>
