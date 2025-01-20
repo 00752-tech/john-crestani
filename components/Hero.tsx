@@ -86,7 +86,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Launch Now Free
+              Your Path to Wealth
             </motion.div>
           </div>
         </motion.div>
