@@ -32,8 +32,8 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-2xl md:text-[2.8rem] font-medium mb-4 leading-tight text-white">
-            Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
-          </h1>
+  Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
+</h1>
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
           </h2>
@@ -65,23 +65,23 @@ export default function Hero() {
         <motion.div 
           className="md:w-1/2 relative"
           initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <div className="relative">
             <Image 
-              src="https://github.com/00752-tech/john-crestani/blob/b57797be89a1d1a6721deaa06308b0ba464d71f8/crestani%20in%20black.PNG?raw=true
-" 
+              src="https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png" 
               alt="John Crestani" 
               width={800} 
               height={600} 
               className="rounded-lg shadow-2xl"
-              priority
             />
             <motion.div 
               className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-24 h-24 md:w-32 md:h-32 flex items-center justify-center text-white font-bold text-base md:text-xl text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
               initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               Launch Now Free
