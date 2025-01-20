@@ -70,7 +70,8 @@ export default function Hero() {
         >
           <div className="relative">
             <Image 
-              src="https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png" 
+              src="https://github.com/00752-tech/john-crestani/blob/b57797be89a1d1a6721deaa06308b0ba464d71f8/crestani%20in%20black.PNG?raw=true
+" 
               alt="John Crestani" 
               width={800} 
               height={600} 
