@@ -73,7 +73,7 @@ export default function Hero() {
             <Image 
               src="https://github.com/user-attachments/assets/b22bf06c-7604-4bad-917b-5122a653b465" 
               alt="John Crestani" 
-              width={600} 
+              width={800} 
               height={600} 
               className="rounded-lg shadow-2xl"
             />
