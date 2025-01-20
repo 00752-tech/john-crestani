@@ -4,6 +4,14 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function Hero() {
+  const handleGetStarted = () => {
+    window.location.href = '/api/sale'
+  }
+
+  const handleWatchVideo = () => {
+    window.location.href = '/api/webinar'
+  }
+
   return (
     <section className="pt-32 pb-20 bg-black text-white overflow-hidden">
       <style jsx>{`
@@ -13,7 +21,7 @@ export default function Hero() {
         }
 
         .gradient-pulse-text {
-          background: linear-gradient(90deg, #ff00cc, #3333ff, #ff00cc);
+          background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
           background-size: 200% 200%;
           color: transparent;
           -webkit-background-clip: text;
@@ -57,18 +65,18 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a 
-              href="/api/sale"
+            <button 
+              onClick={handleGetStarted}
               className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
             >
               See how others succeeded
-            </a>
-            <a 
-              href="/api/webinar"
+            </button>
+            <button 
+              onClick={handleWatchVideo}
               className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
             >
               Get instant access - free webinar!   →
-            </a>
+            </button>
           </motion.div>
         </motion.div>
         
@@ -96,7 +104,7 @@ export default function Hero() {
             >
               <div className="text-center">
                 <p className="text-base md:text-3xl gradient-pulse-text">Evolved.</p>
-                <p className="text-base md:text-2xl gradient-pulse-text">2025.</p>
+                <p className="text-base md:text-3xl gradient-pulse-text">2025.</p>
               </div>
             </motion.div>
           </div>
