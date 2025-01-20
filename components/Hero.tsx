@@ -95,8 +95,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <div className="text-center">
-                <p className="text-base md:text-2xl gradient-pulse-text">Evolved.</p>
-                <p className="text-base md:text-2xl gradient-pulse-text">2025.</p>
+                <p className="text-base md:text-5xl gradient-pulse-text">Evolved.</p>
+                <p className="text-base md:text-5xl gradient-pulse-text">2025.</p>
               </div>
             </motion.div>
           </div>
