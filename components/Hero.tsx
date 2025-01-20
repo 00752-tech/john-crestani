@@ -84,7 +84,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Unlock the New
+              2025 Affiliate Edge
             </motion.div>
           </div>
         </motion.div>
