@@ -1,7 +1,6 @@
 'use client'
 
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
-import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import CountUp from 'react-countup'
 
 export default function Stats() {
