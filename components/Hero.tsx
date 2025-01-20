@@ -87,8 +87,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <div className="text-center">
-                <p className="text-base md:text-3xl">New Look</p>
-                <p className="text-base md:text-3xl">2025 Ready</p>
+                <p className="text-base md:text-xl">New Look</p>
+                <p className="text-base md:text-xl">2025 Ready</p>
               </div>
             </motion.div>
           </div>
