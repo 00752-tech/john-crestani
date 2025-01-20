@@ -80,7 +80,7 @@ export default function Hero() {
               className="rounded-lg shadow-2xl"
             />
             <motion.div 
-              className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-40 h-40 md:w-48 md:h-48 flex items-center justify-center text-white font-bold text-base md:text-xl text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
+              className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-40 h-40 md:w-48 md:h-48 flex items-center justify-center text-white font-bold text-base md:text-3xl text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
