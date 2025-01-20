@@ -84,7 +84,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Market Dominance 2025
+              Launch Now Free
             </motion.div>
           </div>
         </motion.div>
