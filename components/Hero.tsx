@@ -86,7 +86,7 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Your Path to Wealth
+              New Look. 2025 Ready.
             </motion.div>
           </div>
         </motion.div>
