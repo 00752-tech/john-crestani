@@ -28,6 +28,21 @@ export default function Hero() {
           background-clip: text;
           animation: pulse 3s ease infinite;
         }
+
+        .affiliate-income-text {
+          background: linear-gradient(45deg, #ec4899, #f472b6);
+          background-size: 200% 200%;
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          animation: affiliateIncomePulse 3s ease infinite;
+        }
+
+        @keyframes affiliateIncomePulse {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
       `}</style>
 
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
@@ -50,7 +65,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-2xl md:text-[2.8rem] font-medium mb-4 leading-tight text-white">
-            Break through the <b>affiliate income</b> barrier with Crestani&apos;s training
+            Break through the <span className="affiliate-income-text">affiliate income</span> barrier with Crestani&apos;s training
           </h1>
           <h2 className="text-2xl md:text-1xl font-semibold mb-6 gradient-text">
             {` John Crestani's Super Affiliate System Pro`}
