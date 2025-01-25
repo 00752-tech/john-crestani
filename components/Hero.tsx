@@ -1,3 +1,4 @@
+```typescript
 'use client'
 
 import Image from 'next/image' // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -13,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="pt-48 pb-16 bg-black text-white overflow-hidden">
+    <section className="pt-36 pb-16 bg-black text-white overflow-hidden relative">
       <style jsx>{`
         @keyframes pulse {
           0%, 100% { background-position: 0% 50%; }
@@ -127,3 +128,4 @@ export default function Hero() {
     </section>
   )
 }
+```
