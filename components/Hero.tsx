@@ -19,7 +19,6 @@ export default function Hero() {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
         }
-
         .gradient-pulse-text {
           background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
           background-size: 200% 200%;
@@ -28,7 +27,6 @@ export default function Hero() {
           background-clip: text;
           animation: pulse 3s ease infinite;
         }
-
         .affiliate-income-text {
           background: linear-gradient(45deg, #ec4899, #f472b6);
           background-size: 200% 200%;
@@ -37,7 +35,6 @@ export default function Hero() {
           background-clip: text;
           animation: affiliateIncomePulse 3s ease infinite;
         }
-
         @keyframes affiliateIncomePulse {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
