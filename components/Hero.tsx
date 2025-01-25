@@ -65,11 +65,12 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Break through the <span className="affiliate-income-text">affiliate income barrier</span> with Crestani&apos;s training
+            Tired of spinning your wheels? <span className="affiliate-income-text">Supercharge your earnings</span> with John Crestani
+
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Say goodbye to stagnant earnings and hello to a proven system that teaches you how to select lucrative offers, craft compelling promotions, and drive sales, all under the guidance of affiliate marketing guru, John Crestani.
+            Frustrated with endless efforts and no results? Learn the proven system that has helped countless others supercharge their earnings.
           </p>
           
           <motion.div 
