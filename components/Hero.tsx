@@ -1,8 +1,7 @@
-```typescript
 'use client'
 
-import Image from 'next/image' // eslint-disable-line @typescript-eslint/no-unused-vars
-import { motion } from 'framer-motion' // eslint-disable-line @typescript-eslint/no-unused-vars
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   const handleGetStarted = () => {
@@ -15,7 +14,7 @@ export default function Hero() {
 
   return (
     <section className="pt-36 pb-16 bg-black text-white overflow-hidden relative">
-      <style jsx>{`
+      <style>{`
         @keyframes pulse {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
@@ -128,4 +127,3 @@ export default function Hero() {
     </section>
   )
 }
-```
