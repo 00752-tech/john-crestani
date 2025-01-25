@@ -19,9 +19,9 @@ export default function Stats() {
   const stats = [
     { end: 10833, suffix: "+", text: "Successful Graduates" },
     { end: 15933425, prefix: "$", text: "Revenue Generated" },
-    { end: 7, suffix: "+", text: "Years of Innovation" },
+    { end: 8, suffix: "+", text: "Years of Innovation" },
     { end: 4.6, decimals: 1, text: "Trustpilot Score" },
-    { end: 92, suffix: "%", text: "Client Satisfaction" }
+    { end: 96, suffix: "%", text: "Client Satisfaction" }
   ]
 
   return (
@@ -43,7 +43,7 @@ export default function Stats() {
               <CountUp
                 start={0}
                 end={item.end}
-                duration={3}
+                duration={7}
                 delay={0.2}
                 separator=","
                 decimals={item.decimals || 0}
