@@ -1,4 +1,5 @@
 ```typescript
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 'use client'
 
 import { motion } from 'framer-motion'
