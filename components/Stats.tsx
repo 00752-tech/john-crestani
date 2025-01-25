@@ -16,22 +16,24 @@ export default function Stats() {
     }
   }
 
+  const stats = [
+    { end: 10833, suffix: "+", text: "Successful Graduates" },
+    { end: 15933425, prefix: "$", text: "Revenue Generated" },
+    { end: 7, suffix: "+", text: "Years of Innovation" },
+    { end: 4.6, decimals: 1, text: "Trustpilot Score" },
+    { end: 92, suffix: "%", text: "Client Satisfaction" }
+  ]
+
   return (
-    <section className="bg-black text-white py-16">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-        {[
-          { end: 10833, suffix: "+", text: "Successful Graduates" },
-          { end: 15933425, prefix: "$", text: "Revenue Generated" },
-          { end: 7, suffix: "+", text: "Years of Innovation" },
-          { end: 4.6, decimals: 1, text: "Trustpilot Score" },
-          { end: 92, suffix: "%", text: "Client Satisfaction" }
-        ].map((item, index) => (
+    <section className="bg-black bg-opacity-80 text-white py-4 md:py-8">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 text-center">
+        {stats.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 * (index + 1) }}
-            className="bg-gray-800 p-6 rounded-lg"
+            transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
+            className="bg-gray-800 bg-opacity-50 p-3 md:p-4 rounded-lg"
           >
             <motion.div
               variants={pulseVariants}
@@ -41,14 +43,14 @@ export default function Stats() {
               <CountUp
                 start={0}
                 end={item.end}
-                duration={5}
-                delay={0.5}
+                duration={3}
+                delay={0.2}
                 separator=","
                 decimals={item.decimals || 0}
                 decimal="."
                 prefix={item.prefix || ""}
                 suffix={item.suffix || ""}
-                className="text-4xl font-bold text-pink-500 transition duration-300"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold transition duration-300"
                 style={{
                   background: "linear-gradient(45deg, #ec4899, #f472b6)",
                   WebkitBackgroundClip: "text",
@@ -56,7 +58,7 @@ export default function Stats() {
                 }}
               />
             </motion.div>
-            <p className="mt-2 text-gray-300">{item.text}</p>
+            <p className="mt-1 text-xs md:text-sm text-gray-300">{item.text}</p>
           </motion.div>
         ))}
       </div>
