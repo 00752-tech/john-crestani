@@ -26,14 +26,14 @@ export default function Stats() {
 
   return (
     <section className="bg-black bg-opacity-80 text-white py-2 md:py-4 -mt-12 overflow-hidden">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 text-center">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 md:gap-2 text-center">
         {stats.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
-            className="bg-gray-800 bg-opacity-50 p-3 md:p-4 rounded-lg"
+            className="bg-gray-800 bg-opacity-50 p-2 md:p-3 rounded-lg"
           >
             <motion.div
               variants={pulseVariants}
@@ -43,14 +43,14 @@ export default function Stats() {
               <CountUp
                 start={0}
                 end={item.end}
-                duration={7}
+                duration={10}
                 delay={0.2}
                 separator=","
                 decimals={item.decimals || 0}
                 decimal="."
                 prefix={item.prefix || ""}
                 suffix={item.suffix || ""}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold transition duration-300"
+                className="text-xl md:text-2xl lg:text-3xl font-bold transition duration-300"
                 style={{
                   background: "linear-gradient(45deg, #ec4899, #f472b6)",
                   WebkitBackgroundClip: "text",
@@ -58,7 +58,7 @@ export default function Stats() {
                 }}
               />
             </motion.div>
-            <p className="mt-1 text-xs md:text-sm text-gray-300">{item.text}</p>
+            <p className="mt-1 text-[10px] md:text-xs text-gray-300">{item.text}</p>
           </motion.div>
         ))}
       </div>
