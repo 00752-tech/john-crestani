@@ -26,21 +26,21 @@ export function CookieConsent() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-transparent p-4 shadow-md z-50 overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 bg-transparent p-2 shadow-md z-50 overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <p className="mb-4 md:mb-0 text-sm text-white">
+        <p className="mb-2 md:mb-0 text-xs text-white">
           We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.
         </p>
-        <div className="flex space-x-4">
+        <div className="flex space-x-2">
           <Button 
-            className='bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 px-8 rounded-md text-base font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform'  
+            className='bg-gradient-to-r from-pink-500 to-purple-500 text-white py-1 px-4 rounded-md text-xs font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform'  
             onClick={acceptCookies} 
             variant="default"
           >
             Accept
           </Button>
           <Button 
-            className='bg-white text-black py-2 px-8 rounded-md text-base font-semibold transition duration-300' 
+            className='bg-white text-black py-1 px-4 rounded-md text-xs font-semibold transition duration-300' 
             onClick={declineCookies} 
             variant="default"
           >
