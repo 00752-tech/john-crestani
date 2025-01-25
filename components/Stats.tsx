@@ -19,9 +19,10 @@ export default function Stats() {
             duration={5}
             delay={0.5}
             separator=","
+            suffix="+"
             className="text-4xl font-bold text-cyan-400"
           />
-          <p className="mt-2 text-gray-300">Students Trained</p>
+          <p className="mt-2 text-gray-300">Successful Graduates</p>
         </motion.div>
 
         <motion.div
@@ -56,7 +57,7 @@ export default function Stats() {
             suffix="+"
             className="text-4xl font-bold text-cyan-400"
           />
-          <p className="mt-2 text-gray-300">Years of Experience</p>
+          <p className="mt-2 text-gray-300">Years of Innovation</p>
         </motion.div>
 
         <motion.div
@@ -86,15 +87,12 @@ export default function Stats() {
           <div className="flex items-center justify-center">
             <CountUp
               start={0}
-              end={100}
+              end={92}
               duration={5}
               delay={0.5}
               suffix="%"
               className="text-4xl font-bold text-cyan-400"
             />
-            <span className="text-2xl font-bold text-cyan-400 ml-2">
-              Satisfaction
-            </span>
           </div>
           <p className="mt-2 text-gray-300">Client Satisfaction</p>
         </motion.div>
