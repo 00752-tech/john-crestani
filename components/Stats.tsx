@@ -1,3 +1,4 @@
+```typescript
 'use client'
 
 import { motion } from 'framer-motion'
@@ -25,7 +26,7 @@ export default function Stats() {
   ]
 
   return (
-    <section className="bg-black bg-opacity-80 text-white py-2 md:py-4 -mt-16">
+    <section className="bg-black bg-opacity-80 text-white py-2 md:py-4 -mt-12 overflow-hidden">
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 text-center">
         {stats.map((item, index) => (
           <motion.div
@@ -65,3 +66,4 @@ export default function Stats() {
     </section>
   )
 }
+```
