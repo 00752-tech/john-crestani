@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="pt-36 pb-8 bg-black text-white overflow-hidden relative">
+    <section className="pt-36 pb-16 bg-black text-white overflow-hidden relative">
       <style>{`
         @keyframes pulse {
           0%, 100% { background-position: 0% 50%; }
