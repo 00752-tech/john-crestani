@@ -47,7 +47,7 @@ export default function Hero() {
         }
 
         .red-gradient-button {
-          background-image: linear-gradient(241deg, #FE3C01, #FF6F00);
+          background-image: linear-gradient(241deg, #FF1C00, #FF4D00); /* Brighter red gradient */
           color: white;
           padding: 12px 32px;
           border-radius: 9999px;
@@ -57,8 +57,24 @@ export default function Hero() {
         }
 
         .red-gradient-button:hover {
-          background-image: linear-gradient(241deg, #FF6F00, #FE3C01);
+          background-image: linear-gradient(241deg, #FF4D00, #FF1C00);
           transform: scale(1.05);
+        }
+
+        .transparent-button {
+          border: 2px solid white; /* White border */
+          background-color: transparent; /* Transparent background */
+          color: white; /* White text */
+          padding: 12px 32px;
+          border-radius:9999px; /* Fully rounded */
+          font-size: 1rem;
+          font-weight: bold;
+          transition: background-color 0.3s ease, color 0.3s ease; 
+        }
+
+        .transparent-button:hover {
+          background-color: white; /* Change to white on hover */
+          color: black; /* Change text color to black on hover */
         }
       `}</style>
 
@@ -98,7 +114,7 @@ export default function Hero() {
           >
             <button 
               onClick={handleGetStarted}
-              className="red-gradient-button"
+              className="transparent-button"
               data-testid="see-opinions-button"
             >
               See students&apos; opinions
