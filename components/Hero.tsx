@@ -73,7 +73,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Don't let failure define you. Learn the top strategies that turn financial dreams into a reality.
+            Don&apos;t let failure define you. Learn the top strategies that turn financial dreams into a reality.
           </p>
           
           <motion.div 
