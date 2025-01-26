@@ -98,7 +98,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Stuck in a rut? John Crestani&apos;s training can <span className="affiliate-income-text"> change your life </span> 
+            Stuck in a rut? John Crestani&apos;s training can <span style={{ color: '#5B5D63' }} className="affiliate-income-text"> change your life </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
