@@ -2,33 +2,17 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { inject } from '@vercel/analytics'
 
 export default function Hero() {
-  useEffect(() => {
-    inject()
-  }, [])
-
   const handleGetStarted = () => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'CTA_Click', {
-        'event_category': 'Button',
-        'event_label': 'See_Students_Opinions',
-        'value': 1
-      })
-    }
+    // You can add custom tracking logic here if needed
+    console.log('CTA Click: See Students Opinions');
     window.location.href = '/api/sale'
   }
 
   const handleWatchVideo = () => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'CTA_Click', {
-        'event_category': 'Button',
-        'event_label': 'Join_Free_Masterclass',
-        'value': 1
-      })
-    }
+    // You can add custom tracking logic here if needed
+    console.log('CTA Click: Join Free Masterclass');
     window.location.href = '/api/webinar'
   }
 
