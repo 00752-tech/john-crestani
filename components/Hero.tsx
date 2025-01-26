@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Stuck in a rut? John Crestani’s training can <span className="affiliate-income-text"> change your life </span> 
+            Stuck in a rut? John Crestani's training can <span className="affiliate-income-text"> change your life </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
@@ -77,7 +77,7 @@ export default function Hero() {
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 mt-12" // Added mt-12 for extra spacing
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
