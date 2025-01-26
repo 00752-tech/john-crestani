@@ -6,7 +6,7 @@ import CountUp from 'react-countup'
 export default function Stats() {
   const pulseVariants = {
     pulse: {
-      scale: [1, 1.05, 1],
+      scale: [1, 1.2, 1],
       opacity: [1, 0.8, 1],
       transition: {
         duration: 2,
