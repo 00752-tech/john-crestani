@@ -17,74 +17,6 @@ const Hero: React.FC = () => {
 
   return (
     <section className="pt-36 pb-16 bg-black text-white overflow-hidden relative">
-      <style>{`
-        @keyframes pulse {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-
-        .gradient-pulse-text {
-          background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
-          background-size: 200% 200%;
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: pulse 3s ease infinite;
-        }
-
-        .affiliate-income-text {
-          background: linear-gradient(45deg, #ec4899, #f472b6);
-          background-size: 200% 200%;
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: affiliateIncomePulse 3s ease infinite;
-        }
-
-        @keyframes affiliateIncomePulse {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-
-        .red-gradient-button {
-          background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
-          color: white;
-          padding: 12px 32px;
-          border-radius: 6px;
-          font-size: 1rem;
-          font-weight: normal;
-          transition: background-image 0.3s ease, transform 0.3s ease;
-        }
-
-        .red-gradient-button:hover {
-          background-image: linear-gradient(241deg, #FF4D00, #FF1C00);
-          transform: scale(1.05);
-        }
-
-        .transparent-button {
-          border: 2px solid white;
-          background-color: transparent;
-          color: white;
-          padding: 12px 32px;
-          border-radius: 6px;
-          font-size: 1rem;
-          font-weight: normal;
-          transition: background-color 0.3s ease, color 0.3s ease; 
-        }
-
-        .transparent-button:hover {
-          background-color: white; 
-          color: black; 
-        }
-
-        .transparent-button, .red-gradient-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      `}</style>
-
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
         <motion.div 
           className="md:w-1/2 mb-8 md:mb-0"
@@ -104,9 +36,9 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-left text-[72px] font-normal mb-6 leading-tight tracking-[-1.67px]">
+          <h1 className="text-left text-5xl md:text-[72px] font-normal mb-6 leading-tight tracking-[-1.67px] text-white">
             <span 
-              className="bg-gradient-to-[241deg] from-[#111] to-[#A0A1A4] text-transparent bg-clip-text"
+              className="bg-gradient-to-[241deg] from-[#A0A1A4] to-white text-transparent bg-clip-text"
               style={{
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -116,9 +48,9 @@ const Hero: React.FC = () => {
             </span> 
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
+          <p className="text-base text-left sm:text-xl mb-8 leading-relaxed text-white">
             <span 
-              className="bg-gradient-to-[241deg] from-[#111] to-[#A0A1A4] text-transparent bg-clip-text"
+              className="bg-gradient-to-[241deg] from-[#A0A1A4] to-white text-transparent bg-clip-text"
               style={{
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
@@ -197,7 +129,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
     </section>
-   )
+  )
 }
 
 export default Hero
