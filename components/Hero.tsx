@@ -1,18 +1,17 @@
 'use client'
 
-import { motion } from 'framer-motion';
-// Removed unused import for Image
-// import Image from 'next/image'; // Commented out since it's not used
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   const handleGetStarted = () => {
     console.log('CTA Click: See Students Opinions');
-    window.location.href = '/api/sale';
+    window.location.href = '/api/sale'
   }
 
   const handleWatchVideo = () => {
     console.log('CTA Click: Join Free Masterclass');
-    window.location.href = '/api/webinar';
+    window.location.href = '/api/webinar'
   }
 
   return (
@@ -48,12 +47,12 @@ export default function Hero() {
         }
 
         .red-gradient-button {
-          background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
+          background-image: linear-gradient(241deg, #FF1C00, #FF4D00); /* Brighter red gradient */
           color: white;
           padding: 12px 32px;
-          border-radius: 6px;
+          border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
-          font-weight: normal;
+          font-weight: normal; /* Thinner text */
           transition: background-image 0.3s ease, transform 0.3s ease;
         }
 
@@ -63,25 +62,19 @@ export default function Hero() {
         }
 
         .transparent-button {
-          border: 2px solid white;
-          background-color: transparent;
-          color: white;
+          border: 2px solid white; /* White border */
+          background-color: transparent; /* Transparent background */
+          color: white; /* White text */
           padding: 12px 32px;
-          border-radius: 6px;
+          border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
-          font-weight: normal;
+          font-weight: normal; /* Thinner text */
           transition: background-color 0.3s ease, color 0.3s ease; 
         }
 
         .transparent-button:hover {
-          background-color: white; 
-          color: black; 
-        }
-
-        .transparent-button, .red-gradient-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background-color: white; /* Change to white on hover */
+          color: black; /* Change text color to black on hover */
         }
       `}</style>
 
@@ -119,62 +112,52 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {/* Updated Buttons with Arrow Icons */}
             <button 
               onClick={handleGetStarted}
-              className="transparent-button flex items-center justify-center group"
+              className="transparent-button"
               data-testid="see-opinions-button"
             >
               See students&apos; opinions
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                />
-              </svg>
             </button>
             <button 
               onClick={handleWatchVideo}
-              className="red-gradient-button flex items-center justify-center group"
+              className="red-gradient-button"
               data-testid="join-masterclass-button"
             >
-              Join free masterclass
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                />
-              </svg>
+              Join free masterclass →   
             </button>
           </motion.div>
         </motion.div>
         
-        {/* Uncomment and use Image if needed */}
-        {/* <motion.div className="md:w-1/2 relative"
-           initial={{ x:100, opacity :0 }}
-           whileInView={{ x :0 , opacity :1 }}
-           viewport={{ once : true }}
-           transition={{ duration : .8 }}>
-           <div className='relative'>
-             <Image src='https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png' alt='John Crestani' width={800} height={600} className='rounded-lg shadow-xl' />
-           </div>
-         </motion.div> */}
+        <motion.div 
+          className="md:w-1/2 relative"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="relative">
+            <Image 
+              src="https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png" 
+              alt="John Crestani" 
+              width={800} 
+              height={600} 
+              className="rounded-lg shadow-2xl"
+            />
+            <motion.div 
+              className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-44 h-44 md:w-44 md:h-44 flex items-center justify-center text-white font-bold text-base md:text-lg text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <div className="text-center">
+                <p className="text-base md:text-3xl gradient-pulse-text">Evolved.</p>
+                <p className="text-base md:text-3xl gradient-pulse-text">2025.</p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
    )
