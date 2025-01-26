@@ -50,7 +50,7 @@ export default function Hero() {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00); /* Brighter red gradient */
           color: white;
           padding: 12px 32px;
-          border-radius: 9999px;
+          border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
           font-weight: bold;
           transition: background-image 0.3s ease, transform 0.3s ease;
@@ -66,7 +66,7 @@ export default function Hero() {
           background-color: transparent; /* Transparent background */
           color: white; /* White text */
           padding: 12px 32px;
-          border-radius:9999px; /* Fully rounded */
+          border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
           font-weight: bold;
           transition: background-color 0.3s ease, color 0.3s ease; 
