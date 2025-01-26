@@ -52,7 +52,7 @@ export default function Hero() {
           padding: 12px 32px;
           border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
-          font-weight: bold;
+          font-weight: normal; /* Thinner text */
           transition: background-image 0.3s ease, transform 0.3s ease;
         }
 
@@ -68,7 +68,7 @@ export default function Hero() {
           padding: 12px 32px;
           border-radius: 6px; /* Rounded corners */
           font-size: 1rem;
-          font-weight: bold;
+          font-weight: normal; /* Thinner text */
           transition: background-color 0.3s ease, color 0.3s ease; 
         }
 
