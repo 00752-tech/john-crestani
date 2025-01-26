@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-normal mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-#A0A1A4-400 via-#A0A1A4-500 to-#A0A1A4-600 text-transparent bg-clip-text">
               Stuck in a rut? John Crestani&apos;s training can change your life </span> 
           </h1>
           
