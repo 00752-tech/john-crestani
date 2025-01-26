@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const Hero: React.FC = () => {
-  // Removed unused function warnings by using the functions
   const handleGetStarted = React.useCallback(() => {
     console.log('CTA Click: See Students Opinions')
     window.location.href = '/api/sale'
@@ -172,6 +172,13 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="relative">
+            <Image 
+              src="https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png" 
+              alt="John Crestani" 
+              width={800} 
+              height={600} 
+              className="rounded-lg shadow-2xl"
+            />
             <motion.div 
               className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full w-44 h-44 md:w-44 md:h-44 flex items-center justify-center text-white font-bold text-base md:text-lg text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
               initial={{ scale: 0, opacity: 0 }}
