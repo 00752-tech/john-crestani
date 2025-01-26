@@ -66,11 +66,10 @@ export default function Hero() {
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
             Feeling trapped in a cycle of failure? <span className="affiliate-income-text">Break Free</span> with John Crestani&apos;s System
-
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Tired of repeating the same mistakes? Discover the foolproof approach that's transformed countless lives.
+            Tired of repeating the same mistakes? Discover the foolproof approach that&apos;s transformed countless lives.
           </p>
           
           <motion.div 
