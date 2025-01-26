@@ -69,11 +69,11 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Failed attempts weighing you down? <span className="affiliate-income-text">Elevate your success </span> with John Crestani&apos;s training
+            Losing hope in your financial dreams? Let John Crestani <span className="affiliate-income-text">guide you </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Struggling with repeated failures? Learn the secrets that have lifted many to new heights.
+            Don't let failure define you. Learn the top strategies that turn financial dreams into a reality.
           </p>
           
           <motion.div 
