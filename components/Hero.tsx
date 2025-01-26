@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Feeling trapped in a cycle of failure? <span className="affiliate-income-text">Break Free</span> with John Crestani&#39;s System
+            Feeling trapped in a cycle of failure? <span className="affiliate-income-text">Break Free</span> with John Crestani&apos;s System
 
           </h1>
           
