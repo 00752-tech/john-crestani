@@ -5,13 +5,11 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   const handleGetStarted = () => {
-    // You can add custom tracking logic here if needed
     console.log('CTA Click: See Students Opinions');
     window.location.href = '/api/sale'
   }
 
   const handleWatchVideo = () => {
-    // You can add custom tracking logic here if needed
     console.log('CTA Click: Join Free Masterclass');
     window.location.href = '/api/webinar'
   }
@@ -47,6 +45,21 @@ export default function Hero() {
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
+
+        .red-gradient-button {
+          background-image: linear-gradient(241deg, #FE3C01, #FF6F00);
+          color: white;
+          padding: 12px 32px;
+          border-radius: 9999px;
+          font-size: 1rem;
+          font-weight: bold;
+          transition: background-image 0.3s ease, transform 0.3s ease;
+        }
+
+        .red-gradient-button:hover {
+          background-image: linear-gradient(241deg, #FF6F00, #FE3C01);
+          transform: scale(1.05);
+        }
       `}</style>
 
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
@@ -64,7 +77,6 @@ export default function Hero() {
               </svg>
               <span className="text-lg text-left font-semibold bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
                 GLOBAL RECOGNITION: JOHN CRESTANI RECEIVES TOP HONORS IN EDUCATION
-
               </span>
             </div>
           </div>
@@ -86,14 +98,14 @@ export default function Hero() {
           >
             <button 
               onClick={handleGetStarted}
-              className="border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300"
+              className="red-gradient-button"
               data-testid="see-opinions-button"
             >
               See students&apos; opinions
             </button>
             <button 
               onClick={handleWatchVideo}
-              className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105"
+              className="red-gradient-button"
               data-testid="join-masterclass-button"
             >
               Join free masterclass →   
@@ -132,5 +144,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+   )
 }
