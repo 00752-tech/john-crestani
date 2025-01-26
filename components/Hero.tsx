@@ -104,12 +104,17 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Stuck in a rut? John Crestani&apos;s training can <span style={{ color: '#5B5D63' }} className="affiliate-income-text"> change your life </span> 
+          <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
+              Stuck in a rut? John Crestani&apos;s training can 
+            </span> 
+            <span style={{ color: '#5B5D63' }} className="affiliate-income-text"> change your life </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Exhausted by constant setbacks? Find success with expert training.
+            <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
+              Exhausted by constant setbacks? Find success with expert training.
+            </span>
           </p>
           
           <motion.div 
@@ -125,20 +130,6 @@ const Hero: React.FC = () => {
               data-testid="see-opinions-button"
             >
               See students&apos; opinions
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                />
-              </svg>
             </button>
             <button 
               onClick={handleWatchVideo}
@@ -195,7 +186,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  )
+   )
 }
 
 export default Hero
