@@ -69,7 +69,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Frustrated with spinning your wheels? Finally, see tangible results with a proven system.
+            Sick of trying and failing? Experience the breakthrough with expert guidance.
           </p>
           
           <motion.div 
