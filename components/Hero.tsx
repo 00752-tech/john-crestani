@@ -104,11 +104,11 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight">
+          <h1 className="text-left text-3xl md:text-[2.8rem] font-normal mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
               Stuck in a rut? John Crestani&apos;s training can 
             </span> 
-            <span style={{ color: '#5B5D63' }} className="affiliate-income-text"> change your life </span> 
+            <span className="affiliate-income-text" style={{ color: '#5B5D63' }}> change your life </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
