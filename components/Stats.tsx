@@ -43,7 +43,7 @@ export default function Stats() {
               <CountUp
                 start={0}
                 end={item.end}
-                duration={5}
+                duration={9}
                 delay={0.2}
                 separator=","
                 decimals={item.decimals || 0}
