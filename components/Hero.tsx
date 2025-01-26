@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Failed Attempts Weighing You Down? <span className="affiliate-income-text">Elevate Your Success </span> with John Crestani&apos;s Training
+            Failed attempts weighing you down? <span className="affiliate-income-text">Elevate your success </span> with John Crestani&apos;s training
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
