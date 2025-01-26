@@ -104,13 +104,26 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-left text-3xl md:text-[2.8rem] font-normal mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
-              Stuck in a rut? John Crestani&apos;s training can change your life </span> 
+          <h1 className="text-left text-[72px] font-normal mb-6 leading-tight tracking-[-1.67px]">
+            <span 
+              className="bg-gradient-to-[241deg] from-[#111] to-[#A0A1A4] text-transparent bg-clip-text"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
+              Stuck in a rut? John Crestani&apos;s training can change your life
+            </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            <span className="bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 text-transparent bg-clip-text">
+            <span 
+              className="bg-gradient-to-[241deg] from-[#111] to-[#A0A1A4] text-transparent bg-clip-text"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
               Exhausted by constant setbacks? Find success with expert training.
             </span>
           </p>
