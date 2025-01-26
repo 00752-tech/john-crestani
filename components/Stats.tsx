@@ -18,10 +18,10 @@ export default function Stats() {
 
   const stats = [
     { end: 10833, suffix: "+", text: "Successful Graduates" },
-    { end: 15933425, prefix: "$", text: "Revenue Generated" },
+    { end: 15933425, suffix: "+", prefix: "$", text: "Revenue Generated" },
     { end: 8, suffix: "+", text: "Years of Innovation" },
     { end: 4.6, decimals: 1, text: "Trustpilot Score" },
-    { end: 96, suffix: "%", text: "Client Satisfaction" }
+    { end: 96, suffix: "%", suffix: "+", text: "Client Satisfaction" }
   ]
 
   return (
