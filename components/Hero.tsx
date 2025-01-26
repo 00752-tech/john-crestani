@@ -65,12 +65,12 @@ export default function Hero() {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-medium mb-6 leading-tight text-white">
-            Tired of spinning your wheels? <span className="affiliate-income-text">Supercharge your earnings</span> with John Crestani
+            Feeling trapped in a cycle of failure? <span className="affiliate-income-text">Break Free</span> with John Crestani&#39;s System
 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed">
-            Frustrated with endless efforts and no results? Learn the proven system that has helped countless others supercharge their earnings.
+            Tired of repeating the same mistakes? Discover the foolproof approach that's transformed countless lives.
           </p>
           
           <motion.div 
