@@ -22,7 +22,8 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50">
       <div className="pulsing-banner text-white py-2 text-center">
-        <p className="text-[16px] font-light text-gray-300">Battling To Find Traffic? Drive Targeted Traffic Easily With John Crestani&apos;s System ➔</p>
+        <p className="text-[16px] font-semibold text-white">Battling To Find Traffic? Drive Targeted Traffic Easily With John Crestani&apos;s System ➔</p>
+
 
       </div>
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
