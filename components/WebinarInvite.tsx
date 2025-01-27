@@ -51,7 +51,7 @@ export default function WebinarInvite() {
               onClick={handleWebinarClick}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105 shadow-lg"
             >
-              Do Not Miss Out – Register Now
+              Try it free
             </button>
           </motion.div>
         </motion.div>
