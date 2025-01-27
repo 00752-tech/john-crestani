@@ -58,8 +58,8 @@ export default function CTA() {
             transition={{ duration: 0.4, delay: 0.5 }}
             className="flex justify-center items-center space-x-4 mb-6"
           >
-            <span className="text-4xl font-bold text-gray-400 line-through">$1,994</span>
-            <span className="text-5xl font-bold text-pink-500">$997</span>
+            <span className="text-4xl font-bold text-gray-400 line-through">$4,997</span>
+            <span className="text-5xl font-bold text-pink-500">Enroll now and save $4,000</span>
           </motion.div>
           <motion.button 
             onClick={handleEnrollClick}
