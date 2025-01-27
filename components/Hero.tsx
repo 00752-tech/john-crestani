@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
               className="red-gradient-button flex items-center justify-center group"
               data-testid="join-masterclass-button"
             >
-              Join free masterclass
+              Try it free
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
