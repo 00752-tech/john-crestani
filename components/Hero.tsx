@@ -104,12 +104,12 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-left text-4xl md:text-[3.5rem] font-normal mb-8 leading-tight text-white">
+          <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
             From confusion to 
             <span className="text-gray-300"> cash in 24 hours </span> 
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-10 leading-relaxed text-gray-300">
+          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
             The Super Affiliate System Pro your simplified route to online success.
           </p>
           
