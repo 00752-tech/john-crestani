@@ -18,35 +18,6 @@ const Hero: React.FC = () => {
   return (
     <section className="pt-40 pb-16 bg-black text-white overflow-hidden relative">
       <style>{`
-        @keyframes pulse {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-
-        .gradient-pulse-text {
-          background: linear-gradient(241deg, #FF1C00, #FF4D00);
-          background-size: 200% 200%;
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: pulse 3s ease infinite;
-        }
-
-        .affiliate-income-text {
-          background: linear-gradient(45deg, #ec4899, #f472b6);
-          background-size: 200% 200%;
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: affiliateIncomePulse 3s ease infinite;
-        }
-
-        @keyframes affiliateIncomePulse {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
@@ -166,18 +137,6 @@ const Hero: React.FC = () => {
               height={600} 
               className="rounded-lg shadow-2xl"
             />
-            <motion.div 
-              className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full w-44 h-44 md:w-44 md:h-44 flex items-center justify-center text-white font-bold text-base md:text-lg text-center p-4 transform md:translate-x-0 md:-translate-y-1/3"
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <div className="text-center">
-                <p className="text-base md:text-3xl gradient-pulse-text">Evolved.</p>
-                <p className="text-base md:text-3xl gradient-pulse-text">2025.</p>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
