@@ -105,12 +105,12 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-3xl md:text-[2.8rem] font-normal mb-6 leading-tight text-white">
-            Endless Efforts, No Results? 
-            <span className="text-blue-400"> Achieve Success </span> with John Crestani&apos;s Guidance
+            Bypass the learning curve in 
+            <span className="text-blue-400"> 24 hours </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-8 leading-relaxed text-gray-300">
-            Frustrated with spinning your wheels? Finally, see tangible results with a proven system.
+            Direct access to affiliate marketing success with Super Affiliate System Pro.
           </p>
           
           <motion.div 
