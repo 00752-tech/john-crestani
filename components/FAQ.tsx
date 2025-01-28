@@ -22,6 +22,34 @@ export default function FAQ() {
     {
       question: "Is there a money-back guarantee?",
       answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the course content or don't see results within the first month, you can request a full refund."
+    },
+    {
+      question: "What is the Super Affiliate System, and who is John Crestani?",
+      answer: "The Super Affiliate System is a training program focused on teaching individuals how to succeed in affiliate marketing. It's associated with John Crestani, an entrepreneur specializing in online marketing and creating profitable digital businesses."
+    },
+    {
+      question: "What key areas of digital marketing does John Crestani's work focus on?",
+      answer: "John Crestani's work heavily revolves around affiliate marketing but also touches on dropshipping, YouTube advertising, and general digital marketing strategies for passive income generation."
+    },
+    {
+      question: "What kind of calculators are associated with these topics, and what do they do?",
+      answer: "Calculators like dropshipping profit calculators, affiliate revenue calculators, and YouTube AdSense calculators help estimate profits, costs, and revenue for various business models."
+    },
+    {
+      question: "What is ROAS and how does it relate to dropshipping?",
+      answer: "ROAS (Return on Ad Spend) measures revenue generated per dollar spent on advertising. Dropshipping ROAS calculators help assess ad campaign profitability."
+    },
+    {
+      question: "What does the frequency of 'Super Affiliate System review' suggest about the program?",
+      answer: "The high number of reviews suggests that many people research its legitimacy and quality before committing, indicating its popularity in affiliate marketing."
+    },
+    {
+      question: "Besides the primary course, what other aspects of the 'Super Affiliate System' are discussed?",
+      answer: "Users often explore topics like accessing the course ('login'), free trials ('free download'), and new versions ('3.0'), reflecting interest in cost options and updates."
+    },
+    {
+      question: "How do other methods of online income like YouTube AdSense relate to these concepts?",
+      answer: "Methods like YouTube AdSense and influencer marketing indicate interest in diverse income streams beyond affiliate marketing or dropshipping."
     }
   ]
 
@@ -73,4 +101,3 @@ export default function FAQ() {
     </section>
   )
 }
-
