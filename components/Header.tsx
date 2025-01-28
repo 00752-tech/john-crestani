@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X } from 'lucide-react'
+import { ChevronDown, Menu, X, Zap } from 'lucide-react'
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -23,12 +23,13 @@ export default function Header() {
     <header className="fixed w-full z-50">
       <div className="pulsing-banner text-white py-2 text-center">
         <p className="text-[16px] font-semibold text-white">The 24-Hour Affiliate Breakthrough: Say Goodbye to Confusion, Hello to Consistent Income with Super Affiliate System Pro ➔</p>
-
-
       </div>
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <Link href="/" className="text-lg md:text-xl lg:text-2xl font-bold gradient-text">Super Affiliate System Pro</Link>
+          <Link href="/" className="text-lg md:text-xl lg:text-2xl font-bold flex items-center">
+            <Zap className="w-6 h-6 mr-2 text-gray-300" />
+            <span className="text-gray-300 font-sans">Super Affiliate System Pro</span>
+          </Link>
           
           <button 
             className="lg:hidden"
