@@ -8,48 +8,48 @@ export default function FAQ() {
 
   const faqs = [
     {
+      question: "Who is John Crestani?",
+      answer: "John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He's known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer."
+    },
+    {
+      question: "What is the Super Affiliate System?",
+      answer: "The Super Affiliate System is a comprehensive training program designed to teach individuals how to succeed in affiliate marketing. It covers topics such as setting up an affiliate marketing business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI."
+    },
+    {
       question: "Is Super Affiliate System Pro still relevant in 2025?",
-      answer: "The system is continuously updated to reflect the latest trends and technologies in affiliate marketing. The 2025 version includes cutting-edge strategies for AI, blockchain, and emerging digital platforms."
+      answer: "Yes, the system is continuously updated to reflect the latest trends and technologies in affiliate marketing. The 2025 version includes cutting-edge strategies for AI, blockchain, and emerging digital platforms."
     },
     {
       question: "How does the 2025 version differ from the original 2017 release?",
       answer: "While the core principles remain, the 2025 version has been extensively updated. It now includes AI-powered tools, blockchain affiliate strategies, advanced analytics, and tactics for new social media platforms that have emerged since 2017."
     },
     {
-      question: "Do I get lifetime access to updates?",
-      answer: "Yes, when you purchase Super Affiliate System Pro, you receive lifetime access to all future updates. This ensures that your affiliate marketing education stays current with the fast-paced digital world."
+      question: "What does the Super Affiliate System course cover?",
+      answer: "The course covers a wide range of topics including affiliate marketing strategies, ad buying, landing page optimization, product promotion, setting up a business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI."
+    },
+    {
+      question: "How much does the Super Affiliate System cost?",
+      answer: "Pricing can vary over time and might include promotions or discounts. Typically, the basic version of the Super Affiliate System has been priced around $997, with more comprehensive versions or additional tools/services costing extra."
+    },
+    {
+      question: "Are there any additional costs beyond the initial program fee?",
+      answer: "Yes, additional costs might include tools (e.g., ClickFunnels, email marketing software), ad spending for campaigns, and possibly upsells within the program for advanced training or support."
     },
     {
       question: "Is there a money-back guarantee?",
       answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the course content or don't see results within the first month, you can request a full refund."
     },
     {
-      question: "What is the Super Affiliate System, and who is John Crestani?",
-      answer: "The Super Affiliate System is a training program focused on teaching individuals how to succeed in affiliate marketing. It's associated with John Crestani, an entrepreneur specializing in online marketing and creating profitable digital businesses."
+      question: "Do I get lifetime access to updates?",
+      answer: "Yes, when you purchase Super Affiliate System Pro, you receive lifetime access to all future updates. This ensures that your affiliate marketing education stays current with the fast-paced digital world."
     },
     {
-      question: "What key areas of digital marketing does John Crestani's work focus on?",
-      answer: "John Crestani's work heavily revolves around affiliate marketing but also touches on dropshipping, YouTube advertising, and general digital marketing strategies for passive income generation."
+      question: "What kind of support does John Crestani offer to his students?",
+      answer: "Support typically includes access to a community forum, live webinars, and sometimes one-on-one coaching (depending on the package purchased). The responsiveness and quality of support can vary."
     },
     {
-      question: "What kind of calculators are associated with these topics, and what do they do?",
-      answer: "Calculators like dropshipping profit calculators, affiliate revenue calculators, and YouTube AdSense calculators help estimate profits, costs, and revenue for various business models."
-    },
-    {
-      question: "What is ROAS and how does it relate to dropshipping?",
-      answer: "ROAS (Return on Ad Spend) measures revenue generated per dollar spent on advertising. Dropshipping ROAS calculators help assess ad campaign profitability."
-    },
-    {
-      question: "What does the frequency of 'Super Affiliate System review' suggest about the program?",
-      answer: "The high number of reviews suggests that many people research its legitimacy and quality before committing, indicating its popularity in affiliate marketing."
-    },
-    {
-      question: "Besides the primary course, what other aspects of the 'Super Affiliate System' are discussed?",
-      answer: "Users often explore topics like accessing the course ('login'), free trials ('free download'), and new versions ('3.0'), reflecting interest in cost options and updates."
-    },
-    {
-      question: "How do other methods of online income like YouTube AdSense relate to these concepts?",
-      answer: "Methods like YouTube AdSense and influencer marketing indicate interest in diverse income streams beyond affiliate marketing or dropshipping."
+      question: "Can I really make money with John Crestani's training?",
+      answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
   ]
 
