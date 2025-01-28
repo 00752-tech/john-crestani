@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50">
       <div className="pulsing-banner text-white py-2 text-center">
-        <p className="text-[16px] font-semibold text-white">Battling To Find Traffic? Drive Targeted Traffic Easily With John Crestani&apos;s System ➔</p>
+        <p className="text-[16px] font-semibold text-white">The 24-Hour Affiliate Breakthrough: Say Goodbye to Confusion, Hello to Consistent Income with Super Affiliate System Pro ➔</p>
 
 
       </div>
