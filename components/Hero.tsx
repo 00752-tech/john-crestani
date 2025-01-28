@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         }
 
         .gradient-pulse-text {
-          background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
+          background: linear-gradient(241deg, #FF1C00, #FF4D00);
           background-size: 200% 200%;
           color: transparent;
           -webkit-background-clip: text;
