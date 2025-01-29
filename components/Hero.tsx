@@ -123,18 +123,20 @@ const Hero: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="md:w-1/2 relative"
+          className="md:w-1/2 relative flex justify-center items-center"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative">
+          <div className="relative w-3/4 h-auto">
             <Image 
               src="/jc 2.png" 
               alt="John Crestani" 
-              width={800} 
+              width={400} 
               height={600} 
+              layout="responsive"
+              objectFit="contain"
               className="rounded-lg shadow-2xl"
             />
           </div>
