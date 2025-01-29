@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50">
       <div className="pulsing-banner text-white py-2 text-center">
-        <p className="text-[16px] font-semibold text-white">The 24-hour affiliate breakthrough. Say goodbye to confusion, hello to consistent income with Super Affiliate System Pro
+        <p className="text-[16px] font-semibold text-white">The 24-hour affiliate breakthrough. Say goodbye to confusion and hello to consistent income with Super Affiliate System Pro
  ➔</p>
       </div>
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
