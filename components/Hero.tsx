@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
         <motion.div 
-          className="md:w-1/2 mb-8 md:mb-0 -mt-16" // Added negative margin-top here
+          className="md:w-1/2 mb-8 md:mb-0 -mt-24" // Changed to -mt-24 for more upward movement
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
