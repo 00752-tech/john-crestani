@@ -35,7 +35,7 @@ export default function Header() {
             <span 
               className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide"
             >
-              Super Affiliate Pro
+              Super Affiliate System Pro
             </span>
           </Link>
 
