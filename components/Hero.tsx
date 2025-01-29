@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
           
           <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
             Losing hope in your financial dreams? Let John Crestani
-            <span className="text-gray-300"> guide you </span> 
+            <span className="text-gray-400"> guide you </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
