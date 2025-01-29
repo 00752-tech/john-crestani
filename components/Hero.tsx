@@ -46,9 +46,9 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-8 md:px-16">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
         <motion.div 
-          className="md:w-1/2 mb-8 md:mb-0 -mt-24"
+          className="md:w-1/2 mb-8 md:mb-0 -mt-24 md:pr-8"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
