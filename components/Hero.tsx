@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
-            1 day, endless earnings. Simplify your path to 
+            1 day... endless earnings. Simplify your path to 
             <span className="text-gray-300"> affiliate marketing wealth. </span> 
           </h1>
           
