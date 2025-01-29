@@ -58,7 +58,7 @@ export default function Stats() {
                 }}
               />
             </motion.div>
-            <p className="mt-1 text-[10px] md:text-xs text-gray-300">{item.text}</p>
+            <p className="mt-1 text-xs md:text-sm lg:text-base text-gray-300">{item.text}</p>
           </motion.div>
         ))}
       </div>
