@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   }, [])
 
   return (
-    <section className="pt-40 pb-16 bg-black text-white overflow-hidden relative">
+    <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
       <style>{`
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
