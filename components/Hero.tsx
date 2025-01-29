@@ -76,12 +76,12 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
-            Unshackle your path to 
-            <span className="text-gray-300"> affiliate marketing wealth. </span> 
+            Losing hope in your financial dreams? Let John Crestani
+            <span className="text-gray-300"> guide you </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
-            Discover the secret with Super Affiliate System Pro system.
+            Don't let failure define you. Learn the top strategies that turn financial dreams into a reality.
           </p>
           
           <motion.div 
