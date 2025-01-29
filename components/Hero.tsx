@@ -54,20 +54,11 @@ const Hero: React.FC = () => {
           align-items: center;
           justify-content: center;
         }
-
-        .arrow-animation {
-          animation: arrowMove 2s infinite;
-        }
-
-        @keyframes arrowMove {
-          0%, 100% { transform: translateX(0); }
-          50% { transform: translateX(-10px); }
-        }
       `}</style>
 
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
         <motion.div 
-          className="md:w-1/2 mb-8 md:mb-0 -mt-24 relative" // Added relative positioning
+          className="md:w-1/2 mb-8 md:mb-0 -mt-24" // Changed to -mt-24 for more upward movement
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -94,7 +85,7 @@ const Hero: React.FC = () => {
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 mt-12 relative" // Added relative positioning
+            className="flex flex-col sm:flex-row gap-4 mt-12"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -128,15 +119,6 @@ const Hero: React.FC = () => {
                 />
               </svg>
             </button>
-            {/* Arrow pointing to the CTA button */}
-            <div className="absolute -right-24 -bottom-12 w-24 h-24 arrow-animation">
-              <Image
-                src="/arrow transparent background.png"
-                alt="Arrow pointing to CTA"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
           </motion.div>
         </motion.div>
         
