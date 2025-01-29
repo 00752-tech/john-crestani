@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
-            Transform your affiliate game overnight. Simplify your path to 
+            Simplify your path to 
             <span className="text-gray-300"> affiliate marketing wealth. </span> 
           </h1>
           
