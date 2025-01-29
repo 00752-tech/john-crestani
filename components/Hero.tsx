@@ -54,11 +54,34 @@ const Hero: React.FC = () => {
           align-items: center;
           justify-content: center;
         }
+
+        .hand-drawn-arrow {
+          position: absolute;
+          top: 50%;
+          left: -20%;
+          width: 40%;
+          height: 40%;
+          stroke: white;
+          stroke-width: 2;
+          fill: none;
+          animation: drawArrow 2s forwards infinite;
+        }
+
+        @keyframes drawArrow {
+          0% {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+          }
+          100% {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+          }
+        }
       `}</style>
 
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
         <motion.div 
-          className="md:w-1/2 mb-8 md:mb-0 -mt-24" // Changed to -mt-24 for more upward movement
+          className="md:w-1/2 mb-8 md:mb-0 -mt-24 relative"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -85,7 +108,7 @@ const Hero: React.FC = () => {
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 mt-12"
+            className="flex flex-col sm:flex-row gap-4 mt-12 relative"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -139,6 +162,9 @@ const Hero: React.FC = () => {
               objectFit="contain"
               className="rounded-lg shadow-2xl"
             />
+            <svg className="hand-drawn-arrow" viewBox="0 0 100 100">
+              <path d="M10,50 Q30,20 50,50 T90,50 L80,40 M80,50 L90,50 L80,60" />
+            </svg>
           </div>
         </motion.div>
       </div>
