@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
-            Don't let failure define you. Learn the top strategies that turn financial dreams into a reality.
+            Don&apos;t let failure define you. Learn the top strategies that turn financial dreams into a reality.
           </p>
           
           <motion.div 
