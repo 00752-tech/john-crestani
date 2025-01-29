@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
         >
           <div className="relative">
             <Image 
-              src="https://www.gojctraining.com/hosted/images/74/a6afcce61d4e57961ab77814f4710a/johnnewimg80.png" 
+              src="/jc 2.png" 
               alt="John Crestani" 
               width={800} 
               height={600} 
