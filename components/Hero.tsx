@@ -66,12 +66,12 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-5xl md:text-[4rem] font-light mb-10 leading-tight text-white">
-            Losing hope in your financial dreams? Let John Crestani
-            <span className="text-gray-400"> guide you </span> 
+            Stuck in a rut? John Crestani&apos;s training can
+            <span className="text-gray-400"> change your life </span> 
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
-            Don&apos;t let failure define you. Learn the top strategies that turn financial dreams into a reality.
+            Exhausted by constant setbacks? Find success with expert training.
           </p>
           
           <motion.div 
