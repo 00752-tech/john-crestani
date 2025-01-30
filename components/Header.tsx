@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Zap } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -26,27 +26,12 @@ export default function Header() {
       </div>
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
-          {/* Updated Logo */}
-          <Link href="/" className="text-lg md:text-xl lg:text-2xl font-bold flex items-center">
-            <Zap 
-              className="w-8 h-8 mr-2 text-transparent animate-pulse" 
-              style={{ fill: 'url(#zap-gradient)' }}
-            />
-            <span 
-              className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-wide"
-            >
-              Super Affiliate System Pro
+          {/* New Logo */}
+          <Link href="/" className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center">
+            <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-tighter">
+              JC
             </span>
           </Link>
-
-          {/* SVG Gradient for Icon */}
-          <svg width="0" height="0">
-            <linearGradient id="zap-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#FF1C00" />
-              <stop offset="50%" stopColor="#FF4D00" />
-              <stop offset="100%" stopColor="#FFD700" />
-            </linearGradient>
-          </svg>
 
           {/* Mobile Menu Button */}
           <button 
