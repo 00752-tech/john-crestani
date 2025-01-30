@@ -8,14 +8,20 @@ const Hero: React.FC = () => {
   return (
     <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
       <style>{`
-        .red-gradient-button {
-          background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
-          color: white;
-          padding: 12px 32px;
+        .button-base {
+          padding: 12px 24px;
           border-radius: 6px;
           font-size: 1rem;
           font-weight: normal;
-          transition: background-image 0.3s ease, transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
+        .red-gradient-button {
+          background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
+          color: white;
         }
 
         .red-gradient-button:hover {
@@ -27,22 +33,11 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
-          padding: 12px 32px;
-          border-radius: 6px;
-          font-size: 1rem;
-          font-weight: normal;
-          transition: background-color 0.3s ease, color 0.3s ease; 
         }
 
         .transparent-button:hover {
-          background-color: white; 
-          color: black; 
-        }
-
-        .transparent-button, .red-gradient-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background-color: white;
+          color: black;
         }
       `}</style>
 
@@ -82,14 +77,14 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <button 
-              className="transparent-button flex items-center justify-center group"
+              className="button-base transparent-button"
               data-testid="see-opinions-button"
             >
               See students&apos; opinions
             </button>
             <div className="flex flex-col items-center">
               <button 
-                className="red-gradient-button flex items-center justify-center group"
+                className="button-base red-gradient-button group"
                 data-testid="join-masterclass-button"
               >
                 Try it free
