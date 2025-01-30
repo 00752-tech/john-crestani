@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
-            Discover why traditional methods fail and how John Crestani&apos;s system consistently delivers results.
+            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
           <motion.div 
