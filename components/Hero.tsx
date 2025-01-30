@@ -14,6 +14,11 @@ const Hero: React.FC = () => {
           src: url('/fonts/NeueHaasUnicaW1G-Light.woff2') format('woff2');
           font-weight: 300;
           font-style: normal;
+          font-display: swap;
+        }
+
+        body {
+          font-family: 'Neue Haas Unica W1G', sans-serif;
         }
 
         .button-base {
@@ -74,7 +79,7 @@ const Hero: React.FC = () => {
             <span className="text-gray-400"> Shock You </span> 
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-['Neue_Haas_Unica_W1G'] font-light tracking-tight">
+          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
             Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
