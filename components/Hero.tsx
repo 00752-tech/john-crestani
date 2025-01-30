@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Award } from 'lucide-react'
 
 const Hero: React.FC = () => {
   return (
@@ -53,11 +54,9 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="flex flex-col items-start mb-6">
-            <div className="flex items-center text-xl mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22c6.23-.05 7.87-5.6 7.4-8.5h-3.4c-.38 0-.62-.23-.63-.62V9.49c-.04-2.2-1.56-4.2-3.4-5.12C10.66 3.84 9.16 2.84 8 2c0 0-1.03 2.11-.13 4.26C5.47 7.19 4 9.44 4 12c0 5.48 4.62 10 8 10z" />
-              </svg>
-              <span className="text-base text-left font-normal text-gray-300 tracking-wider">
+            <div className="flex items-center mb-2">
+              <Award className="h-5 w-5 mr-2 text-yellow-400" />
+              <span className="text-sm font-light text-gray-300 tracking-wider whitespace-nowrap">
                 THE GLOBAL EDUCATION AWARD THAT COULD BE YOUR TICKET OUT OF THE 9–5 GRIND
               </span>
             </div>
