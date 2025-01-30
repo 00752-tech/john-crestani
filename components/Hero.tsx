@@ -17,13 +17,13 @@ const Hero: React.FC = () => {
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
-          width: 160px;
           height: 44px;
         }
 
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
+          width: 160px;
         }
 
         .red-gradient-button:hover {
@@ -35,6 +35,7 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
+          width: 200px;
         }
 
         .transparent-button:hover {
@@ -79,12 +80,11 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <button 
-  className="button-base transparent-button w-[200px]"
-  data-testid="see-opinions-button"
->
-  See students' opinions
-</button>
-
+              className="button-base transparent-button"
+              data-testid="see-opinions-button"
+            >
+              See students&apos; opinions
+            </button>
             <div className="flex flex-col items-center">
               <button 
                 className="button-base red-gradient-button group"
