@@ -9,14 +9,16 @@ const Hero: React.FC = () => {
     <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
       <style>{`
         .button-base {
-          padding: 12px 24px;
+          padding: 10px 20px;
           border-radius: 6px;
-          font-size: 1rem;
+          font-size: 0.9rem;
           font-weight: normal;
-          display: flex;
+          display: inline-flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
+          width: 160px;
+          height: 44px;
         }
 
         .red-gradient-button {
@@ -90,7 +92,7 @@ const Hero: React.FC = () => {
                 Try it free
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
+                  className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
