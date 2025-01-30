@@ -87,26 +87,31 @@ const Hero: React.FC = () => {
             >
               See students&apos; opinions
             </button>
-            <button 
-              className="red-gradient-button flex items-center justify-center group"
-              data-testid="join-masterclass-button"
-            >
-              Try it free
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
+            <div className="flex flex-col items-center">
+              <button 
+                className="red-gradient-button flex items-center justify-center group"
+                data-testid="join-masterclass-button"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                />
-              </svg>
-            </button>
+                Try it free
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                  />
+                </svg>
+              </button>
+              <span className="text-xs font-light text-gray-400 mt-2">
+                Start for free. No credit card required.
+              </span>
+            </div>
           </motion.div>
         </motion.div>
         
