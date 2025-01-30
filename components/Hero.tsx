@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-16 md:px-24">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-20 md:px-32">
         <motion.div 
           className="md:w-1/2 mb-8 md:mb-0 -mt-24"
           initial={{ x: -100, opacity: 0 }}
