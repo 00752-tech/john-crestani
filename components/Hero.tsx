@@ -8,7 +8,14 @@ import { Award } from 'lucide-react'
 const Hero: React.FC = () => {
   return (
     <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
-      <style>{`
+      <style jsx global>{`
+        @font-face {
+          font-family: 'Euclid Circular A';
+          src: url('/fonts/EuclidCircularA-Light.woff2') format('woff2');
+          font-weight: 300;
+          font-style: normal;
+        }
+
         .button-base {
           padding: 10px 20px;
           border-radius: 6px;
@@ -67,7 +74,7 @@ const Hero: React.FC = () => {
             <span className="text-gray-400"> Shock You </span> 
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300">
+          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-['Euclid_Circular_A'] font-light">
             Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
