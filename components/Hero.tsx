@@ -79,11 +79,12 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <button 
-              className="button-base transparent-button"
-              data-testid="see-opinions-button"
-            >
-              See students&apos; opinions
-            </button>
+  className="button-base transparent-button w-[200px]"
+  data-testid="see-opinions-button"
+>
+  See students' opinions
+</button>
+
             <div className="flex flex-col items-center">
               <button 
                 className="button-base red-gradient-button group"
