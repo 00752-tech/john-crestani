@@ -9,7 +9,12 @@ const Hero: React.FC = () => {
   return (
     <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
       <style jsx global>{`
-        @import url('https://use.typekit.net/xxxxxxx.css'); /* Replace with your Adobe Fonts kit URL */
+        @font-face {
+          font-family: 'Suisse';
+          src: url('/fonts/SuisseIntl-Light.woff2') format('woff2');
+          font-weight: 300;
+          font-style: normal;
+        }
 
         .button-base {
           padding: 10px 20px;
@@ -69,7 +74,7 @@ const Hero: React.FC = () => {
             <span className="text-gray-400"> Shock You </span> 
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-['sofia-pro'] font-light tracking-tight">
+          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-['Suisse'] font-light tracking-tight">
             Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
