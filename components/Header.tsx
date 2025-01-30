@@ -27,11 +27,16 @@ export default function Header() {
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
           {/* New Logo */}
-          <Link href="/" className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center">
-            <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-tighter">
-              JC
-            </span>
-          </Link>
+          <Link href="/" className="flex items-center">
+          <span 
+          className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter text-gray-400 opacity-25 mr-3"
+          style={{ fontFamily: "'Arial', sans-serif" }}
+  >
+    JC
+  </span>
+  <span className="sr-only">John Crestani</span>
+</Link>
+
 
           {/* Mobile Menu Button */}
           <button 
