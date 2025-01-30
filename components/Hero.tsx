@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
                   />
                 </svg>
               </button>
-              <span className="text-xs font-light text-gray-400 mt-2">
+              <span className="text-xs text-gray-400 mt-1.5 tracking-tight">
                 Start for free. No credit card required.
               </span>
             </div>
