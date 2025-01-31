@@ -140,7 +140,7 @@ export default function About() {
                 }}
                 className="text-2xl font-semibold mb-4 text-pink-500"
               >
-                Super Affiliate System Pro: Evolved for 2025
+                Tomorrow's Wealth, Today: Exploring Super Affiliate System Pro 2025
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 80 }}
