@@ -6,6 +6,14 @@ import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
 
 const Hero: React.FC = () => {
+  const handleUnlockBlueprint = () => {
+    window.location.href = "https://4d6e7qs4vhhbpjj42qf7fp2t8e.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1";
+  }
+
+  const handleRevealSecrets = () => {
+    window.location.href = "https://140f1mt5-kq2hf692hb03t4y7r.hop.clickbank.net/?&campaign=webi";
+  }
+
   return (
     <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
       <style jsx global>{`
@@ -34,6 +42,7 @@ const Hero: React.FC = () => {
           text-transform: uppercase;
           white-space: nowrap;
           letter-spacing: 0.5px;
+          cursor: pointer;
         }
 
         .red-gradient-button {
@@ -96,6 +105,7 @@ const Hero: React.FC = () => {
             <button 
               className="button-base transparent-button"
               data-testid="see-opinions-button"
+              onClick={handleUnlockBlueprint}
             >
               UNLOCK MY PROFIT BLUEPRINT NOW
             </button>
@@ -103,6 +113,7 @@ const Hero: React.FC = () => {
               <button 
                 className="button-base red-gradient-button group"
                 data-testid="join-masterclass-button"
+                onClick={handleRevealSecrets}
               >
                 REVEAL MY MILLION-DOLLAR SECRETS
                 <svg 
