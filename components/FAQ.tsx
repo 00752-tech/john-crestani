@@ -144,19 +144,12 @@ export default function FAQ() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <a 
-            href="https://030acmty5ht2idhfbm9x2o1xc7.hop.clickbank.net/?cbpage=diroop&campaign=nearmecta" 
-            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 relative overflow-hidden group inline-block"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = e.currentTarget.href;
-            }}
+          <button 
+            onClick={() => window.location.href = "https://030acmty5ht2idhfbm9x2o1xc7.hop.clickbank.net/?cbpage=diroop&campaign=nearmecta"}
+            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
           >
-            <span className="relative z-10">
-              Find Super Affiliate System Pro Near Me: Click for Instant Access
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </a>
+            Find Super Affiliate System Pro Near Me: Click for Instant Access
+          </button>
         </div>
         <p className="mt-4 text-center text-gray-400">
           Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
