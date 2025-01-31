@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Button } from './ui/button'
+import { motion } from 'framer-motion'
 
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false)
@@ -26,28 +26,33 @@ export function CookieConsent() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-transparent p-2 shadow-md z-50 overflow-hidden">
+    <motion.div 
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 p-4 shadow-lg z-50"
+    >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <p className="mb-2 md:mb-0 text-xs text-white">
-          We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.
+        <p className="mb-4 md:mb-0 text-sm text-gray-300 max-w-2xl">
+          We use cookies to enhance your experience and analyze our site's performance. 
+          By continuing, you agree to our use of cookies. Your data helps us deliver more relevant content.
         </p>
-        <div className="flex space-x-2">
-          <Button 
-            className='bg-gradient-to-r from-pink-500 to-purple-500 text-white py-1 px-4 rounded-md text-xs font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform'  
-            onClick={acceptCookies} 
-            variant="default"
-          >
-            Accept
-          </Button>
-          <Button 
-            className='bg-white text-black py-1 px-4 rounded-md text-xs font-semibold transition duration-300' 
+        <div className="flex space-x-4">
+          <button 
             onClick={declineCookies} 
-            variant="default"
+            className="button-base transparent-button text-sm py-2 px-6"
           >
             Decline
-          </Button>
+          </button>
+          <button 
+            onClick={acceptCookies} 
+            className="button-base red-gradient-button text-sm py-2 px-6"
+          >
+            Accept
+          </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
