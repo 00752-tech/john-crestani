@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import React from 'react'
-import Image from 'next/image'
 
 export default function CTA() {
   const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -77,13 +76,6 @@ export default function CTA() {
             transition={{ duration: 0.4, delay: 0.6 }}
             className="mt-4 flex items-center justify-center"
           >
-            <Image 
-              src="/low price gurantee.png" 
-              alt="Low Price Guarantee" 
-              width={50} 
-              height={50} 
-              className="mr-2"
-            />
             <p className="text-sm text-gray-600">
               Low Price Guarantee: We&apos;ll match any competitor&apos;s price!
             </p>
