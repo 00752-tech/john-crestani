@@ -6,12 +6,14 @@ import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
 
 const Hero: React.FC = () => {
-  const handleUnlockBlueprint = () => {
-    window.location.href = "https://4d6e7qs4vhhbpjj42qf7fp2t8e.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1";
+  const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=unlockblueprintcta";
   }
 
-  const handleRevealSecrets = () => {
-    window.location.href = "https://140f1mt5-kq2hf692hb03t4y7r.hop.clickbank.net/?&campaign=webi";
+  const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=milliondollarsecretscta";
   }
 
   return (
