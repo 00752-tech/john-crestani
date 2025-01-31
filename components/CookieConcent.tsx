@@ -5,12 +5,21 @@ import { motion } from 'framer-motion'
 
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent')
     if (!consent) {
       setShowBanner(true)
     }
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // Adjust this breakpoint as needed
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const acceptCookies = () => {
@@ -23,7 +32,7 @@ export function CookieConsent() {
     setShowBanner(false)
   }
 
-  if (!showBanner) return null
+  if (!showBanner || isMobile) return null
 
   return (
     <motion.div 
