@@ -24,19 +24,20 @@ const Hero: React.FC = () => {
         .button-base {
           padding: 10px 20px;
           border-radius: 6px;
-          font-size: 0.9rem;
-          font-weight: normal;
+          font-size: 0.8rem;
+          font-weight: bold;
           display: inline-flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
-          height: 44px;
+          height: 50px;
+          text-transform: uppercase;
         }
 
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
-          width: 160px;
+          width: 300px;
         }
 
         .red-gradient-button:hover {
@@ -48,7 +49,7 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
-          width: 240px; /* Increased width */
+          width: 300px;
         }
 
         .transparent-button:hover {
