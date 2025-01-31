@@ -48,7 +48,7 @@ export default function FreeTools() {
           }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
         >
-          Free Affiliate Marketing Tools
+          Activate Your Affiliate Advantage
         </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {tools.map((tool, index) => (
@@ -151,7 +151,7 @@ export default function FreeTools() {
             }}
             className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
           >
-            View All Free Tools
+            Unleash Your Conversion Command Center
           </InteractiveButton>
         </motion.div>
       </div>
