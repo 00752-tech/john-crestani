@@ -129,7 +129,7 @@ export default function FeaturedTool() {
               }}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
             >
-              Try It Now
+              CRUNCH YOUR CONVERSION NUMBERS
             </InteractiveButton>
           </motion.div>
         </motion.div>
