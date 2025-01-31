@@ -1,12 +1,21 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Head from 'next/head'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
+    {
+      question: "Is there affiliate marketing training near me?",
+      answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
+    },
+    {
+      question: "How can I find Super Affiliate System Pro near me?",
+      answer: "Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you're at home, in a coffee shop, or traveling, you can access our comprehensive training program. It's like having a personal affiliate marketing mentor right next to you, 24/7."
+    },
     {
       question: "Who is John Crestani?",
       answer: "John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He's known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer."
@@ -24,16 +33,8 @@ export default function FAQ() {
       answer: "While the core principles remain, the 2025 version has been extensively updated. It now includes AI-powered tools, blockchain affiliate strategies, advanced analytics, and tactics for new social media platforms that have emerged since 2017."
     },
     {
-      question: "What does the Super Affiliate System course cover?",
-      answer: "The course covers a wide range of topics including affiliate marketing strategies, ad buying, landing page optimization, product promotion, setting up a business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI."
-    },
-    {
       question: "How much does the Super Affiliate System cost?",
       answer: "Pricing can vary over time and might include promotions or discounts. Typically, the basic version of the Super Affiliate System has been priced around $997, with more comprehensive versions or additional tools/services costing extra."
-    },
-    {
-      question: "Are there any additional costs beyond the initial program fee?",
-      answer: "Yes, additional costs might include tools (e.g., ClickFunnels, email marketing software), ad spending for campaigns, and possibly upsells within the program for advanced training or support."
     },
     {
       question: "Is there a money-back guarantee?",
@@ -44,14 +45,34 @@ export default function FAQ() {
       answer: "Yes, when you purchase Super Affiliate System Pro, you receive lifetime access to all future updates. This ensures that your affiliate marketing education stays current with the fast-paced digital world."
     },
     {
-      question: "What kind of support does John Crestani offer to his students?",
-      answer: "Support typically includes access to a community forum, live webinars, and sometimes one-on-one coaching (depending on the package purchased). The responsiveness and quality of support can vary."
-    },
-    {
       question: "Can I really make money with John Crestani's training?",
       answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
   ]
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="faq" className="py-20 pt-32 bg-black text-white">
@@ -73,7 +94,7 @@ export default function FAQ() {
               >
                 <span className="font-semibold text-pink-500">{faq.question}</span>
                 <motion.div
-                  whileInView={{ rotate: openIndex === index ? 180 : 0 }}
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <ChevronDown className="text-pink-500" />
@@ -83,7 +104,7 @@ export default function FAQ() {
                 {openIndex === index && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    whileInView={{ height: "auto", opacity: 1 }}
+                    animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
@@ -97,6 +118,14 @@ export default function FAQ() {
             </motion.div>
           ))}
         </div>
+        <div className="mt-12 text-center">
+          <a href="https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300">
+            Find Super Affiliate System Pro Near Me: Click for Instant Access
+          </a>
+        </div>
+        <p className="mt-4 text-center text-gray-400">
+          Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
+        </p>
       </div>
     </section>
   )
