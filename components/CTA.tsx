@@ -23,7 +23,7 @@ export default function CTA() {
           transition={{ duration: 0.4 }}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          Ready to Master Affiliate Marketing in 2025?
+          Unlock Your Affiliate Empire in 2025
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function CTA() {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-xl mb-8"
         >
-          Join thousands of successful affiliates who have transformed their lives with Super Affiliate System Pro
+          Thousands have cracked the code - now it's your turn to join the ranks of Super Affiliate System Pro millionaires.
         </motion.p>
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
