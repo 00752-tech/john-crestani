@@ -75,8 +75,8 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-4xl md:text-[3rem] font-light mb-10 leading-tight text-white">
-            WARNING: This Affiliate Marketing Secret May 
-            <span className="text-gray-400"> Shock You </span> 
+            WARNING: This  
+            <span className="text-gray-400"> Affiliate Marketing Secret </span> May Shock You
           </h1>
           
           <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
