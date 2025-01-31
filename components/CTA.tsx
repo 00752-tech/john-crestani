@@ -10,22 +10,57 @@ export default function CTA() {
     window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast";
   }
 
-  const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webifooter";
-  }
-
   return (
     <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
       <div className="container mx-auto text-center">
-        {/* ... (previous code remains unchanged) ... */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-3xl md:text-4xl font-bold mb-4"
+        >
+          Unlock Your Affiliate Empire in 2025
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="text-xl mb-8"
+        >
+          Thousands have cracked the code - now it&apos;s your turn to join the ranks of Super Affiliate System Pro millionaires.
+        </motion.p>
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl mx-auto"
         >
-          {/* ... (previous code remains unchanged) ... */}
+          <motion.h3 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="text-3xl font-bold text-gray-800 mb-4"
+          >
+            Limited Time Offer
+          </motion.h3>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="text-2xl text-gray-600 mb-6"
+          >
+            Get 50% OFF Today!
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            className="flex justify-center items-center space-x-4 mb-6"
+          >
+            <span className="text-4xl font-bold text-gray-400 line-through">$4,997</span>
+            <span className="text-4xl font-bold text-gray-400 line-through">$1,994</span>
+            <span className="text-5xl font-bold text-pink-500">Act Fast!</span>
+          </motion.div>
           <motion.button 
             onClick={handleEnrollClick}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -62,7 +97,19 @@ export default function CTA() {
             30-Day Money-Back Guarantee
           </motion.p>
         </motion.div>
-        {/* ... (remaining code unchanged) ... */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          className="mt-8"
+        >
+          <a
+            href="https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webifooter"
+            className="text-white underline hover:text-pink-200 transition duration-300"
+          >
+            Master the Million-Dollar Matrix: Complimentary Training
+          </a>
+        </motion.div>
       </div>
     </section>
   )
