@@ -35,7 +35,7 @@ export function CookieConsent() {
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <p className="mb-4 md:mb-0 text-sm text-gray-300 max-w-2xl">
-          We use cookies to enhance your experience and analyze our site's performance. 
+          We use cookies to enhance your experience and analyze our site&apos;s performance. 
           By continuing, you agree to our use of cookies. Your data helps us deliver more relevant content.
         </p>
         <div className="flex space-x-4">
