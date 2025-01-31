@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
-          width: 200px;
+          width: 240px; /* Increased width */
         }
 
         .transparent-button:hover {
