@@ -50,7 +50,7 @@ export default function CTA() {
               className="mr-2"
             />
             <p className="text-sm text-gray-600">
-              Low Price Guarantee: We&apos;ll match any competitor's price!
+              Low Price Guarantee: We&apos;ll match any competitor&apos;s price!
             </p>
           </motion.div>
           <motion.p 
