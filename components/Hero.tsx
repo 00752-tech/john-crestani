@@ -22,24 +22,24 @@ const Hero: React.FC = () => {
         }
 
         .button-base {
-          padding: 10px 20px;
-          border-radius: 6px;
-          font-size: 0.75rem;
-          font-weight: 400;  // Reduced from bold (700) to normal (400)
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-size: 0.9rem;
+          font-weight: 400;
           display: inline-flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
-          height: 50px;
+          height: 60px;
           text-transform: uppercase;
           white-space: nowrap;
-          letter-spacing: 0.5px;  // Added for better readability
+          letter-spacing: 0.5px;
         }
 
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
-          width: 340px;
+          width: 380px;
         }
 
         .red-gradient-button:hover {
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
-          width: 300px;
+          width: 340px;
         }
 
         .transparent-button:hover {
@@ -70,24 +70,24 @@ const Hero: React.FC = () => {
         >
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
-              <Award className="h-5 w-5 mr-2 text-yellow-400" />
-              <span className="text-sm font-light text-gray-300 tracking-wider whitespace-nowrap">
+              <Award className="h-6 w-6 mr-2 text-yellow-400" />
+              <span className="text-base font-light text-gray-300 tracking-wider whitespace-nowrap">
                 THE GLOBAL EDUCATION AWARD THAT COULD BE YOUR TICKET OUT OF THE 9–5 GRIND
               </span>
             </div>
           </div>
           
-          <h1 className="text-left text-4xl md:text-[3rem] font-light mb-10 leading-tight text-white">
+          <h1 className="text-left text-5xl md:text-[3.5rem] font-light mb-10 leading-tight text-white">
             WARNING: This  
             <span className="text-gray-400"> Affiliate Marketing Secret </span> May Shock You
           </h1>
           
-          <p className="text-base text-left sm:text-xl mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
+          <p className="text-lg text-left sm:text-2xl mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
             Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 mt-12"
+            className="flex flex-col sm:flex-row gap-6 mt-12"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
                 REVEAL MY MILLION-DOLLAR SECRETS
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" 
+                  className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
                   />
                 </svg>
               </button>
-              <span className="text-xs text-gray-400 mt-1.5 tracking-tight">
+              <span className="text-sm text-gray-400 mt-2 tracking-tight">
                 Start for free. No credit card required.
               </span>
             </div>
@@ -134,12 +134,12 @@ const Hero: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-3/4 h-auto">
+          <div className="relative w-4/5 h-auto">
             <Image 
               src="/jc 2.png" 
               alt="John Crestani" 
-              width={400} 
-              height={600} 
+              width={500} 
+              height={750} 
               layout="responsive"
               objectFit="contain"
               className="rounded-lg shadow-2xl"
