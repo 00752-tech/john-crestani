@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 
 export default function WebinarInvite() {
-  const handleWebinarClick = () => {
+  const handleWebinarClick = (e) => {
+    e.preventDefault();
     window.location.href = "https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webi2";
   };
 
@@ -54,14 +55,12 @@ export default function WebinarInvite() {
             }} 
             className="mt-12 text-center"
           >
-            <a
-              href="https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webi2"
+            <button
               onClick={handleWebinarClick}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105 shadow-lg"
-              rel="sponsored"
             >
               Try it free
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </article>
