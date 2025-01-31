@@ -18,7 +18,7 @@ export default function About() {
           }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
         >
-          About John Crestani and Super Affiliate System Pro
+          Super Affiliate System Pro: Where Dreams Meet Digital Dollars
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
