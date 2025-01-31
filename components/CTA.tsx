@@ -31,7 +31,7 @@ export default function CTA() {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-xl mb-8"
         >
-          Thousands have cracked the code - now it's your turn to join the ranks of Super Affiliate System Pro millionaires.
+          Thousands have cracked the code - now it&apos;s your turn to join the ranks of Super Affiliate System Pro millionaires.
         </motion.p>
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
