@@ -145,8 +145,12 @@ export default function FAQ() {
         </div>
         <div className="mt-12 text-center">
           <a 
-            href="https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast" 
-            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 relative overflow-hidden group"
+            href="https://030acmty5ht2idhfbm9x2o1xc7.hop.clickbank.net/?cbpage=diroop&campaign=nearmecta" 
+            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 relative overflow-hidden group inline-block"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = e.currentTarget.href;
+            }}
           >
             <span className="relative z-10">
               Find Super Affiliate System Pro Near Me: Click for Instant Access
