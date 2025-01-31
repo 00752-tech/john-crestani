@@ -29,7 +29,7 @@ export default function Features() {
             ease: "easeOut",
           }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
-        >{`What's Inside Super Affiliate System Pro 2025`}</motion.h2>
+        >{`The Billionaire's Toolkit: Inside Super Affiliate System Pro 2025`}</motion.h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             {features.map((feature, index) => (
