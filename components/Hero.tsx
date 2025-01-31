@@ -94,14 +94,14 @@ const Hero: React.FC = () => {
               className="button-base transparent-button"
               data-testid="see-opinions-button"
             >
-              GET INSTANT ACCESS
+              UNLOCK MY PROFIT BLUEPRINT NOW
             </button>
             <div className="flex flex-col items-center">
               <button 
                 className="button-base red-gradient-button group"
                 data-testid="join-masterclass-button"
               >
-                Try it free
+                REVEAL MY MILLION-DOLLAR SECRETS
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" 
