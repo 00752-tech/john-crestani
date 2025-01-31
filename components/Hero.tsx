@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=milliondollarsecretscta";
+    window.location.href = "https://94746cw02lmakmi73b8z1matdo.hop.clickbank.net/?&campaign=milliondollarsecretscta";
   }
 
   return (
