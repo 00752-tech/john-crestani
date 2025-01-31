@@ -1,14 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import React from 'react'
 
 export default function CTA() {
-  const handleEnrollClick = () => {
-    window.location.href = '/api/sale'
+  const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast";
   }
 
-  const handleWebinarClick = () => {
-    window.location.href = '/api/webinar'
+  const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.location.href = "https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webifooter";
   }
 
   return (
@@ -60,7 +63,6 @@ export default function CTA() {
           >
             <span className="text-4xl font-bold text-gray-400 line-through">$4,997</span>
             <span className="text-4xl font-bold text-gray-400 line-through">$1,994</span>
-
             <span className="text-5xl font-bold text-pink-500">Act Fast!</span>
           </motion.div>
           <motion.button 
@@ -99,4 +101,3 @@ export default function CTA() {
     </section>
   )
 }
-
