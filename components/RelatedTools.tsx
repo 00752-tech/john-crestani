@@ -80,7 +80,7 @@ export default function RelatedTools({ currentToolUrl, category }: RelatedToolsP
 
   return (
     <div className="mt-12 bg-gray-900 p-8 rounded-lg">
-      <h2 className="text-2xl font-semibold mb-6 text-white">Related Tools</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-white">Access Your Success Toolkit</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {relatedTools.map((tool) => {
           const Icon = tool.icon
