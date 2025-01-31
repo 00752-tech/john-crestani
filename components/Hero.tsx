@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
               className="button-base transparent-button"
               data-testid="see-opinions-button"
             >
-              See students&apos; opinions
+              GET INSTANT ACCESS
             </button>
             <div className="flex flex-col items-center">
               <button 
