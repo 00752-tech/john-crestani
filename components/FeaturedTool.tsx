@@ -54,7 +54,7 @@ export default function FeaturedTool() {
           }}
           className="text-3xl font-bold mb-8 text-center gradient-text"
         >
-          Featured Free Tool
+          Discover Your Revenue Boosters
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 60 }}
