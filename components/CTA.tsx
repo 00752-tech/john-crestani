@@ -94,7 +94,7 @@ export default function CTA() {
             onClick={handleWebinarClick}
             className="text-white underline hover:text-pink-200 transition duration-300"
           >
-            Or Join Our Free Webinar to Learn More
+            Master the Million-Dollar Matrix: Complimentary Training
           </button>
         </motion.div>
       </div>
