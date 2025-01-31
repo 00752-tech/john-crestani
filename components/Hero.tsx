@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         .button-base {
           padding: 10px 20px;
           border-radius: 6px;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-weight: bold;
           display: inline-flex;
           align-items: center;
@@ -32,12 +32,13 @@ const Hero: React.FC = () => {
           transition: all 0.3s ease;
           height: 50px;
           text-transform: uppercase;
+          white-space: nowrap;
         }
 
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
-          width: 300px;
+          width: 340px;
         }
 
         .red-gradient-button:hover {
