@@ -83,21 +83,21 @@ export default function FAQ() {
       "priceRange": "$$"
     }
 
-    const faqScript = document.createElement('script');
-    faqScript.type = 'application/ld+json';
-    faqScript.text = JSON.stringify(faqSchemaData);
-    document.head.appendChild(faqScript);
+    const faqScript = document.createElement('script')
+    faqScript.type = 'application/ld+json'
+    faqScript.text = JSON.stringify(faqSchemaData)
+    document.head.appendChild(faqScript)
 
-    const nearMeScript = document.createElement('script');
-    nearMeScript.type = 'application/ld+json';
-    nearMeScript.text = JSON.stringify(nearMeSchemaData);
-    document.head.appendChild(nearMeScript);
+    const nearMeScript = document.createElement('script')
+    nearMeScript.type = 'application/ld+json'
+    nearMeScript.text = JSON.stringify(nearMeSchemaData)
+    document.head.appendChild(nearMeScript)
 
     return () => {
-      document.head.removeChild(faqScript);
-      document.head.removeChild(nearMeScript);
-    };
-  }, [faqs]);
+      document.head.removeChild(faqScript)
+      document.head.removeChild(nearMeScript)
+    }
+  }, [faqs])
 
   return (
     <section id="faq" className="py-20 pt-32 bg-black text-white">
@@ -151,4 +151,13 @@ export default function FAQ() {
             <span className="relative z-10">
               Find Super Affiliate System Pro Near Me: Click for Instant Access
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </a>
+        </div>
+        <p className="mt-4 text-center text-gray-400">
+          Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
+        </p>
+      </div>
+    </section>
+  )
+}
