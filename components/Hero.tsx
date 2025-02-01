@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="pt-20 pb-16 bg-black text-white overflow-hidden relative">
+    <section className="py-16 md:pt-20 md:pb-16 bg-black text-white overflow-hidden relative">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -45,12 +45,13 @@ const Hero: React.FC = () => {
           white-space: nowrap;
           letter-spacing: 0.5px;
           cursor: pointer;
+          width: 100%;
+          max-width: 380px;
         }
 
         .red-gradient-button {
           background-image: linear-gradient(241deg, #FF1C00, #FF4D00);
           color: white;
-          width: 380px;
         }
 
         .red-gradient-button:hover {
@@ -62,7 +63,6 @@ const Hero: React.FC = () => {
           border: 2px solid white;
           background-color: transparent;
           color: white;
-          width: 340px;
         }
 
         .transparent-button:hover {
@@ -71,9 +71,9 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-20 md:px-32">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-8 md:px-16 lg:px-32">
         <motion.div 
-          className="md:w-1/2 mb-8 md:mb-0 -mt-24"
+          className="w-full md:w-1/2 mb-8 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -82,23 +82,23 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
-              <span className="text-base font-light text-gray-300 tracking-wider whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-base font-light text-gray-300 tracking-wider">
                 THE GLOBAL EDUCATION AWARD THAT COULD BE YOUR TICKET OUT OF THE 9–5 GRIND
               </span>
             </div>
           </div>
           
-          <h1 className="text-left text-5xl md:text-[3.5rem] font-light mb-10 leading-tight text-white">
+          <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
             WARNING: This  
             <span className="text-gray-400"> Affiliate Marketing Secret </span> May Shock You
           </h1>
           
-          <p className="text-lg text-left sm:text-2xl mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
+            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani's proven system that consistently delivers results.
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-6 mt-12"
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
                   />
                 </svg>
               </button>
-              <span className="text-sm text-gray-400 mt-2 tracking-tight">
+              <span className="text-xs sm:text-sm text-gray-400 mt-2 tracking-tight">
                 Start for free. No credit card required.
               </span>
             </div>
@@ -141,13 +141,13 @@ const Hero: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="md:w-1/2 relative flex justify-center items-center"
+          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-4/5 h-auto">
+          <div className="relative w-full md:w-4/5 h-auto">
             <Image 
               src="/jc 2.png" 
               alt="John Crestani" 
