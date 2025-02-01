@@ -1,4 +1,9 @@
-import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react'
+import { Calculator } from 'lucide-react/dist/esm/icons/calculator'
+import { TrendingUp } from 'lucide-react/dist/esm/icons/trending-up'
+import { DollarSign } from 'lucide-react/dist/esm/icons/dollar-sign'
+import { Users } from 'lucide-react/dist/esm/icons/users'
+import { Youtube } from 'lucide-react/dist/esm/icons/youtube'
+import { Maximize2 } from 'lucide-react/dist/esm/icons/maximize-2'
 import { useEffect } from 'react'
 
 const allTools = [
