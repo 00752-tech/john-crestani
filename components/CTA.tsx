@@ -6,7 +6,7 @@ import React from 'react'
 export default function CTA() {
   const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast";
+    window.location.href = "https://28470jr8yjobhlfdbb638w0sak.hop.clickbank.net/?cbpage=allpaymentoptions&campaign=allpaymentoptions";
   }
 
   return (
