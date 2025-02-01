@@ -10,6 +10,7 @@ import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import Stats from '@/components/Stats'
 import WebinarInvite from '@/components/WebinarInvite'
+import RelatedTools from '@/components/RelatedTools'
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false })
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false })
@@ -20,8 +21,7 @@ export default function Home() {
   const pageTitle = 'John Crestani\'s Super Affiliate System Pro 2025 - Master Affiliate Marketing'
 
   return (
-    <main className="flex flex-col min-h-screen bg-black overflow-hidden 
-    ">
+    <main className="flex flex-col min-h-screen bg-black overflow-hidden">
       <Header />
       <Hero />
       <Stats />
@@ -42,6 +42,7 @@ export default function Home() {
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
+      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
       <Footer />
     </main>
   )
