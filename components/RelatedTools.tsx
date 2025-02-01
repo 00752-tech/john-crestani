@@ -1,3 +1,5 @@
+'use client'
+
 import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react'
 import { useEffect } from 'react'
 
