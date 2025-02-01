@@ -1,3 +1,5 @@
+'use client'
+
 import { Calculator } from 'lucide-react/dist/esm/icons/calculator'
 import { TrendingUp } from 'lucide-react/dist/esm/icons/trending-up'
 import { DollarSign } from 'lucide-react/dist/esm/icons/dollar-sign'
