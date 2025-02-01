@@ -10,11 +10,17 @@ import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import Stats from '@/components/Stats'
 import WebinarInvite from '@/components/WebinarInvite'
-import RelatedTools, { RelatedToolsProps } from '@/components/RelatedTools'
+import RelatedTools from '@/components/RelatedTools'
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false })
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false })
 const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), { ssr: false })
+
+// Define the props interface here instead of importing it
+interface RelatedToolsProps {
+  currentToolUrl: string;
+  category: string;
+}
 
 // Wrapper component for CTA
 const CTAWrapper: React.FC<RelatedToolsProps> = () => <CTA />
