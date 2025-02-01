@@ -1,12 +1,4 @@
-'use client'
-
-import { Calculator } from 'lucide-react/dist/esm/icons/calculator'
-import { TrendingUp } from 'lucide-react/dist/esm/icons/trending-up'
-import { DollarSign } from 'lucide-react/dist/esm/icons/dollar-sign'
-import { Users } from 'lucide-react/dist/esm/icons/users'
-import { Youtube } from 'lucide-react/dist/esm/icons/youtube'
-import { Maximize2 } from 'lucide-react/dist/esm/icons/maximize-2'
-import { useEffect } from 'react'
+import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react'
 
 const allTools = [
   {
@@ -73,47 +65,18 @@ interface RelatedToolsProps {
 }
 
 export default function RelatedTools({ currentToolUrl, category }: RelatedToolsProps) {
+  // First, get tools from the same category (excluding current tool)
   const sameCategryTools = allTools.filter(tool => 
     tool.category === category && tool.url !== currentToolUrl
   )
 
+  // Then, get tools from other categories if needed
   const otherTools = allTools.filter(tool => 
     tool.category !== category && tool.url !== currentToolUrl
   )
 
+  // Combine tools to ensure we always have 3
   const relatedTools = [...sameCategryTools, ...otherTools].slice(0, 3)
-
-  useEffect(() => {
-    const toolsSchemaData = {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": allTools.map((tool, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": tool.name,
-          "description": tool.description,
-          "url": `https://yourwebsite.com${tool.url}`,
-          "applicationCategory": "BusinessApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
-        }
-      }))
-    }
-
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify(toolsSchemaData)
-    document.head.appendChild(script)
-
-    return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
 
   return (
     <div className="mt-12 bg-gray-900 p-8 rounded-lg">
