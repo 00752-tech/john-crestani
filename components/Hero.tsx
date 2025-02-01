@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="py-16 md:pt-20 md:pb-16 bg-black text-white overflow-hidden relative">
+    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -69,11 +69,18 @@ const Hero: React.FC = () => {
           background-color: white;
           color: black;
         }
+
+        @media (max-width: 640px) {
+          h1 {
+            font-size: 2.25rem !important;
+            line-height: 1.2 !important;
+          }
+        }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <motion.div 
-          className="w-full md:w-1/2 mb-8 md:mb-0"
+          className="w-full md:w-1/2 mb-12 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -141,7 +148,7 @@ const Hero: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0"
+          className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -161,7 +168,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
     </section>
-   )
+  )
 }
 
 export default Hero
