@@ -10,11 +10,14 @@ import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import Stats from '@/components/Stats'
 import WebinarInvite from '@/components/WebinarInvite'
-import RelatedTools from '@/components/RelatedTools'
+import RelatedTools, { RelatedToolsProps } from '@/components/RelatedTools'
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false })
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false })
 const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), { ssr: false })
+
+// Wrapper component for CTA
+const CTAWrapper: React.FC<RelatedToolsProps> = () => <CTA />
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me'
@@ -36,7 +39,7 @@ export default function Home() {
       <WebinarInvite />
       <Testimonials />
       <FAQ />
-      <CTA />
+      <CTAWrapper currentToolUrl={pageUrl} category="affiliate" />
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
