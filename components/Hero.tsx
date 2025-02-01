@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani's proven system that consistently delivers results.
+            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
           </p>
           
           <motion.div 
