@@ -1,108 +1,146 @@
-'use client'
+import { Calculator } from 'lucide-react/dist/esm/icons/calculator'
+import { TrendingUp } from 'lucide-react/dist/esm/icons/trending-up'
+import { DollarSign } from 'lucide-react/dist/esm/icons/dollar-sign'
+import { Users } from 'lucide-react/dist/esm/icons/users'
+import { Youtube } from 'lucide-react/dist/esm/icons/youtube'
+import { Maximize2 } from 'lucide-react/dist/esm/icons/maximize-2'
+import { useEffect } from 'react'
 
-import { motion } from 'framer-motion'
-import React from 'react'
-
-export default function CTA() {
-  const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "https://28470jr8yjobhlfdbb638w0sak.hop.clickbank.net/?cbpage=allpaymentoptions&campaign=allpaymentoptions";
+const allTools = [
+  {
+    name: "Affiliate Earnings Calculator",
+    description: "Estimate your potential affiliate marketing earnings.",
+    url: "/affiliate-marketing-tools/earnings-calculator",
+    icon: Calculator,
+    category: "affiliate"
+  },
+  {
+    name: "ROAS Calculator",
+    description: "Calculate your Return on Ad Spend for campaigns.",
+    url: "/advertising-tools/roas-calculator",
+    icon: TrendingUp,
+    category: "advertising"
+  },
+  {
+    name: "Dropshipping Profit Calculator",
+    description: "Analyze potential profits for your dropshipping business.",
+    url: "/ecommerce-tools/dropshipping-profit-calculator",
+    icon: DollarSign,
+    category: "ecommerce"
+  },
+  {
+    name: "Influencer Earnings Calculator",
+    description: "Estimate earnings based on your social media influence.",
+    url: "/influencer-marketing-tools/earnings-calculator",
+    icon: Users,
+    category: "influencer"
+  },
+  {
+    name: "YouTube Earnings Calculator",
+    description: "Calculate potential YouTube AdSense earnings.",
+    url: "/content-creation-tools/youtube-earnings-calculator",
+    icon: Youtube,
+    category: "content"
+  },
+  {
+    name: "Investment Calculator",
+    description: "Plan your financial future with investment projections.",
+    url: "/financial-tools/investment-calculator",
+    icon: TrendingUp,
+    category: "financial"
+  },
+  {
+    name: "Niche Profitability Calculator",
+    description: "Estimate the potential profitability of different niches.",
+    url: "/affiliate-marketing-tools/niche-profitability-calculator",
+    icon: TrendingUp,
+    category: "affiliate"
+  },
+  {
+    name: "Affiliate Link CTR Optimizer",
+    description: "Optimize your affiliate link click-through rates.",
+    url: "/affiliate-marketing-tools/link-ctr-optimizer",
+    icon: Maximize2,
+    category: "affiliate"
   }
+]
+
+interface RelatedToolsProps {
+  currentToolUrl: string
+  category: string
+}
+
+export default function RelatedTools({ currentToolUrl, category }: RelatedToolsProps) {
+  const sameCategryTools = allTools.filter(tool => 
+    tool.category === category && tool.url !== currentToolUrl
+  )
+
+  const otherTools = allTools.filter(tool => 
+    tool.category !== category && tool.url !== currentToolUrl
+  )
+
+  const relatedTools = [...sameCategryTools, ...otherTools].slice(0, 3)
+
+  useEffect(() => {
+    const toolsSchemaData = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": allTools.map((tool, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": tool.name,
+          "description": tool.description,
+          "url": `https://yourwebsite.com${tool.url}`,
+          "applicationCategory": "BusinessApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      }))
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.text = JSON.stringify(toolsSchemaData)
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
 
   return (
-    <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
-      <div className="container mx-auto text-center">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-3xl md:text-4xl font-bold mb-4"
-        >
-          Unlock Your Affiliate Empire in 2025
-        </motion.h2>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="text-xl mb-8"
-        >
-          Thousands have cracked the code - now it&apos;s your turn to join the ranks of Super Affiliate System Pro millionaires.
-        </motion.p>
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl mx-auto"
-        >
-          <motion.h3 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="text-3xl font-bold text-gray-800 mb-4"
-          >
-            Limited Time Offer
-          </motion.h3>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="text-2xl text-gray-600 mb-6"
-          >
-            Get 50% OFF Today!
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.5 }}
-            className="flex justify-center items-center space-x-4 mb-6"
-          >
-            <span className="text-4xl font-bold text-gray-400 line-through">$4,997</span>
-            <span className="text-4xl font-bold text-gray-400 line-through">$1,994</span>
-            <span className="text-5xl font-bold text-pink-500">Act Fast!</span>
-          </motion.div>
-          <motion.button 
-            onClick={handleEnrollClick}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
-          >
-            GET INSTANT ACCESS
-          </motion.button>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
-            className="mt-4 flex items-center justify-center"
-          >
-            <p className="text-sm text-gray-600">
-              Low Price Guarantee: We&apos;ll match any competitor&apos;s price!
-            </p>
-          </motion.div>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.7 }}
-            className="mt-2 text-sm text-gray-600"
-          >
-            30-Day Money-Back Guarantee
-          </motion.p>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.6 }}
-          className="mt-8"
-        >
-          <a
-            href="https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webifooter"
-            className="text-white underline hover:text-pink-200 transition duration-300"
-          >
-            Master the Million-Dollar Matrix: Complimentary Training
-          </a>
-        </motion.div>
+    <div className="mt-12 bg-gray-900 p-8 rounded-lg">
+      <h2 className="text-2xl font-semibold mb-6 text-white">Access Your Success Toolkit</h2>
+      <div className="grid md:grid-cols-3 gap-6">
+        {relatedTools.map((tool) => {
+          const Icon = tool.icon
+          return (
+            <button 
+              key={tool.name}
+              onClick={() => {
+                window.scrollTo(0, 0);
+                window.location.href = tool.url;
+              }}
+              className="bg-black p-6 rounded-lg hover:bg-gray-800 transition-colors group text-left w-full"
+            >
+              <div className="flex items-center mb-2">
+                <Icon className="w-6 h-6 text-pink-500 mr-2" />
+                <h3 className="text-lg font-semibold group-hover:text-pink-500 transition-colors">
+                  {tool.name}
+                </h3>
+              </div>
+              <p className="text-sm text-gray-400">
+                {tool.description}
+              </p>
+            </button>
+          )
+        })}
       </div>
-    </section>
+    </div>
   )
 }
