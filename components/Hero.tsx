@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative ">
+    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -87,14 +87,12 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="flex flex-col items-start mb-6">
-          <div className="flex items-center mb-2">
-          <Award className="h-6 w-6 mr-2 text-yellow-400" />
-          <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
-          TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
-          </span>
-          </div>
-</div>
-
+            <div className="flex items-center mb-2">
+              <Award className="h-6 w-6 mr-2 text-yellow-400" />
+              <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
+                TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
+              </span>
+            </div>
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
@@ -103,12 +101,8 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-          71% earn less than $1,000/month due to <span className="text-white font-semibold">outdated strategies</span> (42%) and <span className="text-white font-semibold">lack of mentorship</span> (31%). Break free with John Crestani&apos;s <span className="text-white font-semibold">proven, innovative approach</span>.
+            71% earn less than $1,000/month due to <span className="text-white font-semibold">outdated strategies</span> (42%) and <span className="text-white font-semibold">lack of mentorship</span> (31%). Break free with John Crestani&apos;s <span className="text-white font-semibold">proven, innovative approach</span>.
           </p>
-
-
-
-
           
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
