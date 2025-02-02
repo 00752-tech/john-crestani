@@ -100,9 +100,10 @@ const Hero: React.FC = () => {
             <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here&apos;s Why) 
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            	71% earn less than $1,000/month due to outdated strategies (42%) and lack of mentorship (31%). Break free with John Crestani&apos;s proven, innovative approach.
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-400 font-extralight tracking-tight">
+          71% earn less than $1,000/month due to outdated strategies (42%) and lack of mentorship (31%). Break free with John Crestani&apos;s proven, innovative approach.
           </p>
+
           
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
