@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
               <span className="text-xs sm:text-sm md:text-base font-light text-gray-300 tracking-wider">
-                THE GLOBAL EDUCATION AWARD THAT COULD BE YOUR TICKET OUT OF THE 9–5 GRIND
+                TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
               </span>
             </div>
           </div>
