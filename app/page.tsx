@@ -17,13 +17,13 @@ const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: 
 const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), { ssr: false })
 
 // Define the props interface here instead of importing it
-interface RelatedToolsProps {
-  currentToolUrl: string;
-  category: string;
-}
+// interface RelatedToolsProps {
+//   currentToolUrl: string;
+//   category: string;
+// }
 
 // Wrapper component for CTA
-const CTAWrapper: React.FC<RelatedToolsProps> = () => <CTA />
+// const CTAWrapper: React.FC<RelatedToolsProps> = () => <CTA />
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me'
@@ -45,7 +45,8 @@ export default function Home() {
       <WebinarInvite />
       <Testimonials />
       <FAQ />
-      <CTAWrapper currentToolUrl={pageUrl} category="affiliate" />
+      {/* <CTAWrapper currentToolUrl={pageUrl} category="affiliate" /> */}
+      <CTA currentToolUrl={pageUrl} category='affiliate' />
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
