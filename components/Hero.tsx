@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
               data-testid="see-opinions-button"
               onClick={handleUnlockBlueprint}
             >
-              UNLOCK MY PROFIT BLUEPRINT NOW
+              Earn More, Faster
             </button>
             <div className="flex flex-col items-center">
               <button 
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
                 data-testid="join-masterclass-button"
                 onClick={handleRevealSecrets}
               >
-                REVEAL MY MILLION-DOLLAR SECRETS
+                Free: Unlock Affiliate Secrets
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
