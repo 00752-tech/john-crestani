@@ -87,12 +87,14 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="flex flex-col items-start mb-6">
-            <div className="flex items-center mb-2">
-              <Award className="h-6 w-6 mr-2 text-yellow-400" />
-              <span className="text-xs sm:text-sm md:text-base font-light text-gray-300 tracking-wider">
-                TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
-              </span>
-            </div>
+          <div className="flex items-center mb-2">
+          <Award className="h-6 w-6 mr-2 text-yellow-400" />
+          <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
+          TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
+          </span>
+          </div>
+</div>
+
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
