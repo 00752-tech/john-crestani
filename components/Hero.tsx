@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
             WARNING: Most  
-            <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here's Why) 
+            <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here&apos;s Why) 
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
