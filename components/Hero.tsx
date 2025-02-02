@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative">
+    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative ">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-8">
         <motion.div 
           className="w-full md:w-1/2 mb-12 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
