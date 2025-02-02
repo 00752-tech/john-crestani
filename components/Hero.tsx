@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            71% Earn Less Than $1,000/Month Due to Outdated Strategies (42%) and Lack of Mentorship (31%). Break free with John Crestani&apos;s proven, innovative approach.
+            	71% earn less than $1,000/month due to outdated strategies (42%) and lack of mentorship (31%). Break free with John Crestani&apos;s proven, innovative approach.
           </p>
           
           <motion.div 
