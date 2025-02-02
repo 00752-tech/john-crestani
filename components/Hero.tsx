@@ -96,12 +96,12 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            WARNING: This  
-            <span className="text-gray-400"> Affiliate Marketing Secret </span> May Shock You
+            WARNING: Most  
+            <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here's Why) 
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
+            Stay ahead of the curve with John Crestani&apos;s cutting-edge system, designed to guarantee your success in the ever-changing online landscape
           </p>
           
           <motion.div 
