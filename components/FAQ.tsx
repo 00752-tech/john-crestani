@@ -1,12 +1,12 @@
 'use client'
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const faqs = useMemo(() => [
+  const faqs = [
     {
       question: "Is there affiliate marketing training near me?",
       answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
@@ -47,7 +47,7 @@ export default function FAQ() {
       question: "Can I really make money with John Crestani's training?",
       answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
-  ], [])
+  ]
 
   useEffect(() => {
     const schemaData = {
@@ -117,6 +117,14 @@ export default function FAQ() {
             </motion.div>
           ))}
         </div>
+        <div className="mt-12 text-center">
+          <a href="https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300">
+            Find Super Affiliate System Pro Near Me: Click for Instant Access
+          </a>
+        </div>
+        <p className="mt-4 text-center text-gray-400">
+          Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
+        </p>
       </div>
     </section>
   )

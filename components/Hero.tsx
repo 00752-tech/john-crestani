@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative ">
+    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center   ">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-8">
+      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center px-4 sm:px-6 md:px-8  xl:px-8">
         <motion.div 
           className="w-full md:w-1/2 mb-12 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
@@ -148,21 +148,21 @@ const Hero: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0"
+          className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0 lg:items-start"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full md:w-4/5 h-auto">
+          <div className="relative  w-[55%]  sm:w-full   md:w-4/5 lg:w-[73%]  xl:w-[65%] h-auto">
             <Image 
               src="/jc 2.png" 
               alt="John Crestani" 
-              width={500} 
-              height={750} 
+              width={1000} 
+              height={1000} 
               layout="responsive"
               objectFit="contain"
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl w-fit object-cover "
             />
           </div>
         </motion.div>
