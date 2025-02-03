@@ -89,19 +89,19 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
-              <span className="text-xs sm:text-sm md:text-base font-light text-gray-300 tracking-wider">
-                THE GLOBAL EDUCATION AWARD THAT COULD BE YOUR TICKET OUT OF THE 9–5 GRIND
+              <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
+                TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
               </span>
             </div>
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            WARNING: This  
-            <span className="text-gray-400"> Affiliate Marketing Secret </span> May Shock You
+            WARNING: Most  
+            <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here&apos;s Why) 
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Unlock your affiliate marketing breakthrough in just 10 minutes with John Crestani&apos;s proven system that consistently delivers results.
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
+            71% earn less than $1,000/month due to <span className="text-white font-semibold">outdated strategies</span> (42%) and <span className="text-white font-semibold">lack of mentorship</span> (31%). Break free with John Crestani&apos;s <span className="text-white font-semibold">proven, innovative approach</span>.
           </p>
           
           <motion.div 
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
               data-testid="see-opinions-button"
               onClick={handleUnlockBlueprint}
             >
-              UNLOCK MY PROFIT BLUEPRINT NOW
+              Earn More, Faster
             </button>
             <div className="flex flex-col items-center">
               <button 
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
                 data-testid="join-masterclass-button"
                 onClick={handleRevealSecrets}
               >
-                REVEAL MY MILLION-DOLLAR SECRETS
+                Free: Unlock Affiliate Secrets
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" 
