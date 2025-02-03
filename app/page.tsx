@@ -45,8 +45,7 @@ export default function Home() {
       <WebinarInvite />
       <Testimonials />
       <FAQ />
-      {/* <CTAWrapper currentToolUrl={pageUrl} category="affiliate" /> */}
-      <CTA currentToolUrl={pageUrl} category='affiliate' />
+      <CTA />
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
