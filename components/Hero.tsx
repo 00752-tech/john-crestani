@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
               data-testid="see-opinions-button"
               onClick={handleUnlockBlueprint}
             >
-              Earn More, Faster
+              Earn More Faster
             </button>
             <div className="flex flex-col items-center">
               <button 
