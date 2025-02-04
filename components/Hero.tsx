@@ -4,20 +4,23 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
+import { useRouter } from 'next/router'
 
 const Hero: React.FC = () => {
+  const router = useRouter()
+
   const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=unlockblueprintcta";
+    e.preventDefault()
+    router.push("https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=unlockblueprintcta")
   }
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "https://94746cw02lmakmi73b8z1matdo.hop.clickbank.net/?&campaign=milliondollarsecretscta";
+    e.preventDefault()
+    router.push("https://94746cw02lmakmi73b8z1matdo.hop.clickbank.net/?&campaign=milliondollarsecretscta")
   }
 
   return (
-    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center   ">
+    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -96,7 +99,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            What if everything you've been told about  
+            What if everything you&apos;ve been told about  
             <span className="text-gray-400"> affiliate marketing success </span> success is dead wrong?  
           </h1>
           
@@ -154,7 +157,7 @@ const Hero: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative  w-[55%]  sm:w-full   md:w-4/5 lg:w-[73%]  xl:w-[65%] h-auto">
+          <div className="relative w-[55%] sm:w-full md:w-4/5 lg:w-[73%] xl:w-[65%] h-auto">
             <Image 
               src="/jc 2.png" 
               alt="John Crestani" 
@@ -162,7 +165,7 @@ const Hero: React.FC = () => {
               height={1000} 
               layout="responsive"
               objectFit="contain"
-              className="rounded-lg shadow-2xl w-fit object-cover "
+              className="rounded-lg shadow-2xl w-fit object-cover"
             />
           </div>
         </motion.div>
