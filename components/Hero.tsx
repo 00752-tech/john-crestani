@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
             What if everything you've been told about  
-            <span className="text-gray-400"> affiliate marketing success </span> success is dead wrong?  (Here&apos;s Why) 
+            <span className="text-gray-400"> affiliate marketing success </span> success is dead wrong?  
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
