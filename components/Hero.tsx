@@ -96,12 +96,12 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            WARNING: Most  
-            <span className="text-gray-400"> Affiliate Marketers </span> Will Fail in 2025 (Here&apos;s Why) 
+            What if everything you've been told about  
+            <span className="text-gray-400"> affiliate marketing success </span> success is dead wrong?  (Here&apos;s Why) 
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            71% earn less than $999/month due to <span className="text-white font-semibold">outdated strategies</span> (42%) and <span className="text-white font-semibold">lack of mentorship</span> (31%). Break free with John Crestani&apos;s <span className="text-white font-semibold">proven innovative approach</span>.
+            Discover the shocking truth behind the 71% failure rate and how to <span className="text-white font-semibold">flip the script to millions...</span>. 
           </p>
           
           <motion.div 
