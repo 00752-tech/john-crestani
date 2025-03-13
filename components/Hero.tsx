@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
               <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
-                TRUSTED BY EXPERTS TAUGHT BY AN AWARD-WINNING EDUCATOR – JOHN CRESTANI
+                ⚠️ Warning: Enrollment Closes in 72 Hours
               </span>
             </div>
           </div>
