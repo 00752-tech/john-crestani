@@ -11,12 +11,12 @@ const Hero: React.FC = () => {
 
   const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    router.push("https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=unlockblueprintcta")
+    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net")
   }
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    router.push("https://94746cw02lmakmi73b8z1matdo.hop.clickbank.net/?&campaign=milliondollarsecretscta")
+    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net")
   }
 
   return (
