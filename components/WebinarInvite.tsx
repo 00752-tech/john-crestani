@@ -5,7 +5,7 @@ import React from 'react';
 export default function WebinarInvite() {
   const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.location.href = "https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webi2";
+    window.location.href = "https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net";
   };
 
   return (
