@@ -6,7 +6,7 @@ import React from 'react'
 export default function CTA() {
   const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.location.href = "https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast";
+    window.location.href = "https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net";
   }
 
   return (
@@ -96,7 +96,7 @@ export default function CTA() {
           className="mt-8"
         >
           <a
-            href="https://eb304ktx6ll4qhe38o6bep4s36.hop.clickbank.net/?&campaign=webifooter"
+            href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net"
             className="text-white underline hover:text-pink-200 transition duration-300"
           >
             Master the Million-Dollar Matrix: Complimentary Training
