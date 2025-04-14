@@ -118,7 +118,7 @@ export default function FAQ() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <a href="https://1bbc1ko45gi5ui658hhb5t7y82.hop.clickbank.net/?cbpage=diroop&campaign=dirsp1actfast" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300">
+          <a href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300">
             Find Super Affiliate System Pro Near Me: Click for Instant Access
           </a>
         </div>
