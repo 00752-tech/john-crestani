@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
-              <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
+              <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full">
                 ⚠️ Final 72H to Access 2025’s #1 Affiliate Method (71% Failure Fix)
               </span>
             </div>
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Why 71% of Affiliate Marketers Fail  <span className="text-white font-semibold">(And How John Crestani’s 2025 Method Beats the Odds)</span>. 
+            Why 71% of Affiliate Marketers Fail  <span className="text-white font-normal">(And how John Crestani’s 2025 method beats the odds)</span>. 
           </p>
           
           <motion.div 
