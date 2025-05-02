@@ -83,9 +83,14 @@ export default function About() {
                   delay: 0.2,
                 }}
                 className="text-gray-300 mb-6"
-              >
-                John Crestani&apos;s Super Affiliate System Pro (2025) is one of the most talked-about affiliate marketing courses—but does it still work? With a 71% industry failure rate, his &lsquo;6-Figure Affiliate Blueprint&rsquo; claims to help beginners avoid costly mistakes. In this review, we analyze whether his training is worth it in 2025.
-              </motion.p>
+              <motion.p
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+  className="text-gray-300 mb-6"
+>
+  John Crestani&apos;s Super Affiliate System Pro (2025) is one of the most talked-about affiliate marketing courses—but does it still work? With a 71% industry failure rate, his &lsquo;6-Figure Affiliate Blueprint&rsquo; claims to help beginners avoid costly mistakes. In this review, we analyze whether his training is worth it in 2025.
+</motion.p>
             </div>
 
             <motion.div
