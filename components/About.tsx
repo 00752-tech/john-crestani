@@ -8,10 +8,7 @@ export default function About() {
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.5,
             ease: "easeInOut",
@@ -25,10 +22,7 @@ export default function About() {
           {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.5,
               ease: "easeInOut",
@@ -38,10 +32,7 @@ export default function About() {
             <div>
               <motion.h3
                 initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
@@ -54,10 +45,7 @@ export default function About() {
 
               <motion.p
                 initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
                   ease: "easeInOut",
@@ -69,7 +57,7 @@ export default function About() {
                 been helping people achieve financial freedom since 2011. His
                 journey from a college dropout to a multi-millionaire
                 entrepreneur has inspired thousands.
-
+                <br /><br />
                 John Crestani's Super Affiliate System Pro (2025) is one of 
                 the most talked-about affiliate marketing courses-but does it 
                 still work? With a 71% industry failure rate, his ‘6-Figure 
@@ -77,33 +65,11 @@ export default function About() {
                 mistakes. In this review, we analyze whether his training is 
                 worth it in 2025.
               </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: 0.2,
-                }}
-                className="text-gray-300 mb-6"
-              <motion.p
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
-  className="text-gray-300 mb-6"
-
             </div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.5,
                 ease: "easeInOut",
@@ -124,10 +90,7 @@ export default function About() {
           {/* Right column */}
           <motion.div
             initial={{ opacity: 0, x: 80 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.5,
               ease: "easeInOut",
@@ -137,10 +100,7 @@ export default function About() {
             <div>
               <motion.h3
                 initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
@@ -152,10 +112,7 @@ export default function About() {
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
@@ -194,10 +151,7 @@ export default function About() {
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.5,
                 ease: "easeInOut",
