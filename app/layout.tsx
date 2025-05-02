@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "John Crestani’s Super Affiliate System Pro 2025 – Still Worth It?",
   description:
-    "Is John Crestani’s Super Affiliate System Pro still the #1 training in 2025? See why 71% fail in affiliate marketing & how to succeed. Claim your free webinar spot now!",
+    "Is John Crestani's training still #1 in 2025? See why 71% fail at affiliate marketing & how to succeed. Free webinar access.",
   keywords:
     "John Crestani, Super Affiliate System Pro 2025, affiliate marketing course, make money online, affiliate marketing tools, marketing calculators, John Crestani affiliate marketing, John Crestani course, John Crestani net worth, is John Crestani a scam, best affiliate marketing tools",
   openGraph: {
