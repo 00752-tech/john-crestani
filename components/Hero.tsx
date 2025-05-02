@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Why 71% of Affiliate Marketers Fail  <span className="text-white font-light">(And how John Crestani&apos;s 2025 method beats the odds)</span>. 
+            Why 71% of affiliate marketers fail  <span className="text-white font-light">(And how John Crestani&apos;s 2025 method beats the odds)</span>. 
           </p>
           
           <motion.div 
