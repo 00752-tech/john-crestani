@@ -93,18 +93,17 @@ const Hero: React.FC = () => {
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
               <span className="text-[0.6rem] sm:text-xs md:text-sm font-light text-gray-300 tracking-wider truncate max-w-full">
-                ⚠️ Warning: Enrollment Closes in 72 Hours
+                ⚠️ Final 72H to Access 2025’s #1 Affiliate Method (71% Failure Fix)
               </span>
             </div>
           </div>
           
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            What if everything you&apos;ve been told about  
-            <span className="text-gray-400"> affiliate marketing success </span> success is dead wrong?  
+            John Crestani&apos;s <span className="text-gray-400"> Super Affiliate System Pro 2025</span> – Still the Best Training? 
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Discover the shocking truth behind the 71% failure rate and how to <span className="text-white font-semibold">flip the script to millions...</span>. 
+            Why 71% of Affiliate Marketers Fail  <span className="text-white font-semibold">(And How John Crestani’s 2025 Method Beats the Odds)</span>. 
           </p>
           
           <motion.div 
