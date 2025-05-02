@@ -8,15 +8,15 @@ import { CookieConsent } from "@/components/CookieConcent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Crestani 2025: Is His Training Still Top Tier?",
+  title: "John Crestani’s Super Affiliate System Pro 2025 – Still Worth It?",
   description:
-    "Discover if John Crestani's affiliate marketing strategies remain unbeaten in 2025. Get the inside scoop and claim your free webinar invite.",
+    "Is John Crestani’s Super Affiliate System Pro still the #1 training in 2025? See why 71% fail in affiliate marketing & how to succeed. Claim your free webinar spot now!",
   keywords:
-    "John Crestani, Super Affiliate System Pro 2025, affiliate marketing course, make money online, affiliate marketing tools, marketing calculators",
+    "John Crestani, Super Affiliate System Pro 2025, affiliate marketing course, make money online, affiliate marketing tools, marketing calculators, John Crestani affiliate marketing, John Crestani course, John Crestani net worth, is John Crestani a scam, best affiliate marketing tools",
   openGraph: {
-    title: "John Crestani 2025: Is His Training Still Top Tier?",
+    title: "John Crestani’s Super Affiliate System Pro 2025 – Still Worth It?",
     description:
-      "Discover if John Crestani's affiliate marketing strategies remain unbeaten in 2025. Get the inside scoop and claim your free webinar invite.",
+      "Is John Crestani’s Super Affiliate System Pro still the #1 training in 2025? See why 71% fail in affiliate marketing & how to succeed. Claim your free webinar spot now!",
     type: "website",
     locale: "en_US",
     url: "https://johncrestani.me",
