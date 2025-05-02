@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen py-20 md:py-24 lg:py-32 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center">
+    <section className="min-h-screen py-8 md:py-12 lg:py-16 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center">
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
