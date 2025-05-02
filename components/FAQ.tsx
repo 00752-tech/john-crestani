@@ -7,7 +7,27 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
-    {
+        {
+      question: "Is John Crestani’s Super Affiliate System Pro a scam?",
+      answer: "No, John Crestani’s Super Affiliate System Pro is not a scam—it’s a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it’s not a "get-rich-quick" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+    },
+{
+      question: "Why do people call John Crestani a scam?",
+      answer: "Most complaints come from users who expected overnight success, skipped the training, or ignored the recommended ad budget requirements. Less than 5% of students request refunds, which is below the industry average."
+    },
+{
+      question: "Has anyone made money with Super Affiliate System Pro?",
+      answer: "Yes. Verified students have reported profits like 12,000/month from ClickBank offers and 7,300/month promoting keto supplements. These results require strict adherence to the training."
+    },
+{
+      question: "Are there free alternatives to John Crestani’s course?",
+      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John’s teaching style for free through his webinar."
+    },
+{
+      question: "How much does Super Affiliate System Pro cost?",
+      answer: "The 2025 program costs 997 (or 3 payments of 397). Email support@johncrestani.me to ask about occasional scholarships or discounts."
+    },
+{
       question: "Is there affiliate marketing training near me?",
       answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
     },
