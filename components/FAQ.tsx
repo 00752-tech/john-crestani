@@ -7,27 +7,27 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
-        {
-      question: "Is John Crestani’s Super Affiliate System Pro a scam?",
-      answer: "No, John Crestani’s Super Affiliate System Pro is not a scam—it’s a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it’s not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+    {
+      question: "Is John Crestani's Super Affiliate System Pro a scam?",
+      answer: "No, John Crestani's Super Affiliate System Pro is not a scam—it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
-{
+    {
       question: "Why do people call John Crestani a scam?",
       answer: "Most complaints come from users who expected overnight success, skipped the training, or ignored the recommended ad budget requirements. Less than 5% of students request refunds, which is below the industry average."
     },
-{
+    {
       question: "Has anyone made money with Super Affiliate System Pro?",
-      answer: "Yes. Verified students have reported profits like 12,000/month from ClickBank offers and 7,300/month promoting keto supplements. These results require strict adherence to the training."
+      answer: "Yes. Verified students have reported profits like $12,000/month from ClickBank offers and $7,300/month promoting keto supplements. These results require strict adherence to the training."
     },
-{
-      question: "Are there free alternatives to John Crestani’s course?",
-      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John’s teaching style for free through his webinar."
+    {
+      question: "Are there free alternatives to John Crestani's course?",
+      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John's teaching style for free through his webinar."
     },
-{
+    {
       question: "How much does Super Affiliate System Pro cost?",
-      answer: "The 2025 program costs 997 (or 3 payments of 397). Email support@johncrestani.me to ask about occasional scholarships or discounts."
+      answer: "The 2025 program costs $997 (or 3 payments of $397). Email support@johncrestani.me to ask about occasional scholarships or discounts."
     },
-{
+    {
       question: "Is there affiliate marketing training near me?",
       answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
     },
@@ -83,21 +83,23 @@ export default function FAQ() {
       }))
     }
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schemaData);
-    document.head.appendChild(script);
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.text = JSON.stringify(schemaData)
+    document.head.appendChild(script)
 
     return () => {
-      document.head.removeChild(script);
-    };
-  }, [faqs]);
+      document.head.removeChild(script)
+    }
+  }, [faqs])
 
   return (
     <section id="faq" className="py-20 pt-32 bg-black text-white">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Frequently Asked Questions</h2>
-        <div className="space-y-4">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4 max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -105,30 +107,35 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border border-gray-700 rounded-lg"
+              className="border border-gray-700 rounded-lg overflow-hidden"
             >
               <button
-                className="flex justify-between items-center w-full p-4 text-left transition-all duration-150 ease-linear"
+                className="flex justify-between items-center w-full p-4 md:p-6 text-left hover:bg-gray-900 transition-colors duration-200"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
-                <span className="font-semibold text-pink-500">{faq.question}</span>
+                <span className="font-semibold text-lg text-pink-500">
+                  {faq.question}
+                </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <ChevronDown className="text-pink-500" />
+                  <ChevronDown className="text-pink-500" size={24} />
                 </motion.div>
               </button>
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="p-4 bg-gray-900">
+                    <div className="p-4 md:p-6 bg-gray-900">
                       <p className="text-gray-300">{faq.answer}</p>
                     </div>
                   </motion.div>
@@ -138,13 +145,17 @@ export default function FAQ() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <a href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300">
+          <a
+            href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net"
+            className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 shadow-lg hover:shadow-pink-500/20"
+            rel="noopener noreferrer"
+          >
             Find Super Affiliate System Pro Near Me: Click for Instant Access
           </a>
+          <p className="mt-4 text-center text-gray-400">
+            Start Your 'Near Me' Affiliate Journey: Enroll Now
+          </p>
         </div>
-        <p className="mt-4 text-center text-gray-400">
-          Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
-        </p>
       </div>
     </section>
   )
