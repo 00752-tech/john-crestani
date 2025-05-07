@@ -174,13 +174,11 @@ export default function HomePage() {
 
       {/* SEO paragraph right after hero section */}
       <section className="container mx-auto px-4 py-8 max-w-3xl">
-  <div className="bg-gray-900/80 rounded-xl shadow-lg px-6 py-8 md:py-10 md:px-10">
-    <p className="text-base md:text-lg text-gray-100 leading-relaxed font-normal text-center md:text-left">
-      The world of affiliate marketing can be tough – did you know 71% of aspiring affiliates fail? But what if you could access a proven blueprint to avoid those common pitfalls and actually beat the odds? <span className="text-pink-400 font-semibold">John Crestani</span>, a renowned expert and multi-millionaire, has continuously updated his acclaimed Super Affiliate System Pro since 2017, incorporating cutting-edge 2025 strategies like <span className="text-pink-400">AI-powered marketing</span> and advanced data analytics. Designed to help you master the &apos;Million-Dollar Matrix&apos; and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
-    </p>
-  </div>
-</section>
-
+        <div className="bg-gray-900/80 rounded-xl shadow-lg px-6 py-8 md:py-10 md:px-10">
+          <p className="text-base md:text-lg text-gray-100 leading-relaxed font-normal text-center md:text-left">
+            The world of affiliate marketing can be tough – did you know 71% of aspiring affiliates fail? But what if you could access a proven blueprint to avoid those common pitfalls and actually beat the odds? <span className="text-pink-400 font-semibold">John Crestani</span>, a renowned expert and multi-millionaire, has continuously updated his acclaimed Super Affiliate System Pro since 2017, incorporating cutting-edge 2025 strategies like <span className="text-pink-400">AI-powered marketing</span> and advanced data analytics. Designed to help you master the &apos;Million-Dollar Matrix&apos; and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
+          </p>
+        </div>
       </section>
     </>
   )
