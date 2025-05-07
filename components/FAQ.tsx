@@ -9,7 +9,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
-      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it&apos;s not a &quot;get-rich-quick&quot; scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a "get-rich-quick" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
     {
       question: "Why do people call John Crestani a scam?",
@@ -20,8 +20,8 @@ export default function FAQ() {
       answer: "Yes. Verified students have reported profits like $12,000/month from ClickBank offers and $7,300/month promoting keto supplements. These results require strict adherence to the training."
     },
     {
-      question: "Are there free alternatives to John Crestani&apos;s course?",
-      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John&apos;s teaching style for free through his webinar."
+      question: "Are there free alternatives to John Crestani's course?",
+      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John's teaching style for free through his webinar."
     },
     {
       question: "How much does Super Affiliate System Pro cost?",
@@ -29,11 +29,11 @@ export default function FAQ() {
     },
     {
       question: "Is there affiliate marketing training near me?",
-      answer: "Forget searching for &apos;affiliate marketing courses near me&apos;. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
+      answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
     },
     {
       question: "How can I find Super Affiliate System Pro near me?",
-      answer: "Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you&apos;re at home, in a coffee shop, or traveling, you can access our comprehensive training program. It&apos;s like having a personal affiliate marketing mentor right next to you, 24/7."
+      answer: "Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you're at home, in a coffee shop, or traveling, you can access our comprehensive training program. It&apos;s like having a personal affiliate marketing mentor right next to you, 24/7."
     },
     {
       question: "Who is John Crestani?",
@@ -57,15 +57,15 @@ export default function FAQ() {
     },
     {
       question: "Is there a money-back guarantee?",
-      answer: "Yes, we offer a 30-day money-back guarantee. If you&apos;re not satisfied with the course content or don&apos;t see results within the first month, you can request a full refund."
+      answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the course content or don't see results within the first month, you can request a full refund."
     },
     {
       question: "Do I get lifetime access to updates?",
       answer: "Yes, when you purchase Super Affiliate System Pro, you receive lifetime access to all future updates. This ensures that your affiliate marketing education stays current with the fast-paced digital world."
     },
     {
-      question: "Can I really make money with John Crestani&apos;s training?",
-      answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It&apos;s important to set realistic expectations and be prepared to put in the necessary work."
+      question: "Can I really make money with John Crestani's training?",
+      answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
   ]
 
@@ -153,7 +153,7 @@ export default function FAQ() {
             Find Super Affiliate System Pro Near Me: Click for Instant Access
           </a>
           <p className="mt-4 text-center text-gray-400">
-            Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
+            Start Your 'Near Me' Affiliate Journey: Enroll Now
           </p>
         </div>
       </div>
