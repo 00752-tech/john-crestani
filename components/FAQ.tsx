@@ -8,8 +8,8 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Is John Crestani&apos;s Super Affiliate System Pro a scam?",
-      answer: "No, John Crestani&apos;s Super Affiliate System Pro is not a scam-it&apos;s a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it&apos;s not a &quot;get-rich-quick&quot; scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+      question: "Is John Crestani's Super Affiliate System Pro a scam?",
+      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it&apos;s not a &quot;get-rich-quick&quot; scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
     {
       question: "Why do people call John Crestani a scam?",
