@@ -1,15 +1,16 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const faqs = [
+  // Wrap FAQs in useMemo to avoid dependency warning
+  const faqs = useMemo(() => [
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
-      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\"  scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
     {
       question: "Why do people call John Crestani a scam?",
@@ -29,15 +30,15 @@ export default function FAQ() {
     },
     {
       question: "Is there affiliate marketing training near me?",
-      answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you - just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
+      answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you-just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
     },
     {
       question: "How can I find Super Affiliate System Pro near me?",
-      answer: "Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you're at home, in a coffee shop, or traveling, you can access our comprehensive training program. It&apos;s like having a personal affiliate marketing mentor right next to you, 24/7."
+      answer: "Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you're at home, in a coffee shop, or traveling, you can access our comprehensive training program. It's like having a personal affiliate marketing mentor right next to you, 24/7."
     },
     {
       question: "Who is John Crestani?",
-      answer: "John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He&apos;s known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer."
+      answer: "John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He's known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer."
     },
     {
       question: "What is the Super Affiliate System?",
@@ -67,7 +68,7 @@ export default function FAQ() {
       question: "Can I really make money with John Crestani's training?",
       answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
-  ]
+  ], [])
 
   useEffect(() => {
     const schemaData = {
