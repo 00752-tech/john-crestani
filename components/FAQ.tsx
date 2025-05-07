@@ -1,13 +1,12 @@
 'use client'
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  // Wrap FAQs in useMemo to avoid dependency warning
-  const faqs = useMemo(() => [
+  const faqs = [
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
       answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
@@ -68,7 +67,7 @@ export default function FAQ() {
       question: "Can I really make money with John Crestani's training?",
       answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
     }
-  ], [])
+  ]
 
   useEffect(() => {
     const schemaData = {
