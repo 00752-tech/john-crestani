@@ -183,11 +183,12 @@ export default function HomePage() {
         <span className="text-pink-400 font-semibold">John Crestani</span>, a renowned expert and multi-millionaire, has continuously updated his acclaimed Super Affiliate System Pro since 2017, incorporating cutting-edge 2025 strategies like <span className="text-pink-400">AI-powered marketing</span> and advanced data analytics.
       </p>
       <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
-        Designed to help you master the <span className="text-pink-400">'Million-Dollar Matrix'</span> and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
+        Designed to help you master the <span className="text-pink-400">&apos;Million-Dollar Matrix&apos;</span> and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
       </p>
     </div>
   </div>
 </section>
+
 
 
     </>
