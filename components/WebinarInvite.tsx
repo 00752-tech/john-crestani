@@ -39,7 +39,7 @@ export default function WebinarInvite() {
         >
           <div className="relative w-full pb-[56.25%]">
             <iframe
-              src="https://www.youtube.com/embed/BBmO1xpQwQk?si=CPG5MnqPUGXTQf8f"
+              src="https://www.youtube.com/embed/Vh1J7csr6W4?si=owfha9had8yz3Q5Q"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
