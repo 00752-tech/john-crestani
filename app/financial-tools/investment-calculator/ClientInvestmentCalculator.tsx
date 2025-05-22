@@ -49,7 +49,7 @@ export default function ClientInvestmentCalculator({backUrl="/free-tools"}: {bac
           className="max-w-3xl mx-auto mb-12"
         >
           <p className="text-xl text-center mb-8 text-gray-300">
-            Use this calculator to estimate the future value of your investments. Input your initial investment, monthly contributions, expected annual return, and investment length to see potential growth over time.
+            <strong>Use our easy Investment Calculator to quickly estimate the future value of your investments</strong> based on your initial investment, monthly contributions, expected annual return, and investment length. While this helps visualize potential financial growth, remember actual returns can vary based on market conditions. Discover how <strong>investing in your skills</strong>, particularly in affiliate marketing through <strong>John Crestani&apos;s Super Affiliate System Pro</strong>, can lead to <strong>exponential growth in your earning potential</strong>, teaching you to <strong>identify lucrative opportunities, create high-converting campaigns, scale your business, and diversify income streams</strong>.
           </p>
           
           <InvestmentCalculator />
