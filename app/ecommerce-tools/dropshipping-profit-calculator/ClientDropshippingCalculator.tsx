@@ -34,7 +34,7 @@ export default function ClientDropshippingCalculator({backUrl="/free-tools", pag
         
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
-            Use this calculator to estimate your potential dropshipping profits. Input your costs, selling price, and expected orders to see your projected earnings.
+            Discover <strong>how to craft an SEO-optimized first paragraph</strong> that instantly addresses visitor intent and boosts your search engine ranking, using the proven <strong>Goal Completion method</strong> discussed in this guide.
           </p>
           
           <DropshippingCalculator />
