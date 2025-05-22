@@ -6,12 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  // Wrap FAQs in useMemo to avoid dependency warning
   const faqs = useMemo(() => [
-    // --- Original FAQs ---
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
-      answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
+      answer: "No, John Crestani's Super Affiliate System Pro is not a scam—it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a 'get-rich-quick' scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
     {
       question: "Why do people call John Crestani a scam?",
@@ -23,7 +21,7 @@ export default function FAQ() {
     },
     {
       question: "Are there free alternatives to John Crestani's course?",
-      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can test John's teaching style for free through his webinar."
+      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can also explore our curated list of <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a> to supplement your learning."
     },
     {
       question: "How much does Super Affiliate System Pro cost?",
@@ -31,7 +29,7 @@ export default function FAQ() {
     },
     {
       question: "Is there affiliate marketing training near me?",
-      answer: "Forget searching for 'affiliate marketing courses near me'. With Super Affiliate System Pro, expert training is always near you-just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
+      answer: "Forget searching for 'affiliate marketing courses near me.' With Super Affiliate System Pro, expert training is always near you—just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are."
     },
     {
       question: "How can I find Super Affiliate System Pro near me?",
@@ -46,30 +44,37 @@ export default function FAQ() {
       answer: "The Super Affiliate System is a comprehensive training program designed to teach individuals how to succeed in affiliate marketing. It covers topics such as setting up an affiliate marketing business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI."
     },
     {
-      question: "Is Super Affiliate System Pro still relevant in 2025?",
-      answer: "Yes, the system is continuously updated to reflect the latest trends and technologies in affiliate marketing. The 2025 version includes cutting-edge strategies for AI, blockchain, and emerging digital platforms."
+      question: "How can I estimate my affiliate marketing earnings?",
+      answer: "You can use our <a href=\"https://johncrestani.me/affiliate-marketing-tools/earnings-calculator\" target=\"_blank\" rel=\"noopener\">Affiliate Earnings Calculator</a> to estimate your potential commissions based on your traffic and conversion rates."
     },
     {
-      question: "How does the 2025 version differ from the original 2017 release?",
-      answer: "While the core principles remain, the 2025 version has been extensively updated. It now includes AI-powered tools, blockchain affiliate strategies, advanced analytics, and tactics for new social media platforms that have emerged since 2017."
+      question: "How do I calculate dropshipping profits?",
+      answer: "Try our <a href=\"https://johncrestani.me/ecommerce-tools/dropshipping-profit-calculator\" target=\"_blank\" rel=\"noopener\">Dropshipping Profit Calculator</a> to quickly estimate your net profit after costs."
     },
     {
-      question: "How much does the Super Affiliate System cost?",
-      answer: "Pricing can vary over time and might include promotions or discounts. Typically, the basic version of the Super Affiliate System has been priced around $997, with more comprehensive versions or additional tools/services costing extra."
+      question: "How do I calculate ROAS for my ads?",
+      answer: "Our <a href=\"https://johncrestani.me/advertising-tools/roas-calculator\" target=\"_blank\" rel=\"noopener\">ROAS Calculator</a> helps you determine your return on ad spend for any campaign."
     },
     {
-      question: "Is there a money-back guarantee?",
-      answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with the course content or don't see results within the first month, you can request a full refund."
+      question: "How can I estimate YouTube ad revenue?",
+      answer: "Use our <a href=\"https://johncrestani.me/content-creation-tools/youtube-earnings-calculator\" target=\"_blank\" rel=\"noopener\">YouTube Earnings Calculator</a> to estimate your potential ad revenue based on views and CPM."
     },
     {
-      question: "Do I get lifetime access to updates?",
-      answer: "Yes, when you purchase Super Affiliate System Pro, you receive lifetime access to all future updates. This ensures that your affiliate marketing education stays current with the fast-paced digital world."
+      question: "Is there a tool for influencer earnings?",
+      answer: "Yes, our <a href=\"https://johncrestani.me/influencer-marketing-tools/earnings-calculator\" target=\"_blank\" rel=\"noopener\">Influencer Earnings Calculator</a> lets you estimate how much you can earn from influencer campaigns."
     },
     {
-      question: "Can I really make money with John Crestani's training?",
-      answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
+      question: "How do I find a profitable affiliate niche?",
+      answer: "You can research niches and estimate profitability with our <a href=\"https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator\" target=\"_blank\" rel=\"noopener\">Niche Profitability Calculator</a>."
     },
-    // --- New FAQs: General/Personal ---
+    {
+      question: "How do I optimize my affiliate links for higher CTR?",
+      answer: "Use our <a href=\"https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer\" target=\"_blank\" rel=\"noopener\">Link CTR Optimizer</a> to test and improve your link click-through rates."
+    },
+    {
+      question: "Is Super Affiliate System good for beginners?",
+      answer: "It’s designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a>."
+    },
     {
       question: "What is John Crestani’s net worth?",
       answer: "John Crestani’s net worth is estimated to be in the millions, primarily from affiliate marketing and his training programs."
@@ -94,7 +99,6 @@ export default function FAQ() {
       question: "Has John Crestani been featured in major publications?",
       answer: "Yes, John Crestani has been featured in publications like Forbes and Business Insider for his achievements in online marketing."
     },
-    // --- New FAQs: Super Affiliate System Details ---
     {
       question: "Does Super Affiliate System work with Amazon?",
       answer: "Yes, SAS teaches strategies for Amazon affiliate marketing, among other platforms."
@@ -102,10 +106,6 @@ export default function FAQ() {
     {
       question: "Can Super Affiliate System work without a website?",
       answer: "While possible, SAS recommends building a website for long-term success."
-    },
-    {
-      question: "Is Super Affiliate System good for beginners?",
-      answer: "It’s designed for beginners but requires dedication to implement the strategies."
     },
     {
       question: "What’s the difference between SAS Pro and SAS 2.0?",
@@ -139,14 +139,13 @@ export default function FAQ() {
       question: "Is the Super Affiliate System self-paced?",
       answer: "Yes, you can complete the course at your own pace, with access to all materials after enrollment."
     },
-    // --- New FAQs: Alternatives & Comparisons ---
     {
       question: "Is SAS better than Commission Hero?",
       answer: "SAS focuses on paid traffic, while Commission Hero emphasizes organic methods. Choose based on your budget and preferred strategy."
     },
     {
       question: "Are there free affiliate marketing courses like SAS?",
-      answer: "Yes, free courses on Udemy, YouTube, or Google’s affiliate marketing training can supplement SAS."
+      answer: "Yes, free courses on Udemy, YouTube, or Google’s affiliate marketing training can supplement SAS. You can also use our <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a> to get started."
     },
     {
       question: "Is SAS worth the cost compared to free courses?",
@@ -156,7 +155,6 @@ export default function FAQ() {
       question: "What are some alternatives to Super Affiliate System?",
       answer: "Alternatives include Commission Hero, Authority Hacker, and free resources on platforms like YouTube and Udemy."
     },
-    // --- New FAQs: Technical & Support ---
     {
       question: "How do I log in to Super Affiliate System Pro?",
       answer: "Access the login portal via John Crestani’s official website with your credentials."
@@ -185,7 +183,6 @@ export default function FAQ() {
       question: "Do I need prior marketing experience to join SAS?",
       answer: "No prior experience is required; the course is beginner-friendly and covers foundational concepts."
     },
-    // --- New FAQs: Controversies & Reviews ---
     {
       question: "Why is John Crestani criticized on Reddit?",
       answer: "Some users claim his courses are overpriced or too sales-heavy, but others report success."
@@ -255,7 +252,8 @@ export default function FAQ() {
                 aria-controls={`faq-answer-${index}`}
               >
                 <span className="font-semibold text-lg text-pink-500">
-                  {faq.question}
+                  {/* Render HTML for anchor tags */}
+                  <span dangerouslySetInnerHTML={{ __html: faq.question }} />
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
@@ -275,7 +273,8 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="p-4 md:p-6 bg-gray-900">
-                      <p className="text-gray-300">{faq.answer}</p>
+                      {/* Render HTML for anchor tags */}
+                      <p className="text-gray-300" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </motion.div>
                 )}
