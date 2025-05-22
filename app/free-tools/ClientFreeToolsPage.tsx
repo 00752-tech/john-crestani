@@ -100,11 +100,12 @@ export default function ClientFreeToolsPage() {
             Free Affiliate Marketing Tools & Calculators
           </h1>
           <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
-          When searching for the most effective affiliate marketing tools, having access to a proven system is key to navigating the market and avoiding common pitfalls.<br /><br />
-          John Crestani's Super Affiliate System Pro, continuously updated since its inception in 2017, offers a comprehensive toolkit designed for success in 2025.<br /><br />
-          This system incorporates cutting-edge strategies and features like <strong>AI-powered marketing tools integration</strong>, <strong>AI-Assisted Campaign Creation</strong>, and an <strong>Advanced Data Analytics Dashboard</strong>.<br /><br />
-          By leveraging these tools and following the system's <em>6-Figure Affiliate Blueprint</em>—which is designed to help beginners avoid costly mistakes and overcome the industry's 71% failure rate—you gain the resources needed to work towards achieving financial freedom and mastering the <em>Million-Dollar Matrix</em>.
-        </p>
+  When searching for the most effective affiliate marketing tools, having access to a proven system is key to navigating the market and avoiding common pitfalls.<br /><br />
+  John Crestani&apos;s Super Affiliate System Pro, continuously updated since its inception in 2017, offers a comprehensive toolkit designed for success in 2025.<br /><br />
+  This system incorporates cutting-edge strategies and features like AI-powered marketing tools integration, AI-Assisted Campaign Creation, and an Advanced Data Analytics Dashboard.<br /><br />
+  By leveraging these tools and following the system&apos;s &apos;6-Figure Affiliate Blueprint&apos;, which is designed to help beginners avoid costly mistakes and overcome the industry&apos;s 71% failure rate, you gain the resources needed to work towards achieving financial freedom and mastering the &apos;Million-Dollar Matrix&apos;.
+</p>
+
 
           
           <div className="max-w-md mx-auto mb-8">
