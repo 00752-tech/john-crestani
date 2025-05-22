@@ -63,9 +63,10 @@ export default function ClientCalculatorPage({pageUrlPath="/affiliate-marketing-
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p className="text-xl text-center mb-8 text-gray-300">
-              Use this free calculator to estimate your potential earnings as an affiliate marketer. Input your expected traffic, conversion rate, and average commission to see what you could earn.
-            </p>
+            <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
+  <strong>Calculate your potential affiliate marketing earnings instantly</strong> with our free tool! Simply input your estimated monthly traffic, conversion rate, and average commission to get an immediate estimate of what you could earn as an affiliate marketer.<br /><br />
+  Use this calculator to visualize the possibilities and understand how traffic, conversions, and commissions impact your bottom line.
+</p>
             
             <AffiliateEarningsCalculator />
           </motion.div>
