@@ -6,11 +6,49 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  // FAQ data with raw HTML (not escaped entities)
   const faqs = useMemo(() => [
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
       answer: "No, John Crestani's Super Affiliate System Pro is not a scam—it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a 'get-rich-quick' scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
     },
+    {
+      question: "Are there free alternatives to John Crestani's course?",
+      answer: 'Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can also explore our curated list of <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener">free affiliate marketing tools</a> to supplement your learning.'
+    },
+    {
+      question: "How can I estimate my affiliate marketing earnings?",
+      answer: 'You can use our <a href="https://johncrestani.me/affiliate-marketing-tools/earnings-calculator" target="_blank" rel="noopener">Affiliate Earnings Calculator</a> to estimate your potential commissions based on your traffic and conversion rates.'
+    },
+    {
+      question: "How do I calculate dropshipping profits?",
+      answer: 'Try our <a href="https://johncrestani.me/ecommerce-tools/dropshipping-profit-calculator" target="_blank" rel="noopener">Dropshipping Profit Calculator</a> to quickly estimate your net profit after costs.'
+    },
+    {
+      question: "How do I calculate ROAS for my ads?",
+      answer: 'Our <a href="https://johncrestani.me/advertising-tools/roas-calculator" target="_blank" rel="noopener">ROAS Calculator</a> helps you determine your return on ad spend for any campaign.'
+    },
+    {
+      question: "How can I estimate YouTube ad revenue?",
+      answer: 'Use our <a href="https://johncrestani.me/content-creation-tools/youtube-earnings-calculator" target="_blank" rel="noopener">YouTube Earnings Calculator</a> to estimate your potential ad revenue based on views and CPM.'
+    },
+    {
+      question: "Is there a tool for influencer earnings?",
+      answer: 'Yes, our <a href="https://johncrestani.me/influencer-marketing-tools/earnings-calculator" target="_blank" rel="noopener">Influencer Earnings Calculator</a> lets you estimate how much you can earn from influencer campaigns.'
+    },
+    {
+      question: "How do I find a profitable affiliate niche?",
+      answer: 'You can research niches and estimate profitability with our <a href="https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator" target="_blank" rel="noopener">Niche Profitability Calculator</a>.'
+    },
+    {
+      question: "How do I optimize my affiliate links for higher CTR?",
+      answer: 'Use our <a href="https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer" target="_blank" rel="noopener">Link CTR Optimizer</a> to test and improve your link click-through rates.'
+    },
+    {
+      question: "Is Super Affiliate System good for beginners?",
+      answer: 'It’s designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener">free affiliate marketing tools</a>.'
+    },
+    // ... (Add the rest of your FAQs here, using raw HTML for links as needed)
     {
       question: "Why do people call John Crestani a scam?",
       answer: "Most complaints come from users who expected overnight success, skipped the training, or ignored the recommended ad budget requirements. Less than 5% of students request refunds, which is below the industry average."
@@ -18,10 +56,6 @@ export default function FAQ() {
     {
       question: "Has anyone made money with Super Affiliate System Pro?",
       answer: "Yes. Verified students have reported profits like $12,000/month from ClickBank offers and $7,300/month promoting keto supplements. These results require strict adherence to the training."
-    },
-    {
-      question: "Are there free alternatives to John Crestani's course?",
-      answer: "Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can also explore our curated list of <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a> to supplement your learning."
     },
     {
       question: "How much does Super Affiliate System Pro cost?",
@@ -42,38 +76,6 @@ export default function FAQ() {
     {
       question: "What is the Super Affiliate System?",
       answer: "The Super Affiliate System is a comprehensive training program designed to teach individuals how to succeed in affiliate marketing. It covers topics such as setting up an affiliate marketing business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI."
-    },
-    {
-      question: "How can I estimate my affiliate marketing earnings?",
-      answer: "You can use our <a href=\"https://johncrestani.me/affiliate-marketing-tools/earnings-calculator\" target=\"_blank\" rel=\"noopener\">Affiliate Earnings Calculator</a> to estimate your potential commissions based on your traffic and conversion rates."
-    },
-    {
-      question: "How do I calculate dropshipping profits?",
-      answer: "Try our <a href=\"https://johncrestani.me/ecommerce-tools/dropshipping-profit-calculator\" target=\"_blank\" rel=\"noopener\">Dropshipping Profit Calculator</a> to quickly estimate your net profit after costs."
-    },
-    {
-      question: "How do I calculate ROAS for my ads?",
-      answer: "Our <a href=\"https://johncrestani.me/advertising-tools/roas-calculator\" target=\"_blank\" rel=\"noopener\">ROAS Calculator</a> helps you determine your return on ad spend for any campaign."
-    },
-    {
-      question: "How can I estimate YouTube ad revenue?",
-      answer: "Use our <a href=\"https://johncrestani.me/content-creation-tools/youtube-earnings-calculator\" target=\"_blank\" rel=\"noopener\">YouTube Earnings Calculator</a> to estimate your potential ad revenue based on views and CPM."
-    },
-    {
-      question: "Is there a tool for influencer earnings?",
-      answer: "Yes, our <a href=\"https://johncrestani.me/influencer-marketing-tools/earnings-calculator\" target=\"_blank\" rel=\"noopener\">Influencer Earnings Calculator</a> lets you estimate how much you can earn from influencer campaigns."
-    },
-    {
-      question: "How do I find a profitable affiliate niche?",
-      answer: "You can research niches and estimate profitability with our <a href=\"https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator\" target=\"_blank\" rel=\"noopener\">Niche Profitability Calculator</a>."
-    },
-    {
-      question: "How do I optimize my affiliate links for higher CTR?",
-      answer: "Use our <a href=\"https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer\" target=\"_blank\" rel=\"noopener\">Link CTR Optimizer</a> to test and improve your link click-through rates."
-    },
-    {
-      question: "Is Super Affiliate System good for beginners?",
-      answer: "It’s designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a>."
     },
     {
       question: "What is John Crestani’s net worth?",
@@ -145,7 +147,7 @@ export default function FAQ() {
     },
     {
       question: "Are there free affiliate marketing courses like SAS?",
-      answer: "Yes, free courses on Udemy, YouTube, or Google’s affiliate marketing training can supplement SAS. You can also use our <a href=\"https://johncrestani.me/free-tools\" target=\"_blank\" rel=\"noopener\">free affiliate marketing tools</a> to get started."
+      answer: 'Yes, free courses on Udemy, YouTube, or Google’s affiliate marketing training can supplement SAS. You can also use our <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener">free affiliate marketing tools</a> to get started.'
     },
     {
       question: "Is SAS worth the cost compared to free courses?",
@@ -272,6 +274,7 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="p-4 md:p-6 bg-gray-900">
+                      {/* Use dangerouslySetInnerHTML to render HTML links */}
                       <p className="text-gray-300" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </motion.div>
