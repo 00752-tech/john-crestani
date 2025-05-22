@@ -14,11 +14,11 @@ export default function FAQ() {
 
   const faqs: FAQItem[] = useMemo(() => [
     {
-      question: "Is John Crestani&apos;s Super Affiliate System Pro a scam?",
-      answer: <>No, John Crestani&apos;s Super Affiliate System Pro is not a scam—it&apos;s a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it&apos;s not a &apos;get-rich-quick&apos; scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course.</>
+      question: "Is John Crestani's Super Affiliate System Pro a scam?",
+      answer: <>No, John Crestani's Super Affiliate System Pro is not a scam—it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a 'get-rich-quick' scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course.</>
     },
     {
-      question: "Are there free alternatives to John Crestani&apos;s course?",
+      question: "Are there free alternatives to John Crestani's course?",
       answer: <>Yes, but free alternatives lack live coaching calls, updated 2025 strategies, and done-for-you funnels. You can also explore our curated list of{' '}
         <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener" className="text-pink-400 underline">free affiliate marketing tools</a> to supplement your learning.</>
     },
@@ -65,10 +65,10 @@ export default function FAQ() {
     },
     {
       question: "Is Super Affiliate System good for beginners?",
-      answer: <>It&apos;s designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our{' '}
+      answer: <>It's designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our{' '}
         <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener" className="text-pink-400 underline">free affiliate marketing tools</a>.</>
     },
-    // ... (rest of your FAQs as plain text, all &apos; escaped)
+    // ... (rest of your FAQs with normal apostrophes)
     {
       question: "Why do people call John Crestani a scam?",
       answer: <>Most complaints come from users who expected overnight success, skipped the training, or ignored the recommended ad budget requirements. Less than 5% of students request refunds, which is below the industry average.</>
@@ -83,26 +83,26 @@ export default function FAQ() {
     },
     {
       question: "Is there affiliate marketing training near me?",
-      answer: <>Forget searching for &apos;affiliate marketing courses near me.&apos; With Super Affiliate System Pro, expert training is always near you—just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are.</>
+      answer: <>Forget searching for 'affiliate marketing courses near me.' With Super Affiliate System Pro, expert training is always near you—just a click away on any device. Our online platform brings world-class affiliate marketing education directly to you, wherever you are.</>
     },
     {
       question: "How can I find Super Affiliate System Pro near me?",
-      answer: <>Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you&apos;re at home, in a coffee shop, or traveling, you can access our comprehensive training program. It&apos;s like having a personal affiliate marketing mentor right next to you, 24/7.</>
+      answer: <>Super Affiliate System Pro is available online, making it accessible from anywhere. Whether you're at home, in a coffee shop, or traveling, you can access our comprehensive training program. It's like having a personal affiliate marketing mentor right next to you, 24/7.</>
     },
     {
       question: "Who is John Crestani?",
-      answer: <>John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He&apos;s known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer.</>
+      answer: <>John Crestani is an American entrepreneur, affiliate marketer, and the founder of Super Affiliate System. He's known for his expertise in affiliate marketing and online wealth creation, transitioning from a corporate job to becoming a successful affiliate marketer.</>
     },
     {
       question: "What is the Super Affiliate System?",
       answer: <>The Super Affiliate System is a comprehensive training program designed to teach individuals how to succeed in affiliate marketing. It covers topics such as setting up an affiliate marketing business, choosing profitable niches, creating effective ads, leveraging social media and YouTube for marketing, and managing campaigns for optimal ROI.</>
     },
     {
-      question: "What is John Crestani&apos;s net worth?",
-      answer: <>John Crestani&apos;s net worth is estimated to be in the millions, primarily from affiliate marketing and his training programs.</>
+      question: "What is John Crestani's net worth?",
+      answer: <>John Crestani's net worth is estimated to be in the millions, primarily from affiliate marketing and his training programs.</>
     },
     {
-      question: "Who is John Crestani&apos;s wife?",
+      question: "Who is John Crestani's wife?",
       answer: <>John Crestani keeps his personal life private, and details about his wife are not publicly disclosed.</>
     },
     {
@@ -111,7 +111,7 @@ export default function FAQ() {
     },
     {
       question: "How old is John Crestani?",
-      answer: <>His exact age isn&apos;t widely publicized, but he began his career in the early 2010s.</>
+      answer: <>His exact age isn't widely publicized, but he began his career in the early 2010s.</>
     },
     {
       question: "What is John Crestani known for?",
@@ -130,7 +130,7 @@ export default function FAQ() {
       answer: <>While possible, SAS recommends building a website for long-term success.</>
     },
     {
-      question: "What&apos;s the difference between SAS Pro and SAS 2.0?",
+      question: "What's the difference between SAS Pro and SAS 2.0?",
       answer: <>SAS Pro includes advanced modules and updated tactics for 2025 trends.</>
     },
     {
@@ -167,7 +167,7 @@ export default function FAQ() {
     },
     {
       question: "Are there free affiliate marketing courses like SAS?",
-      answer: <>Yes, free courses on Udemy, YouTube, or Google&apos;s affiliate marketing training can supplement SAS. You can also use our{' '}
+      answer: <>Yes, free courses on Udemy, YouTube, or Google's affiliate marketing training can supplement SAS. You can also use our{' '}
         <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener" className="text-pink-400 underline">free affiliate marketing tools</a> to get started.</>
     },
     {
@@ -180,11 +180,11 @@ export default function FAQ() {
     },
     {
       question: "How do I log in to Super Affiliate System Pro?",
-      answer: <>Access the login portal via John Crestani&apos;s official website with your credentials.</>
+      answer: <>Access the login portal via John Crestani's official website with your credentials.</>
     },
     {
-      question: "What if Super Affiliate System isn&apos;t working for me?",
-      answer: <>SAS offers support and a money-back guarantee if you don&apos;t see value.</>
+      question: "What if Super Affiliate System isn't working for me?",
+      answer: <>SAS offers support and a money-back guarantee if you don't see value.</>
     },
     {
       question: "Does SAS work internationally?",
@@ -192,7 +192,7 @@ export default function FAQ() {
     },
     {
       question: "How can I contact Super Affiliate System support?",
-      answer: <>You can contact support through the official website&apos;s helpdesk or by email after enrolling.</>
+      answer: <>You can contact support through the official website's helpdesk or by email after enrolling.</>
     },
     {
       question: "Are there live webinars or coaching calls?",
@@ -212,7 +212,7 @@ export default function FAQ() {
     },
     {
       question: "Is SAS a pyramid scheme?",
-      answer: <>No, it&apos;s a legitimate training program focused on affiliate marketing, not multi-level marketing.</>
+      answer: <>No, it's a legitimate training program focused on affiliate marketing, not multi-level marketing.</>
     },
     {
       question: "What are the biggest complaints about SAS?",
@@ -229,7 +229,6 @@ export default function FAQ() {
   ], [])
 
   useEffect(() => {
-    // Safely extract text from ReactNode for schema
     function extractText(node: React.ReactNode): string {
       if (typeof node === 'string') return node
       if (typeof node === 'number') return node.toString()
@@ -243,7 +242,7 @@ export default function FAQ() {
       "@type": "FAQPage",
       "mainEntity": faqs.map(faq => ({
         "@type": "Question",
-        "name": faq.question.replace(/&apos;/g, "'"),
+        "name": faq.question,
         "acceptedAnswer": {
           "@type": "Answer",
           "text": extractText(faq.answer)
@@ -321,7 +320,7 @@ export default function FAQ() {
             Find Super Affiliate System Pro Near Me: Click for Instant Access
           </a>
           <p className="mt-4 text-center text-gray-400">
-            Start Your &apos;Near Me&apos; Affiliate Journey: Enroll Now
+            Start Your 'Near Me' Affiliate Journey: Enroll Now
           </p>
         </div>
       </div>
