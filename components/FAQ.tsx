@@ -8,6 +8,7 @@ export default function FAQ() {
 
   // Wrap FAQs in useMemo to avoid dependency warning
   const faqs = useMemo(() => [
+    // --- Original FAQs ---
     {
       question: "Is John Crestani's Super Affiliate System Pro a scam?",
       answer: "No, John Crestani's Super Affiliate System Pro is not a scam-it's a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it's not a \"get-rich-quick\" scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course."
@@ -67,6 +68,143 @@ export default function FAQ() {
     {
       question: "Can I really make money with John Crestani's training?",
       answer: "Success varies widely among participants. While many have reported significant income, factors like dedication, the niche chosen, and market conditions greatly influence outcomes. It's important to set realistic expectations and be prepared to put in the necessary work."
+    },
+    // --- New FAQs: General/Personal ---
+    {
+      question: "What is John Crestani’s net worth?",
+      answer: "John Crestani’s net worth is estimated to be in the millions, primarily from affiliate marketing and his training programs."
+    },
+    {
+      question: "Who is John Crestani’s wife?",
+      answer: "John Crestani keeps his personal life private, and details about his wife are not publicly disclosed."
+    },
+    {
+      question: "Where is John Crestani from?",
+      answer: "John Crestani is based in the United States, with past mentions of living in Los Angeles."
+    },
+    {
+      question: "How old is John Crestani?",
+      answer: "His exact age isn’t widely publicized, but he began his career in the early 2010s."
+    },
+    {
+      question: "What is John Crestani known for?",
+      answer: "John Crestani is best known for his Super Affiliate System course and his success in affiliate marketing."
+    },
+    {
+      question: "Has John Crestani been featured in major publications?",
+      answer: "Yes, John Crestani has been featured in publications like Forbes and Business Insider for his achievements in online marketing."
+    },
+    // --- New FAQs: Super Affiliate System Details ---
+    {
+      question: "Does Super Affiliate System work with Amazon?",
+      answer: "Yes, SAS teaches strategies for Amazon affiliate marketing, among other platforms."
+    },
+    {
+      question: "Can Super Affiliate System work without a website?",
+      answer: "While possible, SAS recommends building a website for long-term success."
+    },
+    {
+      question: "Is Super Affiliate System good for beginners?",
+      answer: "It’s designed for beginners but requires dedication to implement the strategies."
+    },
+    {
+      question: "What’s the difference between SAS Pro and SAS 2.0?",
+      answer: "SAS Pro includes advanced modules and updated tactics for 2025 trends."
+    },
+    {
+      question: "Does SAS offer a free trial?",
+      answer: "No, but John Crestani occasionally provides free webinars or mini-courses."
+    },
+    {
+      question: "How long does it take to see results with SAS?",
+      answer: "Results vary, but most students need 3–6 months to generate consistent income."
+    },
+    {
+      question: "Is there a refund policy for the Super Affiliate System?",
+      answer: "Yes, there is a 30-day money-back guarantee, allowing you to try the course risk-free."
+    },
+    {
+      question: "What is included in the Super Affiliate System course?",
+      answer: "The course includes video modules, live webinars, downloadable resources, a private community, and ongoing updates."
+    },
+    {
+      question: "Is the Super Affiliate System updated regularly?",
+      answer: "Yes, John Crestani updates the course content and resources to keep up with the latest affiliate marketing trends."
+    },
+    {
+      question: "Are there any upsells or additional costs?",
+      answer: "There may be recommended tools and optional upsells, but they are not required for success with the main course."
+    },
+    {
+      question: "Is the Super Affiliate System self-paced?",
+      answer: "Yes, you can complete the course at your own pace, with access to all materials after enrollment."
+    },
+    // --- New FAQs: Alternatives & Comparisons ---
+    {
+      question: "Is SAS better than Commission Hero?",
+      answer: "SAS focuses on paid traffic, while Commission Hero emphasizes organic methods. Choose based on your budget and preferred strategy."
+    },
+    {
+      question: "Are there free affiliate marketing courses like SAS?",
+      answer: "Yes, free courses on Udemy, YouTube, or Google’s affiliate marketing training can supplement SAS."
+    },
+    {
+      question: "Is SAS worth the cost compared to free courses?",
+      answer: "SAS offers structured, step-by-step training and support, while free courses may lack personalized guidance and community."
+    },
+    {
+      question: "What are some alternatives to Super Affiliate System?",
+      answer: "Alternatives include Commission Hero, Authority Hacker, and free resources on platforms like YouTube and Udemy."
+    },
+    // --- New FAQs: Technical & Support ---
+    {
+      question: "How do I log in to Super Affiliate System Pro?",
+      answer: "Access the login portal via John Crestani’s official website with your credentials."
+    },
+    {
+      question: "What if Super Affiliate System isn’t working for me?",
+      answer: "SAS offers support and a money-back guarantee if you don’t see value."
+    },
+    {
+      question: "Does SAS work internationally?",
+      answer: "Yes, but some ad platforms (e.g., Facebook Ads) may have country restrictions."
+    },
+    {
+      question: "How can I contact Super Affiliate System support?",
+      answer: "You can contact support through the official website’s helpdesk or by email after enrolling."
+    },
+    {
+      question: "Are there live webinars or coaching calls?",
+      answer: "Yes, John Crestani hosts live weekly webinars and Q&A sessions for students."
+    },
+    {
+      question: "Is there a private community for SAS members?",
+      answer: "Yes, SAS includes access to a private community forum for networking and support."
+    },
+    {
+      question: "Do I need prior marketing experience to join SAS?",
+      answer: "No prior experience is required; the course is beginner-friendly and covers foundational concepts."
+    },
+    // --- New FAQs: Controversies & Reviews ---
+    {
+      question: "Why is John Crestani criticized on Reddit?",
+      answer: "Some users claim his courses are overpriced or too sales-heavy, but others report success."
+    },
+    {
+      question: "Is SAS a pyramid scheme?",
+      answer: "No, it’s a legitimate training program focused on affiliate marketing, not multi-level marketing."
+    },
+    {
+      question: "What are the biggest complaints about SAS?",
+      answer: "Common complaints include the course price, upsells, and the need for additional ad spend to see results."
+    },
+    {
+      question: "Are there any success stories from real users?",
+      answer: "Yes, many students have reported earning substantial commissions after applying the course strategies."
+    },
+    {
+      question: "Is Super Affiliate System worth it?",
+      answer: "For those committed to learning and implementing affiliate marketing, SAS provides comprehensive training and support, making it a worthwhile investment for many."
     }
   ], [])
 
