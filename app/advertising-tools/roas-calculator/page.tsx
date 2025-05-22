@@ -47,7 +47,7 @@ export default function ROASCalculatorPage() {
         
 //         <div className="max-w-3xl mx-auto mb-12">
 //           <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
-      <strong>Understanding and improving your Return on Ad Spend (ROAS) is fundamental to running profitable advertising campaigns in affiliate marketing and beyond.</strong><br /><br />
+            <strong>Understanding and improving your Return on Ad Spend (ROAS) is fundamental to running profitable advertising campaigns in affiliate marketing and beyond.</strong><br /><br />
       <strong>ROAS is a key metric</strong> that directly measures the revenue generated for every dollar you spend on advertising, providing immediate insight into campaign performance.<br /><br />
       By calculating your ROAS, you can quickly determine if your campaigns are <strong>making a profit (ROAS above 1x)</strong>, <strong>breaking even (ROAS of 1x)</strong>, or <strong>losing money (ROAS below 1x)</strong>.<br /><br />
       This page is designed to help you achieve goal completion related to ROAS: <strong>easily calculate your ROAS using our tool</strong> and explore how <strong>John Crestani&apos;s Super Affiliate System Pro</strong> teaches comprehensive methods to maximize your profitability.<br /><br />
