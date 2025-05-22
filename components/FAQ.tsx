@@ -2,11 +2,17 @@
 import { useState, useEffect, useMemo } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import React from 'react'
+
+type FAQItem = {
+  question: string
+  answer: React.ReactNode
+}
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const faqs = useMemo(() => [
+  const faqs: FAQItem[] = useMemo(() => [
     {
       question: "Is John Crestani&apos;s Super Affiliate System Pro a scam?",
       answer: <>No, John Crestani&apos;s Super Affiliate System Pro is not a scam—it&apos;s a legitimate affiliate marketing training program with over 100,000 students since 2015. However, it&apos;s not a &apos;get-rich-quick&apos; scheme. Success requires consistent effort, ad budget, and following the proven strategies taught in the course.</>
@@ -62,6 +68,7 @@ export default function FAQ() {
       answer: <>It&apos;s designed for beginners but requires dedication to implement the strategies. You can supplement your learning with our{' '}
         <a href="https://johncrestani.me/free-tools" target="_blank" rel="noopener" className="text-pink-400 underline">free affiliate marketing tools</a>.</>
     },
+    // ... (rest of your FAQs as plain text, all &apos; escaped)
     {
       question: "Why do people call John Crestani a scam?",
       answer: <>Most complaints come from users who expected overnight success, skipped the training, or ignored the recommended ad budget requirements. Less than 5% of students request refunds, which is below the industry average.</>
@@ -222,27 +229,24 @@ export default function FAQ() {
   ], [])
 
   useEffect(() => {
+    // Safely extract text from ReactNode for schema
+    function extractText(node: React.ReactNode): string {
+      if (typeof node === 'string') return node
+      if (typeof node === 'number') return node.toString()
+      if (Array.isArray(node)) return node.map(extractText).join('')
+      if (React.isValidElement(node)) return extractText(node.props.children)
+      return ''
+    }
+
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": faqs.map(faq => ({
         "@type": "Question",
-        "name": typeof faq.question === 'string' ? faq.question.replace(/&apos;/g, "'") : '',
+        "name": faq.question.replace(/&apos;/g, "'"),
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": typeof faq.answer === 'string'
-            ? faq.answer
-            : (faq.answer?.props?.children
-              ? (Array.isArray(faq.answer.props.children)
-                  ? faq.answer.props.children.map((child: any) =>
-                      typeof child === 'string' ? child : ''
-                    ).join('')
-                  : (typeof faq.answer.props.children === 'string'
-                      ? faq.answer.props.children
-                      : '')
-                )
-              : ''
-            )
+          "text": extractText(faq.answer)
         }
       }))
     }
