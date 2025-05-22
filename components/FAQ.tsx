@@ -222,7 +222,6 @@ export default function FAQ() {
   ], [])
 
   useEffect(() => {
-    // For schema, convert JSX to plain text (or use a helper if you want to include links)
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -235,7 +234,7 @@ export default function FAQ() {
             ? faq.answer
             : (faq.answer?.props?.children
               ? (Array.isArray(faq.answer.props.children)
-                  ? faq.answer.props.children.map(child =>
+                  ? faq.answer.props.children.map((child: any) =>
                       typeof child === 'string' ? child : ''
                     ).join('')
                   : (typeof faq.answer.props.children === 'string'
