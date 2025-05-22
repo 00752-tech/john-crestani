@@ -59,9 +59,7 @@ export default function ClientInfluencerEarningsCalculator({
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Estimate your potential earnings as an influencer based on your
-            follower count, engagement rate, and the number of sponsored posts
-            you create each month.
+            Welcome to our <strong>Influencer Earnings Calculator</strong> page. Use this powerful tool to <strong>estimate your potential earnings as an influencer</strong> by simply entering your follower count, engagement rate, and the number of sponsored posts you plan to create each month. Get an instant look at your <strong>potential monthly earnings</strong> and understand how factors like your niche, audience quality, and engagement rate can influence your income.<br /><br /> While this calculator helps you see your potential, you can also explore ways to significantly boost your earnings by combining influence with affiliate marketing, a strategy taught in programs like John Crestani&apos;s Super Affiliate System Pro.
           </motion.p>
 
           <motion.div
