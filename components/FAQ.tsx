@@ -252,8 +252,7 @@ export default function FAQ() {
                 aria-controls={`faq-answer-${index}`}
               >
                 <span className="font-semibold text-lg text-pink-500">
-                  {/* Render HTML for anchor tags */}
-                  <span dangerouslySetInnerHTML={{ __html: faq.question }} />
+                  {faq.question}
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
@@ -273,7 +272,6 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="p-4 md:p-6 bg-gray-900">
-                      {/* Render HTML for anchor tags */}
                       <p className="text-gray-300" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </motion.div>
