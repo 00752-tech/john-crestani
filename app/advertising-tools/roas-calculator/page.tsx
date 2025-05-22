@@ -1,3 +1,5 @@
+'use client'
+
 export const metadata = {
   title: 'ROAS Calculator | Super Affiliate System Pro',
   description: 'Calculate your Return on Ad Spend (ROAS) with our free calculator. Optimize your advertising campaigns and improve your marketing ROI.',
@@ -15,14 +17,14 @@ export default function ROASCalculatorPage() {
     window.location.href = '/api/sale'
   }
 
-  const pageUrl = 'https://example.com/advertising-tools/roas-calculator'; // Replace with your actual URL
-  const pageTitle = 'ROAS Calculator | Super Affiliate System Pro';
+  const pageUrl = 'https://example.com/advertising-tools/roas-calculator' // Replace with your actual URL
+  const pageTitle = 'ROAS Calculator | Super Affiliate System Pro'
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link 
-          href="/tools" 
+        <Link
+          href="/tools"
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
@@ -32,7 +34,7 @@ export default function ROASCalculatorPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4">
           Return on Ad Spend (ROAS) Calculator
         </h1>
-        
+
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
             <strong>Understanding and improving your Return on Ad Spend (ROAS) is fundamental to running profitable advertising campaigns in affiliate marketing and beyond.</strong><br /><br />
@@ -74,7 +76,7 @@ export default function ROASCalculatorPage() {
               <li>Optimize your ad spend across different platforms</li>
               <li>Scale your campaigns profitably</li>
             </ul>
-            <button 
+            <button
               onClick={handleLearnMore}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
             >
@@ -83,7 +85,7 @@ export default function ROASCalculatorPage() {
           </div>
         </div>
 
-        <JsonLd
+        <JsonLd<any>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",
