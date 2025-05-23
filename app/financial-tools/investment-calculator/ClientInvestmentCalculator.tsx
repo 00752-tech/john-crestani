@@ -124,7 +124,7 @@ export default function ClientInvestmentCalculator({backUrl="/free-tools"}: {bac
           </div>
         </motion.div>
 
-        <JsonLd<any>
+        <JsonLd<object>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",
