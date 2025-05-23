@@ -45,8 +45,7 @@ export default function ClientYouTubeCalculator({
 
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
-            Calculate your potential YouTube earnings based on views,
-            click-through rate (CTR), and cost per thousand impressions (CPM).
+            Need to estimate your potential YouTube earnings? This free YouTube AdSense Earnings Calculator is designed to help you quickly understand your possible income [user prompt, 1]. By simply entering your estimated views per video, click-through rate (CTR), and CPM Rate, the tool provides an estimate of your Monthly and Yearly Earnings from AdSense. Use this tool to get immediate insight into your YouTube monetization potential.
           </p>
 
           <YouTubeCalculator />
