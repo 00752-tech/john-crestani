@@ -4,7 +4,6 @@
 import ROASCalculator from '@/components/ROASCalculator'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
@@ -181,42 +180,8 @@ export default function ClientROASCalculator({backUrl="/free-tools"}: {backUrl?:
             </motion.button>
           </motion.div>
         </div>
-
-        <JsonLd<any>
-          item={{
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is a good ROAS?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A good ROAS depends on your industry and business model, but generally, a ROAS of 4:1 ($4 in revenue for every $1 spent on ads) is considered good. However, some businesses may require a higher ROAS to be profitable due to other costs."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How can I improve my ROAS?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "To improve your ROAS, focus on targeting the right audience, creating compelling ad copy and creative, optimizing your landing pages, and continually testing and refining your campaigns. John Crestani's Super Affiliate System Pro provides in-depth strategies for maximizing your ROAS."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How often should I calculate my ROAS?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It's best to calculate your ROAS regularly, ideally weekly or monthly, depending on your ad spend and campaign duration. This allows you to quickly identify and adjust underperforming campaigns, and scale successful ones."
-                }
-              }
-            ]
-          }}
-        />
         <RelatedTools currentToolUrl="/advertising-tools/roas-calculator" category="advertising" />
       </div>
     </div>
   )
 }
-
