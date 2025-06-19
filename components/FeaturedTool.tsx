@@ -1,10 +1,11 @@
 "use client";
 
-import { Calculator, TrendingUp, DollarSign, Users } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Users, BarChart2, PieChart } from "lucide-react";
 import InteractiveButton from "./InteractiveButton";
 import { motion } from "framer-motion";
 
 const tools = [
+  // Existing tools
   {
     name: "Affiliate Earnings Calculator",
     description:
@@ -33,6 +34,22 @@ const tools = [
     url: "/influencer-marketing-tools/earnings-calculator",
     icon: Users,
   },
+  
+  // New tools added below
+  {
+    name: "Link CTR Optimizer",
+    description:
+      "Maximize your click-through rates with AI-powered analysis and optimization recommendations for your links.",
+    url: "/affiliate-marketing-tools/link-ctr-optimizer",
+    icon: BarChart2,
+  },
+  {
+    name: "Niche Profitability Calculator",
+    description:
+      "Discover high-potential niches by calculating profitability metrics and market demand indicators.",
+    url: "/tools/niche-profitability-calculator",
+    icon: PieChart,
+  },
 ];
 
 export default function FeaturedTool() {
@@ -40,7 +57,7 @@ export default function FeaturedTool() {
   const Icon = randomTool.icon;
 
   return (
-    <section className=" py-20 bg-gray-900">
+    <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
