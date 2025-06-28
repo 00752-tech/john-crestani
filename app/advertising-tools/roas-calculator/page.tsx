@@ -83,7 +83,7 @@ export default function ROASCalculatorPage() {
           </div>
         </div>
 
-        <JsonLd<any>
+        <JsonLd<Record<string, unknown>>
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",
