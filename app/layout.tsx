@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConcent";
+import Script from "next/script"; // Import Next.js Script component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,16 @@ export default function RootLayout({
           content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo"
         />
         <StructuredData />
+        {/* Microsoft Clarity Script */}
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s6qlp9x2uo");
+          `}
+        </Script>
       </head>
       <GoogleTagManager gtmId="G-R5SXJEQF8Z" />
       <CookieConsent />
