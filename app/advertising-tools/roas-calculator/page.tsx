@@ -9,12 +9,9 @@ import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
+import LearnMoreButton from '@/components/LearnMoreButton' // Import the client button
 
 export default function ROASCalculatorPage() {
-  const handleLearnMore = () => {
-    window.location.href = '/api/sale'
-  }
-
   const pageUrl = 'https://example.com/advertising-tools/roas-calculator' // Replace with your actual URL
   const pageTitle = 'ROAS Calculator | Super Affiliate System Pro'
 
@@ -74,12 +71,7 @@ export default function ROASCalculatorPage() {
               <li>Optimize your ad spend across different platforms</li>
               <li>Scale your campaigns profitably</li>
             </ul>
-            <button
-              onClick={handleLearnMore}
-              className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
-            >
-              Learn How to Boost Your ROAS
-            </button>
+            <LearnMoreButton />
           </div>
         </div>
 
