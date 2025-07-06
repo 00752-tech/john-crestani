@@ -165,7 +165,7 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-sm text-gray-400 tracking-tight">
-                Rated 4.9/5 by over 2,100 affiliates
+                Rated 4.9/5 by over 12,378 affiliates
               </span>
             </div>
           </motion.div>
