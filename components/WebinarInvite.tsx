@@ -1,62 +1,77 @@
 "use client";
 import { motion } from "framer-motion";
-import React from 'react';
+import React, { useState } from "react";
 
 export default function WebinarInvite() {
+  const [loadEmbed, setLoadEmbed] = useState(false);
+
   const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.location.href = "https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net";
   };
+
+  const handlePlayVideo = () => setLoadEmbed(true);
 
   return (
     <section className="py-20 bg-[#0f1629] text-white">
       <article className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, x: -80 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           className="text-4xl md:text-5xl font-bold mb-16 text-center"
         >
           Exclusive Webinar Invite
         </motion.h2>
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, x: 80 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-          }}  
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           className="max-w-5xl mx-auto"
         >
           <div className="relative w-full pb-[56.25%]">
-            <iframe
-              src="https://www.youtube.com/embed/Vh1J7csr6W4?si=owfha9had8yz3Q5Q"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
-            ></iframe>
+            {!loadEmbed ? (
+              <div
+                onClick={handlePlayVideo}
+                role="button"
+                aria-label="Play Webinar Video"
+                className="absolute top-0 left-0 w-full h-full bg-black flex justify-center items-center cursor-pointer rounded-lg shadow-2xl"
+              >
+                <Image
+                  src="/placeholder-logo.svg"
+                  alt="Webinar Thumbnail"
+                  width={960}
+                  height={540}
+                  className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                  priority
+                />
+                <div className="z-10">
+                  <svg
+                    className="w-16 h-16 text-white hover:scale-110 transition"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                src="https://www.youtube.com/embed/Vh1J7csr6W4?autoplay=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+              ></iframe>
+            )}
           </div>
-          <motion.div   
+
+          <motion.div
             initial={{ opacity: 0, x: -80 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut",
-            }} 
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="mt-12 text-center"
           >
             <button
