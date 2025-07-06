@@ -6,18 +6,18 @@ import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
-export default function HomePage() {
-  const router = useRouter()
+export default function Hero() {
+  const router = useRouter();
 
   const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net")
-  }
+    e.preventDefault();
+    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net");
+  };
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net")
-  }
+    e.preventDefault();
+    router.push("https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net");
+  };
 
   return (
     <>
@@ -172,4 +172,21 @@ export default function HomePage() {
       </section>
 
       {/* SEO paragraph right after hero section */}
-      <section className="flex justify-center items
+      <section className="flex justify-center items-center py-12 md:py-16 bg-transparent">
+        <div className="w-full max-w-4xl bg-gray-900/90 rounded-2xl shadow-2xl px-6 md:px-12 py-10 md:py-14 border border-pink-500/20">
+          <div className="space-y-6">
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
+              The world of affiliate marketing can be tough – did you know 71% of aspiring affiliates fail? But what if you could access a proven blueprint to avoid those common pitfalls and actually beat the odds?
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
+              <span className="text-pink-400 font-semibold">John Crestani</span>, a renowned expert and multi-millionaire, has continuously updated his acclaimed Super Affiliate System Pro since 2017, incorporating cutting-edge 2025 strategies like <span className="text-pink-400">AI-powered marketing</span> and advanced data analytics.
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
+              Designed to help you master the <span className="text-pink-400">&apos;Million-Dollar Matrix&apos;</span> and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
