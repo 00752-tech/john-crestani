@@ -117,7 +117,6 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
           >
-            {/* Button + Social Proof */}
             <div className="flex flex-col items-center">
               <button
                 className="button-base transparent-button"
@@ -125,6 +124,7 @@ export default function Hero() {
               >
                 Earn More Faster
               </button>
+
               <div className="mt-3 flex items-center space-x-2">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -145,7 +145,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* CTA Button */}
             <div className="flex flex-col items-center">
               <button
                 className="button-base blue-gradient-button group"
@@ -191,10 +190,12 @@ export default function Hero() {
               priority
               loading="eager"
               decoding="async"
-              sizes="(sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
+              sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
               className="rounded-lg shadow-2xl object-cover w-full"
             />
           </div>
         </motion.div>
       </div>
-    </
+    </section>
+  );
+}
