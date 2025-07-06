@@ -84,7 +84,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center px-4 sm:px-6 md:px-8 xl:px-8">
+      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 px-4 sm:px-6 md:px-8 xl:px-8">
         <motion.div
           className="w-full md:w-1/2 mb-12 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
@@ -102,7 +102,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            John Crestani&apos;s <span className="text-gray-400"> Super Affiliate System Pro 2025</span> – Still the Best Training?
+            John Crestani&apos;s <span className="text-gray-400">Super Affiliate System Pro 2025</span> – Still the Best Training?
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
@@ -119,12 +119,10 @@ export default function Hero() {
             <div className="flex flex-col items-center">
               <button
                 className="button-base transparent-button"
-                data-testid="see-opinions-button"
                 onClick={handleUnlockBlueprint}
               >
                 Earn More Faster
               </button>
-
               <div className="mt-3 flex items-center space-x-2">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -148,7 +146,6 @@ export default function Hero() {
             <div className="flex flex-col items-center">
               <button
                 className="button-base blue-gradient-button group"
-                data-testid="join-masterclass-button"
                 onClick={handleRevealSecrets}
               >
                 Free: Unlock Affiliate Secrets
