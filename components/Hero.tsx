@@ -190,7 +190,7 @@ export default function Hero() {
               priority
               loading="eager"
               decoding="async"
-              sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
+                            sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
               className="rounded-lg shadow-2xl object-cover w-full"
             />
           </div>
