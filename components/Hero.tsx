@@ -187,9 +187,10 @@ export default function Hero() {
   width={1200}
   height={1200}
   priority
-  sizes="(max-width: 768px) 100vw, 1200px"
+  sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 1200px"
   className="rounded-lg shadow-2xl object-cover w-full"
 />
+
 
             </div>
           </motion.div>
