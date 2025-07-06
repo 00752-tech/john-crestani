@@ -24,7 +24,7 @@ export default function RootLayout({
           rel="preload"
           as="image"
           href="/hero_man_hat.png"
-          fetchpriority="high"
+          fetchPriority="high"
         />
 
         {/* 🚀 Google Fonts preload for Poppins */}
@@ -68,7 +68,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="font-poppins">
-        <GoogleTagManager gtmId="GTM-XXXXXXX" /> {/* Replace with your GTM ID */}
+        <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
         {children}
       </body>
