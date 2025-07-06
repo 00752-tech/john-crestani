@@ -182,14 +182,16 @@ export default function Hero() {
           >
             <div className="relative w-full max-w-none h-auto">
               <Image
-  src="/hero_man_hat.png"
+  src="/hero_man_hat.webp"
   alt="John Crestani"
   width={1200}
   height={1200}
   priority
-  sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 1200px"
+  loading="eager"
+  sizes="(max-width: 400px) 100vw, (max-width: 768px) 90vw, 1200px"
   className="rounded-lg shadow-2xl object-cover w-full"
 />
+
 
 
             </div>
