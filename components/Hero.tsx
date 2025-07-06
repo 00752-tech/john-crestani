@@ -84,7 +84,8 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center px-4 sm:px-6 md:px-8 xl:px-8">
+      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 md:gap-x-6 px-4 sm:px-6 md:px-8 xl:px-8">
+">
         <motion.div
           className="w-full md:w-1/2 mb-12 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
