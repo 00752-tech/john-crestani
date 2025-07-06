@@ -167,27 +167,7 @@ export default function Hero() {
 
             </motion.div>
 
-            {/* Featured In Media Strip */}
-            <section className="w-full py-6 md:py-8 lg:py-10 bg-black">
-              <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-                <div className="overflow-x-auto whitespace-nowrap flex items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-                  <Image src="/logos/forbes.png" alt="Forbes" width={140} height={40} className="h-10 w-auto" />
-                  <Image src="/logos/nbc.png" alt="NBC" width={120} height={40} className="h-10 w-auto" />
-                  <Image src="/logos/cbs.png" alt="CBS" width={120} height={40} className="h-10 w-auto" />
-                  <Image src="/logos/fox.png" alt="Fox" width={120} height={40} className="h-10 w-auto" />
-                  <Image src="/logos/businessinsider.png" alt="Business Insider" width={160} height={40} className="h-10 w-auto" />
-                  <Image src="/logos/entrepreneur.png" alt="Entrepreneur" width={160} height={40} className="h-10 w-auto" />
-                </div>
-              </div>
-            </section>
-          </motion.div>
-
-          <motion.div 
-            className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0 lg:items-start"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+           
           >
             <div className="relative w-full max-w-none h-auto">
               <Image 
