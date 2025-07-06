@@ -188,9 +188,11 @@ export default function Hero() {
   height={1200}
   priority
   loading="eager"
+  decoding="async"
   sizes="(max-width: 400px) 100vw, (max-width: 768px) 90vw, 1200px"
   className="rounded-lg shadow-2xl object-cover w-full"
 />
+
 
 
 
