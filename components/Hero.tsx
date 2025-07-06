@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       className="min-h-screen py-8 md:py-12 lg:py-16 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
-      style={{ minHeight: '100vh' }} // 🧠 Prevent CLS
+      style={{ minHeight: '100vh' }}
     >
       <style jsx global>{`
         @font-face {
@@ -90,7 +90,7 @@ export default function Hero() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: 'easeOut' }} // 🧠 Faster animation
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
@@ -125,7 +125,6 @@ export default function Hero() {
                 Earn More Faster
               </button>
 
-              {/* ⭐ Social Proof Rating Badge */}
               <div className="mt-3 flex items-center space-x-2">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -194,3 +193,9 @@ export default function Hero() {
               sizes="(max-width: 400px) 100vw, (max-width: 768px) 90vw, 1200px"
               className="rounded-lg shadow-2xl object-cover w-full"
             />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
