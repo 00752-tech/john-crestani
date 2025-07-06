@@ -82,7 +82,7 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center px-4 sm:px-6 md:px-8  xl:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center px-4 sm:px-6 md:px-8 xl:px-8">
           <motion.div 
             className="w-full md:w-1/2 mb-12 md:mb-0"
             initial={{ x: -100, opacity: 0 }}
@@ -98,15 +98,15 @@ export default function Hero() {
                 </span>
               </div>
             </div>
-            
+
             <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
               John Crestani&apos;s <span className="text-gray-400"> Super Affiliate System Pro 2025</span> – Still the Best Training? 
             </h1>
-            
+
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
               Why 71% of affiliate marketers fail  <span className="text-white font-light">(And how John Crestani&apos;s 2025 method beats the odds)</span>. 
             </p>
-            
+
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
               initial={{ y: 20, opacity: 0 }}
@@ -148,8 +148,22 @@ export default function Hero() {
                 </span>
               </div>
             </motion.div>
+
+            {/* Featured In Media Strip */}
+            <section className="w-full py-6 md:py-8 lg:py-10 bg-black">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+                <div className="overflow-x-auto whitespace-nowrap flex items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+                  <Image src="/logos/forbes.png" alt="Forbes" width={140} height={40} className="h-10 w-auto" />
+                  <Image src="/logos/nbc.png" alt="NBC" width={120} height={40} className="h-10 w-auto" />
+                  <Image src="/logos/cbs.png" alt="CBS" width={120} height={40} className="h-10 w-auto" />
+                  <Image src="/logos/fox.png" alt="Fox" width={120} height={40} className="h-10 w-auto" />
+                  <Image src="/logos/businessinsider.png" alt="Business Insider" width={160} height={40} className="h-10 w-auto" />
+                  <Image src="/logos/entrepreneur.png" alt="Entrepreneur" width={160} height={40} className="h-10 w-auto" />
+                </div>
+              </div>
+            </section>
           </motion.div>
-          
+
           <motion.div 
             className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0 lg:items-start"
             initial={{ x: 100, opacity: 0 }}
@@ -158,36 +172,16 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative w-full max-w-none h-auto">
-  <Image 
-    src="/hero_man_hat.png" 
-    alt="John Crestani" 
-    width={1200} 
-    height={1200} 
-    className="rounded-lg shadow-2xl object-cover w-full"
-    priority
-  />
-</div>
-
-
-
+              <Image 
+                src="/hero_man_hat.png" 
+                alt="John Crestani" 
+                width={1200} 
+                height={1200} 
+                className="rounded-lg shadow-2xl object-cover w-full"
+                priority
+              />
+            </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* SEO paragraph right after hero section */}
-      <section className="flex justify-center items-center py-12 md:py-16 bg-transparent">
-        <div className="w-full max-w-4xl bg-gray-900/90 rounded-2xl shadow-2xl px-6 md:px-12 py-10 md:py-14 border border-pink-500/20">
-          <div className="space-y-6">
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
-              The world of affiliate marketing can be tough – did you know 71% of aspiring affiliates fail? But what if you could access a proven blueprint to avoid those common pitfalls and actually beat the odds?
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
-              <span className="text-pink-400 font-semibold">John Crestani</span>, a renowned expert and multi-millionaire, has continuously updated his acclaimed Super Affiliate System Pro since 2017, incorporating cutting-edge 2025 strategies like <span className="text-pink-400">AI-powered marketing</span> and advanced data analytics.
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-gray-100 text-center md:text-left tracking-tight">
-              Designed to help you master the <span className="text-pink-400">&apos;Million-Dollar Matrix&apos;</span> and achieve financial freedom, this system is built to prevent the failures that plague most beginners and instead guide you to success. <span className="text-pink-400 font-semibold">Discover how this method could work for you.</span>
-            </p>
-          </div>
         </div>
       </section>
     </>
