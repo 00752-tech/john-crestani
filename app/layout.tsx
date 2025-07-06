@@ -4,12 +4,15 @@ import { Inter } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConsent";
-import Script from "next/script"; // Import Next.js Script
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  // ... your metadata unchanged ...
+  title: "Affiliate Failure Fix 2025: John Crestani's 72H Offer",
+  description:
+    "Fix the 71% failure rate! John Crestani's updated 2025 method reveals the 'Million-Dollar Matrix'. Free access ending. Start for free. No credit card.",
+  // Optionally add keywords, openGraph, twitter, etc. here if needed
 };
 
 export default function RootLayout({
