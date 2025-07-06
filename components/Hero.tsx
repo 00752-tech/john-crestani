@@ -157,16 +157,17 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative w-[55%] sm:w-full md:w-4/5 lg:w-[73%] xl:w-[65%] h-auto">
-              <Image 
-                src="/hero_man_hat.png" 
-                alt="John Crestani" 
-                width={1000} 
-                height={1000} 
-                className="rounded-lg shadow-2xl w-fit object-cover"
-                priority
-              />
-            </div>
+            <div className="relative w-[80%] sm:w-full md:w-11/12 lg:w-[88%] xl:w-[80%] h-auto">
+  <Image 
+    src="/hero_man_hat.png" 
+    alt="John Crestani" 
+    width={1200} 
+    height={1200} 
+    className="rounded-lg shadow-2xl object-cover w-full"
+    priority
+  />
+</div>
+
           </motion.div>
         </div>
       </section>
