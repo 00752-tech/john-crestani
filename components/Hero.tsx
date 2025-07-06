@@ -181,14 +181,16 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative w-full max-w-none h-auto">
-              <Image 
-                src="/hero_man_hat.png" 
-                alt="John Crestani" 
-                width={1200} 
-                height={1200} 
-                className="rounded-lg shadow-2xl object-cover w-full"
-                priority
-              />
+              <Image
+  src="/hero_man_hat.png"
+  alt="John Crestani"
+  width={1200}
+  height={1200}
+  priority
+  sizes="(max-width: 768px) 100vw, 1200px"
+  className="rounded-lg shadow-2xl object-cover w-full"
+/>
+
             </div>
           </motion.div>
         </div>
