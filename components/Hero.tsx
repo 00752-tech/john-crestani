@@ -157,7 +157,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative w-[80%] sm:w-full md:w-11/12 lg:w-[88%] xl:w-[80%] h-auto">
+            <div className="relative w-full max-w-none h-auto">
   <Image 
     src="/hero_man_hat.png" 
     alt="John Crestani" 
@@ -167,6 +167,8 @@ export default function Hero() {
     priority
   />
 </div>
+
+
 
           </motion.div>
         </div>
