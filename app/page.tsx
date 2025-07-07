@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
@@ -29,10 +28,9 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ Toolkit section with image beside text */}
+      {/* ✅ Toolkit section with image beside copy */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left: Text content */}
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-4">The Billionaire’s Toolkit</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
@@ -47,8 +45,6 @@ export default function Home() {
               <li>Pre-built landing page flows</li>
             </ul>
           </div>
-
-          {/* Right: Toolkit image */}
           <div className="md:w-1/2">
             <Image
               src="/billionaires-toolkit.PNG"
