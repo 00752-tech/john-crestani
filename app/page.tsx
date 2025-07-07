@@ -30,11 +30,11 @@ export default function Home() {
       </Suspense>
       <Features />
 
-      {/* ✅ Billionaire's Toolkit Image */}
+      {/* ✅ Billionaire’s Toolkit Image */}
       <div className="flex justify-center my-12 px-4">
         <Image
           src="/billionaires-toolkit.PNG"
-          alt="Billionaire’s Toolkit visual showing featured highlights"
+          alt="Billionaire’s Toolkit visual showing featured modules"
           width={840}
           height={420}
           className="rounded-xl shadow-2xl"
@@ -47,6 +47,19 @@ export default function Home() {
       </Suspense>
       <WebinarInvite />
       <Testimonials />
+
+      {/* ✅ Tony Strange’s Affiliate Success Image */}
+      <div className="flex justify-center my-12 px-4">
+        <Image
+          src="/images/affiliate-success-tony.png"
+          alt="Tony Strange testimonial showing affiliate success poolside"
+          width={640}
+          height={360}
+          className="rounded-xl shadow-xl"
+          priority
+        />
+      </div>
+
       <FAQ />
       <CTA />
       <div className="container mx-auto px-4 py-8">
