@@ -4,6 +4,7 @@ import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
+import Header from "@/components/Header"; // ✅ Injected
 
 export const metadata: Metadata = {
   title: "Affiliate Failure Fix 2025: John Crestani's 72H Offer",
@@ -69,7 +70,7 @@ export default function RootLayout({
           content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo"
         />
 
-        {/* 📦 Structured data with updated image reference */}
+        {/* 📦 Structured data for enhanced SEO */}
         <StructuredData />
 
         {/* 🧠 Microsoft Clarity deferred load */}
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body className="font-poppins">
         <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
+        <Header /> {/* 🧩 Sticky and restored */}
         {children}
       </body>
     </html>
