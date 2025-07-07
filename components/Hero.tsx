@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen py-8 md:py-12 lg:py-16 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
+      className="min-h-screen py-2 md:py-4 lg:py-8 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
       <style jsx global>{`
@@ -190,7 +190,7 @@ export default function Hero() {
               priority
               loading="eager"
               decoding="async"
-                            sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
+              sizes="(max-width: 420px) 100vw, (max-width: 768px) 80vw, 960px"
               className="rounded-lg shadow-2xl object-cover w-full"
             />
           </div>
@@ -199,3 +199,4 @@ export default function Hero() {
     </section>
   );
 }
+``
