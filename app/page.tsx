@@ -1,6 +1,5 @@
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
-import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Features from '@/components/Features'
@@ -16,22 +15,12 @@ const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), {
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false })
 const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), { ssr: false })
 
-// Define the props interface here instead of importing it
-// interface RelatedToolsProps {
-//   currentToolUrl: string;
-//   category: string;
-// }
-
-// Wrapper component for CTA
-// const CTAWrapper: React.FC<RelatedToolsProps> = () => <CTA />
-
 export default function Home() {
   const pageUrl = 'https://johncrestani.me'
   const pageTitle = 'John Crestani’s Super Affiliate System Pro 2025: Still the Best Training?'
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
-      <Header />
       <Hero />
       <Stats />
       <About />
