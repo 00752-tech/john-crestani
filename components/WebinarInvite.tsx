@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 
@@ -32,25 +31,22 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           className="max-w-5xl mx-auto"
         >
-          <div className="relative w-full pb-[56.25%]">
+          <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl">
             {!loadEmbed ? (
               <div
                 onClick={handlePlayVideo}
                 role="button"
                 aria-label="Play Webinar Video"
-                className="absolute top-0 left-0 w-full h-full bg-black flex justify-center items-center cursor-pointer rounded-lg shadow-2xl overflow-hidden"
+                className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
               >
-                <Image
+                <img
                   src="https://img.youtube.com/vi/Vh1J7csr6W4/hqdefault.jpg"
-                  alt="Preview image for Exclusive Webinar with John Crestani"
-                  width={960}
-                  height={540}
-                  className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
-                  priority
+                  alt="Exclusive Webinar Preview"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
                 />
                 <div className="z-10">
                   <svg
-                    className="w-16 h-16 text-white hover:scale-110 transition transform"
+                    className="w-16 h-16 text-white hover:scale-110 transition"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
