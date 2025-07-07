@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
