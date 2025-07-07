@@ -28,9 +28,10 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ Toolkit section with image beside copy */}
+      {/* ✅ Restored Billionaire’s Toolkit section */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Left: Original copy */}
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-4">The Billionaire’s Toolkit</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
@@ -43,8 +44,14 @@ export default function Home() {
               <li>Influencer onboarding automation</li>
               <li>Profitable niche targeting tools</li>
               <li>Pre-built landing page flows</li>
+              <li>Live strategy sessions & campaign audits</li>
+              <li>Exclusive affiliate network access</li>
+              <li>Behavioral targeting and retargeting logic</li>
+              <li>Mobile optimization and funnel cleanup</li>
             </ul>
           </div>
+
+          {/* Right: Toolkit image */}
           <div className="md:w-1/2">
             <Image
               src="/billionaires-toolkit.PNG"
