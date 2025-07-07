@@ -28,19 +28,39 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicFeaturedTool />
       </Suspense>
-      <Features />
 
-      {/* ✅ Billionaire's Toolkit visual */}
-      <div className="flex justify-center my-12 px-4">
-        <Image
-          src="/billionaires-toolkit.PNG"
-          alt="Billionaire’s Toolkit visual showing featured highlights"
-          width={640}
-          height={320}
-          className="rounded-xl shadow-2xl"
-          priority
-        />
-      </div>
+      {/* ✅ Toolkit section with image beside text */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Left: Text content */}
+          <div className="md:w-1/2 text-white">
+            <h2 className="text-3xl font-bold mb-4">The Billionaire’s Toolkit</h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              The 2025 version of Crestani&apos;s training goes beyond affiliate marketing...
+              It’s a plug-n-play system for monetizing anything online with high ROI paid traffic,
+              influencer outreach, and video sales letters proven to convert.
+            </p>
+            <ul className="list-disc pl-6 text-gray-300 space-y-2 text-base leading-relaxed">
+              <li>Ad templates + copywriting walkthroughs</li>
+              <li>Influencer onboarding automation</li>
+              <li>Profitable niche targeting tools</li>
+              <li>Pre-built landing page flows</li>
+            </ul>
+          </div>
+
+          {/* Right: Toolkit image */}
+          <div className="md:w-1/2">
+            <Image
+              src="/billionaires-toolkit.PNG"
+              alt="Billionaire’s Toolkit visual showing featured highlights"
+              width={480}
+              height={315}
+              className="rounded-xl shadow-2xl"
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicFreeTools />
