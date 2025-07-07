@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export default function WebinarInvite() {
   const [loadEmbed, setLoadEmbed] = useState(false);
@@ -39,11 +40,16 @@ export default function WebinarInvite() {
                 aria-label="Play Webinar Video"
                 className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
               >
-                <img
-                  src="https://img.youtube.com/vi/Vh1J7csr6W4/hqdefault.jpg"
-                  alt="Exclusive Webinar Preview"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
+                <div className="absolute inset-0 w-full h-full rounded-lg z-0">
+                  <Image
+                    src="https://img.youtube.com/vi/Vh1J7csr6W4/hqdefault.jpg"
+                    alt="Exclusive Webinar Preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                    className="object-cover rounded-lg"
+                    priority
+                  />
+                </div>
                 <div className="z-10">
                   <svg
                     className="w-16 h-16 text-white hover:scale-110 transition"
