@@ -1,95 +1,41 @@
-import type { Metadata } from "next";
-import StructuredData from '@/app/free-tools/structure-data/FreeToolsStructuredData'
-import { CookieConsent } from "@/components/CookieConsent";
-import { GoogleTagManager } from "@next/third-parties/google";
-import Script from "next/script";
-import Header from "@/components/Header"; // 🧩 Imported Header
+'use client';
 
-export const metadata: Metadata = {
-  title: "Affiliate Failure Fix 2025: John Crestani's 72H Offer",
-  description:
-    "Fix the 71% failure rate! John Crestani's updated 2025 method reveals the 'Million-Dollar Matrix'. Free access ending. Start for free. No credit card.",
-  openGraph: {
-    title: "Affiliate Failure Fix 2025",
-    description:
-      "Fix the 71% failure rate with John Crestani's Million-Dollar Matrix. Start free today.",
-    images: [
-      {
-        url: "https://johncrestani.me/hero_man_hat.webp",
-        width: 1200,
-        height: 630,
-        alt: "John Crestani Webinar Thumbnail",
-      },
-    ],
-  },
-};
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Award } from 'lucide-react';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Header() {
   return (
-    <html lang="en">
-      <head>
-        {/* 👀 Preload hero image to improve LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="/hero_man_hat.webp"
-          fetchPriority="high"
-        />
+    <header className="bg-black text-white">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4 md:py-6">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="flex items-center gap-2"
+        >
+          <Award className="h-6 w-6 text-yellow-400" />
+          <span className="text-sm md:text-base font-light tracking-wide text-gray-300">
+            ⚡ 72H Access: Affiliate Fix 2025
+          </span>
+        </motion.div>
 
-        {/* 🚀 Google Fonts preload + stylesheet */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        />
-
-        {/* 🌐 Open Graph image fallback for social + SERP */}
-        <meta
-          property="og:image"
-          content="https://johncrestani.me/hero_man_hat.webp"
-        />
-        <meta
-          property="og:image:alt"
-          content="John Crestani Webinar Thumbnail"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* 🔍 Google site verification */}
-        <meta
-          name="google-site-verification"
-          content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo"
-        />
-
-        {/* 📦 Structured data with updated image reference */}
-        <StructuredData />
-
-        {/* 🧠 Microsoft Clarity deferred load */}
-        <Script id="clarity-script" strategy="lazyOnload">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "s6qlp9x2uo");
-          `}
-        </Script>
-      </head>
-
-      <body className="font-poppins">
-        <GoogleTagManager gtmId="GTM-XXXXXXX" />
-        <CookieConsent />
-        <Header /> {/* ✅ Injected Header */}
-        {children}
-      </body>
-    </html>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="flex items-center"
+        >
+          <Image
+            src="/logo-crestani.webp"
+            alt="John Crestani Logo"
+            width={140}
+            height={40}
+            className="object-contain"
+            priority
+          />
+        </motion.div>
+      </div>
+    </header>
   );
 }
