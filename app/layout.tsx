@@ -41,6 +41,7 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
+        {/* eslint-disable @next/next/no-page-custom-font */}
         {/* 🚀 Google Fonts preload + stylesheet */}
         <link
           rel="preload"
