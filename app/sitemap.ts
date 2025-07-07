@@ -1,8 +1,10 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://johncrestani.me'
-  const pages = [
+  const baseUrl = 'https://johncrestani.me';
+  const now = new Date().toISOString();
+
+  const paths = [
     '',
     'affiliate-marketing-tools',
     'affiliate-marketing-tools/earnings-calculator',
@@ -14,13 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'influencer-marketing-tools/earnings-calculator',
     'content-creation-tools/youtube-earnings-calculator',
     'contact',
-    'privacy-policy'
-  ]
+    'privacy-policy',
+  ];
 
-  const now = new Date()
-
-  return pages.map((path) => ({
-    url: `${baseUrl}/${path}`,
+  return paths.map((path) => ({
+    url: path ? `${baseUrl}/${path}` : `${baseUrl}/`,
     lastModified: now,
-  }))
+  }));
 }
