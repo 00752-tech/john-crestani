@@ -17,7 +17,7 @@ const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), {
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me';
-  const pageTitle = 'John Crestani’s Super Affiliate System Pro 2025: Still the Best Training?';
+  const pageTitle = 'John Crestani&apos;s Super Affiliate System Pro 2025: Still the Best Training?';
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-4">What Is The Billionaire’s Toolkit?</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              The 2025 version of Crestani's training goes beyond affiliate marketing...
+              The 2025 version of Crestani&apos;s training goes beyond affiliate marketing...
               It’s a plug-n-play system for monetizing anything online with high ROI paid traffic,
               influencer outreach, and video sales letters proven to convert.
             </p>
