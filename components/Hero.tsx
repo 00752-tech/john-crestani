@@ -36,6 +36,7 @@ export default function Hero() {
         />
       </div>
 
+      {/* Global styles */}
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -140,20 +141,12 @@ export default function Hero() {
               <div className="mt-3 flex items-center space-x-2">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-yellow-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
+                    <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.214 3.726a1 1 0 00.95.69h3.925c.969 0 1.371 1.24.588 1.81l-3.177 2.31a1 1 0 00-.364 1.118l1.214 3.726c.3.921-.755 1.688-1.54 1.118l-3.177-2.31a1 1 0 00-1.175 0l-3.177 2.31c-.784.57-1.838-.197-1.539-1.118l1.214-3.726a1 1 0 00-.364-1.118L2.372 9.153c-.784-.57-.38-1.81.588-1.81h3.925a1 1 0 00.95-.69l1.214-3.726z" />
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-gray-400 tracking-tight">
-                  Rated 4.9/5 by over 12,378 affiliates
-                </span>
+                <span className="text-sm text-gray-400 tracking-tight">Rated 4.9/5 by over 12,378 affiliates</span>
               </div>
             </div>
 
@@ -163,19 +156,8 @@ export default function Hero() {
                 onClick={handleRevealSecrets}
               >
                 Free: Unlock Affiliate Secrets
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
               <span className="text-xs sm:text-sm text-gray-400 mt-2 tracking-tight">
@@ -193,3 +175,12 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
+          <div className="relative w-full max-w-none h-auto">
+            <Image
+              src="/hero_man_hat.webp"
+              alt="John Crestani"
+              width={1200}
+              height={1200}
+              priority
+              loading="eager"
+             
