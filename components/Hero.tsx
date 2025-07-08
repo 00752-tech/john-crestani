@@ -17,7 +17,9 @@ export default function Hero() {
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push('https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net');
-    return (
+  };
+
+  return (
     <section
       className="min-h-screen py-1 md:py-2 lg:py-4 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
@@ -193,11 +195,3 @@ export default function Hero() {
         >
           <div className="relative w-full max-w-none h-auto">
             <Image
-              src="/hero_man_hat.webp"
-              alt="John Crestani"
-              width={1200}
-              height={1200}
-              priority
-              loading="eager"
-              decoding="async"
-              sizes="(max-width: 
