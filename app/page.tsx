@@ -28,14 +28,13 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ Billionaire’s Toolkit section with restored copy and image */}
+      {/* ✅ Billionaire’s Toolkit section */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left: Detailed copy */}
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-4">The Billionaire&rsquo;s Toolkit</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              The 2025 version of Crestani's training goes beyond affiliate marketing.
+              The 2025 version of Crestani&apos;s training goes beyond affiliate marketing.
               It&rsquo;s a plug-n-play system for monetizing anything online using high ROI paid traffic,
               influencer outreach, and video sales letters proven to convert.
             </p>
@@ -51,7 +50,6 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Right: Visual image */}
           <div className="md:w-1/2">
             <Image
               src="/billionaires-toolkit.PNG"
@@ -71,7 +69,7 @@ export default function Home() {
       <WebinarInvite />
       <Testimonials />
 
-      {/* ✅ Tony Strange testimonial image */}
+      {/* ✅ Tony testimonial */}
       <div className="flex justify-center my-12 px-4">
         <Image
           src="/images/affiliate-success-tony.png"
