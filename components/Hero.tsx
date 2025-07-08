@@ -193,5 +193,3 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <div className="relative w-full max-w-none h-auto">
-            <Image
