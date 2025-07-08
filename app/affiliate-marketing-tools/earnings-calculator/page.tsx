@@ -1,5 +1,6 @@
 import ClientCalculatorPage from './ClientCalculatorPage'
 import { JsonLd } from 'react-schemaorg'
+import type { SoftwareApplication } from 'schema-dts'
 
 export const metadata = {
   title: 'Calculate Affiliate Income Potential | John Crestani',
@@ -10,8 +11,8 @@ export const metadata = {
 export default function CalculatorPage() {
   return (
     <>
-      {/* 🔧 Structured data for search & AI */}
-      <JsonLd<any>
+      {/* 🔧 Structured data injection for SEO + SGE */}
+      <JsonLd<SoftwareApplication>
         item={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
