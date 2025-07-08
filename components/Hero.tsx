@@ -189,13 +189,4 @@ export default function Hero() {
         <motion.div
           className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0 lg:items-start"
           initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-        >
-          <div className="relative w-full max-w-none h-auto">
-            <Image
-              src="/hero_man_hat.webp"
-              alt="John Crestani"
-              width={1200}
-              height={1200
+          while
