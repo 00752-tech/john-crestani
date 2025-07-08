@@ -28,40 +28,42 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ Billionaire’s Toolkit section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-3xl font-bold mb-4">The Billionaire&rsquo;s Toolkit</h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              The 2025 version of Crestani&apos;s training goes beyond affiliate marketing.
-              It&rsquo;s a plug-n-play system for monetizing anything online using high ROI paid traffic,
-              influencer outreach, and video sales letters proven to convert.
-            </p>
-            <ul className="list-disc pl-6 text-gray-300 space-y-2 text-base leading-relaxed">
-              <li>Ad templates + copywriting walkthroughs</li>
-              <li>Influencer onboarding automation</li>
-              <li>Profitable niche targeting tools</li>
-              <li>Pre-built landing page flows</li>
-              <li>Live strategy sessions & campaign audits</li>
-              <li>Exclusive affiliate network access</li>
-              <li>Behavioral targeting and retargeting logic</li>
-              <li>Mobile optimization and funnel cleanup</li>
-            </ul>
-          </div>
+      {/* ✅ Billionaire’s Toolkit section with full copy + right image */}
+<section className="container mx-auto px-4 py-16">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+    {/* Left: Feature-rich copy preserved as authored */}
+    <div className="md:w-1/2 text-white">
+      <h2 className="text-3xl font-bold mb-4">The Billionaire’s Toolkit</h2>
+      <p className="text-lg text-gray-300 leading-relaxed mb-6">
+        The 2025 version of Crestani’s training goes beyond affiliate marketing.
+        It’s a plug-n-play system for monetizing anything online using high ROI paid traffic,
+        influencer outreach, and video sales letters proven to convert.
+      </p>
+      <ul className="list-disc pl-6 text-gray-300 space-y-2 text-base leading-relaxed">
+        <li>Ad templates + copywriting walkthroughs</li>
+        <li>Influencer onboarding automation</li>
+        <li>Profitable niche targeting tools</li>
+        <li>Pre-built landing page flows</li>
+        <li>Live strategy sessions & campaign audits</li>
+        <li>Exclusive affiliate network access</li>
+        <li>Behavioral targeting and retargeting logic</li>
+        <li>Mobile optimization and funnel cleanup</li>
+      </ul>
+    </div>
 
-          <div className="md:w-1/2">
-            <Image
-              src="/billionaires-toolkit.PNG"
-              alt="Billionaire&rsquo;s Toolkit visual showing featured highlights"
-              width={480}
-              height={315}
-              className="rounded-xl shadow-2xl"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+    {/* Right: Your image placed cleanly */}
+    <div className="md:w-1/2">
+      <Image
+        src="/billionaires-toolkit.PNG"
+        alt="Billionaire’s Toolkit visual showing featured highlights"
+        width={480}
+        height={315}
+        className="rounded-xl shadow-2xl"
+        priority
+      />
+    </div>
+  </div>
+</section>
 
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicFreeTools />
