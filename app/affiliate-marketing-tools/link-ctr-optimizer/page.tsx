@@ -2,9 +2,9 @@ import ClientLinkCTROptimizer from './ClientLinkCTROptimizer'
 import { JsonLd } from 'react-schemaorg'
 
 export const metadata = {
-  title: 'Affiliate Link CTR Optimizer | Super Affiliate System Pro',
+  title: 'Free CTR Optimization Tool for Affiliate Marketers',
   description:
-    'Optimize your affiliate link click-through rates with our free calculator. Estimate CTR improvements based on link placement, anchor text, and content quality.',
+    'Increase link clicks by 200%+ with data-driven optimization. Test button colors, text variants & placements. Essential tool for higher conversions.',
 }
 
 export default function AffiliateLinkCTROptimizerPage() {
