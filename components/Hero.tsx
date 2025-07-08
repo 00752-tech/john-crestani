@@ -17,8 +17,7 @@ export default function Hero() {
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push('https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net');
-  
-  return (
+    return (
     <section
       className="min-h-screen py-1 md:py-2 lg:py-4 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
