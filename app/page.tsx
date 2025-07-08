@@ -17,7 +17,7 @@ const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), {
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me';
-  const pageTitle = 'John Crestani’s Super Affiliate System Pro 2025: Still the Best Training?';
+  const pageTitle = 'John Crestani&rsquo;s Super Affiliate System Pro 2025: Still the Best Training?';
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
