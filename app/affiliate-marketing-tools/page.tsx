@@ -1,15 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import Link from 'next/link'
+import Head from 'next/head'
 import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 import { motion } from 'framer-motion'
-
-// export const metadata = {
-//   title: 'Free Affiliate Marketing Tools & Calculators | Super Affiliate System Pro',
-//   description: 'Boost your affiliate marketing success with our suite of free tools and calculators. Estimate earnings, optimize campaigns, and make data-driven decisions.',
-// }
 
 export default function AffiliateMarketingToolsPage() {
   const tools = [
@@ -64,31 +60,54 @@ export default function AffiliateMarketingToolsPage() {
   ]
 
   const pageUrl = 'https://johncrestani.me/affiliate-marketing-tools'
-  const pageTitle = 'Free Affiliate Marketing Tools & Calculators | Super Affiliate System Pro'
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 60 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
+  const pageTitle = 'Free Affiliate Tools to Scale Faster | John Crestani'
+  const pageDesc = 'Access calculators built for affiliates: earnings, niche, CTR. Curated by John Crestani to help you earn more, optimize faster, and scale smarter.'
 
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+      </Head>
+
+      {/* 🔗 Top-level schema: CollectionPage */}
+      <JsonLd<any>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": pageTitle,
+          "url": pageUrl,
+          "description": pageDesc,
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Affiliate Marketing"
+            },
+            {
+              "@type": "Person",
+              "name": "John Crestani",
+              "sameAs": [
+                "https://linkedin.com/in/johncrestani",
+                "https://instagram.com/johncrestani",
+                "https://twitter.com/johncrestani"
+              ]
+            }
+          ],
+          "creator": {
+            "@type": "Person",
+            "name": "John Crestani"
+          },
+          "mainEntity": tools.map((tool) => ({
+            "@type": "WebPage",
+            "name": tool.name,
+            "url": `https://johncrestani.me${tool.url}`
+          })),
+          "datePublished": "2025-07-08",
+          "dateModified": "2025-07-08"
+        }}
+      />
+
+      {/* 🔗 Secondary schema: ItemList of calculators */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -111,7 +130,7 @@ export default function AffiliateMarketingToolsPage() {
           }))
         }}
       />
-      
+
       <div className="min-h-screen bg-black text-white pt-32 pb-20">
         <div className="container mx-auto px-4">
           <motion.h1
@@ -123,7 +142,7 @@ export default function AffiliateMarketingToolsPage() {
           >
             Affiliate Marketing Tools & Calculators
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,17 +152,30 @@ export default function AffiliateMarketingToolsPage() {
           >
             Boost your affiliate marketing success with our suite of free tools and calculators. Estimate earnings, optimize campaigns, and make data-driven decisions.
           </motion.p>
-          
+
           <motion.div
-            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1 }
+              }
+            }}
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           >
             {tools.map((tool) => (
-              <motion.div key={tool.name} variants={itemVariants} className="h-full">
-                <Link 
+              <motion.div key={tool.name} variants={{
+                hidden: { opacity: 0, y: 60 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5 }
+                }
+              }} className="h-full">
+                <Link
                   href={tool.url}
                   className="bg-gray-900 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition-colors group flex flex-col h-full"
                 >
@@ -175,4 +207,3 @@ export default function AffiliateMarketingToolsPage() {
     </>
   )
 }
-
