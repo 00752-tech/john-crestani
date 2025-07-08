@@ -21,13 +21,13 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen py-2 md:py-4 lg:py-8 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
+      className="min-h-screen py-1 md:py-2 lg:py-4 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
-      {/* ✅ Floating Media Logo in Top-Left */}
+      {/* ✅ Floating Media Logo */}
       <div className="absolute top-6 left-6 z-50">
         <Image
-          src="/media/entrepreneur-logo.png" // ensure the file is in your public/media directory
+          src="/media/entrepreneur-logo.png"
           alt="Featured in Entrepreneur"
           width={120}
           height={40}
@@ -187,6 +187,15 @@ export default function Hero() {
 
         {/* Right Column */}
         <motion.div
-          className="w-full md:w-1/2 relative flex justify-center items-center mt-12 md:mt-0 lg:items-start"
+          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0 lg:items-start"
           initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity:
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          <div className="relative w-full max-w-none h-auto">
+            <Image
+              src="/hero_man_hat.webp"
+              alt="John Crestani"
+              width={1200}
+              height={1200
