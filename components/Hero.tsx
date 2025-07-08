@@ -198,4 +198,8 @@ export default function Hero() {
               src="/hero_man_hat.webp"
               alt="John Crestani"
               width={1200}
-              height={1200
+              height={1200}
+              priority
+              loading="eager"
+              decoding="async"
+              sizes="(max-width: 
