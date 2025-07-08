@@ -183,4 +183,10 @@ export default function Hero() {
               height={1200}
               priority
               loading="eager"
-             
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
