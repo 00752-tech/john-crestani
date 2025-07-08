@@ -191,4 +191,11 @@ export default function Hero() {
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, ease
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          <div className="relative w-full max-w-none h-auto">
+            <Image
+              src="/hero_man_hat.webp"
+              alt="John Crestani"
+              width={1200}
+              height={1200
