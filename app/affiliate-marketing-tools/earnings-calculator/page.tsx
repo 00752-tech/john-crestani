@@ -10,7 +10,7 @@ export const metadata = {
 export default function CalculatorPage() {
   return (
     <>
-      {/* ✅ WebPage schema with mainEntity SoftwareApplication */}
+      {/* ✅ SoftwareApplication schema wrapped in WebPage */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -43,7 +43,7 @@ export default function CalculatorPage() {
         }}
       />
 
-      {/* 🧭 BreadcrumbList schema */}
+      {/* 🧭 Breadcrumb schema */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -71,7 +71,7 @@ export default function CalculatorPage() {
         }}
       />
 
-      {/* 💬 Single FAQPage schema block */}
+      {/* 💬 FAQPage schema – SINGLE BLOCK ONLY */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
