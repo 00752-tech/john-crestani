@@ -24,17 +24,7 @@ export default function Hero() {
       className="min-h-screen py-1 md:py-2 lg:py-4 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
-      {/* ✅ Floating Media Logo */}
-      <div className="absolute top-6 left-6 z-50">
-        <Image
-          src="/media/entrepreneur-logo.png"
-          alt="Featured in Entrepreneur"
-          width={120}
-          height={40}
-          className="opacity-90 drop-shadow-xl"
-          priority
-        />
-      </div>
+      {/* Floating Media Logo removed */}
 
       {/* Global styles */}
       <style jsx global>{`
