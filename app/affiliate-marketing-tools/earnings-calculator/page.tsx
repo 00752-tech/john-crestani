@@ -10,7 +10,7 @@ export const metadata = {
 export default function CalculatorPage() {
   return (
     <>
-      {/* ✅ SoftwareApplication schema wrapped in WebPage */}
+      {/* ✅ WebPage schema with mainEntity SoftwareApplication */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -43,7 +43,7 @@ export default function CalculatorPage() {
         }}
       />
 
-      {/* 🧭 Breadcrumb schema */}
+      {/* 🧭 BreadcrumbList schema */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -121,7 +121,11 @@ export default function CalculatorPage() {
         }}
       />
 
-      <ClientCalculatorPage />
+      {/* ✅ Now passing required props to prevent TypeScript error */}
+      <ClientCalculatorPage
+        pageUrlPath="/affiliate-marketing-tools/earnings-calculator"
+        backUrl="/affiliate-marketing-tools"
+      />
     </>
   )
 }
