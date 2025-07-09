@@ -4,7 +4,12 @@ import { useState } from 'react';
 import { Calculator } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function ClientCalculatorPage() {
+type Props = {
+  pageUrlPath: string;
+  backUrl: string;
+};
+
+export default function ClientCalculatorPage({ pageUrlPath, backUrl }: Props) {
   const [traffic, setTraffic] = useState<number>(1000);
   const [conversionRate, setConversionRate] = useState<number>(2);
   const [averageCommission, setAverageCommission] = useState<number>(50);
@@ -19,12 +24,12 @@ export default function ClientCalculatorPage() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto"
+      className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto mt-10"
     >
       <motion.h2
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5 }}
         className="text-2xl font-bold mb-4 flex items-center"
       >
         <Calculator className="mr-2 text-pink-500" />
@@ -77,9 +82,7 @@ export default function ClientCalculatorPage() {
         className="mt-6"
       >
         <h3 className="text-xl font-semibold mb-2">Estimated Monthly Earnings</h3>
-        <p className="text-4xl font-bold text-pink-500">
-          ${calculateEarnings().toFixed(2)}
-        </p>
+        <p className="text-4xl font-bold text-pink-500">${calculateEarnings().toFixed(2)}</p>
       </motion.div>
 
       <motion.div
@@ -89,14 +92,14 @@ export default function ClientCalculatorPage() {
         className="mt-6 text-sm text-gray-400"
       >
         <p>
-          This calculator provides an estimate based on the given inputs. Actual earnings may vary depending on various factors such as niche, product quality, and marketing strategies.
+          This calculator provides an estimate based on the inputs provided. Actual earnings may
+          vary depending on factors such as niche, product quality, and marketing strategy.
         </p>
         <p className="mt-2">
-          {`Want to learn how to achieve these numbers? Check out John Crestani's`}{" "}
-          <a href="#" className="text-pink-500 hover:underline">
-            Super Affiliate System Pro
+          Page path: <code>{pageUrlPath}</code> |{' '}
+          <a href={backUrl} className="text-pink-500 hover:underline">
+            Go back
           </a>
-          .
         </p>
       </motion.div>
     </motion.div>
