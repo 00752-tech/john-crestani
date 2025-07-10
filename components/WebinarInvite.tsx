@@ -9,7 +9,7 @@ export default function WebinarInvite() {
   const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.location.href =
-      'https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net';
+      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime';
   };
 
   const handlePlayVideo = () => setLoadEmbed(true);
