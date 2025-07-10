@@ -313,7 +313,7 @@ export default function FAQ() {
         </div>
         <div className="mt-12 text-center">
           <a
-            href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net"
+            href="https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime"
             className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 shadow-lg hover:shadow-pink-500/20"
             rel="noopener noreferrer"
           >
