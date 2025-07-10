@@ -20,25 +20,19 @@ export default function Features() {
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut",
-          }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
-        >{`The Billionaire's Toolkit: Inside Super Affiliate System Pro 2025`}</motion.h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        >
+          The Billionaire&apos;s Toolkit: Inside Super Affiliate System Pro 2025
+        </motion.h2>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Feature List */}
           <div>
             {features.map((feature, index) => (
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
@@ -65,16 +59,11 @@ export default function Features() {
               </motion.div>
             ))}
           </div>
+          {/* Image Section */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: "easeOut",
-            }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex items-center justify-center"
           >
             <Image
@@ -83,6 +72,7 @@ export default function Features() {
               width={500}
               height={500}
               className="rounded-lg shadow-2xl"
+              priority
             />
           </motion.div>
         </div>
