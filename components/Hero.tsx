@@ -108,7 +108,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Post ai-generated affiliate content in 7 min/day—no face, no tech, no guesswork. <span className="text-white font-light">Just copy, paste, and profit.</span>.
+            Launch a faceless affiliate biz in 7 min/day— <span className="text-white font-light">no camera, no guesswork, no burnout.</span>
           </p>
 
           <motion.div
