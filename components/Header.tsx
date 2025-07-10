@@ -105,7 +105,7 @@ export default function Header() {
         }
       `}</style>
 
-      <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
+      <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-1">
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
             <span
