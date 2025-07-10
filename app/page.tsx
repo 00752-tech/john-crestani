@@ -18,12 +18,12 @@ const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), {
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me';
-  const pageTitle = 'John Crestani&rsquo;s Super Affiliate System Pro 2025: Still the Best Training?';
+  const pageTitle = 'AI Marketers Club $27: John Crestani's 2025 Faceless AI System';
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free Affiliate Training & Super Affiliate System Pro | John Crestani",
+    "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
     "url": "https://johncrestani.me",
     "about": [
       {
@@ -37,7 +37,7 @@ export default function Home() {
       },
       {
         "@type": "Course",
-        "name": "Super Affiliate System Pro",
+        "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
         "provider": {
           "@type": "Organization",
           "name": "John Crestani",
@@ -57,7 +57,7 @@ export default function Home() {
       },
       {
         "@type": "Service",
-        "name": "Free Affiliate Training Webinar",
+        "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
         "description": "Instant access to John's latest affiliate method with 2025 updates. No cost. No card required.",
         "provider": {
           "@type": "Person",
@@ -74,7 +74,7 @@ export default function Home() {
     ],
     "mainEntity": {
       "@type": "Service",
-      "name": "Affiliate Marketing Training"
+      "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System"
     },
     "datePublished": "2025-07-08",
     "dateModified": "2025-07-08"
@@ -100,9 +100,8 @@ export default function Home() {
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl font-bold mb-4">The Billionaire&rsquo;s Toolkit</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              The 2025 version of Crestani&rsquo;s training goes beyond affiliate marketing.
-              It&rsquo;s a plug-n-play system for monetizing anything online using high ROI paid traffic,
-              influencer outreach, and video sales letters proven to convert.
+              <b>What if you could launch a faceless affiliate business in 7 minutes a day—without showing your face, selling to friends, or learning tech?</b> John 
+Crestani&rsquo;s AI Marketers Club is the most beginner-friendly system of 2025, built around his F.I.R. formula that uses AI to generate content, drive clicks, and earn commissions—fast. For just $27, you get the full course, a free website, and access to $821/click affiliate offers. No fluff. No burnout. Just results.
             </p>
             <ul className="list-disc pl-6 text-gray-300 space-y-2 text-base leading-relaxed">
               <li>Ad templates + copywriting walkthroughs</li>
