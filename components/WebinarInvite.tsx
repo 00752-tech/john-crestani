@@ -41,8 +41,9 @@ export default function WebinarInvite() {
                 className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
+                  {/* You can update the preview image below to a Vimeo thumbnail or your own image */}
                   <Image
-                    src="https://img.youtube.com/vi/Vh1J7csr6W4/hqdefault.jpg"
+                    src="/webinar-preview.jpg"
                     alt="Exclusive Webinar Preview"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
@@ -62,10 +63,10 @@ export default function WebinarInvite() {
               </div>
             ) : (
               <iframe
-                src="https://www.youtube.com/embed/Vh1J7csr6W4?autoplay=1"
-                title="YouTube video player"
+                src="https://player.vimeo.com/video/1003467968?muted=1&autoplay=1&title=0&byline=0&autopause=0&controls=0"
+                title="Vimeo video player"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
               ></iframe>
