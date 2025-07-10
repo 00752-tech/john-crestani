@@ -42,7 +42,7 @@ export default function WebinarInvite() {
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
-                    src="/vimeo%20video%20thumbnail%20with%20john%20crestani%20image.PNG"
+                    src="/vimeo-thumbnail-john-crestani-2025-new-ai-faceless-course.png"
                     alt="Exclusive Webinar Preview"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
@@ -62,14 +62,13 @@ export default function WebinarInvite() {
               </div>
             ) : (
               <iframe
-  src="https://player.vimeo.com/video/1003467968?autoplay=1&controls=1&title=0&byline=0&autopause=0"
-  title="Vimeo video player"
-  frameBorder="0"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowFullScreen
-  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
-></iframe>
-
+                src="https://player.vimeo.com/video/1003467968?autoplay=1&controls=1&title=0&byline=0&autopause=0"
+                title="Vimeo video player"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+              ></iframe>
             )}
           </div>
 
