@@ -62,13 +62,14 @@ export default function WebinarInvite() {
               </div>
             ) : (
               <iframe
-                src="https://player.vimeo.com/video/1003467968?muted=1&autoplay=1&title=0&byline=0&autopause=0&controls=0"
-                title="Vimeo video player"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
-              ></iframe>
+  src="https://player.vimeo.com/video/1003467968?autoplay=1&controls=1&title=0&byline=0&autopause=0"
+  title="Vimeo video player"
+  frameBorder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+></iframe>
+
             )}
           </div>
 
