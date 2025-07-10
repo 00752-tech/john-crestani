@@ -21,26 +21,23 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      {/* === SINGLE TOP BANNER ONLY === */}
-      <div
-        className="top-banner"
-        style={{
-          background: 'linear-gradient(90deg, #1a237e, #4a148c)',
-          color: 'white',
-          textAlign: 'center',
-          padding: '12px 15px',
-          fontWeight: '700',
-          fontSize: '18px',
-          position: 'relative',
-          zIndex: '100',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '8px',
-        }}
-      >
+      {/* Updated Conversion-Optimized Banner */}
+      <div className="top-banner" style={{
+        background: 'linear-gradient(90deg, #1a237e, #4a148c)',
+        color: 'white',
+        textAlign: 'center',
+        padding: '12px 15px',
+        fontWeight: '700',
+        fontSize: '18px',
+        position: 'relative',
+        zIndex: '100',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '8px'
+      }}>
         <span>🔥</span>
         <span style={{ color: '#ffeb3b' }}>NEW 2025 LAUNCH</span>
         <span>:</span>
@@ -49,29 +46,16 @@ export default function Header() {
         <span>•</span>
         <span style={{ color: '#76ff03' }}>60-DAY GUARANTEE</span>
         <span>•</span>
-        <button
-          type="button"
-          style={{
-            background: '#ff4081',
-            color: 'white',
-            padding: '4px 12px',
-            borderRadius: '20px',
-            marginLeft: '10px',
-            fontWeight: '800',
-            animation: 'pulse 2s infinite',
-            border: 'none',
-            cursor: 'pointer',
-            outline: 'none',
-            boxShadow: 'none',
-          }}
-          onClick={() => {
-            window.location.href =
-              'https://84c8dn52g82pdn1i9dhx9ody5g.hop.clickbank.net/?&traffic_source=hero_banner_cta';
-          }}
-          aria-label="Grab Discount"
-        >
-          GRAB DISCOUNT →
-        </button>
+        <a href="#cta" style={{
+          background: '#ff4081',
+          color: 'white',
+          padding: '4px 12px',
+          borderRadius: '20px',
+          marginLeft: '10px',
+          textDecoration: 'none',
+          fontWeight: '800',
+          animation: 'pulse 2s infinite'
+        }}>GRAB DISCOUNT →</a>
       </div>
 
       <style jsx>{`
@@ -80,14 +64,12 @@ export default function Header() {
           70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(255, 64, 129, 0); }
           100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
         }
-        .top-banner button {
+        .top-banner a {
           transition: all 0.3s ease;
         }
-        .top-banner button:hover,
-        .top-banner button:focus {
-          background: #ff4081 !important;
-          transform: none;
-          box-shadow: none;
+        .top-banner a:hover {
+          background: #ff1a6e !important;
+          transform: translateY(-2px);
         }
         @media (max-width: 768px) {
           .top-banner {
@@ -102,7 +84,6 @@ export default function Header() {
         }
       `}</style>
 
-      {/* NAVIGATION */}
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
