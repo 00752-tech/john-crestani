@@ -10,7 +10,6 @@ import Footer from '@/components/Footer';
 import Stats from '@/components/Stats';
 import WebinarInvite from '@/components/WebinarInvite';
 import RelatedTools from '@/components/RelatedTools';
-import { motion } from "framer-motion";
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false });
@@ -93,50 +92,20 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ New AI Marketers Club Section (replaces Billionaire’s Toolkit, no image) */}
+      {/* ✅ New AI Marketers Club Section (no animation, no image) */}
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col items-center justify-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500 text-center"
-          >
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500 text-center">
             Tomorrow’s Income, Today: Inside the AI Marketers Club
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-              delay: 0.2,
-            }}
-            className="text-lg text-gray-300 mb-6 text-center max-w-2xl"
-          >
+          </h2>
+          <p className="text-lg text-gray-300 mb-6 text-center max-w-2xl">
             This isn’t just another affiliate course—it’s a plug-and-play system built for 2025’s creator economy. The AI Marketers Club gives you the tools, prompts, and strategy to launch faceless content that earns—without burnout or complexity.
-          </motion.p>
+          </p>
           <ul className="list-disc list-inside text-gray-300 mb-6 max-w-xl mx-auto space-y-2 text-base leading-relaxed">
-            {[
-              "F.I.R. Prompting Formula for viral-style content",
-              "7-Minute Action Checklist for daily monetized posts",
-              "Free drag-and-drop website with SSL + domain",
-              "Access to $821/click affiliate offers with 75% payouts",
-            ].map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: 0.2 + index * 0.1,
-                }}
-                className="text-gray-300 mb-2"
-              >
-                {item}
-              </motion.li>
-            ))}
+            <li>F.I.R. Prompting Formula for viral-style content</li>
+            <li>7-Minute Action Checklist for daily monetized posts</li>
+            <li>Free drag-and-drop website with SSL + domain</li>
+            <li>Access to $821/click affiliate offers with 75% payouts</li>
           </ul>
         </div>
       </section>
