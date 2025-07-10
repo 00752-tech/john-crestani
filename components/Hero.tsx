@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen pt-4 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
+      className="min-h-screen pt-0 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
       {/* Floating Media Logo removed */}
