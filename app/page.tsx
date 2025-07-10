@@ -18,7 +18,7 @@ const DynamicFeaturedTool = dynamic(() => import('@/components/FeaturedTool'), {
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me';
-  const pageTitle = 'AI Marketers Club $27: John Crestani's 2025 Faceless AI System';
+  const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
   const schema = {
     "@context": "https://schema.org",
