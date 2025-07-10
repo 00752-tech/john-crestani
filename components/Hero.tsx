@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen py-1 md:py-2 lg:py-4 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
+      className="min-h-screen pt-4 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
       {/* Floating Media Logo removed */}
@@ -110,7 +110,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-         Post AI-generated affiliate content in 7 min/day—no face, no tech, no guesswork. <span className="text-white font-light">Just copy, paste, and profit.</span>.
+            Post AI-generated affiliate content in 7 min/day—no face, no tech, no guesswork. <span className="text-white font-light">Just copy, paste, and profit.</span>.
           </p>
 
           <motion.div
