@@ -21,11 +21,69 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      <div className="pulsing-banner text-white py-2 text-center">
-        <p className="text-[16px] font-semibold text-white">
-          Did You Know? 71% of Affiliate Failures Are Preventable. Learn How in 2025
-        </p>
+      {/* Updated Conversion-Optimized Banner */}
+      <div className="top-banner" style={{
+        background: 'linear-gradient(90deg, #1a237e, #4a148c)',
+        color: 'white',
+        textAlign: 'center',
+        padding: '12px 15px',
+        fontWeight: '700',
+        fontSize: '18px',
+        position: 'relative',
+        zIndex: '100',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '8px'
+      }}>
+        <span>🔥</span>
+        <span style={{ color: '#ffeb3b' }}>NEW 2025 LAUNCH</span>
+        <span>:</span>
+        <span style={{ borderBottom: '2px dashed #ff4081' }}>$27 EARLY BIRD</span>
+        <span>+ FREE WEBSITE BONUS ($297 VALUE)</span>
+        <span>•</span>
+        <span style={{ color: '#76ff03' }}>60-DAY GUARANTEE</span>
+        <span>•</span>
+        <a href="#cta" style={{
+          background: '#ff4081',
+          color: 'white',
+          padding: '4px 12px',
+          borderRadius: '20px',
+          marginLeft: '10px',
+          textDecoration: 'none',
+          fontWeight: '800',
+          animation: 'pulse 2s infinite'
+        }}>GRAB DISCOUNT →</a>
       </div>
+
+      <style jsx>{`
+        @keyframes pulse {
+          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.7); }
+          70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(255, 64, 129, 0); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
+        }
+        .top-banner a {
+          transition: all 0.3s ease;
+        }
+        .top-banner a:hover {
+          background: #ff1a6e !important;
+          transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+          .top-banner {
+            font-size: 14px;
+            padding: 8px 10px;
+            gap: 4px;
+          }
+          .top-banner span:nth-child(3),
+          .top-banner span:nth-child(6) {
+            display: none;
+          }
+        }
+      `}</style>
+
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
