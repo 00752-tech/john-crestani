@@ -40,32 +40,49 @@ export default function About() {
                 }}
                 className="text-2xl font-semibold mb-4 text-pink-500"
               >
-                Who is John Crestani?
-              </motion.h3>
+                <motion.h3
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, ease: "easeInOut" }}
+  className="text-2xl md:text-3xl font-semibold mb-4 text-white"
+>
+  The $27 Shortcut to Faceless Affiliate Income
+</motion.h3>
 
-              <motion.p
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: 0.2,
-                }}
-                className="text-gray-300 mb-4"
-              >
-                John Crestani is a renowned affiliate marketing expert who has
-                been helping people achieve financial freedom since 2011. His
-                journey from a college dropout to a multi-millionaire
-                entrepreneur has inspired thousands.
-                <br /><br />
-                John Crestani&apos;s Super Affiliate System Pro (2025) is one of 
-                the most talked-about affiliate marketing courses-but does it 
-                still work? With a 71% industry failure rate, his &apos;6-Figure 
-                Affiliate Blueprint&apos; claims to help beginners avoid costly 
-                mistakes. In this review, we analyze whether his training is 
-                worth it in 2025.
-              </motion.p>
-            </div>
+<motion.p
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.5,
+    ease: "easeInOut",
+    delay: 0.2,
+  }}
+  className="text-gray-300 mb-4"
+>
+  <b>Who’s Behind This?</b> John Crestani. 12,000+ students. $20M+ in affiliate payouts. And now? A brand-new system for 2025 that’s built for speed, simplicity, and scale.
+  <br /><br />
+  <b>AI Marketers Club</b> is his latest creation—a 3-hour crash course that shows you how to use AI to post faceless content that gets clicks, builds momentum, and earns commissions… in just 7 minutes a day.
+</motion.p>
+
+{/* Bullet Pointed List */}
+<ul className="list-disc pl-6 space-y-2 text-gray-200 mb-6">
+  <li>
+    <span className="font-semibold text-white">No Face Needed:</span> Stay anonymous while earning commissions.
+  </li>
+  <li>
+    <span className="font-semibold text-white">AI Does the Heavy Lifting:</span> Let smart tools create, post, and optimize your content.
+  </li>
+  <li>
+    <span className="font-semibold text-white">7 Minutes a Day:</span> Perfect for busy schedules—just copy, paste, and profit.
+  </li>
+  <li>
+    <span className="font-semibold text-white">Beginner Friendly:</span> No tech skills or experience required.
+  </li>
+  <li>
+    <span className="font-semibold text-white">$27 Launch Price:</span> Get in before the price jumps to $297!
+  </li>
+</ul>
+
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -77,13 +94,7 @@ export default function About() {
               }}
               className="w-full flex justify-center pt-16"
             >
-              <Image
-                src="https://www.gojctraining.com/hosted/images/e4/ea2c8c40e945b3958bac129f6e43be/johnnewimg94.png"
-                alt="John Crestani Success"
-                width={500}
-                height={300}
-                className="rounded-lg shadow-md object-cover border"
-              />
+              
             </motion.div>
           </motion.div>
 
