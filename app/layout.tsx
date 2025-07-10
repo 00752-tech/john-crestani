@@ -7,13 +7,13 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Affiliate Failure Fix 2025: John Crestani's 72H Offer",
+  title: "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
   description:
-    "Fix the 71% failure rate! John Crestani's updated 2025 method reveals the 'Million-Dollar Matrix'. Free access ending. Start for free. No credit card.",
+    "New 2025 AI affiliate system! Create faceless content in 7 min/day with John Crestani's F.I.R. formula. $27 gets course + 8 bonuses. 60-day guarantee.",
   openGraph: {
-    title: "Affiliate Failure Fix 2025",
+    title: "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
     description:
-      "Fix the 71% failure rate with John Crestani's Million-Dollar Matrix. Start free today.",
+      "New 2025 AI affiliate system! Create faceless content in 7 min/day with John Crestani's F.I.R. formula. $27 gets course + 8 bonuses. 60-day guarantee.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
