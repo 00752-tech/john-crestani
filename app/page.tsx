@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Image from 'next/image';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
@@ -11,6 +10,7 @@ import Footer from '@/components/Footer';
 import Stats from '@/components/Stats';
 import WebinarInvite from '@/components/WebinarInvite';
 import RelatedTools from '@/components/RelatedTools';
+import { motion } from "framer-motion";
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 const DynamicFreeTools = dynamic(() => import('@/components/FreeTools'), { ssr: false });
@@ -93,39 +93,51 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* ✅ Billionaire’s Toolkit section with full copy + right image */}
+      {/* ✅ New AI Marketers Club Section (replaces Billionaire’s Toolkit, no image) */}
       <section className="container mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left: Feature-rich copy preserved as authored */}
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-3xl font-bold mb-4">The Billionaire&rsquo;s Toolkit</h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              <b>What if you could launch a faceless affiliate business in 7 minutes a day—without showing your face, selling to friends, or learning tech?</b> John 
-Crestani&rsquo;s AI Marketers Club is the most beginner-friendly system of 2025, built around his F.I.R. formula that uses AI to generate content, drive clicks, and earn commissions—fast. For just $27, you get the full course, a free website, and access to $821/click affiliate offers. No fluff. No burnout. Just results.
-            </p>
-            <ul className="list-disc pl-6 text-gray-300 space-y-2 text-base leading-relaxed">
-              <li>Ad templates + copywriting walkthroughs</li>
-              <li>Influencer onboarding automation</li>
-              <li>Profitable niche targeting tools</li>
-              <li>Pre-built landing page flows</li>
-              <li>Live strategy sessions & campaign audits</li>
-              <li>Exclusive affiliate network access</li>
-              <li>Behavioral targeting and retargeting logic</li>
-              <li>Mobile optimization and funnel cleanup</li>
-            </ul>
-          </div>
-
-          {/* Right: Your image placed cleanly */}
-          <div className="md:w-1/2">
-            <Image
-              src="/billionaires-toolkit.PNG"
-              alt="Billionaire&rsquo;s Toolkit visual showing featured highlights"
-              width={480}
-              height={315}
-              className="rounded-xl shadow-2xl"
-              priority
-            />
-          </div>
+        <div className="flex flex-col items-center justify-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500 text-center"
+          >
+            Tomorrow’s Income, Today: Inside the AI Marketers Club
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+              delay: 0.2,
+            }}
+            className="text-lg text-gray-300 mb-6 text-center max-w-2xl"
+          >
+            This isn’t just another affiliate course—it’s a plug-and-play system built for 2025’s creator economy. The AI Marketers Club gives you the tools, prompts, and strategy to launch faceless content that earns—without burnout or complexity.
+          </motion.p>
+          <ul className="list-disc list-inside text-gray-300 mb-6 max-w-xl mx-auto space-y-2 text-base leading-relaxed">
+            {[
+              "F.I.R. Prompting Formula for viral-style content",
+              "7-Minute Action Checklist for daily monetized posts",
+              "Free drag-and-drop website with SSL + domain",
+              "Access to $821/click affiliate offers with 75% payouts",
+            ].map((item, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: 0.2 + index * 0.1,
+                }}
+                className="text-gray-300 mb-2"
+              >
+                {item}
+              </motion.li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -137,13 +149,13 @@ Crestani&rsquo;s AI Marketers Club is the most beginner-friendly system of 2025,
 
       {/* ✅ Tony testimonial */}
       <div className="flex justify-center my-12 px-4">
-        <Image
+        <img
           src="/images/affiliate-success-tony.png"
           alt="Tony Strange affiliate testimonial—home upgrade and poolside earnings"
           width={640}
           height={360}
           className="rounded-xl shadow-xl"
-          priority
+          loading="eager"
         />
       </div>
 
