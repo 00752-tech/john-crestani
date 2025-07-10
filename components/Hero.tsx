@@ -11,12 +11,12 @@ export default function Hero() {
 
   const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push('https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net');
+    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
   };
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push('https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net');
+    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
   };
 
   return (
