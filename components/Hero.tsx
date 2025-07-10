@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      {/* Updated Conversion-Optimized Banner with Hidden Affiliate Link */}
+      {/* === SINGLE TOP BANNER ONLY === */}
       <div
         className="top-banner"
         style={{
@@ -85,7 +85,6 @@ export default function Header() {
         }
         .top-banner button:hover,
         .top-banner button:focus {
-          /* No hover effect, no underline, no color change, no pointer events change */
           background: #ff4081 !important;
           transform: none;
           box-shadow: none;
@@ -103,6 +102,7 @@ export default function Header() {
         }
       `}</style>
 
+      {/* NAVIGATION */}
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
