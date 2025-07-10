@@ -78,7 +78,7 @@ export default function Features() {
             className="flex items-center justify-center"
           >
             <Image
-              src="https://www.gojctraining.com/hosted/images/c2/9d7b3017b344e3acf9aea3412028cd/johnnewimg5.png"
+              src="/billionaires-toolkit.PNG"
               alt="Super Affiliate System Pro Features"
               width={500}
               height={500}
