@@ -98,7 +98,7 @@ export default function Hero() {
           <div className="flex flex-col items-start mb-6">
             <div className="flex items-center mb-2">
               <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full">
-                ⚠️ FINAL 24 HOURS: Get In for $27 (Reg. $297) + Free Website + $821/Click Offers
+                🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
               </span>
             </div>
           </div>
