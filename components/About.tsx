@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -140,9 +139,9 @@ export default function About() {
                       delay: 0.2 + index * 0.1,
                     }}
                     className="text-gray-300 mb-2"
-                  >
-                    {item}
-                  </motion.li>
+                    // Dangerously set inner HTML to allow <b> tags in bullet points
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  />
                 ))}
               </ul>
             </div>
@@ -157,7 +156,7 @@ export default function About() {
               }}
               className="w-full flex justify-center"
             >
-              
+              {/* You can place an image or CTA here if needed */}
             </motion.div>
           </motion.div>
         </div>
