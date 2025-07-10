@@ -1,133 +1,101 @@
 "use client";
-import Image from "next/image";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Kai Blackwood",
-      role: "Digital Marketing Strategist",
-      image:
-        "https://www.gojctraining.com/hosted/images/e4/a1f72997a74bf99e7054834d42b2d0/johnnewimg108.png",
+      name: "Jordan M.",
+      role: "Former Uber Driver Turned Affiliate",
+      badge: "Beta Tester",
       quote:
-        "The 2025 update to Super Affiliate System Pro has been a game-changer. The AI integration alone has doubled my conversions!",
+        "I never thought I could make money online without showing my face. This system made it stupid simple. I posted my first AI video in 10 minutes and got my first click the next day.",
+      rating: 5,
     },
     {
-      name: "Zara Patel",
-      role: "E-commerce Innovation Director",
-      image:
-        "https://www.gojctraining.com/hosted/images/97/dc375d0ce94c77a0c5ba742c58050c/johnnewimg111.png",
+      name: "Samantha R.",
+      role: "Stay-at-Home Mom & First-Time Marketer",
+      badge: "Verified Buyer",
       quote:
-        "I was skeptical about an 8-year-old system, but the continuous updates have kept it more relevant than ever. It's my secret weapon in 2025.",
+        "I’ve tried other courses before and always felt overwhelmed. This one broke it down so clearly. I finally feel like I know what I’m doing—and I’m only 3 days in.",
+      rating: 5,
     },
     {
-      name: "Phoenix Rivera",
-      role: "Blockchain Affiliate Specialist",
-      image:
-        "https://www.gojctraining.com/hosted/images/e4/a1f72997a74bf99e7054834d42b2d0/johnnewimg108.png",
+      name: "Derek L.",
+      role: "Corporate Escapee, Now Full-Time Creator",
+      badge: "Early Access Member",
       quote:
-        "John's insights into blockchain affiliate marketing opened up a whole new revenue stream for me. This course is worth its weight in Bitcoin!",
+        "I was burned out from the 9–5 grind. The AI Marketers Club gave me a way to build something real—without being glued to my screen or chasing trends.",
+      rating: 4.8,
     },
   ];
+
+  // Inject JSON-LD schema
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "AI Marketers Club",
+      description:
+        "A faceless affiliate marketing course by John Crestani that teaches how to use AI to create monetized content in 7 minutes a day.",
+      brand: {
+        "@type": "Person",
+        name: "John Crestani",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: testimonials.length,
+      },
+      review: testimonials.map((t) => ({
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: t.rating,
+          bestRating: "5",
+        },
+        author: {
+          "@type": "Person",
+          name: t.name,
+        },
+        reviewBody: t.quote,
+      })),
+    });
+    document.head.appendChild(script);
+  }, []);
 
   return (
     <section id="testimonials" className="py-20 pt-32 bg-gray-900 text-white">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, x: 80 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
         >
-          Success Stories from 2025
+          Real People. Real Results.
         </motion.h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((t, index) => (
             <motion.article
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.3,
-                ease: "easeInOut",
-              }}
               key={index}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="bg-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             >
-              <div className="flex items-center mb-4">
-                <motion.div
-                  initial={{ opacity: 0, x: -80 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    ease: "easeInOut",
-                    delay: 0.3,
-                  }}
-                >
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={50}
-                    height={50}
-                    className="rounded-full mr-4"
-                  />
-                </motion.div>
-                <div>
-                  <motion.h3
-                    initial={{ opacity: 0, x: 80 }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeInOut",
-                      delay: 0.2,
-                    }}
-                    className="font-semibold text-pink-500"
-                  >
-                    {testimonial.name}
-                  </motion.h3>
-                  <motion.p
-                    initial={{ opacity: 0, x: 80 }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeInOut",
-                      delay: 0.3,
-                    }}
-                    className="text-gray-400"
-                  >
-                    {testimonial.role}
-                  </motion.p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-pink-500 font-semibold text-lg">
+                  {t.name}
+                  <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded-full">
+                    {t.badge}
+                  </span>
+                </h3>
+                <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
-              <motion.p
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: 0.3,
-                }}
-                className="text-gray-300 italic"
-              >{`"${testimonial.quote}"`}</motion.p>
+              <p className="text-gray-300 italic">"{t.quote}"</p>
             </motion.article>
           ))}
         </div>
