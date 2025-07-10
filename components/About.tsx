@@ -35,7 +35,7 @@ export default function About() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500"
               >
-                The $27 Shortcut to Faceless Affiliate Income
+                The $27 Shortcut to Faceless Affiliate Income<br></br>
               </motion.h3>
 
               <motion.p
@@ -108,7 +108,7 @@ export default function About() {
                 }}
                 className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500"
               >
-                Tomorrow’s Income, Today: Inside the AI Marketers Club
+                Tomorrow’s Income, Today: Inside the AI Marketers Club<br></br>
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 80 }}
