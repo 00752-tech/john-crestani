@@ -125,10 +125,10 @@ export default function About() {
               </motion.p>
               <ul className="list-disc list-inside text-gray-300 mb-6">
                 {[
-                  "F.I.R. Prompting Formula for viral-style content",
-                  "7-Minute Action Checklist for daily monetized posts",
-                  "Free drag-and-drop website with SSL + domain",
-                  "Access to $821/click affiliate offers with 75% payouts",
+                  "<b>F.I.R. Prompting Formula</b> for viral-style content",
+                  "<b>7-Minute Action Checklist</b> for daily monetized posts",
+                  "<b>Free drag-and-drop website</b> with SSL + domain",
+                  "<b>Access to $821/click affiliate offers</b> with 75% payouts",
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -157,13 +157,7 @@ export default function About() {
               }}
               className="w-full flex justify-center"
             >
-              <Image
-                src="https://www.gojctraining.com/hosted/images/61/90ba29392e464e86c96fdf01744823/johnnewimg32.png"
-                alt="Super Affiliate System Pro Dashboard"
-                width={500}
-                height={300}
-                className="rounded-lg shadow-md"
-              />
+              
             </motion.div>
           </motion.div>
         </div>
