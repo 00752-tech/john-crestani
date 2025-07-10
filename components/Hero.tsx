@@ -1,181 +1,206 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Award } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
-export default function Hero() {
-  const router = useRouter();
+export default function Header() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
-  };
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-  const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
-  };
+  const freeTools = [
+    { name: "Affiliate Earnings Calculator", url: "/affiliate-marketing-tools/earnings-calculator" },
+    { name: "ROAS Calculator", url: "/advertising-tools/roas-calculator" },
+    { name: "Dropshipping Profit Calculator", url: "/ecommerce-tools/dropshipping-profit-calculator" },
+    { name: "Influencer Earnings Calculator", url: "/influencer-marketing-tools/earnings-calculator" },
+    { name: "All Free Tools", url: "/free-tools" },
+  ];
 
   return (
-    <section
-      className="min-h-screen pt-4 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
-      style={{ minHeight: '100vh' }}
-    >
-      {/* Floating Media Logo removed */}
+    <header className="sticky top-0 w-full z-50">
+      {/* Updated Conversion-Optimized Banner with Hidden Affiliate Link */}
+      <div
+        className="top-banner"
+        style={{
+          background: 'linear-gradient(90deg, #1a237e, #4a148c)',
+          color: 'white',
+          textAlign: 'center',
+          padding: '12px 15px',
+          fontWeight: '700',
+          fontSize: '18px',
+          position: 'relative',
+          zIndex: '100',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '8px',
+        }}
+      >
+        <span>🔥</span>
+        <span style={{ color: '#ffeb3b' }}>NEW 2025 LAUNCH</span>
+        <span>:</span>
+        <span style={{ borderBottom: '2px dashed #ff4081' }}>$27 EARLY BIRD</span>
+        <span>+ FREE WEBSITE BONUS ($297 VALUE)</span>
+        <span>•</span>
+        <span style={{ color: '#76ff03' }}>60-DAY GUARANTEE</span>
+        <span>•</span>
+        <button
+          type="button"
+          style={{
+            background: '#ff4081',
+            color: 'white',
+            padding: '4px 12px',
+            borderRadius: '20px',
+            marginLeft: '10px',
+            fontWeight: '800',
+            animation: 'pulse 2s infinite',
+            border: 'none',
+            cursor: 'pointer',
+            outline: 'none',
+            boxShadow: 'none',
+          }}
+          onClick={() => {
+            window.location.href =
+              'https://84c8dn52g82pdn1i9dhx9ody5g.hop.clickbank.net/?&traffic_source=hero_banner_cta';
+          }}
+          aria-label="Grab Discount"
+        >
+          GRAB DISCOUNT →
+        </button>
+      </div>
 
-      {/* Global styles */}
-      <style jsx global>{`
-        @font-face {
-          font-family: 'Neue Haas Unica W1G';
-          src: url('/fonts/NeueHaasUnicaW1G-Light.woff2') format('woff2');
-          font-weight: 300;
-          font-style: normal;
-          font-display: swap;
+      <style jsx>{`
+        @keyframes pulse {
+          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.7); }
+          70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(255, 64, 129, 0); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
         }
-
-        body {
-          font-family: 'Neue Haas Unica W1G', sans-serif;
-        }
-
-        .button-base {
-          padding: 12px 24px;
-          border-radius: 8px;
-          font-size: 0.9rem;
-          font-weight: 400;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
+        .top-banner button {
           transition: all 0.3s ease;
-          height: 60px;
-          text-transform: uppercase;
-          white-space: nowrap;
-          letter-spacing: 0.5px;
-          cursor: pointer;
-          width: 100%;
-          max-width: 380px;
         }
-
-        .blue-gradient-button {
-          background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
-          color: white;
+        .top-banner button:hover,
+        .top-banner button:focus {
+          /* No hover effect, no underline, no color change, no pointer events change */
+          background: #ff4081 !important;
+          transform: none;
+          box-shadow: none;
         }
-
-        .blue-gradient-button:hover {
-          background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
-          transform: scale(1.05);
-        }
-
-        .transparent-button {
-          border: 2px solid white;
-          background-color: transparent;
-          color: white;
-        }
-
-        .transparent-button:hover {
-          background-color: white;
-          color: black;
-        }
-
-        @media (max-width: 640px) {
-          h1 {
-            font-size: 2.25rem !important;
-            line-height: 1.2 !important;
+        @media (max-width: 768px) {
+          .top-banner {
+            font-size: 14px;
+            padding: 8px 10px;
+            gap: 4px;
+          }
+          .top-banner span:nth-child(3),
+          .top-banner span:nth-child(6) {
+            display: none;
           }
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 px-4 sm:px-6 md:px-8 xl:px-8">
-        {/* Left Column */}
-        <motion.div
-          className="w-full md:w-1/2 mb-12 md:mb-0"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-        >
-          <div className="flex flex-col items-start mb-6">
-            <div className="flex items-center mb-2">
-                            <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full">
-                ⚠️ FINAL 24 HOURS: Get In for $27 (Reg. $297) + Free Website + $821/Click Offers
-              </span>
-            </div>
-          </div>
+      <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-4">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <Link href="/" className="flex items-center">
+            <span
+              className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tighter text-gray-400 opacity-25 mr-3"
+              style={{ fontFamily: "'Arial', sans-serif" }}
+            >
+              JC
+            </span>
+            <span className="sr-only">John Crestani</span>
+          </Link>
 
-          <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            $27 ai system revealed: John Crestani&apos;s 2025 <span className="text-gray-400">faceless formula</span> 
-          </h1>
+          <button className="lg:hidden" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Post AI-generated affiliate content in 7 min/day—no face, no tech, no guesswork. <span className="text-white font-light">Just copy, paste, and profit.</span>.
-          </p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-          >
-            <div className="flex flex-col items-center">
+          <ul className="hidden lg:flex space-x-6 items-center">
+            {["about", "features", "testimonials", "faq"].map((section) => (
+              <li key={section}>
+                <Link
+                  href={`/#${section}`}
+                  className="hover:text-pink-500 transition duration-300"
+                  scroll={true}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </Link>
+              </li>
+            ))}
+            <li className="relative">
               <button
-                className="button-base transparent-button"
-                onClick={handleUnlockBlueprint}
+                onClick={toggleDropdown}
+                className="flex items-center hover:text-pink-500 transition duration-300"
               >
-                YES! I WANT IN FOR $27
+                Free Tools
+                <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-
-              <div className="mt-3 flex items-center space-x-2">
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.214 3.726a1 1 0 00.95.69h3.925c.969 0 1.371 1.24.588 1.81l-3.177 2.31a1 1 0 00-.364 1.118l1.214 3.726c.3.921-.755 1.688-1.54 1.118l-3.177-2.31a1 1 0 00-1.175 0l-3.177 2.31c-.784.57-1.838-.197-1.539-1.118l1.214-3.726a1 1 0 00-.364-1.118L2.372 9.153c-.784-.57-.38-1.81.588-1.81h3.925a1 1 0 00.95-.69l1.214-3.726z" />
-                    </svg>
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 py-2 w-64 bg-gray-900 rounded-md shadow-xl z-20">
+                  {freeTools.map((tool) => (
+                    <Link
+                      key={tool.name}
+                      href={tool.url}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {tool.name}
+                    </Link>
                   ))}
                 </div>
-                <span className="text-sm text-gray-400 tracking-tight">Trusted by 2,137 Early Adopters | 4.9/5 Rating | 60-Day Guarantee</span>
-              </div>
-            </div>
+              )}
+            </li>
+          </ul>
 
-            <div className="flex flex-col items-center">
-              <button
-                className="button-base blue-gradient-button group"
-                onClick={handleRevealSecrets}
-              >
-                SHOW ME THE SYSTEM
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </button>
-              <span className="text-xs sm:text-sm text-gray-400 mt-2 tracking-tight">
-                Free: 7-Minute Action Checklist + Viral Content Generator + Affiliate Tracker
-              </span>
+          {isMobileMenuOpen && (
+            <div className="lg:hidden absolute top-full left-0 right-0 bg-black bg-opacity-90 backdrop-blur-md">
+              <ul className="flex flex-col py-4">
+                {["about", "features", "testimonials", "faq"].map((section) => (
+                  <li key={section}>
+                    <Link
+                      href={`/#${section}`}
+                      className="block px-4 py-2 hover:text-pink-500 transition duration-300"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <button
+                    onClick={toggleDropdown}
+                    className="w-full text-left px-4 py-2 flex items-center justify-between hover:text-pink-500 transition duration-300"
+                  >
+                    Free Tools
+                    <ChevronDown className="ml-1 w-4 h-4" />
+                  </button>
+                  {isDropdownOpen && (
+                    <div className="bg-gray-900">
+                      {freeTools.map((tool) => (
+                        <Link
+                          key={tool.name}
+                          href={tool.url}
+                          className="block px-8 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                          onClick={() => {
+                            setIsDropdownOpen(false);
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          {tool.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              </ul>
             </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Right Column */}
-        <motion.div
-          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0 lg:items-start"
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-        >
-          <div className="relative w-full max-w-none h-auto">
-            <Image
-              src="/hero_man_hat.webp"
-              alt="John Crestani"
-              width={1200}
-              height={1200}
-              priority
-              loading="eager"
-            />
-          </div>
-        </motion.div>
-      </div>
-    </section>
+          )}
+        </div>
+      </nav>
+    </header>
   );
 }
