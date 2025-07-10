@@ -106,7 +106,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            $27 AI System Revealed: John Crestani&apos;s 2025<span className="text-gray-400">Faceless Formula</span> 
+            $27 AI System Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span> 
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
@@ -136,7 +136,7 @@ export default function Hero() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-gray-400 tracking-tight">Trusted by 2,137 Early Adopters | 4.9/5 Rating</span>
+                <span className="text-sm text-gray-400 tracking-tight">Trusted by 2,137 Early Adopters | 4.9/5 Rating | 60-Day Guarantee</span>
               </div>
             </div>
 
