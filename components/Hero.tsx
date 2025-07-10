@@ -100,17 +100,17 @@ export default function Hero() {
             <div className="flex items-center mb-2">
               <Award className="h-6 w-6 mr-2 text-yellow-400" />
               <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full">
-                ⚠️ Final 72H to Access 2025&apos;s #1 Affiliate Method (71% Failure Fix)
+                ⚠️ FINAL 24 HOURS: Get In for $27 (Reg. $297) + Free Website + $821/Click Offers
               </span>
             </div>
           </div>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            John Crestani&apos;s <span className="text-gray-400">Super Affiliate System Pro 2025</span> – Still the Best Training?
+            $27 AI System Revealed: John Crestani&apos;s 2025<span className="text-gray-400">Faceless Formula</span> 
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
-            Why 71% of affiliate marketers fail <span className="text-white font-light">(And how John Crestani&apos;s 2025 method beats the odds)</span>.
+         Post AI-generated affiliate content in 7 min/day—no face, no tech, no guesswork. <span className="text-white font-light">Just copy, paste, and profit.</span>.
           </p>
 
           <motion.div
@@ -125,7 +125,7 @@ export default function Hero() {
                 className="button-base transparent-button"
                 onClick={handleUnlockBlueprint}
               >
-                Earn More Faster
+                YES! I WANT IN FOR $27
               </button>
 
               <div className="mt-3 flex items-center space-x-2">
@@ -136,7 +136,7 @@ export default function Hero() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-gray-400 tracking-tight">Rated 4.9/5 by over 12,378 affiliates</span>
+                <span className="text-sm text-gray-400 tracking-tight">Trusted by 2,137 Early Adopters | 4.9/5 Rating</span>
               </div>
             </div>
 
@@ -145,13 +145,13 @@ export default function Hero() {
                 className="button-base blue-gradient-button group"
                 onClick={handleRevealSecrets}
               >
-                Free: Unlock Affiliate Secrets
+                SHOW ME THE SYSTEM
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
               <span className="text-xs sm:text-sm text-gray-400 mt-2 tracking-tight">
-                Start for free. No credit card required.
+                Free: 7-Minute Action Checklist + Viral Content Generator + Affiliate Tracker
               </span>
             </div>
           </motion.div>
