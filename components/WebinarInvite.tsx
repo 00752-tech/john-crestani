@@ -41,9 +41,8 @@ export default function WebinarInvite() {
                 className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
-                  {/* You can update the preview image below to a Vimeo thumbnail or your own image */}
                   <Image
-                    src="/webinar-preview.jpg"
+                    src="/vimeo%20video%20thumbnail%20with%20john%20crestani%20image.PNG"
                     alt="Exclusive Webinar Preview"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
