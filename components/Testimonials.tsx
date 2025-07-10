@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 
 export default function Testimonials() {
   const testimonials = [
@@ -69,21 +68,13 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 pt-32 bg-gray-900 text-white">
       <div className="container mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="text-3xl font-bold mb-12 text-center gradient-text"
-        >
+        <h2 className="text-3xl font-bold mb-12 text-center gradient-text">
           Real People. Real Results.
-        </motion.h2>
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <motion.article
+            <article
               key={index}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="bg-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             >
               <div className="mb-4">
@@ -96,7 +87,7 @@ export default function Testimonials() {
                 <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
               <p className="text-gray-300 italic">"{t.quote}"</p>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>
