@@ -15,7 +15,7 @@ export default function About() {
           }}
           className="text-3xl font-bold mb-12 text-center gradient-text"
         >
-          Super Affiliate System Pro: Where Dreams Meet Digital Dollars
+          Why This Faceless System Is Blowing Up in 2025
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -100,55 +100,52 @@ export default function About() {
           >
             <div>
               <motion.h3
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                  delay: 0.2,
-                }}
-                className="text-2xl font-semibold mb-4 text-pink-500"
-              >
-                Tomorrow&apos;s Wealth, Today: Exploring Super Affiliate System Pro 2025
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                  delay: 0.2,
-                }}
-                className="text-gray-300 mb-4"
-              >
-                The Super Affiliate System Pro has been continuously updated
-                since its inception in 2017. The 2025 version incorporates
-                cutting-edge strategies for the current digital ecosystem,
-                including:
-              </motion.p>
-              <ul className="list-disc list-inside text-gray-300 mb-6">
-                {[
-                  "AI-powered marketing tools integration",
-                  "Blockchain and cryptocurrency affiliate opportunities",
-                  "Advanced data analytics for campaign optimization",
-                  "Emerging social media platform strategies",
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, y: 80 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeInOut",
-                      delay: 0.2 + index * 0.1,
-                    }}
-                    className="text-gray-300 mb-2"
-                  >
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.3,
+    ease: "easeInOut",
+    delay: 0.2,
+  }}
+  className="text-2xl font-semibold mb-4 text-pink-500"
+>
+  Tomorrow’s Income, Today: Inside the AI Marketers Club
+</motion.h3>
+<motion.p
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.3,
+    ease: "easeInOut",
+    delay: 0.2,
+  }}
+  className="text-gray-300 mb-4"
+>
+  This isn’t just another affiliate course—it’s a plug-and-play system built for 2025’s creator economy. The AI Marketers Club gives you the tools, prompts, and strategy to launch faceless content that earns—without burnout or complexity.
+</motion.p>
+<ul className="list-disc list-inside text-gray-300 mb-6">
+  {[
+    "F.I.R. Prompting Formula for viral-style content",
+    "7-Minute Action Checklist for daily monetized posts",
+    "Free drag-and-drop website with SSL + domain",
+    "Access to $821/click affiliate offers with 75% payouts",
+  ].map((item, index) => (
+    <motion.li
+      key={index}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: 0.2 + index * 0.1,
+      }}
+      className="text-gray-300 mb-2"
+    >
+      {item}
+    </motion.li>
+  ))}
+</ul>
+
 
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
