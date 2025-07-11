@@ -21,11 +21,12 @@ export default function Home() {
   const pageUrl = 'https://johncrestani.me';
   const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
+  // Main schema for the page
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
-    "url": "https://johncrestani.me",
+    "name": pageTitle,
+    "url": pageUrl,
     "about": [
       {
         "@type": "Person",
@@ -38,11 +39,11 @@ export default function Home() {
       },
       {
         "@type": "Course",
-        "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
+        "name": pageTitle,
         "provider": {
           "@type": "Organization",
           "name": "John Crestani",
-          "url": "https://johncrestani.me",
+          "url": pageUrl,
           "logo": "https://johncrestani.me/logo.png"
         },
         "description": "Advanced training system for affiliate marketers to scale earnings using paid traffic, video sales letters, and influencer outreach.",
@@ -53,12 +54,12 @@ export default function Home() {
           "price": "27.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://johncrestani.me"
+          "url": pageUrl
         }
       },
       {
         "@type": "Service",
-        "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
+        "name": pageTitle,
         "description": "Instant access to John's latest affiliate method with 2025 updates. No cost. No card required.",
         "provider": {
           "@type": "Person",
@@ -75,16 +76,37 @@ export default function Home() {
     ],
     "mainEntity": {
       "@type": "Service",
-      "name": "AI Marketers Club $27: John Crestani's 2025 Faceless AI System"
+      "name": pageTitle
     },
     "datePublished": "2025-07-08",
     "dateModified": "2025-07-08"
+  };
+
+  // Product schema for the offer image
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AI Marketers Club 2025 Complete Offer",
+    "image": "https://johncrestani.me/the-ai-marketers-club-offer.png",
+    "description": "Everything included with your AI Marketers Club membership: faceless content system, viral prompts, daily checklist, website builder, affiliate offers, and more for just $27.",
+    "brand": {
+      "@type": "Brand",
+      "name": "John Crestani"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": pageUrl,
+      "priceCurrency": "USD",
+      "price": "27.00",
+      "availability": "https://schema.org/InStock"
+    }
   };
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
 
       <Hero />
@@ -109,6 +131,43 @@ export default function Home() {
             <li>Free drag-and-drop website with SSL + domain</li>
             <li>Access to $821/click affiliate offers with 75% payouts</li>
           </ul>
+        </div>
+      </section>
+
+      {/* Product Offer Visual Section */}
+      <section className="container mx-auto px-4 py-12 flex flex-col items-center">
+        <div className="w-full flex flex-col items-center justify-center">
+          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-green-400 tracking-tight">
+            Here’s Everything You Get for $27
+          </h3>
+          <p className="text-gray-300 text-center max-w-2xl mb-8">
+            Unlock the full AI Marketers Club system—step-by-step video training, viral content prompts, daily action checklists, a ready-to-launch website, and access to the highest-paying affiliate offers. <span className="text-pink-400 font-semibold">All for a one-time $27.</span>
+          </p>
+          <div
+            className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
+            style={{
+              background: "linear-gradient(90deg, #111 70%, #ec489933 100%)",
+              borderRadius: "1.5rem",
+              boxShadow: "0 8px 32px 0 rgba(236,72,153,0.10)",
+              padding: "2rem 0"
+            }}
+          >
+            <Image
+              src="/the-ai-marketers-club-offer.png"
+              alt="AI Marketers Club 2025 Complete Offer – all bonuses and modules included for $27"
+              width={900}
+              height={600}
+              className="rounded-2xl shadow-xl border-2 border-pink-500"
+              style={{ maxWidth: '100%', height: 'auto' }}
+              priority
+            />
+          </div>
+          <a
+            href="#cta"
+            className="mt-8 inline-block bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transition-colors text-lg"
+          >
+            Get Instant Access for $27
+          </a>
         </div>
       </section>
 
