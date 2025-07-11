@@ -83,6 +83,13 @@ export default function Hero() {
         }
       `}</style>
 
+      {/* Kicker moved up and centered */}
+      <div className="w-full flex justify-center">
+        <span className="block text-center text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mt-6 mb-2 px-4">
+          🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
+        </span>
+      </div>
+
       <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 px-4 sm:px-6 md:px-8 xl:px-8">
         {/* Left Column */}
         <motion.div
@@ -92,12 +99,7 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <div className="flex flex-col items-start mb-1 pb-2 md:pb-4">
-  <span className="text-sm sm:text-base md:text-lg font-thin text-gray-400 tracking-wide max-w-full -mt-2">
-    🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
-  </span>
-</div>
-
+          {/* Kicker was here before, now removed */}
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
             <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
