@@ -121,7 +121,7 @@ export default function Home() {
               The $27 Shortcut to Faceless Affiliate Income
             </h3>
             <p className="text-gray-300 mb-5 leading-relaxed">
-              <span className="font-semibold text-white">Who’s Behind This?</span> John Crestani. 12,000+ students. $20M+ in affiliate payouts. And now? A brand-new system for 2025 that’s built for speed, simplicity, and scale.
+              <span className="font-semibold text-white">Who’s Behind This?</span> John Crestani. Over 50,000+ students. $20M+ in affiliate commissions. And now? A brand-new system for 2025 that’s built for speed, simplicity, and scale.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
               <span className="font-semibold text-white">AI Marketers Club</span> is his latest creation—a 3-hour crash course that shows you how to use AI to post faceless content that gets clicks, builds momentum, and earns commissions… in just <span className="text-pink-400 font-semibold">7 minutes a day</span>.
