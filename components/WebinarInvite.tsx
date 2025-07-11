@@ -85,7 +85,17 @@ export default function WebinarInvite() {
               href="https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black py-4 px-12 rounded-full text-xl font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-block bg-pink-500 text-white font-bold py-4 px-12 rounded-full shadow-lg text-xl cursor-pointer select-none"
+              style={{
+                transition: 'none',
+                textDecoration: 'none',
+                outline: 'none',
+                boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)'
+              }}
+              tabIndex={0}
+              title=""
+              onMouseOver={e => e.currentTarget.style.textDecoration = 'none'}
+              onFocus={e => e.currentTarget.style.textDecoration = 'none'}
             >
               🔐 Invest in Yourself Before AI Replaces You →
             </a>
