@@ -1,35 +1,38 @@
-'use client';
-import { motion } from 'framer-motion';
-import React, { useState } from 'react';
-import Image from 'next/image';
+'use client'
+import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import Image from 'next/image'
 
 export default function WebinarInvite() {
-  const [loadEmbed, setLoadEmbed] = useState(false);
+  const [loadEmbed, setLoadEmbed] = useState(false)
 
-  const handleWebinarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href =
-      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime';
-  };
-
-  const handlePlayVideo = () => setLoadEmbed(true);
+  const handlePlayVideo = () => setLoadEmbed(true)
 
   return (
     <section className="py-20 bg-[#0f1629] text-white">
       <article className="container mx-auto px-4">
         <motion.h2
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="text-4xl md:text-5xl font-bold mb-16 text-center"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="text-3xl md:text-4xl font-bold mb-8 text-center text-pink-500 leading-snug tracking-tight"
         >
-          Exclusive Webinar Invite
+          You’re Not Safe—AI Is Coming for Your Job
         </motion.h2>
 
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          className="text-gray-300 text-base md:text-lg text-center max-w-2xl mx-auto mb-10"
+        >
+          John Crestani’s AI pitch opens with a brutal truth—and a path forward. If you don’t learn how to use AI to earn, it will eventually take your spot. This video is your wake-up call.
+        </motion.p>
+
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
           <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl">
@@ -37,13 +40,13 @@ export default function WebinarInvite() {
               <div
                 onClick={handlePlayVideo}
                 role="button"
-                aria-label="Play Webinar Video"
+                aria-label="Play Video"
                 className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
                     src="/vimeo-thumbnail-john-crestani-2025-new-ai-faceless-course.png"
-                    alt="Exclusive Webinar Preview"
+                    alt="You're Fired – AI Pitch Thumbnail"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
                     className="object-cover rounded-lg"
@@ -73,20 +76,22 @@ export default function WebinarInvite() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="mt-12 text-center"
           >
-            <button
-              onClick={handleWebinarClick}
-              className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 transform hover:scale-105 shadow-lg"
+            <a
+              href="https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black py-4 px-12 rounded-full text-xl font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
             >
-              GET INSTANT ACCESS
-            </button>
+              🔐 Invest in Yourself Before AI Replaces You →
+            </a>
           </motion.div>
         </motion.div>
       </article>
     </section>
-  );
+  )
 }
