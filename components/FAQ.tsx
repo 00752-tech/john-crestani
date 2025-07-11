@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useMemo } from 'react'
-import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
 import React from 'react'
 
 type FAQItem = {
@@ -14,48 +14,48 @@ export default function AIClubFAQ() {
 
   const faqs: FAQItem[] = useMemo(() => [
     {
-      question: "What is the AI Marketers Club?",
-      answer: <>It’s John Crestani’s newest 2025 affiliate system that teaches you how to create faceless, monetized content using AI in just 7 minutes a day. It’s built for beginners who want results without showing their face or learning complex tech.</>
+      question: "What is AI Marketers Club?",
+      answer: <>It’s John Crestani’s latest affiliate system for 2025, teaching how to use AI to create faceless, monetized content—no tech skills or prior experience required. Built around a 7-minute daily workflow using his F.I.R. formula.</>
     },
     {
-      question: "How much does AI Marketers Club cost?",
-      answer: <>The full system is just $27. That includes the course, a free website, the F.I.R. formula, and access to $821/click affiliate offers. It’s a one-time payment with no hidden upsells.</>
-    },
-    {
-      question: "Do I need to show my face or be on camera?",
-      answer: <>Nope. This system is designed for faceless content creation. You’ll learn how to use AI tools to generate videos, posts, and affiliate content without ever appearing on screen.</>
-    },
-    {
-      question: "Is this different from Super Affiliate System Pro?",
-      answer: <>Yes. While SAS Pro was a full-scale training program focused on paid traffic and funnels, AI Marketers Club is a lightweight, fast-start system built around AI and faceless content. It’s ideal for beginners or anyone short on time.</>
+      question: "What makes this different from Super Affiliate System Pro?",
+      answer: <>AI Marketers Club focuses on faceless content creation and AI automation. SAS Pro was built around paid ads, funnels, and deep traffic strategies. It’s now a discounted upsell ($197) inside the AI Marketers Club funnel.</>
     },
     {
       question: "Is Super Affiliate System Pro still available?",
-      answer: <>No, Super Affiliate System Pro is no longer available for new students. John Crestani has retired the program and replaced it with the AI Marketers Club—a faster, more affordable system built for 2025 that uses AI and faceless content to help beginners start earning online.</>
+      answer: <>Yes—but only through AI Marketers Club. Formerly $997, SAS Pro is now offered as a $197 upsell with full access to ad tutorials, funnel setup, and affiliate strategy.</>
     },
     {
-      question: "How fast can I start earning with this?",
-      answer: <>Some users report clicks and commissions within their first week. Results vary, but the system is designed to get you posting and monetizing in under 7 minutes a day.</>
+      question: "How much does it cost to join?",
+      answer: <>The main AI Marketers Club course costs just $27. That includes lifetime access to the training, a free website, viral content templates, bonus resources, and access to $821/click affiliate offers.</>
     },
     {
-      question: "What’s the F.I.R. formula?",
-      answer: <>It stands for Find, Imitate, and Repost—with AI. You’ll learn how to find viral content, use AI to recreate it in your niche, and post it with your affiliate links. It’s simple, scalable, and faceless.</>
+      question: "Do I need to show my face to make this work?",
+      answer: <>Not at all. The system teaches faceless content creation using AI tools like ChatGPT and Midjourney. No camera, no personal branding, no burnout.</>
+    },
+    {
+      question: "How does the F.I.R. formula work?",
+      answer: <>F.I.R. stands for Find, Imitate, Repost. It’s a step-by-step prompting method using AI to turn viral content into niche-targeted affiliate campaigns that get clicks and commissions.</>
+    },
+    {
+      question: "What’s included in the AI Marketers Club training?",
+      answer: <>You’ll get a 3-hour video course, a quick start guide, daily action checklist, free website with SSL, bonus tools, deepfake marketing assets, and access to a supportive creator community.</>
+    },
+    {
+      question: "How fast can I start earning?",
+      answer: <>Some users report results in days. The system is designed to get you posting monetized content in 7 minutes/day—ideal for beginners or side hustlers with limited time.</>
     },
     {
       question: "Is there a refund policy?",
-      answer: <>Yes. There’s a 60-day money-back guarantee. If you don’t love it, you can request a full refund—no questions asked.</>
+      answer: <>Yes. AI Marketers Club comes with a 60-day money-back guarantee, backed by ClickBank. No risk, no commitment—just a chance to build digital income with AI.</>
     },
     {
-      question: "Do I need any prior experience?",
-      answer: <>None. This system is built for total beginners. If you can copy, paste, and click—you're ready.</>
+      question: "Can I promote this offer as an affiliate?",
+      answer: <>Absolutely. Affiliates earn 75–90% commission on the entire funnel: $27 front-end, $197 SAS Pro upsell, $597 high-ticket upgrade, and even up to $50,000 mentorship tiers. Apply on ClickBank and request a commission bump.</>
     },
     {
-      question: "What tools or software do I need?",
-      answer: <>You’ll get access to free AI tools, a drag-and-drop website builder, and done-for-you templates. No paid software is required to get started.</>
-    },
-    {
-      question: "Can I promote this as an affiliate?",
-      answer: <>Yes! AI Marketers Club has a high-converting affiliate program. You can earn commissions by sharing your link—perfect for testing the system while promoting it.</>
+      question: "Where can I learn more or see testimonials?",
+      answer: <>You can explore bonus breakdowns, real user feedback, and success stories on the official review page. Just search “AI Marketers Club review by John Crestani 2025”—we’re ranking #1 for it.</>
     }
   ], [])
 
