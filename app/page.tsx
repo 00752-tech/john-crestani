@@ -134,9 +134,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Offer Visual Section with Light Grey Card */}
-      <section className="container mx-auto px-4 py-12 flex flex-col items-center">
-        <div className="w-full flex flex-col items-center justify-center">
+      {/* Product Offer Visual Section with Black Outer, Grey Card */}
+      <section className="w-full bg-black flex flex-col items-center py-12 px-4">
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center">
           <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-green-400 tracking-tight">
             Here’s Everything You Get for $27
           </h3>
@@ -146,11 +146,11 @@ export default function Home() {
           <div
             className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
             style={{
-              background: "#f3f4f6", // light grey
+              background: "#f3f4f6", // light grey card
               borderRadius: "1.5rem",
               boxShadow: "0 8px 32px 0 rgba(236,72,153,0.10)",
               padding: "2rem 0",
-              border: "1px solid #e5e7eb" // subtle border
+              border: "1px solid #e5e7eb"
             }}
           >
             <Image
@@ -164,8 +164,11 @@ export default function Home() {
             />
           </div>
           <a
-            href="#cta"
-            className="mt-8 inline-block bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transition-colors text-lg"
+            href="https://7b3cf-f2p0ft1p8a8ne-2u5ta2.hop.clickbank.net/?&traffic_source=image_cta_button"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg"
+            style={{ transition: 'none' }}
           >
             Get Instant Access for $27
           </a>
