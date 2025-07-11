@@ -94,9 +94,9 @@ export default function Hero() {
         >
           {/* Kicker moved here, inside the column, above the h1 */}
           <span className="block text-left text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-3 mt-2">
-            🔥 2,137+ EARLY ADOPTERS SECURED ACCESS<br></br>
+            🔥 2,137+ EARLY ADOPTERS SECURED ACCESS<br><br>
           </span>
-
+<br><br>
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
             <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
           </h1>
