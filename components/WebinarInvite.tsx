@@ -8,6 +8,16 @@ export default function WebinarInvite() {
 
   const handlePlayVideo = () => setLoadEmbed(true)
 
+  // Use this handler for the CTA button
+  const handleCtaClick = (e) => {
+    e.preventDefault()
+    window.open(
+      'https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
   return (
     <section className="py-20 bg-[#0f1629] text-white">
       <article className="container mx-auto px-4">
@@ -81,11 +91,9 @@ export default function WebinarInvite() {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className="mt-12 text-center"
           >
-            <a
-              href="https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-pink-500 text-white font-bold py-4 px-12 rounded-full shadow-lg text-xl cursor-pointer select-none"
+            <button
+              onClick={handleCtaClick}
+              className="inline-block bg-pink-500 text-white font-bold py-4 px-12 rounded-full shadow-lg text-xl cursor-pointer select-none transition-none"
               style={{
                 transition: 'none',
                 textDecoration: 'none',
@@ -93,12 +101,10 @@ export default function WebinarInvite() {
                 boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)'
               }}
               tabIndex={0}
-              title=""
-              onMouseOver={e => e.currentTarget.style.textDecoration = 'none'}
-              onFocus={e => e.currentTarget.style.textDecoration = 'none'}
+              type="button"
             >
               🔐 Invest in Yourself Before AI Replaces You →
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </article>
