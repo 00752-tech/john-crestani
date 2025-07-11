@@ -130,7 +130,7 @@ export default function Home() {
           }}
         >
           <Image
-            src="/images/old-vs-new-way-graphic.jpg"
+            src="/images/old-vs-new-way-graphic.png"
             alt="Old Way vs New Way - AI Marketers Club Comparison"
             width={600}
             height={700}
@@ -150,7 +150,7 @@ export default function Home() {
       {/* AI Statistics Infographic Section */}
       <div className="flex justify-center my-12 px-4">
         <Image
-          src="https://www.johncrestani.tv/hosted/images/2e/7dcaaa8952431189011a206a36dd9d/ai-usage-chart.jpg"
+          src="/images/ai-statistics-infographic-2025.jpg"
           alt="AI Statistics Infographic: Key global AI usage, adoption, and growth trends for 2025. Source: Digital Silk, June 2025."
           width={700}
           height={1100}
