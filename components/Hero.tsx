@@ -1,31 +1,28 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import React from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 export default function Hero() {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
-  };
+    e.preventDefault()
+    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime')
+  }
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
-  };
+    e.preventDefault()
+    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime')
+  }
 
   return (
     <section
       className="min-h-screen pt-0 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
       style={{ minHeight: '100vh' }}
     >
-      {/* Floating Media Logo removed */}
-
-      {/* Global styles */}
       <style jsx global>{`
         @font-face {
           font-family: 'Neue Haas Unica W1G';
@@ -104,7 +101,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
-            $27 ai system revealed: John Crestani&apos;s 2025 <span className="text-gray-400">faceless formula</span> 
+            <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
@@ -134,7 +131,9 @@ export default function Hero() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-gray-400 tracking-tight">Trusted by 2,137 Early Adopters | 4.9/5 Rating | 60-Day Guarantee</span>
+                <span className="text-sm text-gray-400 tracking-tight">
+                  Trusted by 2,137 Early Adopters | 4.9/5 Rating | 60-Day Guarantee
+                </span>
               </div>
             </div>
 
@@ -176,5 +175,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
