@@ -8,8 +8,8 @@ export default function WebinarInvite() {
 
   const handlePlayVideo = () => setLoadEmbed(true)
 
-  // Use this handler for the CTA button
-  const handleCtaClick = (e) => {
+  // Type the event parameter!
+  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.open(
       'https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button',
