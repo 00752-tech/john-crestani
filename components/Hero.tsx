@@ -83,23 +83,19 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Kicker moved up and centered */}
-      <div className="w-full flex justify-center">
-        <span className="block text-center text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mt-6 mb-2 px-4">
-          🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
-        </span>
-      </div>
-
       <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 px-4 sm:px-6 md:px-8 xl:px-8">
         {/* Left Column */}
         <motion.div
-          className="w-full md:w-1/2 md:mt-[-40px] mb-6 md:mb-0"
+          className="w-full md:w-1/2 md:mt-[-40px] mb-6 md:mb-0 flex flex-col"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          {/* Kicker was here before, now removed */}
+          {/* Kicker moved here, inside the column, above the h1 */}
+          <span className="block text-left text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-3 mt-2">
+            🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
+          </span>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
             <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
