@@ -21,7 +21,6 @@ export default function Home() {
   const pageUrl = 'https://johncrestani.me';
   const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
-  // Main schema for the page
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -82,7 +81,6 @@ export default function Home() {
     "dateModified": "2025-07-08"
   };
 
-  // Product schema for the offer image
   const offerSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -116,62 +114,36 @@ export default function Home() {
         <DynamicFeaturedTool />
       </Suspense>
 
-      {/* AI Marketers Club Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-pink-500 text-center">
-            Tomorrow’s Income, Today: Inside the AI Marketers Club
-          </h2>
-          <p className="text-lg text-gray-300 mb-6 text-center max-w-2xl">
-            This isn’t just another affiliate course—it’s a plug-and-play system built for 2025’s creator economy. The AI Marketers Club gives you the tools, prompts, and strategy to launch faceless content that earns—without burnout or complexity.
-          </p>
-          <ul className="list-disc list-inside text-gray-300 mb-6 max-w-xl mx-auto space-y-2 text-base leading-relaxed">
-            <li>F.I.R. Prompting Formula for viral-style content</li>
-            <li>7-Minute Action Checklist for daily monetized posts</li>
-            <li>Free drag-and-drop website with SSL + domain</li>
-            <li>Access to $821/click affiliate offers with 75% payouts</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Product Offer Visual Section with Black Outer, Grey Card */}
-      <section className="w-full bg-black flex flex-col items-center py-12 px-4">
-        <div className="w-full max-w-4xl flex flex-col items-center justify-center">
-          <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-green-400 tracking-tight">
-            Here’s Everything You Get for $27
-          </h3>
-          <p className="text-gray-300 text-center max-w-2xl mb-8">
-            Unlock the full AI Marketers Club system—step-by-step video training, viral content prompts, daily action checklists, a ready-to-launch website, and access to the highest-paying affiliate offers. <span className="text-pink-400 font-semibold">All for a one-time $27.</span>
-          </p>
-          <div
-            className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
-            style={{
-              background: "#f3f4f6", // light grey card
-              borderRadius: "1.5rem",
-              boxShadow: "0 8px 32px 0 rgba(236,72,153,0.10)",
-              padding: "2rem 0",
-              border: "1px solid #e5e7eb"
-            }}
-          >
+      {/* Updated Faceless AI Shortcut Section */}
+      <section className="w-full bg-black flex flex-col items-center py-20 px-4">
+        <div className="max-w-5xl w-full flex flex-col md:flex-row md:items-center md:justify-between space-y-12 md:space-y-0 gap-12">
+          <div className="md:w-1/2">
+            <h3 className="text-3xl md:text-4xl font-bold text-pink-500 mb-6 leading-snug">
+              The $27 Shortcut to Faceless Affiliate Income
+            </h3>
+            <div className="text-gray-300 text-base md:text-lg space-y-4 leading-relaxed">
+              <p><span className="font-semibold text-white">Who’s Behind This?</span> John Crestani—12,000+ students, $20M+ paid to affiliates, and now the creator of the AI Marketers Club.</p>
+              <p><span className="font-semibold text-white">What Is It?</span> A 3-hour crash course on using AI to post faceless content that gets clicks, builds daily momentum, and earns commissions in just <span className="text-pink-400 font-semibold">7 minutes a day</span>.</p>
+              <ul className="list-disc list-inside space-y-2 pt-4">
+                <li><strong>No Face Needed</strong>: Stay anonymous while earning.</li>
+                <li><strong>AI Does the Heavy Lifting</strong>: Smart tools create, post, optimize.</li>
+                <li><strong>7 Minutes a Day</strong>: Ideal for busy creators—just copy, paste, and profit.</li>
+                <li><strong>Beginner Friendly</strong>: No tech skills or online experience required.</li>
+                <li><strong>$27 Launch Price</strong>: Join now before it increases to $297.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="md:w-1/2 flex justify-center">
             <Image
               src="/the-ai-marketers-club-offer.png"
-              alt="AI Marketers Club 2025 Complete Offer – all bonuses and modules included for $27"
-              width={900}
-              height={600}
-              className="rounded-2xl shadow-xl"
-              style={{ maxWidth: '100%', height: 'auto', background: "#f3f4f6" }}
+              alt="The AI Marketers Club Offer by John Crestani"
+              width={500}
+              height={400}
+              className="rounded-2xl shadow-2xl border border-pink-500"
+              style={{ maxWidth: '100%', height: 'auto' }}
               priority
             />
           </div>
-          <a
-            href="https://7b3cf-f2p0ft1p8a8ne-2u5ta2.hop.clickbank.net/?&traffic_source=image_cta_button"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg"
-            style={{ transition: 'none' }}
-          >
-            Get Instant Access for $27
-          </a>
         </div>
       </section>
 
@@ -223,27 +195,4 @@ export default function Home() {
         />
       </div>
       <p className="text-center text-xs text-gray-400 mt-2 mb-8">
-        Infographic: Digital Silk. (2025). AI statistics [Infographic]. Retrieved June 2025,{' '}
-        <span className="underline">
-          <a
-            href="https://www.digitalsilk.com/digital-trends/ai-statistics/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            digitalsilk.com
-          </a>
-        </span>
-      </p>
-
-      <FAQ />
-      <CTA />
-      <div className="container mx-auto px-4 py-8">
-        <Suspense fallback={<div>Loading...</div>}>
-          <DynamicShareButtons url={pageUrl} title={pageTitle} />
-        </Suspense>
-      </div>
-      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
-      <Footer />
-    </main>
-  );
-}
+        Infographic
