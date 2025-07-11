@@ -8,7 +8,6 @@ export default function WebinarInvite() {
 
   const handlePlayVideo = () => setLoadEmbed(true)
 
-  // Type the event parameter!
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.open(
@@ -36,7 +35,9 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           className="text-gray-300 text-base md:text-lg text-center max-w-2xl mx-auto mb-10"
         >
-          John Crestani’s AI pitch opens with a brutal truth—and a path forward. If you don’t learn how to use AI to earn, it will eventually take your spot. This video is your wake-up call.
+          John Crestani’s AI pitch opens with a brutal truth—and a path forward.
+          If you don’t learn how to use AI to earn, it will eventually take your spot.
+          This video is your wake-up call.
         </motion.p>
 
         <motion.div
@@ -55,7 +56,7 @@ export default function WebinarInvite() {
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
-                    src="/vimeo-thumbnail-john-crestani-2025-new-ai-faceless-course.png"
+                    src="/you_are_fired_thumbnail.png"
                     alt="You're Fired – AI Pitch Thumbnail"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
@@ -75,13 +76,13 @@ export default function WebinarInvite() {
               </div>
             ) : (
               <iframe
-                src="https://player.vimeo.com/video/1003467968?autoplay=1&controls=1&title=0&byline=0&autopause=0"
-                title="Vimeo video player"
+                src="https://www.youtube.com/embed/SIWVTq8vB28?autoplay=1&rel=0&modestbranding=1"
+                title="YouTube video player"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
-              ></iframe>
+              />
             )}
           </div>
 
