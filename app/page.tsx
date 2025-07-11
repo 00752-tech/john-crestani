@@ -50,7 +50,7 @@ export default function Home() {
         "timeRequired": "P4W",
         "offers": {
           "@type": "Offer",
-          "price": "997.00",
+          "price": "27.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://johncrestani.me"
@@ -130,7 +130,7 @@ export default function Home() {
           }}
         >
           <Image
-            src="/images/old-vs-new-way-graphic.png"
+            src="/old-vs-new-way-graphic.png"
             alt="Old Way vs New Way - AI Marketers Club Comparison"
             width={600}
             height={700}
@@ -150,7 +150,7 @@ export default function Home() {
       {/* AI Statistics Infographic Section */}
       <div className="flex justify-center my-12 px-4">
         <Image
-          src="/images/ai-statistics-infographic-2025.jpg"
+          src="/ai-usage-chart.jpg"
           alt="AI Statistics Infographic: Key global AI usage, adoption, and growth trends for 2025. Source: Digital Silk, June 2025."
           width={700}
           height={1100}
