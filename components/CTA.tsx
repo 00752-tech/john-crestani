@@ -5,62 +5,59 @@ import React from 'react'
 
 export default function CTA() {
   const handleEnrollClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.location.href = "https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime";
+    e.preventDefault()
+    window.location.href = "https://1b3d1r3up16k8ueaho3yfz1re1.hop.clickbank.net/?&traffic_source=bottom_cta"
   }
 
   return (
     <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
       <div className="container mx-auto text-center">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          Unlock Your Affiliate Empire in 2025
+          Launch Your Faceless AI Brand—Today for $27
         </motion.h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-xl mb-8"
         >
-          Thousands have cracked the code - now it&apos;s your turn to join the ranks of Super Affiliate System Pro millionaires.
+          Join 2,000+ creators using AI tools to earn affiliate commissions—without showing their face or coding a thing.
         </motion.p>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl mx-auto"
+          className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl mx-auto text-gray-800"
         >
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="text-3xl font-bold text-gray-800 mb-4"
+            className="text-3xl font-bold mb-4"
           >
             Limited Time Offer
           </motion.h3>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="text-2xl text-gray-600 mb-6"
+            className="text-2xl mb-6"
           >
-            Get 50% OFF Today!
+            Get Everything for Just $27!
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.5 }}
-            className="flex justify-center items-center space-x-4 mb-6"
-          >
-            <span className="text-4xl font-bold text-gray-400 line-through">$4,997</span>
-            <span className="text-4xl font-bold text-gray-400 line-through">$1,994</span>
-            <span className="text-5xl font-bold text-pink-500">Act Fast!</span>
-          </motion.div>
-          <motion.button 
+          <ul className="text-left text-base text-gray-700 mb-6 space-y-2 max-w-md mx-auto">
+            <li>✅ AI-Powered Content Prompts</li>
+            <li>✅ 7-Minute Monetization Checklist</li>
+            <li>✅ Free Website + Hosting + SSL</li>
+            <li>✅ Deepfake Video Assets + Ad Templates</li>
+            <li>✅ Access to $821/click affiliate offers</li>
+          </ul>
+          <motion.button
             onClick={handleEnrollClick}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -68,38 +65,30 @@ export default function CTA() {
             transition={{ duration: 0.3 }}
             className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
           >
-            GET INSTANT ACCESS
+            YES! I WANT AI MARKETERS CLUB
           </motion.button>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.6 }}
-            className="mt-4 flex items-center justify-center"
+            className="mt-4"
           >
             <p className="text-sm text-gray-600">
-              Low Price Guarantee: We&apos;ll match any competitor&apos;s price!
+              60-Day Money-Back Guarantee • AI-Safe Certified • No Tech Required
             </p>
           </motion.div>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.7 }}
-            className="mt-2 text-sm text-gray-600"
-          >
-            30-Day Money-Back Guarantee
-          </motion.p>
         </motion.div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.6 }}
           className="mt-8"
         >
           <a
-            href="https://a2678p91h18n0p26cka-9z8mee.hop.clickbank.net"
+            href="https://1b3d1r3up16k8ueaho3yfz1re1.hop.clickbank.net/?&traffic_source=matrix_demo"
             className="text-white underline hover:text-pink-200 transition duration-300"
           >
-            Master the Million-Dollar Matrix: Complimentary Training
+            Explore the F.I.R. Formula: How Faceless AI Brands Monetize Fast →
           </a>
         </motion.div>
       </div>
