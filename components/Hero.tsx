@@ -92,8 +92,8 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <div className="flex flex-col items-start mb-2 md:mb-3">
-            <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full -mt-1">
+          <div className="flex flex-col items-start mb-1">
+            <span className="text-sm sm:text-base md:text-lg font-thin text-gray-400 tracking-wide max-w-full -mt-2">
               🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
             </span>
           </div>
