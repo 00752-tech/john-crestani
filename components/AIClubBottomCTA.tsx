@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function AIClubBottomCTA() {
+  const affiliateLink = "https://1b3d1r3up16k8ueaho3yfz1re1.hop.clickbank.net/?&traffic_source=bottom_cta"
+
   return (
     <section className="bg-black text-white py-20 px-6 md:px-12 text-center">
       <motion.div
@@ -29,7 +31,7 @@ export default function AIClubBottomCTA() {
         </ul>
 
         <Link
-          href="https://1b3d1r3up16k8ueaho3yfz1re1.hop.clickbank.net/?&traffic_source=bottom_cta"
+          href={affiliateLink}
           className="inline-block bg-pink-600 hover:bg-pink-700 text-white text-lg font-semibold py-4 px-8 rounded-full transition duration-300 shadow-lg"
         >
           YES! I WANT AI MARKETERS CLUB
@@ -40,7 +42,7 @@ export default function AIClubBottomCTA() {
         </p>
 
         <Link
-          href="#fir-breakdown"
+          href={affiliateLink + "#fir-breakdown"}
           className="mt-6 inline-block text-pink-400 hover:underline text-sm"
         >
           Explore the F.I.R. Formula → Faceless Income in Minutes
