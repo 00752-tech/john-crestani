@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Offer Visual Section */}
+      {/* Product Offer Visual Section with Light Grey Card */}
       <section className="container mx-auto px-4 py-12 flex flex-col items-center">
         <div className="w-full flex flex-col items-center justify-center">
           <h3 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-green-400 tracking-tight">
@@ -146,10 +146,11 @@ export default function Home() {
           <div
             className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
             style={{
-              background: "linear-gradient(90deg, #111 70%, #ec489933 100%)",
+              background: "#f3f4f6", // light grey
               borderRadius: "1.5rem",
               boxShadow: "0 8px 32px 0 rgba(236,72,153,0.10)",
-              padding: "2rem 0"
+              padding: "2rem 0",
+              border: "1px solid #e5e7eb" // subtle border
             }}
           >
             <Image
@@ -157,8 +158,8 @@ export default function Home() {
               alt="AI Marketers Club 2025 Complete Offer – all bonuses and modules included for $27"
               width={900}
               height={600}
-              className="rounded-2xl shadow-xl border-2 border-pink-500"
-              style={{ maxWidth: '100%', height: 'auto' }}
+              className="rounded-2xl shadow-xl"
+              style={{ maxWidth: '100%', height: 'auto', background: "#f3f4f6" }}
               priority
             />
           </div>
