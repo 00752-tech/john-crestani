@@ -1,35 +1,35 @@
 "use client";
 import { useEffect } from "react";
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Jordan M.",
-      role: "Former Uber Driver Turned Affiliate",
-      badge: "Beta Tester",
-      quote:
-        "I never thought I could make money online without showing my face. This system made it stupid simple. I posted my first AI video in 10 minutes and got my first click the next day.",
-      rating: 5,
-    },
-    {
-      name: "Samantha R.",
-      role: "Stay-at-Home Mom & First-Time Marketer",
-      badge: "Verified Buyer",
-      quote:
-        "I’ve tried other courses before and always felt overwhelmed. This one broke it down so clearly. I finally feel like I know what I’m doing—and I’m only 3 days in.",
-      rating: 5,
-    },
-    {
-      name: "Derek L.",
-      role: "Corporate Escapee, Now Full-Time Creator",
-      badge: "Early Access Member",
-      quote:
-        "I was burned out from the 9–5 grind. The AI Marketers Club gave me a way to build something real—without being glued to my screen or chasing trends.",
-      rating: 4.8,
-    },
-  ];
+// Move testimonials outside component to avoid unnecessary re-renders
+const testimonials = [
+  {
+    name: "Jordan M.",
+    role: "Former Uber Driver Turned Affiliate",
+    badge: "Beta Tester",
+    quote:
+      "I never thought I could make money online without showing my face. This system made it stupid simple. I posted my first AI video in 10 minutes and got my first click the next day.",
+    rating: 5,
+  },
+  {
+    name: "Samantha R.",
+    role: "Stay-at-Home Mom & First-Time Marketer",
+    badge: "Verified Buyer",
+    quote:
+      "I’ve tried other courses before and always felt overwhelmed. This one broke it down so clearly. I finally feel like I know what I’m doing—and I’m only 3 days in.",
+    rating: 5,
+  },
+  {
+    name: "Derek L.",
+    role: "Corporate Escapee, Now Full-Time Creator",
+    badge: "Early Access Member",
+    quote:
+      "I was burned out from the 9–5 grind. The AI Marketers Club gave me a way to build something real—without being glued to my screen or chasing trends.",
+    rating: 4.8,
+  },
+];
 
-  // Inject JSON-LD schema
+export default function Testimonials() {
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "application/ld+json";
@@ -63,7 +63,10 @@ export default function Testimonials() {
       })),
     });
     document.head.appendChild(script);
-  }, []);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []); // testimonials is now outside, so this is safe
 
   return (
     <section id="testimonials" className="py-20 pt-32 bg-gray-900 text-white">
@@ -86,7 +89,7 @@ export default function Testimonials() {
                 </h3>
                 <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
-              <p className="text-gray-300 italic">"{t.quote}"</p>
+              <p className="text-gray-300 italic">&quot;{t.quote}&quot;</p>
             </article>
           ))}
         </div>
