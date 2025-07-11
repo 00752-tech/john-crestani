@@ -1,6 +1,8 @@
+'use client';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
@@ -118,7 +120,7 @@ export default function Home() {
 
       {/* ✅ Tony testimonial */}
       <div className="flex justify-center my-12 px-4">
-        <img
+        <Image
           src="/images/affiliate-success-tony.png"
           alt="Tony Strange affiliate testimonial—home upgrade and poolside earnings"
           width={640}
