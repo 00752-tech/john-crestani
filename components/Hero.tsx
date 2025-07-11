@@ -86,30 +86,30 @@ export default function Hero() {
       <div className="container mx-auto flex flex-col md:flex-row items-center lg:items-start xl:items-center gap-x-4 px-4 sm:px-6 md:px-8 xl:px-8">
         {/* Left Column */}
         <motion.div
-          className="w-full md:w-1/2 mb-12 md:mb-0"
+          className="w-full md:w-1/2 md:mt-[-40px] mb-6 md:mb-0"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <div className="flex flex-col items-start mb-6">
-            <div className="flex items-center mb-2">
+          <div className="flex flex-col items-start mb-4">
+            <div className="flex items-center">
               <span className="text-sm sm:text-base md:text-lg font-light text-gray-300 tracking-wider truncate max-w-full">
                 🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
               </span>
             </div>
           </div>
 
-          <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-6 md:mb-10 leading-tight text-white">
+          <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
             <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-8 md:mb-12 leading-relaxed text-gray-300 font-light tracking-tight">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
             Launch a faceless affiliate biz in 7 min/day— <span className="text-white font-light">no camera, no guesswork, no burnout.</span>
           </p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-12"
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-6 md:mt-8"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
