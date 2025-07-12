@@ -64,17 +64,18 @@ export default function Hero() {
           </span>
 
           {/* Headline */}
-          <h1 className="font-bold text-white leading-tight mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left">
+          <h1 className="font-thin text-white leading-tight mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-xl text-left"
+            style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif", fontWeight: 200 }}>
             AI Threatens Your Job. Here&apos;s How To Turn It Into Your Untapped Goldmine.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-4 mt-1 max-w-lg text-left">
+          <p className="text-gray-400 font-extralight text-sm sm:text-base md:text-lg mb-3 mt-1 max-w-lg text-left">
             John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
           </p>
 
           {/* Core Benefits */}
-          <ul className="mb-6 mt-2 max-w-lg text-left space-y-2 text-gray-300 text-base sm:text-lg font-light">
+          <ul className="mb-5 mt-1 max-w-lg text-left space-y-1 text-gray-300 text-xs sm:text-sm md:text-base font-light">
             <li>
               <span className="text-blue-400 mr-2">•</span>
               <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
@@ -101,7 +102,6 @@ export default function Hero() {
           {/* Value/Urgency Reinforcement */}
           <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
             Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
-            {/* Optional: Insert a countdown timer graphic here */}
           </div>
 
           {/* Social Proof */}
@@ -123,10 +123,11 @@ export default function Hero() {
           <Image
             src="/hero_man_hat.webp"
             alt="John Crestani"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="rounded-lg shadow-2xl object-cover"
             priority
+            style={{ maxWidth: '420px', width: '100%', height: 'auto' }}
           />
         </div>
       </div>
