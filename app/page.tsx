@@ -261,7 +261,15 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicFreeTools />
       </Suspense>
-      <WebinarInvite />
+
+      {/* === VIDEO SECTION WITH ID FOR SCROLL === */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="video">
+          <WebinarInvite />
+        </div>
+      </Suspense>
+      {/* === END VIDEO SECTION === */}
+
       <Testimonials />
 
       {/* AI Statistics Infographic Section */}
