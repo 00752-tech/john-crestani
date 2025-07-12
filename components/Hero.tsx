@@ -57,15 +57,15 @@ export default function Hero() {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
         {/* Left Column */}
-        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10">
+        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 pl-4">
           {/* Kicker */}
-          <span className="kicker uppercase text-xs sm:text-sm md:text-base text-gray-400 tracking-widest mb-5 mt-2">
+          <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
             🚨 AI IS CHANGING EVERYTHING
           </span>
 
           {/* Headline */}
           <h1
-            className="font-thin text-white leading-tight mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-lg text-left"
+            className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
             style={{
               fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
               fontWeight: 200,
@@ -73,17 +73,17 @@ export default function Hero() {
           >
             <span className="text-yellow-400">AI Threatens Your Job.</span>{' '}
             <span className="text-gray-400">
-              Here&apos;s How To Turn It Into Your Untapped Goldmine.
+              Here's How To Turn It Into Your Untapped Goldmine.
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-gray-400 font-extralight text-xs sm:text-sm md:text-base mb-2 mt-1 max-w-md text-left">
-            John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
+          <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
+            John Crestani's New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
           </p>
 
           {/* Core Benefits */}
-          <ul className="mb-4 mt-1 max-w-md text-left space-y-1 text-gray-300 text-xs sm:text-xs md:text-sm font-light">
+          <ul className="mb-5 mt-1 max-w-lg text-left space-y-2 text-gray-300 text-sm sm:text-base font-light leading-relaxed">
             <li>
               <span className="text-blue-400 mr-2">•</span>
               <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
@@ -94,29 +94,25 @@ export default function Hero() {
             </li>
             <li>
               <span className="text-blue-400 mr-2">•</span>
-              <b>Working From Anywhere:</b> No boss, no burnout, no guesswork – just pure, repeatable income potential.
+              <b>Working From Anywhere:</b> No boss, no burnout, no guesswork—just pure, repeatable income potential.
             </li>
           </ul>
 
           {/* CTA Button */}
-          <button
-            className="cta-main w-full sm:w-auto mb-2"
-            onClick={handleRevealSecrets}
-            type="button"
-          >
+          <button className="cta-main w-full sm:w-auto mb-3" onClick={handleRevealSecrets} type="button">
             YES! I WANT TO UNLOCK The $27 AI Income System!
           </button>
 
           {/* Value/Urgency Reinforcement */}
-          <div className="text-pink-400 text-sm font-semibold mt-2 mb-3 text-left">
-            Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
+          <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
+            Limited-Time Offer: Secure Your Spot & FREE Website Bonus NOW!
           </div>
 
           {/* Social Proof */}
           <div className="flex flex-col items-start mt-2">
             <div className="flex items-center mb-1">
-              <span className="text-yellow-400 text-lg mr-1">⭐️⭐️⭐️⭐️⭐️</span>
-              <span className="text-gray-300 text-xs font-medium ml-2">
+              <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
+              <span className="text-gray-300 text-base font-medium ml-2">
                 Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
               </span>
             </div>
@@ -126,7 +122,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Hero Image */}
+        {/* Right Column */}
         <div className="hidden md:flex w-1/2 justify-center items-center">
           <Image
             src="/hero_man_hat.webp"
