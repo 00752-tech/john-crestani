@@ -97,14 +97,15 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <span className="block text-left text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-10 mt-2">
+          <span className="block text-left text-sm sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-10 mt-2">
             🚨 Millions will lose jobs to AI by 2026
           </span>
 
-          <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
-            <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
-            <span className="text-gray-400"><i>replaces you</i></span>
-          </h1>
+          <h1 className="text-left text-[3.25rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] font-thin leading-tight mb-4 md:mb-6 text-white">
+  <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
+  <span className="text-gray-400 italic">replaces you</span>
+</h1>
+
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
             John Crestani’s $27 AI system flips fear into freedom— <span className="text-white font-light">no boss, no burnout, no guesswork.</span>
