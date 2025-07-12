@@ -111,7 +111,7 @@ export default function Footer() {
                   Affiliate Disclaimer
                 </Link>
               </li>
-              <li><p className="text-gray-400">Contact: passiveincomestreaming@gmail.com</p></li>
+              <li><p className="text-gray-400">Contact: info@johncrestani.me</p></li>
             </ul>
           </div>
         </div>
