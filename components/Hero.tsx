@@ -8,13 +8,13 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
 
-  // Scrolls to the video section with a positive offset (moves thumbnail UP)
+  // Scrolls to the video section with a negative offset (moves thumbnail UP)
   const handleScrollToVideo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     const el = document.getElementById('video')
     if (el) {
-      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch on most screens)
-      const y = el.getBoundingClientRect().top + window.pageYOffset + offset
+      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch)
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
   }
@@ -104,7 +104,7 @@ export default function Hero() {
           </span>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
-            <span className="text-yellow-400 font-semibold">Escape</span> Before AI <span className="text-gray-400">Replaces You</span>
+            <span className="text-yellow-400 font-semibold">Escape</span> Before AI <span className="text-gray-400"><i>Replaces You</i></span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
