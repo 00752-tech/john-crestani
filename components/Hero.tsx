@@ -8,9 +8,11 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
 
-  const handleUnlockBlueprint = (e: React.MouseEvent<HTMLButtonElement>) => {
+  // This button now scrolls to the video section
+  const handleScrollToVideo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime')
+    const el = document.getElementById('video')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -44,7 +46,7 @@ export default function Hero() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.3s ease;
+          transition: none;
           height: 60px;
           text-transform: uppercase;
           white-space: nowrap;
@@ -71,8 +73,8 @@ export default function Hero() {
         }
 
         .transparent-button:hover {
-          background-color: white;
-          color: black;
+          background-color: transparent;
+          color: white;
         }
 
         @media (max-width: 640px) {
@@ -112,11 +114,17 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
           >
-            {/* Left CTA: Outlined Button */}
+            {/* Left CTA: Outlined Button, scrolls to video */}
             <div className="flex flex-col items-center">
               <button
                 className="button-base transparent-button"
-                onClick={handleUnlockBlueprint}
+                style={{
+                  transition: 'none',
+                  textDecoration: 'none',
+                  outline: 'none'
+                }}
+                onClick={handleScrollToVideo}
+                type="button"
               >
                 ▶️ WATCH THE “YOU’RE FIRED” PITCH
               </button>
