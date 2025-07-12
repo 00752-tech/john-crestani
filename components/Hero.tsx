@@ -129,16 +129,17 @@ export default function Hero() {
 
         {/* Right Column: Hero Image */}
         <div className="hidden md:flex w-1/2 justify-center items-center">
-          <Image
-            src="/hero_man_hat.webp"
-            alt="John Crestani"
-            width={600}
-            height={600}
-            className="rounded-lg shadow-2xl object-cover"
-            priority
-            style={{ maxWidth: '480px', width: '100%', height: 'auto' }}
-          />
-        </div>
+  <Image
+    src="/hero_man_hat.webp"
+    alt="John Crestani"
+    width={800}      // Set to your original or desired large size
+    height={800}
+    className="rounded-lg shadow-2xl object-cover"
+    priority
+    style={{ width: '100%', height: 'auto', maxWidth: '700px' }} // Remove or adjust maxWidth as needed
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+  />
+</div>
       </div>
     </section>
   )
