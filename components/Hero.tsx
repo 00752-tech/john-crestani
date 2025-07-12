@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 export default function Hero() {
@@ -41,9 +42,9 @@ export default function Hero() {
           background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
           color: white;
           font-weight: 600;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
           letter-spacing: 0.04em;
-          padding: 1.25rem 2.5rem;
+          padding: 1.1rem 2.2rem;
           border-radius: 9999px;
           box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
           transition: background 0.2s, transform 0.15s;
@@ -54,64 +55,79 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col items-center justify-center px-4 sm:px-8">
-        {/* Kicker */}
-        <span className="block kicker text-left uppercase text-base sm:text-lg md:text-xl text-gray-400 tracking-widest mb-6 mt-2">
-          🚨 AI IS CHANGING EVERYTHING
-        </span>
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
+        {/* Left Column */}
+        <div className="w-full md:w-1/2 flex flex-col items-start md:pr-8">
+          {/* Kicker */}
+          <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-6 mt-2">
+            🚨 AI IS CHANGING EVERYTHING
+          </span>
 
-        {/* Headline */}
-        <h1 className="text-left font-bold text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl">
-          AI Threatens Your Job. Here&apos;s How To Turn It Into Your Untapped Goldmine.
-        </h1>
+          {/* Headline */}
+          <h1 className="font-bold text-white leading-tight mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left">
+            AI Threatens Your Job. Here&apos;s How To Turn It Into Your Untapped Goldmine.
+          </h1>
 
-        {/* Subheadline */}
-        <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-5 mt-2 max-w-2xl text-left">
-          John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
-        </p>
+          {/* Subheadline */}
+          <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-4 mt-1 max-w-lg text-left">
+            John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
+          </p>
 
-        {/* Core Benefits */}
-        <ul className="mb-7 mt-2 max-w-2xl text-left space-y-2 text-gray-300 text-base sm:text-lg font-light">
-          <li>
-            <span className="text-blue-400 mr-2">•</span>
-            <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
-          </li>
-          <li>
-            <span className="text-blue-400 mr-2">•</span>
-            <b>Profiting From The AI Revolution:</b> Turn the very thing that scares others into your competitive edge.
-          </li>
-          <li>
-            <span className="text-blue-400 mr-2">•</span>
-            <b>Working From Anywhere:</b> No boss, no burnout, no guesswork – just pure, repeatable income potential.
-          </li>
-        </ul>
+          {/* Core Benefits */}
+          <ul className="mb-6 mt-2 max-w-lg text-left space-y-2 text-gray-300 text-base sm:text-lg font-light">
+            <li>
+              <span className="text-blue-400 mr-2">•</span>
+              <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
+            </li>
+            <li>
+              <span className="text-blue-400 mr-2">•</span>
+              <b>Profiting From The AI Revolution:</b> Turn the very thing that scares others into your competitive edge.
+            </li>
+            <li>
+              <span className="text-blue-400 mr-2">•</span>
+              <b>Working From Anywhere:</b> No boss, no burnout, no guesswork – just pure, repeatable income potential.
+            </li>
+          </ul>
 
-        {/* CTA Button */}
-        <button
-          className="cta-main w-full sm:w-auto mb-3"
-          onClick={handleRevealSecrets}
-          type="button"
-        >
-          YES! I WANT TO UNLOCK The $27 AI Income System!
-        </button>
+          {/* CTA Button */}
+          <button
+            className="cta-main w-full sm:w-auto mb-3"
+            onClick={handleRevealSecrets}
+            type="button"
+          >
+            YES! I WANT TO UNLOCK The $27 AI Income System!
+          </button>
 
-        {/* Value/Urgency Reinforcement */}
-        <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-center">
-          Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
-          {/* Optional: Insert a countdown timer graphic here */}
-        </div>
+          {/* Value/Urgency Reinforcement */}
+          <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
+            Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
+            {/* Optional: Insert a countdown timer graphic here */}
+          </div>
 
-        {/* Social Proof */}
-        <div className="flex flex-col items-center mt-2">
-          <div className="flex items-center mb-1">
-            <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
-            <span className="text-gray-300 text-base font-medium ml-2">
-              Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
+          {/* Social Proof */}
+          <div className="flex flex-col items-start mt-2">
+            <div className="flex items-center mb-1">
+              <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
+              <span className="text-gray-300 text-base font-medium ml-2">
+                Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
+              </span>
+            </div>
+            <span className="text-xs text-gray-400">
+              Backed by a Rock-Solid 60-Day Money-Back Guarantee.
             </span>
           </div>
-          <span className="text-xs text-gray-400">
-            Backed by a Rock-Solid 60-Day Money-Back Guarantee.
-          </span>
+        </div>
+
+        {/* Right Column: Hero Image */}
+        <div className="hidden md:flex w-1/2 justify-center items-center">
+          <Image
+            src="/hero_man_hat.webp"
+            alt="John Crestani"
+            width={500}
+            height={500}
+            className="rounded-lg shadow-2xl object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
