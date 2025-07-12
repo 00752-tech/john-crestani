@@ -58,7 +58,7 @@ export default function Hero() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          transition: none;
+          transition: all 0.2s cubic-bezier(.4,0,.2,1);
           height: 60px;
           text-transform: uppercase;
           white-space: nowrap;
@@ -81,8 +81,12 @@ export default function Hero() {
           color: white;
         }
         .transparent-button:hover {
-          background-color: transparent;
-          color: white;
+          background-color: white;
+          color: black;
+        }
+        .transparent-button:active {
+          background-color: #f3f4f6;
+          color: black;
         }
         h1 {
           font-family: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
@@ -121,7 +125,7 @@ export default function Hero() {
             <span className="text-gray-400 italic"><i>replaces you</i></span>
           </h1>
 
-          <p className="mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-400 font-extralight tracking-tight">
+          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-400 font-extralight tracking-tight">
             John Crestani’s $27 AI system flips fear into freedom— <span className="text-white font-light">no boss, no burnout, no guesswork.</span>
           </p>
 
@@ -136,7 +140,7 @@ export default function Hero() {
               <button
                 className="button-base transparent-button"
                 style={{
-                  transition: 'none',
+                  transition: 'all 0.2s cubic-bezier(.4,0,.2,1)',
                   textDecoration: 'none',
                   outline: 'none'
                 }}
