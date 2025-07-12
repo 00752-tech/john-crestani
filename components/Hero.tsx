@@ -9,7 +9,9 @@ export default function Hero() {
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime')
+    router.push(
+      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
+    )
   }
 
   return (
@@ -71,35 +73,42 @@ export default function Hero() {
               fontWeight: 200,
             }}
           >
-            <span className="text-yellow-400">AI Threatens Your Job.</span>{' '}
-            <span className="text-gray-400">
-              Here&apos;s How To Turn It Into Your Untapped Goldmine.
+            <span className="text-white">
+              AI threatens your job.
+            </span>{' '}
+            <span className="text-white">
+              Here&apos;s how to turn it into your{' '}
+              <span className="text-yellow-400">untapped goldmine</span>.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-            John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
+            John Crestani&apos;s new $27 AI system: leverage the power of AI to build an online income stream – no tech skills needed.
           </p>
 
           {/* Core Benefits */}
           <ul className="mb-5 mt-1 max-w-lg text-left space-y-2 text-gray-300 text-sm sm:text-base font-light leading-relaxed">
             <li>
               <span className="text-blue-400 mr-2">•</span>
-              <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
+              <b>Escaping the 9-5 grind:</b> Finally achieve the financial freedom you crave.
             </li>
             <li>
               <span className="text-blue-400 mr-2">•</span>
-              <b>Profiting From The AI Revolution:</b> Turn the very thing that scares others into your competitive edge.
+              <b>Profiting from the AI revolution:</b> Turn the very thing that scares others into your competitive edge.
             </li>
             <li>
               <span className="text-blue-400 mr-2">•</span>
-              <b>Working From Anywhere:</b> No boss, no burnout, no guesswork—just pure, repeatable income potential.
+              <b>Working from anywhere:</b> No boss, no burnout, no guesswork—just pure, repeatable income potential.
             </li>
           </ul>
 
           {/* CTA Button */}
-          <button className="cta-main w-full sm:w-auto mb-3" onClick={handleRevealSecrets} type="button">
+          <button
+            className="cta-main w-full sm:w-auto mb-3"
+            onClick={handleRevealSecrets}
+            type="button"
+          >
             YES! I WANT TO UNLOCK The $27 AI Income System!
           </button>
 
