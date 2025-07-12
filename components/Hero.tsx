@@ -65,14 +65,18 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className="font-thin text-white leading-tight mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-xl text-left"
-            style={{
-              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-              fontWeight: 200,
-            }}
-          >
-            AI Threatens Your Job. Here&apos;s How To Turn It Into Your Untapped Goldmine.
-          </h1>
+  className="font-thin text-white leading-tight mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-xl text-left"
+  style={{
+    fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+    fontWeight: 200,
+  }}
+>
+  <span className="text-yellow-400 not-italic">AI Threatens Your Job.</span>{' '}
+  <span className="italic text-gray-400">
+    Here&apos;s How To Turn It Into Your Untapped Goldmine.
+  </span>
+</h1>
+
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-sm sm:text-base md:text-lg mb-3 mt-1 max-w-lg text-left">
