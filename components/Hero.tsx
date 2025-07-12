@@ -8,11 +8,12 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
 
+  // Scrolls to the video section with a negative offset (moves thumbnail UP)
   const handleScrollToVideo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     const el = document.getElementById('video')
     if (el) {
-      const offset = 80
+      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch)
       const y = el.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
@@ -36,7 +37,6 @@ export default function Hero() {
           font-style: normal;
           font-display: swap;
         }
-
         @font-face {
           font-family: 'IBM Plex Mono';
           src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
@@ -44,15 +44,12 @@ export default function Hero() {
           font-style: normal;
           font-display: swap;
         }
-
         body {
-          font-family: 'Satoshi', sans-serif;
+          font-family: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
         }
-
         .kicker {
           font-family: 'IBM Plex Mono', monospace;
         }
-
         .button-base {
           padding: 12px 24px;
           border-radius: 8px;
@@ -70,34 +67,38 @@ export default function Hero() {
           width: 100%;
           max-width: 380px;
         }
-
         .blue-gradient-button {
           background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
           color: white;
         }
-
         .blue-gradient-button:hover {
           background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
           transform: scale(1.05);
         }
-
         .transparent-button {
           border: 2px solid white;
           background-color: transparent;
           color: white;
         }
-
         .transparent-button:hover {
           background-color: transparent;
           color: white;
         }
-
-        @media (max-width: 640px) {
-          h1 {
-            font-size: 2.5rem !important;
-            line-height: 1.2 !important;
-            letter-spacing: -0.01em;
-          }
+        h1 {
+          font-family: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+          font-weight: 200;
+          letter-spacing: -0.01em;
+          line-height: 1.08;
+          font-size: 3rem;
+        }
+        @media (min-width: 640px) {
+          h1 { font-size: 4rem; }
+        }
+        @media (min-width: 768px) {
+          h1 { font-size: 4.5rem; }
+        }
+        @media (min-width: 1024px) {
+          h1 { font-size: 5rem; }
         }
       `}</style>
 
@@ -114,9 +115,9 @@ export default function Hero() {
             🚨 Millions will lose jobs to AI by 2026
           </span>
 
-          <h1 className="text-left text-[3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] font-thin leading-tight mb-4 md:mb-6 text-white">
+          <h1 className="text-left mb-4 md:mb-6 text-white font-thin">
             <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
-            <span className="text-gray-400 italic">replaces you</span>
+            <span className="text-gray-400 italic"><i>replaces you</i></span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
@@ -173,13 +174,28 @@ export default function Hero() {
               </span>
             </div>
           </motion.div>
+        </motion.div>
 
-          {/* Testimonial Block */}
-          <motion.div
-            className="mt-10 text-left bg-[#111827] border border-gray-700 rounded-lg p-6 shadow-md"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-          >
-            <p className="text-sm sm:text-base text-gray-300 italic leading-relaxed
+        {/* Right Column */}
+        <motion.div
+          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0 lg:items-start"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          <div className="relative w-full max-w-none h-auto">
+            <Image
+              src="/hero_man_hat.webp"
+              alt="John Crestani"
+              width={1200}
+              height={1200}
+              priority
+              loading="eager"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
