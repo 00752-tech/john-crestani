@@ -8,12 +8,11 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
 
-  // Scrolls to the video section with a negative offset (moves thumbnail UP)
   const handleScrollToVideo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     const el = document.getElementById('video')
     if (el) {
-      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch)
+      const offset = 80
       const y = el.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
@@ -98,17 +97,17 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          {/* Kicker with extra margin-bottom for space */}
           <span className="block text-left text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-10 mt-2">
-            🚨 MILLIONS WILL LOSE JOBS TO AI BY 2026
+            🚨 Millions will lose jobs to AI by 2026
           </span>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
-            <span className="text-yellow-400 font-semibold">Escape</span> Before AI <span className="text-gray-400"><i>Replaces You</i></span>
+            <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
+            <span className="text-gray-400"><i>replaces you</i></span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
-            Learn how John Crestani&apos;s $27 AI-powered system earns daily commissions— <span className="text-white font-light">no boss, no burnout.</span>
+            John Crestani’s $27 AI system flips fear into freedom— <span className="text-white font-light">no boss, no burnout, no guesswork.</span>
           </p>
 
           <motion.div
@@ -118,7 +117,6 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
           >
-            {/* Left CTA: Outlined Button, scrolls to video */}
             <div className="flex flex-col items-center">
               <button
                 className="button-base transparent-button"
@@ -130,7 +128,7 @@ export default function Hero() {
                 onClick={handleScrollToVideo}
                 type="button"
               >
-                ▶️ WATCH THE “YOU’RE FIRED” PITCH
+                ▶️ Watch the “You’re Fired” Pitch
               </button>
 
               <div className="mt-3 flex items-center space-x-2">
@@ -147,13 +145,12 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right CTA: Blue Button */}
             <div className="flex flex-col items-center">
               <button
                 className="button-base blue-gradient-button group"
                 onClick={handleRevealSecrets}
               >
-                🔓 UNLOCK THE $27 AI SYSTEM
+                🔓 Unlock the $27 AI System
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
