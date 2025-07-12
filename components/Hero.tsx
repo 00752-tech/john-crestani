@@ -65,22 +65,22 @@ export default function Hero() {
             🚨 AI IS CHANGING EVERYTHING
           </span>
 
-          {/* Headline */}
-          <h1
-            className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
-            style={{
-              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-              fontWeight: 200,
-            }}
-          >
-            <span className="text-white">
-              AI threatens your job.
-            </span>{' '}
-            <span className="text-white">
-              Here&apos;s how to turn it into your{' '}
-              <span className="text-yellow-400">untapped goldmine</span>.
-            </span>
-          </h1>
+         <h1
+  className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
+  style={{
+    fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+    fontWeight: 200,
+  }}
+>
+  <span className="text-gray-400">
+    AI threatens your job.
+  </span>{' '}
+  <span className="text-white">
+    Here&apos;s how to turn it into your{' '}
+    <span className="text-yellow-400">untapped goldmine</span>.
+  </span>
+</h1>
+
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
