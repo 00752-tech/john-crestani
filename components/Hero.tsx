@@ -57,7 +57,7 @@ export default function Hero() {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
         {/* Left Column */}
-        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 pl-4">
+        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-8">
           {/* Kicker */}
           <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
             🚨 AI IS CHANGING EVERYTHING
@@ -109,7 +109,7 @@ export default function Hero() {
           </div>
 
           {/* Social Proof */}
-          <div className="flex flex-col items-start mt-2">
+          <div className="flex flex-col items-start mt-2 mb-20">
             <div className="flex items-center mb-1">
               <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
               <span className="text-gray-300 text-base font-medium ml-2">
