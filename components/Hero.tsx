@@ -51,7 +51,8 @@ export default function Hero() {
           box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
           transition: background 0.2s, transform 0.15s;
         }
-        .cta-main:hover, .cta-main:focus {
+        .cta-main:hover,
+        .cta-main:focus {
           background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
           transform: scale(1.04);
         }
@@ -59,28 +60,26 @@ export default function Hero() {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
         {/* Left Column */}
-        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-16">
+        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-10">
           {/* Kicker */}
           <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
             🚨 AI IS CHANGING EVERYTHING
           </span>
 
-         <h1
-  className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
-  style={{
-    fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-    fontWeight: 200,
-  }}
->
-  <span className="text-gray-400">
-    AI threatens your job.
-  </span>{' '}
-  <span className="text-white">
-    Here&apos;s how to turn it into your{' '}
-    <span className="text-yellow-400">untapped goldmine</span>.
-  </span>
-</h1>
-
+          {/* Headline */}
+          <h1
+            className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
+            style={{
+              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+              fontWeight: 200,
+            }}
+          >
+            <span className="text-gray-400">AI threatens your job.</span>{' '}
+            <span className="text-white">
+              Here&apos;s how to turn it into your{' '}
+              <span className="text-yellow-400">untapped goldmine</span>.
+            </span>
+          </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
@@ -88,7 +87,7 @@ export default function Hero() {
           </p>
 
           {/* Core Benefits as Horizontal Features */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full mb-4 mt-1">
+          <div className="flex flex-col sm:flex-row gap-6 w-full mb-4 mt-1">
             <div className="flex-1 min-w-[180px]">
               <span className="block text-white text-base sm:text-lg">
                 <span className="font-semibold text-blue-400">Escaping the 9-5 grind:</span>{' '}
@@ -111,7 +110,7 @@ export default function Hero() {
 
           {/* CTA Button */}
           <button
-            className="cta-main w-full sm:w-auto mb-3"
+            className="cta-main w-full sm:w-auto mb-3 mt-0"
             onClick={handleRevealSecrets}
             type="button"
           >
@@ -142,12 +141,12 @@ export default function Hero() {
           <Image
             src="/hero_man_hat.webp"
             alt="John Crestani"
-            width={1000}
-            height={1000}
+            width={1100}
+            height={1100}
             className="rounded-lg shadow-2xl object-cover"
             priority
-            style={{ width: '100%', height: 'auto', maxWidth: '900px' }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px"
+            style={{ width: '100%', height: 'auto', maxWidth: '1000px' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
           />
         </div>
       </div>
