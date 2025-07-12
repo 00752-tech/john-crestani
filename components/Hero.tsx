@@ -67,11 +67,14 @@ export default function Hero() {
           </span>
 
           {/* Headline */}
-          <h1 className="text-left max-w-xl leading-tight mb-6">
-            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250]">
+          <h1 className="text-left leading-tight mb-6 max-w-2xl">
+            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250] whitespace-nowrap">
               AI threatens your job.
             </span>
-            <span className="block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-extralight mt-2">
+            <span
+              className="block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2"
+              style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}
+            >
               Here&apos;s how to turn it into your{' '}
               <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
             </span>
