@@ -94,15 +94,15 @@ export default function Hero() {
         >
           {/* Kicker with extra margin-bottom for space */}
           <span className="block text-left text-xs sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-10 mt-2">
-            🔥 2,137+ EARLY ADOPTERS SECURED ACCESS
+            🚨 MILLIONS WILL LOSE JOBS TO AI BY 2026
           </span>
 
           <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-light mb-4 md:mb-6 leading-tight text-white">
-            <span className="text-yellow-400 font-semibold">$27 AI System</span> Revealed: John Crestani&apos;s 2025 <span className="text-gray-400">Faceless Formula</span>
+            <span className="text-yellow-400 font-semibold">Escape</span> Before AI <span className="text-gray-400">Replaces You</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
-            Launch a faceless affiliate biz in 7 min/day— <span className="text-white font-light">no camera, no guesswork, no burnout.</span>
+            Learn how John Crestani&apos;s $27 AI-powered system earns daily commissions— <span className="text-white font-light">no boss, no burnout.</span>
           </p>
 
           <motion.div
@@ -117,7 +117,7 @@ export default function Hero() {
                 className="button-base transparent-button"
                 onClick={handleUnlockBlueprint}
               >
-                YES! I WANT IN FOR $27
+                ▶️ Watch the “You’re Fired” Pitch
               </button>
 
               <div className="mt-3 flex items-center space-x-2">
@@ -139,7 +139,7 @@ export default function Hero() {
                 className="button-base blue-gradient-button group"
                 onClick={handleRevealSecrets}
               >
-                SHOW ME THE SYSTEM
+                🔓 Unlock the $27 AI System
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
