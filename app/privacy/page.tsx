@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
             <p>
               If you have any questions about this privacy policy or our privacy practices, please contact us at:
             </p>
-            <p>Email: passiveincomestreaming@gmail.com</p>
+            <p>Email: info@johncrestani.me</p>
           </section>
 
           <section className="space-y-4">
