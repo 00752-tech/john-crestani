@@ -73,13 +73,13 @@ export default function Hero() {
           >
             <span className="text-yellow-400">AI Threatens Your Job.</span>{' '}
             <span className="text-gray-400">
-              Here's How To Turn It Into Your Untapped Goldmine.
+              Here&apos;s How To Turn It Into Your Untapped Goldmine.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-            John Crestani's New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
+            John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
           </p>
 
           {/* Core Benefits */}
@@ -105,7 +105,7 @@ export default function Hero() {
 
           {/* Value/Urgency Reinforcement */}
           <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
-            Limited-Time Offer: Secure Your Spot & FREE Website Bonus NOW!
+            Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
           </div>
 
           {/* Social Proof */}
