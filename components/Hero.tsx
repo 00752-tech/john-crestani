@@ -120,7 +120,7 @@ export default function Hero() {
           </span>
 
           <h1 className="text-left mb-4 md:mb-6 text-white font-thin">
-            <span className="text-yellow-400 font-semibold">Escape</span> before AI
+            <span className="text-yellow-400">Escape</span> before AI
             <span className="hidden sm:inline"><br /></span>
             <span className="text-gray-400 italic"><i>replaces you</i></span>
           </h1>
