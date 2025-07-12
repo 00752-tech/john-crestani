@@ -18,6 +18,12 @@ export default function Hero() {
     router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime')
   }
 
+  // NEW: Scroll to video section handler
+  const handleScrollToVideo = () => {
+    const el = document.getElementById('video')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section
       className="min-h-screen pt-0 pb-2 bg-black text-white overflow-hidden relative xl:flex xl:justify-center xl:items-center"
@@ -147,6 +153,23 @@ export default function Hero() {
               <span className="text-xs sm:text-sm text-gray-400 mt-2 tracking-tight">
                 Free: 7-Minute Action Checklist + Viral Content Generator + Affiliate Tracker
               </span>
+            </div>
+
+            {/* NEW: Scroll to Video Button */}
+            <div className="flex flex-col items-center">
+              <button
+                className="button-base bg-pink-500 text-white font-bold shadow-lg text-lg cursor-pointer select-none rounded-full"
+                style={{
+                  transition: 'none',
+                  textDecoration: 'none',
+                  outline: 'none',
+                  boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)'
+                }}
+                onClick={handleScrollToVideo}
+                type="button"
+              >
+                🎥 Watch the Video
+              </button>
             </div>
           </motion.div>
         </motion.div>
