@@ -42,9 +42,9 @@ export default function Hero() {
           background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
           color: white;
           font-weight: 600;
-          font-size: 1.15rem;
+          font-size: 1rem;
           letter-spacing: 0.04em;
-          padding: 1.1rem 2.2rem;
+          padding: 0.7rem 1.6rem;
           border-radius: 9999px;
           box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
           transition: background 0.2s, transform 0.15s;
@@ -57,34 +57,33 @@ export default function Hero() {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
         {/* Left Column */}
-        <div className="w-full md:w-1/2 flex flex-col items-start md:pr-8">
+        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10">
           {/* Kicker */}
-          <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-6 mt-2">
+          <span className="kicker uppercase text-xs sm:text-sm md:text-base text-gray-400 tracking-widest mb-5 mt-2">
             🚨 AI IS CHANGING EVERYTHING
           </span>
 
           {/* Headline */}
           <h1
-  className="font-thin text-white leading-tight mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-xl text-left"
-  style={{
-    fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-    fontWeight: 200,
-  }}
->
-  <span className="text-yellow-400 not-italic">AI Threatens Your Job.</span>{' '}
-  <span className="text-gray-400">
-    Here&apos;s How To Turn It Into Your Untapped Goldmine.
-  </span>
-</h1>
-
+            className="font-thin text-white leading-tight mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-lg text-left"
+            style={{
+              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+              fontWeight: 200,
+            }}
+          >
+            <span className="text-yellow-400">AI Threatens Your Job.</span>{' '}
+            <span className="text-gray-400">
+              Here&apos;s How To Turn It Into Your Untapped Goldmine.
+            </span>
+          </h1>
 
           {/* Subheadline */}
-          <p className="text-gray-400 font-extralight text-sm sm:text-base md:text-lg mb-3 mt-1 max-w-lg text-left">
+          <p className="text-gray-400 font-extralight text-xs sm:text-sm md:text-base mb-2 mt-1 max-w-md text-left">
             John Crestani&apos;s New $27 AI System: Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.
           </p>
 
           {/* Core Benefits */}
-          <ul className="mb-5 mt-1 max-w-lg text-left space-y-1 text-gray-300 text-xs sm:text-sm md:text-base font-light">
+          <ul className="mb-4 mt-1 max-w-md text-left space-y-1 text-gray-300 text-xs sm:text-xs md:text-sm font-light">
             <li>
               <span className="text-blue-400 mr-2">•</span>
               <b>Escaping The 9-5 Grind:</b> Finally achieve the financial freedom you crave.
@@ -101,7 +100,7 @@ export default function Hero() {
 
           {/* CTA Button */}
           <button
-            className="cta-main w-full sm:w-auto mb-3"
+            className="cta-main w-full sm:w-auto mb-2"
             onClick={handleRevealSecrets}
             type="button"
           >
@@ -109,15 +108,15 @@ export default function Hero() {
           </button>
 
           {/* Value/Urgency Reinforcement */}
-          <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
+          <div className="text-pink-400 text-sm font-semibold mt-2 mb-3 text-left">
             Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
           </div>
 
           {/* Social Proof */}
           <div className="flex flex-col items-start mt-2">
             <div className="flex items-center mb-1">
-              <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
-              <span className="text-gray-300 text-base font-medium ml-2">
+              <span className="text-yellow-400 text-lg mr-1">⭐️⭐️⭐️⭐️⭐️</span>
+              <span className="text-gray-300 text-xs font-medium ml-2">
                 Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
               </span>
             </div>
@@ -129,17 +128,17 @@ export default function Hero() {
 
         {/* Right Column: Hero Image */}
         <div className="hidden md:flex w-1/2 justify-center items-center">
-  <Image
-    src="/hero_man_hat.webp"
-    alt="John Crestani"
-    width={800}      // Set to your original or desired large size
-    height={800}
-    className="rounded-lg shadow-2xl object-cover"
-    priority
-    style={{ width: '100%', height: 'auto', maxWidth: '700px' }} // Remove or adjust maxWidth as needed
-    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
-  />
-</div>
+          <Image
+            src="/hero_man_hat.webp"
+            alt="John Crestani"
+            width={800}
+            height={800}
+            className="rounded-lg shadow-2xl object-cover"
+            priority
+            style={{ width: '100%', height: 'auto', maxWidth: '700px' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+          />
+        </div>
       </div>
     </section>
   )
