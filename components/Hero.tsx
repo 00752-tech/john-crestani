@@ -13,7 +13,7 @@ export default function Hero() {
     e.preventDefault()
     const el = document.getElementById('video')
     if (el) {
-      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch)
+      const offset = 80 // Adjust for more/less upward movement
       const y = el.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
@@ -89,16 +89,16 @@ export default function Hero() {
           font-weight: 200;
           letter-spacing: -0.01em;
           line-height: 1.08;
-          font-size: 3rem;
+          font-size: 2.2rem;
         }
         @media (min-width: 640px) {
-          h1 { font-size: 4rem; }
+          h1 { font-size: 3rem; }
         }
         @media (min-width: 768px) {
-          h1 { font-size: 4.5rem; }
+          h1 { font-size: 4rem; }
         }
         @media (min-width: 1024px) {
-          h1 { font-size: 5rem; }
+          h1 { font-size: 4.5rem; }
         }
       `}</style>
 
@@ -116,7 +116,8 @@ export default function Hero() {
           </span>
 
           <h1 className="text-left mb-4 md:mb-6 text-white font-thin">
-            <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
+            <span className="text-yellow-400 font-semibold">Escape</span> before AI
+            <span className="hidden sm:inline"><br /></span>
             <span className="text-gray-400 italic"><i>replaces you</i></span>
           </h1>
 
