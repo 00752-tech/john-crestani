@@ -1,1 +1,6 @@
-public/fonts/NeueHaasUnicaW1G-Light.woff2
+public/
+└── fonts/
+    ├── Satoshi-Light.woff2
+    ├── DMSans-Regular.woff2
+    ├── IBMPlexMono-Regular.woff2
+    └── NeueHaasUnicaW1G-Light.woff2
