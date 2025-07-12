@@ -126,7 +126,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-400 font-extralight tracking-tight">
-            John Crestani’s $27 AI system flips fear into freedom— <span className="text-white font-light">no boss, no burnout, no guesswork.</span>
+            John Crestani’s $27 AI system flips fear into freedom— <span className="text-gray font-light">no boss, no burnout, no guesswork.</span>
           </p>
 
           <motion.div
