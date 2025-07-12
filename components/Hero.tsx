@@ -72,7 +72,7 @@ export default function Hero() {
   }}
 >
   <span className="text-yellow-400 not-italic">AI Threatens Your Job.</span>{' '}
-  <span className="italic text-gray-400">
+  <span className="text-gray-400">
     Here&apos;s How To Turn It Into Your Untapped Goldmine.
   </span>
 </h1>
