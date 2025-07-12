@@ -67,26 +67,22 @@ export default function Hero() {
           </span>
 
           {/* Headline */}
-          <h1
-            className="font-thin text-white leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl text-left"
-            style={{
-              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-              fontWeight: 200,
-            }}
-          >
-            <span className="text-gray-400">AI threatens your job.</span>{' '}
-            <span className="text-white">
-              Here&apos;s how to turn it into your{' '}
-              <span className="text-yellow-400">untapped goldmine</span>.
+          <h1 className="text-left max-w-xl leading-tight mb-6">
+            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250]">
+              AI threatens your job.
+            </span>
+            <span className="block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-extralight mt-2">
+              Here's how to turn it into your{' '}
+              <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-            John Crestani&apos;s new $27 AI system: leverage the power of AI to build an online income stream – no tech skills needed.
+            John Crestani's new $27 AI system: leverage the power of AI to build an online income stream – no tech skills needed.
           </p>
 
-          {/* Core Benefits as Horizontal Features */}
+          {/* Core Benefits */}
           <div className="flex flex-col sm:flex-row gap-6 w-full mb-4 mt-1">
             <div className="flex-1 min-w-[180px]">
               <span className="block text-white text-base sm:text-lg">
@@ -119,7 +115,7 @@ export default function Hero() {
 
           {/* Value/Urgency Reinforcement */}
           <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
-            Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
+            Limited-Time Offer: Secure Your Spot & FREE Website Bonus NOW!
           </div>
 
           {/* Social Proof */}
