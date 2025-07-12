@@ -30,15 +30,27 @@ export default function Hero() {
     >
       <style jsx global>{`
         @font-face {
-          font-family: 'Neue Haas Unica W1G';
-          src: url('/fonts/NeueHaasUnicaW1G-Light.woff2') format('woff2');
+          font-family: 'Satoshi';
+          src: url('/fonts/Satoshi-Light.woff2') format('woff2');
           font-weight: 300;
           font-style: normal;
           font-display: swap;
         }
 
+        @font-face {
+          font-family: 'IBM Plex Mono';
+          src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+
         body {
-          font-family: 'Neue Haas Unica W1G', sans-serif;
+          font-family: 'Satoshi', sans-serif;
+        }
+
+        .kicker {
+          font-family: 'IBM Plex Mono', monospace;
         }
 
         .button-base {
@@ -82,8 +94,9 @@ export default function Hero() {
 
         @media (max-width: 640px) {
           h1 {
-            font-size: 2.25rem !important;
+            font-size: 2.5rem !important;
             line-height: 1.2 !important;
+            letter-spacing: -0.01em;
           }
         }
       `}</style>
@@ -97,15 +110,14 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          <span className="block text-left text-sm sm:text-sm md:text-base font-thin text-gray-400 tracking-wide mb-10 mt-2">
+          <span className="block kicker text-left text-xs sm:text-sm md:text-base text-gray-400 tracking-wide mb-10 mt-2">
             🚨 Millions will lose jobs to AI by 2026
           </span>
 
-          <h1 className="text-left text-[3.25rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] font-thin leading-tight mb-4 md:mb-6 text-white">
-  <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
-  <span className="text-gray-400 italic">replaces you</span>
-</h1>
-
+          <h1 className="text-left text-[3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] font-thin leading-tight mb-4 md:mb-6 text-white">
+            <span className="text-yellow-400 font-semibold">Escape</span> before AI<br />
+            <span className="text-gray-400 italic">replaces you</span>
+          </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-left mb-6 md:mb-8 leading-relaxed text-gray-300 font-light tracking-tight">
             John Crestani’s $27 AI system flips fear into freedom— <span className="text-white font-light">no boss, no burnout, no guesswork.</span>
@@ -161,28 +173,13 @@ export default function Hero() {
               </span>
             </div>
           </motion.div>
-        </motion.div>
 
-        {/* Right Column */}
-        <motion.div
-          className="w-full md:w-1/2 relative flex justify-center items-center mt-8 md:mt-0 lg:items-start"
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-        >
-          <div className="relative w-full max-w-none h-auto">
-            <Image
-              src="/hero_man_hat.webp"
-              alt="John Crestani"
-              width={1200}
-              height={1200}
-              priority
-              loading="eager"
-            />
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
+          {/* Testimonial Block */}
+          <motion.div
+            className="mt-10 text-left bg-[#111827] border border-gray-700 rounded-lg p-6 shadow-md"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+          >
+            <p className="text-sm sm:text-base text-gray-300 italic leading-relaxed
