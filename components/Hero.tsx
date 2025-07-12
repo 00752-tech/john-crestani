@@ -59,7 +59,7 @@ export default function Hero() {
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
         {/* Left Column */}
-        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-8">
+        <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-16">
           {/* Kicker */}
           <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
             🚨 AI IS CHANGING EVERYTHING
@@ -87,21 +87,27 @@ export default function Hero() {
             John Crestani&apos;s new $27 AI system: leverage the power of AI to build an online income stream – no tech skills needed.
           </p>
 
-          {/* Core Benefits */}
-          <ul className="mb-5 mt-1 max-w-lg text-left space-y-2 text-gray-300 text-sm sm:text-base font-light leading-relaxed">
-            <li>
-              <span className="text-blue-400 mr-2">•</span>
-              <b>Escaping the 9-5 grind:</b> Finally achieve the financial freedom you crave.
-            </li>
-            <li>
-              <span className="text-blue-400 mr-2">•</span>
-              <b>Profiting from the AI revolution:</b> Turn the very thing that scares others into your competitive edge.
-            </li>
-            <li>
-              <span className="text-blue-400 mr-2">•</span>
-              <b>Working from anywhere:</b> No boss, no burnout, no guesswork—just pure, repeatable income potential.
-            </li>
-          </ul>
+          {/* Core Benefits as Horizontal Features */}
+          <div className="flex flex-col sm:flex-row gap-4 w-full mb-4 mt-1">
+            <div className="flex-1 min-w-[180px]">
+              <span className="block text-white text-base sm:text-lg">
+                <span className="font-semibold text-blue-400">Escaping the 9-5 grind:</span>{' '}
+                <span className="font-normal text-gray-300">Finally achieve the financial freedom you crave.</span>
+              </span>
+            </div>
+            <div className="flex-1 min-w-[180px]">
+              <span className="block text-white text-base sm:text-lg">
+                <span className="font-semibold text-blue-400">Profiting from the AI revolution:</span>{' '}
+                <span className="font-normal text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
+              </span>
+            </div>
+            <div className="flex-1 min-w-[180px]">
+              <span className="block text-white text-base sm:text-lg">
+                <span className="font-semibold text-blue-400">Working from anywhere:</span>{' '}
+                <span className="font-normal text-gray-300">No boss, no burnout, no guesswork—just pure, repeatable income potential.</span>
+              </span>
+            </div>
+          </div>
 
           {/* CTA Button */}
           <button
@@ -136,12 +142,12 @@ export default function Hero() {
           <Image
             src="/hero_man_hat.webp"
             alt="John Crestani"
-            width={800}
-            height={800}
+            width={1000}
+            height={1000}
             className="rounded-lg shadow-2xl object-cover"
             priority
-            style={{ width: '100%', height: 'auto', maxWidth: '700px' }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+            style={{ width: '100%', height: 'auto', maxWidth: '900px' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px"
           />
         </div>
       </div>
