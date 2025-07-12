@@ -1,0 +1,9 @@
+<div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+  <Image
+    src="/ambient-circuit.svg"
+    alt="Ambient AI Circuit"
+    fill
+    priority
+    className="object-cover"
+  />
+</div>
