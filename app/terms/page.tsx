@@ -80,7 +80,7 @@ export default function TermsAndConditions() {
             <p>
               If you have any questions about these Terms, please contact us at:
             </p>
-            <p>Email: passiveincomestreaming@gmail.com</p>
+            <p>Email: info@johncrestani.me</p>
           </section>
         </div>
       </div>
