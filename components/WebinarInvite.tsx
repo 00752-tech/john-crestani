@@ -46,13 +46,17 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl">
+          {/* --- Updated Thumbnail Section --- */}
+          <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl my-10 border-4 border-[#18181b]">
             {!loadEmbed ? (
               <div
                 onClick={handlePlayVideo}
                 role="button"
                 aria-label="Play Video"
                 className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
+                style={{
+                  background: 'rgba(0,0,0,0.65)'
+                }}
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
@@ -64,13 +68,14 @@ export default function WebinarInvite() {
                     priority
                   />
                 </div>
-                <div className="z-10">
+                <div className="z-10 flex items-center justify-center">
                   <svg
-                    className="w-16 h-16 text-white hover:scale-110 transition"
+                    className="w-20 h-20 text-red-600 hover:scale-110 transition"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M8 5v14l11-7z" />
+                    <circle cx="12" cy="12" r="12" fill="white" opacity="0.7"/>
+                    <polygon points="10,8 16,12 10,16" fill="currentColor"/>
                   </svg>
                 </div>
               </div>
@@ -85,6 +90,7 @@ export default function WebinarInvite() {
               />
             )}
           </div>
+          {/* --- End Thumbnail Section --- */}
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
