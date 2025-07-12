@@ -8,11 +8,15 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const router = useRouter()
 
-  // This button now scrolls to the video section
+  // Scrolls to the video section with a positive offset (moves thumbnail UP)
   const handleScrollToVideo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     const el = document.getElementById('video')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (el) {
+      const offset = 80 // Adjust this value for more/less "up" movement (80px ≈ 1 inch on most screens)
+      const y = el.getBoundingClientRect().top + window.pageYOffset + offset
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
   }
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
