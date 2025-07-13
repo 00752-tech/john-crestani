@@ -9,11 +9,11 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
   description:
-    "AI Marketers Club $27: John Crestani's 2025 AI System. Build online income creating faceless content in 7 min/day. Get the course + bonuses. 60-day guarantee.",
+    "New 2025 AI affiliate system! Create faceless content in 7 min/day with John Crestani's F.I.R. formula. $27 gets course + 8 bonuses. 60-day guarantee.",
   openGraph: {
     title: "AI Marketers Club $27: John Crestani's 2025 Faceless AI System",
     description:
-      "AI Marketers Club $27: John Crestani's 2025 AI System. Build online income creating faceless content in 7 min/day. Get the course + bonuses. 60-day guarantee.",
+      "New 2025 AI affiliate system! Create faceless content in 7 min/day with John Crestani's F.I.R. formula. $27 gets course + 8 bonuses. 60-day guarantee.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
