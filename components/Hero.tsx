@@ -88,7 +88,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI marketers club:</span> <b>leverage the power of AI to build an online income stream – No tech skills needed.</b>
+              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI marketers club:</span> <b>leverage the power of AI to build an online income stream – no tech skills needed.</b>
             </p>
 
             {/* Core Benefits */}
