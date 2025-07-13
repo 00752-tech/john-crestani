@@ -109,6 +109,18 @@ export default function Home() {
       <Hero />
       <Stats />
 
+      {/* Immediate Section Below Hero & Stats */}
+      <section className="w-full flex justify-center bg-black py-12 px-4">
+        <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col items-center p-8 md:p-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-pink-400 mb-4">
+            Still Worried About AI Taking Your Job? <span className="text-white">Here&apos;s Your Solution.</span>
+          </h2>
+          <p className="text-gray-200 text-lg md:text-xl text-center leading-relaxed max-w-2xl">
+            The future of work is changing rapidly. While many <span className="font-semibold text-yellow-400">fear AI&apos;s impact</span>, a select few are already <span className="font-semibold text-green-400">harnessing its power</span> to create new income streams online. <span className="font-semibold text-white">John Crestani</span>, a proven leader in online wealth creation, has distilled everything you need into a <span className="font-semibold text-pink-400">simple, step-by-step system</span>, designed specifically for people like <span className="font-semibold text-white">YOU</span> – <span className="italic text-gray-300">no prior tech expertise required</span>.
+          </p>
+        </div>
+      </section>
+
       {/* Modern, Breathable Intro & Benefits Section */}
       <section className="w-full flex justify-center bg-black py-16 px-4">
         <div className="w-full max-w-5xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row md:space-x-12 p-8 md:p-14 space-y-12 md:space-y-0">
@@ -202,104 +214,3 @@ export default function Home() {
               src="/the-ai-marketers-club-offer.png"
               alt="AI Marketers Club 2025 Complete Offer – all bonuses and modules included for $27"
               width={900}
-              height={600}
-              className="rounded-2xl shadow-xl"
-              style={{ maxWidth: '100%', height: 'auto', background: "#f3f4f6" }}
-              priority
-            />
-          </div>
-          <a
-            href="https://7b3cf-f2p0ft1p8a8ne-2u5ta2.hop.clickbank.net/?&traffic_source=image_cta_button"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg cursor-pointer select-none"
-            style={{
-              transition: 'none',
-              textDecoration: 'none',
-              outline: 'none',
-              boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)'
-            }}
-            tabIndex={0}
-            title=""
-            onMouseOver={e => e.currentTarget.style.textDecoration = 'none'}
-            onFocus={e => e.currentTarget.style.textDecoration = 'none'}
-          >
-            Get Instant Access for $27
-          </a>
-        </div>
-      </section>
-
-      {/* Old Way vs. New Way Comparison Section */}
-      <section className="w-full bg-black flex flex-col items-center py-12 px-4">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-green-400 tracking-tight">
-          The Old Way vs. The New Way
-        </h3>
-        <p className="text-gray-300 text-center max-w-2xl mb-8">
-          See how the AI Marketers Club flips the script on traditional online business. No more burnout, guesswork, or trading time for uncertain results—just a proven, plug-and-play system for real freedom.
-        </p>
-        <div
-          className="mx-auto w-full max-w-2xl bg-gray-100 border border-gray-200 rounded-2xl shadow-xl p-8 flex justify-center"
-        >
-          <Image
-            src="/old-vs-new-way-graphic.png"
-            alt="Old Way vs New Way - AI Marketers Club Comparison"
-            width={600}
-            height={700}
-            className="rounded-xl"
-            style={{ maxWidth: '100%', height: 'auto', background: 'transparent' }}
-            priority
-          />
-        </div>
-      </section>
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <DynamicFreeTools />
-      </Suspense>
-
-      {/* === VIDEO SECTION WITH ID FOR SCROLL === */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <div id="video">
-          <WebinarInvite />
-        </div>
-      </Suspense>
-      {/* === END VIDEO SECTION === */}
-
-      <Testimonials />
-
-      {/* AI Statistics Infographic Section */}
-      <div className="flex justify-center my-12 px-4">
-        <Image
-          src="/ai-usage-chart.jpg"
-          alt="AI Statistics Infographic: Key global AI usage, adoption, and growth trends for 2025. Source: Digital Silk, June 2025."
-          width={700}
-          height={1100}
-          className="rounded-xl shadow-xl border-2 border-pink-500 bg-white"
-          loading="eager"
-          priority
-        />
-      </div>
-      <p className="text-center text-xs text-gray-400 mt-2 mb-8">
-        Infographic: Digital Silk. (2025). AI statistics [Infographic]. Retrieved June 2025,{' '}
-        <span className="underline">
-          <a
-            href="https://www.digitalsilk.com/digital-trends/ai-statistics/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            digitalsilk.com
-          </a>
-        </span>
-      </p>
-
-      <FAQ />
-      <CTA />
-      <div className="container mx-auto px-4 py-8">
-        <Suspense fallback={<div>Loading...</div>}>
-          <DynamicShareButtons url={pageUrl} title={pageTitle} />
-        </Suspense>
-      </div>
-      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
-      <Footer />
-    </main>
-  );
-}
