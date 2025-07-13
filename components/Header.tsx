@@ -21,82 +21,21 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      {/* Conversion-Optimized Green Banner */}
-      <div
-        className="top-banner w-full"
-        style={{
-          background: 'linear-gradient(90deg, #22c55e 0%, #a3e635 100%)',
-          color: '#1a1a1a',
-          textAlign: 'center',
-          padding: '14px 0',
-          fontWeight: 800,
-          fontSize: '18px',
-          boxShadow: '0 4px 12px rgba(34,197,94,0.15)',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '10px',
-          letterSpacing: '0.01em',
-          zIndex: 200,
-          position: 'relative',
-        }}
-      >
-        <span role="img" aria-label="fire">🔥</span>
-        <span style={{ color: '#1a1a1a', fontWeight: 900 }}>NEW 2025 LAUNCH</span>
-        <span>:</span>
-        <span style={{ borderBottom: '2px dashed #22d3ee', color: '#1a1a1a' }}>$27 EARLY BIRD</span>
-        <span>+ FREE WEBSITE BONUS ($297 VALUE)</span>
-        <span style={{ color: '#166534', fontWeight: 900 }}>• 60-DAY GUARANTEE</span>
-        <span>•</span>
-        <button
-          type="button"
-          onClick={() => {
-            window.location.href =
-              'https://84c8dn52g82pdn1i9dhx9ody5g.hop.clickbank.net/?&traffic_source=hero_banner_cta';
-          }}
-          style={{
-            background: 'linear-gradient(90deg, #16a34a 0%, #bef264 100%)',
-            color: '#1a1a1a',
-            padding: '6px 20px',
-            borderRadius: '24px',
-            marginLeft: '10px',
-            fontWeight: 900,
-            fontSize: '16px',
-            border: 'none',
-            cursor: 'pointer',
-            outline: 'none',
-            boxShadow: '0 2px 10px 0 rgba(34,197,94,0.12)',
-            transition: 'background 0.15s, color 0.15s',
-          }}
-          aria-label="Grab Discount"
-        >
-          GRAB DISCOUNT →
-        </button>
+      {/* The gradient banner you like, now at the very top */}
+      <div className="w-full flex justify-center z-50">
+        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex items-center gap-2 w-full justify-center">
+          <span>⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE ⭐</span>
+          <button
+            className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
+            onClick={() => {
+              const cta = document.getElementById('hero-cta');
+              if (cta) cta.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            GRAB DISCOUNT →
+          </button>
+        </div>
       </div>
-
-      <style jsx>{`
-        .top-banner button:hover,
-        .top-banner button:focus {
-          background: linear-gradient(90deg, #bef264 0%, #16a34a 100%) !important;
-          color: #166534 !important;
-        }
-        @media (max-width: 768px) {
-          .top-banner {
-            font-size: 13px !important;
-            padding: 8px 0 !important;
-            gap: 4px !important;
-          }
-          .top-banner span:nth-child(3),
-          .top-banner span:nth-child(6) {
-            display: none;
-          }
-          .top-banner button {
-            font-size: 13px !important;
-            padding: 4px 12px !important;
-          }
-        }
-      `}</style>
 
       <nav className="bg-black bg-opacity-80 backdrop-blur-md text-white py-1">
         <div className="container mx-auto flex justify-between items-center px-4">
