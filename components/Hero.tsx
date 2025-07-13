@@ -187,7 +187,7 @@ export default function Hero() {
           <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
             Don&apos;t Just Take Our Word For It. See The Results.
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 w-full mb-8">
             {stats.map((item, idx) => (
               <motion.div
                 key={idx}
