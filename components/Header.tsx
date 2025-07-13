@@ -21,33 +21,33 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full z-50">
-      {/* Updated Conversion-Optimized Banner */}
+      {/* Conversion-Optimized Green Banner */}
       <div
-        className="top-banner"
+        className="top-banner w-full"
         style={{
-          background: 'linear-gradient(90deg, #1a237e, #4a148c)',
-          color: 'white',
+          background: 'linear-gradient(90deg, #22c55e 0%, #a3e635 100%)',
+          color: '#1a1a1a',
           textAlign: 'center',
-          padding: '12px 15px',
-          fontWeight: '700',
+          padding: '14px 0',
+          fontWeight: 800,
           fontSize: '18px',
-          position: 'relative',
-          zIndex: '100',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          boxShadow: '0 4px 12px rgba(34,197,94,0.15)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '8px',
+          gap: '10px',
+          letterSpacing: '0.01em',
+          zIndex: 200,
+          position: 'relative',
         }}
       >
-        <span>🔥</span>
-        <span style={{ color: '#ffeb3b' }}>NEW 2025 LAUNCH</span>
+        <span role="img" aria-label="fire">🔥</span>
+        <span style={{ color: '#1a1a1a', fontWeight: 900 }}>NEW 2025 LAUNCH</span>
         <span>:</span>
-        <span style={{ borderBottom: '2px dashed #ff4081' }}>$27 EARLY BIRD</span>
+        <span style={{ borderBottom: '2px dashed #22d3ee', color: '#1a1a1a' }}>$27 EARLY BIRD</span>
         <span>+ FREE WEBSITE BONUS ($297 VALUE)</span>
-        <span>•</span>
-        <span style={{ color: '#76ff03' }}>60-DAY GUARANTEE</span>
+        <span style={{ color: '#166534', fontWeight: 900 }}>• 60-DAY GUARANTEE</span>
         <span>•</span>
         <button
           type="button"
@@ -56,18 +56,18 @@ export default function Header() {
               'https://84c8dn52g82pdn1i9dhx9ody5g.hop.clickbank.net/?&traffic_source=hero_banner_cta';
           }}
           style={{
-            background: '#ff4081',
-            color: 'white',
-            padding: '4px 12px',
-            borderRadius: '20px',
+            background: 'linear-gradient(90deg, #16a34a 0%, #bef264 100%)',
+            color: '#1a1a1a',
+            padding: '6px 20px',
+            borderRadius: '24px',
             marginLeft: '10px',
-            fontWeight: '800',
-            animation: 'pulse 2s infinite',
+            fontWeight: 900,
+            fontSize: '16px',
             border: 'none',
             cursor: 'pointer',
             outline: 'none',
-            boxShadow: 'none',
-            textDecoration: 'none',
+            boxShadow: '0 2px 10px 0 rgba(34,197,94,0.12)',
+            transition: 'background 0.15s, color 0.15s',
           }}
           aria-label="Grab Discount"
         >
@@ -76,31 +76,24 @@ export default function Header() {
       </div>
 
       <style jsx>{`
-        @keyframes pulse {
-          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.7); }
-          70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(255, 64, 129, 0); }
-          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
-        }
-        .top-banner button {
-          transition: none !important;
-        }
         .top-banner button:hover,
         .top-banner button:focus {
-          /* Disable hover/focus visual changes */
-          background: #ff4081 !important;
-          transform: none !important;
-          box-shadow: none !important;
-          outline: none !important;
+          background: linear-gradient(90deg, #bef264 0%, #16a34a 100%) !important;
+          color: #166534 !important;
         }
         @media (max-width: 768px) {
           .top-banner {
-            font-size: 14px;
-            padding: 8px 10px;
-            gap: 4px;
+            font-size: 13px !important;
+            padding: 8px 0 !important;
+            gap: 4px !important;
           }
           .top-banner span:nth-child(3),
           .top-banner span:nth-child(6) {
             display: none;
+          }
+          .top-banner button {
+            font-size: 13px !important;
+            padding: 4px 12px !important;
           }
         }
       `}</style>
