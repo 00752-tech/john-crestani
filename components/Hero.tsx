@@ -160,37 +160,38 @@ export default function Hero() {
 
       {/* AUTHORITY & PROOF SECTION (Immediately after Hero) */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
-        <div className="w-full max-w-4xl flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
-            Don&apos;t Just Take Our Word For It. See The Results.
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full">
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">50,000+</span>
-              <span className="text-gray-300 text-sm md:text-base text-center">Students Trained</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">$20M+</span>
-              <span className="text-gray-300 text-sm md:text-base text-center">Affiliate Commissions</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">9+</span>
-              <span className="text-gray-300 text-sm md:text-base text-center">Years of Innovation</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">4.6</span>
-              <span className="text-gray-300 text-sm md:text-base text-center">Avg. Trustpilot Score</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">96%</span>
-              <span className="text-gray-300 text-sm md:text-base text-center">Student Satisfaction</span>
-            </div>
-          </div>
-          <div className="mt-5 text-gray-400 text-center text-base md:text-lg">
-            <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
-          </div>
-        </div>
-      </section>
+  <div className="w-full max-w-4xl flex flex-col items-center">
+    <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
+      Don&apos;t Just Take Our Word For It. See The Results.
+    </h2>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full mb-8">
+      <div className="flex flex-col items-center">
+        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">50,000+</span>
+        <span className="text-gray-300 text-sm md:text-base text-center">Students Trained</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">$20M+</span>
+        <span className="text-gray-300 text-sm md:text-base text-center">Affiliate Commissions</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">9+</span>
+        <span className="text-gray-300 text-sm md:text-base text-center">Years of Innovation</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">4.6</span>
+        <span className="text-gray-300 text-sm md:text-base text-center">Avg. Trustpilot Score</span>
+      </div>
+      <div className="flex flex-col items-center">
+        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">96%</span>
+        <span className="text-gray-300 text-sm md:text-base text-center">Student Satisfaction</span>
+      </div>
+    </div>
+    <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
+      <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
+    </div>
+  </div>
+</section>
+
     </>
   )
 }
