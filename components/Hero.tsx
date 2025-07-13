@@ -74,7 +74,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-left leading-tight mb-4 max-w-2xl">
               <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-bold whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
-                AI Threatens Your Job.
+                AI threatens your job.
               </span>
               <span
                 className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
@@ -82,13 +82,13 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Here&apos;s How The <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> Turns It Into Your <span className="text-yellow-400 font-semibold">Untapped Goldmine</span>.
+                Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI marketers club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-              <span className="font-semibold text-white">John Crestani&apos;s New $27 AI Marketers Club:</span> <b>Leverage The Power of AI To Build An Online Income Stream – No Tech Skills Needed.</b>
+              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI marketers club:</span> <b>leverage the power of AI to build an online income stream – No tech skills needed.</b>
             </p>
 
             {/* Core Benefits */}
