@@ -16,11 +16,11 @@ export default function AIClubFAQ() {
   const faqs: FAQItem[] = useMemo(() => [
     {
       question: "How is the AI Marketers Club unique compared to other affiliate marketing systems?",
-      answer: <>AI Marketers Club leverages advanced AI marketing automation and John Crestani’s exclusive “balloon method” with the F.I.R. (Facts, Instructions, Rules) prompt formula. This allows members to build scalable affiliate campaigns, even with no prior experience or technical skills, using a proven, step-by-step approach.</>
+      answer: <>AI Marketers Club leverages advanced AI marketing automation and John Crestani&rsquo;s exclusive &ldquo;balloon method&rdquo; with the F.I.R. (Facts, Instructions, Rules) prompt formula. This allows members to build scalable affiliate campaigns, even with no prior experience or technical skills, using a proven, step-by-step approach.</>
     },
     {
       question: "Who should consider joining the AI Marketers Club?",
-      answer: <>This program is tailored for professionals, entrepreneurs, and anyone seeking financial freedom through digital marketing and AI-powered content creation. Whether you're a beginner or looking to diversify income streams, the Club is designed to help you earn $150,000–$200,000 annually without traditional business risks.</>
+      answer: <>This program is tailored for professionals, entrepreneurs, and anyone seeking financial freedom through digital marketing and AI-powered content creation. Whether you&apos;re a beginner or looking to diversify income streams, the Club is designed to help you earn $150,000&ndash;$200,000 annually without traditional business risks.</>
     },
     {
       question: "Do I need expensive software or advanced tools to get started?",
@@ -32,7 +32,7 @@ export default function AIClubFAQ() {
     },
     {
       question: "How much time do I need to dedicate daily?",
-      answer: <>Most members spend 30–60 minutes per day. The system is optimized for efficiency, cutting out busywork and allowing you to focus on high-impact, AI-powered marketing activities—ideal for busy professionals or side hustlers.</>
+      answer: <>Most members spend 30&ndash;60 minutes per day. The system is optimized for efficiency, cutting out busywork and allowing you to focus on high-impact, AI-powered marketing activities&mdash;ideal for busy professionals or side hustlers.</>
     },
     {
       question: "Can I succeed if I have no marketing or technical background?",
@@ -44,15 +44,15 @@ export default function AIClubFAQ() {
     },
     {
       question: "How is this program different from other marketing courses?",
-      answer: <>AI Marketers Club stands out with its focus on education, transparency, and freedom. You’ll get access to exclusive mentorship, personalized support, and a system that simplifies AI content creation and affiliate marketing for everyone.</>
+      answer: <>AI Marketers Club stands out with its focus on education, transparency, and freedom. You&rsquo;ll get access to exclusive mentorship, personalized support, and a system that simplifies AI content creation and affiliate marketing for everyone.</>
     },
     {
-      question: "What if I don’t see immediate results?",
+      question: "What if I don&rsquo;t see immediate results?",
       answer: <>Progress varies, but ongoing support, resources, and a strong community are provided to help you overcome challenges and achieve breakthroughs at your own pace. The Club is committed to your long-term success in digital marketing.</>
     },
     {
       question: "How do I join the AI Marketers Club?",
-      answer: <>Simply click the sign-up button on johncrestani.me, enter your email, and complete the secure registration. You’ll receive instant access to all training materials, bonuses, and the private community.</>
+      answer: <>Simply click the sign-up button, enter your email, and complete the secure registration. You&rsquo;ll receive instant access to all training materials, bonuses, and the private community.</>
     },
     {
       question: "Is there a money-back guarantee?",
@@ -64,7 +64,7 @@ export default function AIClubFAQ() {
     },
     {
       question: "Where can I see real user reviews and testimonials?",
-      answer: <>Visit the official review page johncrestani.me or search “JohnCrestani.me AI Marketers Club reviews 2025” to find independent feedback, bonus breakdowns, and case studies from actual members.</>
+      answer: <>Visit the official review page or search &ldquo;AI Marketers Club reviews 2025&rdquo; to find independent feedback, bonus breakdowns, and case studies from actual members.</>
     }
   ], [])
 
@@ -105,7 +105,7 @@ export default function AIClubFAQ() {
     <section id="ai-faq" className="py-20 pt-32 bg-black text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">
-          AI Marketers Club – Frequently Asked Questions
+          AI Marketers Club &ndash; Frequently Asked Questions
         </h2>
         <div className="space-y-4 max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
