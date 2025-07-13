@@ -3,6 +3,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400'] })
 
 export default function Hero() {
   const router = useRouter()
@@ -68,22 +71,19 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-left leading-tight mb-6 max-w-2xl">
-  <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250] whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
-    AI threatens your job.
-  </span>
-  <span
-    className="block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2"
-    style={{
-      fontFamily: "'Inter', 'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-      fontWeight: 200, // Inter Thin
-      letterSpacing: '-0.01em'
-    }}
-  >
-    Here&apos;s how to turn it into your{' '}
-    <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>untapped goldmine</span>.
-  </span>
-</h1>
-
+            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250] whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
+              AI threatens your job.
+            </span>
+            <span
+              className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
+              style={{
+                letterSpacing: '-0.01em'
+              }}
+            >
+              Here&apos;s how to turn it into your{' '}
+              <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>untapped goldmine</span>.
+            </span>
+          </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
