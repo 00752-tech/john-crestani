@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* Old Way vs. New Way Comparison Section */}
-      <section className="container mx-auto px-4 py-12 flex flex-col items-center">
+      <section className="w-full bg-black flex flex-col items-center py-12 px-4">
         <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-green-400 tracking-tight">
           The Old Way vs. The New Way
         </h3>
@@ -238,11 +238,7 @@ export default function Home() {
           See how the AI Marketers Club flips the script on traditional online business. No more burnout, guesswork, or trading time for uncertain results—just a proven, plug-and-play system for real freedom.
         </p>
         <div
-          className="w-full flex justify-center transition-transform duration-500 hover:scale-105 bg-gray-100 border border-gray-300 rounded-2xl shadow-xl p-8"
-          // ^^^^
-          // bg-gray-100 = light card background
-          // border-gray-300 = subtle border
-          // p-8 = plenty of padding for space
+          className="mx-auto w-full max-w-2xl bg-gray-100 border border-gray-200 rounded-2xl shadow-xl p-8 flex justify-center"
         >
           <Image
             src="/old-vs-new-way-graphic.png"
