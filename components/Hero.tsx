@@ -61,18 +61,34 @@ export default function Hero() {
         }
       `}</style>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8">
+      {/* Top Banner */}
+      <div className="absolute top-0 left-0 w-full flex justify-center z-20">
+        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 rounded-b-2xl shadow-lg flex items-center gap-2">
+          <span>⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE ⭐</span>
+          <button
+            className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
+            onClick={() => {
+              const cta = document.getElementById('hero-cta');
+              if (cta) cta.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            GRAB DISCOUNT →
+          </button>
+        </div>
+      </div>
+
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
         {/* Left Column */}
         <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-10">
           {/* Kicker */}
           <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
-            🚨 AI IS CHANGING EVERYTHING
+            ▲ AI IS CHANGING EVERYTHING
           </span>
 
           {/* Headline */}
-          <h1 className="text-left leading-tight mb-6 max-w-2xl">
-            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-[250] whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
-              AI threatens your job.
+          <h1 className="text-left leading-tight mb-4 max-w-2xl">
+            <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-bold whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
+              AI Threatens Your Job.
             </span>
             <span
               className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
@@ -80,50 +96,51 @@ export default function Hero() {
                 letterSpacing: '-0.01em'
               }}
             >
-              Here&apos;s how to turn it into your{' '}
-              <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>untapped goldmine</span>.
+              Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-            John Crestani&apos;s new $27 AI system: leverage the power of AI to build an online income stream – no tech skills needed.
+            <span className="font-semibold text-white">John Crestani&apos;s New $27 AI Marketers Club:</span> Leverage the power of AI to build an online income stream – no tech skills needed.
           </p>
 
           {/* Core Benefits */}
-          <div className="flex flex-col sm:flex-row gap-6 w-full mb-4 mt-1">
-            <div className="flex-1 min-w-[180px]">
-              <span className="block text-white text-base sm:text-lg">
-                <span className="font-semibold text-blue-400">Escaping the 9-5 grind:</span>{' '}
-                <span className="font-normal text-gray-300">Finally achieve the financial freedom you crave.</span>
-              </span>
+          <div className="bg-[#151517] rounded-xl p-5 mb-4 mt-1 w-full max-w-lg shadow flex flex-col gap-2">
+            <div className="text-gray-300 text-base sm:text-lg font-normal mb-1">
+              <span className="font-semibold text-pink-400">Inside the AI Marketers Club, you&apos;ll discover how to:</span>
             </div>
-            <div className="flex-1 min-w-[180px]">
-              <span className="block text-white text-base sm:text-lg">
-                <span className="font-semibold text-blue-400">Profiting from the AI revolution:</span>{' '}
-                <span className="font-normal text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
-              </span>
-            </div>
-            <div className="flex-1 min-w-[180px]">
-              <span className="block text-white text-base sm:text-lg">
-                <span className="font-semibold text-blue-400">Working from anywhere:</span>{' '}
-                <span className="font-normal text-gray-300">No boss, no burnout, no guesswork—just pure, repeatable income potential.</span>
-              </span>
-            </div>
+            <ul className="space-y-2">
+              <li>
+                <span className="font-semibold text-blue-400">Escape The 9-5 Grind:</span>{' '}
+                <span className="text-gray-300">Finally achieve the financial freedom you crave.</span>
+              </li>
+              <li>
+                <span className="font-semibold text-blue-400">Profit From The AI Revolution:</span>{' '}
+                <span className="text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
+              </li>
+              <li>
+                <span className="font-semibold text-blue-400">Work From Anywhere:</span>{' '}
+                <span className="text-gray-300">No boss, no burnout, no guesswork – just pure, repeatable income potential.</span>
+              </li>
+            </ul>
           </div>
 
           {/* CTA Button */}
           <button
-            className="cta-main w-full sm:w-auto mb-3 mt-0"
+            id="hero-cta"
+            className="cta-main w-full sm:w-auto mb-3 mt-0 text-lg"
             onClick={handleRevealSecrets}
             type="button"
           >
-            YES! I WANT TO UNLOCK The $27 AI Income System!
+            YES! I WANT TO JOIN The $27 AI Marketers Club!
           </button>
 
           {/* Value/Urgency Reinforcement */}
-          <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left">
+          <div className="text-pink-400 text-base font-semibold mt-2 mb-4 text-left flex items-center gap-2">
             Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
+            {/* Placeholder for countdown timer graphic */}
+            <span className="inline-block w-5 h-5 bg-yellow-400 rounded-full animate-pulse" title="Countdown timer coming soon"></span>
           </div>
 
           {/* Social Proof */}
