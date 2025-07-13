@@ -106,9 +106,8 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <Stats />
 
-      {/* Immediate Section Below Hero & Stats */}
+      {/* Immediate Section Below Hero (no more <Stats /> here) */}
       <section className="w-full flex justify-center bg-black py-12 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col items-center p-8 md:p-14">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-pink-400 mb-4">
