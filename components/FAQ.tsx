@@ -12,58 +12,68 @@ type FAQItem = {
 export default function AIClubFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  // Enhanced, SEO-optimized, and de-duplicated FAQs
   const faqs: FAQItem[] = useMemo(() => [
     {
-      question: "What is AI Marketers Club?",
-      answer: <>It’s John Crestani’s latest affiliate system for 2025, teaching how to use AI to create faceless, monetized content—no tech skills or prior experience required. Built around a 7-minute daily workflow using his F.I.R. formula.</>
+      question: "How is the AI Marketers Club unique compared to other affiliate marketing systems?",
+      answer: <>AI Marketers Club leverages advanced AI marketing automation and John Crestani’s exclusive “balloon method” with the F.I.R. (Facts, Instructions, Rules) prompt formula. This allows members to build scalable affiliate campaigns, even with no prior experience or technical skills, using a proven, step-by-step approach.</>
     },
     {
-      question: "What makes this different from Super Affiliate System Pro?",
-      answer: <>AI Marketers Club focuses on faceless content creation and AI automation. SAS Pro was built around paid ads, funnels, and deep traffic strategies. It’s now a discounted upsell ($197) inside the AI Marketers Club funnel.</>
+      question: "Who should consider joining the AI Marketers Club?",
+      answer: <>This program is tailored for professionals, entrepreneurs, and anyone seeking financial freedom through digital marketing and AI-powered content creation. Whether you're a beginner or looking to diversify income streams, the Club is designed to help you earn $150,000–$200,000 annually without traditional business risks.</>
     },
     {
-      question: "Is Super Affiliate System Pro still available?",
-      answer: <>Yes—but only through AI Marketers Club. Formerly $997, SAS Pro is now offered as a $197 upsell with full access to ad tutorials, funnel setup, and affiliate strategy.</>
+      question: "Do I need expensive software or advanced tools to get started?",
+      answer: <>No, the required tools are affordable and beginner-friendly. The recommended tech stack costs about $14/month, covering web hosting and AI image generation. Most text and video AI tools used in the system offer free plans, making it accessible for anyone.</>
     },
     {
-      question: "How much does it cost to join?",
-      answer: <>The main AI Marketers Club course costs just $27. That includes lifetime access to the training, a free website, viral content templates, bonus resources, and access to $821/click affiliate offers.</>
+      question: "Is this just another online business or does it offer something different?",
+      answer: <>Unlike starting a business from scratch, AI Marketers Club focuses on promoting established products and companies using AI-driven affiliate marketing. This reduces risk and enables you to earn commissions from day one, without the need to develop your own products or services.</>
     },
     {
-      question: "Do I need to show my face to make this work?",
-      answer: <>Not at all. The system teaches faceless content creation using AI tools like ChatGPT and Midjourney. No camera, no personal branding, no burnout.</>
+      question: "How much time do I need to dedicate daily?",
+      answer: <>Most members spend 30–60 minutes per day. The system is optimized for efficiency, cutting out busywork and allowing you to focus on high-impact, AI-powered marketing activities—ideal for busy professionals or side hustlers.</>
     },
     {
-      question: "How does the F.I.R. formula work?",
-      answer: <>F.I.R. stands for Find, Imitate, Repost. It’s a step-by-step prompting method using AI to turn viral content into niche-targeted affiliate campaigns that get clicks and commissions.</>
+      question: "Can I succeed if I have no marketing or technical background?",
+      answer: <>Absolutely. The AI Marketers Club is designed for total beginners. The training breaks down complex strategies into simple, actionable steps, with full support and a vibrant community to help you every step of the way.</>
     },
     {
-      question: "What’s included in the AI Marketers Club training?",
-      answer: <>You’ll get a 3-hour video course, a quick start guide, daily action checklist, free website with SSL, bonus tools, deepfake marketing assets, and access to a supportive creator community.</>
+      question: "What kind of results can I expect from the AI Marketers Club?",
+      answer: <>While individual results vary, members have reported rapid progress and significant earnings. The Club features numerous testimonials from diverse backgrounds, showcasing real-world success with AI-driven affiliate marketing.</>
     },
     {
-      question: "How fast can I start earning?",
-      answer: <>Some users report results in days. The system is designed to get you posting monetized content in 7 minutes/day—ideal for beginners or side hustlers with limited time.</>
+      question: "How is this program different from other marketing courses?",
+      answer: <>AI Marketers Club stands out with its focus on education, transparency, and freedom. You’ll get access to exclusive mentorship, personalized support, and a system that simplifies AI content creation and affiliate marketing for everyone.</>
     },
     {
-      question: "Is there a refund policy?",
-      answer: <>Yes. AI Marketers Club comes with a 60-day money-back guarantee, backed by ClickBank. No risk, no commitment—just a chance to build digital income with AI.</>
+      question: "What if I don’t see immediate results?",
+      answer: <>Progress varies, but ongoing support, resources, and a strong community are provided to help you overcome challenges and achieve breakthroughs at your own pace. The Club is committed to your long-term success in digital marketing.</>
     },
     {
-      question: "Can I promote this offer as an affiliate?",
-      answer: <>Absolutely. Affiliates earn 75–90% commission on the entire funnel: $27 front-end, $197 SAS Pro upsell, $597 high-ticket upgrade, and even up to $50,000 mentorship tiers. Apply on ClickBank and request a commission bump.</>
+      question: "How do I join the AI Marketers Club?",
+      answer: <>Simply click the sign-up button on johncrestani.me, enter your email, and complete the secure registration. You’ll receive instant access to all training materials, bonuses, and the private community.</>
     },
     {
-      question: "Where can I learn more or see testimonials?",
-      answer: <>You can explore bonus breakdowns, real user feedback, and success stories on the official review page. Just search “AI Marketers Club review by John Crestani 2025”—we’re ranking #1 for it.</>
+      question: "Is there a money-back guarantee?",
+      answer: <>Yes! The AI Marketers Club offers a 60-day risk-free refund policy, so you can try the program with confidence and no financial risk.</>
+    },
+    {
+      question: "Can I promote the AI Marketers Club as an affiliate?",
+      answer: <>Definitely. Affiliates earn up to 90% commissions on the entire funnel, including the main course, upsells, and high-ticket mentorships. Apply through ClickBank and request a commission increase for top performance.</>
+    },
+    {
+      question: "Where can I see real user reviews and testimonials?",
+      answer: <>Visit the official review page johncrestani.me or search “JohnCrestani.me AI Marketers Club reviews 2025” to find independent feedback, bonus breakdowns, and case studies from actual members.</>
     }
   ], [])
 
+  // FAQPage Schema for SEO
   useEffect(() => {
     function extractText(node: React.ReactNode): string {
       if (typeof node === 'string') return node
       if (typeof node === 'number') return node.toString()
-      if (Array.isArray(node)) return node.map(extractText).join('')
+      if (Array.isArray(node)) return node.map(extractText).join(' ')
       if (React.isValidElement(node)) return extractText(node.props.children)
       return ''
     }
@@ -104,7 +114,7 @@ export default function AIClubFAQ() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.07 }}
               className="border border-gray-700 rounded-lg overflow-hidden"
             >
               <button
