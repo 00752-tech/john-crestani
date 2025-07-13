@@ -9,7 +9,6 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-import Stats from '@/components/Stats';
 import WebinarInvite from '@/components/WebinarInvite';
 import RelatedTools from '@/components/RelatedTools';
 
