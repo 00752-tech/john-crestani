@@ -61,22 +61,6 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Top Banner */}
-      <div className="absolute top-0 left-0 w-full flex justify-center z-20">
-        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 rounded-b-2xl shadow-lg flex items-center gap-2">
-          <span>⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE ⭐</span>
-          <button
-            className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
-            onClick={() => {
-              const cta = document.getElementById('hero-cta');
-              if (cta) cta.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            GRAB DISCOUNT →
-          </button>
-        </div>
-      </div>
-
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
         {/* Left Column */}
         <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-10">
