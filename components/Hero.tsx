@@ -4,6 +4,8 @@ import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Inter } from 'next/font/google'
+import { motion } from 'framer-motion'
+import CountUp from 'react-countup'
 
 const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400'] })
 
@@ -16,6 +18,27 @@ export default function Hero() {
       'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
     )
   }
+
+  // Pulse animation for stats
+  const pulseVariants = {
+    pulse: {
+      scale: [1, 1.08, 1],
+      opacity: [1, 0.85, 1],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  }
+
+  const stats = [
+    { end: 50000, suffix: "+", text: "Students Trained" },
+    { end: 20000000, prefix: "$", suffix: "+", text: "Affiliate Commissions" },
+    { end: 9, suffix: "+", text: "Years of Innovation" },
+    { end: 4.6, decimals: 1, text: "Avg. Trustpilot Score" },
+    { end: 96, suffix: "%", text: "Student Satisfaction" }
+  ]
 
   return (
     <>
@@ -74,7 +97,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-left leading-tight mb-4 max-w-2xl">
               <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-bold whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
-                AI threatens your job.
+                AI Threatens Your Job.
               </span>
               <span
                 className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
@@ -82,13 +105,13 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI marketers club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
+                Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI marketers club:</span> <b>leverage the power of AI to build an online income stream – no tech skills needed.</b>
+              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI Marketers Club:</span> <b>Leverage the power of AI to build an online income stream – no tech skills needed.</b>
             </p>
 
             {/* Core Benefits */}
@@ -158,40 +181,46 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* AUTHORITY & PROOF SECTION (Immediately after Hero) */}
+      {/* AUTHORITY & PROOF SECTION (Immediately after Hero, with animated stats) */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
-  <div className="w-full max-w-4xl flex flex-col items-center">
-    <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
-      Don&apos;t Just Take Our Word For It. See The Results.
-    </h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full mb-8">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">50,000+</span>
-        <span className="text-gray-300 text-sm md:text-base text-center">Students Trained</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">$20M+</span>
-        <span className="text-gray-300 text-sm md:text-base text-center">Affiliate Commissions</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">9+</span>
-        <span className="text-gray-300 text-sm md:text-base text-center">Years of Innovation</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">4.6</span>
-        <span className="text-gray-300 text-sm md:text-base text-center">Avg. Trustpilot Score</span>
-      </div>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl md:text-4xl font-extrabold text-yellow-400">96%</span>
-        <span className="text-gray-300 text-sm md:text-base text-center">Student Satisfaction</span>
-      </div>
-    </div>
-    <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
-      <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
-    </div>
-  </div>
-</section>
-
+        <div className="w-full max-w-4xl flex flex-col items-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
+            Don&apos;t Just Take Our Word For It. See The Results.
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full mb-8">
+            {stats.map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={pulseVariants}
+                animate="pulse"
+                className="flex flex-col items-center"
+              >
+                <CountUp
+                  start={0}
+                  end={item.end}
+                  duration={2.5}
+                  delay={0.2}
+                  separator=","
+                  decimals={item.decimals || 0}
+                  decimal="."
+                  prefix={item.prefix || ""}
+                  suffix={item.suffix || ""}
+                  className="text-3xl md:text-4xl font-extrabold"
+                  style={{
+                    background: "linear-gradient(45deg, #ec4899, #f472b6)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  }}
+                />
+                <span className="text-gray-300 text-sm md:text-base text-center">{item.text}</span>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
+            <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
