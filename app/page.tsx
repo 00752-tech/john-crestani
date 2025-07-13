@@ -238,21 +238,19 @@ export default function Home() {
           See how the AI Marketers Club flips the script on traditional online business. No more burnout, guesswork, or trading time for uncertain results—just a proven, plug-and-play system for real freedom.
         </p>
         <div
-          className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
-          style={{
-            background: "linear-gradient(90deg, #111 70%, #22c55e22 100%)",
-            borderRadius: "1.5rem",
-            boxShadow: "0 8px 32px 0 rgba(34,197,94,0.15)",
-            padding: "2rem 0"
-          }}
+          className="w-full flex justify-center transition-transform duration-500 hover:scale-105 bg-gray-100 border border-gray-300 rounded-2xl shadow-xl p-8"
+          // ^^^^
+          // bg-gray-100 = light card background
+          // border-gray-300 = subtle border
+          // p-8 = plenty of padding for space
         >
           <Image
             src="/old-vs-new-way-graphic.png"
             alt="Old Way vs New Way - AI Marketers Club Comparison"
             width={600}
             height={700}
-            className="rounded-2xl shadow-xl border-2 border-pink-500"
-            style={{ maxWidth: '100%', height: 'auto' }}
+            className="rounded-xl"
+            style={{ maxWidth: '100%', height: 'auto', background: 'transparent' }}
             priority
           />
         </div>
