@@ -187,32 +187,50 @@ export default function Hero() {
           <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
             Don&apos;t Just Take Our Word For It. See The Results.
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 w-full mb-8">
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              md:grid-cols-3
+              lg:grid-cols-5
+              gap-y-8
+              gap-x-10
+              w-full
+              mb-8
+              text-center
+            "
+          >
             {stats.map((item, idx) => (
               <motion.div
                 key={idx}
                 variants={pulseVariants}
                 animate="pulse"
-                className="flex flex-col items-center"
+                className="flex flex-col items-center min-w-0"
               >
-                <CountUp
-                  start={0}
-                  end={item.end}
-                  duration={2.5}
-                  delay={0.2}
-                  separator=","
-                  decimals={item.decimals || 0}
-                  decimal="."
-                  prefix={item.prefix || ""}
-                  suffix={item.suffix || ""}
-                  className="text-3xl md:text-4xl font-extrabold"
+                <span
+                  className="text-3xl md:text-4xl font-extrabold break-words"
                   style={{
                     background: "linear-gradient(45deg, #ec4899, #f472b6)",
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    wordBreak: "break-word",
+                    maxWidth: "100%",
                   }}
-                />
-                <span className="text-gray-300 text-sm md:text-base text-center">{item.text}</span>
+                >
+                  <CountUp
+                    start={0}
+                    end={item.end}
+                    duration={2.5}
+                    delay={0.2}
+                    separator=","
+                    decimals={item.decimals || 0}
+                    decimal="."
+                    prefix={item.prefix || ""}
+                    suffix={item.suffix || ""}
+                  />
+                </span>
+                <span className="text-gray-300 text-sm md:text-base text-center mt-2">{item.text}</span>
               </motion.div>
             ))}
           </div>
