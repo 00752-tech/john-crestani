@@ -33,8 +33,8 @@ export default function Hero() {
   }
 
   const stats = [
-    { end: 50000, suffix: "+", text: "Students Trained" },
-    { end: 20000000, prefix: "$", suffix: "+", text: "Affiliate Commissions" },
+    { end: 50, suffix: "k+", text: "Students Trained" },
+    { end: 20, prefix: "$", suffix: "M+", text: "Affiliate Commissions" },
     { end: 9, suffix: "+", text: "Years of Innovation" },
     { end: 4.6, decimals: 1, text: "Avg. Trustpilot Score" },
     { end: 96, suffix: "%", text: "Student Satisfaction" }
@@ -223,7 +223,7 @@ export default function Hero() {
                     end={item.end}
                     duration={2.5}
                     delay={0.2}
-                    separator=","
+                    separator=""
                     decimals={item.decimals || 0}
                     decimal="."
                     prefix={item.prefix || ""}
