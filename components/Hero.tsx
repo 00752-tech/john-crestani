@@ -91,7 +91,7 @@ export default function Hero() {
 
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[55%] flex flex-col items-start md:pr-6 md:ml-20">
+          <div className="w-full md:w-[55%] flex flex-col items-start md:pr-6 md:ml-20"> {/* width and left margin remain as per last request */}
             {/* Kicker */}
             <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
               ▲ AI IS CHANGING EVERYTHING
@@ -178,16 +178,16 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="hidden md:flex w-[45%] justify-center items-center">
+          <div className="hidden md:flex w-[40%] justify-center items-end"> {/* Reduced width to 40% to make the image take up less space relative to the container */}
             <Image
               src="/hero_man_hat.webp"
               alt="John Crestani"
-              width={1100} // Increased width for the image to match previous larger size
-              height={1100} // Increased height for the image to match previous larger size
+              width={1200} // Increased base width for the image
+              height={1200} // Increased base height for the image
               className="rounded-lg shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1100px' }} // Adjusted maxWidth
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 1100px" // Adjusted sizes
+              style={{ width: '100%', height: 'auto', maxWidth: '1200px' }} // Adjusted maxWidth to allow larger scaling
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 1200px" // Adjusted sizes for responsiveness
             />
           </div>
         </div>
