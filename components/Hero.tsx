@@ -96,18 +96,26 @@ transform: scale(1.04);
 
 {/* Headline */}
 <h1 className="text-left leading-tight mb-4 max-w-2xl">
-<span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-bold whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
-AI Threatens Your Job.
-</span>
-<span
-className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
-style={{
-letterSpacing: '-0.01em'
-}}
->
-Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
-</span>
+  <span className="block text-white text-5xl sm:text-6xl md:text-[3.8rem] lg:text-[4.2rem] font-bold whitespace-nowrap" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
+    AI Threatens Your Job.
+  </span>
+  <span
+    className={`${inter.className} block text-gray-300 text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.2rem] font-thin mt-2`}
+    style={{
+      letterSpacing: '-0.01em'
+    }}
+  >
+    Here&apos;s how the{' '}
+    <span className="text-yellow-400" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>
+      AI Marketers Club
+    </span>{' '}
+    turns it into your{' '}
+    <span className="text-yellow-400">
+      untapped goldmine
+    </span>.
+  </span>
 </h1>
+
 
 {/* Subheadline */}
 <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
