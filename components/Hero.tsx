@@ -82,7 +82,10 @@ export default function Hero() {
             transform: scale(1.04);
           }
           .brand-yellow {
-            color: #fde047; /* Tailwind yellow-300 */
+            color: #fde047;
+          }
+          .brand-blue {
+            color: #2563eb;
           }
         `}</style>
 
@@ -103,7 +106,7 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Discover the AI system that’s turning job loss into online income.
+                Discover the <span className="brand-blue">AI system</span> that’s turning job loss into <span className="brand-yellow">online income</span>.
               </span>
             </h1>
 
