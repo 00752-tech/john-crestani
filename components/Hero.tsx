@@ -89,9 +89,9 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-2 sm:px-4 pt-14 md:pt-0">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[34%] flex flex-col items-start md:pr-2">
+          <div className="w-full md:w-[48%] flex flex-col items-start md:pr-6 md:ml-16">
             {/* Kicker */}
             <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
               ▲ AI IS CHANGING EVERYTHING
@@ -178,7 +178,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="hidden md:flex md:w-[66%] justify-center items-center">
+          <div className="hidden md:flex w-1/2 justify-center items-center">
             <Image
               src="/hero_man_hat.webp"
               alt="John Crestani"
