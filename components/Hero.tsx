@@ -150,7 +150,7 @@ className="cta-main w-full sm:w-auto mb-3 mt-0 text-lg"
 onClick={handleRevealSecrets}
 type="button"
 >
-YES! I WANT TO JOIN The $27 AI Marketers Club!
+YES! Show Me The New AI System
 </button>
 
 {/* Value/Urgency Reinforcement */}
