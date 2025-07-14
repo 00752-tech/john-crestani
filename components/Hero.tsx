@@ -91,7 +91,7 @@ export default function Hero() {
 
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[56%] flex flex-col items-start md:pr-10 ml-10">
+          <div className="w-full md:w-[48%] flex flex-col items-start md:pr-6 md:ml-0">
             {/* Kicker */}
             <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
               ▲ AI IS CHANGING EVERYTHING
