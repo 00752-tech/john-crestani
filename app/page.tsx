@@ -31,27 +31,6 @@ export default function Home() {
 
       <Hero />
 
-      {/* TRUST CTA: Below Hero, Above Testimonial */}
-      <div className="max-w-3xl mx-auto w-full px-4">
-        <div className="mt-6 text-left" id="video-cta">
-          <p className="text-gray-300 text-sm md:text-base mb-3 max-w-xl">
-            AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
-          </p>
-          <button
-            type="button"
-            onClick={() => {
-              const videoSection = document.getElementById('john-video');
-              if (videoSection) {
-                videoSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition duration-200"
-          >
-            Watch the Training Video
-          </button>
-        </div>
-      </div>
-
       {/* TRUST SECTION: Affiliate Endorsement */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
@@ -75,7 +54,7 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Testimonial Text + CTA */}
+          {/* Testimonial Text + New CTA */}
           <div className="w-full md:w-2/3 text-left">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight">
               Why I’m Promoting This System
@@ -88,10 +67,11 @@ export default function Home() {
               This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
-            {/* Secondary CTA Button */}
-            <div className="mt-8 text-left">
-              <p className="text-gray-300 text-sm mb-2">
-                He was fired and broke—then built a thriving affiliate business. In this 6-minute video, John Crestani shares how he turned failure into freedom.
+
+            {/* ✅ New Trust CTA */}
+            <div className="mt-6 text-left" id="video-cta">
+              <p className="text-gray-300 text-sm md:text-base mb-3 max-w-xl">
+                AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
               </p>
               <button
                 type="button"
@@ -101,9 +81,9 @@ export default function Home() {
                     videoSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200"
+                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition duration-200"
               >
-                Watch the “You&apos;re Fired” Video That Changed Everything
+                Watch the Training Video
               </button>
             </div>
           </div>
