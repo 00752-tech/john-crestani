@@ -35,19 +35,26 @@ export default function Home() {
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           {/* Affiliate Image */}
-          <div className="w-full md:w-1/3 flex justify-center mb-6 md:mb-0">
+          <div className="w-full md:w-1/3 flex flex-col items-center mb-6 md:mb-0">
             <Image
               src="/cool_greybeard_affiliate.webp"
-              alt="Experienced Affiliate Promoting SAS Pro"
+              alt="Jason Vientos – Experienced Affiliate Promoting SAS Pro"
               width={220}
               height={220}
               className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
               priority
               style={{ maxWidth: '180px', height: 'auto' }}
             />
+            {/* Name below image */}
+            <span className="mt-4 text-lg font-semibold text-yellow-400 tracking-wide text-center">
+              Jason Vientos
+            </span>
+            <span className="text-xs text-gray-400 mt-1 text-center">
+              Affiliate Marketer & Brand Partner
+            </span>
           </div>
 
-          {/* Testimonial Text */}
+          {/* Testimonial Text + CTA */}
           <div className="w-full md:w-2/3 text-left">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight">
               Why I’m Promoting This System
@@ -60,6 +67,24 @@ export default function Home() {
               This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
+            {/* Secondary CTA Button */}
+            <div className="mt-8 text-left">
+              <p className="text-gray-300 text-sm mb-2">
+                Ready to see the system in action?
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  const videoSection = document.getElementById('john-video');
+                  if (videoSection) {
+                    videoSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200"
+              >
+                Watch the Exact Training I Recommend
+              </button>
+            </div>
           </div>
         </div>
       </section>
