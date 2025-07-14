@@ -1,4 +1,5 @@
 import "./globals.css";
+import AffiliateDisclosureBar from "@/components/AffiliateDisclosureBar";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import StructuredData from "./structure-data";
