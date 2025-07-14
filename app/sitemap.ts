@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'content-creation-tools/youtube-earnings-calculator',
     'contact',
     'privacy-policy',
+    // Add your new page here:
+    'affiliate-disclosure',
   ];
 
   return paths.map((path) => ({
