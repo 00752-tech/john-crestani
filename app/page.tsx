@@ -47,7 +47,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Testimonial Text */}
+          {/* Testimonial Text + CTA */}
           <div className="w-full md:w-2/3 text-left">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight">
               Why I’m Promoting This System
@@ -60,6 +60,26 @@ export default function Home() {
               This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
+
+            {/* === Secondary CTA Button === */}
+            <div className="mt-8 text-left">
+              <p className="text-gray-300 text-sm mb-2">
+                Ready to see the system in action?
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  const videoSection = document.getElementById('john-video');
+                  if (videoSection) {
+                    videoSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200"
+              >
+                Watch the Exact Training I Recommend
+              </button>
+            </div>
+            {/* === End Secondary CTA Button === */}
           </div>
         </div>
       </section>
@@ -70,15 +90,17 @@ export default function Home() {
         {/* ... */}
       </section>
       {/* ...other sections unchanged... */}
+
+      {/* === VIDEO SECTION WITH ID FOR SCROLL === */}
       <Suspense fallback={<div>Loading...</div>}>
-        <DynamicFreeTools />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <div id="video">
+        <div id="john-video">
           <WebinarInvite />
         </div>
       </Suspense>
+      {/* === END VIDEO SECTION === */}
+
       <Testimonials />
+
       <div className="flex justify-center my-12 px-4">
         <Image
           src="/ai-usage-chart.jpg"
