@@ -81,6 +81,9 @@ export default function Hero() {
             background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
             transform: scale(1.04);
           }
+          .brand-yellow {
+            color: #fde047; /* Tailwind yellow-300 */
+          }
         `}</style>
 
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
@@ -105,8 +108,19 @@ export default function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI Marketers Club:</span> <b>Leverage the power of AI to build an online income stream – no tech skills needed.</b>
+            <p
+              className="text-gray-200 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed"
+              style={{
+                fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+                fontWeight: 300,
+                letterSpacing: '-0.01em'
+              }}
+            >
+              Learn how beginners are using AI to generate{' '}
+              <span className="brand-yellow font-normal">
+                passive commissions
+              </span>
+              —no experience needed. Step-by-step system for 2025.
             </p>
 
             {/* Core Benefits */}
