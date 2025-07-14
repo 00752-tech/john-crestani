@@ -85,7 +85,7 @@ export default function Hero() {
             color: #fde047;
           }
           .brand-blue {
-            color: #2596be; /* Adjusted for better visibility if needed based on the previous image */
+            color: #2563eb; /* Consistent blue color */
           }
         `}</style>
 
@@ -133,15 +133,15 @@ export default function Hero() {
               </div>
               <ul className="space-y-2">
                 <li>
-                  <span className="font-semibold text-blue-400">Escape The 9-5 Grind:</span>{' '}
+                  <span className="font-semibold brand-blue">Escape The 9-5 Grind:</span>{' '}
                   <span className="text-gray-300">Finally achieve the financial freedom you crave.</span>
                 </li>
                 <li>
-                  <span className="font-semibold text-blue-400">Profit From The AI Revolution:</span>{' '}
+                  <span className="font-semibold brand-blue">Profit From The AI Revolution:</span>{' '}
                   <span className="text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
                 </li>
                 <li>
-                  <span className="font-semibold text-blue-400">Work From Anywhere:</span>{' '}
+                  <span className="font-semibold brand-blue">Work From Anywhere:</span>{' '}
                   <span className="text-gray-300">No boss, no burnout, no guesswork – just pure, repeatable income potential.</span>
                 </li>
               </ul>
