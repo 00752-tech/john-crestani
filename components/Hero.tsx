@@ -105,13 +105,19 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.
+                Here&apos;s how the <span className="text-yellow-400 font-semibold" style={{ fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif" }}>AI Marketers Club</span> turns it into your <span className="text-yellow-400 font-semibold">untapped goldmine</span>.<br />
+                <span className="block text-pink-400 font-semibold mt-2">
+                  <span className="inline-block">No Face Needed:</span> <span className="text-white">Stay 100% anonymous while building your affiliate income.</span>
+                </span>
+                <span className="block text-blue-400 font-semibold mt-1">
+                  Perfect for corporate professionals &amp; ambitious side hustlers seeking financial independence.
+                </span>
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-gray-400 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed">
-              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI Marketers Club:</span> <b>Leverage the power of AI to build an online income stream – no tech skills needed.</b>
+              <span className="font-semibold text-white">John Crestani&apos;s new $27 AI Marketers Club:</span> <b>Leverage the power of AI to build an online income stream – no tech skills, no expensive software, no showing your face required.</b>
             </p>
 
             {/* Core Benefits */}
@@ -121,16 +127,32 @@ export default function Hero() {
               </div>
               <ul className="space-y-2">
                 <li>
-                  <span className="font-semibold text-blue-400">Escape The 9-5 Grind:</span>{' '}
-                  <span className="text-gray-300">Finally achieve the financial freedom you crave.</span>
+                  <span className="font-semibold text-blue-400">Stay Anonymous:</span>{' '}
+                  <span className="text-gray-300">Build a faceless content machine—no camera, no personal branding, just results.</span>
                 </li>
                 <li>
-                  <span className="font-semibold text-blue-400">Profit From The AI Revolution:</span>{' '}
-                  <span className="text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
+                  <span className="font-semibold text-blue-400">Unlock the F.I.R. AI Prompting Framework:</span>{' '}
+                  <span className="text-gray-300">John&apos;s proprietary formula to create viral, high-converting content in minutes—even if you&apos;re brand new.</span>
                 </li>
                 <li>
-                  <span className="font-semibold text-blue-400">Work From Anywhere:</span>{' '}
-                  <span className="text-gray-300">No boss, no burnout, no guesswork – just pure, repeatable income potential.</span>
+                  <span className="font-semibold text-blue-400">7 Minutes a Day (or 30 if you&apos;re serious):</span>{' '}
+                  <span className="text-gray-300">Start with just 7 minutes/day, or scale up for even bigger results in 30 minutes.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-blue-400">3-Hour Crash Course:</span>{' '}
+                  <span className="text-gray-300">Get the complete 3-hour video training that walks you step-by-step from zero to income.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-blue-400">Exclusive Affiliate Offers:</span>{' '}
+                  <span className="text-gray-300">Access networks with offers paying up to <span className="text-yellow-400 font-bold">$821 per click</span>.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-blue-400">No Expensive Software:</span>{' '}
+                  <span className="text-gray-300">Recommended tools cost just $14/month, and most core resources are free.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-blue-400">Build Your Legacy &amp; Freedom:</span>{' '}
+                  <span className="text-gray-300">Create a legacy for your family and finally achieve the freedom to live life on your own terms.</span>
                 </li>
               </ul>
             </div>
