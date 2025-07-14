@@ -85,13 +85,13 @@ export default function Hero() {
             color: #fde047;
           }
           .brand-blue {
-            color: #2596be;
+            color: #2596be; /* Adjusted for better visibility if needed based on the previous image */
           }
         `}</style>
 
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[48%] flex flex-col items-start md:pr-6 md:ml-16">
+          <div className="w-full md:w-[55%] flex flex-col items-start md:pr-6 md:ml-20"> {/* Adjusted width to 55% and increased left margin to ml-20 */}
             {/* Kicker */}
             <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
               ▲ AI IS CHANGING EVERYTHING
@@ -178,16 +178,16 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="hidden md:flex w-1/2 justify-center items-center">
+          <div className="hidden md:flex w-[45%] justify-center items-center"> {/* Adjusted width to 45% */}
             <Image
               src="/hero_man_hat.webp"
               alt="John Crestani"
-              width={1100}
-              height={1100}
+              width={900} // Reduced width
+              height={900} // Reduced height
               className="rounded-lg shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1000px' }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
+              style={{ width: '100%', height: 'auto', maxWidth: '900px' }} // Adjusted maxWidth
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 900px" // Adjusted sizes
             />
           </div>
         </div>
