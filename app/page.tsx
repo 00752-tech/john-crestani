@@ -251,6 +251,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT YOU DON'T NEED SECTION (NEW, OBJECTION-BUSTING) */}
+      <section className="w-full flex justify-center bg-black py-14 px-4">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need to buy expensive software or tools to succeed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely not! The AI Marketers Club was created so anyone can start earning online without costly software, hidden fees, or surprise upsells. The only recommended tools cost about $14/month—and most core resources are free."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any hidden costs or recurring payments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No hidden costs. Your one-time $27 payment unlocks the entire system, training, templates, and bonuses. Optional tools are clearly listed and affordable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need tech skills, a big budget, or previous experience?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No tech skills, big budgets, or prior experience required. The AI Marketers Club is beginner-friendly and designed for anyone ready to start earning with AI-powered affiliate marketing."
+                }
+              }
+            ]
+          })
+        }} />
+        <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col items-center p-10 md:p-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-green-400 mb-5 text-center">
+            What You <span className="text-white">Don&apos;t</span> Need to Succeed
+          </h2>
+          <p className="text-gray-200 text-lg md:text-xl text-center mb-7 leading-relaxed max-w-2xl">
+            Forget everything you&apos;ve heard about expensive software, hidden fees, or needing a tech background to make money online. The <span className="font-semibold text-pink-400">AI Marketers Club</span> was built for <span className="text-yellow-400 font-semibold">real people</span>—not coders, not gurus, not big spenders.
+          </p>
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-start">
+              <span className="inline-block w-6 text-red-400 mr-2 mt-1">✖️</span>
+              <span className="text-gray-300"><b>No Expensive Software:</b> Our recommended tools cost just <span className="text-green-400 font-bold">$14/month</span>—and most essentials are free.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-6 text-red-400 mr-2 mt-1">✖️</span>
+              <span className="text-gray-300"><b>No Recurring Memberships:</b> One-time payment. No surprise subscriptions. No upsells required to unlock the full system.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-6 text-red-400 mr-2 mt-1">✖️</span>
+              <span className="text-gray-300"><b>No Tech Skills Needed:</b> If you can copy, paste, and follow simple steps, you&apos;re ready. Zero coding. Zero design skills required.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-6 text-red-400 mr-2 mt-1">✖️</span>
+              <span className="text-gray-300"><b>No Ad Spend Required:</b> You don&apos;t need to buy ads or risk money on paid traffic. The system is optimized for organic, AI-powered growth.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-6 text-red-400 mr-2 mt-1">✖️</span>
+              <span className="text-gray-300"><b>No Prior Experience:</b> Whether you&apos;re a total beginner or have tried and failed before, everything is laid out step-by-step for you.</span>
+            </li>
+          </ul>
+          <div className="text-gray-400 text-base md:text-lg text-center max-w-xl">
+            <span className="font-semibold text-green-400">Just plug in, follow the steps, and let AI do the heavy lifting—no barriers, no surprises.</span>
+          </div>
+        </div>
+      </section>
+
       {/* Old Way vs. New Way Comparison Section */}
       <section className="w-full bg-black flex flex-col items-center py-12 px-4">
         <h3 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-green-400 tracking-tight">
