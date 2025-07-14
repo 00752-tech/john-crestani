@@ -19,8 +19,8 @@ export default function Home() {
   const pageUrl = 'https://johncrestani.me';
   const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
-  const schema = { /* ...schema as before... */ };
-  const offerSchema = { /* ...offerSchema as before... */ };
+  const schema = { /* ...your schema here... */ };
+  const offerSchema = { /* ...your offerSchema here... */ };
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
@@ -47,7 +47,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Testimonial Text + CTA */}
+          {/* Testimonial Text */}
           <div className="w-full md:w-2/3 text-left">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight">
               Why I’m Promoting This System
@@ -60,44 +60,21 @@ export default function Home() {
               This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
-
-            {/* === Secondary CTA Button === */}
-            <div className="mt-8 text-left">
-              <p className="text-gray-300 text-sm mb-2">
-                Ready to see the system in action?
-              </p>
-              <button
-                type="button"
-                onClick={() => {
-                  const videoSection = document.getElementById('john-video');
-                  if (videoSection) {
-                    videoSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200"
-              >
-                Watch the Exact Training I Recommend
-              </button>
-            </div>
-            {/* === End Secondary CTA Button === */}
           </div>
         </div>
       </section>
 
-      {/* ...rest of your sections as before... */}
-      {/* Immediate Section Below Hero */}
-      <section className="w-full flex justify-center bg-black py-12 px-4">
-        {/* ... */}
-      </section>
-      {/* ...other sections unchanged... */}
+      {/* FREE TOOLS SECTION */}
+      <Suspense fallback={<div>Loading Free Tools...</div>}>
+        <DynamicFreeTools />
+      </Suspense>
 
-      {/* === VIDEO SECTION WITH ID FOR SCROLL === */}
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* VIDEO SECTION */}
+      <Suspense fallback={<div>Loading Webinar Invite...</div>}>
         <div id="john-video">
           <WebinarInvite />
         </div>
       </Suspense>
-      {/* === END VIDEO SECTION === */}
 
       <Testimonials />
 
@@ -124,13 +101,16 @@ export default function Home() {
           </a>
         </span>
       </p>
+
       <FAQ />
       <CTA />
+
       <div className="container mx-auto px-4 py-8">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>Loading Share Buttons...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
+
       <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
       <Footer />
     </main>
