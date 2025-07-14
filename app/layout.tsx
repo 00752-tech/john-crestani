@@ -1,7 +1,7 @@
 import "./globals.css";
-import AffiliateDisclosureBar from "@/components/AffiliateDisclosureBar";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import AffiliateDisclosureBar from "@/components/AffiliateDisclosureBar"; // Added affiliate bar import
 import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -81,6 +81,7 @@ export default function RootLayout({
       <body className="font-poppins">
         <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
+        <AffiliateDisclosureBar /> {/* Affiliate disclosure bar added here */}
         <Header />
         {children}
       </body>
