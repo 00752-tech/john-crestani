@@ -3,11 +3,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
 import CountUp from 'react-countup'
-
-const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400'] })
 
 export default function Hero() {
   const router = useRouter()
@@ -130,124 +127,4 @@ export default function Hero() {
             {/* CTA Button */}
             <button
               id="hero-cta"
-              className="cta-main w-full sm:w-auto mb-3 mt-0 text-lg"
-              onClick={handleRevealSecrets}
-              type="button"
-            >
-              GET INSTANT ACCESS FOR $27
-            </button>
-
-            {/* Value/Urgency Reinforcement */}
-            <div className="text-pink-400 text-base font-semibold mt-2 mb-2 text-left flex items-center gap-2">
-              Limited-Time: Save $270 &amp; Claim Your FREE Website Bonus!
-              <span className="inline-block w-5 h-5 bg-yellow-400 rounded-full animate-pulse" title="Countdown timer coming soon"></span>
-            </div>
-
-            {/* Social Proof */}
-            <div className="flex flex-col items-start mb-1">
-              <div className="flex items-center mb-1">
-                <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
-                <span className="text-gray-300 text-base font-medium ml-2">
-                  Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
-                </span>
-              </div>
-              <span className="text-xs text-gray-400">
-                Backed by a Rock-Solid 60-Day Money-Back Guarantee.
-              </span>
-            </div>
-
-            {/* Affiliate Bio & Trust Section */}
-            <div className="flex items-center mt-4 bg-[#18181b] rounded-lg p-4 shadow w-full max-w-lg">
-              <Image
-                src="/cool_greybeard_affiliate.webp"
-                alt="Your Affiliate Bio Photo"
-                width={64}
-                height={64}
-                className="rounded-full mr-4 object-cover border-2 border-yellow-400"
-              />
-              <div>
-                <span className="text-white font-semibold">Why I Recommend This:</span>
-                <p className="text-gray-300 text-sm mt-1">
-                  I’ve been a John Crestani affiliate for over 8 years. This new AI Marketers Club is his best offer yet — priced so anyone can get the benefits. I’m sharing it because I’ve seen firsthand how John’s systems help people achieve real, lasting results.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="hidden md:flex w-1/2 justify-center items-center">
-            <Image
-              src="/hero_man_hat.webp"
-              alt="John Crestani"
-              width={1100}
-              height={1100}
-              className="rounded-lg shadow-2xl object-cover"
-              priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1000px' }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* AUTHORITY & PROOF SECTION (Immediately after Hero, with animated stats) */}
-      <section className="w-full flex justify-center bg-black py-8 px-4">
-        <div className="w-full max-w-4xl flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
-            Don&apos;t Just Take Our Word For It. See The Results.
-          </h2>
-          <div
-            className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-3
-              lg:grid-cols-5
-              gap-y-8
-              gap-x-10
-              w-full
-              mb-8
-              text-center
-            "
-          >
-            {stats.map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={pulseVariants}
-                animate="pulse"
-                className="flex flex-col items-center min-w-0"
-              >
-                <span
-                  className="text-3xl md:text-4xl font-extrabold break-words"
-                  style={{
-                    background: "linear-gradient(45deg, #ec4899, #f472b6)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    wordBreak: "break-word",
-                    maxWidth: "100%",
-                  }}
-                >
-                  <CountUp
-                    start={0}
-                    end={item.end}
-                    duration={2.5}
-                    delay={0.2}
-                    separator=""
-                    decimals={item.decimals || 0}
-                    decimal="."
-                    prefix={item.prefix || ""}
-                    suffix={item.suffix || ""}
-                  />
-                </span>
-                <span className="text-gray-300 text-sm md:text-base text-center mt-2">{item.text}</span>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
-            <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              className="cta-main w-full sm:w-auto mb
