@@ -29,51 +29,7 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
 
-      {/* HERO SECTION */}
       <Hero />
-
-      {/* TRUST CTA: Jason Vientos beneath hero/video */}
-      <div className="max-w-3xl mx-auto w-full px-4">
-        <div className="mt-6 text-left" id="video-cta">
-          <div className="flex items-center gap-3 mb-2">
-            <Image
-              src="/cool_greybeard_affiliate.webp"
-              alt="Jason Vientos – Affiliate Marketer"
-              width={40}
-              height={40}
-              className="rounded-full border-2 border-yellow-400 shadow"
-              style={{ minWidth: 40, minHeight: 40 }}
-            />
-            <div>
-              <span className="block text-yellow-400 font-semibold text-base leading-tight">
-                Jason Vientos
-              </span>
-              <span className="block text-xs text-gray-400">
-                Affiliate Marketer & Brand Partner
-              </span>
-            </div>
-          </div>
-          <p className="text-gray-300 text-sm mb-2">
-            Want to know how I turned that same fear into income?
-          </p>
-          <button
-            type="button"
-            onClick={() => {
-              const videoSection = document.getElementById('john-video');
-              if (videoSection) {
-                videoSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200 shadow-lg"
-          >
-            Watch the Exact Training I Recommend
-          </button>
-          {/* Optional: Emotional quote for extra trust */}
-          <p className="mt-4 italic text-gray-400 text-xs">
-            “I watched this same video after being laid off—now I earn commissions every day.”
-          </p>
-        </div>
-      </div>
 
       {/* TRUST SECTION: Affiliate Endorsement */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
