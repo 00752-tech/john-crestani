@@ -69,9 +69,11 @@ export default function Home() {
             </p>
             {/* Secondary CTA Button */}
             <div className="mt-8 text-left">
-              <p className="text-gray-300 text-sm mb-2">
-                Ready to see the system in action?
-              </p>
+                              <p className="text-gray-300 text-sm mb-2">
+  He was fired and broke—then built a thriving affiliate business. In this 6-minute video, John Crestani shares how he turned failure into freedom.
+</p>
+
+              
               <button
                 type="button"
                 onClick={() => {
@@ -82,7 +84,7 @@ export default function Home() {
                 }}
                 className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-5 rounded-full text-sm transition duration-200"
               >
-                Watch the Exact Training I Recommend
+                 Watch the “You&apos;re Fired” Video That Changed Everything
               </button>
             </div>
           </div>
