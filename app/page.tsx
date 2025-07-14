@@ -107,7 +107,7 @@ export default function Home() {
 
       <Hero />
 
-      {/* Immediate Section Below Hero (no more <Stats /> here) */}
+      {/* Immediate Section Below Hero */}
       <section className="w-full flex justify-center bg-black py-12 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col items-center p-8 md:p-14">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-pink-400 mb-4">
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Modern, Breathable Intro & Benefits Section */}
+      {/* Modern, Breathable Intro & Benefits Section - UPDATED */}
       <section className="w-full flex justify-center bg-black py-16 px-4">
         <div className="w-full max-w-5xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row md:space-x-12 p-8 md:p-14 space-y-12 md:space-y-0">
           {/* Left: Why This Faceless System Is Blowing Up */}
@@ -134,28 +134,36 @@ export default function Home() {
               <span className="font-semibold text-white">Who’s Behind This?</span> John Crestani. Over 50,000+ students. $20M+ in affiliate commissions. And now? A brand-new system for 2025 that’s built for speed, simplicity, and scale.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              <span className="font-semibold text-white">AI Marketers Club</span> is his latest creation—a 3-hour crash course that shows you how to use AI to post faceless content that gets clicks, builds momentum, and earns commissions… in just <span className="text-pink-400 font-semibold">7 minutes a day</span>.
+              <span className="font-semibold text-white">AI Marketers Club</span> is his latest creation—a 3-hour crash course that shows you how to use AI to post faceless content that gets clicks, builds momentum, and earns commissions… in just <span className="text-pink-400 font-semibold">7 minutes a day</span> (or 30 minutes if you want to scale faster).
             </p>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
-                <span className="text-gray-200"><b>No Face Needed:</b> Stay anonymous while earning commissions.</span>
+                <span className="text-gray-200"><b>No Face Needed:</b> Stay 100% anonymous—no camera, no personal branding, just results.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
-                <span className="text-gray-200"><b>AI Does the Heavy Lifting:</b> Let smart tools create, post, and optimize your content.</span>
+                <span className="text-gray-200"><b>F.I.R. Prompting Framework:</b> John’s secret “Find, Imitate, Repost” formula for viral, high-converting content—even if you’re new to AI or marketing.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
-                <span className="text-gray-200"><b>7 Minutes a Day:</b> Perfect for busy schedules—just copy, paste, and profit.</span>
+                <span className="text-gray-200"><b>3-Hour Crash Course:</b> Complete, step-by-step video training—learn everything you need in a single afternoon.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
-                <span className="text-gray-200"><b>Beginner Friendly:</b> No tech skills or experience required.</span>
+                <span className="text-gray-200"><b>Exclusive Affiliate Offers:</b> Earn up to <span className="text-yellow-400 font-bold">$821 per click</span> with our private network.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
-                <span className="text-gray-200"><b>$27 Launch Price:</b> Get in before the price jumps to $297!</span>
+                <span className="text-gray-200"><b>No Expensive Software:</b> Recommended tools cost just $14/month—no hidden fees or upsells.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
+                <span className="text-gray-200"><b>Build Your Legacy &amp; Freedom:</b> Create generational wealth and finally live life on your terms.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-5 text-green-400 mr-2 mt-1">✔️</span>
+                <span className="text-gray-200"><b>Perfect for Corporate Professionals:</b> Especially designed for those seeking financial independence without starting from scratch.</span>
               </li>
             </ul>
           </div>
@@ -170,19 +178,23 @@ export default function Home() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <span className="inline-block w-5 text-pink-400 mr-2 mt-1">🚀</span>
-                <span className="text-gray-200"><b>F.I.R. Prompting Formula</b> for viral-style content</span>
+                <span className="text-gray-200"><b>F.I.R. Prompting Formula:</b> Find, Imitate, Repost—turn viral trends into your own affiliate profits.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-pink-400 mr-2 mt-1">🚀</span>
-                <span className="text-gray-200"><b>7-Minute Action Checklist</b> for daily monetized posts</span>
+                <span className="text-gray-200"><b>7-Minute Action Checklist:</b> Monetize your content daily—even with a packed schedule.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-pink-400 mr-2 mt-1">🚀</span>
-                <span className="text-gray-200"><b>Free drag-and-drop website</b> with SSL + domain</span>
+                <span className="text-gray-200"><b>Free Website Builder:</b> Launch your online presence instantly—no coding required.</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-5 text-pink-400 mr-2 mt-1">🚀</span>
-                <span className="text-gray-200"><b>Access to $821/click affiliate offers</b> with 75% payouts</span>
+                <span className="text-gray-200"><b>Access to Exclusive Offers:</b> Promote high-ticket affiliate programs with massive payouts.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-5 text-pink-400 mr-2 mt-1">🚀</span>
+                <span className="text-gray-200"><b>Supportive Community:</b> Get mentorship and support from John and fellow members.</span>
               </li>
             </ul>
           </div>
@@ -201,7 +213,7 @@ export default function Home() {
           <div
             className="w-full flex justify-center transition-transform duration-500 hover:scale-105"
             style={{
-              background: "#f3f4f6", // light grey card
+              background: "#f3f4f6",
               borderRadius: "1.5rem",
               boxShadow: "0 8px 32px 0 rgba(236,72,153,0.10)",
               padding: "2rem 0",
