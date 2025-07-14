@@ -178,16 +178,16 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="hidden md:flex w-[40%] justify-center items-end"> {/* Reduced width to 40% to make the image take up less space relative to the container */}
+          <div className="hidden md:flex w-[48%] justify-center items-end"> {/* Adjusted width to 48% to give the image more space */}
             <Image
               src="/hero_man_hat.webp"
               alt="John Crestani"
-              width={1200} // Increased base width for the image
-              height={1200} // Increased base height for the image
+              width={1600} // Increased base width for the image
+              height={1600} // Increased base height for the image
               className="rounded-lg shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1200px' }} // Adjusted maxWidth to allow larger scaling
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 1200px" // Adjusted sizes for responsiveness
+              style={{ width: '100%', height: 'auto', maxWidth: '1600px' }} // Adjusted maxWidth to allow larger scaling
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 48vw, 1600px" // Adjusted sizes for responsiveness
             />
           </div>
         </div>
