@@ -70,7 +70,7 @@ export default function Home() {
 
             {/* ✅ New Trust CTA */}
             <div className="mt-6 text-left" id="video-cta">
-              <p className="text-gray-300 text-sm md:text-base mb-3 max-w-xl">
+              <p className="text-gray-300 text-lg md:text-base mb-3 max-w-xl">
                 AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
               </p>
               <button
@@ -83,7 +83,7 @@ export default function Home() {
                 }}
                 className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition duration-200"
               >
-                Watch the Training Video
+                 Start Building Your AI Income Today
               </button>
             </div>
           </div>
