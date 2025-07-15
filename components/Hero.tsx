@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <>
-      {/* HERO TOP SECTION */}
+      {/* HERO MAIN */}
       <section className="min-h-screen bg-black text-white flex items-center overflow-hidden relative">
         <style jsx global>{`
           @font-face {
@@ -57,25 +57,19 @@ export default function Hero() {
 
             <h1
               className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.15] tracking-tight mb-2 max-w-2xl"
-              style={{
-                fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-                letterSpacing: '-0.01em',
-              }}
+              style={{ letterSpacing: '-0.01em' }}
             >
               Discover the <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
               <span className="brand-gold">reliable online income</span>.
             </h1>
 
-            <p
-              className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-4 mt-2 max-w-lg text-left leading-relaxed"
-              style={{ letterSpacing: '-0.01em' }}
-            >
+            <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-4 mt-2 max-w-lg text-left leading-relaxed">
               Even if you’re a total beginner, discover John Crestani’s{' '}
               <span className="brand-gold">proven AI system for 2025</span>—step by step—to generate{' '}
               <span className="brand-gold">consistent, passive commissions</span>. No tech skills required.
             </p>
 
-            {/* CTA Button */}
+            {/* CTA */}
             <button
               id="hero-cta"
               className="cta-main w-full sm:w-auto text-lg mb-4"
@@ -85,10 +79,10 @@ export default function Hero() {
               Secure My Spot in The AI Marketers Club
             </button>
 
-            {/* Limited Time + Trust */}
+            {/* Bonus + Proof */}
             <div className="text-pink-400 text-base font-semibold mt-1 text-left">
               Limited-Time Bonus: Includes Your Custom Affiliate Website - FREE!
-              <span className="inline-block ml-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></span>
+              <span className="inline-block ml-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse" />
             </div>
 
             <div className="flex flex-col items-start mt-3">
@@ -104,7 +98,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Right Side: Hero Image */}
           <div className="hidden md:flex w-[45%] justify-center items-end">
             <Image
               src="/hero_man_hat.webp"
@@ -119,10 +113,9 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* CORE BENEFITS SECTION (Immediately Below Hero) */}
+      {/* CORE BENEFITS under hero (REPLACES original bullets) */}
       <section className="w-full flex justify-center bg-black py-6 px-4">
         <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          {/* Benefit 1 */}
           <div className="flex flex-col items-center">
             <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
               FREEDOM
@@ -131,7 +124,6 @@ export default function Hero() {
               Work from anywhere. Leave the 9–5 behind & build life on your terms.
             </p>
           </div>
-          {/* Benefit 2 */}
           <div className="flex flex-col items-center">
             <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
               AI MASTERY
@@ -140,14 +132,49 @@ export default function Hero() {
               Leverage AI tools to launch automated affiliate systems with ease.
             </p>
           </div>
-          {/* Benefit 3 */}
           <div className="flex flex-col items-center">
             <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
               EASY ONBOARDING
             </div>
             <p className="text-sm text-gray-300 max-w-[240px]">
-              No tech skills or audience needed. Everything is step-by-step.
+              No tech skills or experience needed. Everything is step-by-step.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS SECTION (added back & updated) */}
+      <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
+        <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">
+              50k+
+            </div>
+            <p className="text-gray-400 text-xs mt-1">Students Trained</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">
+              $20M+
+            </div>
+            <p className="text-gray-400 text-xs mt-1">Affiliate Earnings</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">
+              9+
+            </div>
+            <p className="text-gray-400 text-xs mt-1">Years of Innovation</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">
+              4.6★
+            </div>
+            <p className="text-gray-400 text-xs mt-1">Avg. Trustpilot Score</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">
+              96%
+            </div>
+            <p className="text-gray-400 text-xs mt-1">Student Satisfaction</p>
           </div>
         </div>
       </section>
