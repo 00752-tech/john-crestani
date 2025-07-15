@@ -16,7 +16,6 @@ export default function Hero() {
     )
   }
 
-  // Pulse animation for stats
   const pulseVariants = {
     pulse: {
       scale: [1, 1.08, 1],
@@ -81,17 +80,15 @@ export default function Hero() {
             background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
             transform: scale(1.04);
           }
-          .brand-yellow {
-            color: #fde047;
-          }
-          .brand-blue {
-            color: #2596be; /* Ensured consistent blue color */
+          .brand-gold {
+            color: #FFD700;
+            font-weight: 700;
           }
         `}</style>
 
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-14 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[55%] flex flex-col items-start md:pr-6 md:ml-20"> {/* width and left margin remain as per last request */}
+          <div className="w-full md:w-[55%] flex flex-col items-start md:pr-6 md:ml-20">
             {/* Kicker */}
             <span className="kicker uppercase text-sm sm:text-base md:text-lg text-gray-400 tracking-widest mb-5 mt-2">
               ▲ AI IS CHANGING EVERYTHING
@@ -106,11 +103,14 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Discover the <span className="brand-blue">AI system</span> that’s turning job loss into <span className="brand-yellow">online income</span>.
+                Discover the&nbsp;
+                <span className="brand-gold">AI system</span>
+                &nbsp;that transforms job uncertainty into&nbsp;
+                <span className="brand-gold">reliable online income</span>.
               </span>
             </h1>
 
-            {/* Subheadline */}
+            {/* ✅ Updated Subheadline */}
             <p
               className="text-gray-200 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed"
               style={{
@@ -119,11 +119,9 @@ export default function Hero() {
                 letterSpacing: '-0.01em'
               }}
             >
-              Learn how beginners are using AI to generate{' '}
-              <span className="brand-yellow font-normal">
-                passive commissions
-              </span>
-              —no experience needed. Step-by-step system for 2025.
+              Even if you’re a total beginner, discover John Crestani’s{' '}
+              <span className="brand-gold font-normal">proven AI system for 2025</span>—step by step—to generate
+              <span className="brand-gold font-normal"> consistent, passive commissions</span>. No tech skills required.
             </p>
 
             {/* Core Benefits */}
@@ -133,15 +131,15 @@ export default function Hero() {
               </div>
               <ul className="space-y-2">
                 <li>
-                  <span className="font-semibold brand-blue">Escape The 9-5 Grind:</span>{' '}
+                  <span className="font-semibold" style={{ color: '#2596be' }}>Escape The 9-5 Grind:</span>{' '}
                   <span className="text-gray-300">Finally achieve the financial freedom you crave.</span>
                 </li>
                 <li>
-                  <span className="font-semibold brand-blue">Profit From The AI Revolution:</span>{' '}
+                  <span className="font-semibold" style={{ color: '#2596be' }}>Profit From The AI Revolution:</span>{' '}
                   <span className="text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
                 </li>
                 <li>
-                  <span className="font-semibold brand-blue">Work From Anywhere:</span>{' '}
+                  <span className="font-semibold" style={{ color: '#2596be' }}>Work From Anywhere:</span>{' '}
                   <span className="text-gray-300">No boss, no burnout, no guesswork – just pure, repeatable income potential.</span>
                 </li>
               </ul>
@@ -178,79 +176,22 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="hidden md:flex w-[48%] justify-center items-end"> {/* Adjusted width to 48% to give the image more space */}
+          <div className="hidden md:flex w-[48%] justify-center items-end">
             <Image
               src="/hero_man_hat.webp"
               alt="John Crestani"
-              width={1600} // Increased base width for the image
-              height={1600} // Increased base height for the image
+              width={1600}
+              height={1600}
               className="rounded-lg shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1600px' }} // Adjusted maxWidth to allow larger scaling
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 48vw, 1600px" // Adjusted sizes for responsiveness
+              style={{ width: '100%', height: 'auto', maxWidth: '1600px' }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 48vw, 1600px"
             />
           </div>
         </div>
       </section>
 
-      {/* AUTHORITY & PROOF SECTION (Immediately after Hero, with animated stats) */}
+      {/* AUTHORITY & PROOF SECTION */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
         <div className="w-full max-w-4xl flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
-            Don&apos;t Just Take Our Word For It. See The Results.
-          </h2>
-          <div
-            className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-3
-              lg:grid-cols-5
-              gap-y-8
-              gap-x-10
-              w-full
-              mb-8
-              text-center
-            "
-          >
-            {stats.map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={pulseVariants}
-                animate="pulse"
-                className="flex flex-col items-center min-w-0"
-              >
-                <span
-                  className="text-3xl md:text-4xl font-extrabold break-words"
-                  style={{
-                    background: "linear-gradient(45deg, #ec4899, #f472b6)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    wordBreak: "break-word",
-                    maxWidth: "100%",
-                  }}
-                >
-                  <CountUp
-                    start={0}
-                    end={item.end}
-                    duration={2.5}
-                    delay={0.2}
-                    separator=""
-                    decimals={item.decimals || 0}
-                    decimal="."
-                    prefix={item.prefix || ""}
-                    suffix={item.suffix || ""}
-                  />
-                </span>
-                <span className="text-gray-300 text-sm md:text-base text-center mt-2">{item.text}</span>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
-            <span className="font-semibold text-green-400">Join the thousands already securing their future with AI.</span>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+          <h2 className="text-2xl md:text-3xl font
