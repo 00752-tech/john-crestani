@@ -1,20 +1,20 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
-import CountUp from 'react-countup'
+import React from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import CountUp from 'react-countup';
 
 export default function Hero() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     router.push(
       'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
-    )
-  }
+    );
+  };
 
   const pulseVariants = {
     pulse: {
@@ -23,18 +23,18 @@ export default function Hero() {
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  }
+        ease: 'easeInOut',
+      },
+    },
+  };
 
   const stats = [
-    { end: 50, suffix: "k+", text: "Students Trained" },
-    { end: 20, prefix: "$", suffix: "M+", text: "Affiliate Commissions" },
-    { end: 9, suffix: "+", text: "Years of Innovation" },
-    { end: 4.6, decimals: 1, text: "Avg. Trustpilot Score" },
-    { end: 96, suffix: "%", text: "Student Satisfaction" }
-  ]
+    { end: 50, suffix: 'k+', text: 'Students Trained' },
+    { end: 20, prefix: '$', suffix: 'M+', text: 'Affiliate Commissions' },
+    { end: 9, suffix: '+', text: 'Years of Innovation' },
+    { end: 4.6, decimals: 1, text: 'Avg. Trustpilot Score' },
+    { end: 96, suffix: '%', text: 'Student Satisfaction' },
+  ];
 
   return (
     <>
@@ -72,7 +72,7 @@ export default function Hero() {
             letter-spacing: 0.04em;
             padding: 0.7rem 1.6rem;
             border-radius: 9999px;
-            box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
+            box-shadow: 0 4px 24px 0 rgba(34, 197, 94, 0.1);
             transition: background 0.2s, transform 0.15s;
           }
           .cta-main:hover,
@@ -100,47 +100,69 @@ export default function Hero() {
                 className="block text-white text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.8rem] font-light"
                 style={{
                   fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
-                  letterSpacing: '-0.01em'
+                  letterSpacing: '-0.01em',
                 }}
               >
-                Discover the&nbsp;
-                <span className="brand-gold">AI system</span>
-                &nbsp;that transforms job uncertainty into&nbsp;
+                Discover the <span className="brand-gold">AI system</span> that
+                transforms job uncertainty into{' '}
                 <span className="brand-gold">reliable online income</span>.
               </span>
             </h1>
 
-            {/* ✅ Updated Subheadline */}
+            {/* Subheadline */}
             <p
               className="text-gray-200 font-extralight text-base sm:text-lg md:text-xl mb-3 mt-1 max-w-lg text-left leading-relaxed"
               style={{
                 fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
                 fontWeight: 300,
-                letterSpacing: '-0.01em'
+                letterSpacing: '-0.01em',
               }}
             >
               Even if you’re a total beginner, discover John Crestani’s{' '}
-              <span className="brand-gold font-normal">proven AI system for 2025</span>—step by step—to generate
-              <span className="brand-gold font-normal"> consistent, passive commissions</span>. No tech skills required.
+              <span className="brand-gold font-normal">
+                proven AI system for 2025
+              </span>
+              —step by step—to generate
+              <span className="brand-gold font-normal">
+                {' '}
+                consistent, passive commissions
+              </span>
+              . No tech skills required.
             </p>
 
             {/* Core Benefits */}
             <div className="bg-[#151517] rounded-xl p-5 mb-4 mt-1 w-full max-w-lg shadow flex flex-col gap-2">
               <div className="text-gray-300 text-base sm:text-lg font-normal mb-1">
-                <span className="font-semibold text-pink-400">Inside the AI Marketers Club, you&apos;ll discover how to:</span>
+                <span className="font-semibold text-pink-400">
+                  Inside the AI Marketers Club, you&apos;ll discover how to:
+                </span>
               </div>
               <ul className="space-y-2">
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>Escape The 9-5 Grind:</span>{' '}
-                  <span className="text-gray-300">Finally achieve the financial freedom you crave.</span>
+                  <span className="font-semibold" style={{ color: '#2596be' }}>
+                    Escape The 9-5 Grind:
+                  </span>{' '}
+                  <span className="text-gray-300">
+                    Finally achieve the financial freedom you crave.
+                  </span>
                 </li>
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>Profit From The AI Revolution:</span>{' '}
-                  <span className="text-gray-300">Turn the very thing that scares others into your competitive edge.</span>
+                  <span className="font-semibold" style={{ color: '#2596be' }}>
+                    Profit From The AI Revolution:
+                  </span>{' '}
+                  <span className="text-gray-300">
+                    Turn the very thing that scares others into your
+                    competitive edge.
+                  </span>
                 </li>
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>Work From Anywhere:</span>{' '}
-                  <span className="text-gray-300">No boss, no burnout, no guesswork – just pure, repeatable income potential.</span>
+                  <span className="font-semibold" style={{ color: '#2596be' }}>
+                    Work From Anywhere:
+                  </span>{' '}
+                  <span className="text-gray-300">
+                    No boss, no burnout, no guesswork – just pure, repeatable
+                    income potential.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -155,16 +177,21 @@ export default function Hero() {
               YES! Show Me The New AI System
             </button>
 
-            {/* Value/Urgency Reinforcement */}
+            {/* Value/Urgency */}
             <div className="text-pink-400 text-base font-semibold mt-2 mb-2 text-left flex items-center gap-2">
               Limited-Time Offer: Secure Your Spot &amp; FREE Website Bonus NOW!
-              <span className="inline-block w-5 h-5 bg-yellow-400 rounded-full animate-pulse" title="Countdown timer coming soon"></span>
+              <span
+                className="inline-block w-5 h-5 bg-yellow-400 rounded-full animate-pulse"
+                title="Countdown timer coming soon"
+              ></span>
             </div>
 
             {/* Social Proof */}
             <div className="flex flex-col items-start mb-1">
               <div className="flex items-center mb-1">
-                <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
+                <span className="text-yellow-400 text-xl mr-1">
+                  ⭐️⭐️⭐️⭐️⭐️
+                </span>
                 <span className="text-gray-300 text-base font-medium ml-2">
                   Trusted by 2,137 Early Adopters&nbsp;|&nbsp;4.96 Rating
                 </span>
@@ -175,7 +202,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Right Column (Hero Image) */}
           <div className="hidden md:flex w-[48%] justify-center items-end">
             <Image
               src="/hero_man_hat.webp"
@@ -184,7 +211,11 @@ export default function Hero() {
               height={1600}
               className="rounded-lg shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '1600px' }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxWidth: '1600px',
+              }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 48vw, 1600px"
             />
           </div>
@@ -194,4 +225,51 @@ export default function Hero() {
       {/* AUTHORITY & PROOF SECTION */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
         <div className="w-full max-w-4xl flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-green-400 mb-6">
+            Don&apos;t Just Take Our Word For It. See The Results.
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-10 w-full mb-8 text-center">
+            {stats.map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={pulseVariants}
+                animate="pulse"
+                className="flex flex-col items-center min-w-0"
+              >
+                <span
+                  className="text-3xl md:text-4xl font-extrabold break-words"
+                  style={{
+                    background: 'linear-gradient(45deg, #ec4899, #f472b6)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    wordBreak: 'break-word',
+                  }}
+                >
+                  <CountUp
+                    start={0}
+                    end={item.end}
+                    duration={2.5}
+                    delay={0.2}
+                    separator=""
+                    decimals={item.decimals || 0}
+                    decimal="."
+                    prefix={item.prefix || ''}
+                    suffix={item.suffix || ''}
+                  />
+                </span>
+                <span className="text-gray-300 text-sm md:text-base text-center mt-2">
+                  {item.text}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-4 text-gray-400 text-center text-base md:text-lg">
+            <span className="font-semibold text-green-400">
+              Join the thousands already securing their future with AI.
+            </span>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
