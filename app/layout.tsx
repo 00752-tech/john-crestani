@@ -8,11 +8,11 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AI Affiliate Course $27 – John Crestani's System",
-  description: "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.",
+  title: "Affiliate Income in 2025 – AI System by Crestani",
+  description: "Faceless content, simple tools, and step-by-step instructions. Join now—$27 offer ends soon.",
   openGraph: {
-    title: "AI Affiliate Course $27 – John Crestani's System",
-    description: "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.",
+    title: "Affiliate Income in 2025 – AI System by Crestani",
+    description: "Faceless content, simple tools, and step-by-step instructions. Join now—$27 offer ends soon.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
