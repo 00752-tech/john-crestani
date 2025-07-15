@@ -37,41 +37,43 @@ export default function Home() {
       {/* HERO */}
       <Hero />
 
-      {/* BONUSES HIGHLIGHT SECTION */}
-      <section className="w-full flex justify-center bg-[#101015] border-y border-yellow-700 py-10 px-4">
+      {/* BONUSES HIGHLIGHT SECTION (Optimized) */}
+      <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
         <div className="w-full max-w-5xl flex flex-col items-center text-center">
-          <h3 className="text-lg md:text-xl font-bold text-yellow-400 uppercase tracking-widest mb-4">
-            Get These Exclusive Bonuses When You Join
-          </h3>
-          <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl">
-            These tools are designed to remove obstacles and help you start earning with AI marketing, fast.
+          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
+            Unlock Your <span className="text-white">AI Marketer’s Toolkit</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
+            Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>—designed to remove friction and launch your results faster.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
             {/* BONUS 1 */}
-            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-sm font-semibold text-yellow-300 mb-2">
+            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 💰 Affiliate Network Access
               </div>
               <p className="text-gray-300 text-sm">
-                Unlock our 75% commission partner program — earn up to <strong className="text-yellow-300">$821</strong> per sale.
+                Earn up to <span className="font-semibold text-yellow-300">$821</span> per sale — join our top-converting private offer.
               </p>
             </div>
+
             {/* BONUS 2 */}
-            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-sm font-semibold text-yellow-300 mb-2">
+            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 🖥️ FREE Affiliate Website
               </div>
               <p className="text-gray-300 text-sm">
-                Launch a drag-and-drop website in minutes. Domain, SSL, templates all included.
+                Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
               </p>
             </div>
+
             {/* BONUS 3 */}
-            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-sm font-semibold text-yellow-300 mb-2">
+            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 👥 Private AI Marketers Club
               </div>
               <p className="text-gray-300 text-sm">
-                Exclusive access to our creator community for support, feedback & live insights.
+                Tap into peer support, feedback, and ongoing mentorship in our invite-only group.
               </p>
             </div>
           </div>
@@ -152,7 +154,7 @@ export default function Home() {
 
           <p className="text-gray-200 text-base md:text-lg max-w-2xl text-center mb-7">
             Ready to optimize your campaigns and track your potential? We’ve built a suite of free, powerful calculators
-            and resources to help affiliate marketers and online entrepreneurs like you make smarter decisions. Use them today, on us!
+            and resources to help affiliate marketers make smarter decisions. Use them today, on us!
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mb-6">
@@ -168,7 +170,6 @@ export default function Home() {
                 Instantly estimate your affiliate profits before you promote. Plan smarter, earn more.
               </div>
             </a>
-
             {/* Tool Card 2 */}
             <a
               href="/content-creation-tools/youtube-earnings-calculator"
@@ -178,7 +179,7 @@ export default function Home() {
                 YouTube Earnings Calculator
               </div>
               <div className="text-gray-300 text-sm">
-                Estimate your AdSense revenue from YouTube video views, CPM, and CTR data.
+                Estimate your AdSense revenue from YouTube views, CTR & CPM assumptions.
               </div>
             </a>
           </div>
@@ -222,13 +223,11 @@ export default function Home() {
       {/* FAQ, CTA, Shares, Footer */}
       <FAQ />
       <CTA />
-
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
-
       <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
       <Footer />
     </main>
