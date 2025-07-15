@@ -3,8 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import CountUp from 'react-countup';
 
 export default function Hero() {
   const router = useRouter();
@@ -14,26 +12,6 @@ export default function Hero() {
     router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
   };
 
-  const pulseVariants = {
-    pulse: {
-      scale: [1, 1.08, 1],
-      opacity: [1, 0.85, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
-    },
-  };
-
-  const stats = [
-    { end: 50, suffix: 'k+', text: 'Students Trained' },
-    { end: 20, prefix: '$', suffix: 'M+', text: 'Affiliate Commissions' },
-    { end: 9, suffix: '+', text: 'Years of Innovation' },
-    { end: 4.6, decimals: 1, text: 'Avg. Trustpilot Score' },
-    { end: 96, suffix: '%', text: 'Student Satisfaction' },
-  ];
-
   return (
     <section className="min-h-screen bg-black text-white flex items-center overflow-hidden relative">
       <style jsx global>{`
@@ -41,13 +19,6 @@ export default function Hero() {
           font-family: 'Satoshi';
           src: url('/fonts/Satoshi-Light.woff2') format('woff2');
           font-weight: 300;
-          font-style: normal;
-          font-display: swap;
-        }
-        @font-face {
-          font-family: 'IBM Plex Mono';
-          src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
-          font-weight: 400;
           font-style: normal;
           font-display: swap;
         }
@@ -62,16 +33,16 @@ export default function Hero() {
           letter-spacing: 0.04em;
           padding: 0.7rem 1.6rem;
           border-radius: 9999px;
-          box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
+          box-shadow: 0 4px 24px rgba(34,197,94,0.1);
           transition: background 0.2s, transform 0.15s;
         }
-        .cta-main:hover,
-        .cta-main:focus {
+        .cta-main:hover {
           background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
           transform: scale(1.04);
         }
         .brand-gold {
           color: #FFD700;
+          font-weight: inherit;
         }
       `}</style>
 
@@ -89,8 +60,7 @@ export default function Hero() {
               letterSpacing: '-0.01em',
             }}
           >
-            Discover the{' '}
-            <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
+            Discover the <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
             <span className="brand-gold">reliable online income</span>.
           </h1>
 
@@ -132,7 +102,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Hero Image */}
+        {/* Right Column */}
         <div className="hidden md:flex w-[45%] justify-center items-end">
           <Image
             src="/hero_man_hat.webp"
