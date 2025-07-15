@@ -82,7 +82,6 @@ export default function Hero() {
           }
           .brand-gold {
             color: #FFD700;
-            /* No bold/semibold for refined, non-shouting emphasis */
             font-weight: inherit;
           }
         `}</style>
@@ -104,9 +103,7 @@ export default function Hero() {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Discover the <span className="brand-gold">AI system</span> that
-                transforms job uncertainty into{' '}
-                <span className="brand-gold">reliable online income</span>.
+                Discover the <span className="brand-gold">AI system</span> that transforms job uncertainty into <span className="brand-gold">reliable online income</span>.
               </span>
             </h1>
 
@@ -119,62 +116,44 @@ export default function Hero() {
                 letterSpacing: '-0.01em',
               }}
             >
-              Even if you’re a total beginner, discover John Crestani’s{' '}
-              <span className="brand-gold">
-                proven AI system for 2025
-              </span>
-              —step by step—to generate
-              <span className="brand-gold">
-                {' '}consistent, passive commissions
-              </span>
-              . No tech skills required.
+              Even if you’re a total beginner, discover John Crestani’s <span className="brand-gold">proven AI system for 2025</span>—step by step—to generate <span className="brand-gold">consistent, passive commissions</span>. No tech skills required.
             </p>
 
-            {/* Core Benefits */}
-            <div className="bg-[#151517] rounded-xl p-5 mb-4 mt-1 w-full max-w-lg shadow flex flex-col gap-2">
-              <div className="text-gray-300 text-base sm:text-lg font-normal mb-1">
-                <span className="font-semibold text-pink-400">
-                  Inside the AI Marketers Club, you&apos;ll discover how to:
-                </span>
+            {/* Core Benefits Section - Updated as requested */}
+            <div className="bg-[#151517] rounded-xl p-5 mb-4 mt-1 w-full max-w-lg shadow flex flex-col gap-3">
+              <div className="text-gray-300 text-base sm:text-lg mb-1">
+                Inside the AI Marketers Club, you&apos;ll unlock the secrets to:
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>
-                    Escape The 9-5 Grind:
-                  </span>{' '}
+                  <span className="brand-gold">Escape The 9-5 Grind:</span>{' '}
                   <span className="text-gray-300">
-                    Finally achieve the financial freedom you crave.
+                    Finally achieve the financial freedom and autonomy you&apos;ve always craved.
                   </span>
                 </li>
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>
-                    Profit From The AI Revolution:
-                  </span>{' '}
+                  <span className="brand-gold">Master the AI Revolution:</span>{' '}
                   <span className="text-gray-300">
-                    Turn the very thing that scares others into your
-                    competitive edge.
+                    Convert what scares others into your unbeatable competitive advantage.
                   </span>
                 </li>
                 <li>
-                  <span className="font-semibold" style={{ color: '#2596be' }}>
-                    Work From Anywhere:
-                  </span>{' '}
+                  <span className="brand-gold">Work From Anywhere:</span>{' '}
                   <span className="text-gray-300">
-                    No boss, no burnout, no guesswork – just pure, repeatable
-                    income potential.
+                    Eliminate the boss, burnout, and guesswork for pure, repeatable income.
                   </span>
                 </li>
               </ul>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button - Updated Text */}
             <button
               id="hero-cta"
               className="cta-main w-full sm:w-auto mb-3 mt-0 text-lg"
               onClick={handleRevealSecrets}
               type="button"
             >
-              YES! Show Me The New AI System
+              YES! Secure My Spot in The New AI System
             </button>
 
             {/* Value/Urgency */}
