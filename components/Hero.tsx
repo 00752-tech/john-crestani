@@ -1,180 +1,150 @@
 'use client';
 
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import React from 'react';
 import Image from 'next/image';
-import Hero from '@/components/Hero';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
-import WebinarInvite from '@/components/WebinarInvite';
-import RelatedTools from '@/components/RelatedTools';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import CountUp from 'react-countup';
 
-const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
+export default function Hero() {
+  const router = useRouter();
 
-export default function Home() {
-  const pageUrl = 'https://johncrestani.me';
-  const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
+  const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
+  };
 
-  const schema = { /* ...your schema here... */ };
-  const offerSchema = { /* ...your offerSchema here... */ };
+  const pulseVariants = {
+    pulse: {
+      scale: [1, 1.08, 1],
+      opacity: [1, 0.85, 1],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      },
+    },
+  };
+
+  const stats = [
+    { end: 50, suffix: 'k+', text: 'Students Trained' },
+    { end: 20, prefix: '$', suffix: 'M+', text: 'Affiliate Commissions' },
+    { end: 9, suffix: '+', text: 'Years of Innovation' },
+    { end: 4.6, decimals: 1, text: 'Avg. Trustpilot Score' },
+    { end: 96, suffix: '%', text: 'Student Satisfaction' },
+  ];
 
   return (
-    <main className="flex flex-col min-h-screen bg-black overflow-hidden">
-      <Head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
-      </Head>
+    <section className="min-h-screen bg-black text-white flex items-center overflow-hidden relative">
+      <style jsx global>{`
+        @font-face {
+          font-family: 'Satoshi';
+          src: url('/fonts/Satoshi-Light.woff2') format('woff2');
+          font-weight: 300;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'IBM Plex Mono';
+          src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        body {
+          font-family: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .cta-main {
+          background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          letter-spacing: 0.04em;
+          padding: 0.7rem 1.6rem;
+          border-radius: 9999px;
+          box-shadow: 0 4px 24px 0 rgba(34,197,94,0.10);
+          transition: background 0.2s, transform 0.15s;
+        }
+        .cta-main:hover,
+        .cta-main:focus {
+          background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
+          transform: scale(1.04);
+        }
+        .brand-gold {
+          color: #FFD700;
+        }
+      `}</style>
 
-      {/* HERO SECTION */}
-      <Hero />
+      <div className="container mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between pt-16 md:pt-0">
+        {/* Left Column */}
+        <div className="w-full md:w-[55%] md:ml-20 md:pr-6 flex flex-col items-start">
+          <span className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-widest mb-4">
+            ▲ AI IS CHANGING EVERYTHING
+          </span>
 
-      {/* TRUST SECTION: Affiliate Endorsement */}
-      <section className="w-full flex justify-center bg-black py-10 px-4">
-        <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
-          {/* Affiliate Image */}
-          <div className="w-full md:w-1/3 flex flex-col items-center mb-6 md:mb-0">
-            <Image
-              src="/cool_greybeard_affiliate.webp"
-              alt="Jason Vientos – Experienced Affiliate Promoting SAS Pro"
-              width={220}
-              height={220}
-              className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
-              priority
-              style={{ maxWidth: '180px', height: 'auto' }}
-            />
-            {/* Name below image */}
-            <span className="mt-4 text-lg font-semibold text-yellow-400 tracking-wide text-center">
-              Jason Vientos
-            </span>
-            <span className="text-xs text-gray-400 mt-1 text-center">
-              Affiliate Marketer & Brand Partner
-            </span>
+          <h1
+            className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.15] tracking-tight mb-2 max-w-2xl"
+            style={{
+              fontFamily: "'Satoshi', 'Helvetica Neue', Arial, sans-serif",
+              letterSpacing: '-0.01em',
+            }}
+          >
+            Discover the{' '}
+            <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
+            <span className="brand-gold">reliable online income</span>.
+          </h1>
+
+          <p
+            className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-4 mt-2 max-w-lg text-left leading-relaxed"
+            style={{ letterSpacing: '-0.01em' }}
+          >
+            Even if you’re a total beginner, discover John Crestani’s{' '}
+            <span className="brand-gold">proven AI system for 2025</span>—step by step—to generate{' '}
+            <span className="brand-gold">consistent, passive commissions</span>. No tech skills required.
+          </p>
+
+          {/* CTA Button */}
+          <button
+            id="hero-cta"
+            className="cta-main w-full sm:w-auto text-lg mb-4"
+            onClick={handleRevealSecrets}
+            type="button"
+          >
+            Secure My Spot in The AI Marketers Club
+          </button>
+
+          {/* Trustproof */}
+          <div className="text-pink-400 text-base font-semibold mt-1 text-left">
+            Limited-Time Bonus: Includes Your Custom Affiliate Website - FREE!
+            <span className="inline-block ml-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></span>
           </div>
 
-          {/* Testimonial Text + Trust CTA */}
-          <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight">
-              Why I’m Promoting This System
-            </h3>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              I’ve been in affiliate marketing for over 9 years and followed John Crestani’s SAS Pro system since the early days.
-              <span className="block mt-2 text-yellow-400 font-medium">
-                I rarely promote offers, but this one’s different.
+          <div className="flex flex-col items-start mt-3">
+            <div className="flex items-center mb-1">
+              <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
+              <span className="text-gray-300 text-sm ml-2">
+                Trusted by 2,137 early adopters &nbsp;|&nbsp; 4.96 Rating
               </span>
-              This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
-              I’ve seen it work, and I recommend it because I believe in the results.
-            </p>
-
-            {/* Trust CTA */}
-            <div className="mt-6 text-left" id="video-cta">
-              <p className="text-gray-300 text-sm md:text-base mb-3 max-w-xl">
-                AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
-              </p>
-              <button
-                type="button"
-                onClick={() => {
-                  const videoSection = document.getElementById('john-video');
-                  if (videoSection) {
-                    videoSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition duration-200"
-              >
-                Watch the Training Video
-              </button>
             </div>
+            <span className="text-xs text-gray-400">
+              Backed by a rock-solid 60-day money-back guarantee.
+            </span>
           </div>
         </div>
-      </section>
 
-      {/* WEBINAR INVITE / VIDEO SECTION */}
-      <Suspense fallback={<div>Loading Webinar Invite...</div>}>
-        <div id="john-video">
-          <WebinarInvite />
+        {/* Right Column: Hero Image */}
+        <div className="hidden md:flex w-[45%] justify-center items-end">
+          <Image
+            src="/hero_man_hat.webp"
+            alt="John Crestani Headshot"
+            width={1600}
+            height={1600}
+            className="rounded-xl shadow-2xl object-cover"
+            priority
+            style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
+          />
         </div>
-      </Suspense>
-
-      {/* SOCIAL PROOF, TESTIMONIALS, ETC */}
-      <Testimonials />
-
-      {/* === NEW FREE TOOLS RESOURCE BRIDGE SECTION === */}
-      <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
-        <div className="w-full max-w-4xl rounded-2xl shadow-2xl flex flex-col items-center p-6 relative overflow-hidden">
-          <div className="absolute top-6 right-6 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold shadow-sm uppercase tracking-widest select-none" style={{letterSpacing:'0.07em'}}>Free Resource</div>
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 text-center">
-            Free Tools to Maximize Your Affiliate &amp; Online Business Growth
-          </h2>
-          <p className="text-gray-200 text-base md:text-lg max-w-2xl text-center mb-7">
-            Ready to optimize your campaigns and track your potential? We’ve built a suite of free, powerful calculators and resources to help affiliate marketers and online entrepreneurs like you make smarter decisions. Use them today, on us!
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mb-4">
-            {/* Example Tool Cards - replace/add as needed */}
-            <a href="/affiliate-marketing-tools/earnings-calculator" className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition">
-              <div className="text-lg font-semibold text-yellow-400 mb-2">Affiliate Earnings Calculator</div>
-              <div className="text-gray-300 text-sm">
-                Instantly estimate your potential campaign profits before you promote—plan smarter, earn more.
-              </div>
-            </a>
-            <a href="/affiliate-marketing-tools/youtube-title-generator" className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition">
-              <div className="text-lg font-semibold text-yellow-400 mb-2">YouTube Title &amp; Hook Generator</div>
-              <div className="text-gray-300 text-sm">
-                Generate high-converting video ideas and killer titles for your next campaign, free.
-              </div>
-            </a>
-            {/* Add more tool cards as needed */}
-          </div>
-          <a
-            href="/affiliate-marketing-tools"
-            className="mt-2 bg-yellow-400 text-black font-semibold py-2 px-8 rounded-full text-base transition hover:bg-yellow-300 hover:text-black shadow-lg mb-2"
-          >
-            Explore All Free Tools Now
-          </a>
-          <p className="text-xs text-gray-400 mt-2 text-center max-w-md">
-            Our free tools are always available—no signup or purchase required. Take them for a spin, and if you want to build even greater passive income, don’t miss the AI Marketers Club below!
-          </p>
-        </div>
-      </section>
-      {/* === END FREE TOOLS RESOURCE SECTION === */}
-
-      <div className="flex justify-center my-12 px-4">
-        <Image
-          src="/ai-usage-chart.jpg"
-          alt="AI Statistics Infographic: Key global AI usage, adoption, and growth trends for 2025. Source: Digital Silk, June 2025."
-          width={700}
-          height={1100}
-          className="rounded-xl shadow-xl border-2 border-pink-500 bg-white"
-          loading="eager"
-          priority
-        />
       </div>
-      <p className="text-center text-xs text-gray-400 mt-2 mb-8">
-        Infographic: Digital Silk. (2025). AI statistics [Infographic]. Retrieved June 2025,{' '}
-        <span className="underline">
-          <a
-            href="https://www.digitalsilk.com/digital-trends/ai-statistics/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            digitalsilk.com
-          </a>
-        </span>
-      </p>
-
-      {/* FAQ, CTA, SHARE BUTTONS, FOOTER */}
-      <FAQ />
-      <CTA />
-
-      <div className="container mx-auto px-4 py-8">
-        <Suspense fallback={<div>Loading Share Buttons...</div>}>
-          <DynamicShareButtons url={pageUrl} title={pageTitle} />
-        </Suspense>
-      </div>
-
-      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
-      <Footer />
-    </main>
+    </section>
   );
 }
