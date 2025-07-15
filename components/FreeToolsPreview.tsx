@@ -8,9 +8,11 @@ export default function FreeToolsPreview() {
       <div className="absolute top-6 right-6 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold shadow-sm uppercase tracking-widest select-none">
         Free Resource
       </div>
+
       <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 text-center">
         Free Tools to Maximize Your Affiliate &amp; Online Business Growth
       </h2>
+
       <p className="text-gray-200 text-base md:text-lg max-w-2xl text-center mb-7">
         Ready to optimize your campaigns and track your potential? We’ve built a suite of free, powerful calculators and resources to help affiliate marketers and online entrepreneurs like you make smarter decisions. Use them today, on us!
       </p>
@@ -22,7 +24,7 @@ export default function FreeToolsPreview() {
         >
           <div className="text-lg text-yellow-400 mb-2">Affiliate Earnings Calculator</div>
           <p className="text-gray-300 text-sm">
-            Estimate your potential commissions based on traffic, conversions, and payout offers.
+            Estimate your potential commissions before you promote—plan smarter, earn more.
           </p>
         </a>
 
@@ -30,9 +32,9 @@ export default function FreeToolsPreview() {
           href="/affiliate-marketing-tools/youtube-title-generator"
           className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition"
         >
-          <div className="text-lg text-yellow-400 mb-2">YouTube Title &amp; Hook Generator</div>
+          <div className="text-lg text-yellow-400 mb-2">YouTube Title Generator</div>
           <p className="text-gray-300 text-sm">
-            Craft scroll-stopping video titles and magnetic hooks in seconds using free AI.
+            Grab attention with magnetic video titles backed by what actually works on YouTube.
           </p>
         </a>
       </div>
@@ -45,7 +47,7 @@ export default function FreeToolsPreview() {
       </Link>
 
       <p className="text-xs text-gray-400 mt-2 text-center max-w-md">
-        Free to use — no signup required. Designed for marketers, creators, and solopreneurs.
+        No signup or cost required. Take full advantage of these exclusive tools built for affiliate marketers, YouTubers & creators.
       </p>
     </div>
   );
