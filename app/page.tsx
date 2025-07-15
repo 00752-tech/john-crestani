@@ -37,6 +37,47 @@ export default function Home() {
       {/* HERO */}
       <Hero />
 
+      {/* BONUSES HIGHLIGHT SECTION */}
+      <section className="w-full flex justify-center bg-[#101015] border-y border-yellow-700 py-10 px-4">
+        <div className="w-full max-w-5xl flex flex-col items-center text-center">
+          <h3 className="text-lg md:text-xl font-bold text-yellow-400 uppercase tracking-widest mb-4">
+            Get These Exclusive Bonuses When You Join
+          </h3>
+          <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl">
+            These tools are designed to remove obstacles and help you start earning with AI marketing, fast.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {/* BONUS 1 */}
+            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-sm font-semibold text-yellow-300 mb-2">
+                💰 Affiliate Network Access
+              </div>
+              <p className="text-gray-300 text-sm">
+                Unlock our 75% commission partner program — earn up to <strong className="text-yellow-300">$821</strong> per sale.
+              </p>
+            </div>
+            {/* BONUS 2 */}
+            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-sm font-semibold text-yellow-300 mb-2">
+                🖥️ FREE Affiliate Website
+              </div>
+              <p className="text-gray-300 text-sm">
+                Launch a drag-and-drop website in minutes. Domain, SSL, templates all included.
+              </p>
+            </div>
+            {/* BONUS 3 */}
+            <div className="bg-black border border-yellow-500 rounded-lg p-5 text-left shadow hover:shadow-yellow-500/30 transition">
+              <div className="text-sm font-semibold text-yellow-300 mb-2">
+                👥 Private AI Marketers Club
+              </div>
+              <p className="text-gray-300 text-sm">
+                Exclusive access to our creator community for support, feedback & live insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TRUST SECTION */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
@@ -128,7 +169,7 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Tool Card 2 (Updated URL to working YouTube Earnings Calculator) */}
+            {/* Tool Card 2 */}
             <a
               href="/content-creation-tools/youtube-earnings-calculator"
               className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition"
