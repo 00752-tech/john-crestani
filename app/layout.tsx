@@ -9,13 +9,10 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "AI Affiliate Course $27 – John Crestani's System",
-  description:
-    "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.
-",
+  description: "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.",
   openGraph: {
     title: "AI Affiliate Course $27 – John Crestani's System",
-    description:
-      "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.",
+    description: "Learn AI affiliate marketing fast. $27 gets the full course + 8 bonuses. Faceless income made simple.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
@@ -82,7 +79,7 @@ export default function RootLayout({
       <body className="font-poppins">
         <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
-        <AffiliateDisclosureBar /> {/* Affiliate disclosure bar added here */}
+        <AffiliateDisclosureBar />
         <Header />
         {children}
       </body>
