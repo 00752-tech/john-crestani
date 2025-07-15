@@ -82,7 +82,8 @@ export default function Hero() {
           }
           .brand-gold {
             color: #FFD700;
-            font-weight: 700;
+            /* No bold/semibold for refined, non-shouting emphasis */
+            font-weight: inherit;
           }
         `}</style>
 
@@ -119,13 +120,12 @@ export default function Hero() {
               }}
             >
               Even if you’re a total beginner, discover John Crestani’s{' '}
-              <span className="brand-gold font-normal">
+              <span className="brand-gold">
                 proven AI system for 2025
               </span>
               —step by step—to generate
-              <span className="brand-gold font-normal">
-                {' '}
-                consistent, passive commissions
+              <span className="brand-gold">
+                {' '}consistent, passive commissions
               </span>
               . No tech skills required.
             </p>
