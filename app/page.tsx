@@ -40,7 +40,6 @@ export default function Home() {
       {/* TRUST SECTION */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
-          {/* Affiliate Image */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
               src="/cool_greybeard_affiliate.webp"
@@ -55,7 +54,6 @@ export default function Home() {
             <span className="text-xs text-gray-400 text-center">Affiliate Marketer & Brand Partner</span>
           </div>
 
-          {/* Testimonial */}
           <div className="w-full md:w-2/3 text-left">
             <h3 className="text-2xl font-semibold text-white mb-4">Why I’m Promoting This System</h3>
             <p className="text-gray-300 leading-relaxed text-base md:text-lg">
@@ -63,7 +61,9 @@ export default function Home() {
               <span className="block mt-2 text-yellow-400 font-medium">
                 I rarely promote offers, but this one’s different.
               </span>
-              This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income. I’ve seen it work, and I recommend it because I believe in the results.
+              This new AI-powered version isn’t just another course — it’s built for today’s landscape.
+              If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
+              I’ve seen it work, and I recommend it because I believe in the results.
             </p>
             <div className="mt-6">
               <p className="text-gray-300 text-sm md:text-base mb-3">
@@ -99,7 +99,6 @@ export default function Home() {
       {/* FREE TOOLS BRIDGE SECTION */}
       <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
         <div className="w-full max-w-4xl rounded-2xl shadow-2xl flex flex-col items-center p-6 relative overflow-hidden">
-          {/* Badge Placement Fix: ABOVE Heading */}
           <div className="mb-3 w-full flex justify-center">
             <span className="bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold shadow-sm uppercase tracking-widest select-none">
               FREE RESOURCE
@@ -129,21 +128,20 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Tool Card 2 */}
+            {/* Tool Card 2 (Updated URL to working YouTube Earnings Calculator) */}
             <a
-              href="/affiliate-marketing-tools/youtube-title-generator"
+              href="/content-creation-tools/youtube-earnings-calculator"
               className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition"
             >
               <div className="text-lg font-semibold text-yellow-400 mb-1">
-                YouTube Title Generator
+                YouTube Earnings Calculator
               </div>
               <div className="text-gray-300 text-sm">
-                Generate high-converting video titles for your channel in seconds.
+                Estimate your AdSense revenue from YouTube video views, CPM, and CTR data.
               </div>
             </a>
           </div>
 
-          {/* CTA */}
           <a
             href="/affiliate-marketing-tools"
             className="bg-yellow-400 text-black font-semibold py-2 px-8 rounded-full text-base transition hover:bg-yellow-300 hover:text-black shadow-lg"
@@ -180,7 +178,7 @@ export default function Home() {
         </a>
       </p>
 
-      {/* FAQ, CTA, SHARE BUTTONS, TOOLS, FOOTER */}
+      {/* FAQ, CTA, Shares, Footer */}
       <FAQ />
       <CTA />
 
