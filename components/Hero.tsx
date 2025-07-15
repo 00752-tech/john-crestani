@@ -48,7 +48,7 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between pt-16 md:pt-0">
+        <div className="container mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-6 md:pt-4">
           {/* Left Column */}
           <div className="w-full md:w-[55%] md:ml-20 md:pr-6 flex flex-col items-start">
             <span className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-widest mb-4">
@@ -113,7 +113,7 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* CORE BENEFITS under hero (REPLACES original bullets) */}
+      {/* CORE BENEFITS SECTION */}
       <section className="w-full flex justify-center bg-black py-6 px-4">
         <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           <div className="flex flex-col items-center">
@@ -143,37 +143,27 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* STATS SECTION (added back & updated) */}
+      {/* STATS SECTION */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
           <div>
-            <div className="text-3xl font-bold text-yellow-400">
-              50k+
-            </div>
+            <div className="text-3xl font-bold text-yellow-400">50k+</div>
             <p className="text-gray-400 text-xs mt-1">Students Trained</p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-yellow-400">
-              $20M+
-            </div>
+            <div className="text-3xl font-bold text-yellow-400">$20M+</div>
             <p className="text-gray-400 text-xs mt-1">Affiliate Earnings</p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-yellow-400">
-              9+
-            </div>
+            <div className="text-3xl font-bold text-yellow-400">9+</div>
             <p className="text-gray-400 text-xs mt-1">Years of Innovation</p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-yellow-400">
-              4.6★
-            </div>
+            <div className="text-3xl font-bold text-yellow-400">4.6★</div>
             <p className="text-gray-400 text-xs mt-1">Avg. Trustpilot Score</p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-yellow-400">
-              96%
-            </div>
+            <div className="text-3xl font-bold text-yellow-400">96%</div>
             <p className="text-gray-400 text-xs mt-1">Student Satisfaction</p>
           </div>
         </div>
