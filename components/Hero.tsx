@@ -48,10 +48,10 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-6 md:pt-4">
+        <div className="container mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0">
           {/* Left Column */}
           <div className="w-full md:w-[55%] md:ml-20 md:pr-6 flex flex-col items-start">
-            <span className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-widest mb-4">
+            <span className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-light pb-3" style={{letterSpacing: '0.08em'}}>
               ▲ AI IS CHANGING EVERYTHING
             </span>
 
