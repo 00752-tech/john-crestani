@@ -64,7 +64,7 @@ export default function Home() {
               <span className="block mt-2 text-yellow-400 font-medium">
                 I rarely promote offers, but this one’s different.
               </span>
-              This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
+              This new AI-powered version isn’t just another course — it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the <i>fastest way</i> to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
 
