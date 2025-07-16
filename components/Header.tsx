@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [countdown, setCountdown] = useState('');
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -19,12 +20,43 @@ export default function Header() {
     { name: "All Free Tools", url: "/free-tools" },
   ];
 
+  // Countdown logic
+  useEffect(() => {
+    const targetDate = new Date('2025-07-20T23:59:59');
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance <= 0) {
+        setCountdown('Offer expired');
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="sticky top-0 w-full z-50">
-      {/* The gradient banner you like, now at the very top */}
+      {/* Banner with countdown urgency */}
       <div className="w-full flex justify-center z-50">
-        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex items-center gap-2 w-full justify-center">
-          <span>⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE ⭐</span>
+        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
+          <span>
+            ⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE —
+            <strong className="text-red-700 font-semibold ml-1">
+              Ends in {countdown}
+            </strong> ⭐
+          </span>
           <button
             className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
             onClick={() => {
