@@ -37,6 +37,62 @@ export default function Home() {
       {/* HERO */}
       <Hero />
 
+      {/* THREE VALUE PROPS BANNER */}
+      <section className="w-full flex justify-center bg-black py-8 px-4">
+        <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              FREEDOM
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              Work from anywhere. Leave the 9–5 behind & build life on your terms.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              AI MASTERY
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              Leverage AI tools to launch automated affiliate systems with ease.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              EASY ONBOARDING
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              No tech skills or experience needed. Everything is step-by-step.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS BAR */}
+      <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
+        <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">50k+</div>
+            <p className="text-gray-400 text-xs mt-1">Students Trained</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">$20M+</div>
+            <p className="text-gray-400 text-xs mt-1">Affiliate Earnings</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">9+</div>
+            <p className="text-gray-400 text-xs mt-1">Years of Innovation</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">4.6★</div>
+            <p className="text-gray-400 text-xs mt-1">Avg. Trustpilot Score</p>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">96%</div>
+            <p className="text-gray-400 text-xs mt-1">Student Satisfaction</p>
+          </div>
+        </div>
+      </section>
+
       {/* BONUSES SECTION */}
       <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
         <div className="w-full max-w-5xl flex flex-col items-center text-center">
