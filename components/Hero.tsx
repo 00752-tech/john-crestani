@@ -101,7 +101,7 @@ export default function Hero() {
           {/* Right Side: Hero Image */}
           <div className="hidden md:flex w-[45%] justify-center items-end">
             <Image
-              src="/hero_man_hat.webp"
+              src="/hero_2_image.webp"
               alt="John Crestani Headshot"
               width={1600}
               height={1600}
