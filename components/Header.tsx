@@ -57,15 +57,16 @@ export default function Header() {
               Ends in {countdown}
             </strong> ⭐
           </span>
-          <button
+
+          {/* Updated CTA Button with Affiliate Link */}
+          <a
+            href="https://5f257mauiyfq4w6ggp5b3s8u3m.hop.clickbank.net/?&traffic_source=banner_grab_discount_cta"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
-            onClick={() => {
-              const cta = document.getElementById('hero-cta');
-              if (cta) cta.scrollIntoView({ behavior: 'smooth' });
-            }}
           >
             GRAB DISCOUNT →
-          </button>
+          </a>
         </div>
       </div>
 
