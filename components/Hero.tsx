@@ -52,11 +52,12 @@ export default function Hero() {
           {/* Left Column */}
           <div className="w-full md:w-[55%] md:ml-20 md:pr-6 flex flex-col items-start space-y-6">
             <span
-              className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-light mb-2"
-              style={{ letterSpacing: '0.08em' }}
-            >
-              ▲ AI IS CHANGING EVERYTHING
-            </span>
+  className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
+  style={{ letterSpacing: '0.08em' }}
+>
+  ▲ AI IS CHANGING EVERYTHING
+</span>
+
 
             <h1
               className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-2xl"
