@@ -120,7 +120,7 @@ export default function Home() {
               }}
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
             >
-              Watch the Training Video
+              Watch: You're Fired! (But You're Hired by AI)
             </button>
           </div>
         </div>
