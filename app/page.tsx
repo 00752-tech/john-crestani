@@ -56,7 +56,6 @@ export default function Home() {
                 Earn up to <span className="font-semibold text-yellow-300">$821</span> per sale — join our top-converting private offer.
               </p>
             </div>
-
             {/* BONUS 2 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
@@ -66,7 +65,6 @@ export default function Home() {
                 Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
               </p>
             </div>
-
             {/* BONUS 3 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
@@ -108,23 +106,22 @@ export default function Home() {
               If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
               I’ve seen it work, and I recommend it because I believe in the results.
             </p>
-            <div className="mt-6">
-              <p className="text-gray-300 text-sm md:text-base mb-3">
-                AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
-              </p>
-              <button
-                type="button"
-                onClick={() => {
-                  const videoSection = document.getElementById('john-video');
-                  if (videoSection) {
-                    videoSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
-              >
-                Watch the Training Video
-              </button>
-            </div>
+            {/* Added padding below testimonial & unified font size */}
+            <p className="text-gray-300 text-base md:text-lg mt-6 mb-4">
+              AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                const videoSection = document.getElementById('john-video');
+                if (videoSection) {
+                  videoSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
+            >
+              Watch the Training Video
+            </button>
           </div>
         </div>
       </section>
