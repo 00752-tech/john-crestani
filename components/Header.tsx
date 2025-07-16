@@ -46,6 +46,14 @@ export default function Header() {
     return () => clearInterval(interval);
   }, []);
 
+  // Affiliate link open handler
+  const openAffiliateLink = () => {
+    window.open(
+      'https://5f257mauiyfq4w6ggp5b3s8u3m.hop.clickbank.net/?&traffic_source=banner_grab_discount_cta',
+      '_blank'
+    );
+  };
+
   return (
     <header className="sticky top-0 w-full z-50">
       {/* Banner with countdown urgency */}
@@ -58,15 +66,13 @@ export default function Header() {
             </strong> ⭐
           </span>
 
-          {/* Updated CTA Button with Affiliate Link */}
-          <a
-            href="https://5f257mauiyfq4w6ggp5b3s8u3m.hop.clickbank.net/?&traffic_source=banner_grab_discount_cta"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Button with no URL shown on hover - opens link via JS */}
+          <button
+            onClick={openAffiliateLink}
             className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
           >
             GRAB DISCOUNT →
-          </a>
+          </button>
         </div>
       </div>
 
