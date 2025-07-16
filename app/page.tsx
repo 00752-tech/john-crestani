@@ -17,10 +17,10 @@ const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), {
 
 export default function Home() {
   const pageUrl = 'https://johncrestani.me';
-  const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
+  const pageTitle = 'AI Marketers Club $27: John Crestani&rsquo;s 2025 Faceless AI System';
 
-  const schema = { /* your schema markup here */ };
-  const offerSchema = { /* your offer schema markup here */ };
+  const schema = { /* schema here */ };
+  const offerSchema = { /* offer schema here */ };
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
@@ -28,7 +28,7 @@ export default function Home() {
         <title>{pageTitle}</title>
         <meta
           name="description"
-          content="Discover John Crestani's AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
+          content="Discover John Crestani&rsquo;s AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
@@ -37,11 +37,11 @@ export default function Home() {
       {/* HERO */}
       <Hero />
 
-      {/* BONUSES HIGHLIGHT SECTION (Optimized) */}
+      {/* BONUSES SECTION */}
       <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
         <div className="w-full max-w-5xl flex flex-col items-center text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
-            Unlock Your <span className="text-white">AI Marketer’s Toolkit</span>
+            Unlock Your <span className="text-white">AI Marketer&rsquo;s Toolkit</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
             Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>—designed to remove friction and launch your results faster.
@@ -78,13 +78,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST SECTION */}
+      {/* TESTIMONIAL SECTION */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
               src="/cool_greybeard_affiliate.webp"
-              alt="Jason Vientos – Experienced Affiliate Promoting SAS Pro"
+              alt="Jason Vientos – Experienced Affiliate"
               width={220}
               height={220}
               className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
@@ -96,17 +96,16 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Why I’m Promoting This System</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">Why I&rsquo;m Promoting This System</h3>
             <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-              I’ve been in affiliate marketing for over 9 years and followed John Crestani’s SAS Pro system since the early days.
+              I&rsquo;ve been in affiliate marketing for over 9 years and followed John Crestani&rsquo;s SAS Pro system since the early days.
               <span className="block mt-2 text-yellow-400 font-medium">
-                I rarely promote offers, but this one’s different.
+                I rarely promote offers, but this one&rsquo;s different.
               </span>
-              This new AI-powered version isn’t just another course — it’s built for today’s landscape.
-              If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
-              I’ve seen it work, and I recommend it because I believe in the results.
+              This new AI-powered version isn&rsquo;t just another course — it&rsquo;s built for today&rsquo;s landscape.
+              If you&rsquo;re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
+              I&rsquo;ve seen it work, and I recommend it because I believe in the results.
             </p>
-            {/* Added padding below testimonial & unified font size */}
             <p className="text-gray-300 text-base md:text-lg mt-6 mb-4">
               AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
             </p>
@@ -120,14 +119,14 @@ export default function Home() {
               }}
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
             >
-              Watch: You're Fired! (But You're Hired by AI)
+              Watch: You&rsquo;re Fired! (But You&rsquo;re Hired by AI)
             </button>
           </div>
         </div>
       </section>
 
-      {/* WEBINAR INVITE / VIDEO SECTION */}
-      <Suspense fallback={<div>Loading Webinar...</div>}>
+      {/* WEBINAR / VIDEO */}
+      <Suspense fallback={<div>Loading...</div>}>
         <div id="john-video">
           <WebinarInvite />
         </div>
@@ -136,7 +135,7 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <Testimonials />
 
-      {/* FREE TOOLS BRIDGE SECTION */}
+      {/* FREE TOOLS SECTION */}
       <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
         <div className="w-full max-w-4xl rounded-2xl shadow-2xl flex flex-col items-center p-6 relative overflow-hidden">
           <div className="mb-3 w-full flex justify-center">
@@ -150,8 +149,7 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-200 text-base md:text-lg max-w-2xl text-center mb-7">
-            Ready to optimize your campaigns and track your potential? We’ve built a suite of free, powerful calculators
-            and resources to help affiliate marketers make smarter decisions. Use them today, on us!
+            Ready to optimize your campaigns and track your potential? We&rsquo;ve built a suite of free, powerful calculators and resources to help affiliate marketers make smarter decisions. Use them today, on us!
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mb-6">
@@ -176,7 +174,7 @@ export default function Home() {
                 YouTube Earnings Calculator
               </div>
               <div className="text-gray-300 text-sm">
-                Estimate your AdSense revenue from YouTube views, CTR & CPM assumptions.
+                Estimate your AdSense revenue from YouTube views, CTR &amp; CPM assumptions.
               </div>
             </a>
           </div>
@@ -189,7 +187,7 @@ export default function Home() {
           </a>
 
           <p className="text-xs text-gray-400 mt-2 text-center max-w-md">
-            These free tools are always available—just use them. No signup required.
+            These free tools are always available&mdash;just use them. No signup required.
           </p>
         </div>
       </section>
@@ -205,6 +203,7 @@ export default function Home() {
           priority
         />
       </div>
+
       <p className="text-center text-xs text-gray-400 mt-2 mb-8">
         Infographic: Digital Silk. (2025). AI statistics [Infographic].{' '}
         <a
