@@ -9,7 +9,9 @@ export default function Hero() {
 
   const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push('https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime');
+    router.push(
+      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
+    );
   };
 
   return (
@@ -48,9 +50,9 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto max-w-5xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-center gap-x-12 pt-2 md:pt-0">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0">
           {/* Left Column */}
-          <div className="w-full md:w-[55%] md:pr-6 flex flex-col items-start space-y-6">
+          <div className="w-full md:w-[55%] md:ml-8 md:pr-4 flex flex-col items-start space-y-6">
             <span
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
@@ -102,7 +104,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[45%] justify-center items-end -mt-4">
+          <div className="hidden md:flex w-[45%] justify-center items-end mr-6 -mt-4">
             <Image
               src="/hero_image_ai_guy.webp"
               alt="John Crestani AI Student Modern Image"
