@@ -52,12 +52,11 @@ export default function Hero() {
           {/* Left Column */}
           <div className="w-full md:w-[55%] md:ml-20 md:pr-6 flex flex-col items-start space-y-6">
             <span
-  className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
-  style={{ letterSpacing: '0.08em' }}
->
-  ▲ AI IS CHANGING EVERYTHING
-</span>
-
+              className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
+              style={{ letterSpacing: '0.08em' }}
+            >
+              ▲ AI IS CHANGING EVERYTHING
+            </span>
 
             <h1
               className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-2xl"
@@ -103,18 +102,17 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[45%] justify-center items-end mr-12 mt-12">
-  <Image
-    src="/hero_image_ai_guy.webp"
-    alt="John Crestani AI Student Modern Image"
-    width={1800}
-    height={1800}
-    className="rounded-xl shadow-2xl object-cover"
-    priority
-    style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
-  />
-</div>
-
+          <div className="hidden md:flex w-[45%] justify-center items-end mr-12 -mt-4">
+            <Image
+              src="/hero_image_ai_guy.webp"
+              alt="John Crestani AI Student Modern Image"
+              width={1800}
+              height={1800}
+              className="rounded-xl shadow-2xl object-cover"
+              priority
+              style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
+            />
+          </div>
         </div>
       </section>
     </>
