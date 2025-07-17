@@ -11,6 +11,7 @@ import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import WebinarInvite from '@/components/WebinarInvite';
+import SkepticismSection from '@/components/SkepticismSection';
 import RelatedTools from '@/components/RelatedTools';
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
@@ -186,6 +187,9 @@ export default function Home() {
           <WebinarInvite />
         </div>
       </Suspense>
+
+      {/* ADDRESS POTENTIAL SKEPTICISM */}
+      <SkepticismSection />
 
       {/* TESTIMONIALS LIST */}
       <Testimonials />
