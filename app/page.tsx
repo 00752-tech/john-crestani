@@ -139,7 +139,7 @@ export default function Home() {
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
-              src="/cool_greybeard_affiliate.webp"
+              src="/bio_image_jason_vientos.webp"
               alt="Jason Vientos – Experienced Affiliate"
               width={220}
               height={220}
