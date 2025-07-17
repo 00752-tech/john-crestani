@@ -35,9 +35,7 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           className="text-gray-300 text-base md:text-lg text-center max-w-2xl mx-auto mb-10"
         >
-          John Crestani’s AI pitch opens with a brutal truth—and a path forward.
-          If you don’t learn how to use AI to earn, it will eventually take your spot.
-          This video is your wake-up call.
+          John Crestani’s AI pitch opens with a brutal truth: the landscape of work is changing rapidly. If you don’t learn how to harness AI for earning, it will eventually take your spot. But this isn't just a warning; it's a profound opportunity. This video is your wake-up call to not just survive, but thrive in the AI-driven future.
         </motion.p>
 
         <motion.div
