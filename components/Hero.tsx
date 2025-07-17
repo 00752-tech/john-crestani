@@ -108,8 +108,8 @@ export default function Hero() {
             <Image
               src="/hero_sports_woman.webp"
               alt="John Crestani AI Student Modern Image"
-              width={1800}
-              height={1800}
+              width={2000}
+              height={2000}
               className="rounded-xl shadow-2xl object-cover"
               priority
               style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
