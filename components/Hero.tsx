@@ -115,7 +115,7 @@ export default function Hero() {
               style={{
                 width: '100%',
                 height: 'auto',
-                maxWidth: '900px', // <--- Increase this value for a larger visible image!
+                maxWidth: '1100px', // <--- Increase this value for a larger visible image!
               }}
             />
           </div>
