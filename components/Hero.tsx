@@ -50,9 +50,9 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0 md:gap-x-12">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0 md:gap-x-16">
           {/* Left Column */}
-          <div className="w-full md:w-[63%] flex flex-col items-start space-y-6">
+          <div className="w-full md:w-[60%] flex flex-col items-start space-y-6">
             <span
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
@@ -104,18 +104,18 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[45%] justify-center items-center mr-6 mt-8">
+          <div className="hidden md:flex w-[40%] justify-center items-center mt-4">
             <Image
               src="/guy_in_white_hero.webp"
               alt="John Crestani AI Student Modern Image"
-              width={2000}
-              height={2000}
+              width={2200}
+              height={2200}
               className="rounded-xl shadow-2xl object-cover"
               priority
               style={{
                 width: '100%',
                 height: 'auto',
-                maxWidth: '1100px',
+                maxWidth: '950px'
               }}
             />
           </div>
