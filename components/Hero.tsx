@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[45%] justify-center items-end mr-6 -mt-4">
+          <div className="hidden md:flex w-[45%] justify-center items-center mr-6 mt-6">
             <Image
               src="/hero_girl_coffeeshop.webp"
               alt="John Crestani AI Student Modern Image"
@@ -115,7 +115,7 @@ export default function Hero() {
               style={{
                 width: '100%',
                 height: 'auto',
-                maxWidth: '1100px', // <--- Increase this value for a larger visible image!
+                maxWidth: '1100px',
               }}
             />
           </div>
