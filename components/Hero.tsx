@@ -112,7 +112,11 @@ export default function Hero() {
               height={2000}
               className="rounded-xl shadow-2xl object-cover"
               priority
-              style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxWidth: '900px', // <--- Increase this value for a larger visible image!
+              }}
             />
           </div>
         </div>
