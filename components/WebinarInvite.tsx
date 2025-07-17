@@ -35,7 +35,7 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           className="text-gray-300 text-base md:text-lg text-center max-w-2xl mx-auto mb-10"
         >
-          John Crestani&rsquo;s AI pitch opens with a brutal truth: the landscape of work is changing rapidly. If you don&rsquo;t learn how to harness AI for earning, it will eventually take your spot. But this isn&apos;t just a warning; it&apos;s a profound opportunity. This video is your wake-up call to not just survive, but thrive in the AI-driven future.
+          John Crestani&rsquo;s AI pitch opens with a brutal truth: the landscape of work is changing rapidly. If you don&rsquo;t learn how to harness AI for earning, it will eventually take your spot. <b>But this isn&apos;t just a warning; it&apos;s a profound opportunity.</b> This video is your wake-up call to not just survive, but thrive in the AI-driven future.
         </motion.p>
 
         <motion.div
