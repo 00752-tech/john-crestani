@@ -50,9 +50,9 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0 md:gap-x-16">
           {/* Left Column */}
-          <div className="w-full md:w-[55%] md:ml-8 md:pr-4 flex flex-col items-start space-y-6">
+          <div className="w-full md:w-[55%] flex flex-col items-start space-y-6">
             <span
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
