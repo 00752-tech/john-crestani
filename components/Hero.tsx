@@ -50,9 +50,9 @@ export default function Hero() {
           }
         `}</style>
 
-        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0 md:gap-x-16">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-8 flex flex-col md:flex-row items-start justify-between pt-2 md:pt-0 md:gap-x-12">
           {/* Left Column */}
-          <div className="w-full md:w-[55%] flex flex-col items-start space-y-6">
+          <div className="w-full md:w-[63%] flex flex-col items-start space-y-6">
             <span
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
@@ -61,14 +61,14 @@ export default function Hero() {
             </span>
 
             <h1
-              className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-2xl"
+              className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl"
               style={{ letterSpacing: '-0.01em' }}
             >
               Discover the <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
               <span className="brand-gold">reliable online income</span>.
             </h1>
 
-            <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-lg text-left leading-relaxed">
+            <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
               Even if you’re a total beginner, discover John Crestani’s{' '}
               <span className="brand-gold">proven AI system for 2025</span>—step by step—to generate{' '}
               <span className="brand-gold">consistent, passive commissions</span>. No tech skills required.
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[45%] justify-center items-end mr-6 -mt-4">
+          <div className="hidden md:flex w-[37%] justify-center items-end mr-6 -mt-4">
             <Image
               src="/hero_couple.webp"
               alt="John Crestani AI Student Modern Image"
