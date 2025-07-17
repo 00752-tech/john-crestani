@@ -58,7 +58,7 @@ export default function WebinarInvite() {
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
-                    src="/you_are_fired_thumbnail.png"
+                    src="/john crestani you are fired thumbnail.webp"
                     alt="You&apos;re Fired – AI Pitch Thumbnail"
                     fill
                     sizes="(max-width: 768px) 100vw, 1200px"
