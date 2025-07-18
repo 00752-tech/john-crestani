@@ -52,7 +52,7 @@ export default function ExitIntentPopup() {
         <h3 className="text-xl sm:text-2xl font-bold mb-3 text-pink-600">Before you go!</h3>
         <p className="text-gray-700 mb-5 text-[1.06rem] leading-relaxed">
           <b>Get instant access to all our affiliate & AI marketing tools—no email, no signup, 100% free.</b><br /><br />
-          Unlock powerful calculators, templates, and resources to grow your income.<br />
+          Unlock powerful AI calculators, templates, and resources to grow your income... on us!<br />
         </p>
 
         <button
