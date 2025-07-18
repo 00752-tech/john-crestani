@@ -10,49 +10,49 @@ import { motion } from 'framer-motion'
 export default function AffiliateMarketingToolsPage() {
   const tools = [
     {
-      name: "Affiliate Earnings Calculator",
+      name: "AI-Powered Affiliate Earnings Calculator",
       description: "Estimate your potential affiliate marketing earnings based on traffic, conversion rates, and commission values.",
       url: "/affiliate-marketing-tools/earnings-calculator",
       icon: Calculator
     },
     {
-      name: "Investment Calculator",
+      name: "AI-Powered Investment Calculator",
       description: "Plan your financial future by calculating potential returns on your investments over time.",
       url: "/financial-tools/investment-calculator",
       icon: TrendingUp
     },
     {
-      name: "Dropshipping Profit Calculator",
+      name: "AI-Powered Dropshipping Profit Calculator",
       description: "Calculate potential profits for your dropshipping business by analyzing costs, pricing, and order volume.",
       url: "/ecommerce-tools/dropshipping-profit-calculator",
       icon: DollarSign
     },
     {
-      name: "ROAS Calculator",
+      name: "AI-Powered ROAS Calculator",
       description: "Calculate your Return on Ad Spend to measure and improve the effectiveness of your advertising campaigns.",
       url: "/advertising-tools/roas-calculator",
       icon: TrendingUp
     },
     {
-      name: "Influencer Earnings Calculator",
+      name: "AI-Powered Influencer Earnings Calculator",
       description: "Estimate your potential earnings as an influencer based on your follower count and engagement rate.",
       url: "/influencer-marketing-tools/earnings-calculator",
       icon: Users
     },
     {
-      name: "YouTube Earnings Calculator",
+      name: "AI-Powered YouTube Earnings Calculator",
       description: "Calculate potential YouTube AdSense earnings based on views, CTR, and CPM rates.",
       url: "/content-creation-tools/youtube-earnings-calculator",
       icon: Youtube
     },
     {
-      name: "Niche Profitability Calculator",
+      name: "AI-Powered Niche Profitability Calculator",
       description: "Estimate the potential profitability of different niches for your affiliate marketing campaigns.",
       url: "/affiliate-marketing-tools/niche-profitability-calculator",
       icon: TrendingUp
     },
     {
-      name: "Affiliate Link CTR Optimizer",
+      name: "AI-Powered Affiliate Link CTR Optimizer",
       description: "Optimize your affiliate link click-through rates based on placement, anchor text, and content quality.",
       url: "/affiliate-marketing-tools/link-ctr-optimizer",
       icon: Maximize2
