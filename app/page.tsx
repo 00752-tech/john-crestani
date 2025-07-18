@@ -54,7 +54,7 @@ export default function Home() {
               AI MASTERY
             </div>
             <p className="text-sm text-gray-300 max-w-[240px]">
-              Leverage AI tools to launch automated affiliate systems with ease.
+              Gain in-demand AI skills effortlessly: Leverage AI tools to launch automated affiliate systems with ease.
             </p>
           </div>
           <div className="flex flex-col items-center">
