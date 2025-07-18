@@ -7,6 +7,9 @@ const nextConfig = {
         hostname: 'www.gojctraining.com',
       },
     ],
+    deviceSizes: [320, 410, 640], // Optimized sizes for desktop/retina/mobile
+    imageSizes: [410, 614],       // For local images, e.g., hero display
+    formats: ['image/webp'],
   },
   experimental: {
     optimizeCss: true, // ✅ Reduce CSS blocking on FCP
