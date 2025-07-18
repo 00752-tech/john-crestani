@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 export default function Hero() {
   const router = useRouter();
 
-  const handleRevealSecrets = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push(
       'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
@@ -60,33 +60,36 @@ export default function Hero() {
               ▲ AI IS CHANGING EVERYTHING
             </span>
 
+            {/* --- H1 with yellow highlights --- */}
             <h1
               className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl"
               style={{ letterSpacing: '-0.01em' }}
             >
-              Discover the <span className="brand-gold">AI system</span> that transforms job uncertainty into{' '}
-              <span className="brand-gold">reliable online income</span>.
+              <span>Seize <span className="brand-gold">Control</span> of Your Future:</span>
+              <br className="hidden sm:block" />
+              <span>
+                Master <span className="brand-gold">AI</span> &amp; <span className="brand-gold">Secure Your Income</span> in a Changing World.
+              </span>
             </h1>
 
+            {/* --- Subheadline --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Even if you’re a total beginner, discover John Crestani’s{' '}
-              <span className="brand-gold">proven AI system for 2025</span>—step by step—to generate{' '}
-              <span className="brand-gold">consistent, passive commissions</span>. No tech skills required.
+              Don&apos;t just survive the AI revolution—<span className="brand-gold">lead it</span>. Even as a total beginner, join our supportive community to build passive income streams and redefine what&apos;s possible for your career.
             </p>
 
             {/* CTA */}
             <button
               id="hero-cta"
               className="cta-main w-full sm:w-auto text-lg mb-5 mt-2"
-              onClick={handleRevealSecrets}
+              onClick={handleCta}
               type="button"
             >
-              Secure My Spot in The AI Marketers Club
+              Take Control: Start My AI Income Journey
             </button>
 
             {/* Bonus + Proof */}
             <div className="text-pink-400 text-base font-semibold mt-2 text-left">
-              Limited-Time Bonus: Includes Your Custom Affiliate Website - FREE!
+              Limited-Time Bonus: Includes Your Custom Affiliate Website&nbsp;—&nbsp;FREE!
               <span className="inline-block ml-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse" />
             </div>
 
@@ -94,7 +97,7 @@ export default function Hero() {
               <div className="flex items-center mb-1">
                 <span className="text-yellow-400 text-xl mr-1">⭐️⭐️⭐️⭐️⭐️</span>
                 <span className="text-gray-300 text-sm ml-2">
-                  Trusted by 2,137 early adopters &nbsp;|&nbsp; 4.96 Rating
+                  Trusted by 2,137 early adopters&nbsp;|&nbsp;4.96 Rating
                 </span>
               </div>
               <span className="text-xs text-gray-400">
