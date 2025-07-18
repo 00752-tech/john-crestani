@@ -1,31 +1,28 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
+  const hasFired = useRef(false);
 
   useEffect(() => {
-    const alreadyShown = sessionStorage.getItem('exit-popup-shown');
-    if (alreadyShown) return;
+    if (sessionStorage.getItem('exit-popup-shown')) return;
 
     const handleMouseOut = (e: MouseEvent) => {
-      if (!e.relatedTarget && e.clientY <= 0) {
-        setShow(true);
+      if (!e.relatedTarget && e.clientY <= 0 && !hasFired.current) {
+        hasFired.current = true;
         sessionStorage.setItem('exit-popup-shown', '1');
+        setShow(true);
       }
     };
 
     window.addEventListener('mouseout', handleMouseOut);
-
-    return () => {
-      window.removeEventListener('mouseout', handleMouseOut);
-    };
+    return () => window.removeEventListener('mouseout', handleMouseOut);
   }, []);
 
   const handleClose = () => setShow(false);
 
   const handleCtaClick = () => {
-    // Internal navigation - no URL shown on hover!
     window.location.href = '/affiliate-marketing-tools';
   };
 
@@ -41,28 +38,23 @@ export default function ExitIntentPopup() {
         >
           ×
         </button>
-
-        {/* Icon */}
         <div className="flex justify-center mb-3">
           <span className="bg-pink-500 bg-opacity-10 text-pink-500 rounded-full w-14 h-14 flex items-center justify-center text-4xl shadow">
             🛠️
           </span>
         </div>
-
-        <h3 className="text-xl sm:text-2xl font-bold mb-3 text-pink-600">Before you go!</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-3 text-pink-600">Hey before you go!</h3>
         <p className="text-gray-700 mb-5 text-[1.06rem] leading-relaxed">
-          <b>Get instant access to all our affiliate & AI marketing tools—no email, no signup, 100% free.</b><br /><br />
-          Unlock powerful AI calculators, templates, and resources to grow your income... on us!<br />
+          <b>Get instant access to all our AI-powered affiliate & marketing tools we use daily—no email, no signup, 100% FREE.</b><br /><br />
+          Unlock powerful calculators, templates, and resources to grow your income on us!<br />
         </p>
-
         <button
           className="inline-block bg-lime-500 hover:bg-lime-600 text-white font-semibold px-8 py-3 text-lg rounded-full shadow-lg transition"
           onClick={handleCtaClick}
           type="button"
         >
-          🚀 Try Free Tools Now
+          🚀 Try FREE AI-powered Tools Now
         </button>
-
         <div className="mt-4 text-gray-400 text-xs">
           No email required. Zero spam. Just pure value.
         </div>
