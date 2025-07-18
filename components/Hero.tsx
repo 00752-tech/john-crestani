@@ -27,7 +27,11 @@ export default function Hero() {
             font-display: swap;
           }
           body {
-            font-family: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Satoshi', system-ui, 'Helvetica Neue', Arial, sans-serif;
+          }
+          h1, .brand-gold {
+            font-weight: 300;
+            line-height: 1.13;
           }
           .cta-main {
             background-image: linear-gradient(241deg, #2563eb, #0ea5e9);
@@ -83,7 +87,7 @@ export default function Hero() {
             {/* Bonus + Proof */}
             <div className="text-pink-400 text-base font-semibold mt-2 text-left">
               Limited-Time Bonus: Includes Your Custom Affiliate Website&nbsp;—&nbsp;FREE!
-              <span className="inline-block ml-2 w-4 h-4 bg-lime-400 rounded-full animate-pulse" />
+              <span className="inline-block ml-2 w-4 h-4 bg-lime-400 rounded-full animate-pulse align-middle" />
             </div>
 
             <div className="flex flex-col items-start mt-2 space-y-0.5">
@@ -100,7 +104,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side: Hero Image */}
-          <div className="hidden md:flex w-[40%] justify-center items-center mt-4">
+          <div className="hidden md:flex w-[40%] justify-center items-center mt-4 min-h-[320px]">
             <Image
               src="/hero_5_lifestyle_guy.webp"
               alt="John Crestani AI Student Modern Image"
