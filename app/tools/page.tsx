@@ -5,8 +5,8 @@ import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 
 export const metadata = {
-  title: 'Affiliate Marketing Tools & Calculators | Super Affiliate System Pro',
-  description: 'Free affiliate marketing calculators and tools to help you estimate earnings, plan campaigns, and optimize your strategy. Part of John Crestani\'s Super Affiliate System Pro.',
+  title: 'Affiliate Marketing Tools & Calculators | AI Marketing Club',
+  description: 'Free affiliate marketing calculators and tools to help you estimate earnings, plan campaigns, and optimize your strategy. Part of John Crestani\'s AI Marketing Club.',
 }
 
 export default function ToolsPage() {
