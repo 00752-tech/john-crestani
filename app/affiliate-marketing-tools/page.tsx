@@ -60,8 +60,8 @@ export default function AffiliateMarketingToolsPage() {
   ]
 
   const pageUrl = 'https://johncrestani.me/affiliate-marketing-tools'
-  const pageTitle = 'Free Affiliate Tools to Scale Faster | John Crestani'
-  const pageDesc = 'Access calculators built for affiliates: earnings, niche, CTR. Curated by John Crestani to help you earn more, optimize faster, and scale smarter.'
+  const pageTitle = 'Free AI-powered Affiliate Tools to Scale Faster | JohnCrestani.me'
+  const pageDesc = 'Access AI-powered calculators built for affiliates: earnings, niche, CTR. Curated by JohnCrestani.me to help you earn more, optimize faster, and scale smarter.'
 
   return (
     <>
@@ -140,7 +140,7 @@ export default function AffiliateMarketingToolsPage() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
           >
-            Affiliate Marketing Tools & Calculators
+            AI-Powered Affiliate Marketing Tools & Calculators
           </motion.h1>
 
           <motion.p
@@ -150,7 +150,7 @@ export default function AffiliateMarketingToolsPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
           >
-            Boost your affiliate marketing success with our suite of free tools and calculators. Estimate earnings, optimize campaigns, and make data-driven decisions.
+            Boost your affiliate marketing success with our suite of free AI-powered tools and calculators. Estimate earnings, optimize campaigns, and make data-driven decisions.
           </motion.p>
 
           <motion.div
