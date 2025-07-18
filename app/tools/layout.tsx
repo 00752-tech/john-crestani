@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Affiliate Marketing Tools | Super Affiliate System Pro',
+    default: 'AI Affiliate Marketing Tools | JohnCrestani.me',
     template: '%s | Super Affiliate System Pro Tools',
   },
-  description: 'Free affiliate marketing tools and calculators to help you estimate earnings, plan campaigns, and optimize your strategy. Part of John Crestani\'s Super Affiliate System Pro.',
+  description: 'Free AI-powered affiliate marketing tools and calculators to help you estimate earnings, plan campaigns, and optimize your strategy. Part of John Crestani\'s Super Affiliate System Pro.',
 }
 
 export default function ToolsLayout({
