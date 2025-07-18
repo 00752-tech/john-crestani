@@ -59,14 +59,17 @@ export default function Hero() {
             >
               ▲ AI IS CHANGING EVERYTHING
             </span>
+
             {/* --- H1 with yellow highlights --- */}
             <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
               Seize <span className="brand-gold">Control</span> of Your Future—<span className="brand-gold">Master AI</span> and <span className="brand-gold">Secure Your Income</span> in a Changing World.
             </h1>
+
             {/* --- Subheadline --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
               Don&apos;t just survive the AI revolution—<span className="brand-gold">lead it</span>. Even as a total beginner, join our supportive community to build passive income streams and redefine what&apos;s possible for your career.
             </p>
+
             {/* CTA */}
             <button
               id="hero-cta"
@@ -76,6 +79,7 @@ export default function Hero() {
             >
               Take Control: Start My AI Income Journey
             </button>
+
             {/* Bonus + Proof */}
             <div className="text-pink-400 text-base font-semibold mt-2 text-left">
               Limited-Time Bonus: Includes Your Custom Affiliate Website&nbsp;—&nbsp;FREE!
@@ -94,6 +98,7 @@ export default function Hero() {
               </span>
             </div>
           </div>
+
           {/* Right Side: Hero Image */}
           <div className="hidden md:flex w-[40%] justify-center items-center mt-4">
             <Image
@@ -101,9 +106,9 @@ export default function Hero() {
               alt="John Crestani AI Student Modern Image"
               width={410}
               height={614}
-              className="rounded-xl shadow-2xl object-cover"
               priority
-              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 410px"
+              className="rounded-xl shadow-2xl object-cover"
+              sizes="(max-width: 640px) 95vw, (max-width: 1024px) 60vw, 410px"
             />
           </div>
         </div>
