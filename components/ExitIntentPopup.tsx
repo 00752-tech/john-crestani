@@ -9,7 +9,6 @@ export default function ExitIntentPopup() {
     if (alreadyShown) return;
 
     const handleMouseOut = (e: MouseEvent) => {
-      // Remove .toElement for full TypeScript compatibility
       if (!e.relatedTarget && e.clientY <= 0) {
         setShow(true);
         sessionStorage.setItem('exit-popup-shown', '1');
@@ -25,6 +24,11 @@ export default function ExitIntentPopup() {
 
   const handleClose = () => setShow(false);
 
+  const handleCtaClick = () => {
+    // Internal navigation - no URL shown on hover!
+    window.location.href = '/affiliate-marketing-tools';
+  };
+
   if (!show) return null;
 
   return (
@@ -38,6 +42,7 @@ export default function ExitIntentPopup() {
           ×
         </button>
 
+        {/* Icon */}
         <div className="flex justify-center mb-3">
           <span className="bg-pink-500 bg-opacity-10 text-pink-500 rounded-full w-14 h-14 flex items-center justify-center text-4xl shadow">
             🛠️
@@ -50,13 +55,13 @@ export default function ExitIntentPopup() {
           Unlock powerful calculators, templates, and resources to grow your income.<br />
         </p>
 
-        <a
-          href="/affiliate-marketing-tools"
+        <button
           className="inline-block bg-lime-500 hover:bg-lime-600 text-white font-semibold px-8 py-3 text-lg rounded-full shadow-lg transition"
-          onClick={handleClose}
+          onClick={handleCtaClick}
+          type="button"
         >
           🚀 Try Free Tools Now
-        </a>
+        </button>
 
         <div className="mt-4 text-gray-400 text-xs">
           No email required. Zero spam. Just pure value.
