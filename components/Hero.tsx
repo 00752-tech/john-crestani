@@ -61,16 +61,10 @@ export default function Hero() {
             </span>
 
             {/* --- H1 with yellow highlights --- */}
-            <h1
-              className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl"
-              style={{ letterSpacing: '-0.01em' }}
-            >
-              <span>Seize <span className="brand-gold">Control</span> of Your Future:</span>
-              <br className="hidden sm:block" />
-              <span>
-                Master <span className="brand-gold">AI</span> &amp; <span className="brand-gold">Secure Your Income</span> in a Changing World.
-              </span>
-            </h1>
+            <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
+  Seize <span className="brand-gold">Control</span> of Your Future—<span className="brand-gold">Master AI</span> and <span className="brand-gold">Secure Your Income</span> in a Changing World.
+</h1>
+
 
             {/* --- Subheadline --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
