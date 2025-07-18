@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import WebinarInvite from '@/components/WebinarInvite';
 import SkepticismSection from '@/components/SkepticismSection';
 import RelatedTools from '@/components/RelatedTools';
+import ExitIntentPopup from '@/components/ExitIntentPopup'; // 💡 Import your popup here!
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
@@ -34,6 +35,9 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
+      
+      {/* EXIT-INTENT POPUP */}
+      <ExitIntentPopup />
 
       {/* HERO */}
       <Hero />
