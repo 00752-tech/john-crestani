@@ -34,20 +34,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* 👀 Preload hero image to improve LCP */}
+        {/* Preload hero image for LCP */}
         <link
           rel="preload"
           as="image"
           href="/hero_man_hat.webp"
           fetchPriority="high"
         />
+        {/* Preload local font for near-instant headline paint */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/Satoshi-Light.woff2"
+          crossOrigin="anonymous"
+        />
 
-        {/* 👓 Preconnect for improved Google Fonts and Clarity performance */}
+        {/* Preconnect for key third-party performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
 
-        {/* 🚀 Google Fonts preload + stylesheet */}
+        {/* Google Fonts */}
         <link
           rel="preload"
           as="style"
@@ -58,19 +67,19 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
         />
 
-        {/* 🌐 Open Graph image fallback for social + SERP */}
+        {/* Open Graph/SERP */}
         <meta property="og:image" content="https://johncrestani.me/hero_man_hat.webp" />
         <meta property="og:image:alt" content="John Crestani Webinar Thumbnail" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        {/* 🔍 Google site verification */}
+        {/* Google site verification */}
         <meta name="google-site-verification" content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo" />
 
-        {/* 📦 Structured data for enhanced SEO */}
+        {/* Structured data for enhanced SEO */}
         <StructuredData />
 
-        {/* 🧠 Microsoft Clarity deferred load */}
+        {/* Microsoft Clarity deferred load */}
         <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
@@ -81,7 +90,6 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-
       <body className="font-poppins">
         <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
