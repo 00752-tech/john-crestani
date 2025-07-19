@@ -6,13 +6,13 @@ export default function ExitIntentPopup() {
   const hasFired = useRef(false);
 
   useEffect(() => {
-    let popupAlreadyShown = false; // ⭐ CHANGE
+    let popupAlreadyShown = false;
 
-    // Robust sessionStorage read
+    // Robust sessionStorage read (incognito safe)
     try {
       popupAlreadyShown = sessionStorage.getItem('exit-popup-shown') === '1';
-    } catch (e) {
-      popupAlreadyShown = false; // Default if incognito or storage blocked
+    } catch {
+      popupAlreadyShown = false;
     }
 
     if (popupAlreadyShown) return;
@@ -21,8 +21,8 @@ export default function ExitIntentPopup() {
       if (!e.relatedTarget && e.clientY <= 0 && !hasFired.current) {
         hasFired.current = true;
         try {
-          sessionStorage.setItem('exit-popup-shown', '1'); // ⭐ CHANGE
-        } catch (e) {
+          sessionStorage.setItem('exit-popup-shown', '1');
+        } catch {
           // Ignore errors—just show popup!
         }
         setShow(true);
