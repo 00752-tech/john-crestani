@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import AffiliateDisclosureBar from "@/components/AffiliateDisclosureBar"; // Added affiliate bar import
+import AffiliateDisclosureBar from "@/components/AffiliateDisclosureBar";
 import StructuredData from "./structure-data";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -9,10 +9,12 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
-  description: "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
+  description:
+    "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
   openGraph: {
     title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
-    description: "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
+    description:
+      "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
@@ -40,7 +42,11 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* eslint-disable @next/next/no-page-custom-font */}
+        {/* 👓 Preconnect for improved Google Fonts and Clarity performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+
         {/* 🚀 Google Fonts preload + stylesheet */}
         <link
           rel="preload"
