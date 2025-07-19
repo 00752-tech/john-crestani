@@ -44,39 +44,41 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          {/* --- Optimized Video Thumbnail Section --- */}
-          <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl my-10 border-4 border-[#18181b]">
+          {/* --- Optimized Video Thumbnail / Player Section --- */}
+          <div
+            className="relative w-full rounded-lg shadow-2xl my-10 border-4 border-[#18181b]"
+            style={{ aspectRatio: '16/9', background: 'black' }}
+          >
             {!loadEmbed ? (
-              <div
+              <button
                 onClick={handlePlayVideo}
-                role="button"
                 aria-label="Play Video"
-                className="absolute inset-0 w-full h-full bg-black cursor-pointer flex items-center justify-center"
+                className="absolute inset-0 w-full h-full flex items-center justify-center group"
                 style={{
-                  background: 'rgba(0,0,0,0.65)'
+                  background: 'rgba(0,0,0,0.65)', zIndex: 2, border: 0, cursor: 'pointer',
                 }}
               >
-                <div className="absolute inset-0 w-full h-full rounded-lg z-0">
-                  <Image
-                    src="/john-crestani-you-are-fired-thumbnail.webp"
-                    alt="John Crestani - You're Fired AI Webinar Thumbnail"
-                    width={1024}    // Update to your actual image width
-                    height={576}    // Update to your actual image height
-                    className="object-cover rounded-lg"
-                    priority
-                  />
-                </div>
-                <div className="z-10 flex items-center justify-center">
+                <Image
+                  src="/john-crestani-you-are-fired-thumbnail.webp"
+                  alt="John Crestani - You're Fired AI Webinar Thumbnail"
+                  width={1024}
+                  height={576}
+                  sizes="(max-width: 640px) 100vw, 75vw"
+                  className="object-cover rounded-lg w-full h-full"
+                  priority
+                  unoptimized={false}
+                />
+                <span className="absolute inset-0 flex items-center justify-center z-10">
                   <svg
-                    className="w-20 h-20 text-red-600 hover:scale-110 transition"
+                    className="w-20 h-20 text-red-600 group-hover:scale-110 transition"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <circle cx="12" cy="12" r="12" fill="white" opacity="0.7"/>
                     <polygon points="10,8 16,12 10,16" fill="currentColor"/>
                   </svg>
-                </div>
-              </div>
+                </span>
+              </button>
             ) : (
               <iframe
                 src="https://www.youtube.com/embed/SIWVTq8vB28?autoplay=1&rel=0&modestbranding=1"
@@ -85,6 +87,7 @@ export default function WebinarInvite() {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+                style={{ aspectRatio: '16/9' }}
               />
             )}
           </div>
