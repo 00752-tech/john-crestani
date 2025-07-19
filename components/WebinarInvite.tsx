@@ -60,8 +60,8 @@ export default function WebinarInvite() {
                   <Image
                     src="/john-crestani-you-are-fired-thumbnail.webp"
                     alt="John Crestani - You're Fired AI Webinar Thumbnail"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 1024px"
+                    width={1024}    // Update to your actual image width
+                    height={576}    // Update to your actual image height
                     className="object-cover rounded-lg"
                     priority
                   />
