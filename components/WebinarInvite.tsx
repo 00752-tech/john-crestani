@@ -58,8 +58,7 @@ export default function WebinarInvite() {
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
-                    src="/public/john crestani you are fired thumbnail.webp
-"
+                    src="/john-crestani-you-are-fired-thumbnail.webp"
                     alt="John Crestani - You're Fired AI Webinar Thumbnail"
                     fill
                     sizes="(max-width: 768px) 100vw, 1024px"
