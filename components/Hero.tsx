@@ -87,7 +87,13 @@ export default function Hero() {
             {/* Bonus + Proof */}
             <div className="text-pink-400 text-base font-semibold mt-2 text-left">
               Limited-Time Bonus: Includes Your Custom Affiliate Website&nbsp;—&nbsp;FREE!
-              <span className="inline-block ml-2 w-4 h-4 bg-lime-400 rounded-full animate-pulse align-middle" />
+              <span
+                className="inline-block ml-2 w-4 h-4 rounded-full animate-pulse align-middle"
+                style={{
+                  backgroundColor: '#22c55e', // Motivational green (Tailwind bg-green-500)
+                  boxShadow: '0 0 8px 2px #22c55e'
+                }}
+              />
             </div>
 
             <div className="flex flex-col items-start mt-2 space-y-0.5">
