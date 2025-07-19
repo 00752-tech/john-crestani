@@ -44,7 +44,7 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          {/* --- Updated Thumbnail Section --- */}
+          {/* --- Optimized Video Thumbnail Section --- */}
           <div className="relative w-full pb-[56.25%] overflow-hidden rounded-lg shadow-2xl my-10 border-4 border-[#18181b]">
             {!loadEmbed ? (
               <div
@@ -58,10 +58,10 @@ export default function WebinarInvite() {
               >
                 <div className="absolute inset-0 w-full h-full rounded-lg z-0">
                   <Image
-                    src="/john crestani you are fired thumbnail.webp"
-                    alt="You&apos;re Fired – AI Pitch Thumbnail"
+                    src="/john-crestani-you-are-fired-thumbnail.webp"
+                    alt="John Crestani - You're Fired AI Webinar Thumbnail"
                     fill
-                    sizes="(max-width: 768px) 100vw, 1200px"
+                    sizes="(max-width: 768px) 100vw, 1024px"
                     className="object-cover rounded-lg"
                     priority
                   />
