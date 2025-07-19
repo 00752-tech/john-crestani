@@ -12,10 +12,11 @@ const nextConfig = {
     formats: ['image/webp'],
   },
   experimental: {
-    optimizeCss: true, // ✅ Reduce CSS blocking on FCP
+    optimizeCss: true,         // ✅ Reduce CSS blocking on FCP
+    legacyBrowsers: false,     // ✅ Drop legacy JS polyfills, smaller bundles!
   },
   compiler: {
-    removeConsole: true, // ✅ Trim console.log from production
+    removeConsole: true,       // ✅ Trim console.log from production
   },
   typescript: {
     ignoreBuildErrors: false,
