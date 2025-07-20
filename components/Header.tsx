@@ -85,7 +85,7 @@ export default function Header() {
             onClick={openAffiliateLink}
             className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
           >
-            GRAB DISCOUNT →
+            CLAIM YOUR $27 AI ACCESS →
           </button>
         </div>
       </div>
