@@ -9,7 +9,7 @@ export default function Hero() {
   const handleCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
-      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime',
+      'https://578ccp31hy0m5p139nd1asav51.hop.clickbank.net/?&traffic_source=hero_button',
       '_blank'
     );
   };
