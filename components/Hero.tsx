@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 
 export default function Hero() {
-  const router = useRouter();
+  // No need for useRouter since we're not using router.push for external links
 
   const handleCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push(
-      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime'
+    window.open(
+      'https://768a1ngyq7fp1x962c6act5k2t.hop.clickbank.net/?&traffic_source=johncrestanime',
+      '_blank'
     );
   };
 
@@ -90,7 +90,7 @@ export default function Hero() {
               <span
                 className="inline-block ml-2 w-4 h-4 rounded-full animate-pulse align-middle"
                 style={{
-                  backgroundColor: '#22c55e', // Motivational green (Tailwind bg-green-500)
+                  backgroundColor: '#22c55e', // Tailwind bg-green-500
                   boxShadow: '0 0 8px 2px #22c55e'
                 }}
               />
