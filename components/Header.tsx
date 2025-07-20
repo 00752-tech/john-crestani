@@ -4,6 +4,16 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
+// Pulsing Circle component
+function UrgentPulse() {
+  return (
+    <span className="relative inline-flex w-4 h-4 mr-2 align-middle">
+      <span className="absolute inline-flex animate-ping rounded-full bg-red-500 opacity-75 w-full h-full" />
+      <span className="relative inline-flex rounded-full bg-red-600 w-4 h-4" />
+    </span>
+  );
+}
+
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,12 +69,14 @@ export default function Header() {
       {/* Banner with countdown urgency */}
       <div className="w-full flex justify-center z-50">
         <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
+          <UrgentPulse />
           <span>
-            ⭐ NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE —
+            NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE —{' '}
             <strong className="text-red-700 font-semibold ml-1">
               Ends in {countdown}
-            </strong> ⭐
+            </strong>
           </span>
+          <UrgentPulse />
 
           {/* Button with no URL shown on hover - opens link via JS */}
           <button
