@@ -71,7 +71,7 @@ export default function Header() {
         <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
           <UrgentPulse />
           <span>
-            NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE BONUS ($297 VALUE) + 60-DAY GUARANTEE —{' '}
+            NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE ($297) + SAS PRO ($997 VALUE) FOR $197! + 60-DAY GUARANTEE —{' '}
             <strong className="text-red-700 font-semibold ml-1">
               Ends in {countdown}
             </strong>
