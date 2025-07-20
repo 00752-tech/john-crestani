@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
-// Pulsing Circle component
+// Highly visible pulse: white flash with yellow core and border/shadow
 function UrgentPulse() {
   return (
-    <span className="relative inline-flex w-4 h-4 mr-2 align-middle">
-      <span className="absolute inline-flex animate-ping rounded-full bg-red-500 opacity-75 w-full h-full" />
-      <span className="relative inline-flex rounded-full bg-red-600 w-4 h-4" />
+    <span className="relative inline-flex w-5 h-5 mr-2 align-middle">
+      {/* Outer white pulse */}
+      <span className="absolute inline-flex animate-ping rounded-full bg-white opacity-80 w-full h-full" />
+      {/* Inner yellow core with white border for pop */}
+      <span className="relative inline-flex rounded-full bg-yellow-400 w-5 h-5 border-2 border-white shadow-lg" />
     </span>
   );
 }
