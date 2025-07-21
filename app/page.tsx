@@ -114,7 +114,7 @@ export default function Home() {
       {/* ---- UPDATED STATS BAR WITH BIG ICONS & STATS ---- */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-          {/* ...stats bar content unchanged... */}
+          {/* Students Trained */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -124,6 +124,7 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">50k+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Students Trained</p>
           </div>
+          {/* Affiliate Earnings */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -133,6 +134,7 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">$20M+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Affiliate Earnings</p>
           </div>
+          {/* Years of Innovation */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -142,6 +144,7 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">9+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Years of Innovation</p>
           </div>
+          {/* Trustpilot Score */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -151,6 +154,7 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">4.6★</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Avg. Trustpilot Score</p>
           </div>
+          {/* Student Satisfaction */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -211,10 +215,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ...rest of the page unchanged... */}
+      {/* SECTION 6: Real People. Real Results. */}
+      <section className="w-full flex flex-col items-center justify-center py-16 px-4 bg-[#171726]">
+        <div className="max-w-3xl w-full flex flex-col items-center">
+          <Image
+            src="/image_58149a.png"
+            alt="Real People. Real Results."
+            width={90}
+            height={90}
+            className="mb-6 rounded-full shadow-lg"
+            priority={false}
+          />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-8 text-center tracking-tight">
+            Real People. Real Results.
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+            {/* Testimonial 1 */}
+            <figure className="relative bg-[#23223a] border-2 border-pink-500 rounded-xl shadow-xl p-7 flex flex-col h-full">
+              <blockquote className="text-lg text-white font-medium mb-4">
+                &ldquo;I made my first commissions without showing my face. AI Club actually works.&rdquo;
+              </blockquote>
+              <figcaption className="text-base text-pink-400 font-semibold">
+                Jordan M. <span className="block font-normal text-xs text-gray-400">Beta Tester</span>
+              </figcaption>
+            </figure>
+            {/* Testimonial 2 */}
+            <figure className="relative bg-[#23223a] border-2 border-pink-500 rounded-xl shadow-xl p-7 flex flex-col h-full">
+              <blockquote className="text-lg text-white font-medium mb-4">
+                &ldquo;Never felt like I know what I&apos;m doing until this. The steps were easy, support was real.&rdquo;
+              </blockquote>
+              <figcaption className="text-base text-pink-400 font-semibold">
+                Samantha R. <span className="block font-normal text-xs text-gray-400">Verified Buyer</span>
+              </figcaption>
+            </figure>
+            {/* Testimonial 3 */}
+            <figure className="relative bg-[#23223a] border-2 border-pink-500 rounded-xl shadow-xl p-7 flex flex-col h-full">
+              <blockquote className="text-lg text-white font-medium mb-4">
+                &ldquo;Escaped the 9-5 grind. I finally have a way to build something real.&rdquo;
+              </blockquote>
+              <figcaption className="text-base text-pink-400 font-semibold">
+                Derek L. <span className="block font-normal text-xs text-gray-400">Early Access Member</span>
+              </figcaption>
+            </figure>
+            {/* Testimonial 4 */}
+            <figure className="relative bg-[#23223a] border-2 border-pink-500 rounded-xl shadow-xl p-7 flex flex-col h-full">
+              <blockquote className="text-lg text-white font-medium mb-4">
+                &ldquo;The community answered all my questions, and the AI tools saved me hours every week.&rdquo;
+              </blockquote>
+              <figcaption className="text-base text-pink-400 font-semibold">
+                Priya N. <span className="block font-normal text-xs text-gray-400">Founding Member</span>
+              </figcaption>
+            </figure>
+            {/* Testimonial 5 */}
+            <figure className="relative bg-[#23223a] border-2 border-pink-500 rounded-xl shadow-xl p-7 flex flex-col h-full">
+              <blockquote className="text-lg text-white font-medium mb-4">
+                &ldquo;Skeptical at first, but now my content gets traffic and sales, all with AI.&rdquo;
+              </blockquote>
+              <figcaption className="text-base text-pink-400 font-semibold">
+                Alex H. <span className="block font-normal text-xs text-gray-400">Tech Newbie</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
+      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
-        {/* ...testimonials highlight... */}
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
@@ -259,18 +325,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ...rest of the page, unchanged... */}
+      {/* WEBINAR / VIDEO */}
       <Suspense fallback={<div>Loading...</div>}>
         <div id="john-video">
           <WebinarInvite />
         </div>
       </Suspense>
+
+      {/* ADDRESS POTENTIAL SKEPTICISM */}
       <SkepticismSection />
+
+      {/* TESTIMONIALS LIST */}
       <Testimonials />
 
+      {/* FREE TOOLS SECTION */}
       <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
         <div className="w-full max-w-4xl rounded-2xl shadow-2xl flex flex-col items-center p-6 relative overflow-hidden">
-          {/* ...free tools... */}
           <div className="mb-3 w-full flex justify-center">
             <span className="bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold shadow-sm uppercase tracking-widest select-none">
               FREE RESOURCE
@@ -286,7 +356,6 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mb-6">
-            {/* Tool Card 1 */}
             <a
               href="/affiliate-marketing-tools/earnings-calculator"
               className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition"
@@ -298,7 +367,6 @@ export default function Home() {
                 Instantly estimate your affiliate profits before you promote. Plan smarter, earn more.
               </div>
             </a>
-            {/* Tool Card 2 */}
             <a
               href="/content-creation-tools/youtube-earnings-calculator"
               className="block p-5 bg-black rounded-lg shadow border border-yellow-400 hover:border-yellow-300 hover:shadow-lg transition"
