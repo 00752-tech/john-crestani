@@ -56,7 +56,9 @@ export default function ExitIntentPopup() {
             🛠️
           </span>
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold mb-3 text-pink-600">Wait! Don't Miss Your FREE AI Income Tools.</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-3 text-pink-600">
+  Wait! Don&apos;t Miss Your FREE AI Income Tools.</h3>
+
         <p className="text-gray-700 mb-5 text-[1.06rem] leading-relaxed">
           Get instant access to the <b>exact AI-powered calculators, templates, and resources</b> we use daily to <b>automate growth</b> and <b>maximize your affiliate income</b>. No email, no signup, 100% FREE.<br />
         </p>
