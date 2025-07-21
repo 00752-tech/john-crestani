@@ -11,6 +11,7 @@ import Footer from '@/components/Footer';
 import RelatedTools from '@/components/RelatedTools';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 
+// Dynamic imports for runtime-only components
 const WebinarInvite = dynamic(() => import('@/components/WebinarInvite'), { ssr: false });
 const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
 const SkepticismSection = dynamic(() => import('@/components/SkepticismSection'), { ssr: false });
@@ -208,30 +209,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REAL PEOPLE SECTION (no placeholder, real testimonials/cards) */}
-      <section className="w-full flex flex-col items-center justify-center py-16 px-4 bg-[#171726]">
-        <div className="max-w-4xl w-full flex flex-col items-center">
-          <Image
-            src="/image_58149a.png"
-            alt="Real People. Real Results."
-            width={90}
-            height={90}
-            className="mb-6 rounded-full shadow-lg"
-            priority={false}
-          />
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-8 text-center tracking-tight">
-            Real People. Real Results.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
-            {/* --- Fill out with your testimionial card markup here --- */}
-          </div>
-          <p className="mt-10 text-center text-pink-300 text-base mx-auto max-w-2xl">
-            Real stories. Real transformations. AI Club is helping everyday people achieve more — see what&apos;s possible when you join.
-          </p>
-        </div>
-      </section>
+      {/* NO "REAL PEOPLE" SECTION HERE -- IT'S NOW REMOVED */}
 
-      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT, WebinarInvite, SkepticismSection, Testimonials, Free Tools, etc */}
+      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT, VIDEO, SKEPTICISM, TESTIMONIALS */}
       <Suspense fallback={<div>Loading...</div>}>
         <WebinarInvite />
       </Suspense>
