@@ -173,8 +173,17 @@ export default function Home() {
           </div>
           {/* ---- MAIN CTA after bonuses ---- */}
           <a
-            href="#john-video"
-            className="mt-10 inline-block bg-yellow-400 text-black font-extrabold py-4 px-14 rounded-full shadow-lg text-xl tracking-tight hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-600 transition"
+            href="https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 inline-block bg-yellow-400 text-black font-medium py-4 px-14 rounded-full shadow-lg text-xl tracking-tight focus:outline-none focus:ring-4 focus:ring-yellow-600 select-none no-underline pointer-events-auto"
+            style={{
+              // Remove underlines and pointer cursor on hover
+              textDecoration: 'none',
+              cursor: 'default',
+              transition: 'none'
+            }}
+            tabIndex={0}
           >
             Claim Your Spot – Start for $27 →
           </a>
