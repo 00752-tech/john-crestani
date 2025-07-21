@@ -11,7 +11,6 @@ import Footer from '@/components/Footer';
 import RelatedTools from '@/components/RelatedTools';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 
-// Dynamic imports for runtime-only components
 const WebinarInvite = dynamic(() => import('@/components/WebinarInvite'), { ssr: false });
 const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
 const SkepticismSection = dynamic(() => import('@/components/SkepticismSection'), { ssr: false });
@@ -24,7 +23,6 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  // CTA handler used on all CTA buttons
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
