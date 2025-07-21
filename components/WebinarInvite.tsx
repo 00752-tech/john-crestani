@@ -90,7 +90,7 @@ export default function WebinarInvite() {
             >
               <Image
                 src="/john-crestani-you-are-fired-thumbnail.webp"
-                alt="John Crestani - You're Fired AI Webinar Thumbnail"
+                alt="John Crestani - You&apos;re Fired AI Webinar Thumbnail"
                 width={1024}
                 height={576}
                 sizes="(max-width: 640px) 100vw, 75vw"
@@ -146,7 +146,7 @@ export default function WebinarInvite() {
           >
             <button
               onClick={handleCtaClick}
-              className="inline-block bg-pink-500 text-white font-bold py-4 px-12 rounded-full shadow-lg text-xl cursor-pointer select-none transition-none"
+              className="inline-block bg-pink-500 text-white font-medium py-4 px-12 rounded-full shadow-lg text-xl cursor-pointer select-none transition-none"
               style={{
                 transition: 'none',
                 textDecoration: 'none',
