@@ -161,7 +161,7 @@ export default function Home() {
                 Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
               </p>
             </div>
-            {/* BONUS 3 (now quantified) */}
+            {/* BONUS 3 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 👥 Private AI Marketers Club
@@ -171,18 +171,20 @@ export default function Home() {
               </p>
             </div>
           </div>
-          {/* ---- MAIN CTA after bonuses ---- */}
+
+          {/* MAIN CTA BUTTON with NO HOVER, DEFAULT CURSOR */}
           <a
             href="https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-block bg-yellow-400 text-black font-medium py-4 px-14 rounded-full shadow-lg text-xl tracking-tight focus:outline-none focus:ring-4 focus:ring-yellow-600 select-none no-underline pointer-events-auto"
+            className="mt-10 inline-block bg-yellow-400 text-black font-medium py-4 px-14 rounded-full shadow-lg text-xl tracking-tight focus:outline-none focus:ring-4 focus:ring-yellow-600 select-none"
             style={{
-              // Remove underlines and pointer cursor on hover
               textDecoration: 'none',
               cursor: 'default',
-              transition: 'none'
+              transition: 'none',
             }}
+            onMouseEnter={e => e.preventDefault()}
+            onMouseLeave={e => e.preventDefault()}
             tabIndex={0}
           >
             Claim Your Spot – Start for $27 →
