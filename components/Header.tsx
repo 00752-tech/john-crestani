@@ -86,9 +86,9 @@ export default function Header() {
         <div className="bg-black text-white font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
           <UrgentPulse />
           <span>
-            NEW AI CLUB: $27 EARLY BIRD + SAS PRO ($997 VALUE) FOR $197! —
+            NEW AI CLUB: $27 – ACT FAST! PLUS, SAS PRO (Value $997) for ONLY $197 —
             <strong className="text-yellow-400 font-extrabold ml-1">
-              ENDS IN {countdown}
+              Ends in 4 days! {countdown}
             </strong>
           </span>
           <UrgentPulse />
