@@ -278,8 +278,7 @@ export default function Home() {
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
-      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
-      <Footer />
+            <Footer />
     </main>
   );
 }
