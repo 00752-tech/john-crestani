@@ -5,11 +5,11 @@ import Image from 'next/image'
 
 export default function WebinarInvite() {
   const [showModal, setShowModal] = useState(false)
-  const iframeRef = useRef(null)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
 
   // Escape key = close modal
   useEffect(() => {
-    function handleKeydown(e) {
+    function handleKeydown(e: KeyboardEvent) {
       if (e.key === 'Escape') setShowModal(false)
     }
     if (showModal) window.addEventListener('keydown', handleKeydown)
@@ -26,7 +26,7 @@ export default function WebinarInvite() {
     return () => { document.body.style.overflow = '' }
   }, [showModal])
 
-  const handleCtaClick = (e) => {
+  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.open(
       'https://e23bby4zl4fmbt23ddezctdqdl.hop.clickbank.net/?&traffic_source=video_cta_button',
@@ -35,7 +35,7 @@ export default function WebinarInvite() {
     )
   }
 
-  const handleOpenModal = (e) => {
+  const handleOpenModal = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setShowModal(true)
   }
@@ -43,7 +43,7 @@ export default function WebinarInvite() {
   const handleCloseModal = () => setShowModal(false)
 
   // Click outside iframe = close modal
-  const handleModalClick = (e) => {
+  const handleModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target === e.currentTarget) {
       setShowModal(false)
     }
