@@ -156,7 +156,7 @@ export default function WebinarInvite() {
               tabIndex={0}
               type="button"
             >
-              Watch John's AI Income Breakthrough →
+              Watch John&apos;s AI Income Breakthrough →
             </button>
           </motion.div>
         </motion.div>
