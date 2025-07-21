@@ -71,7 +71,7 @@ export default function Hero() {
 
             {/* --- Subheadline --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Don&apos;t just survive the AI revolution—<span className="brand-gold">lead it</span>. Even as a total beginner, join our supportive community to build passive income streams and redefine what&apos;s possible for your career.
+              Don&apos;t just survive the AI revolution—<span className="brand-gold">lead it</span>. Even as a total beginner, join our supportive community to build scalable passive income streams and redefine what&apos;s possible for your career.
             </p>
 
             {/* CTA */}
