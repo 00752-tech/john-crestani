@@ -99,14 +99,17 @@ export default function WebinarInvite() {
                 unoptimized={false}
               />
               <span className="absolute inset-0 flex items-center justify-center z-10">
-                <svg
-                  className="w-20 h-20 text-red-600 group-hover:scale-110 transition"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="12" cy="12" r="12" fill="white" opacity="0.7"/>
-                  <polygon points="10,8 16,12 10,16" fill="currentColor"/>
-                </svg>
+                <span className="flex items-center justify-center w-24 h-24 rounded-full bg-red-600 group-hover:scale-110 transition-transform shadow-xl border-4 border-white">
+                  <svg
+                    width={50}
+                    height={50}
+                    viewBox="0 0 50 50"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <polygon points="18,14 38,25 18,36" fill="white"/>
+                  </svg>
+                </span>
               </span>
             </button>
           </div>
