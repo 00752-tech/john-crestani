@@ -24,6 +24,16 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
+  // CTA handler for main Bonuses button — opens affiliate link in new tab
+  const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.open(
+      'https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
       <Head>
@@ -35,6 +45,35 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
+
+      <style jsx global>{`
+        .cta-main {
+          background-image: linear-gradient(241deg, #FFD600, #F59E42);
+          color: #101010;
+          font-weight: 500;
+          font-size: 1.22rem;
+          letter-spacing: .01em;
+          padding: 0.95rem 2.6rem;
+          border-radius: 9999px;
+          box-shadow: 0 4px 24px rgba(250, 204, 21, 0.12);
+          transition: none;
+          border: none;
+          outline: none;
+          cursor: default !important;
+          text-decoration: none !important;
+          user-select: none;
+        }
+        .cta-main:hover,
+        .cta-main:active,
+        .cta-main:focus,
+        .cta-main:visited {
+          background-image: linear-gradient(241deg, #FFD600, #F59E42);
+          color: #101010;
+          text-decoration: none;
+          box-shadow: 0 4px 24px rgba(250, 204, 21, 0.12);
+          cursor: default !important;
+        }
+      `}</style>
 
       {/* EXIT-INTENT POPUP */}
       <ExitIntentPopup />
@@ -75,10 +114,9 @@ export default function Home() {
       {/* ---- UPDATED STATS BAR WITH BIG ICONS & STATS ---- */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-          {/* Students Trained */}
+          {/* ...stats bar content unchanged... */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* Graduation cap icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 14L3 9.5l9-4.5 9 4.5-9 4.5zm0 0v6m6-3a6 6 0 00-12 0" />
               </svg>
@@ -86,10 +124,8 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">50k+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Students Trained</p>
           </div>
-          {/* Affiliate Earnings */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* Money bag icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 9.4V7a5 5 0 00-10 0v2.4l-2.3 2.3a2.001 2.001 0 001.4 3.4h14a2.001 2.001 0 001.4-3.4L17 9.4zm-5 9v2m0 0h-2m2 0h2" />
               </svg>
@@ -97,10 +133,8 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">$20M+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Affiliate Earnings</p>
           </div>
-          {/* Years of Innovation */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* Lightbulb icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 14h6m-3-12a7 7 0 00-7 7c0 2.38 1.19 4.47 3.04 5.74A2 2 0 0012 22a2 2 0 001.96-1.26A7.003 7.003 0 0012 2z" />
               </svg>
@@ -108,10 +142,8 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">9+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Years of Innovation</p>
           </div>
-          {/* Trustpilot Score */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* Star icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.387 2.461a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.539 1.118l-3.387-2.461a1 1 0 00-1.176 0l-3.387 2.461c-.783.57-1.838-.196-1.538-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.98 9.393c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.287-3.966z"/>
               </svg>
@@ -119,10 +151,8 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-extrabold text-yellow-400">4.6★</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Avg. Trustpilot Score</p>
           </div>
-          {/* Student Satisfaction */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* Thumbs up icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 9V5a3 3 0 00-6 0v9a2 2 0 002 2h4a2 2 0 002-2v-1m0 0l4-4a2 2 0 00-2.8-2.8l-2.2 2.2zm0 0v2a4 4 0 01-4 4H7a2 2 0 01-2-2v-5a2 2 0 012-2h1"/>
               </svg>
@@ -143,7 +173,6 @@ export default function Home() {
             Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>—designed to remove friction and launch your results faster.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {/* BONUS 1 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 💰 Affiliate Network Access
@@ -152,7 +181,6 @@ export default function Home() {
                 Earn up to <span className="font-semibold text-yellow-300">$821</span> per sale — join our top-converting private offer.
               </p>
             </div>
-            {/* BONUS 2 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 🖥️ FREE Affiliate Website
@@ -161,7 +189,6 @@ export default function Home() {
                 Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
               </p>
             </div>
-            {/* BONUS 3 */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 👥 Private AI Marketers Club
@@ -171,29 +198,23 @@ export default function Home() {
               </p>
             </div>
           </div>
-
-          {/* MAIN CTA BUTTON with NO HOVER, DEFAULT CURSOR */}
-          <a
-            href="https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-block bg-yellow-400 text-black font-medium py-4 px-14 rounded-full shadow-lg text-xl tracking-tight focus:outline-none focus:ring-4 focus:ring-yellow-600 select-none"
-            style={{
-              textDecoration: 'none',
-              cursor: 'default',
-              transition: 'none',
-            }}
-            onMouseEnter={e => e.preventDefault()}
-            onMouseLeave={e => e.preventDefault()}
+          {/* MAIN CTA BUTTON as non-hoverable button */}
+          <button
+            className="cta-main mt-10"
+            onClick={handleBonusCta}
+            type="button"
             tabIndex={0}
+            aria-label="Claim your spot – Start for $27"
           >
             Claim Your Spot – Start for $27 →
-          </a>
+          </button>
         </div>
       </section>
 
-      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT */}
+      {/* ...rest of the page unchanged... */}
+
       <section className="w-full flex justify-center bg-black py-10 px-4">
+        {/* ...testimonials highlight... */}
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
@@ -238,22 +259,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WEBINAR / VIDEO */}
+      {/* ...rest of the page, unchanged... */}
       <Suspense fallback={<div>Loading...</div>}>
         <div id="john-video">
           <WebinarInvite />
         </div>
       </Suspense>
-
-      {/* ADDRESS POTENTIAL SKEPTICISM */}
       <SkepticismSection />
-
-      {/* TESTIMONIALS LIST */}
       <Testimonials />
 
-      {/* FREE TOOLS SECTION */}
       <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
         <div className="w-full max-w-4xl rounded-2xl shadow-2xl flex flex-col items-center p-6 relative overflow-hidden">
+          {/* ...free tools... */}
           <div className="mb-3 w-full flex justify-center">
             <span className="bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-semibold shadow-sm uppercase tracking-widest select-none">
               FREE RESOURCE
@@ -308,7 +325,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INFOGRAPHIC */}
       <div className="flex justify-center my-12 px-4">
         <Image
           src="/ai-usage-chart.jpg"
@@ -332,23 +348,16 @@ export default function Home() {
         </a>
       </p>
 
-      {/* FAQ */}
       <FAQ />
-
-      {/* CTA */}
       <CTA />
 
-      {/* SHARE BUTTONS */}
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
 
-      {/* RELATED TOOLS */}
       <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
-
-      {/* FOOTER */}
       <Footer />
     </main>
   );
