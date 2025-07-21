@@ -11,9 +11,6 @@ import Footer from '@/components/Footer';
 import RelatedTools from '@/components/RelatedTools';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 
-const WebinarInvite = dynamic(() => import('@/components/WebinarInvite'), { ssr: false });
-const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
-const SkepticismSection = dynamic(() => import('@/components/SkepticismSection'), { ssr: false });
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
@@ -73,93 +70,12 @@ export default function Home() {
         }
       `}</style>
 
-      {/* EXIT-INTENT POPUP */}
       <ExitIntentPopup />
-
-      {/* HERO */}
       <Hero />
 
-      {/* THREE VALUE PROPS BANNER */}
-      <section className="w-full flex justify-center bg-black py-8 px-4">
-        <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              FREEDOM
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Work from anywhere. Leave the 9–5 behind & build life on your terms.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              AI MASTERY
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Gain in-demand AI skills effortlessly: Leverage AI tools to launch automated affiliate systems with ease.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              EASY ONBOARDING
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              No tech skills or experience needed. Everything is step-by-step.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* ... all your other sections as already shown ... */}
 
-      {/* STATS BAR */}
-      {/* ...your stats bar section goes here... */}
-
-      {/* BONUSES SECTION */}
-      <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
-        <div className="w-full max-w-5xl flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
-            Unlock Your <span className="text-white">AI Marketer&rsquo;s Toolkit</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
-            Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>—designed to remove friction and launch your results faster.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
-                💰 Affiliate Network Access
-              </div>
-              <p className="text-gray-300 text-sm">
-                Earn up to <span className="font-semibold text-yellow-300">$821</span> per sale — join our top-converting private offer.
-              </p>
-            </div>
-            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
-                🖥️ FREE Affiliate Website
-              </div>
-              <p className="text-gray-300 text-sm">
-                Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
-              </p>
-            </div>
-            <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
-              <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
-                👥 Private AI Marketers Club
-              </div>
-              <p className="text-gray-300 text-sm">
-                Join <span className="font-semibold text-yellow-300">700+</span> members: peer support, feedback, and ongoing mentorship in our invite-only group.
-              </p>
-            </div>
-          </div>
-          <button
-            className="cta-main mt-10"
-            onClick={handleBonusCta}
-            type="button"
-            tabIndex={0}
-            aria-label="Claim your spot – Start for $27"
-          >
-            Claim Your Spot – Start for $27 →
-          </button>
-        </div>
-      </section>
-
-      {/* SECTION 6: Real People. Real Results. */}
+      {/* EXAMPLE: Real People. Real Results. Section */}
       <section className="w-full flex flex-col items-center justify-center py-16 px-4 bg-[#171726]">
         <div className="max-w-4xl w-full flex flex-col items-center">
           <Image
@@ -174,55 +90,7 @@ export default function Home() {
             Real People. Real Results.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
-            {/* ...6 testimonial cards here, as before... */}
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;I made my first commissions without showing my face. AI Club actually works.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Jordan M. <span className="block font-normal text-xs text-gray-400">Beta Tester</span>
-              </figcaption>
-            </figure>
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;Never felt like I know what I&apos;m doing until this. The steps were easy, support was real.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Samantha R. <span className="block font-normal text-xs text-gray-400">Verified Buyer</span>
-              </figcaption>
-            </figure>
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;Escaped the 9–5 grind. I finally have a way to build something real.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Derek L. <span className="block font-normal text-xs text-gray-400">Early Access Member</span>
-              </figcaption>
-            </figure>
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;The community answered all my questions, and the AI tools saved me hours every week.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Priya N. <span className="block font-normal text-xs text-gray-400">Founding Member</span>
-              </figcaption>
-            </figure>
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;Skeptical at first, but now my content gets traffic and sales, all with AI.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Alex H. <span className="block font-normal text-xs text-gray-400">Tech Newbie</span>
-              </figcaption>
-            </figure>
-            <figure className="relative bg-gradient-to-tl from-[#26263a] to-[#23223a] border-2 border-pink-500 rounded-2xl shadow-2xl p-8 flex flex-col h-full hover:shadow-pink-500/40 transition-shadow duration-200">
-              <blockquote className="text-lg text-white font-medium mb-4">
-                &ldquo;I finally feel like I&apos;m part of something huge and future-proof. The results speak for themselves.&rdquo;
-              </blockquote>
-              <figcaption className="text-base text-pink-400 font-semibold">
-                Lila F. <span className="block font-normal text-xs text-gray-400">AI Entrepreneur</span>
-              </figcaption>
-            </figure>
+            {/* ... your six testimonial cards ... */}
           </div>
           <p className="mt-10 text-center text-pink-300 text-base mx-auto max-w-2xl">
             Real stories. Real transformations. AI Club is helping everyday people achieve more — see what&apos;s possible when you join.
@@ -230,9 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ...rest of your sections go here INCLUDING... */}
-
-      {/* SECTION 7: AI Growth In Focus */}
+      {/* AI Growth In Focus Section */}
       <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center">
         <div className="max-w-3xl w-full flex flex-col items-center">
           <Image
@@ -256,7 +122,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       <p className="text-center text-xs text-gray-400 mt-2 mb-8">
         Infographic: Digital Silk. (2025). AI statistics [Infographic].{' '}
         <a
@@ -269,7 +134,7 @@ export default function Home() {
         </a>
       </p>
 
-      {/* ...rest of your components like FAQ, CTA, ShareButtons, RelatedTools, Footer */}
+      {/* ... your other sections ... */}
       <FAQ />
       <CTA />
 
@@ -278,7 +143,6 @@ export default function Home() {
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
-
       <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
       <Footer />
     </main>
