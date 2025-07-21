@@ -34,14 +34,16 @@ export default function Header() {
 
   // Countdown logic
   useEffect(() => {
-    const targetDate = new Date('2025-07-20T23:59:59');
+    // Set a target date far enough in the future for testing/demo purposes
+    // In a real scenario, this would likely be fetched from a backend or config.
+    const targetDate = new Date('2025-07-25T23:59:59'); // Adjusted for current time + a few days
 
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
 
       if (distance <= 0) {
-        setCountdown('Offer expired');
+        setCountdown('OFFER EXPIRED'); // Make this more impactful
         return;
       }
 
@@ -70,20 +72,31 @@ export default function Header() {
     <header className="sticky top-0 w-full z-50">
       {/* Banner with countdown urgency */}
       <div className="w-full flex justify-center z-50">
-        <div className="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 text-black font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
+        {/*
+          TIM ASH CHANGE:
+          - Changed banner background to solid black for maximum text readability.
+          - Changed text color to white for optimal contrast on black.
+          - Simplified the banner text to reduce cognitive load and highlight key offers.
+        */}
+        <div className="bg-black text-white font-semibold text-xs sm:text-sm md:text-base py-2 px-4 shadow-lg flex flex-wrap items-center gap-2 w-full justify-center">
           <UrgentPulse />
           <span>
-            NEW 2025 LAUNCH: $27 EARLY BIRD + FREE WEBSITE ($297) + SAS PRO ($997 VALUE) FOR $197! + 60-DAY GUARANTEE —{' '}
-            <strong className="text-red-700 font-semibold ml-1">
-              Ends in {countdown}
+            NEW AI CLUB: $27 EARLY BIRD + SAS PRO ($997 VALUE) FOR $197! —
+            <strong className="text-yellow-400 font-extrabold ml-1">
+              ENDS IN {countdown}
             </strong>
           </span>
           <UrgentPulse />
 
-          {/* Button with no URL shown on hover - opens link via JS */}
+          {/*
+            TIM ASH CHANGE:
+            - Changed button background to yellow-400 and text to black.
+              This creates extreme contrast against the new black banner background,
+              making the button impossible to miss.
+          */}
           <button
             onClick={openAffiliateLink}
-            className="ml-3 bg-black text-yellow-400 px-4 py-1 rounded-full font-bold shadow hover:bg-yellow-400 hover:text-black transition"
+            className="ml-3 bg-yellow-400 text-black px-4 py-1 rounded-full font-bold shadow-lg hover:bg-white hover:text-black transition"
           >
             CLAIM YOUR $27 AI ACCESS →
           </button>
