@@ -8,7 +8,6 @@ import Hero from '@/components/Hero';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-import RelatedTools from '@/components/RelatedTools';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 const WebinarInvite = dynamic(() => import('@/components/WebinarInvite'), { ssr: false });
