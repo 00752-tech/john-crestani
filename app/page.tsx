@@ -13,7 +13,7 @@ import Footer from '@/components/Footer';
 import WebinarInvite from '@/components/WebinarInvite';
 import SkepticismSection from '@/components/SkepticismSection';
 import RelatedTools from '@/components/RelatedTools';
-import ExitIntentPopup from '@/components/ExitIntentPopup'; // 💡 Import your popup here!
+import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
@@ -35,7 +35,7 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
-      
+
       {/* EXIT-INTENT POPUP */}
       <ExitIntentPopup />
 
@@ -161,16 +161,23 @@ export default function Home() {
                 Done-for-you site + hosting + domain + drag-n-drop editor. Launch in under 15 minutes.
               </p>
             </div>
-            {/* BONUS 3 */}
+            {/* BONUS 3 (now quantified) */}
             <div className="bg-[#161618] border border-yellow-500 rounded-2xl p-6 shadow hover:shadow-yellow-500/30 transition">
               <div className="text-lg font-bold text-yellow-300 mb-2 flex items-center gap-2">
                 👥 Private AI Marketers Club
               </div>
               <p className="text-gray-300 text-sm">
-                Tap into peer support, feedback, and ongoing mentorship in our invite-only group.
+                Join <span className="font-semibold text-yellow-300">700+</span> members: peer support, feedback, and ongoing mentorship in our invite-only group.
               </p>
             </div>
           </div>
+          {/* ---- MAIN CTA after bonuses ---- */}
+          <a
+            href="#john-video"
+            className="mt-10 inline-block bg-yellow-400 text-black font-extrabold py-4 px-14 rounded-full shadow-lg text-xl tracking-tight hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-600 transition"
+          >
+            Claim Your Spot – Start for $27 →
+          </a>
         </div>
       </section>
 
