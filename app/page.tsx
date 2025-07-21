@@ -24,7 +24,7 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  // CTA handler used on the Bonuses button
+  // CTA handler used on all CTA buttons
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -209,9 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NO "REAL PEOPLE" SECTION HERE -- IT'S NOW REMOVED */}
-
-      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT, VIDEO, SKEPTICISM, TESTIMONIALS */}
+      {/* VIDEO, SKEPTICISM, TESTIMONIALS */}
       <Suspense fallback={<div>Loading...</div>}>
         <WebinarInvite />
       </Suspense>
@@ -258,7 +256,24 @@ export default function Home() {
         </a>
       </p>
 
+      {/* FAQ SECTION */}
       <FAQ />
+
+      {/* FINAL DECISIVE CTA under FAQ */}
+      <div className="w-full flex flex-col items-center my-10">
+        <button
+          className="cta-main text-xl md:text-2xl shadow-lg px-10 py-5"
+          onClick={handleBonusCta}
+          type="button"
+          aria-label="Yes! Claim My $27 AI Income Blueprint"
+        >
+          Yes! Claim My $27 AI Income Blueprint →
+        </button>
+        <span className="block text-sm text-pink-300 text-center mt-2 max-w-sm">
+          Secure your spot risk-free—instant access, all bonuses included.
+        </span>
+      </div>
+
       <CTA />
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
