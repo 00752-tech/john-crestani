@@ -78,9 +78,30 @@ export default function Home() {
           cursor: pointer !important;
           color: #101010 !important;
         }
-        .highlight-yellow {
-          color: #FFD600;
+        /* Fix for Jason CTA button active/focus - visible background and text */
+        .jason-cta {
+          background-color: #FFD600;
+          color: #101010;
           font-weight: 600;
+          padding: 0.65rem 1.8rem;
+          border-radius: 9999px;
+          box-shadow: 0 4px 24px rgba(250, 204, 21, 0.15);
+          user-select: none;
+          transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+          border: none;
+          outline: none;
+        }
+        .jason-cta:hover {
+          background-color: #F7B600;
+          box-shadow: 0 6px 28px rgba(250, 204, 21, 0.25);
+          color: #101010;
+          cursor: pointer;
+        }
+        .jason-cta:focus,
+        .jason-cta:active {
+          background-color: #c89a00;
+          box-shadow: 0 0 8px 2px #f8d54d;
+          color: #101010;
         }
       `}</style>
 
@@ -123,7 +144,6 @@ export default function Home() {
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* icon SVG omitted for brevity */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 14L3 9.5l9-4.5 9 4.5-9 4.5zm0 0v6m6-3a6 6 0 00-12 0" />
               </svg>
@@ -133,7 +153,6 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* icon SVG */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 9.4V7a5 5 0 00-10 0v2.4l-2.3 2.3a2.001 2.001 0 001.4 3.4h14a2.001 2.001 0 001.4-3.4L17 9.4zm-5 9v2m0 0h-2m2 0h2" />
               </svg>
@@ -143,7 +162,6 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* icon SVG */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 14h6m-3-12a7 7 0 00-7 7c0 2.38 1.19 4.47 3.04 5.74A2 2 0 0012 22a2 2 0 001.96-1.26A7.003 7.003 0 0012 2z" />
               </svg>
@@ -153,7 +171,6 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* icon SVG */}
               <svg className="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.387 2.461a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.539 1.118l-3.387-2.461a1 1 0 00-1.176 0l-3.387 2.461c-.783.57-1.838-.196-1.538-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.98 9.393c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.287-3.966z"/>
               </svg>
@@ -163,7 +180,6 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* icon SVG */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 9V5a3 3 0 00-6 0v9a2 2 0 002 2h4a2 2 0 002-2v-1m0 0l4-4a2 2 0 00-2.8-2.8l-2.2 2.2zm0 0v2a4 4 0 01-4 4H7a2 2 0 01-2-2v-5a2 2 0 012-2h1"/>
               </svg>
@@ -184,7 +200,7 @@ export default function Home() {
             Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>&mdash;designed to remove friction and launch your results faster.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {/* Bonus items omitted for brevity */}
+            {/* Bonus items */}
           </div>
           <button
             className="cta-main mt-10"
@@ -246,7 +262,7 @@ export default function Home() {
               }}
               className="cta-main no-hover text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition-none"
             >
-              Watch: You&apos;re Fired! (But You&apos;re Hired by AI)
+              Jason&apos;s Recommended Path: Get AI Club Access →
             </button>
           </div>
         </div>
