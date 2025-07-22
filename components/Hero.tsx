@@ -59,8 +59,7 @@ export default function Hero() {
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
             >
-              ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON`&apos;T BE REPLACED
-            </span>
+              ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON&apos;T BE REPLACED</span>
 
             {/* --- H1 in sentence case with yellow highlights --- */}
             <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
@@ -69,7 +68,7 @@ export default function Hero() {
 
             {/* --- Subheadline with gold highlights for key benefits --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">confidently acquire in-demand AI skills, build predictable income streams, and seize control of their professional destiny</span>, in the evolving digital landscape. <span className="brand-gold">stable income streams</span>, and <span className="brand-gold">rediscover meaningful work</span> in the evolving digital landscape.
+              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">confidently acquire in-demand AI skills, build predictable income streams, and seize control of their professional destiny</span>, in the evolving digital landscape. 
             </p>
 
             {/* CTA */}
