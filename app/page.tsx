@@ -107,6 +107,45 @@ export default function Home() {
           color: #FFD600;
           font-weight: 600;
         }
+
+        /* -- Value Props Section Styling -- */
+        .value-prop-badge {
+          display: inline-block;
+          background-color: #FFD600;
+          color: #101010;
+          font-weight: 700;
+          font-size: 0.85rem;
+          padding: 0.25rem 0.85rem;
+          border-radius: 9999px;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          box-shadow: 0 3px 8px rgba(255, 214, 0, 0.4);
+        }
+        .value-prop-title {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: #FFD600;
+          margin-bottom: 0.75rem;
+          font-family: 'Poppins', sans-serif;
+          text-shadow: 0 2px 6px rgba(255, 214, 0, 0.4);
+        }
+        .value-prop-text {
+          color: #ccc;
+          font-size: 1.125rem;
+          line-height: 1.7;
+          max-width: 320px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+          .value-prop-text {
+            margin-left: 0;
+            margin-right: 0;
+            max-width: none;
+          }
+        }
       `}</style>
 
       <ExitIntentPopup />
@@ -120,9 +159,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Your value props columns etc. */}
-      <section className="w-full flex justify-center bg-black py-8 px-4">
-        {/* FREEDOM | AI MASTERY | EASY ONBOARDING */}
+      {/* Updated Value Props Section */}
+      <section className="w-full flex justify-center bg-black py-12 px-4 border-t border-gray-800 border-b border-gray-800">
+        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-14 text-center">
+          <div>
+            <div className="value-prop-badge">FREEDOM</div>
+            <h3 className="value-prop-title">Work from Anywhere</h3>
+            <p className="value-prop-text">
+              Reclaim Your Time &amp; Control: Leave the 9-5 behind &amp; build a life on your terms, free from burnout.
+            </p>
+          </div>
+          <div>
+            <div className="value-prop-badge">AI MASTERY</div>
+            <h3 className="value-prop-title">AI Mastery</h3>
+            <p className="value-prop-text">
+              Future-Proof Your Expertise: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, securing your professional relevance.
+            </p>
+          </div>
+          <div>
+            <div className="value-prop-badge">EASY ONBOARDING</div>
+            <h3 className="value-prop-title">Easy Onboarding</h3>
+            <p className="value-prop-text">
+              Get started quickly without stress or overwhelm — focused coaching and step-by-step training to ease your journey.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Stats bar with lighter font weights */}
