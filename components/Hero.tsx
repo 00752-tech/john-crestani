@@ -4,8 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
-  // No need for useRouter since we're not using router.push for external links
-
   const handleCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -64,14 +62,14 @@ export default function Hero() {
               ▲ AI IS CHANGING EVERYTHING
             </span>
 
-            {/* --- H1 with yellow highlights --- */}
+            {/* --- H1 in sentence case with yellow highlights --- */}
             <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
-              Seize <span className="brand-gold">Control</span> of Your Future—<span className="brand-gold">Master AI</span> and <span className="brand-gold">Secure Your Income</span> in a Changing World.
+              Reclaim your <span className="brand-gold">purpose</span>: master AI &amp; forge a <span className="brand-gold">future-proof income</span>.
             </h1>
 
-            {/* --- Subheadline --- */}
+            {/* --- Subheadline with gold highlights for key benefits --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Don&apos;t just survive the AI revolution—<span className="brand-gold">lead it</span>. Even as a total beginner, join our supportive community to build scalable passive income streams and redefine what&apos;s possible for your career.
+              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">acquire in-demand AI skills</span>, build <span className="brand-gold">stable income streams</span>, and <span className="brand-gold">rediscover meaningful work</span> in the evolving digital landscape.
             </p>
 
             {/* CTA */}
@@ -81,7 +79,7 @@ export default function Hero() {
               onClick={handleCta}
               type="button"
             >
-              Take Control: Start My AI Income Journey
+              Unlock My AI-Powered Future &rarr;
             </button>
 
             {/* Bonus + Proof */}
@@ -90,7 +88,7 @@ export default function Hero() {
               <span
                 className="inline-block ml-2 w-4 h-4 rounded-full animate-pulse align-middle"
                 style={{
-                  backgroundColor: '#22c55e', // Tailwind bg-green-500
+                  backgroundColor: '#22c55e',
                   boxShadow: '0 0 8px 2px #22c55e'
                 }}
               />
@@ -109,7 +107,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Side: Hero Image */}
+          {/* Right Side: Hero Image (unchanged) */}
           <div className="hidden md:flex w-[40%] justify-center items-center mt-4 min-h-[320px]">
             <Image
               src="/hero_5_lifestyle_guy.webp"
