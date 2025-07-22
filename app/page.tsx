@@ -44,14 +44,12 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
 
-      {/* Your styles here... */}
-
       <ExitIntentPopup />
       <Hero />
 
-      {/* Your sections (value props, stats, bonuses, etc.) */}
+      {/* Your content sections here */}
 
-      {/* Testimonials section uses Image: */}
+      {/* Example testimonial section with image */}
       <section>
         <Image
           src="/bio_image_jason_vientos.webp"
@@ -62,25 +60,48 @@ export default function Home() {
           priority
           style={{ maxWidth: '180px', height: 'auto' }}
         />
-        {/* More testimonial content */}
+        {/* Add actual testimonial JSX here */}
+        <Testimonials />
       </section>
 
-      {/* AI Growth section uses Image */}
+      {/* Skepticism Section */}
+      <SkepticismSection />
+
+      {/* Video webinar wrapped with Suspense */}
+      <Suspense fallback={<div>Loading Webinar Invite...</div>}>
+        <WebinarInvite />
+      </Suspense>
+
+      {/* AI Growth section with image */}
       <section>
         <Image
           src="/ai-usage-chart.jpg"
-          alt="AI Growth In Focus – Global AI Market Infographic"
+          alt="AI Growth In Focus — Global AI Market Infographic"
           width={700}
           height={1100}
           className="rounded-2xl shadow-xl border-2 border-pink-400 mb-8 bg-white"
           priority={false}
         />
-        {/* More content */}
+        {/* Additional AI growth text or components can be here */}
       </section>
 
-      {/* FAQ, CTA, DynamicShareButtons used */}
+      {/* FAQ and main CTA */}
       <FAQ />
+
+      <div className="flex justify-center my-8">
+        <button
+          className="cta-main"
+          onClick={handleBonusCta}
+          type="button"
+          aria-label="Claim your spot – Start for $27"
+        >
+          Claim Your Spot – Start for $27 →
+        </button>
+      </div>
+
       <CTA />
+
+      {/* Share buttons */}
       <div className="container mx-auto px-4 py-8">
         <DynamicShareButtons url={pageUrl} title={pageTitle} />
       </div>
