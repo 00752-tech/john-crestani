@@ -12,8 +12,6 @@ import Footer from '@/components/Footer';
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
-  // Removed unused pageUrl per lint error
-
   const pageTitle = 'AI Marketers Club $27: John Crestani&apos;s 2025 Faceless AI System';
 
   const schema = { /* your schema here */ };
@@ -193,10 +191,10 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-          {/* Repeat your existing stat items with SVG icons here */}
+          {/* Your stat items go here */}
+          {/* Example one stat */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
-              {/* SVG icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 14L3 9.5l9-4.5 9 4.5-9 4.5zm0 0v6m6-3a6 6 0 00-12 0" />
               </svg>
@@ -204,7 +202,7 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-semibold text-yellow-400">50k+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Students Trained</p>
           </div>
-          {/* Add other stats similarly */}
+          {/* Add the other stats similarly */}
         </div>
       </section>
 
@@ -236,7 +234,7 @@ export default function Home() {
 
       <SkepticismSection />
 
-      {/* ... Rest of your page as-is ... */}
+      {/* ... Other sections here as needed ... */}
 
       <Footer />
     </main>
