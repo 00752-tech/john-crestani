@@ -221,52 +221,53 @@ export default function Home() {
       <SkepticismSection />
 
       {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT — Jason Vientos */}
-      <section className="w-full flex justify-center bg-black py-10 px-4">
-        <div className="w-full max-w-3xl bg-[#18181b] rounded-2xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
-          <div className="w-full md:w-1/3 flex flex-col items-center">
-            <Image
-              src="/bio_image_jason_vientos.webp"
-              alt="Jason Vientos – Experienced Affiliate"
-              width={220}
-              height={220}
-              className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
-              priority
-              style={{ maxWidth: '180px', height: 'auto' }}
-            />
-            <span className="mt-4 text-lg font-semibold text-yellow-400 text-center">Jason Vientos</span>
-            <span className="text-xs text-gray-400 text-center">Affiliate Marketer &amp; Brand Partner</span>
-          </div>
-          <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Why I&apos;m Promoting This System</h3>
-            <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-              I&apos;ve been in affiliate marketing for over 9 years and followed John Crestani&apos;s SAS Pro system since the early days.
-              <span className="block mt-2 text-yellow-400 font-medium">
-                I rarely promote offers, but this one&apos;s different.
-              </span>
-              This new AI-powered version isn&apos;t just another course — it&apos;s built for today&apos;s landscape.
-              If you&apos;re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
-              I&apos;ve seen it work, and I recommend it because I believe in the results.
-            </p>
-            <p className="text-pink-400 text-base md:text-lg mt-6 mb-4 italic">
-              AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
-            </p>
-            <button
-              type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(
-                  'https://afe40mfth79r3y7a3ii22qcmeg.hop.clickbank.net/?&traffic_source=jason_trusts_cta',
-                  '_blank',
-                  'noopener,noreferrer'
-                );
-              }}
-              className="cta-main no-hover text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition-none"
-            >
-              Jason&apos;s Recommended Path: Get AI Club Access →
-            </button>
-          </div>
-        </div>
-      </section>
+<section className="w-full flex justify-center bg-black py-10 px-4">
+  <div className="w-full max-w-3xl bg-[#18181b] rounded-2xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
+    <div className="w-full md:w-1/3 flex flex-col items-center">
+      <Image
+        src="/bio_image_jason_vientos.webp"
+        alt="Jason Vientos – Experienced Affiliate"
+        width={220}
+        height={220}
+        className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
+        priority
+        style={{ maxWidth: '180px', height: 'auto' }}
+      />
+      <span className="mt-4 text-lg font-semibold text-yellow-400 text-center">Jason Vientos</span>
+      <span className="text-xs text-gray-400 text-center">Affiliate Marketer &amp; Brand Partner</span>
+    </div>
+    <div className="w-full md:w-2/3 text-left">
+      <h3 className="text-2xl font-semibold text-white mb-4">Why I&apos;m Promoting This System</h3>
+      <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+        I&apos;ve been in affiliate marketing for over 9 years and followed John Crestani&apos;s SAS Pro system since the early days.
+        <span className="block mt-2 text-yellow-400 font-medium">
+          I rarely promote offers, but this one&apos;s different.
+        </span>
+        This new AI-powered version isn&apos;t just another course — it&apos;s built for today&apos;s landscape.
+        If you&apos;re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
+        I&apos;ve seen it work, and I recommend it because I believe in the results.
+      </p>
+      <p className="text-pink-400 text-base md:text-lg mt-6 mb-4 italic">
+        AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
+      </p>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          window.open(
+            'https://afe40mfth79r3y7a3ii22qcmeg.hop.clickbank.net/?&traffic_source=jason_trusts_cta',
+            '_blank',
+            'noopener,noreferrer'
+          );
+        }}
+        className="jason-cta"
+      >
+        Jason&apos;s Recommended Path: Get AI Club Access →
+      </button>
+    </div>
+  </div>
+</section>
+
 
       {/* WEBINAR / VIDEO */}
       <Suspense fallback={<div>Loading...</div>}>
