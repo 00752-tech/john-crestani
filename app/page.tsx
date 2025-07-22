@@ -12,7 +12,6 @@ import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import WebinarInvite from '@/components/WebinarInvite';
 import SkepticismSection from '@/components/SkepticismSection';
-import RelatedTools from '@/components/RelatedTools';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
@@ -160,10 +159,7 @@ export default function Home() {
       {/* TESTIMONIALS LIST */}
       <Testimonials />
 
-      {/* FREE TOOLS SECTION */}
-      <section className="w-full flex justify-center bg-[#13131a] py-14 px-4 border-t border-b border-yellow-600">
-        {/* ... unchanged ... */}
-      </section>
+      {/* REMOVED FREE TOOLS SECTION */}
 
       <div className="flex justify-center my-12 px-4">
         <Image
@@ -197,7 +193,8 @@ export default function Home() {
         </Suspense>
       </div>
 
-      <RelatedTools currentToolUrl={pageUrl} category="affiliate" />
+      {/* REMOVED RelatedTools */}
+
       <Footer />
     </main>
   );
