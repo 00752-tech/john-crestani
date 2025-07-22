@@ -80,7 +80,7 @@ export default function Hero() {
               onClick={handleCta}
               type="button"
             >
-              Unlock My AI-Powered Future &rarr;
+              Seize Control: Unlock My AI-Powered Future
             </button>
 
             {/* Bonus + Proof */}
