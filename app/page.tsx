@@ -262,7 +262,7 @@ export default function Home() {
         }}
         className="jason-cta"
       >
-        Jason&apos;s Recommended Path: Get AI Club Access →
+        Start Your AI Income Journey (Jason&apos;s Way) →
       </button>
     </div>
   </div>
