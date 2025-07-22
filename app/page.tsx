@@ -1,23 +1,19 @@
 'use client';
 
-import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
-import WebinarInvite from '@/components/WebinarInvite';
 import SkepticismSection from '@/components/SkepticismSection';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
+import Footer from '@/components/Footer';
 
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
-  const pageUrl = 'https://johncrestani.me';
+  // Removed unused pageUrl per lint error
+
   const pageTitle = 'AI Marketers Club $27: John Crestani&apos;s 2025 Faceless AI System';
 
   const schema = { /* your schema here */ };
@@ -78,7 +74,6 @@ export default function Home() {
           cursor: pointer !important;
           color: #101010 !important;
         }
-        /* Fix for Jason CTA button active/focus - visible background and text */
         .jason-cta {
           background-color: #FFD600;
           color: #101010;
@@ -138,7 +133,6 @@ export default function Home() {
           font-weight: 700;
           color: #FFD600;
         }
-
         @media (min-width: 768px) {
           .value-prop-text {
             margin-left: 0;
@@ -146,8 +140,6 @@ export default function Home() {
             max-width: none;
           }
         }
-
-        /* Section border and spacing */
         .value-props-section {
           border-top: 1px solid #333;
           border-bottom: 1px solid #333;
@@ -160,7 +152,7 @@ export default function Home() {
 
       <Hero />
 
-      {/* Short impactful paragraph (updated with bold and color emphasis) */}
+      {/* Short impactful paragraph with emphasis */}
       <section className="w-full flex justify-center bg-black px-4">
         <div className="max-w-5xl text-center text-gray-300 text-lg md:text-xl leading-relaxed mb-10 px-4">
           In{' '}
@@ -171,7 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VALUE PROPS SECTION (updated texts + styling) */}
+      {/* Updated Value Props Section */}
       <section className="value-props-section w-full flex justify-center bg-black px-4">
         <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-14 text-center">
           <div>
@@ -198,12 +190,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS BAR */}
+      {/* Stats Bar */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-          {/* ... your existing stats bar content ... */}
+          {/* Repeat your existing stat items with SVG icons here */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
+              {/* SVG icon */}
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 14L3 9.5l9-4.5 9 4.5-9 4.5zm0 0v6m6-3a6 6 0 00-12 0" />
               </svg>
@@ -211,12 +204,11 @@ export default function Home() {
             <div className="text-4xl md:text-5xl font-semibold text-yellow-400">50k+</div>
             <p className="text-gray-400 text-xs mt-1 font-medium">Students Trained</p>
           </div>
-          {/* ... repeat for other 4 stats ... */}
-          {/* omitted for brevity */}
+          {/* Add other stats similarly */}
         </div>
       </section>
 
-      {/* BONUSES SECTION */}
+      {/* Bonuses Section */}
       <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
         <div className="w-full max-w-5xl flex flex-col items-center text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
@@ -240,13 +232,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
       <Testimonials />
 
-      {/* SKEPTICISM SECTION */}
       <SkepticismSection />
 
-      {/* ... rest of your page unchanged ... */}
+      {/* ... Rest of your page as-is ... */}
 
       <Footer />
     </main>
