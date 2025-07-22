@@ -82,12 +82,12 @@ export default function Home() {
 
       {/* THREE VALUE PROPS BANNER */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
-        {/* Your triple value props here unchanged */}
+        {/* ... unchanged ... */}
       </section>
 
       {/* STATS BAR */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
-        {/* Stats bar unchanged */}
+        {/* ... unchanged ... */}
       </section>
 
       {/* BONUSES SECTION */}
@@ -178,8 +178,6 @@ export default function Home() {
       {/* TESTIMONIALS LIST */}
       <Testimonials />
 
-      {/* Removed Free Tools Section */}
-
       <div className="flex justify-center my-12 px-4">
         <Image
           src="/ai-usage-chart.jpg"
@@ -204,15 +202,13 @@ export default function Home() {
       </p>
 
       <FAQ />
-      <CTA handleBonusCta={handleBonusCta} />
+      <CTA />
 
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
-
-      {/* Removed RelatedTools */}
 
       <Footer />
     </main>
