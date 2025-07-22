@@ -56,10 +56,12 @@ export default function Hero() {
           {/* Left Column */}
           <div className="w-full md:w-[60%] flex flex-col items-start space-y-6">
             <span
-              className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
-              style={{ letterSpacing: '0.08em' }}
-            >
-              ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON&apos;T BE REPLACED</span>
+  className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5 whitespace-nowrap overflow-x-auto"
+  style={{ letterSpacing: '0.08em' }}
+>
+  ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON&apos;T BE REPLACED
+</span>
+
 
             {/* --- H1 in sentence case with yellow highlights --- */}
             <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
