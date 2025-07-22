@@ -1,21 +1,15 @@
-/* globals.css */
-
-/* Import Google Fonts fallback - optional if using next/font/google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Root color variables */
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 }
 
-/* Body uses Poppins loaded by next/font */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -26,40 +20,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Local font-face declarations to load fonts from public/fonts */
-@font-face {
-  font-family: 'Satoshi Light';
-  src: url('/fonts/Satoshi-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DMSans Regular';
-  src: url('/fonts/DMSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBMPlexMono Regular';
-  src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Neue Haas Unica Light';
-  src: url('/fonts/NeueHaasUnicaW1G-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Animated gradient text */
 .gradient-text {
   background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
   -webkit-background-clip: text;
@@ -77,7 +37,6 @@ body {
   }
 }
 
-/* Pulsing banner animation */
 .pulsing-banner {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -96,7 +55,6 @@ body {
   }
 }
 
-/* Fade up animation */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -112,7 +70,6 @@ body {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* Style input fields */
 @layer base {
   input {
     @apply py-2 px-2;
