@@ -22,7 +22,6 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  // Used in the bonuses button below
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -138,6 +137,16 @@ export default function Home() {
           margin-left: auto;
           margin-right: auto;
         }
+        .value-prop-text strong {
+          font-weight: 700;
+          color: #FFD600;
+        }
+
+        /* Accent color for key phrase */
+        .accent-yellow {
+          color: #FFD600;
+          font-weight: 700;
+        }
 
         @media (min-width: 768px) {
           .value-prop-text {
@@ -155,7 +164,10 @@ export default function Home() {
       {/* Short impactful paragraph directly after Hero */}
       <section className="w-full flex justify-center bg-black px-4">
         <div className="max-w-5xl text-center text-gray-300 text-lg md:text-xl leading-relaxed mb-10 px-4">
-          In today&apos;s uncertain global economy, building real financial resilience isn&apos;t just a goal&mdash;it&apos;s a necessity. The AI Marketing Club doesn&apos;t just teach you skills; it provides a robust pathway to creating new, predictable income streams, empowering you with the stability and control you deserve in these turbulent times.
+          In{' '}
+          <strong className="accent-yellow">today&apos;s uncertain global economy</strong>, building{' '}
+          <strong className="accent-yellow">real financial resilience</strong> isn&apos;t just a goal&mdash;it&apos;s a necessity. The AI Marketing Club doesn&apos;t just teach you skills; it provides a robust pathway to creating new,{' '}
+          <strong className="accent-yellow">predictable income streams</strong>, empowering you with the <strong className="accent-yellow">stability and control</strong> you deserve in these turbulent times.
         </div>
       </section>
 
@@ -166,21 +178,21 @@ export default function Home() {
             <div className="value-prop-badge">FREEDOM</div>
             <h3 className="value-prop-title">Work from Anywhere</h3>
             <p className="value-prop-text">
-              Reclaim Your Time &amp; Control: Leave the 9-5 behind &amp; build a life on your terms, free from burnout.
+              <strong>Reclaim Your Time &amp; Control</strong>: Leave the 9-5 behind &amp; build a life on your terms, <strong>free from burnout</strong>.
             </p>
           </div>
           <div>
             <div className="value-prop-badge">AI MASTERY</div>
             <h3 className="value-prop-title">AI Mastery</h3>
             <p className="value-prop-text">
-              Future-Proof Your Expertise: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, securing your professional relevance.
+              <strong>Future-Proof Your Expertise</strong>: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, <strong>securing your professional relevance</strong>.
             </p>
           </div>
           <div>
             <div className="value-prop-badge">EASY ONBOARDING</div>
             <h3 className="value-prop-title">Easy Onboarding</h3>
             <p className="value-prop-text">
-              Get started quickly without stress or overwhelm — focused coaching and step-by-step training to ease your journey.
+              Get started quickly without <strong>stress or overwhelm</strong> — focused coaching and step-by-step training to <strong>ease your journey</strong>.
             </p>
           </div>
         </div>
