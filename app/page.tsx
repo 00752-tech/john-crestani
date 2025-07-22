@@ -23,7 +23,6 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  // CTA handler for all Bonuses CTAs — opens affiliate link in new tab
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -97,7 +96,7 @@ export default function Home() {
               FREEDOM
             </div>
             <p className="text-sm text-gray-300 max-w-[240px]">
-              Work from anywhere. Leave the 9–5 behind & build life on your terms.
+              Work from anywhere. Leave the 9–5 behind &amp; build life on your terms.
             </p>
           </div>
           <div className="flex flex-col items-center">
@@ -219,7 +218,7 @@ export default function Home() {
 
       {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT — Jason Vientos */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
-        <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
+        <div className="w-full max-w-3xl bg-[#18181b] rounded-2xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <Image
               src="/bio_image_jason_vientos.webp"
@@ -234,15 +233,15 @@ export default function Home() {
             <span className="text-xs text-gray-400 text-center">Affiliate Marketer &amp; Brand Partner</span>
           </div>
           <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Why I&rsquo;m Promoting This System</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">Why I&apos;m Promoting This System</h3>
             <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-              I&rsquo;ve been in affiliate marketing for over 9 years and followed John Crestani&rsquo;s SAS Pro system since the early days.
+              I&apos;ve been in affiliate marketing for over 9 years and followed John Crestani&apos;s SAS Pro system since the early days.
               <span className="block mt-2 text-yellow-400 font-medium">
-                I rarely promote offers, but this one&rsquo;s different.
+                I rarely promote offers, but this one&apos;s different.
               </span>
-              This new AI-powered version isn&rsquo;t just another course — it&rsquo;s built for today&rsquo;s landscape.
-              If you&rsquo;re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
-              I&rsquo;ve seen it work, and I recommend it because I believe in the results.
+              This new AI-powered version isn&apos;t just another course — it&apos;s built for today&apos;s landscape.
+              If you&apos;re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income.
+              I&apos;ve seen it work, and I recommend it because I believe in the results.
             </p>
             <p className="text-pink-400 text-base md:text-lg mt-6 mb-4 italic">
               AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
@@ -259,7 +258,7 @@ export default function Home() {
               }}
               className="cta-main no-hover text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition-none"
             >
-              Watch: You&rsquo;re Fired! (But You&rsquo;re Hired by AI)
+              Watch: You&apos;re Fired! (But You&apos;re Hired by AI)
             </button>
           </div>
         </div>
@@ -272,14 +271,14 @@ export default function Home() {
         </div>
       </Suspense>
 
-      {/* Optimized Section 7: AI Growth In Focus */}
-      <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center">
-        <div className="max-w-3xl w-full flex flex-col items-center text-center">
+      {/* AI Growth In Focus Section */}
+      <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center text-center">
+        <div className="max-w-3xl w-full flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-            <span className="highlight-yellow">Your Future-Proof Income:</span> Tapping into the AI Economy's Trillion-Dollar Opportunity
+            <span className="highlight-yellow">Your Future-Proof Income:</span> Tapping into the AI Economy&apos;s Trillion-Dollar Opportunity
           </h2>
           <p className="text-lg md:text-xl text-white mb-8 max-w-2xl">
-            While others fear the <q className="font-semibold">'skills earthquake'</q> and economic uncertainty, this explosive growth creates unprecedented pathways for <span className="highlight-yellow">financial resilience and career reinvention.</span> <span className="highlight-yellow">Discover how smart marketers are claiming their share.</span>
+            While others fear the <q className="font-semibold">&apos;skills earthquake&apos;</q> and economic uncertainty, this explosive growth creates unprecedented pathways for <span className="highlight-yellow">financial resilience and career reinvention.</span> <span className="highlight-yellow">Discover how smart marketers are claiming their share.</span>
           </p>
           <Image
             src="/ai-usage-chart.jpg"
@@ -291,7 +290,7 @@ export default function Home() {
           />
           <p className="text-base md:text-lg text-pink-300 max-w-2xl">
             <span className="highlight-yellow">
-              This isn't just a trend; it's your blueprint for unprecedented income and career stability in the AI economy. It's time to seize control.
+              This isn&apos;t just a trend; it&apos;s your blueprint for unprecedented income and career stability in the AI economy. It&apos;s time to seize control.
             </span>
           </p>
         </div>
