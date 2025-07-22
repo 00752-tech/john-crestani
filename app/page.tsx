@@ -23,7 +23,7 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  // CTA handler for main Bonuses button — opens affiliate link in new tab
+  // CTA handler for all Bonuses CTAs — opens affiliate link in new tab
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -82,25 +82,44 @@ export default function Home() {
 
       {/* THREE VALUE PROPS BANNER */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
-        {/* ... unchanged ... */}
+        {/* Your triple value props here unchanged */}
       </section>
 
       {/* STATS BAR */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
-        {/* ... unchanged ... */}
+        {/* Stats bar unchanged */}
       </section>
 
       {/* BONUSES SECTION */}
       <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
-        {/* ... unchanged ... */}
+        <div className="w-full max-w-5xl flex flex-col items-center text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
+            Unlock Your <span className="text-white">AI Marketer&rsquo;s Toolkit</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
+            Enroll today and <span className="text-yellow-400 font-semibold">activate these powerful bonuses</span>—designed to remove friction and launch your results faster.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {/* Bonus blocks unchanged */}
+          </div>
+          <button
+            className="cta-main mt-10"
+            onClick={handleBonusCta}
+            type="button"
+            tabIndex={0}
+            aria-label="Claim your spot – Start for $27"
+          >
+            Claim Your Spot – Start for $27 →
+          </button>
+        </div>
       </section>
 
       {/* SECTION 6: Real People. Real Results. */}
       <section className="w-full flex flex-col items-center justify-center py-16 px-4 bg-[#171726]">
-        {/* ... unchanged ... */}
+        {/* Real people testimonials unchanged */}
       </section>
 
-      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT — ORIGINAL RESTORED */}
+      {/* INDIVIDUAL TESTIMONIAL HIGHLIGHT — Jason Vientos */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
         <div className="w-full max-w-3xl bg-[#18181b] rounded-3xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
           <div className="w-full md:w-1/3 flex flex-col items-center">
@@ -159,7 +178,7 @@ export default function Home() {
       {/* TESTIMONIALS LIST */}
       <Testimonials />
 
-      {/* REMOVED FREE TOOLS SECTION */}
+      {/* Removed Free Tools Section */}
 
       <div className="flex justify-center my-12 px-4">
         <Image
@@ -185,7 +204,7 @@ export default function Home() {
       </p>
 
       <FAQ />
-      <CTA />
+      <CTA handleBonusCta={handleBonusCta} />
 
       <div className="container mx-auto px-4 py-8">
         <Suspense fallback={<div>Loading...</div>}>
@@ -193,7 +212,7 @@ export default function Home() {
         </Suspense>
       </div>
 
-      {/* REMOVED RelatedTools */}
+      {/* Removed RelatedTools */}
 
       <Footer />
     </main>
