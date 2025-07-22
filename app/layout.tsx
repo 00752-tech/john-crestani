@@ -8,20 +8,11 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
 import { Poppins } from "next/font/google";
-import localFont from "next/font/local";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
   display: "swap",
-});
-
-const satoshiLight = localFont({
-  src: "/fonts/Satoshi-Light.woff2",
-  weight: "300",
-  style: "normal",
-  display: "swap",
-  variable: "--font-satoshi", // optional CSS variable if you want to use in your CSS
 });
 
 export const metadata: Metadata = {
@@ -45,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${poppins.className} ${satoshiLight.className}`}>
+    <html lang="en" className={poppins.className}>
       <head>
         {/* Preload hero image for LCP */}
         <link rel="preload" as="image" href="/hero_man_hat.webp" fetchPriority="high" />
@@ -68,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Structured data */}
         <StructuredData />
 
-        {/* Microsoft Clarity - lazy load script */}
+        {/* Microsoft Clarity - lazy load */}
         <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
