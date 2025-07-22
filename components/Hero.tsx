@@ -69,7 +69,7 @@ export default function Hero() {
 
             {/* --- Subheadline with gold highlights for key benefits --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">acquire in-demand AI skills</span>, build <span className="brand-gold">stable income streams</span>, and <span className="brand-gold">rediscover meaningful work</span> in the evolving digital landscape.
+              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">confidently acquire in-demand AI skills, build predictable income streams, and seize control of their professional destiny</span>, in the evolving digital landscape. <span className="brand-gold">stable income streams</span>, and <span className="brand-gold">rediscover meaningful work</span> in the evolving digital landscape.
             </p>
 
             {/* CTA */}
