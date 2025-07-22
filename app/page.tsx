@@ -246,7 +246,7 @@ export default function Home() {
               }}
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
             >
-              Watch: You&rsquo;re Fired! (But You&rsquo;re Hired by AI)
+              Access the AI Club Jason Trusts →
             </button>
           </div>
         </div>
