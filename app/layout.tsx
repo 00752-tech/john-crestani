@@ -41,13 +41,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Preload hero image for LCP */}
         <link rel="preload" as="image" href="/hero_man_hat.webp" fetchPriority="high" />
 
-        {/* Preconnect for key external resources */}
+        {/* Preconnect important domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
 
-        {/* Open Graph / SEO meta */}
+        {/* Open Graph / SEO tags */}
         <meta property="og:image" content="https://johncrestani.me/hero_man_hat.webp" />
         <meta property="og:image:alt" content="John Crestani Webinar Thumbnail" />
         <meta property="og:image:width" content="1200" />
@@ -56,10 +56,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google site verification */}
         <meta name="google-site-verification" content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo" />
 
-        {/* Structured data */}
+        {/* Structured Data for SEO */}
         <StructuredData />
 
-        {/* Microsoft Clarity - lazy load */}
+        {/* Microsoft Clarity Script, lazy loaded */}
         <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
