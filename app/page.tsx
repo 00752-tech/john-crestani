@@ -111,6 +111,7 @@ export default function Home() {
       {/* STATS BAR */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
+          {/* ... (stats bar columns as previously coded) ... */}
           <div className="flex flex-col items-center">
             <span className="mb-2">
               <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -206,6 +207,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* JASON VIENTOS TESTIMONIAL HIGHLIGHT */}
+      <section className="w-full bg-[#16182A] py-14 px-4 border-y border-purple-700 flex flex-col items-center">
+        <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
+          <div className="flex items-center gap-3 mb-3">
+            <Image
+              src="/avatar-jason-vientos.png"
+              alt="Jason Vientos"
+              width={56}
+              height={56}
+              className="rounded-full shadow-lg border-2 border-yellow-400"
+            />
+            <div className="text-left">
+              <div className="font-semibold text-yellow-300 text-lg">Jason Vientos</div>
+              <div className="text-xs text-gray-400 tracking-wide uppercase">Affiliate Marketer &amp; Brand Partner</div>
+            </div>
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-2 mt-2">Why I’m Promoting This System</h3>
+          <p className="text-gray-200 mb-3 text-base md:text-lg font-light">
+            I’ve been in affiliate marketing for over 9 years and followed John Crestani’s SAS Pro system since the early days. I rarely promote offers, but this one’s different.
+            <br className="hidden md:inline"/><br className="hidden md:inline"/>
+            This new AI-powered version isn’t just another course—it’s built for today’s landscape. If you’re tired of spinning your wheels, this is the fastest way to turn AI disruption into reliable online income. I’ve seen it work, and I recommend it because I believe in the results.
+          </p>
+          <div className="italic text-pink-400 mb-3 text-base">
+            AI is replacing jobs—but smart marketers are turning it into online income. Watch how John Crestani did it.
+          </div>
+          <div className="mt-2 flex justify-center">
+            <a
+              href="#john-video"
+              className="inline-block bg-pink-600 hover:bg-yellow-400 hover:text-black text-white font-semibold rounded-full px-7 py-3 shadow-lg text-base transition-colors duration-200"
+              style={{
+                boxShadow: "0 4px 24px rgba(236,72,153,0.14)"
+              }}
+            >
+              Watch: You&apos;re Fired! (But You&apos;re Hired by AI)
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* VIDEO, SKEPTICISM, TESTIMONIALS */}
       <Suspense fallback={<div>Loading...</div>}>
         <WebinarInvite />
@@ -277,7 +317,7 @@ export default function Home() {
           <DynamicShareButtons url={pageUrl} title={pageTitle} />
         </Suspense>
       </div>
-            <Footer />
+      <Footer />
     </main>
   );
 }
