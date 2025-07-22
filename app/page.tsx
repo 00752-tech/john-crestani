@@ -72,6 +72,17 @@ export default function Home() {
           box-shadow: 0 4px 24px rgba(250, 204, 21, 0.12);
           cursor: default !important;
         }
+        .no-hover:hover,
+        .no-hover:focus {
+          background-image: none !important;
+          box-shadow: none !important;
+          cursor: pointer !important;
+          color: #101010 !important;
+        }
+        .highlight-yellow {
+          color: #FFD600;
+          font-weight: 600;
+        }
       `}</style>
 
       <ExitIntentPopup />
@@ -238,15 +249,17 @@ export default function Home() {
             </p>
             <button
               type="button"
-              onClick={() => {
-                const videoSection = document.getElementById('john-video');
-                if (videoSection) {
-                  videoSection.scrollIntoView({ behavior: 'smooth' });
-                }
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(
+                  'https://afe40mfth79r3y7a3ii22qcmeg.hop.clickbank.net/?&traffic_source=jason_trusts_cta',
+                  '_blank',
+                  'noopener,noreferrer'
+                );
               }}
-              className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition"
+              className="cta-main no-hover text-black font-semibold py-2 px-6 rounded-full text-sm md:text-base transition-none"
             >
-              Access the AI Club Jason Trusts →
+              Watch: You&rsquo;re Fired! (But You&rsquo;re Hired by AI)
             </button>
           </div>
         </div>
@@ -259,22 +272,30 @@ export default function Home() {
         </div>
       </Suspense>
 
-      {/* ADDRESS POTENTIAL SKEPTICISM */}
-      <SkepticismSection />
-
-      {/* TESTIMONIALS LIST */}
-      <Testimonials />
-
-      <div className="flex justify-center my-12 px-4">
-        <Image
-          src="/ai-usage-chart.jpg"
-          alt="AI Usage & Growth Stats for 2025 – Source: DigitalSilk"
-          width={700}
-          height={1100}
-          className="rounded-xl shadow-xl border-2 border-pink-500 bg-white"
-          priority
-        />
-      </div>
+      {/* Optimized Section 7: AI Growth In Focus */}
+      <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center">
+        <div className="max-w-3xl w-full flex flex-col items-center text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            <span className="highlight-yellow">Your Future-Proof Income:</span> Tapping into the AI Economy's Trillion-Dollar Opportunity
+          </h2>
+          <p className="text-lg md:text-xl text-white mb-8 max-w-2xl">
+            While others fear the <q className="font-semibold">'skills earthquake'</q> and economic uncertainty, this explosive growth creates unprecedented pathways for <span className="highlight-yellow">financial resilience and career reinvention.</span> <span className="highlight-yellow">Discover how smart marketers are claiming their share.</span>
+          </p>
+          <Image
+            src="/ai-usage-chart.jpg"
+            alt="AI Growth In Focus – Global AI Market Infographic"
+            width={700}
+            height={1100}
+            className="rounded-2xl shadow-xl border-2 border-pink-400 mb-8 bg-white"
+            priority={false}
+          />
+          <p className="text-base md:text-lg text-pink-300 max-w-2xl">
+            <span className="highlight-yellow">
+              This isn't just a trend; it's your blueprint for unprecedented income and career stability in the AI economy. It's time to seize control.
+            </span>
+          </p>
+        </div>
+      </section>
 
       <p className="text-center text-xs text-gray-400 mt-2 mb-8">
         Infographic: Digital Silk. (2025). AI statistics [Infographic].{' '}
