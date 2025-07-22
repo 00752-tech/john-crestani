@@ -116,7 +116,7 @@ export default function Home() {
       {/* Short impactful paragraph directly after Hero */}
       <section className="w-full flex justify-center bg-black px-4">
         <div className="max-w-5xl text-center text-gray-300 text-lg md:text-xl leading-relaxed mb-10 px-4">
-          In today&apos;s uncertain global economy, building real financial resilience isn&apos;t just a goal&mdash;it's a necessity. The AI Marketing Club doesn&apos;t just teach you skills; it provides a robust pathway to creating new, predictable income streams, empowering you with the stability and control you deserve in these turbulent times.
+          In today&apos;s uncertain global economy, building real financial resilience isn&apos;t just a goal&mdash;it&apos;s a necessity. The AI Marketing Club doesn&apos;t just teach you skills; it provides a robust pathway to creating new, predictable income streams, empowering you with the stability and control you deserve in these turbulent times.
         </div>
       </section>
 
