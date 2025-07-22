@@ -59,7 +59,7 @@ export default function Hero() {
               className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5"
               style={{ letterSpacing: '0.08em' }}
             >
-              ▲ AI IS CHANGING EVERYTHING
+              ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON'T BE REPLACED
             </span>
 
             {/* --- H1 in sentence case with yellow highlights --- */}
