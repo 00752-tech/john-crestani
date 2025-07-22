@@ -7,6 +7,23 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  display: "swap",
+});
+
+const satoshiLight = localFont({
+  src: "/fonts/Satoshi-Light.woff2",
+  weight: "300",
+  style: "normal",
+  display: "swap",
+  variable: "--font-satoshi", // optional CSS variable if you want to use in your CSS
+});
+
 export const metadata: Metadata = {
   title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
   description:
@@ -26,48 +43,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.className} ${satoshiLight.className}`}>
       <head>
         {/* Preload hero image for LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="/hero_man_hat.webp"
-          fetchPriority="high"
-        />
-        {/* Preload local font for near-instant headline paint */}
-        <link
-          rel="preload"
-          as="font"
-          type="font/woff2"
-          href="/fonts/Satoshi-Light.woff2"
-          crossOrigin="anonymous"
-        />
+        <link rel="preload" as="image" href="/hero_man_hat.webp" fetchPriority="high" />
 
-        {/* Preconnect for key third-party performance */}
+        {/* Preconnect for key external resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
 
-        {/* Google Fonts */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        />
-
-        {/* Open Graph/SERP */}
+        {/* Open Graph / SEO meta */}
         <meta property="og:image" content="https://johncrestani.me/hero_man_hat.webp" />
         <meta property="og:image:alt" content="John Crestani Webinar Thumbnail" />
         <meta property="og:image:width" content="1200" />
@@ -76,10 +65,10 @@ export default function RootLayout({
         {/* Google site verification */}
         <meta name="google-site-verification" content="b4jMMd7FouN5s2PumUPG7Qc6PqkCMXoVbJVGCJhcjyo" />
 
-        {/* Structured data for enhanced SEO */}
+        {/* Structured data */}
         <StructuredData />
 
-        {/* Microsoft Clarity deferred load */}
+        {/* Microsoft Clarity - lazy load script */}
         <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
@@ -90,7 +79,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-poppins">
+      <body>
         <GoogleTagManager gtmId="GTM-XXXXXXX" />
         <CookieConsent />
         <AffiliateDisclosureBar />
