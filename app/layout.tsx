@@ -18,11 +18,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
   description:
-    "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
+    "New 2025 launch: John Crestani's AI Club for $27! Get a FREE site ($297 value), 60-day guarantee. Secure predictable AI income, effortlessly. Ends in 4 days.",
   openGraph: {
     title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
     description:
-      "New 2025 launch: get John Crestani's AI Marketing Club for $27 + free website ($297 value) & 60-day guarantee. Ends in 4 days. Act now!",
+      "New 2025 launch: John Crestani's AI Club for $27! Get a FREE site ($297 value), 60-day guarantee. Secure predictable AI income, effortlessly. Ends in 4 days.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
