@@ -47,36 +47,44 @@ export default function SkepticismSection() {
           </h2>
         </div>
         <p className="text-gray-300 text-center mb-8 text-lg max-w-xl mx-auto">
-          <span className="text-white font-semibold">&quot;Making money online sounds great, but is this just another one of those programs?&quot;</span> We understand your skepticism—many online offers over-promise and under-deliver.
+          <span className="text-white font-semibold">
+            &quot;Making money online sounds great, but is this just another one of those programs?&quot;
+          </span>{" "}
+          We understand your skepticism—many online offers over-promise and under-deliver, <strong>leaving you feeling uncertain and frustrated</strong>. Here&apos;s why the <strong>AI Marketers Club is different</strong> and gives you the <strong>control you&apos;re looking for</strong>:
         </p>
         <ul className="space-y-7 text-base md:text-lg mt-8">
           <li className="flex items-start">
             <CheckIcon />
             <span>
-              <span className="font-bold text-pink-400">Not a &ldquo;get rich quick&rdquo; scheme.</span> Our system gives you real tools and step-by-step training for building a legitimate, long-term affiliate business with AI. There’s effort required, but every step is designed to make your work count.
+              <span className="font-bold text-pink-400">Not a &ldquo;get rich quick&rdquo; scheme.</span>{" "}
+              Our system gives you real tools and step-by-step training for building a legitimate, long-term affiliate business with AI.{" "}
+              <strong>It&apos;s your path to predictable, sustainable financial resilience.</strong> There’s effort required, but every step is designed to make your work count <strong>and empower you with lasting control</strong>.
             </span>
           </li>
           <li className="flex items-start">
             <CheckIcon />
             <span>
-              <span className="font-bold text-pink-400">Built on proven principles.</span> John Crestani brings nearly a decade of affiliate marketing experience and has helped over 50,000 students. This is not a random app or experiment—it’s the evolution of what actually works, now supercharged by AI.
+              <span className="font-bold text-pink-400">Built on proven principles.</span>{" "}
+              John Crestani brings nearly a decade of affiliate marketing experience and has helped over 50,000 students. This is not a random app or experiment—it’s <strong>a proven, trusted blueprint for stability</strong>, the evolution of what actually works, now supercharged by AI.
             </span>
           </li>
           <li className="flex items-start">
             <CheckIcon />
             <span>
-              <span className="font-bold text-pink-400">Real AI. Real automation.</span> Our system leverages artificial intelligence to handle the tedious stuff, surface top niches, and generate converting content—freeing you to focus on growth.
+              <span className="font-bold text-pink-400">Real AI. Real automation.</span>{" "}
+              Our system leverages artificial intelligence to handle the tedious stuff, surface top niches, and generate converting content—freeing you to focus on <strong>higher-level responsibilities and reclaim your purpose</strong>.
             </span>
           </li>
           <li className="flex items-start">
             <CheckIcon />
             <span>
-              <span className="font-bold text-pink-400">Your success, guaranteed.</span> Try everything risk-free with our 60-day money-back guarantee. If you’re not blown away, you get your investment back. Simple as that.
+              <span className="font-bold text-pink-400">Your success, guaranteed.</span>{" "}
+              Try everything risk-free with our 60-day money-back guarantee. If you’re not blown away, you get your investment back. <strong>Simple as that.</strong>
             </span>
           </li>
         </ul>
         <p className="mt-8 text-gray-400 text-center italic">
-          This isn’t magic—it’s smart execution with proven methods. If you’re ready to put in the work (with powerful tools), the results can be transformative.
+          This isn’t magic—it’s smart execution with proven methods and <strong>a supportive community</strong>. If you’re ready to put in the work (with powerful tools), the results can be transformative, <strong>empowering you with true financial and professional control</strong>.
         </p>
       </div>
     </section>
