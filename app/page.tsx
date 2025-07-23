@@ -239,8 +239,8 @@ export default function Home() {
               I&apos;ve been in affiliate marketing for over 9 years and followed John Crestani&apos;s SAS Pro system since the early days.
               <span className="block mt-2 text-yellow-400 font-medium">I rarely promote offers, but this one&apos;s different.</span>
               This new AI-powered version isn&apos;t just another course — <strong>it&apos;s the solution built for today&apos;s uncertain landscape.</strong>
-              If you&apos;re tired of spinning your wheels <strong>and feeling out of control</strong>, this is the fastest way to turn AI disruption into <strong>reliable, predictable online income.</strong><br />
-              I&apos;ve seen it work, and I recommend it because I believe in the results <strong>and the true sense of empowerment it provides.</strong>
+               If you&apos;re tired of spinning your wheels <strong>and feeling out of control</strong>, this is the fastest way to turn AI disruption into <strong>reliable, predictable online income.</strong><br />
+              <br></br>I&apos;ve seen it work, and I recommend it because I believe in the results <strong>and the true sense of empowerment it provides.</strong>
             </p>
             <p className="text-pink-400 text-base md:text-lg mt-6 mb-4 italic">
               AI is disrupting jobs—but smart marketers are turning it into <strong>predictable, future-proof income</strong>. Watch how John Crestani did it <span className="font-semibold">and how you can seize control</span>.
