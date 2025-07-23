@@ -28,7 +28,7 @@ export default function AIClubPAABlock() {
       answer:
         "Apply for the offer on ClickBank, then request a commission bump through the AI Marketers Club live stream community or help desk. Qualified affiliates earn up to 90% on every funnel tier.",
     },
-  ]
+  ];
 
   useEffect(() => {
     const schema = {
@@ -42,17 +42,17 @@ export default function AIClubPAABlock() {
           "text": d.answer,
         },
       })),
-    }
+    };
 
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify(schema)
-    document.head.appendChild(script)
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
 
     return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
+      document.head.removeChild(script);
+    };
+  }, [data]); // Added 'data' here to fix exhaustive-deps warning
 
-  return null
+  return null;
 }
