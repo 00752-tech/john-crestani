@@ -35,13 +35,14 @@ export default function WebinarInvite() {
     )
   }
 
-  const handleOpenModal = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleOpenModal = (e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>) => {
     e.preventDefault()
     setShowModal(true)
   }
 
   const handleCloseModal = () => setShowModal(false)
 
+  // Click outside iframe = close modal
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target === e.currentTarget) {
       setShowModal(false)
@@ -51,7 +52,6 @@ export default function WebinarInvite() {
   return (
     <section className="py-20 bg-[#0f1629] text-white">
       <article className="container mx-auto px-4">
-        {/* Empowering headline */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,6 @@ export default function WebinarInvite() {
         >
           Navigate the AI Tsunami: <span className="text-white">Your Blueprint to Thrive in the Future of Work.</span>
         </motion.h2>
-        {/* Empowering body text */}
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,52 +68,35 @@ export default function WebinarInvite() {
         >
           The shifts are real, but so is the <strong>immense opportunity for those who act</strong>. John Crestani reveals the <strong>actionable strategy</strong> to turn today&apos;s challenges into <strong>unprecedented income</strong> and <strong>renewed purpose</strong>. This isn&apos;t just about avoiding obsolescence; it&apos;s about <strong>seizing control and redefining your professional destiny</strong> in the AI-driven future. Watch this breakthrough to discover how.
         </motion.p>
-        {/* Video thumbnail and lightbox */}
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          {/* Lightbox Thumbnail */}
+          {/* --- Clickable Thumbnail --- */}
           <div
             className="relative w-full rounded-lg shadow-2xl my-10 border-4 border-[#18181b] cursor-pointer"
             style={{ aspectRatio: '16/9', background: 'black' }}
+            onClick={handleOpenModal}
+            aria-label="Play Video"
+            role="button"
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === "Enter" || e.key === " ") handleOpenModal(e as any); }}
           >
-            <button
-              onClick={handleOpenModal}
-              aria-label="Play Video"
-              className="absolute inset-0 w-full h-full flex items-center justify-center group"
-              style={{
-                background: 'rgba(0,0,0,0.65)', zIndex: 2, border: 0, cursor: 'pointer',
-              }}
-            >
-              <Image
-                src="/john-crestani-you-are-fired-thumbnail.webp"
-                alt="John Crestani Webinar Thumbnail"
-                width={1024}
-                height={576}
-                sizes="(max-width: 640px) 100vw, 75vw"
-                className="object-cover rounded-lg w-full h-full"
-                priority
-                unoptimized={false}
-              />
-              <span className="absolute inset-0 flex items-center justify-center z-10">
-                <span className="flex items-center justify-center w-24 h-24 rounded-full bg-red-600 group-hover:scale-110 transition-transform shadow-xl border-4 border-white">
-                  <svg
-                    width={50}
-                    height={50}
-                    viewBox="0 0 50 50"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <polygon points="18,14 38,25 18,36" fill="white"/>
-                  </svg>
-                </span>
-              </span>
-            </button>
+            <Image
+              src="/video_thumbnail_before_and_after.webp"
+              alt="John Crestani Webinar Thumbnail"
+              width={1024}
+              height={576}
+              sizes="(max-width: 640px) 100vw, 75vw"
+              className="object-cover rounded-lg w-full h-full"
+              priority
+              unoptimized={false}
+            />
           </div>
-          {/* Lightbox Modal */}
+          {/* --- Modal --- */}
           {showModal && (
             <div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 transition-all"
@@ -140,7 +122,7 @@ export default function WebinarInvite() {
               </div>
             </div>
           )}
-          {/* CTA below video */}
+          {/* --- CTA below video --- */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
