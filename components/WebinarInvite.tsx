@@ -16,7 +16,7 @@ export default function WebinarInvite() {
     return () => window.removeEventListener('keydown', handleKeydown)
   }, [showModal])
 
-  // Trap scroll behind modal
+  // To trap scroll behind modal
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = 'hidden'
@@ -35,7 +35,10 @@ export default function WebinarInvite() {
     )
   }
 
-  const handleOpenModal = (e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>) => {
+  // Updated event types to avoid 'any'
+  const handleOpenModal = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent<HTMLDivElement>
+  ) => {
     e.preventDefault()
     setShowModal(true)
   }
@@ -75,7 +78,7 @@ export default function WebinarInvite() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          {/* --- Clickable Thumbnail --- */}
+          {/* --- Clickable Thumbnail (image + click handler) --- */}
           <div
             className="relative w-full rounded-lg shadow-2xl my-10 border-4 border-[#18181b] cursor-pointer"
             style={{ aspectRatio: '16/9', background: 'black' }}
@@ -83,7 +86,11 @@ export default function WebinarInvite() {
             aria-label="Play Video"
             role="button"
             tabIndex={0}
-            onKeyDown={e => { if (e.key === "Enter" || e.key === " ") handleOpenModal(e as any); }}
+            onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleOpenModal(e)
+              }
+            }}
           >
             <Image
               src="/video_thumbnail_before_and_after.webp"
@@ -96,6 +103,7 @@ export default function WebinarInvite() {
               unoptimized={false}
             />
           </div>
+
           {/* --- Modal --- */}
           {showModal && (
             <div
@@ -108,7 +116,9 @@ export default function WebinarInvite() {
                   className="absolute -top-10 right-0 z-60 text-white text-5xl md:text-5xl focus:outline-none"
                   aria-label="Close Video"
                   onClick={handleCloseModal}
-                >×</button>
+                >
+                  ×
+                </button>
                 <iframe
                   ref={iframeRef}
                   src="https://www.youtube.com/embed/SIWVTq8vB28?autoplay=1&rel=0&modestbranding=1"
@@ -122,6 +132,7 @@ export default function WebinarInvite() {
               </div>
             </div>
           )}
+
           {/* --- CTA below video --- */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -136,7 +147,7 @@ export default function WebinarInvite() {
                 transition: 'none',
                 textDecoration: 'none',
                 outline: 'none',
-                boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)'
+                boxShadow: '0 4px 20px 0 rgba(236,72,153,0.20)',
               }}
               tabIndex={0}
               type="button"
