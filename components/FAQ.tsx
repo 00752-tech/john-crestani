@@ -9,50 +9,89 @@ type FAQItem = {
   answer: React.ReactNode
 }
 
-export default function AIClubFAQ() {
+export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  // Enhanced, SEO-optimized, and de-duplicated FAQs
   const faqs: FAQItem[] = useMemo(() => [
     {
       question: "How is the AI Marketers Club unique compared to other affiliate marketing systems?",
-      answer: <>AI Marketers Club leverages advanced AI marketing automation and John Crestani&rsquo;s exclusive &ldquo;balloon method&rdquo; with the F.I.R. (Facts, Instructions, Rules) prompt formula. This allows members to build scalable affiliate campaigns, even with no prior experience or technical skills, using a proven, step-by-step approach.</>
+      answer: (
+        <>
+          AI Marketers Club leverages advanced AI marketing automation and John Crestani&rsquo;s exclusive &ldquo;balloon method&rdquo; with the F.I.R. (Facts, Instructions, Rules) prompt formula. This allows members to build scalable affiliate campaigns, <strong>giving you the control and predictability you seek</strong>, even with no prior experience or technical skills, using a proven, step-by-step approach.
+        </>
+      )
     },
     {
       question: "Who should consider joining the AI Marketers Club?",
-      answer: <>This program is tailored for professionals, entrepreneurs, and anyone seeking financial freedom through digital marketing and AI-powered content creation. Whether you&apos;re a beginner or looking to diversify income streams, the Club is designed to help you earn $150,000&ndash;$200,000 annually without traditional business risks.</>
+      answer: (
+        <>
+          This program is tailored for professionals, entrepreneurs, and anyone seeking <strong>true financial freedom and a renewed sense of purpose</strong> through digital marketing and AI-powered content creation. Whether you&apos;re a beginner or looking to diversify income streams <strong>without the usual grind</strong>, the Club is designed to help you earn $150,000&ndash;$200,000 annually without traditional business risks.
+        </>
+      )
     },
     {
       question: "Do I need expensive software or advanced tools to get started?",
-      answer: <>No, the required tools are affordable and beginner-friendly. The recommended tech stack costs about $14/month, covering web hosting and AI image generation. Most text and video AI tools used in the system offer free plans, making it accessible for anyone.</>
+      answer: (
+        <>
+          No, absolutely not. The required tools are affordable and beginner-friendly, specifically chosen to <strong>remove any tech stress</strong>. The recommended tech stack costs about $14/month, covering essential web hosting and AI image generation. Most text and video AI tools used in the system also offer robust free plans, making this powerful system <strong>truly accessible for anyone</strong>.
+        </>
+      )
     },
     {
       question: "Is this just another online business or does it offer something different?",
-      answer: <>Unlike starting a business from scratch, AI Marketers Club focuses on promoting established products and companies using AI-driven affiliate marketing. This reduces risk and enables you to earn commissions from day one, without the need to develop your own products or services.</>
+      answer: (
+        <>
+          Unlike starting a business from scratch, which often involves high risk and uncertainty, AI Marketers Club focuses on promoting established products and companies using AI-driven affiliate marketing. This <strong>significantly reduces your risk</strong> and provides a more <strong>predictable path to earn commissions</strong> from day one, without the need to develop your own products or services or deal with typical business headaches.
+        </>
+      )
     },
     {
       question: "How much time do I need to dedicate daily?",
-      answer: <>Most members spend 30&ndash;60 minutes per day. The system is optimized for efficiency, cutting out busywork and allowing you to focus on high-impact, AI-powered marketing activities&mdash;ideal for busy professionals or side hustlers.</>
+      answer: (
+        <>
+          Most members spend just 30&ndash;60 minutes per day. The system is specifically optimized for <strong>maximum efficiency</strong>, cutting out busywork and allowing you to <strong>reclaim your valuable time and focus</strong> on high-impact, AI-powered marketing activities. This makes it ideal for busy professionals or side hustlers looking for <strong>real control over their schedule</strong>.
+        </>
+      )
     },
     {
       question: "Can I succeed if I have no marketing or technical background?",
-      answer: <>Absolutely. The AI Marketers Club is designed for total beginners. The training breaks down complex strategies into simple, actionable steps, with full support and a vibrant community to help you every step of the way.</>
+      answer: (
+        <>
+          Absolutely. The AI Marketers Club is specifically designed for total beginners, ensuring <strong>no prior marketing or technical background is needed</strong>. The training breaks down complex strategies into simple, actionable steps, with full support and a vibrant, welcoming community to help you every step of the way, guiding you to <strong>confident success</strong>.
+        </>
+      )
     },
     {
       question: "What kind of results can I expect from the AI Marketers Club?",
-      answer: <>While individual results vary, members have reported rapid progress and significant earnings. The Club features numerous testimonials from diverse backgrounds, showcasing real-world success with AI-driven affiliate marketing.</>
+      answer: (
+        <>
+          While individual progress varies, members consistently report rapid progress and significant, <strong>predictable earnings</strong>. The Club features numerous testimonials from diverse backgrounds, showcasing real-world success with AI-driven affiliate marketing that demonstrates <strong>a clear path to results</strong>.
+        </>
+      )
     },
     {
       question: "How is this program different from other marketing courses?",
-      answer: <>AI Marketers Club stands out with its focus on education, transparency, and freedom. You&rsquo;ll get access to exclusive mentorship, personalized support, and a system that simplifies AI content creation and affiliate marketing for everyone.</>
+      answer: (
+        <>
+          AI Marketers Club stands out with its focus on practical education, complete transparency, and the <strong>freedom to build a business on your terms</strong>. You’ll get access to exclusive mentorship, personalized support, and a system that simplifies AI content creation and affiliate marketing for everyone, <strong>removing the overwhelm and putting you in direct control</strong>.
+        </>
+      )
     },
     {
-      question: "What if I don&rsquo;t see immediate results?",
-      answer: <>Progress varies, but ongoing support, resources, and a strong community are provided to help you overcome challenges and achieve breakthroughs at your own pace. The Club is committed to your long-term success in digital marketing.</>
+      question: "What if I don’t see immediate results?",
+      answer: (
+        <>
+          Progress can vary, but you&apos;re never alone. Ongoing support, comprehensive resources, and a strong, active community are always provided to help you overcome challenges and achieve breakthroughs at your own pace. The Club is deeply committed to your long-term success, helping you build a <strong>predictable and resilient digital marketing career</strong>.
+        </>
+      )
     },
     {
       question: "How do I join the AI Marketers Club?",
-      answer: <>Simply click the sign-up button, enter your email, and complete the secure registration. You&rsquo;ll receive instant access to all training materials, bonuses, and the private community.</>
+      answer: (
+        <>
+          Joining is simple and secure! Just click any sign-up button on this page, enter your email, and complete the secure registration. You’ll receive instant access to all <strong>powerful training materials, valuable bonuses, and the supportive private community</strong>, putting you on the fast track to your AI income journey.
+        </>
+      )
     },
     {
       question: "Is there a money-back guarantee?",
@@ -68,16 +107,16 @@ export default function AIClubFAQ() {
     }
   ], [])
 
-  // FAQPage Schema for SEO
-  useEffect(() => {
-    function extractText(node: React.ReactNode): string {
-      if (typeof node === 'string') return node
-      if (typeof node === 'number') return node.toString()
-      if (Array.isArray(node)) return node.map(extractText).join(' ')
-      if (React.isValidElement(node)) return extractText(node.props.children)
-      return ''
-    }
+  // Extract plain text from ReactNode for JSON-LD (SEO)
+  function extractText(node: React.ReactNode): string {
+    if (typeof node === 'string') return node
+    if (typeof node === 'number') return node.toString()
+    if (Array.isArray(node)) return node.map(extractText).join(' ')
+    if (React.isValidElement(node)) return extractText(node.props.children)
+    return ''
+  }
 
+  useEffect(() => {
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
