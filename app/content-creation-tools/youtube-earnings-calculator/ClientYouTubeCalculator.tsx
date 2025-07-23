@@ -49,7 +49,7 @@ export default function ClientYouTubeCalculator({
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
             Are you tired of guessing your YouTube income potential? Our Free YouTube AdSense Earnings Calculator is designed to{" "}
-            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel's monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
+            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel&apos;s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
           </p>
 
           {/* YouTube Calculator Component */}
@@ -92,7 +92,7 @@ export default function ClientYouTubeCalculator({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <strong className="text-pink-500">{item}:</strong>{" "}
-                  {/* You can add further descriptive text if needed here */}
+                  {/* Additional descriptive text can go here if needed */}
                 </motion.li>
               ))}
             </ol>
@@ -116,7 +116,7 @@ export default function ClientYouTubeCalculator({
               Beyond AdSense: Secure Your Future with Predictable AI Income Streams
             </motion.h2>
             <p className="text-gray-300 mb-4">
-              AdSense is a start, but true financial resilience comes from diversifying. John Crestani's AI Marketing Club (SAS Pro) offers the blueprint to{" "}
+              AdSense is a start, but true financial resilience comes from diversifying. John Crestani&apos;s AI Marketing Club (SAS Pro) offers the blueprint to{" "}
               <strong>confidently secure reliable online income</strong> and <strong>regain control</strong> of your financial destiny. Discover how to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
