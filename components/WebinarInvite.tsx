@@ -16,7 +16,7 @@ export default function WebinarInvite() {
     return () => window.removeEventListener('keydown', handleKeydown)
   }, [showModal])
 
-  // To trap scroll behind modal
+  // Trap scroll behind modal
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = 'hidden'
@@ -42,7 +42,6 @@ export default function WebinarInvite() {
 
   const handleCloseModal = () => setShowModal(false)
 
-  // Click outside iframe = close modal
   const handleModalClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target === e.currentTarget) {
       setShowModal(false)
@@ -52,30 +51,32 @@ export default function WebinarInvite() {
   return (
     <section className="py-20 bg-[#0f1629] text-white">
       <article className="container mx-auto px-4">
+        {/* Empowering headline */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="text-3xl md:text-4xl font-bold mb-8 text-center text-pink-500 leading-snug tracking-tight"
         >
-          You&rsquo;re Not Safe—AI Is Coming for Your Job
+          Navigate the AI Tsunami: <span className="text-white">Your Blueprint to Thrive in the Future of Work.</span>
         </motion.h2>
+        {/* Empowering body text */}
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           className="text-gray-300 text-base md:text-lg text-center max-w-2xl mx-auto mb-10"
         >
-          John Crestani&rsquo;s AI pitch opens with a brutal truth: the landscape of work is changing rapidly. If you don&rsquo;t learn how to harness AI for earning, it will eventually take your spot. <b>But this isn&apos;t just a warning; it&apos;s a profound opportunity.</b> This video is your wake-up call to not just survive, but thrive in the AI-driven future.
+          The shifts are real, but so is the <strong>immense opportunity for those who act</strong>. John Crestani reveals the <strong>actionable strategy</strong> to turn today&apos;s challenges into <strong>unprecedented income</strong> and <strong>renewed purpose</strong>. This isn&apos;t just about avoiding obsolescence; it&apos;s about <strong>seizing control and redefining your professional destiny</strong> in the AI-driven future. Watch this breakthrough to discover how.
         </motion.p>
-
+        {/* Video thumbnail and lightbox */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="max-w-5xl mx-auto"
         >
-          {/* --- Lightbox Thumbnail --- */}
+          {/* Lightbox Thumbnail */}
           <div
             className="relative w-full rounded-lg shadow-2xl my-10 border-4 border-[#18181b] cursor-pointer"
             style={{ aspectRatio: '16/9', background: 'black' }}
@@ -90,7 +91,7 @@ export default function WebinarInvite() {
             >
               <Image
                 src="/john-crestani-you-are-fired-thumbnail.webp"
-                alt="John Crestani - You&apos;re Fired AI Webinar Thumbnail"
+                alt="John Crestani Webinar Thumbnail"
                 width={1024}
                 height={576}
                 sizes="(max-width: 640px) 100vw, 75vw"
@@ -113,7 +114,7 @@ export default function WebinarInvite() {
               </span>
             </button>
           </div>
-          {/* --- Lightbox Modal --- */}
+          {/* Lightbox Modal */}
           {showModal && (
             <div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 transition-all"
@@ -139,8 +140,7 @@ export default function WebinarInvite() {
               </div>
             </div>
           )}
-          {/* --- End Lightbox Section --- */}
-
+          {/* CTA below video */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ export default function WebinarInvite() {
               tabIndex={0}
               type="button"
             >
-              Watch John&apos;s AI Income Breakthrough →
+              Watch John&apos;s Blueprint for AI Income &amp; Control →
             </button>
           </motion.div>
         </motion.div>
