@@ -21,11 +21,12 @@ export default function ClientYouTubeCalculator({
   };
 
   const pageUrl = `https://johncrestani.me${pageUrlPath}`;
-  const pageTitle = "Calculate Your YouTube Earnings with Our Free Calculator";
+  const pageTitle = "Predict Your YouTube Income: Free AdSense Calculator";
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
       <div className="container mx-auto px-4">
+        {/* Back Link */}
         <Link
           href={backUrl}
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
@@ -34,26 +35,32 @@ export default function ClientYouTubeCalculator({
           Back to Tools
         </Link>
 
+        {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
         >
-          YouTube AdSense Earnings Calculator
+          Reclaim Your Financial Future: Free YouTube AdSense Earnings Calculator
         </motion.h1>
 
+        {/* Introductory Paragraph */}
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
-            Need to estimate your potential YouTube earnings? This free YouTube AdSense Earnings Calculator is designed to help you quickly understand your possible income [user prompt, 1]. By simply entering your estimated views per video, click-through rate (CTR), and CPM Rate, the tool provides an estimate of your Monthly and Yearly Earnings from AdSense. Use this tool to get immediate insight into your YouTube monetization potential.
+            Are you tired of guessing your YouTube income potential? Our Free YouTube AdSense Earnings Calculator is designed to{" "}
+            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel's monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
           </p>
 
+          {/* YouTube Calculator Component */}
           <YouTubeCalculator />
 
+          {/* Social Share Buttons */}
           <div className="mt-8">
             <ShareButtons url={pageUrl} title={pageTitle} />
           </div>
 
+          {/* How To Use Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -68,7 +75,7 @@ export default function ClientYouTubeCalculator({
               transition={{ duration: 0.6 }}
               className="text-2xl font-semibold mb-4"
             >
-              How to Use This Calculator
+              Effortlessly Predict Your Income: How to Use This Calculator
             </motion.h2>
             <ol className="space-y-4 text-gray-300 list-decimal list-inside">
               {[
@@ -84,13 +91,14 @@ export default function ClientYouTubeCalculator({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <strong className="text-pink-500">{item}:</strong>
-                  {/* ... rest of the li content ... */}
+                  <strong className="text-pink-500">{item}:</strong>{" "}
+                  {/* You can add further descriptive text if needed here */}
                 </motion.li>
               ))}
             </ol>
           </motion.div>
 
+          {/* Maximize Income Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -105,17 +113,18 @@ export default function ClientYouTubeCalculator({
               transition={{ duration: 0.6 }}
               className="text-2xl font-semibold mb-4"
             >
-              Maximize Your YouTube Income
+              Beyond AdSense: Secure Your Future with Predictable AI Income Streams
             </motion.h2>
             <p className="text-gray-300 mb-4">
-              {`   While AdSense is great, successful YouTubers diversify their income streams. John Crestani's Super Affiliate System Pro teaches you how to:`}
+              AdSense is a start, but true financial resilience comes from diversifying. John Crestani's AI Marketing Club (SAS Pro) offers the blueprint to{" "}
+              <strong>confidently secure reliable online income</strong> and <strong>regain control</strong> of your financial destiny. Discover how to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               {[
-                "Monetize your channel with affiliate marketing",
-                "Create high-converting video content",
-                "Build and engage your audience",
-                "Scale your online presence across platforms",
+                "Monetize your channel with affiliate marketing, creating diversified, predictable income streams.",
+                "Create high-converting video content effortlessly with AI tools, ensuring consistent engagement.",
+                "Build and engage your audience, transforming viewers into loyal, long-term income sources.",
+                "Scale your online presence across platforms, securing your professional relevance and future.",
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -132,11 +141,14 @@ export default function ClientYouTubeCalculator({
               onClick={handleLearnMore}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
             >
-              Learn Advanced YouTube Monetization Strategies
+              Unlock My Predictable AI Income Blueprint Now!
             </button>
           </motion.div>
         </div>
 
+        {/* Schema Markups */}
+
+        {/* SoftwareApplication Schema */}
         <JsonLd<any>
           item={{
             "@context": "https://schema.org",
@@ -150,7 +162,7 @@ export default function ClientYouTubeCalculator({
             },
             operatingSystem: "Any",
             description:
-              "Calculate your potential YouTube earnings based on views, CTR, and CPM rates.",
+              "Empower yourself to predict YouTube earnings. Our free calculator removes uncertainty, helping you confidently forecast monthly and yearly income with ease.",
             creator: {
               "@type": "Person",
               name: "John Crestani",
@@ -169,6 +181,7 @@ export default function ClientYouTubeCalculator({
           }}
         />
 
+        {/* FAQ Schema */}
         <JsonLd<any>
           item={{
             "@context": "https://schema.org",
@@ -201,10 +214,9 @@ export default function ClientYouTubeCalculator({
             ],
           }}
         />
-        <RelatedTools
-          currentToolUrl="/content-creation-tools/youtube-earnings-calculator"
-          category="content"
-        />
+
+        {/* Related Tools */}
+        <RelatedTools currentToolUrl="/content-creation-tools/youtube-earnings-calculator" category="content" />
       </div>
     </div>
   );
