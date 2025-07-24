@@ -1,17 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import ClientLinkCTROptimizer from './ClientLinkCTROptimizer'
 import { JsonLd } from 'react-schemaorg'
+import type { SoftwareApplication, FAQPage } from 'schema-dts'
 
 export const metadata = {
-  title: 'Boost Clicks, End Wasted Effort: Free CTR Optimizer', // 52 chars - strong benefit focus
+  title: 'Boost Clicks, End Wasted Effort: Free CTR Optimizer',
   description:
-    'Stop losing money on ignored links! Our free AI-powered Affiliate Link CTR Optimizer helps you confidently predict click improvements & maximize earnings.', // 150 chars
+    'Stop losing money on ignored links! Our free AI-powered Affiliate Link CTR Optimizer helps you confidently predict click improvements & maximize earnings.',
 }
 
 export default function AffiliateLinkCTROptimizerPage() {
   return (
     <>
       {/* Structured Data: SoftwareApplication */}
-      <JsonLd
+      <JsonLd<SoftwareApplication>
         item={{
           '@context': 'https://schema.org',
           '@type': 'SoftwareApplication',
@@ -51,8 +53,8 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
-      {/* Structured Data: FAQPage for SEO */}
-      <JsonLd<any>
+      {/* Structured Data: FAQPage */}
+      <JsonLd<FAQPage>
         item={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
@@ -85,7 +87,7 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
-      {/* Main Client Component that renders UI */}
+      {/* Main Client Component */}
       <ClientLinkCTROptimizer />
     </>
   )
