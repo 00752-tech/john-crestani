@@ -9,7 +9,6 @@ export const metadata = {
 
 export default function ROASCalculatorPage() {
   const pageUrl = 'https://johncrestani.me/advertising-tools/roas-calculator'
-  const pageTitle = 'Predictable Profits: AI-Powered ROAS Calculator'
 
   return (
     <>
