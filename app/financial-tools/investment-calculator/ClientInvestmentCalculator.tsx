@@ -14,7 +14,6 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
   const pageDesc =
     'Predict your investment growth with our free calculator. Go beyond traditional investments by learning how to multiply your income through AI-powered affiliate marketing with John Crestani.'
 
-  // CTA button opens internal page /api/sale as per your previous setup (no affiliate URL exposure)
   const handleInvestInFuture = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.location.href = '/api/sale'
@@ -25,7 +24,7 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        {/* Add canonical, og:image, etc. here if needed */}
+        {/* Add further SEO meta tags like canonical, og:image here if needed */}
       </Head>
 
       <motion.div
@@ -56,7 +55,7 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             Conquer Financial Uncertainty: Your Blueprint to Predictable Investment Growth &amp; Income
           </motion.h1>
 
-          {/* Intro Paragraph with strong Beyond Fear messaging */}
+          {/* Intro Paragraph */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -85,10 +84,12 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             className="mt-12 bg-gray-900 p-8 rounded-lg"
           >
             <motion.h2
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-2xl font-semibold mb-4"
+              className="text-2xl sm:text-3xl font-semibold mb-4 max-w-3xl mx-auto text-center px-4 leading-snug break-words hyphens-auto"
+              style={{ wordBreak: 'break-word', hyphens: 'auto' }}
             >
               Effortlessly Project Your Financial Growth: How to Use This Calculator
             </motion.h2>
