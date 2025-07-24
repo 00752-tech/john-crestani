@@ -1,27 +1,30 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import AffiliateLinkCTROptimizer from "@/components/AffiliateLinkCTROptimizer";
-import ShareButtons from "@/components/ShareButtons";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { JsonLd } from "react-schemaorg";
-import RelatedTools from "@/components/RelatedTools";
+import { motion } from 'framer-motion'
+import AffiliateLinkCTROptimizer from '@/components/AffiliateLinkCTROptimizer' // actual calculator UI
+import ShareButtons from '@/components/ShareButtons'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import RelatedTools from '@/components/RelatedTools'
 
 export default function ClientLinkCTROptimizer({
-  backUrl = "/free-tools",
-  pageUrlPath = "affiliate-marketing-tools/link-ctr-optimizer",
+  backUrl = '/free-tools',
+  pageUrlPath = 'affiliate-marketing-tools/link-ctr-optimizer',
 }: {
-  backUrl?: string;
-  pageUrlPath?: string;
+  backUrl?: string
+  pageUrlPath?: string
 }) {
   const handleLearnMore = () => {
-    window.location.href = "/api/sale";
-  };
+    window.open(
+      'https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=ctr_optimizer_tool',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
 
-  const pageUrl = `https://johncrestani.me${pageUrlPath}`;
-  const pageTitle = "Optimize Your Affiliate Link CTR | Free Calculator";
+  const pageUrl = `https://johncrestani.me/${pageUrlPath}`
+  const pageTitle = 'Boost Clicks, End Wasted Effort: Free CTR Optimizer'
 
   return (
     <motion.div
@@ -29,11 +32,25 @@ export default function ClientLinkCTROptimizer({
       whileInView={{ opacity: 1 }}
       className="min-h-screen bg-black text-white pt-32 pb-20"
     >
+      <style jsx global>{`
+        .no-hover,
+        .no-hover:hover,
+        .no-hover:focus,
+        .no-hover:active,
+        .no-hover:visited {
+          background: linear-gradient(to right, #ec4899, #a21caf) !important;
+          color: #fff !important;
+          outline: none;
+          box-shadow: none !important;
+          text-decoration: none !important;
+          cursor: pointer !important;
+          transition: none !important;
+          filter: none !important;
+        }
+      `}</style>
+
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ x: -20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-        >
+        <motion.div initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}>
           <Link
             href={backUrl}
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
@@ -48,7 +65,7 @@ export default function ClientLinkCTROptimizer({
           whileInView={{ y: 0, opacity: 1 }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
         >
-          Affiliate Link CTR Optimizer
+          Stop Losing Clicks: Your AI-Powered Affiliate CTR Predictor
         </motion.h1>
 
         <div className="max-w-3xl mx-auto mb-12">
@@ -58,9 +75,7 @@ export default function ClientLinkCTROptimizer({
             transition={{ delay: 0.2 }}
             className="text-xl text-center mb-8 text-gray-300"
           >
-            Estimate how changes in your affiliate link strategy could impact
-            your click-through rates. Optimize your link placement, anchor text,
-            and surrounding content for better performance.
+            Are you <strong>frustrated by low click-through rates</strong> and wasted effort? Eliminate the guesswork! Our free AI-powered Affiliate CTR Predictor helps you <strong>confidently forecast and optimize your link performance</strong>. Predict the impact of changes to your link placement, anchor text, and surrounding content to <strong>maximize engagement and boost your earnings with certainty</strong>.
           </motion.p>
 
           <motion.div
@@ -91,26 +106,45 @@ export default function ClientLinkCTROptimizer({
               whileInView={{ y: 0, opacity: 1 }}
               className="text-2xl font-semibold mb-4"
             >
-              How to Use This Optimizer
+              Gain Clarity Instantly: How to Use This Optimizer
             </motion.h2>
-            <ul className="space-y-4 text-gray-300">
-              {[
-                "Current CTR",
-                "Link Placement",
-                "Anchor Text Relevance",
-                "Surrounding Content Quality",
-              ].map((item, index) => (
-                <motion.li
-                  key={item}
-                  initial={{ x: -10, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 * index }}
-                >
-                  <strong className="text-pink-500">{item}:</strong>
-                  {/* ... existing content ... */}
-                </motion.li>
-              ))}
-            </ul>
+            <ol className="list-decimal list-inside space-y-4 text-gray-300">
+              <motion.li
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.1 }}
+              >
+                <strong className="text-pink-500">Current CTR:</strong> Enter your typical click-through rate percentage for affiliate links. This is your baseline.
+              </motion.li>
+              <motion.li
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <strong className="text-pink-500">Link Placement:</strong> Adjust the slider to reflect how prominently your link is placed (e.g., above the fold, mid-content, sidebar). Higher scores mean better placement.
+              </motion.li>
+              <motion.li
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                <strong className="text-pink-500">Anchor Text Relevance:</strong> Use the slider to rate how relevant and compelling your anchor text is to the linked content and your audience. Higher scores mean more relevant.
+              </motion.li>
+              <motion.li
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                <strong className="text-pink-500">Surrounding Content Quality:</strong> Rate the overall quality and value of the content immediately surrounding your affiliate link. High-quality content builds trust and encourages clicks.
+              </motion.li>
+              <motion.li
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                Click "Calculate Improved CTR" to see your estimated potential click-through rate and predicted click increase.
+              </motion.li>
+            </ol>
           </motion.div>
 
           <motion.div
@@ -122,35 +156,58 @@ export default function ClientLinkCTROptimizer({
             <motion.h2
               initial={{ y: 10, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              className="text-2xl font-semibold mb-4"
+              className="text-2xl font-semibold mb-4 text-white"
             >
-              Master Affiliate Link Optimization with John Crestani
+              Beyond Low Clicks: Secure Your Predictable AI Income
             </motion.h2>
             <p className="text-gray-300 mb-4">
-              {`While this optimizer provides valuable insights, mastering affiliate link optimization requires in-depth knowledge and strategies. John Crestani's Super Affiliate System Pro teaches you:`}
+              Optimizing your CTR is key, but true <strong>financial freedom and stability</strong> come from a complete, proven blueprint to consistently generate high-ticket income. John Crestani&apos;s AI Marketing Club (SAS Pro) provides the step-by-step system to <strong>confidently navigate the AI economy, eliminate guesswork</strong>, and <strong>future-proof your career</strong>. Learn how to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              {[
-                "Advanced techniques for crafting high-converting anchor text",
-                "Strategies for seamlessly integrating affiliate links into your content",
-                "How to use psychology and persuasion to increase click-through rates",
-                "Tools and methods for tracking and improving your affiliate link performance",
-              ].map((item, index) => (
-                <motion.li
-                  key={item}
-                  initial={{ x: -10, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.1 * index }}
-                >
-                  {item}
-                </motion.li>
-              ))}
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <strong>Confidently create high-converting offers</strong> that maximize clicks and sales with AI insights.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                <strong>Systematically eliminate wasted ad spend</strong> by targeting the right audience with precision.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                <strong>Automate your affiliate marketing</strong> to achieve predictable, scalable income streams.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                <strong>Future-proof your business</strong> against market shifts with adaptable AI strategies for long-term stability.
+              </motion.li>
             </ul>
             <button
               onClick={handleLearnMore}
-              className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
+              className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold select-none"
+              tabIndex={0}
+              type="button"
+              aria-label="Unlock My Predictable AI Income Blueprint Now!"
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                outline: 'none',
+                filter: 'none',
+                cursor: 'pointer',
+              }}
             >
-              Learn Advanced CTR Optimization Techniques
+              Unlock My Predictable AI Income Blueprint Now!
             </button>
           </motion.div>
         </div>
@@ -160,38 +217,6 @@ export default function ClientLinkCTROptimizer({
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          <JsonLd<any>
-            item={{
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "How accurate is the Affiliate Link CTR Optimizer?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It's best used as a guide for potential improvements rather than a guarantee of exact results.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What's a good click-through rate for affiliate links?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "A good CTR for affiliate links can vary widely depending on your niche, audience, and placement. Generally, rates between 0.5% to 1% are considered average, while anything above 1% is good. Some highly optimized campaigns can achieve rates of 2-5% or even higher.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How can I improve my affiliate link click-through rates?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani's Super Affiliate System Pro offers in-depth training on these techniques and more.",
-                  },
-                },
-              ],
-            }}
-          />
           <RelatedTools
             currentToolUrl="/affiliate-marketing-tools/link-ctr-optimizer"
             category="affiliate"
@@ -199,5 +224,5 @@ export default function ClientLinkCTROptimizer({
         </motion.div>
       </div>
     </motion.div>
-  );
+  )
 }
