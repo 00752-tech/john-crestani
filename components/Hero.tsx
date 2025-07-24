@@ -27,7 +27,8 @@ export default function Hero() {
           body {
             font-family: 'Satoshi', system-ui, 'Helvetica Neue', Arial, sans-serif;
           }
-          h1, .brand-gold {
+          h1,
+          .brand-gold {
             font-weight: 300;
             line-height: 1.13;
           }
@@ -39,15 +40,16 @@ export default function Hero() {
             letter-spacing: 0.04em;
             padding: 0.7rem 1.6rem;
             border-radius: 9999px;
-            box-shadow: 0 4px 24px rgba(34,197,94,0.1);
+            box-shadow: 0 4px 24px rgba(34, 197, 94, 0.1);
             transition: background 0.2s, transform 0.15s;
+            will-change: transform;
           }
           .cta-main:hover {
             background-image: linear-gradient(241deg, #0ea5e9, #2563eb);
             transform: scale(1.04);
           }
           .brand-gold {
-            color: #FFD700;
+            color: #ffd700;
             font-weight: inherit;
           }
         `}</style>
@@ -56,21 +58,30 @@ export default function Hero() {
           {/* Left Column */}
           <div className="w-full md:w-[60%] flex flex-col items-start space-y-6">
             <span
-  className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5 whitespace-nowrap overflow-x-auto"
-  style={{ letterSpacing: '0.08em' }}
->
-  ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON&apos;T BE REPLACED
-</span>
-
+              className="kicker text-sm sm:text-base md:text-lg uppercase text-gray-400 tracking-wider font-extralight pb-5 whitespace-nowrap overflow-x-auto"
+              style={{ letterSpacing: '0.08em' }}
+            >
+              ▲ THE AI SKILLS EARTHQUAKE IS HERE... MASTER IT DON&apos;T BE REPLACED
+            </span>
 
             {/* --- H1 in sentence case with yellow highlights --- */}
-            <h1 className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl" style={{ letterSpacing: '-0.01em' }}>
-              Reclaim your <span className="brand-gold">purpose</span>: master AI &amp; forge a <span className="brand-gold">future-proof income</span>.
+            <h1
+              className="text-left text-white font-light text-5xl sm:text-6xl md:text-[3.2rem] lg:text-[3.6rem] leading-[1.13] tracking-tight mb-4 mt-2 max-w-4xl"
+              style={{ letterSpacing: '-0.01em' }}
+            >
+              Reclaim your <span className="brand-gold">purpose</span>: master AI &amp; forge a{' '}
+              <span className="brand-gold">future-proof income</span>.
             </h1>
 
             {/* --- Subheadline with gold highlights for key benefits --- */}
             <p className="text-gray-200 text-base sm:text-lg md:text-xl font-light mb-3 mt-1 max-w-2xl text-left leading-relaxed">
-              Beyond just surviving, our <span className="brand-gold">supportive community</span> empowers beginners to <span className="brand-gold">confidently acquire in-demand AI skills, build predictable income streams, and seize control of their professional destiny</span>, in the evolving digital landscape. 
+              Beyond just surviving, our{' '}
+              <span className="brand-gold">supportive community</span> empowers beginners to{' '}
+              <span className="brand-gold">
+                confidently acquire in-demand AI skills, build predictable income streams, and seize
+                control of their professional destiny
+              </span>
+              , in the evolving digital landscape.
             </p>
 
             {/* CTA */}
@@ -79,6 +90,7 @@ export default function Hero() {
               className="cta-main w-full sm:w-auto text-lg mb-5 mt-2"
               onClick={handleCta}
               type="button"
+              aria-label="Seize Control: Unlock My AI-Powered Future"
             >
               Seize Control: Unlock My AI-Powered Future
             </button>
@@ -90,8 +102,9 @@ export default function Hero() {
                 className="inline-block ml-2 w-4 h-4 rounded-full animate-pulse align-middle"
                 style={{
                   backgroundColor: '#22c55e',
-                  boxShadow: '0 0 8px 2px #22c55e'
+                  boxShadow: '0 0 8px 2px #22c55e',
                 }}
+                aria-hidden="true"
               />
             </div>
 
@@ -108,8 +121,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Side: Hero Image (unchanged) */}
-          <div className="hidden md:flex w-[40%] justify-center items-center mt-4 min-h-[320px]">
+          {/* Right Side: Hero Image with reserved aspect-ratio container */}
+          <div
+            className="hidden md:flex w-[40%] justify-center items-center mt-4 min-h-[320px]"
+            style={{ aspectRatio: '410 / 614' }}
+          >
             <Image
               src="/hero_5_lifestyle_guy.webp"
               alt="John Crestani AI Student Modern Image"
@@ -118,6 +134,7 @@ export default function Hero() {
               priority
               className="rounded-xl shadow-2xl object-cover"
               sizes="(max-width: 640px) 95vw, (max-width: 1024px) 60vw, 410px"
+              unoptimized={false}
             />
           </div>
         </div>
