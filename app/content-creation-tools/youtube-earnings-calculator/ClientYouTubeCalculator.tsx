@@ -17,12 +17,22 @@ export default function ClientYouTubeCalculator({
   backUrl?: string;
   pageUrlPath?: string;
 }) {
-  // UPDATED: New affiliate link for the call-to-action button
+  // Use the affiliate URL as before
   const ctaAffiliateLink =
     "https://4147arbzmafm0s762q695w2v7q.hop.clickbank.net/?&traffic_source=youtube_earnings_calc";
 
   const pageUrl = `https://johncrestani.me${pageUrlPath}`;
   const pageTitle = "Predict Your YouTube Income: Free AdSense Calculator";
+
+  // The homepage pattern: Button with onClick opening the affiliate link
+  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.open(
+      ctaAffiliateLink,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
@@ -154,25 +164,27 @@ export default function ClientYouTubeCalculator({
                 </motion.li>
               ))}
             </ul>
-
-            {/* CTA BUTTON: updated link, NO hover effect */}
-            <a
-              href={ctaAffiliateLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* CTA BUTTON: homepage style, NO exposed affiliate link */}
+            <button
+              onClick={handleCtaClick}
               className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold mt-2 transition-none select-none"
               tabIndex={0}
               aria-label="Unlock My Predictable AI Income Blueprint Now!"
-              style={{ boxShadow: "none", textDecoration: "none", outline: "none" }}
+              style={{
+                boxShadow: "none",
+                textDecoration: "none",
+                outline: "none",
+                filter: "none",
+                cursor: "pointer"
+              }}
+              type="button"
             >
               Unlock My Predictable AI Income Blueprint Now!
-            </a>
+            </button>
           </motion.div>
         </div>
 
         {/* Schema Markups */}
-
-        {/* SoftwareApplication Schema */}
         <JsonLd<any>
           item={{
             "@context": "https://schema.org",
@@ -240,7 +252,10 @@ export default function ClientYouTubeCalculator({
         />
 
         {/* Related Tools */}
-        <RelatedTools currentToolUrl="/content-creation-tools/youtube-earnings-calculator" category="content" />
+        <RelatedTools
+          currentToolUrl="/content-creation-tools/youtube-earnings-calculator"
+          category="content"
+        />
       </div>
     </div>
   );
