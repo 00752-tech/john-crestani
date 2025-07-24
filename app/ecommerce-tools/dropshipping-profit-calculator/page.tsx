@@ -11,7 +11,8 @@ export default function DropshippingCalculatorPage() {
   return (
     <>
       {/* Structured Data: SoftwareApplication */}
-      <JsonLd
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <JsonLd<any>
         item={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
@@ -51,6 +52,7 @@ export default function DropshippingCalculatorPage() {
       />
 
       {/* Structured Data: FAQPage */}
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -83,6 +85,7 @@ export default function DropshippingCalculatorPage() {
           ]
         }}
       />
+
       <ClientDropshippingCalculator />
     </>
   )
