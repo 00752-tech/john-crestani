@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import ClientLinkCTROptimizer from './ClientLinkCTROptimizer'
 import { JsonLd } from 'react-schemaorg'
 import type { SoftwareApplication, FAQPage } from 'schema-dts'
@@ -87,7 +86,6 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
-      {/* Main Client Component */}
       <ClientLinkCTROptimizer />
     </>
   )
