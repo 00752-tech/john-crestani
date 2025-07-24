@@ -57,6 +57,7 @@ export default function PrivacyPolicy() {
           <div className="space-y-6 text-gray-300 text-lg">
             <p className="text-center italic">Last updated: July 24, 2025</p>
 
+            {/* 1. Introduction */}
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-white">1. Introduction</h2>
               <p>
@@ -67,13 +68,14 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
+            {/* 2. Contact Details */}
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-white">2. Contact Details</h2>
               <p>
                 If you have any questions about this Privacy Policy, our privacy practices, or wish to exercise your legal rights, please contact us at:
               </p>
               <p>
-                <strong>Email:</strong>{' '}
+                <strong>Email: </strong>
                 <a
                   href="mailto:info@johncrestani.me"
                   className="text-purple-400 hover:underline"
@@ -87,34 +89,159 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Additional sections included fully in same style, omitted here for brevity */}
-            {/* Copy all sections as presented in your query, with all apostrophes escaped as &apos; or using double quotes and &quot; */}
+            {/* 3. Information We Collect */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">3. Information We Collect</h2>
+              <p>
+                We may collect, use, store, and transfer different kinds of personal data about you. This data is generally categorized as follows:
+              </p>
+              <ul className="list-disc list-inside space-y-2 pl-4">
+                <li>
+                  <strong>Identity Data:</strong> Includes first name, last name, username, or similar identifier. We collect this primarily when you register for services, sign up for newsletters, or interact with personalized features.
+                </li>
+                <li>
+                  <strong>Contact Data:</strong> Email address, essential for communication and account management.
+                </li>
+                <li>
+                  <strong>Technical Data:</strong> Your IP address, browser type and version, location, operating system, and platform details. Used for service delivery and security.
+                </li>
+                <li>
+                  <strong>Usage Data:</strong> How you interact with our Service, including pages viewed and link clicks. Used to improve user experience.
+                </li>
+                <li>
+                  <strong>Marketing and Communications Data:</strong> Your preferences regarding marketing communications.
+                </li>
+                <li>
+                  <strong>Affiliate Data:</strong> Includes tracking information like traffic_source parameters from affiliate programs (e.g., ClickBank). Typically pseudonymous or aggregated for marketing attribution.
+                </li>
+              </ul>
+              <p>
+                We do not collect Special Categories of Personal Data or information about criminal convictions and offenses.
+              </p>
+            </section>
 
-            {/* For example, next section with legal rights, data collection, etc., all formatted similarly */}
+            {/* 4. How We Collect Your Information */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">4. How We Collect Your Information</h2>
+              <p>
+                We collect data mainly through:
+              </p>
+              <ul className="list-disc list-inside space-y-2 pl-4">
+                <li><strong>Direct interactions:</strong> Completing forms, contacting support, subscribing, or opting into communications.</li>
+                <li><strong>Automated technologies:</strong> Cookies, server logs, and tracking technologies while browsing our site.</li>
+                <li><strong>Third parties:</strong> Affiliate networks, analytics providers, and public sources.</li>
+              </ul>
+            </section>
 
-            {/* Section headings, paragraphs, lists styled and spaced appropriately */}
+            {/* 5. How We Use Your Information (Purposes and Legal Basis) */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">5. How We Use Your Information (Purposes and Legal Basis)</h2>
+              <p>
+                We use your personal data in line with applicable laws, commonly for:
+              </p>
+              <ul className="list-disc list-inside space-y-2 pl-4">
+                <li><strong>Service provision and maintenance</strong> (legal basis: contract performance)</li>
+                <li><strong>Customer support and updates</strong> (legal basis: contract performance or legitimate interests)</li>
+                <li><strong>Improving services and website</strong> (legal basis: legitimate interests)</li>
+                <li><strong>Marketing and promotional communications</strong> (legal basis: consent or legitimate interests)</li>
+                <li><strong>Affiliate tracking and attribution</strong> (legal basis: legitimate interests)</li>
+                <li><strong>Security and fraud prevention</strong> (legal basis: legitimate interests)</li>
+              </ul>
+            </section>
 
-            {/* Affiliate tracking data note included */}
+            {/* 6. Disclosure of Your Personal Data */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">6. Disclosure of Your Personal Data</h2>
+              <p>We may share your data with:</p>
+              <ul className="list-disc list-inside space-y-2 pl-4">
+                <li>Service providers for IT, analytics, and marketing</li>
+                <li>Affiliate networks to track and attribute sales</li>
+                <li>Legal authorities if required by law or to protect rights</li>
+                <li>In case of business transfers like mergers or acquisitions</li>
+              </ul>
+              <p>We do not sell your personal data.</p>
+            </section>
 
-            {/* Cookie policy mention with possible link */}
+            {/* 7. International Data Transfers */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">7. International Data Transfers</h2>
+              <p>
+                Your data may be transferred and processed outside your jurisdiction. We ensure any such transfers are protected by appropriate measures (including Standard Contractual Clauses where applicable).
+              </p>
+            </section>
 
-            {/* Contact and opt-out info */}
+            {/* 8. Data Security */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">8. Data Security</h2>
+              <p>
+                We implement security measures to protect your data but remind you that no internet transmission is guaranteed 100% secure.
+              </p>
+            </section>
 
-            {/* Children's privacy */}
+            {/* 9. Data Retention */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">9. Data Retention</h2>
+              <p>
+                We retain personal data only as long as required to fulfill legal or business obligations.
+              </p>
+            </section>
 
-            {/* External links and liability */}
+            {/* 10. Cookies and Tracking Technologies */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">10. Cookies and Tracking Technologies</h2>
+              <p>
+                We use cookies to improve your experience, including essential, performance, functionality, and advertising cookies, including affiliate tracking. You can manage cookie preferences in your browser.
+              </p>
+            </section>
 
-            {/* Update notifications */}
+            {/* 11. Your Legal Rights (Global) */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">11. Your Legal Rights (Global)</h2>
+              <p>
+                You may have rights including access, correction, erasure, restriction, objection, data portability, and withdrawing consent. Contact us to exercise these rights.
+              </p>
+            </section>
 
-            {/* User responsibilities */}
+            {/* 12. California Privacy Rights (CCPA/CPRA) */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">12. California Privacy Rights (CCPA/CPRA)</h2>
+              <p>
+                California residents have rights to access, delete, and opt out of the sale/sharing of personal data. We do not sell your data but may share it for affiliate marketing attribution.
+              </p>
+              <p>
+                Contact us to exercise your rights.
+              </p>
+            </section>
 
-            {/* ... Full text carried over, with careful escaping of special characters ... */}
+            {/* 13. Children’s Privacy */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">13. Children’s Privacy</h2>
+              <p>
+                Our Service is not directed to children under 18. We do not knowingly collect personal data from minors and take steps to remove such data if discovered.
+              </p>
+            </section>
 
-            {/* Final Section */}
+            {/* 14. Links to Other Websites */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">14. Links to Other Websites</h2>
+              <p>
+                Our site may contain links to third-party sites. We are not responsible for their content or privacy practices. Review their policies before providing personal information.
+              </p>
+            </section>
+
+            {/* 15. Changes to This Privacy Policy */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-white">15. Changes to This Privacy Policy</h2>
+              <p>
+                We may update this Privacy Policy periodically. Updates will be posted here with the revised date. We encourage you to review the policy regularly.
+              </p>
+            </section>
+
+            {/* 16. Your Responsibilities */}
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-white">16. Your Responsibilities</h2>
               <p>
-                While we are committed to protecting your privacy, you also have a role in safeguarding your personal information. Please do not share sensitive personal data or financial information with us via insecure means (e.g., in plain text emails). Ensure your browsing environment is secure.
+                While we protect your data, please do not share sensitive information over insecure channels. Always use secure environments when accessing our services.
               </p>
             </section>
           </div>
