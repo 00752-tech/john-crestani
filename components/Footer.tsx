@@ -1,27 +1,27 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Footer() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLSpanElement>, href: string) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (href.startsWith('#')) {
-      // For hash links, first go to home page then scroll
-      router.push('/')
+      // For hash links, navigate to homepage first, then scroll
+      router.push('/');
       setTimeout(() => {
-        const element = document.querySelector(href)
-        element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 100)
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     } else {
-      // For regular pages, push to route and scroll to top
-      router.push(href)
-      window.scrollTo(0, 0)
+      // For normal route links, navigate and scroll to top
+      router.push(href);
+      window.scrollTo(0, 0);
     }
-  }
+  };
 
   return (
     <footer className="bg-black text-white py-8">
@@ -31,10 +31,12 @@ export default function Footer() {
           <div className="bg-gray-900 p-4 rounded-lg max-w-3xl mx-auto">
             <p className="text-sm text-gray-300 text-center">
               <strong className="text-pink-500">Affiliate Disclosure:</strong>{' '}
-              As an affiliate, we earn from qualifying purchases. When you click our links and make purchases, we may receive commissions. This comes at no additional cost to you and helps support our work in providing valuable information and tools.{' '}
-              <Link 
-                href="/affiliate-disclaimer"
-                onClick={(e) => handleScroll(e, '/affiliate-disclaimer')}
+              As an affiliate, we earn from qualifying purchases. When you click our links and make
+              purchases, we may receive commissions. This comes at no additional cost to you and
+              helps support our work in providing valuable information and tools.{' '}
+              <Link
+                href="/affiliate-disclosure"
+                onClick={(e) => handleScroll(e, '/affiliate-disclosure')}
                 className="text-pink-500 hover:underline"
               >
                 Learn more about our affiliate relationships
@@ -111,8 +113,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/privacy"
-                  onClick={(e) => handleScroll(e, '/privacy')}
+                  href="/privacy-policy"
+                  onClick={(e) => handleScroll(e, '/privacy-policy')}
                   className="hover:text-pink-500 transition duration-300"
                 >
                   Privacy Policy
@@ -124,16 +126,16 @@ export default function Footer() {
                   onClick={(e) => handleScroll(e, '/terms')}
                   className="hover:text-pink-500 transition duration-300"
                 >
-                  Terms & Conditions
+                  Terms &amp; Conditions
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/affiliate-disclaimer"
-                  onClick={(e) => handleScroll(e, '/affiliate-disclaimer')}
+                  href="/affiliate-disclosure"
+                  onClick={(e) => handleScroll(e, '/affiliate-disclosure')}
                   className="hover:text-pink-500 transition duration-300"
                 >
-                  Affiliate Disclaimer
+                  Affiliate Disclosure
                 </Link>
               </li>
               <li>
@@ -149,5 +151,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
