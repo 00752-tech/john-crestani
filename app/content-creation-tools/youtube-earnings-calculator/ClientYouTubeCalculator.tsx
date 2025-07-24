@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "react-schemaorg";
 import RelatedTools from "@/components/RelatedTools";
+import React from "react";
 
 export default function ClientYouTubeCalculator({
   backUrl = "/free-tools",
@@ -16,15 +17,31 @@ export default function ClientYouTubeCalculator({
   backUrl?: string;
   pageUrlPath?: string;
 }) {
-  const handleLearnMore = () => {
-    window.location.href = "/api/sale";
-  };
+  // UPDATED: New affiliate link for the call-to-action button
+  const ctaAffiliateLink =
+    "https://4147arbzmafm0s762q695w2v7q.hop.clickbank.net/?&traffic_source=youtube_earnings_calc";
 
   const pageUrl = `https://johncrestani.me${pageUrlPath}`;
   const pageTitle = "Predict Your YouTube Income: Free AdSense Calculator";
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
+      <style jsx global>{`
+        .no-hover,
+        .no-hover:hover,
+        .no-hover:active,
+        .no-hover:focus,
+        .no-hover:visited {
+          background: linear-gradient(to right, #ec4899, #a21caf) !important;
+          color: #fff !important;
+          outline: none;
+          box-shadow: none !important;
+          text-decoration: none !important;
+          cursor: pointer !important;
+          transition: none !important;
+          filter: none !important;
+        }
+      `}</style>
       <div className="container mx-auto px-4">
         {/* Back Link */}
         <Link
@@ -137,12 +154,19 @@ export default function ClientYouTubeCalculator({
                 </motion.li>
               ))}
             </ul>
-            <button
-              onClick={handleLearnMore}
-              className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
+
+            {/* CTA BUTTON: updated link, NO hover effect */}
+            <a
+              href={ctaAffiliateLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold mt-2 transition-none select-none"
+              tabIndex={0}
+              aria-label="Unlock My Predictable AI Income Blueprint Now!"
+              style={{ boxShadow: "none", textDecoration: "none", outline: "none" }}
             >
               Unlock My Predictable AI Income Blueprint Now!
-            </button>
+            </a>
           </motion.div>
         </div>
 
