@@ -1,4 +1,3 @@
-// app/contact/ClientContactPage.tsx
 'use client'
 
 import Link from 'next/link'
@@ -18,7 +17,6 @@ export default function ClientContactPage() {
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
-      {/* Global no-hover button styling */}
       <style jsx global>{`
         .no-hover,
         .no-hover:hover,
@@ -59,7 +57,7 @@ export default function ClientContactPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Contact John Crestani's AI Marketing Club
+          Contact John Crestani&apos;s AI Marketing Club
         </motion.h1>
 
         <div className="max-w-3xl mx-auto mb-12 text-center">
@@ -70,7 +68,7 @@ export default function ClientContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Your journey to <strong>predictable AI income</strong> is important to us. Whether you have questions about the <strong>AI Marketing Club</strong>, need support with our <strong>AI tools</strong>, or want to learn more about <strong>affiliate marketing strategies</strong>, we're here to help you move <strong>beyond fear</strong> and towards confident financial growth.
+            Your journey to <strong>predictable AI income</strong> is important to us. Whether you have questions about the <strong>AI Marketing Club</strong>, need support with our <strong>AI tools</strong>, or want to learn more about <strong>affiliate marketing strategies</strong>, we&apos;re here to help you move <strong>beyond fear</strong> and towards confident financial growth.
           </motion.p>
 
           <motion.div
