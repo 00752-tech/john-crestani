@@ -24,7 +24,7 @@ export default function AffiliateDisclosure() {
         <link rel="canonical" href={pageUrl} />
       </Head>
 
-      {/* JSON-LD schema markup for SEO */}
+      {/* JSON-LD for WebPage */}
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <JsonLd<any>
         item={{
@@ -50,9 +50,8 @@ export default function AffiliateDisclosure() {
 
           <section className="mb-12">
             <p className="text-lg leading-relaxed">
-              At{' '}
-              <span className="font-semibold text-yellow-400">johncrestani.me</span>, transparency is a core value. We believe in
-              earning your trust by being upfront about how this site operates.
+              At <span className="font-semibold text-yellow-400">johncrestani.me</span>, transparency is a core value. We
+              believe in earning your trust by being upfront about how this site operates.
             </p>
           </section>
 
@@ -91,7 +90,7 @@ export default function AffiliateDisclosure() {
             </p>
             <p className="text-lg leading-relaxed">
               If you have any questions about our affiliate relationships, feel free to contact us at{' '}
-              <a href="mailto:info@johncrestani.me" className="text-yellow-400 underline hover:text-yellow-300" aria-label="Email info@johncrestani.me">
+              <a href="mailto:info@johncrestani.me" className="text-yellow-400 underline hover:text-yellow-300">
                 info@johncrestani.me
               </a>.
             </p>
