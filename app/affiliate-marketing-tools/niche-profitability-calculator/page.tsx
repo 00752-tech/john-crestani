@@ -59,12 +59,13 @@ export default function NicheProfitabilityCalculator({
     setEstimatedMonthlyProfit(null)
   }
 
-  // Custom affiliate link for the no-hover CTA button
-  const affiliateLink = "https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=niche_profit_calc_pg"
+  // Your custom affiliate link for no-hover CTA button
+  const affiliateLink =
+    'https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=niche_profit_calc_pg'
 
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    window.open(affiliateLink, "_blank", "noopener,noreferrer")
+    window.open(affiliateLink, '_blank', 'noopener,noreferrer')
   }
 
   const pageTitle = 'Eliminate Niche Uncertainty: Free AI-Powered Profitability Calculator | JohnCrestani.me'
@@ -101,14 +102,19 @@ export default function NicheProfitabilityCalculator({
         transition={{ duration: 0.5 }}
         className="min-h-screen bg-black text-white pt-32 pb-20"
       >
-        <motion.div initial={{ y: 20 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="container mx-auto px-4 max-w-3xl">
+        <motion.div
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="container mx-auto px-4 max-w-3xl"
+        >
           {/* Back Link */}
           <Link href={backUrl} className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Tools
           </Link>
 
-          {/* H1 */}
+          {/* Main Headline H1 */}
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -119,7 +125,7 @@ export default function NicheProfitabilityCalculator({
             Your AI-Powered Niche Profitability &amp; Predictability Calculator
           </motion.h1>
 
-          {/* Intro Paragraph */}
+          {/* Introductory Paragraph */}
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -132,9 +138,14 @@ export default function NicheProfitabilityCalculator({
           </motion.p>
 
           {/* Calculator Form */}
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }} className="bg-gray-900 p-8 rounded-lg mb-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="bg-gray-900 p-8 rounded-lg mb-10"
+          >
             <form
-              onSubmit={(e) => {
+              onSubmit={e => {
                 e.preventDefault()
                 handleCalculate()
               }}
@@ -150,7 +161,7 @@ export default function NicheProfitabilityCalculator({
                   min={0}
                   className="w-full rounded-md border border-gray-700 bg-black p-3 text-white"
                   value={averageSalesPerMonth}
-                  onChange={(e) => setAverageSalesPerMonth(Number(e.target.value))}
+                  onChange={e => setAverageSalesPerMonth(Number(e.target.value))}
                   placeholder="e.g. 100"
                   required
                 />
@@ -163,12 +174,12 @@ export default function NicheProfitabilityCalculator({
                 <input
                   id="averageSaleValue"
                   type="number"
+                  min={0}
+                  step={0.01}
                   className="w-full rounded-md border border-gray-700 bg-black p-3 text-white"
                   value={averageSaleValue}
-                  onChange={(e) => setAverageSaleValue(Number(e.target.value))}
+                  onChange={e => setAverageSaleValue(Number(e.target.value))}
                   placeholder="e.g. 50.00"
-                  min={0}
-                  step="0.01"
                   required
                 />
               </div>
@@ -182,10 +193,10 @@ export default function NicheProfitabilityCalculator({
                   type="number"
                   min={0}
                   max={100}
-                  step="0.1"
+                  step={0.1}
                   className="w-full rounded-md border border-gray-700 bg-black p-3 text-white"
                   value={averageCommissionRate}
-                  onChange={(e) => setAverageCommissionRate(Number(e.target.value))}
+                  onChange={e => setAverageCommissionRate(Number(e.target.value))}
                   placeholder="e.g. 10"
                   required
                 />
@@ -200,10 +211,10 @@ export default function NicheProfitabilityCalculator({
                   type="number"
                   min={0}
                   max={100}
-                  step="0.1"
+                  step={0.1}
                   className="w-full rounded-md border border-gray-700 bg-black p-3 text-white"
                   value={averageProfitMargin}
-                  onChange={(e) => setAverageProfitMargin(Number(e.target.value))}
+                  onChange={e => setAverageProfitMargin(Number(e.target.value))}
                   placeholder="e.g. 40"
                   required
                 />
@@ -241,7 +252,12 @@ export default function NicheProfitabilityCalculator({
           )}
 
           {/* How to Use This Calculator */}
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} className="bg-gray-900 p-8 rounded-lg mb-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-gray-900 p-8 rounded-lg mb-10"
+          >
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -260,7 +276,12 @@ export default function NicheProfitabilityCalculator({
           </motion.div>
 
           {/* CTA Section */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="bg-gray-900 p-8 rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="bg-gray-900 p-8 rounded-lg"
+          >
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -293,11 +314,11 @@ export default function NicheProfitabilityCalculator({
               type="button"
               aria-label="Unlock My Predictable AI Income Blueprint Now!"
               style={{
-                boxShadow: "none",
-                textDecoration: "none",
-                outline: "none",
-                filter: "none",
-                cursor: "pointer"
+                boxShadow: 'none',
+                textDecoration: 'none',
+                outline: 'none',
+                filter: 'none',
+                cursor: 'pointer',
               }}
             >
               Unlock My Predictable AI Income Blueprint Now!
