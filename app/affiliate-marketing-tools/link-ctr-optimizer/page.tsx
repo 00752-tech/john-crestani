@@ -86,6 +86,7 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
+      {/* Main Client Component */}
       <ClientLinkCTROptimizer />
     </>
   )
