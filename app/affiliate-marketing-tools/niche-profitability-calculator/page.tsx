@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { JsonLd } from 'react-schemaorg'
 
-// Simple profitability calculation
+// Simple profitability calculation function
 function calculateProfitability(
   averageSalesPerMonth: number,
   averageSaleValue: number,
@@ -25,10 +25,8 @@ function calculateProfitability(
 
 export default function NicheProfitabilityCalculator({
   backUrl = '/affiliate-marketing-tools',
-  pageUrlPath = '/affiliate-marketing-tools/niche-profitability-calculator',
 }: {
   backUrl?: string
-  pageUrlPath?: string
 }) {
   const [averageSalesPerMonth, setAverageSalesPerMonth] = useState(0)
   const [averageSaleValue, setAverageSaleValue] = useState(0)
@@ -61,7 +59,7 @@ export default function NicheProfitabilityCalculator({
     setEstimatedMonthlyProfit(null)
   }
 
-  // Custom affiliate link for no-hover CTA button
+  // Custom affiliate link for the no-hover CTA button
   const affiliateLink = "https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=niche_profit_calc_pg"
 
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -69,7 +67,6 @@ export default function NicheProfitabilityCalculator({
     window.open(affiliateLink, "_blank", "noopener,noreferrer")
   }
 
-  const pageUrl = `https://johncrestani.me${pageUrlPath}`
   const pageTitle = 'Eliminate Niche Uncertainty: Free AI-Powered Profitability Calculator | JohnCrestani.me'
   const pageDesc =
     'Stop guessing your market potential. Our free AI-powered Niche Profitability Calculator helps you confidently identify the most lucrative niches, ensuring predictable earnings and avoiding costly mistakes.'
@@ -118,17 +115,20 @@ export default function NicheProfitabilityCalculator({
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold mb-8 text-center gradient-text leading-relaxed pb-4"
           >
-            Conquer Market Uncertainty:<br />Your AI-Powered Niche Profitability &amp; Predictability Calculator
+            Conquer Market Uncertainty:<br />
+            Your AI-Powered Niche Profitability &amp; Predictability Calculator
           </motion.h1>
 
-          {/* Introductory Paragraph */}
+          {/* Intro Paragraph */}
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-xl text-center mb-12 text-gray-300"
           >
-            Are you <strong>nervous about picking the wrong niche</strong> and wasting time or money? Eliminate the guesswork! Our free, <strong>AI-powered Niche Profitability Calculator</strong> gives you the <strong>clarity and confidence</strong> to accurately assess market potential. Quickly estimate the true profitability of your affiliate marketing niche to <strong>identify lucrative opportunities</strong> and <strong>ensure predictable earnings</strong> from your campaigns, letting you <strong>invest your efforts with certainty</strong>.
+            Are you <strong>nervous about picking the wrong niche</strong> and wasting time or money? Eliminate the guesswork! Our free,&nbsp;
+            <strong>AI-powered Niche Profitability Calculator</strong> gives you the <strong>clarity and confidence</strong> to accurately assess market potential.&nbsp;
+            Quickly estimate the true profitability of your affiliate marketing niche to <strong>identify lucrative opportunities</strong> and <strong>ensure predictable earnings</strong> from your campaigns, letting you <strong>invest your efforts with certainty</strong>.
           </motion.p>
 
           {/* Calculator Form */}
@@ -213,7 +213,7 @@ export default function NicheProfitabilityCalculator({
                 <button
                   type="submit"
                   disabled={!canCalculate}
-                  className={`flex-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50`}
+                  className="flex-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Calculate Profitability
                 </button>
@@ -255,7 +255,7 @@ export default function NicheProfitabilityCalculator({
               <li>Enter the average sale value (price) for each sale.</li>
               <li>Input the typical commission rate percentage you earn per sale.</li>
               <li>Enter the profit margin percentage to factor in your costs and expenses.</li>
-              <li>Click "Calculate Profitability" to see your estimated monthly profit.</li>
+              <li>Click &quot;Calculate Profitability&quot; to see your estimated monthly profit.</li>
             </ol>
           </motion.div>
 
