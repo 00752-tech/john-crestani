@@ -23,11 +23,10 @@ function calculateProfitability(
   )
 }
 
-export default function NicheProfitabilityCalculator({
-  backUrl = '/affiliate-marketing-tools',
-}: {
-  backUrl?: string
-}) {
+export default function NicheProfitabilityCalculator() {
+  // Hardcode backUrl since props are not permitted
+  const backUrl = '/affiliate-marketing-tools'
+
   const [averageSalesPerMonth, setAverageSalesPerMonth] = useState(0)
   const [averageSaleValue, setAverageSaleValue] = useState(0)
   const [averageCommissionRate, setAverageCommissionRate] = useState(0)
@@ -59,7 +58,6 @@ export default function NicheProfitabilityCalculator({
     setEstimatedMonthlyProfit(null)
   }
 
-  // Your custom affiliate link for no-hover CTA button
   const affiliateLink =
     'https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=niche_profit_calc_pg'
 
@@ -114,7 +112,7 @@ export default function NicheProfitabilityCalculator({
             Back to Tools
           </Link>
 
-          {/* Main Headline H1 */}
+          {/* H1 */}
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -125,7 +123,7 @@ export default function NicheProfitabilityCalculator({
             Your AI-Powered Niche Profitability &amp; Predictability Calculator
           </motion.h1>
 
-          {/* Introductory Paragraph */}
+          {/* Intro Paragraph */}
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -239,7 +237,6 @@ export default function NicheProfitabilityCalculator({
             </form>
           </motion.div>
 
-          {/* Display Estimated Profit */}
           {estimatedMonthlyProfit !== null && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
