@@ -14,9 +14,14 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
   const pageDesc =
     'Predict your investment growth with our free calculator. Go beyond traditional investments by learning how to multiply your income through AI-powered affiliate marketing with John Crestani.'
 
+  // Updated: Open your custom affiliate link in new tab on CTA click
   const handleInvestInFuture = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    window.location.href = '/api/sale'
+    window.open(
+      "https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=invest_calc_pg_cta",
+      "_blank",
+      "noopener,noreferrer"
+    )
   }
 
   return (
@@ -24,7 +29,6 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
-        {/* Add further SEO meta tags like canonical, og:image here if needed */}
       </Head>
 
       <motion.div
@@ -45,7 +49,7 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             Back to Tools
           </Link>
 
-          {/* Main Heading */}
+          {/* Main H1 */}
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
