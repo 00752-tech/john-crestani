@@ -2,7 +2,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import AffiliateLinkCTROptimizer from '@/components/AffiliateLinkCTROptimizer' // actual calculator UI
+import AffiliateLinkCTROptimizer from '@/components/AffiliateLinkCTROptimizer'
 import ShareButtons from '@/components/ShareButtons'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
@@ -75,7 +75,9 @@ export default function ClientLinkCTROptimizer({
             transition={{ delay: 0.2 }}
             className="text-xl text-center mb-8 text-gray-300"
           >
-            Are you <strong>frustrated by low click-through rates</strong> and wasted effort? Eliminate the guesswork! Our free AI-powered Affiliate CTR Predictor helps you <strong>confidently forecast and optimize your link performance</strong>. Predict the impact of changes to your link placement, anchor text, and surrounding content to <strong>maximize engagement and boost your earnings with certainty</strong>.
+            Are you <strong>frustrated by low click-through rates</strong> and wasted effort? Eliminate the guesswork! Our free AI-powered Affiliate CTR Predictor helps you{' '}
+            <strong>confidently forecast and optimize your link performance</strong>. Predict the impact of changes to your link placement, anchor text, and surrounding content to{' '}
+            <strong>maximize engagement and boost your earnings with certainty</strong>.
           </motion.p>
 
           <motion.div
@@ -142,7 +144,7 @@ export default function ClientLinkCTROptimizer({
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Click "Calculate Improved CTR" to see your estimated potential click-through rate and predicted click increase.
+                Click &quot;Calculate Improved CTR&quot; to see your estimated potential click-through rate and predicted click increase.
               </motion.li>
             </ol>
           </motion.div>
