@@ -24,7 +24,7 @@ function calculateProfitability(
 }
 
 export default function NicheProfitabilityCalculator() {
-  // Hardcode backUrl since props are not permitted
+  // Hardcode backUrl because page props are not supported for app router page.tsx
   const backUrl = '/affiliate-marketing-tools'
 
   const [averageSalesPerMonth, setAverageSalesPerMonth] = useState(0)
@@ -58,6 +58,7 @@ export default function NicheProfitabilityCalculator() {
     setEstimatedMonthlyProfit(null)
   }
 
+  // Affiliate link for button, opens in new tab, no hover URL exposure
   const affiliateLink =
     'https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=niche_profit_calc_pg'
 
@@ -66,9 +67,10 @@ export default function NicheProfitabilityCalculator() {
     window.open(affiliateLink, '_blank', 'noopener,noreferrer')
   }
 
-  const pageTitle = 'Eliminate Niche Uncertainty: Free AI-Powered Profitability Calculator | JohnCrestani.me'
+  // Final meta title and description that fit SEO character limits and your messaging
+  const pageTitle = 'Niche Profitability Calculator: End Uncertainty, Predict Earnings'
   const pageDesc =
-    'Stop guessing your market potential. Our free AI-powered Niche Profitability Calculator helps you confidently identify the most lucrative niches, ensuring predictable earnings and avoiding costly mistakes.'
+    'Stop guessing! Our free AI-powered calculator helps you confidently identify profitable affiliate niches, ensuring predictable earnings & avoiding costly mistakes.'
 
   return (
     <>
@@ -77,6 +79,7 @@ export default function NicheProfitabilityCalculator() {
         <meta name="description" content={pageDesc} />
       </Head>
 
+      {/* No hover styling for affiliate button */}
       <style jsx global>{`
         .no-hover,
         .no-hover:hover,
@@ -112,7 +115,7 @@ export default function NicheProfitabilityCalculator() {
             Back to Tools
           </Link>
 
-          {/* H1 */}
+          {/* Main Heading */}
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -237,6 +240,7 @@ export default function NicheProfitabilityCalculator() {
             </form>
           </motion.div>
 
+          {/* Result Display */}
           {estimatedMonthlyProfit !== null && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -248,7 +252,7 @@ export default function NicheProfitabilityCalculator() {
             </motion.div>
           )}
 
-          {/* How to Use This Calculator */}
+          {/* How to Use This Calculator Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
