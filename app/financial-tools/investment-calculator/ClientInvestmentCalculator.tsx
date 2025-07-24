@@ -10,7 +10,6 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: { backUrl?: string }) {
-  const pageUrl = 'https://johncrestani.me/financial-tools/investment-calculator'
   const pageTitle = 'Secure Your Financial Future: Free Investment Growth Calculator | JohnCrestani.me'
   const pageDesc =
     'Predict your investment growth with our free calculator. Go beyond traditional investments by learning how to multiply your income through AI-powered affiliate marketing with John Crestani.'
