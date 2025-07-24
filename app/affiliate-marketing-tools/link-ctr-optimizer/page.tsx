@@ -1,6 +1,5 @@
 import ClientLinkCTROptimizer from './ClientLinkCTROptimizer'
 import { JsonLd } from 'react-schemaorg'
-import type { SoftwareApplication, FAQPage } from 'schema-dts'
 
 export const metadata = {
   title: 'Boost Clicks, End Wasted Effort: Free CTR Optimizer',
@@ -11,8 +10,8 @@ export const metadata = {
 export default function AffiliateLinkCTROptimizerPage() {
   return (
     <>
-      {/* Structured Data: SoftwareApplication */}
-      <JsonLd<SoftwareApplication>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <JsonLd<any>
         item={{
           '@context': 'https://schema.org',
           '@type': 'SoftwareApplication',
@@ -52,8 +51,8 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
-      {/* Structured Data: FAQPage */}
-      <JsonLd<FAQPage>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <JsonLd<any>
         item={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
@@ -86,7 +85,6 @@ export default function AffiliateLinkCTROptimizerPage() {
         }}
       />
 
-      {/* Main Client Component */}
       <ClientLinkCTROptimizer />
     </>
   )
