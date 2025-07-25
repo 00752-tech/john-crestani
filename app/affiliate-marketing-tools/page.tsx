@@ -222,11 +222,18 @@ export default function AffiliateMarketingToolsPage() {
             className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
           >
             <p>Tired of guesswork in your online business?</p>
+
             <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
+
             <p>...to <strong>eliminate uncertainty</strong>.</p>
+
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
-            <p>Accurately predict earnings. Effortlessly optimize campaigns.</p>
+
+            <p>Accurately predict earnings.</p>
+            <p>Effortlessly optimize campaigns.</p>
+
             <p>Make <strong>confident, data-driven decisions</strong>.</p>
+
             <p>Leading to <strong>consistent, reliable income</strong>.</p>
           </motion.div>
 
@@ -283,15 +290,25 @@ export default function AffiliateMarketingToolsPage() {
             </h2>
             <div className="text-xl text-gray-300 mb-8">
               <p>These tools give you foresight.</p>
+
               <p>But the *real* power comes from a proven system.</p>
+
               <p>Get instant access to John Crestani&apos;s AI Marketing Club...</p>
+
               <p>...for just <em>$27</em>.</p>
+
               <p>Then, unlock the exclusive opportunity:</p>
+
               <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
+
               <p>For only <em>$197</em>.</p>
+
               <p>Original price: $997.</p>
+
               <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
+
               <p>The ultimate blueprint to future-proof your income.</p>
+
               <p>Build genuine financial independence in the AI economy.</p>
             </div>
             <button
