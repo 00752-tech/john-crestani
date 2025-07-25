@@ -200,6 +200,7 @@ export default function AffiliateMarketingToolsPage() {
             cursor: pointer !important;
             transition: none !important;
             filter: none !important;
+            opacity: 1 !important; /* Ensure opacity is full */
           }
         `}</style>
         <div className="container mx-auto px-4">
@@ -272,10 +273,10 @@ export default function AffiliateMarketingToolsPage() {
             className="mt-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl font-bold mb-6 gradient-text">
-              Ready to Turn These Tools into a Predictable Income Stream?
+              Ready to Stop Guessing and Start Earning Consistently?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              These tools empower you with data, but learning how to consistently generate high-ticket income online is the ultimate game-changer. John Crestani&apos;s AI Marketing Club provides the step-by-step blueprint to achieve financial freedom and future-proof your career in the AI economy.
+              These tools give you foresight, but the real power comes from a proven system. Get instant access to John Crestani&apos;s AI Marketing Club for just $27, and unlock the exclusive opportunity to upgrade to **Super Affiliate System Pro** for only $197 (original price: $997). That&apos;s a massive **$800 saving** on the ultimate blueprint to future-proof your income and build genuine financial independence in the AI economy!
             </p>
             <button
               onClick={handleCtaClick}
