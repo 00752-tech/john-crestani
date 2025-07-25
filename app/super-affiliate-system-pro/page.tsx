@@ -182,8 +182,10 @@ export default function SuperAffiliateSystemProPage() {
             If you found SAS Pro links unavailable before, you&apos;re in the right place&mdash;official 2025 access is here.
           </p>
 
-          {/* Use Client button here */}
-          <CtaButtons baseAffiliateUrl={baseAffiliateUrl} />
+          {/* Fix: Add flex utilities to properly space and align CTA buttons */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto">
+            <CtaButtons baseAffiliateUrl={baseAffiliateUrl} />
+          </div>
         </section>
 
         {/* Emotional Beyond Fear Messaging */}
@@ -305,8 +307,8 @@ export default function SuperAffiliateSystemProPage() {
             {/* ... same testimonial blocks without CTAs */}
           </div>
 
-          {/* Final CTA */}
-          <div className="text-center mt-12">
+          {/* Final CTA - ensure correct layout for buttons here too */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto mt-12">
             <CtaButtons baseAffiliateUrl={baseAffiliateUrl} />
           </div>
         </section>
