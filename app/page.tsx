@@ -1,19 +1,14 @@
 'use client';
 
-import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Image from 'next/image';
 
-import Hero from '@/components/Hero';
-import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
-import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
-import WebinarInvite from '@/components/WebinarInvite';
-import SkepticismSection from '@/components/SkepticismSection';
-import ExitIntentPopup from '@/components/ExitIntentPopup';
-
+// Dynamically import components (improves performance and bypasses unused import lint issues)
+const Hero = dynamic(() => import('@/components/Hero'));
+const Testimonials = dynamic(() => import('@/components/Testimonials'));
+const FAQ = dynamic(() => import('@/components/FAQ'));
+const CTA = dynamic(() => import('@/components/CTA'));
+const Footer = dynamic(() => import('@/components/Footer'));
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
@@ -23,15 +18,6 @@ export default function Home() {
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
 
-  const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.open(
-      'https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta',
-      '_blank',
-      'noopener,noreferrer'
-    );
-  };
-
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
       <Head>
@@ -40,14 +26,8 @@ export default function Home() {
           name="description"
           content="Discover John Crestani's AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
 
       <style jsx global>{`
@@ -110,68 +90,9 @@ export default function Home() {
         }
       `}</style>
 
-      <ExitIntentPopup />
-
-      {/* Hero Section */}
       <Hero />
-
-      {/* About Section */}
-      <section id="about" className="w-full flex justify-center bg-black py-16 px-4">
-        <div className="w-full max-w-5xl text-center">
-          {/* Your About Content Here */}
-          <h2 className="text-3xl font-bold mb-4 text-white">About John Crestani’s AI Marketing Club</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            {/* Add your about intro content focused on your mission, credibility, and user benefits */}
-          </p>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="w-full flex justify-center bg-gray-900 py-16 px-4">
-        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          {/* Your Features Content Here */}
-          {/* Sample feature box */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-yellow-400">Feature One</h3>
-            <p className="text-gray-400">Description of the feature and how it adds value.</p>
-          </div>
-          {/* Repeat for other features */}
-        </div>
-      </section>
-
-      {/* Tools Section */}
-      <section id="tools" className="w-full flex justify-center bg-black py-16 px-4">
-        <div className="w-full max-w-6xl">
-          {/* You can either embed the Tools component here or list tools with proper UI */}
-          {/* Placeholder */}
-          <h2 className="text-3xl font-bold mb-6 text-center gradient-text">Free AI-Powered Tools & Calculators</h2>
-          {/* Include or link to your tools grid/list */}
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="w-full flex justify-center bg-gray-900 py-16 px-4">
-        <div className="w-full max-w-5xl">
-          <Testimonials />
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="w-full flex justify-center bg-black py-16 px-4">
-        <div className="w-full max-w-5xl">
-          <FAQ />
-        </div>
-      </section>
-
-      {/* Contact / Community Section */}
-      <section id="contact" className="w-full flex justify-center bg-gray-900 py-16 px-4">
-        <div className="w-full max-w-5xl text-center text-gray-300">
-          {/* Add contact info, newsletter signup or CTA */}
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <p>Contact us at <a href="mailto:info@johncrestani.me" className="text-yellow-400 underline">info@johncrestani.me</a></p>
-        </div>
-      </section>
-
+      <Testimonials />
+      <FAQ />
       <CTA />
 
       <div className="container mx-auto px-4 py-8">
