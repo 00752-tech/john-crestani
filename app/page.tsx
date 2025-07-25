@@ -1,14 +1,19 @@
 'use client';
 
+import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import Image from 'next/image';
 
-// Dynamically import components (improves performance and bypasses unused import lint issues)
-const Hero = dynamic(() => import('@/components/Hero'));
-const Testimonials = dynamic(() => import('@/components/Testimonials'));
-const FAQ = dynamic(() => import('@/components/FAQ'));
-const CTA = dynamic(() => import('@/components/CTA'));
-const Footer = dynamic(() => import('@/components/Footer'));
+import Hero from '@/components/Hero';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import CTA from '@/components/CTA';
+import Footer from '@/components/Footer';
+import WebinarInvite from '@/components/WebinarInvite';
+import SkepticismSection from '@/components/SkepticismSection';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
+
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
@@ -17,6 +22,15 @@ export default function Home() {
 
   const schema = { /* your schema here */ };
   const offerSchema = { /* your offer schema here */ };
+
+  const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.open(
+      'https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
 
   return (
     <main className="flex flex-col min-h-screen bg-black overflow-hidden">
@@ -90,8 +104,96 @@ export default function Home() {
         }
       `}</style>
 
+      <ExitIntentPopup />
+
       <Hero />
+
+      {/* VALUE PROPS SECTION */}
+      <section className="w-full flex justify-center bg-black py-8 px-4">
+        <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              FREEDOM
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              Work from Anywhere. <strong>Reclaim Your Time &amp; Control</strong>: Leave the 9-5 behind &amp; build a life on your terms, <strong>free from burnout</strong>.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              AI MASTERY
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              <strong>Future-Proof Your Expertise</strong>: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, <strong>securing your professional relevance</strong>.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
+              EASY ONBOARDING
+            </div>
+            <p className="text-sm text-gray-300 max-w-[240px]">
+              Get started quickly without <strong>stress or overwhelm</strong> — focused coaching and step-by-step training to <strong>ease your journey</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS SECTION */}
+      <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-b border-gray-800">
+        <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
+          {/* Stats items here */}
+        </div>
+      </section>
+
+      {/* BONUS CTA */}
+      <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
+        <div className="w-full max-w-5xl flex flex-col items-center text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
+            Seize Control: Unlock Your <span className="text-white">AI Marketer&apos;s Toolkit</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
+            Enroll today and activate these powerful bonuses&mdash;designed to <strong>remove uncertainty</strong> and accelerate your path to <strong>predictable income and renewed purpose</strong>.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {/* Bonus items */}
+          </div>
+          <button
+            className="cta-main mt-10"
+            onClick={handleBonusCta}
+            type="button"
+            tabIndex={0}
+            aria-label="YES! Secure My AI Marketers Club Access!"
+          >
+            YES! Secure My AI Marketers Club Access! →
+          </button>
+        </div>
+      </section>
+
       <Testimonials />
+
+      <SkepticismSection />
+
+      {/* JASON VIENTOS TESTIMONIAL (UPDATED) */}
+      <section className="w-full flex justify-center bg-black py-10 px-4">
+        {/* Testimonial content */}
+      </section>
+
+      {/* WEBINAR / VIDEO */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="john-video">
+          <WebinarInvite />
+        </div>
+      </Suspense>
+
+      {/* AI Growth In Focus Section */}
+      <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center text-center">
+        {/* AI Growth content */}
+      </section>
+
+      <p className="text-center text-xs text-gray-400 mt-2 mb-8">
+        {/* Infographic credit */}
+      </p>
+
       <FAQ />
       <CTA />
 
