@@ -7,24 +7,24 @@ const pageCanonicalUrl = 'https://johncrestani.me/super-affiliate-system-pro';
 
 export const metadata = {
   title:
-    "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
+    "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
   description:
-    'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+    'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
   alternates: { canonical: pageCanonicalUrl },
   openGraph: {
     title:
-      "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
+      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
     description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
     url: pageCanonicalUrl,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title:
-      "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
+      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
     description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
   },
 };
 
