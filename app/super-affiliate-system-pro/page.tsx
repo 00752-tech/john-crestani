@@ -6,25 +6,19 @@ import Image from 'next/image';
 const pageCanonicalUrl = 'https://johncrestani.me/super-affiliate-system-pro';
 
 export const metadata = {
-  title:
-    "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
-  description:
-    'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+  title: `Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review`,
+  description: `Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.`,
   alternates: { canonical: pageCanonicalUrl },
   openGraph: {
-    title:
-      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
-    description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+    title: `Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review`,
+    description: `Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.`,
     url: pageCanonicalUrl,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
-    description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+    title: `Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review`,
+    description: `Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.`,
   },
 };
 
@@ -195,7 +189,7 @@ export default function SuperAffiliateSystemProPage() {
             href={affiliateLinkAimc}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-400 text-black font-semibold rounded-full px-8 py-3 hover:bg-yellow-500 transition no-hover"
+            className="inline-block bg-yellow-400 text-black font-semibold rounded-full px-8 py-3 transition no-hover"
             aria-label="Join the AI Marketing Club for $27"
           >
             Join AI Marketing Club Now - $27
@@ -252,7 +246,7 @@ export default function SuperAffiliateSystemProPage() {
             href={affiliateLinkSaspUpgrade}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-pink-600 text-white font-bold rounded-full px-10 py-3 hover:bg-pink-700 transition no-hover"
+            className="inline-block bg-pink-600 text-white font-bold rounded-full px-10 py-3 transition no-hover"
             aria-label="Upgrade to Super Affiliate System Pro for $197"
           >
             Upgrade to SAS Pro - $197
@@ -390,7 +384,7 @@ export default function SuperAffiliateSystemProPage() {
               href={affiliateLinkFinalCta}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-yellow-400 text-black font-bold rounded-full px-10 py-4 hover:bg-yellow-500 transition no-hover"
+              className="inline-block bg-yellow-400 text-black font-bold rounded-full px-10 py-4 transition no-hover"
               aria-label="Join the AI Marketing Club and unlock Super Affiliate System Pro"
             >
               Join the AI Marketing Club &amp; Start Your Journey!
