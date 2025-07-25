@@ -7,24 +7,24 @@ const pageCanonicalUrl = 'https://johncrestani.me/super-affiliate-system-pro';
 
 export const metadata = {
   title:
-    "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
+    "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
   description:
-    'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani’s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+    'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
   alternates: { canonical: pageCanonicalUrl },
   openGraph: {
     title:
-      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
+      "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
     description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani’s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
     url: pageCanonicalUrl,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title:
-      "Super Affiliate System Pro (2025): John Crestani's AI Marketing Club Access & Review",
+      "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club Access & Review",
     description:
-      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani’s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
+      'Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&rsquo;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing.',
   },
 };
 
@@ -42,6 +42,7 @@ export default function SuperAffiliateSystemProPage() {
         <link rel="canonical" href={pageCanonicalUrl} />
       </Head>
 
+      {/* JSON-LD for SEO Rich Snippets */}
       <JsonLd
         item={{
           '@context': 'https://schema.org',
@@ -53,7 +54,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 '@type': 'Answer',
                 text:
-                  'Super Affiliate System Pro is now exclusively available inside John Crestani’s AI Marketing Club, accessible through this official page.',
+                  'Super Affiliate System Pro is now exclusively available inside John Crestani&rsquo;s AI Marketing Club, accessible through this official page.',
               },
             },
             {
@@ -67,7 +68,7 @@ export default function SuperAffiliateSystemProPage() {
             },
             {
               '@type': 'Question',
-              name: 'Is John Crestani’s Super Affiliate System Pro legit and worth it?',
+              name: 'Is John Crestani&rsquo;s Super Affiliate System Pro legit and worth it?',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text:
@@ -111,7 +112,7 @@ export default function SuperAffiliateSystemProPage() {
           '@type': 'Product',
           name: 'Super Affiliate System Pro',
           description:
-            'Super Affiliate System Pro is John Crestani’s flagship affiliate marketing program featuring 50+ hours of video training, buyer data, templates, community support, and AI Marketing Club integration.',
+            'Super Affiliate System Pro is John Crestani&rsquo;s flagship affiliate marketing program featuring 50+ hours of video training, buyer data, templates, community support, and AI Marketing Club integration.',
           image: 'https://johncrestani.me/new_super_affiliate_system_pro_2025.webp',
           brand: {
             '@type': 'Brand',
@@ -152,7 +153,7 @@ export default function SuperAffiliateSystemProPage() {
               author: 'Mark S.',
               datePublished: '2025-06-10',
               reviewBody:
-                "Truly comprehensive training. The upsell surprised me, but it's worth the investment.",
+                "Truly comprehensive training. The upsell surprised me, but it&apos;s worth the investment.",
               reviewRating: {
                 '@type': 'Rating',
                 ratingValue: '4',
@@ -170,8 +171,8 @@ export default function SuperAffiliateSystemProPage() {
             Super Affiliate System Pro by John Crestani
           </h1>
           <p className="text-lg max-w-3xl mx-auto mb-8">
-            Looking for Super Affiliate System Pro? It’s now the ultimate advanced affiliate marketing
-            course inside <strong>John Crestani’s AI Marketing Club</strong>! Join today for just{' '}
+            Looking for Super Affiliate System Pro? It&rsquo;s now the ultimate advanced affiliate marketing
+            course inside <strong>John Crestani&rsquo;s AI Marketing Club</strong>! Join today for just{' '}
             <strong>$27</strong> and get access to cutting-edge AI marketing tools. Then upgrade to SAS Pro for an exclusive $197.
           </p>
 
@@ -218,7 +219,7 @@ export default function SuperAffiliateSystemProPage() {
         <section className="mb-16 max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold mb-4 gradient-text">What is Super Affiliate System Pro?</h2>
           <p className="mb-4">
-            Super Affiliate System Pro (SASP) is John Crestani’s flagship affiliate marketing program, boasting over 50 hours of comprehensive video training,
+            Super Affiliate System Pro (SASP) is John Crestani&rsquo;s flagship affiliate marketing program, boasting over 50 hours of comprehensive video training,
             quizzes, done-for-you templates, buyer data access, and VIP community perks.
           </p>
           <p>
@@ -269,7 +270,7 @@ export default function SuperAffiliateSystemProPage() {
                 <li>Comprehensive and well-structured training</li>
                 <li>Valuable done-for-you templates and buyer data</li>
                 <li>Supportive, active community and VIP perks</li>
-                <li>Lifetime access & updates</li>
+                <li>Lifetime access &amp; updates</li>
                 <li>AI Marketing Club integration ensures future-proof skills</li>
               </ul>
             </div>
@@ -278,7 +279,7 @@ export default function SuperAffiliateSystemProPage() {
               <ul className="list-disc list-inside space-y-2">
                 <li>Upsell structure can be confusing initially</li>
                 <li>$197 upgrade cost may be a barrier for some</li>
-                <li>No overnight “get rich quick” promises</li>
+                <li>No overnight &ldquo;get rich quick&rdquo; promises</li>
                 <li>Some negative reviews exist (addressed openly in FAQ)</li>
               </ul>
             </div>
@@ -338,7 +339,7 @@ export default function SuperAffiliateSystemProPage() {
             <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <div>
                 <p className="italic text-gray-200 mb-4">
-                  “As a complete beginner, I needed a clear roadmap. John Crestani’s Super Affiliate System Pro, especially with the new AI Marketing Club tools, breaks everything down step-by-step. It's not just theory; it’s about actionable strategies that genuinely lead to real income and a sense of control over my financial future.”
+                  &ldquo;As a complete beginner, I needed a clear roadmap. John Crestani&rsquo;s Super Affiliate System Pro, especially with the new AI Marketing Club tools, breaks everything down step-by-step. It&apos;s not just theory; it&rsquo;s about actionable strategies that genuinely lead to real income and a sense of control over my financial future.&rdquo;
                 </p>
                 <p className="font-semibold text-yellow-400">— Sarah K., New Marketer (2025)</p>
               </div>
@@ -350,7 +351,7 @@ export default function SuperAffiliateSystemProPage() {
             <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <div>
                 <p className="italic text-gray-200 mb-4">
-                  “In a world where jobs feel uncertain due to AI, this program is a game-changer. It’s all about taking action and implementing proven campaigns that deliver results. I saw my first commissions in just a few days, and it feels incredible to build something truly future-proof and purposeful.”
+                  &ldquo;In a world where jobs feel uncertain due to AI, this program is a game-changer. It&rsquo;s all about taking action and implementing proven campaigns that deliver results. I saw my first commissions in just a few days, and it feels incredible to build something truly future-proof and purposeful.&rdquo;
                 </p>
                 <p className="font-semibold text-yellow-400">— Michael B., Career Changer (2025)</p>
               </div>
@@ -362,7 +363,7 @@ export default function SuperAffiliateSystemProPage() {
             <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <div>
                 <p className="italic text-gray-200 mb-4">
-                  “The sheer volume of content in SAS Pro is impressive, but it’s the quality and the active community that truly stand out. Knowing I have access to experienced affiliates and weekly webinars for the latest trends makes this more than just a course—it’s a supportive ecosystem for growth.”
+                  &ldquo;The sheer volume of content in SAS Pro is impressive, but it&rsquo;s the quality and the active community that truly stand out. Knowing I have access to experienced affiliates and weekly webinars for the latest trends makes this more than just a course&mdash;it&rsquo;s a supportive ecosystem for growth.&rdquo;
                 </p>
                 <p className="font-semibold text-yellow-400">— Jessica L., Scaling Affiliate (2025)</p>
               </div>
@@ -374,7 +375,7 @@ export default function SuperAffiliateSystemProPage() {
             <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <div>
                 <p className="italic text-gray-200 mb-4">
-                  “If you're serious about creating financial independence that isn't tied to a traditional job, this is it. SAS Pro and AIMC aren't 'get rich quick' schemes, but with dedication, the proven strategies work. It's helped me build a revenue stream that gives me true freedom.”
+                  &ldquo;If you&apos;re serious about creating financial independence that isn&apos;t tied to a traditional job, this is it. SAS Pro and AIMC aren&apos;t &apos;get rich quick&apos; schemes, but with dedication, the proven strategies work. It&apos;s helped me build a revenue stream that gives me true freedom.&rdquo;
                 </p>
                 <p className="font-semibold text-yellow-400">— David R., Entrepreneur (2025)</p>
               </div>
@@ -400,4 +401,3 @@ export default function SuperAffiliateSystemProPage() {
     </>
   );
 }
-
