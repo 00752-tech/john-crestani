@@ -182,7 +182,7 @@ export default function SuperAffiliateSystemProPage() {
             If you found SAS Pro links unavailable before, you&apos;re in the right place&mdash;official 2025 access is here.
           </p>
 
-          {/* Fix: Add flex utilities to properly space and align CTA buttons */}
+          {/* CTA Buttons Wrapper */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto">
             <CtaButtons baseAffiliateUrl={baseAffiliateUrl} />
           </div>
@@ -224,8 +224,6 @@ export default function SuperAffiliateSystemProPage() {
             <li>Lifetime updates and AI Marketing Club coaching integration</li>
           </ul>
         </section>
-
-        {/* Pricing & Upgrade CTA - use Client component instead of button here; so we won't render duplicate here */}
 
         {/* Pros & Cons */}
         <section className="mb-16 max-w-5xl mx-auto">
@@ -303,11 +301,10 @@ export default function SuperAffiliateSystemProPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Testimonial items */}
-            {/* ... same testimonial blocks without CTAs */}
+            {/* Testimonial items (not included here for brevity) */}
           </div>
 
-          {/* Final CTA - ensure correct layout for buttons here too */}
+          {/* Final CTA Buttons Wrapper */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto mt-12">
             <CtaButtons baseAffiliateUrl={baseAffiliateUrl} />
           </div>
