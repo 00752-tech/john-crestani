@@ -222,17 +222,23 @@ export default function AffiliateMarketingToolsPage() {
             className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
           >
             <p>Tired of guesswork in your online business?</p>
+            <p></p>{/* Added space */}
 
             <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
+            <p></p>{/* Added space */}
 
             <p>...to <strong>eliminate uncertainty</strong>.</p>
+            <p></p>{/* Added space */}
 
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
+            <p></p>{/* Added space */}
 
             <p>Accurately predict earnings.</p>
             <p>Effortlessly optimize campaigns.</p>
+            <p></p>{/* Added space */}
 
             <p>Make <strong>confident, data-driven decisions</strong>.</p>
+            <p></p>{/* Added space */}
 
             <p>Leading to <strong>consistent, reliable income</strong>.</p>
           </motion.div>
@@ -290,24 +296,34 @@ export default function AffiliateMarketingToolsPage() {
             </h2>
             <div className="text-xl text-gray-300 mb-8">
               <p>These tools give you foresight.</p>
+              <p></p>{/* Added space */}
 
               <p>But the *real* power comes from a proven system.</p>
+              <p></p>{/* Added space */}
 
               <p>Get instant access to John Crestani&apos;s AI Marketing Club...</p>
+              <p></p>{/* Added space */}
 
               <p>...for just <em>$27</em>.</p>
+              <p></p>{/* Added space */}
 
               <p>Then, unlock the exclusive opportunity:</p>
+              <p></p>{/* Added space */}
 
               <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
+              <p></p>{/* Added space */}
 
               <p>For only <em>$197</em>.</p>
+              <p></p>{/* Added space */}
 
               <p>Original price: $997.</p>
+              <p></p>{/* Added space */}
 
               <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
+              <p></p>{/* Added space */}
 
               <p>The ultimate blueprint to future-proof your income.</p>
+              <p></p>{/* Added space */}
 
               <p>Build genuine financial independence in the AI economy.</p>
             </div>
