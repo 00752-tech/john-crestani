@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react' // ShieldCheck not actually needed for visual, so removed
+import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 
-// Define canonical URL for consistency
 const pageCanonicalUrl = 'https://johncrestani.me/terms-and-conditions';
 
 export const metadata = {
@@ -84,12 +83,12 @@ export default function TermsAndConditions() {
 
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-white">3. Restrictions – Maintaining a Secure &amp; Ethical Environment</h2>
-              <p>To ensure a safe and productive environment for all users, specific restrictions apply to the use of Website material. These measures are in place to safeguard our content's value and prevent misuse, thereby protecting the integrity of our platform and community:</p>
+              <p>To ensure a safe and productive environment for all users, specific restrictions apply to the use of Website material. These measures are in place to safeguard our content&apos;s value and prevent misuse, thereby protecting the integrity of our platform and community:</p>
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>Publishing any Website material in any other media without permission</li>
                 <li>Selling, sublicensing, or otherwise commercializing any Website material</li>
                 <li>Publicly performing or showing any Website material</li>
-                <li>Using this Website in any way that is or may be damaging to the Website's functionality or security</li>
+                <li>Using this Website in any way that is or may be damaging to the Website&apos;s functionality or security</li>
                 <li>Using this Website contrary to applicable laws and regulations, or in a way that causes harm to the Website, any person, or business entity</li>
                 <li>Engaging in any data mining, data harvesting, data extracting, or any other similar activity in relation to this Website</li>
                 <li>Using this Website to engage in any advertising or marketing</li>
