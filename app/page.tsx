@@ -3,8 +3,8 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image';
-
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
