@@ -1,10 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from 'next/link'
-import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2, Shield, Gem, Briefcase } from 'lucide-react'
+import {
+  Calculator,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Youtube,
+  Maximize2,
+  Shield,
+  Briefcase
+  // Removed Gem, as it's not used
+} from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import ShareButtons from '@/components/ShareButtons'
 
-const pageCanonicalUrl = 'https://johncrestani.me/tools';
+const pageCanonicalUrl = 'https://johncrestani.me/tools'
 
 export const metadata = {
   title: 'AI-Powered Freedom: Your Essential Marketing & Financial Tools | JohnCrestani.me',
@@ -32,49 +42,65 @@ export default function ToolsPage() {
   const tools = [
     {
       name: "Affiliate Earnings Calculator",
-      description: <>Transform uncertainty into <strong>financial clarity</strong>. Confidently estimate your potential earnings, turning guesswork into a clear path to <strong>income stability</strong>.</>,
+      description: (
+        <>Transform uncertainty into <strong>financial clarity</strong>. Confidently estimate your potential earnings, turning guesswork into a clear path to <strong>income stability</strong>.</>
+      ),
       url: "/tools/affiliate-earnings-calculator",
       icon: Calculator,
     },
     {
       name: "Investment Calculator",
-      description: <>Gain <strong>control</strong> over your financial destiny. Project future returns to build a robust portfolio and achieve <strong>long-term security</strong> beyond the daily grind.</>,
+      description: (
+        <>Gain <strong>control</strong> over your financial destiny. Project future returns to build a robust portfolio and achieve <strong>long-term security</strong> beyond the daily grind.</>
+      ),
       url: "/tools/investment-calculator",
       icon: TrendingUp,
     },
     {
       name: "Dropshipping Profit Calculator",
-      description: <>Ditch the anxiety of unprofitability. Precisely calculate margins to ensure your dropshipping venture builds a <strong>sustainable, stress-free income stream</strong>.</>,
+      description: (
+        <>Ditch the anxiety of unprofitability. Precisely calculate margins to ensure your dropshipping venture builds a <strong>sustainable, stress-free income stream</strong>.</>
+      ),
       url: "/tools/dropshipping-profit-calculator",
       icon: DollarSign,
     },
     {
       name: "ROAS Calculator",
-      description: <>Measure your ad campaign&#39;s true impact and achieve <strong>unwavering confidence</strong>. Optimize spending to gain <strong>maximum control</strong> over your marketing profitability.</>,
+      description: (
+        <>Measure your ad campaign&#39;s true impact and achieve <strong>unwavering confidence</strong>. Optimize spending to gain <strong>maximum control</strong> over your marketing profitability.</>
+      ),
       url: "/tools/roas-calculator",
       icon: Shield,
     },
     {
       name: "Influencer Earnings Calculator",
-      description: <>Uncover your true value as a creator. Estimate earnings to empower your negotiations and build a <strong>purpose-driven, authentic brand</strong> that rewards you.</>,
+      description: (
+        <>Uncover your true value as a creator. Estimate earnings to empower your negotiations and build a <strong>purpose-driven, authentic brand</strong> that rewards you.</>
+      ),
       url: "/tools/influencer-earnings-calculator",
       icon: Users,
     },
     {
       name: "YouTube Earnings Calculator",
-      description: <>Unlock the <strong>hidden potential</strong> of your content. Forecast AdSense revenue to make informed decisions, transforming your passion into a <strong>predictable income source</strong>.</>,
+      description: (
+        <>Unlock the <strong>hidden potential</strong> of your content. Forecast AdSense revenue to make informed decisions, transforming your passion into a <strong>predictable income source</strong>.</>
+      ),
       url: "/tools/youtube-earning-calculator",
       icon: Youtube,
     },
     {
       name: "Niche Profitability Calculator",
-      description: <>Find your <strong>path to purpose and profit</strong>. Analyze niches with clarity, empowering you to make strategic choices that lead to <strong>meaningful financial success</strong>.</>,
+      description: (
+        <>Find your <strong>path to purpose and profit</strong>. Analyze niches with clarity, empowering you to make strategic choices that lead to <strong>meaningful financial success</strong>.</>
+      ),
       url: "/tools/niche-profitability-calculator",
       icon: Briefcase,
     },
     {
       name: "Affiliate Link CTR Optimizer",
-      description: <>Take <strong>absolute control</strong> of your affiliate performance. Optimize your links to maximize clicks and accelerate your journey to <strong>financial autonomy</strong>.</>,
+      description: (
+        <>Take <strong>absolute control</strong> of your affiliate performance. Optimize your links to maximize clicks and accelerate your journey to <strong>financial autonomy</strong>.</>
+      ),
       url: "/tools/affiliate-link-ctr-optimizer",
       icon: Maximize2,
     },
@@ -94,7 +120,10 @@ export default function ToolsPage() {
             "item": {
               "@type": "SoftwareApplication",
               "name": tool.name,
-              "description": typeof tool.description === 'string' ? tool.description : undefined, // for schema only
+              // schema.org description expects a string; fallback if tool.description is ReactNode
+              "description": typeof tool.description === 'string'
+                ? tool.description
+                : undefined,
               "url": `https://johncrestani.me${tool.url}`,
               "applicationCategory": "BusinessApplication",
               "offers": {
@@ -118,12 +147,8 @@ export default function ToolsPage() {
           <p className="text-md text-center mb-10 text-gray-400 max-w-xl mx-auto">
             Every tool here is battle-tested, free to use, and designed to give you the <span className="text-pink-400 font-semibold">confidence</span> and <span className="text-yellow-400 font-semibold">community support</span> you deserve on your path to financial freedom.
           </p>
-          
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
-            role="list"
-            aria-label="AI Marketing & Financial Tools"
-          >
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" role="list" aria-label="AI Marketing & Financial Tools">
             {tools.map((tool) => (
               <Link
                 key={tool.name}
