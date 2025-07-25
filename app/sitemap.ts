@@ -10,6 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'affiliate-marketing-tools/earnings-calculator',
     'affiliate-marketing-tools/niche-profitability-calculator',
     'affiliate-marketing-tools/link-ctr-optimizer',
+
+    // Add Super Affiliate System Pro here:
+    'super-affiliate-system-pro',
+
     'financial-tools/investment-calculator',
     'ecommerce-tools/dropshipping-profit-calculator',
     'advertising-tools/roas-calculator',
@@ -17,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'content-creation-tools/youtube-earnings-calculator',
     'contact',
     'privacy-policy',
-    // Add your new page here:
     'affiliate-disclosure',
   ];
 
