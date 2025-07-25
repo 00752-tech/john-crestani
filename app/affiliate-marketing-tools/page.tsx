@@ -214,15 +214,21 @@ export default function AffiliateMarketingToolsPage() {
             Unlock Predictable Profits: Your AI-Powered Affiliate &amp; E-commerce Toolkit
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
           >
-            Tired of guesswork in your online business? Our free, <strong>AI-powered tools and calculators</strong> are your blueprint to <strong>eliminate uncertainty</strong> and <strong>seize control</strong> of your affiliate marketing and e-commerce ventures. Accurately predict earnings, effortlessly optimize campaigns, and make <strong>confident, data-driven decisions</strong> that lead to <strong>consistent, reliable income</strong>.
-          </motion.p>
+            <p>Tired of guesswork in your online business?</p>
+            <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
+            <p>...to <strong>eliminate uncertainty</strong>.</p>
+            <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
+            <p>Accurately predict earnings. Effortlessly optimize campaigns.</p>
+            <p>Make <strong>confident, data-driven decisions</strong>.</p>
+            <p>Leading to <strong>consistent, reliable income</strong>.</p>
+          </motion.div>
 
           <motion.div
             initial="hidden"
@@ -273,11 +279,21 @@ export default function AffiliateMarketingToolsPage() {
             className="mt-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl font-bold mb-6 gradient-text">
-              Ready to Stop Guessing and Start Earning Consistently?
+              Ready to Stop Guessing... and Start Earning Consistently?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              These tools give you foresight, but the real power comes from a proven system. Get instant access to John Crestani&apos;s AI Marketing Club for just $27, and unlock the exclusive opportunity to upgrade to **Super Affiliate System Pro** for only $197 (original price: $997). That&apos;s a massive **$800 saving** on the ultimate blueprint to future-proof your income and build genuine financial independence in the AI economy!
-            </p>
+            <div className="text-xl text-gray-300 mb-8">
+              <p>These tools give you foresight.</p>
+              <p>But the *real* power comes from a proven system.</p>
+              <p>Get instant access to John Crestani&apos;s AI Marketing Club...</p>
+              <p>...for just <em>$27</em>.</p>
+              <p>Then, unlock the exclusive opportunity:</p>
+              <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
+              <p>For only <em>$197</em>.</p>
+              <p>Original price: $997.</p>
+              <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
+              <p>The ultimate blueprint to future-proof your income.</p>
+              <p>Build genuine financial independence in the AI economy.</p>
+            </div>
             <button
               onClick={handleCtaClick}
               className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-10 rounded-full text-xl font-bold mt-2 select-none"
