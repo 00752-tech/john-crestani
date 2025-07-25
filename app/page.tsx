@@ -40,8 +40,14 @@ export default function Home() {
           name="description"
           content="Discover John Crestani's AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -105,210 +111,67 @@ export default function Home() {
       `}</style>
 
       <ExitIntentPopup />
+
+      {/* Hero Section */}
       <Hero />
 
-      {/* VALUE PROPS SECTION */}
-      <section className="w-full flex justify-center bg-black py-8 px-4">
-        <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              FREEDOM
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Work from Anywhere. <strong>Reclaim Your Time &amp; Control</strong>: Leave the 9-5 behind &amp; build a life on your terms, <strong>free from burnout</strong>.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              AI MASTERY
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              <strong>Future-Proof Your Expertise</strong>: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, <strong>securing your professional relevance</strong>.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              EASY ONBOARDING
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Get started quickly without <strong>stress or overwhelm</strong> — focused coaching and step-by-step training to <strong>ease your journey</strong>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* STATS SECTION */}
-      <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-b border-gray-800">
-        <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-          <div className="flex flex-col items-center">
-            <span className="mb-2">
-              {/* SVG icon */}
-              <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 14L3 9.5l9-4.5 9 4.5-9 4.5zm0 0v6m6-3a6 6 0 00-12 0" />
-              </svg>
-            </span>
-            <div className="text-4xl md:text-5xl font-semibold text-yellow-400">50k+</div>
-            <p className="text-gray-400 text-xs mt-1 font-medium">Students Trained</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="mb-2">
-              <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 9.4V7a5 5 0 00-10 0v2.4l-2.3 2.3a2.001 2.001 0 001.4 3.4h14a2.001 2.001 0 001.4-3.4L17 9.4zm-5 9v2m0 0h-2m2 0h2" />
-              </svg>
-            </span>
-            <div className="text-4xl md:text-5xl font-semibold text-yellow-400">$20M+</div>
-            <p className="text-gray-400 text-xs mt-1 font-medium">Affiliate Earnings</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="mb-2">
-              <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 14h6m-3-12a7 7 0 00-7 7c0 2.38 1.19 4.47 3.04 5.74A2 2 0 0012 22a2 2 0 001.96-1.26A7.003 7.003 0 0012 2z" />
-              </svg>
-            </span>
-            <div className="text-4xl md:text-5xl font-semibold text-yellow-400">9+</div>
-            <p className="text-gray-400 text-xs mt-1 font-medium">Years of Innovation</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="mb-2">
-              <svg className="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.181c.969 0 1.371 1.24.588 1.81l-3.387 2.461a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.539 1.118l-3.387-2.461a1 1 0 00-1.176 0l-3.387 2.461c-.783.57-1.838-.196-1.538-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.98 9.393c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.287-3.966z" />
-              </svg>
-            </span>
-            <div className="text-4xl md:text-5xl font-semibold text-yellow-400">4.6&#9733;</div>
-            <p className="text-gray-400 text-xs mt-1 font-medium">Avg. Trustpilot Score</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="mb-2">
-              <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 9V5a3 3 0 00-6 0v9a2 2 0 002 2h4a2 2 0 002-2v-1m0 0l4-4a2 2 0 00-2.8-2.8l-2.2 2.2zm0 0v2a4 4 0 01-4 4H7a2 2 0 01-2-2v-5a2 2 0 012-2h1" />
-              </svg>
-            </span>
-            <div className="text-4xl md:text-5xl font-semibold text-yellow-400">96%</div>
-            <p className="text-gray-400 text-xs mt-1 font-medium">Student Satisfaction</p>
-          </div>
-        </div>
-      </section>
-
-      {/* BONUS CTA */}
-      <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
-        <div className="w-full max-w-5xl flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
-            Seize Control: Unlock Your <span className="text-white">AI Marketer&apos;s Toolkit</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
-            Enroll today and activate these powerful bonuses&mdash;designed to <strong>remove uncertainty</strong> and accelerate your path to <strong>predictable income and renewed purpose</strong>.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {/* Bonus items */}
-          </div>
-          <button
-            className="cta-main mt-10"
-            onClick={handleBonusCta}
-            type="button"
-            tabIndex={0}
-            aria-label="YES! Secure My AI Marketers Club Access!"
-          >
-            YES! Secure My AI Marketers Club Access! →
-          </button>
-        </div>
-      </section>
-
-      <Testimonials />
-
-      <SkepticismSection />
-
-      {/* JASON VIENTOS TESTIMONIAL (UPDATED) */}
-      <section className="w-full flex justify-center bg-black py-10 px-4">
-        <div className="w-full max-w-3xl bg-[#18181b] rounded-2xl shadow-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
-          <div className="w-full md:w-1/3 flex flex-col items-center">
-            <Image
-              src="/bio_image_jason_vientos.webp"
-              alt="Jason Vientos – Experienced Affiliate"
-              width={220}
-              height={220}
-              className="rounded-full shadow-lg object-cover border-2 border-yellow-400"
-              priority
-              style={{ maxWidth: '180px', height: 'auto' }}
-            />
-            <span className="mt-4 text-lg font-semibold text-yellow-400 text-center">Jason Vientos</span>
-            <span className="text-xs text-gray-400 text-center">Affiliate Marketer &amp; Brand Partner</span>
-          </div>
-          <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Why I&apos;m Promoting This System</h3>
-            <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-              I&apos;ve been in affiliate marketing for over 9 years and followed John Crestani&apos;s SAS Pro system since the early days.
-              <span className="block mt-2 text-yellow-400 font-medium">I rarely promote offers, but this one&apos;s different.</span>
-              This new AI-powered version isn&apos;t just another course — <strong>it&apos;s the solution built for today&apos;s uncertain landscape.</strong>
-               If you&apos;re tired of spinning your wheels <strong>and feeling out of control</strong>, this is the fastest way to turn AI disruption into <strong>reliable, predictable online income.</strong><br />
-              <br></br>I&apos;ve seen it work, and I recommend it because I believe in the results <strong>and the true sense of empowerment it provides.</strong>
-            </p>
-            <p className="text-pink-400 text-base md:text-lg mt-6 mb-4 italic">
-              AI is disrupting jobs—but smart marketers are turning it into <strong>predictable, future-proof income</strong>. Watch how John Crestani did it <span className="font-semibold">and how you can seize control</span>.
-            </p>
-            <button
-              type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(
-                  'https://afe40mfth79r3y7a3ii22qcmeg.hop.clickbank.net/?&traffic_source=jason_trusts_cta',
-                  '_blank',
-                  'noopener,noreferrer'
-                );
-              }}
-              className="jason-cta"
-            >
-              YES! Start My Predictable AI Income Journey &rarr;
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* WEBINAR / VIDEO */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <div id="john-video">
-          <WebinarInvite />
-        </div>
-      </Suspense>
-
-      {/* AI Growth In Focus Section */}
-      <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center text-center">
-        <div className="max-w-3xl w-full flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-            <span className="highlight-yellow">Your Future-Proof Income:</span> Tapping into the AI Economy&apos;s Trillion-Dollar Opportunity
-          </h2>
-          <p className="text-lg md:text-xl text-white mb-8 max-w-2xl">
-            While others fear the <q className="font-semibold">&apos;skills earthquake&apos;</q> and economic uncertainty, this explosive growth creates unprecedented pathways for <span className="highlight-yellow">financial resilience and career reinvention.</span>{" "}
-            <span className="highlight-yellow">Discover how smart marketers are claiming their share.</span>
-          </p>
-          <Image
-            src="/ai-usage-chart.jpg"
-            alt="AI Growth In Focus – Global AI Market Infographic"
-            width={700}
-            height={1100}
-            className="rounded-2xl shadow-xl border-2 border-pink-400 mb-8 bg-white"
-            priority={false}
-          />
-          <p className="text-base md:text-lg text-pink-300 max-w-2xl">
-            <span className="highlight-yellow">
-              This isn&apos;t just a trend; it&apos;s your blueprint for unprecedented income and career stability in the AI economy. It&apos;s time to seize control.
-            </span>
+      {/* About Section */}
+      <section id="about" className="w-full flex justify-center bg-black py-16 px-4">
+        <div className="w-full max-w-5xl text-center">
+          {/* Your About Content Here */}
+          <h2 className="text-3xl font-bold mb-4 text-white">About John Crestani’s AI Marketing Club</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            {/* Add your about intro content focused on your mission, credibility, and user benefits */}
           </p>
         </div>
       </section>
 
-      <p className="text-center text-xs text-gray-400 mt-2 mb-8">
-        Infographic: Digital Silk. (2025). AI statistics [Infographic].{' '}
-        <a
-          href="https://www.digitalsilk.com/digital-trends/ai-statistics/"
-          className="underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          digitalsilk.com
-        </a>
-      </p>
+      {/* Features Section */}
+      <section id="features" className="w-full flex justify-center bg-gray-900 py-16 px-4">
+        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          {/* Your Features Content Here */}
+          {/* Sample feature box */}
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-yellow-400">Feature One</h3>
+            <p className="text-gray-400">Description of the feature and how it adds value.</p>
+          </div>
+          {/* Repeat for other features */}
+        </div>
+      </section>
 
-      <FAQ />
+      {/* Tools Section */}
+      <section id="tools" className="w-full flex justify-center bg-black py-16 px-4">
+        <div className="w-full max-w-6xl">
+          {/* You can either embed the Tools component here or list tools with proper UI */}
+          {/* Placeholder */}
+          <h2 className="text-3xl font-bold mb-6 text-center gradient-text">Free AI-Powered Tools & Calculators</h2>
+          {/* Include or link to your tools grid/list */}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="w-full flex justify-center bg-gray-900 py-16 px-4">
+        <div className="w-full max-w-5xl">
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="w-full flex justify-center bg-black py-16 px-4">
+        <div className="w-full max-w-5xl">
+          <FAQ />
+        </div>
+      </section>
+
+      {/* Contact / Community Section */}
+      <section id="contact" className="w-full flex justify-center bg-gray-900 py-16 px-4">
+        <div className="w-full max-w-5xl text-center text-gray-300">
+          {/* Add contact info, newsletter signup or CTA */}
+          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p>Contact us at <a href="mailto:info@johncrestani.me" className="text-yellow-400 underline">info@johncrestani.me</a></p>
+        </div>
+      </section>
+
       <CTA />
 
       <div className="container mx-auto px-4 py-8">
