@@ -187,7 +187,7 @@ export default function AffiliateMarketingToolsPage() {
         }}
       />
 
-      {/* 🔗 Product Schema for the CTA offer */}
+      {/* 🔗 Product Schema for the CTA offer - FIXED with image */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -195,6 +195,7 @@ export default function AffiliateMarketingToolsPage() {
           "name": "John Crestani's AI Marketing Club & Super Affiliate System Pro Upgrade Offer",
           "description": productDescription,
           "url": ctaAffiliateLink,
+          "image": "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
           "brand": {
             "@type": "Brand",
             "name": "John Crestani"
@@ -203,19 +204,19 @@ export default function AffiliateMarketingToolsPage() {
             "@type": "Offer",
             "url": ctaAffiliateLink,
             "priceCurrency": "USD",
-            "price": "27", // Initial price of AI Marketing Club
+            "price": "27",
             "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock",
-            "hasMerchantReturnPolicy": { // Basic return policy - typically merchant level
+            "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
               "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-              "merchantReturnDays": 60 // ClickBank's standard return window
+              "merchantReturnDays": 60
             }
           },
-          "isRelatedTo": { // Link to the main SAS Pro product/course
-            "@type": "Course", // or Product, depending on how specific you want to be
+          "isRelatedTo": {
+            "@type": "Course",
             "name": "Super Affiliate System Pro",
-            "url": "https://johncrestani.me/super-affiliate-system-pro" // Assuming this is the main SAS Pro page
+            "url": "https://johncrestani.me/super-affiliate-system-pro"
           }
         }}
       />
@@ -249,26 +250,20 @@ export default function AffiliateMarketingToolsPage() {
             Unlock Predictable Profits: Your AI-Powered Affiliate &amp; E-commerce Toolkit
           </motion.h1>
 
-          {/* --- This replaces the previous motion.div with Jon Benson spacing --- */}
+          {/* Jon Benson style spaced copy block */}
           <div className="text-xl text-gray-300 max-w-3xl mx-auto text-center space-y-6 mb-12">
             <p>Tired of guesswork in your online business?</p>
-            <p></p>
 
             <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
-            <p></p>
 
             <p>...to <strong>eliminate uncertainty</strong>.</p>
-            <p></p>
 
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
-            <p></p>
 
             <p>Accurately predict earnings.</p>
             <p>Effortlessly optimize campaigns.</p>
-            <p></p>
 
             <p>Make <strong>confident, data-driven decisions</strong>.</p>
-            <p></p>
 
             <p>Leading to <strong>consistent, reliable income</strong>.</p>
           </div>
@@ -327,34 +322,24 @@ export default function AffiliateMarketingToolsPage() {
 
             <div className="text-xl text-gray-300 space-y-6 max-w-xl mx-auto leading-relaxed">
               <p>These tools give you foresight.</p>
-              <p></p>
 
               <p>But the <em>real</em> power comes from a proven system.</p>
-              <p></p>
 
               <p>Get instant access to <strong>John Crestani&apos;s AI Marketing Club</strong>...</p>
-              <p></p>
 
               <p>...for just <em>$27</em>.</p>
-              <p></p>
 
               <p>Then, unlock the exclusive opportunity:</p>
-              <p></p>
 
               <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
-              <p></p>
 
               <p>For only <em>$197</em>.</p>
-              <p></p>
 
               <p>Original price: <s>$997</s>.</p>
-              <p></p>
 
               <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
-              <p></p>
 
               <p>The ultimate blueprint to future-proof your income.</p>
-              <p></p>
 
               <p>Build genuine financial independence in the AI economy.</p>
             </div>
