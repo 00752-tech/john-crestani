@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react';
 import { JsonLd } from 'react-schemaorg';
 import ShareButtons from '@/components/ShareButtons';
-import { motion } from 'framer-motion';  // <-- Added this import
+import { motion } from 'framer-motion';
 import React from 'react';
 
 export default function AffiliateMarketingToolsPage() {
@@ -186,7 +186,6 @@ export default function AffiliateMarketingToolsPage() {
       />
 
       <div className="min-h-screen bg-black text-white pt-32 pb-20">
-        {/* No hover effect for CTA button */}
         <style jsx global>{`
           .no-hover,
           .no-hover:hover,
@@ -215,34 +214,25 @@ export default function AffiliateMarketingToolsPage() {
             Unlock Predictable Profits: Your AI-Powered Affiliate &amp; E-commerce Toolkit
           </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
-          >
+          {/* --- This replaces the previous motion.div with Jon Benson spacing --- */}
+          <div className="text-xl text-gray-300 max-w-3xl mx-auto text-center space-y-6 mb-12">
             <p>Tired of guesswork in your online business?</p>
-            <p></p>{/* Added space */}
-
-            <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
-            <p></p>{/* Added space */}
-
-            <p>...to <strong>eliminate uncertainty</strong>.</p>
-            <p></p>{/* Added space */}
-
+            <p>
+              Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...
+            </p>
+            <p>
+              ...to <strong>eliminate uncertainty</strong>.
+            </p>
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
-            <p></p>{/* Added space */}
-
             <p>Accurately predict earnings.</p>
             <p>Effortlessly optimize campaigns.</p>
-            <p></p>{/* Added space */}
-
-            <p>Make <strong>confident, data-driven decisions</strong>.</p>
-            <p></p>{/* Added space */}
-
-            <p>Leading to <strong>consistent, reliable income</strong>.</p>
-          </motion.div>
+            <p>
+              Make <strong>confident, data-driven decisions</strong>.
+            </p>
+            <p>
+              Leading to <strong>consistent, reliable income</strong>.
+            </p>
+          </div>
 
           <motion.div
             initial="hidden"
