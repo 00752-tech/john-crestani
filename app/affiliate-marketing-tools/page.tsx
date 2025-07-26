@@ -212,11 +212,11 @@ export default function AffiliateMarketingToolsPage() {
             "url": ctaAffiliateLink,
             "priceCurrency": "USD",
             "price": "27",
-            "itemCondition": "https://schema.org/NewCondition",
-            "availability": "https://schema.org/InStock",
+            "itemCondition": "http://schema.org/NewCondition",
+            "availability": "http://schema.org/InStock",
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "returnPolicyCategory": "http://schema.org/MerchantReturnFiniteReturnWindow",
               "merchantReturnDays": 60
             }
           },
@@ -246,8 +246,9 @@ export default function AffiliateMarketingToolsPage() {
             "url": courseUrl,
             "priceCurrency": "USD",
             "price": "197",
-            "itemCondition": "https://schema.org/NewCondition",
-            "availability": "https://schema.org/InStock"
+            "itemCondition": "http://schema.org/NewCondition",
+            "availability": "http://schema.org/InStock",
+            "category": "Online Course"
           },
           "hasCourseInstance": [
             {
