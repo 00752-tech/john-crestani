@@ -119,12 +119,12 @@ export default function AffiliateMarketingToolsPage() {
 
   const productDescription = "Get instant access to John Crestani's AI Marketing Club for just $27, and unlock the exclusive opportunity to upgrade to Super Affiliate System Pro for only $197 (original price: $997). This is the ultimate blueprint to future-proof your income and build genuine financial independence in the AI economy.";
 
-  // Define course details based on seo report.txt for consistency
+  // Course schema details to fix GSC errors
   const courseName = "Super Affiliate System Pro";
   const courseUrl = "https://johncrestani.me/super-affiliate-system-pro";
-  const courseDescription = "Super Affiliate System Pro (SASP) is a comprehensive online training program, typically structured over six or seven weeks, developed by John Crestani. The program's core focus revolves around teaching participants how to generate income through affiliate marketing by leveraging paid advertising strategies across major platforms like Facebook, Google, YouTube, and Native Ads. It offers over 50 hours of content, including video tutorials, quizzes, and practical homework assignments, along with resources like pre-built templates, buyer data, and a private Facebook community.";
+  const courseDescription = "Super Affiliate System Pro (SASP) is a comprehensive 50+ hour online training program by John Crestani teaching affiliate marketing with paid ads across Facebook, Google, YouTube, and Native ads. It includes videos, quizzes, templates, buyer data, and community support to help marketers scale.";
   const courseProviderName = "John Crestani";
-  const courseProviderUrl = "https://johncrestani.me"; // Or his main website
+  const courseProviderUrl = "https://johncrestani.me";
 
   return (
     <>
@@ -133,7 +133,7 @@ export default function AffiliateMarketingToolsPage() {
         <meta name="description" content={pageDesc} />
       </Head>
 
-      {/* 🔗 Top-level schema: CollectionPage */}
+      {/* CollectionPage schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -170,7 +170,7 @@ export default function AffiliateMarketingToolsPage() {
         }}
       />
 
-      {/* 🔗 Secondary schema: ItemList of calculators */}
+      {/* ItemList schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -194,7 +194,7 @@ export default function AffiliateMarketingToolsPage() {
         }}
       />
 
-      {/* 🔗 Product Schema for the CTA offer */}
+      {/* Product schema for CTA offer */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -211,29 +211,24 @@ export default function AffiliateMarketingToolsPage() {
             "@type": "Offer",
             "url": ctaAffiliateLink,
             "priceCurrency": "USD",
-            "price": "27", // Initial price of AI Marketing Club
+            "price": "27",
             "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock",
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
               "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-              "merchantReturnDays": 60 // ClickBank's standard return window
+              "merchantReturnDays": 60
             }
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "550"
-          },
-          "isRelatedTo": {
-            "@type": "Course", // This points to the Course schema defined below
-            "name": courseName,
-            "url": courseUrl
           }
         }}
       />
 
-      {/* 🔗 Course Schema for Super Affiliate System Pro - ADDED TO FIX ERRORS */}
+      {/* Course schema for Super Affiliate System Pro */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -246,29 +241,30 @@ export default function AffiliateMarketingToolsPage() {
             "name": courseProviderName,
             "url": courseProviderUrl
           },
-          "offers": { // Represents the primary offer for the course itself
+          "offers": {
             "@type": "Offer",
             "url": courseUrl,
             "priceCurrency": "USD",
-            "price": "197", // The upgrade price for SAS Pro mentioned on the page
+            "price": "197",
             "itemCondition": "https://schema.org/NewCondition",
-            "availability": "https://schema.org/InStock",
-            "category": "Online Course" // Added to resolve "Missing field 'category'"
+            "availability": "https://schema.org/InStock"
           },
-          "hasCourseInstance": {
-            "@type": "CourseInstance",
-            "courseMode": "online",
-            "courseWorkload": "PT50H", // 50+ hours of content (P = Period, T = Time, 50H = 50 Hours)
-            "instructor": {
-              "@type": "Person",
-              "name": "John Crestani",
-              "sameAs": [
-                "https://linkedin.com/in/johncrestani",
-                "https://instagram.com/johncrestani",
-                "https://twitter.com/johncrestani"
-              ]
+          "hasCourseInstance": [
+            {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "courseWorkload": "PT50H",  // ISO8601 duration for 50 hours
+              "instructor": {
+                "@type": "Person",
+                "name": "John Crestani",
+                "sameAs": [
+                  "https://linkedin.com/in/johncrestani",
+                  "https://instagram.com/johncrestani",
+                  "https://twitter.com/johncrestani"
+                ]
+              }
             }
-          }
+          ]
         }}
       />
 
@@ -287,7 +283,7 @@ export default function AffiliateMarketingToolsPage() {
             cursor: pointer !important;
             transition: none !important;
             filter: none !important;
-            opacity: 1 !important; /* Ensure opacity is full */
+            opacity: 1 !important;
           }
         `}</style>
         <div className="container mx-auto px-4">
@@ -304,18 +300,12 @@ export default function AffiliateMarketingToolsPage() {
           {/* Jon Benson style spaced copy block */}
           <div className="text-xl text-gray-300 max-w-3xl mx-auto text-center space-y-6 mb-12">
             <p>Tired of guesswork in your online business?</p>
-
             <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
-
             <p>...to <strong>eliminate uncertainty</strong>.</p>
-
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
-
             <p>Accurately predict earnings.</p>
             <p>Effortlessly optimize campaigns.</p>
-
             <p>Make <strong>confident, data-driven decisions</strong>.</p>
-
             <p>Leading to <strong>consistent, reliable income</strong>.</p>
           </div>
 
@@ -359,7 +349,7 @@ export default function AffiliateMarketingToolsPage() {
             ))}
           </motion.div>
 
-          {/* Hub-level CTA to main offer, custom affiliate link, no hover effect, homepage button styling */}
+          {/* Hub-level CTA to main offer */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -373,25 +363,15 @@ export default function AffiliateMarketingToolsPage() {
 
             <div className="text-xl text-gray-300 space-y-6 max-w-xl mx-auto leading-relaxed">
               <p>These tools give you foresight.</p>
-
               <p>But the <em>real</em> power comes from a proven system.</p>
-
               <p>Get instant access to <strong>John Crestani&apos;s AI Marketing Club</strong>...</p>
-
               <p>...for just <em>$27</em>.</p>
-
               <p>Then, unlock the exclusive opportunity:</p>
-
               <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
-
               <p>For only <em>$197</em>.</p>
-
               <p>Original price: <s>$997</s>.</p>
-
               <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
-
               <p>The ultimate blueprint to future-proof your income.</p>
-
               <p>Build genuine financial independence in the AI economy.</p>
             </div>
 
