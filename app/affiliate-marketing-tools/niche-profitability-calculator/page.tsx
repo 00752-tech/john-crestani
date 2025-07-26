@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client';
+/* eslint-disable @typescript-eslint/no-explicit-any */'use client';
 
 import Head from 'next/head';
 import Link from 'next/link';
