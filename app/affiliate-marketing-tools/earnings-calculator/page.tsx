@@ -9,16 +9,11 @@ import { JsonLd } from 'react-schemaorg';
 import ClientCalculatorPage from './ClientCalculatorPage';
 import React from 'react';
 
-export const metadata = {
-  title: 'Affiliate Commission Calculator: Predict Profits Instantly',
-  description:
-    "End affiliate earning uncertainty. Use our free AI-powered calculator to predict commissions, optimize campaigns, and scale your income faster with confidence.",
-};
-
 export default function CalculatorPage() {
   const pageUrl = 'https://johncrestani.me/affiliate-marketing-tools/earnings-calculator';
-  const pageTitle = metadata.title;
-  const pageDescription = metadata.description;
+  const pageTitle = 'Affiliate Commission Calculator: Predict Profits Instantly';
+  const pageDescription =
+    "End affiliate earning uncertainty. Use our free AI-powered calculator to predict commissions, optimize campaigns, and scale your income faster with confidence.";
 
   // Updated no-hover CTA button affiliate link as provided
   const ctaAffiliateLink = "https://36833m53eb3x6kfb8ji15p2sc4.hop.clickbank.net/?&traffic_source=aff_mkt_erngs_calc_pg";
