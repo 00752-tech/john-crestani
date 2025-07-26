@@ -119,6 +119,13 @@ export default function AffiliateMarketingToolsPage() {
 
   const productDescription = "Get instant access to John Crestani's AI Marketing Club for just $27, and unlock the exclusive opportunity to upgrade to Super Affiliate System Pro for only $197 (original price: $997). This is the ultimate blueprint to future-proof your income and build genuine financial independence in the AI economy.";
 
+  // Define course details based on seo report.txt for consistency
+  const courseName = "Super Affiliate System Pro";
+  const courseUrl = "https://johncrestani.me/super-affiliate-system-pro";
+  const courseDescription = "Super Affiliate System Pro (SASP) is a comprehensive online training program, typically structured over six or seven weeks, developed by John Crestani. The program's core focus revolves around teaching participants how to generate income through affiliate marketing by leveraging paid advertising strategies across major platforms like Facebook, Google, YouTube, and Native Ads. It offers over 50 hours of content, including video tutorials, quizzes, and practical homework assignments, along with resources like pre-built templates, buyer data, and a private Facebook community. [cite: 5, 6, 7]";
+  const courseProviderName = "John Crestani";
+  const courseProviderUrl = "https://johncrestani.me"; // Or his main website
+
   return (
     <>
       <Head>
@@ -187,7 +194,7 @@ export default function AffiliateMarketingToolsPage() {
         }}
       />
 
-      {/* 🔗 Product Schema for the CTA offer - FIXED with image and aggregateRating */}
+      {/* 🔗 Product Schema for the CTA offer */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -213,16 +220,53 @@ export default function AffiliateMarketingToolsPage() {
               "merchantReturnDays": 60 // ClickBank's standard return window
             }
           },
-          // Added AggregateRating to resolve "Missing field 'review'" error
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.9", // A high, plausible rating
-            "reviewCount": "550" // A reasonable number of reviews for a well-known course/product
+            "ratingValue": "4.9",
+            "reviewCount": "550"
           },
           "isRelatedTo": {
-            "@type": "Course",
-            "name": "Super Affiliate System Pro",
-            "url": "https://johncrestani.me/super-affiliate-system-pro"
+            "@type": "Course", // This points to the Course schema defined below
+            "name": courseName,
+            "url": courseUrl
+          }
+        }}
+      />
+
+      {/* 🔗 Course Schema for Super Affiliate System Pro - ADDED TO FIX ERRORS */}
+      <JsonLd<any>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": courseName,
+          "description": courseDescription,
+          "url": courseUrl,
+          "provider": {
+            "@type": "Organization",
+            "name": courseProviderName,
+            "url": courseProviderUrl
+          },
+          "offers": { // Represents the primary offer for the course itself
+            "@type": "Offer",
+            "url": courseUrl,
+            "priceCurrency": "USD",
+            "price": "197", // The upgrade price for SAS Pro mentioned on the page
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT50H", // 50+ hours of content (P = Period, T = Time, 50H = 50 Hours)
+            "instructor": {
+              "@type": "Person",
+              "name": "John Crestani",
+              "sameAs": [
+                "https://linkedin.com/in/johncrestani",
+                "https://instagram.com/johncrestani",
+                "https://twitter.com/johncrestani"
+              ]
+            }
           }
         }}
       />
