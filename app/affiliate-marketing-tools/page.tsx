@@ -122,7 +122,7 @@ export default function AffiliateMarketingToolsPage() {
   // Define course details based on seo report.txt for consistency
   const courseName = "Super Affiliate System Pro";
   const courseUrl = "https://johncrestani.me/super-affiliate-system-pro";
-  const courseDescription = "Super Affiliate System Pro (SASP) is a comprehensive online training program, typically structured over six or seven weeks, developed by John Crestani. The program's core focus revolves around teaching participants how to generate income through affiliate marketing by leveraging paid advertising strategies across major platforms like Facebook, Google, YouTube, and Native Ads. It offers over 50 hours of content, including video tutorials, quizzes, and practical homework assignments, along with resources like pre-built templates, buyer data, and a private Facebook community. [cite: 5, 6, 7]";
+  const courseDescription = "Super Affiliate System Pro (SASP) is a comprehensive online training program, typically structured over six or seven weeks, developed by John Crestani. The program's core focus revolves around teaching participants how to generate income through affiliate marketing by leveraging paid advertising strategies across major platforms like Facebook, Google, YouTube, and Native Ads. It offers over 50 hours of content, including video tutorials, quizzes, and practical homework assignments, along with resources like pre-built templates, buyer data, and a private Facebook community.";
   const courseProviderName = "John Crestani";
   const courseProviderUrl = "https://johncrestani.me"; // Or his main website
 
@@ -252,7 +252,8 @@ export default function AffiliateMarketingToolsPage() {
             "priceCurrency": "USD",
             "price": "197", // The upgrade price for SAS Pro mentioned on the page
             "itemCondition": "https://schema.org/NewCondition",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "category": "Online Course" // Added to resolve "Missing field 'category'"
           },
           "hasCourseInstance": {
             "@type": "CourseInstance",
