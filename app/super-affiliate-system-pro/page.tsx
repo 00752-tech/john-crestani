@@ -27,7 +27,7 @@ export default function SuperAffiliateSystemProPage() {
       );
     };
 
-  // Inline CTA Buttons — use in multiple places with consistent spacing
+  // Inline CTA Buttons — reusable layout with spacing, no duplicates
   const AffiliateButtons = () => (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto">
       <button
@@ -107,7 +107,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Yes, SAS Pro is a legitimate program created by John Crestani, a recognized affiliate marketing expert with a decade of proven results. It offers comprehensive training, templates, buyer data, and ongoing community support, now supercharged with AI to help marketers scale their income and future-proof their skills for 2025 and beyond. It’s designed to provide predictable income, alleviating economic fears.",
+                  "Yes, SAS Pro is a legitimate program created by John Crestani, a recognized affiliate marketing expert with a decade of proven results. It offers comprehensive training, templates, buyer data, and ongoing community support, now supercharged with AI to help marketers scale their income and future-proof their skills for 2025 and beyond. It&rsquo;s designed to provide predictable income, alleviating economic fears.",
               },
             },
             {
@@ -134,7 +134,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "SASP is bundled with the AI Marketing Club, providing access to cutting-edge AI-powered marketing tools, automations, and training that future-proof your affiliate skills. You’ll learn to leverage AI for content generation, ad optimization, data analysis, and more, ensuring you stay competitive and build a resilient income stream in the evolving digital landscape. This &quot;AI vacuum&quot; helps absorb market uncertainties.",
+                  "SASP is bundled with the AI Marketing Club, providing access to cutting-edge AI-powered marketing tools, automations, and training that future-proof your affiliate skills. You&rsquo;ll learn to leverage AI for content generation, ad optimization, data analysis, and more, ensuring you stay competitive and build a resilient income stream in the evolving digital landscape. This &quot;AI vacuum&quot; helps absorb market uncertainties.",
               },
             },
             {
@@ -206,7 +206,7 @@ export default function SuperAffiliateSystemProPage() {
             Super Affiliate System Pro by John Crestani
           </h1>
           <p className="text-lg max-w-3xl mx-auto mb-8">
-            Join <strong>John Crestani&apos;s AI Marketing Club</strong> today for just <strong>$27</strong> and get access to cutting-edge AI marketing tools along with the exclusive upgrade to <strong>Super Affiliate System Pro</strong> for <strong>$197</strong>.
+            Join <strong>John Crestani&rsquo;s AI Marketing Club</strong> today for just <strong>$27</strong> and get access to cutting-edge AI marketing tools along with the exclusive upgrade to <strong>Super Affiliate System Pro</strong> for <strong>$197</strong>.
           </p>
           <div className="max-w-md mx-auto mb-8 rounded-lg overflow-hidden shadow-lg">
             <Image
@@ -232,17 +232,13 @@ export default function SuperAffiliateSystemProPage() {
             End the Fear: The SAS Pro &amp; AI Marketing Club Advantage
           </h2>
           <p>
-            In these uncertain economic times, fear of job displacement, inflation, and market instability can be paralyzing. <strong>Super Affiliate System Pro</strong>, now integrated with John Crestani&apos;s <em>AI Marketing Club</em>, acts as a powerful <em><strong>&quot;fear vacuum,&quot;</strong></em> sucking away your anxieties by providing a proven, predictable path to income.
+            In these uncertain economic times, fear of job displacement, inflation, and market instability can be paralyzing. <strong>Super Affiliate System Pro</strong>, now integrated with John Crestani&rsquo;s <em>AI Marketing Club</em>, acts as a powerful <em><strong>&quot;fear vacuum,&quot;</strong></em> sucking away your anxieties by providing a proven, predictable path to income.
           </p>
           <p>
-            Gain <strong>unshakeable control</strong> over your financial future by building
-            multiple AI-powered affiliate revenue streams. Future-proof your career by mastering automation
-            and cutting-edge AI marketing strategies, ensuring you&apos;re always ahead of the curve.
+            Gain <strong>unshakeable control</strong> over your financial future by building multiple AI-powered affiliate revenue streams. Future-proof your career by mastering automation and cutting-edge AI marketing strategies, ensuring you&rsquo;re always ahead of the curve.
           </p>
           <p>
-            Don&apos;t get left behind, wondering what the future holds. Regain your <strong>agency and purpose</strong> through
-            our battle-tested affiliate training, powerfully elevated with the intelligence of AI.
-            This isn&apos;t just a course; it&apos;s your blueprint for stability and predictable income in any economy.
+            Don&rsquo;t get left behind, wondering what the future holds. Regain your <strong>agency and purpose</strong> through our battle-tested affiliate training, powerfully elevated with the intelligence of AI. This isn&rsquo;t just a course; it&rsquo;s your blueprint for stability and predictable income in any economy.
           </p>
         </section>
 
@@ -250,12 +246,10 @@ export default function SuperAffiliateSystemProPage() {
         <section className="mb-16 max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold mb-4 gradient-text">What is Super Affiliate System Pro?</h2>
           <p className="mb-4">
-            <em>Super Affiliate System Pro (SASP)</em> is John Crestani&apos;s flagship affiliate marketing program, boasting over 50 hours of comprehensive video training,
-            quizzes, done-for-you templates, buyer data access, and VIP community perks.
+            <em>Super Affiliate System Pro (SASP)</em> is John Crestani&rsquo;s flagship affiliate marketing program, boasting over 50 hours of comprehensive video training, quizzes, done-for-you templates, buyer data access, and VIP community perks.
           </p>
           <p>
-            It&apos;s designed for marketers ready to scale with up-to-date techniques guided by an industry veteran with a decade of affiliate success.
-            With the integration of the AI Marketing Club, SASP now provides unparalleled tools and insights to leverage artificial intelligence for maximized results.
+            It&rsquo;s designed for marketers ready to scale with up-to-date techniques guided by an industry veteran with a decade of affiliate success. With the integration of the AI Marketing Club, SASP now provides unparalleled tools and insights to leverage artificial intelligence for maximized results.
           </p>
         </section>
 
@@ -278,7 +272,7 @@ export default function SuperAffiliateSystemProPage() {
             Access the AI Marketing Club today for just <strong>$27</strong>. This entry point gives you essential AI-powered marketing tools, foundational training, and a supportive community.
           </p>
           <p className="mb-6">
-            Inside the club, you&apos;ll discover the exclusive option to upgrade to the full Super Affiliate System Pro for a one-time payment of <strong>$197</strong> (a staggering discount from its original price of $997!). This upgrade unlocks the complete, advanced training.
+            Inside the club, you&rsquo;ll discover the exclusive option to upgrade to the full Super Affiliate System Pro for a one-time payment of <strong>$197</strong> (a staggering discount from its original price of $997!). This upgrade unlocks the complete, advanced training.
           </p>
           <Link
             href={`${ctaAffiliateLink}?&traffic_source=sasp_page_upgrade`}
