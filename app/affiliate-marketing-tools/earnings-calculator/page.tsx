@@ -14,7 +14,7 @@ export default function CalculatorPage() {
   const pageDescription =
     "End affiliate earning uncertainty. Use our free AI-powered calculator to predict commissions, optimize campaigns, and scale your income faster with confidence.";
 
-  // Updated no-hover CTA button affiliate link as provided
+  // Updated no-hover CTA button affiliate link
   const ctaAffiliateLink = "https://36833m53eb3x6kfb8ji15p2sc4.hop.clickbank.net/?&traffic_source=aff_mkt_erngs_calc_pg";
 
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -39,7 +39,7 @@ export default function CalculatorPage() {
         <meta name="description" content={pageDescription} />
       </Head>
 
-      {/* WebPage schema with mainEntity SoftwareApplication */}
+      {/* WebPage schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -176,7 +176,7 @@ export default function CalculatorPage() {
         }}
       />
 
-      {/* Course schema for Super Affiliate System Pro */}
+      {/* Corrected Course schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -198,20 +198,22 @@ export default function CalculatorPage() {
             availability: "https://schema.org/InStock",
             category: "Online Course"
           },
-          hasCourseInstance: {
-            "@type": "CourseInstance",
-            courseMode: "online",
-            courseWorkload: "PT50H",
-            instructor: {
-              "@type": "Person",
-              name: "John Crestani",
-              sameAs: [
-                "https://linkedin.com/in/johncrestani",
-                "https://instagram.com/johncrestani",
-                "https://twitter.com/johncrestani"
-              ]
+          hasCourseInstance: [
+            {
+              "@type": "CourseInstance",
+              courseMode: "online",
+              courseWorkload: "PT50H",
+              instructor: {
+                "@type": "Person",
+                name: "John Crestani",
+                sameAs: [
+                  "https://linkedin.com/in/johncrestani",
+                  "https://instagram.com/johncrestani",
+                  "https://twitter.com/johncrestani"
+                ]
+              }
             }
-          }
+          ]
         }}
       />
 
@@ -235,7 +237,7 @@ export default function CalculatorPage() {
         `}</style>
 
         <div className="container mx-auto px-4">
-          {/* Main Headline */}
+          {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +248,7 @@ export default function CalculatorPage() {
             End Affiliate Income Uncertainty. <br className="hidden sm:inline" />Predict Your Profits Now.
           </motion.h1>
 
-          {/* Intro copy in Jon Benson style */}
+          {/* Intro copy with Jon Benson style spacing */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -265,7 +267,7 @@ export default function CalculatorPage() {
             <p>No more costly surprises. Just <strong>predictable profitability</strong> and the confidence to scale.</p>
           </motion.div>
 
-          {/* Calculator Component */}
+          {/* Embedded Calculator Component */}
           <ClientCalculatorPage
             pageUrlPath="/affiliate-marketing-tools/earnings-calculator"
             backUrl="/affiliate-marketing-tools"
@@ -323,6 +325,7 @@ export default function CalculatorPage() {
             </button>
           </motion.div>
 
+          {/* Social share buttons */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
