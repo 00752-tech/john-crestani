@@ -20,5 +20,6 @@ export const metadata = {
 };
 
 export default function Head() {
+  // Returning null because metadata API covers the head
   return null;
 }
