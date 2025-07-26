@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import Link from 'next/link';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import ShareButtons from '@/components/ShareButtons';
@@ -40,8 +39,7 @@ export default function CalculatorPage() {
         <meta name="description" content={pageDescription} />
       </Head>
 
-      {/* JSON-LD schemas here (WebPage, BreadcrumbList, FAQPage, Product, Course) */}
-
+      {/* WebPage schema with mainEntity SoftwareApplication */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -76,6 +74,7 @@ export default function CalculatorPage() {
         }}
       />
 
+      {/* BreadcrumbList schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -88,6 +87,7 @@ export default function CalculatorPage() {
         }}
       />
 
+      {/* FAQPage schema */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -137,6 +137,7 @@ export default function CalculatorPage() {
         }}
       />
 
+      {/* Product schema for the CTA offer */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -145,7 +146,10 @@ export default function CalculatorPage() {
           description: productDescription,
           url: ctaAffiliateLink,
           image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
-          brand: { "@type": "Brand", name: "John Crestani" },
+          brand: {
+            "@type": "Brand",
+            name: "John Crestani"
+          },
           offers: {
             "@type": "Offer",
             url: ctaAffiliateLink,
@@ -159,11 +163,20 @@ export default function CalculatorPage() {
               merchantReturnDays: 60
             }
           },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "550" },
-          isRelatedTo: { "@type": "Course", name: courseName, url: courseUrl }
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "550"
+          },
+          isRelatedTo: {
+            "@type": "Course",
+            name: courseName,
+            url: courseUrl
+          }
         }}
       />
 
+      {/* Course schema for Super Affiliate System Pro */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -171,7 +184,11 @@ export default function CalculatorPage() {
           name: courseName,
           description: courseDescription,
           url: courseUrl,
-          provider: { "@type": "Organization", name: courseProviderName, url: courseProviderUrl },
+          provider: {
+            "@type": "Organization",
+            name: courseProviderName,
+            url: courseProviderUrl
+          },
           offers: {
             "@type": "Offer",
             url: courseUrl,
