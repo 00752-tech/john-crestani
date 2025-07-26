@@ -14,17 +14,17 @@ const pageDescription =
 const ctaAffiliateLink = "https://0b29ap10s8br7tff3kb85z1r70.hop.clickbank.net/";
 
 const courseName = "Super Affiliate System Pro";
-const courseUrl = "https://johncrestani.me/super-affiliate-system-pro";
 const courseDescription =
   "Super Affiliate System Pro (SASP) is a comprehensive online training program, typically structured over six or seven weeks, developed by John Crestani. The program's core focus revolves around teaching participants how to generate income through affiliate marketing by leveraging paid advertising strategies across major platforms like Facebook, Google, YouTube, and Native Ads. It offers over 50 hours of content, including video tutorials, quizzes, and practical homework assignments, along with resources like pre-built templates, buyer data, and a private Facebook community, all now integrated with cutting-edge AI marketing tools.";
 const courseProviderName = "John Crestani";
 const courseProviderUrl = "https://johncrestani.me";
 
 export default function SuperAffiliateSystemProPage() {
-  const openAffiliateLink = (trafficSource: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.open(`${ctaAffiliateLink}?&traffic_source=${trafficSource}`, "_blank", "noopener,noreferrer");
-  };
+  const openAffiliateLink =
+    (trafficSource: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      window.open(`${ctaAffiliateLink}?&traffic_source=${trafficSource}`, "_blank", "noopener,noreferrer");
+    };
 
   return (
     <>
@@ -58,7 +58,15 @@ export default function SuperAffiliateSystemProPage() {
                 text: "Super Affiliate System Pro is now exclusively available inside John Crestani’s AI Marketing Club, accessible through this official page.",
               },
             },
-            // ... include other FAQ similarly ...
+            {
+              "@type": "Question",
+              name: "Can I buy SAS Pro without joining the AI Marketing Club (AIMC)?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "No, SAS Pro is offered as an exclusive upsell inside the AI Marketing Club membership, which starts at $27.",
+              },
+            },
+            // ... add all other FAQ questions here as needed exactly as before ...
           ],
         }}
       />
@@ -79,7 +87,11 @@ export default function SuperAffiliateSystemProPage() {
             availability: "https://schema.org/InStock",
             seller: { "@type": "Organization", name: "JohnCrestani.me" },
           },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1500" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "1500",
+          },
           provider: {
             "@type": "Organization",
             name: courseProviderName,
@@ -102,9 +114,7 @@ export default function SuperAffiliateSystemProPage() {
             <Image src="/new_super_affiliate_system_pro_2025.webp" alt="Super Affiliate System Pro 2025" width={600} height={400} priority className="rounded-lg" />
           </div>
 
-          <p className="text-yellow-400 italic mb-6">
-            Official 2025 access is here.
-          </p>
+          <p className="text-yellow-400 italic mb-6">Official 2025 access is here.</p>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-lg mx-auto">
             <button
@@ -136,7 +146,7 @@ export default function SuperAffiliateSystemProPage() {
           </div>
         </section>
 
-        {/* Add other static content sections you need here */}
+        {/* Add additional static content sections here as needed */}
 
         {/* Social share buttons */}
         <ShareButtons url={pageUrl} title={pageTitle} />
@@ -144,3 +154,4 @@ export default function SuperAffiliateSystemProPage() {
     </>
   );
 }
+
