@@ -117,6 +117,8 @@ export default function AffiliateMarketingToolsPage() {
     );
   };
 
+  const productDescription = "Get instant access to John Crestani's AI Marketing Club for just $27, and unlock the exclusive opportunity to upgrade to Super Affiliate System Pro for only $197 (original price: $997). This is the ultimate blueprint to future-proof your income and build genuine financial independence in the AI economy.";
+
   return (
     <>
       <Head>
@@ -185,6 +187,39 @@ export default function AffiliateMarketingToolsPage() {
         }}
       />
 
+      {/* 🔗 Product Schema for the CTA offer */}
+      <JsonLd<any>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "John Crestani's AI Marketing Club & Super Affiliate System Pro Upgrade Offer",
+          "description": productDescription,
+          "url": ctaAffiliateLink,
+          "brand": {
+            "@type": "Brand",
+            "name": "John Crestani"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": ctaAffiliateLink,
+            "priceCurrency": "USD",
+            "price": "27", // Initial price of AI Marketing Club
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "hasMerchantReturnPolicy": { // Basic return policy - typically merchant level
+              "@type": "MerchantReturnPolicy",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 60 // ClickBank's standard return window
+            }
+          },
+          "isRelatedTo": { // Link to the main SAS Pro product/course
+            "@type": "Course", // or Product, depending on how specific you want to be
+            "name": "Super Affiliate System Pro",
+            "url": "https://johncrestani.me/super-affiliate-system-pro" // Assuming this is the main SAS Pro page
+          }
+        }}
+      />
+
       <div className="min-h-screen bg-black text-white pt-32 pb-20">
         <style jsx global>{`
           .no-hover,
@@ -217,21 +252,25 @@ export default function AffiliateMarketingToolsPage() {
           {/* --- This replaces the previous motion.div with Jon Benson spacing --- */}
           <div className="text-xl text-gray-300 max-w-3xl mx-auto text-center space-y-6 mb-12">
             <p>Tired of guesswork in your online business?</p>
-            <p>
-              Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...
-            </p>
-            <p>
-              ...to <strong>eliminate uncertainty</strong>.
-            </p>
+            <p></p>
+
+            <p>Our free, <strong>AI-powered tools and calculators</strong> are your blueprint...</p>
+            <p></p>
+
+            <p>...to <strong>eliminate uncertainty</strong>.</p>
+            <p></p>
+
             <p>Seize control of your affiliate marketing and e-commerce ventures.</p>
+            <p></p>
+
             <p>Accurately predict earnings.</p>
             <p>Effortlessly optimize campaigns.</p>
-            <p>
-              Make <strong>confident, data-driven decisions</strong>.
-            </p>
-            <p>
-              Leading to <strong>consistent, reliable income</strong>.
-            </p>
+            <p></p>
+
+            <p>Make <strong>confident, data-driven decisions</strong>.</p>
+            <p></p>
+
+            <p>Leading to <strong>consistent, reliable income</strong>.</p>
           </div>
 
           <motion.div
@@ -288,24 +327,34 @@ export default function AffiliateMarketingToolsPage() {
 
             <div className="text-xl text-gray-300 space-y-6 max-w-xl mx-auto leading-relaxed">
               <p>These tools give you foresight.</p>
+              <p></p>
 
               <p>But the <em>real</em> power comes from a proven system.</p>
+              <p></p>
 
               <p>Get instant access to <strong>John Crestani&apos;s AI Marketing Club</strong>...</p>
+              <p></p>
 
               <p>...for just <em>$27</em>.</p>
+              <p></p>
 
               <p>Then, unlock the exclusive opportunity:</p>
+              <p></p>
 
               <p>Upgrade to <strong>Super Affiliate System Pro</strong>.</p>
+              <p></p>
 
               <p>For only <em>$197</em>.</p>
+              <p></p>
 
               <p>Original price: <s>$997</s>.</p>
+              <p></p>
 
               <p>That&apos;s a massive <strong>$800 saving</strong>!</p>
+              <p></p>
 
               <p>The ultimate blueprint to future-proof your income.</p>
+              <p></p>
 
               <p>Build genuine financial independence in the AI economy.</p>
             </div>
