@@ -1,52 +1,105 @@
 "use client";
 
+import React from "react";
 import Head from "next/head";
 import { JsonLd } from "react-schemaorg";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 
-const pageCanonicalUrl = "https://johncrestani.me/super-affiliate-system-pro";
+const pageCanonicalUrl = "https://johnscrestani.me/super-affiliate-system-pro";
 
 const pageTitle =
-  "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club & Review - End Fear, Gain Predictability & Control";
+  "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club &amp; Review - End Fear, Gain Predictability &amp; Control";
 
 const pageDescription =
-  "Discover the NEW Super Affiliate System Pro for 2025 inside John Crestani&apos;s AI Marketing Club. Future-proof your income with AI, overcome job displacement, and gain financial confidence.";
+  "Discover the NEW Super Affiliate System Pro for 2025 inside John Crestani&apos;s AI Marketing Club. Future-proof your income, overcome job displacement, and gain financial confidence.";
 
-const ctaAffiliateBase = "https://47546qfweyby8.hrefing.com";
+const CTA_BASE = "https://47546qfweyby8.hrefing.com";
 
 const affiliateLinks = {
-  aimc: `${ctaAffiliateBase}/?&traffic_source=aimc`,
-  upgrade: `${ctaAffiliateBase}/?&traffic_source=upgrade`,
-  final: `${ctaAffiliateBase}/?&traffic_source=final`,
+  aimc: `${CTA_BASE}/?traffic=aimc`,
+  upgrade: `${CTA_BASE}/?traffic=upgrade`,
+  final: `${CTA_BASE}/?traffic=final`,
 };
 
-// CSS classes to disable link URL reveal on hover/focus
-const noHoverLinkClass = "no-underline hover:no-underline focus:no-underline";
+const ctaMainClass = "cta-main"; // single source for class name
 
-export default function SuperAffiliateSystem() {
+export default function SuperAffiliateSystemPage() {
+  // Handler to open affiliate links with noreferrer noopener
+  function handleAffiliateClick(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    url: string
+  ) {
+    e.preventDefault();
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <>
+      {/* Global Style for CTA buttons with no URL showing on hover */}
+      <style jsx global>{`
+        .cta-main {
+          all: unset;
+          display: inline-block;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          padding: 0.7rem 1.6rem;
+          border-radius: 9999px;
+          box-shadow: 0 4px 24px rgba(34, 197, 94, 0.1);
+          background: linear-gradient(241deg, #2563eb, #0ea9f5);
+          color: white;
+          cursor: pointer;
+          user-select: none;
+          transition: background 0.2s ease, transform 0.15s ease;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+        .cta-main:hover,
+        .cta-main:focus {
+          background: linear-gradient(241deg, #0ea9f5, #2563eb);
+          transform: scale(1.04);
+          outline: none;
+        }
+        .cta-upgrade {
+          background: linear-gradient(241deg, #db2777, #be185d);
+        }
+        .cta-upgrade:hover,
+        .cta-upgrade:focus {
+          background: linear-gradient(241deg, #be185d, #db2777);
+          outline: none;
+          transform: scale(1.04);
+        }
+      `}</style>
+
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={pageCanonicalUrl} />
       </Head>
 
-      {/* JSON-LD Breadcrumb */}
+      {/* JSON-LD for Breadcrumb */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://johncrestani.me" },
-            { "@type": "ListItem", position: 2, name: "Super Affiliate System Pro", item: pageCanonicalUrl },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://johnscrestani.me",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Super Affiliate System Pro",
+              item: pageCanonicalUrl,
+            },
           ],
         }}
       />
 
-      {/* JSON-LD FAQ */}
+      {/* JSON-LD for FAQ */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -57,7 +110,8 @@ export default function SuperAffiliateSystem() {
               name: "Where is Super Affiliate System Pro (SASP) available?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Super Affiliate System Pro is now exclusively available inside John Crestani&rsquo;s AI Marketing Club. This page provides official 2025 access, replacing older versions.",
+                text:
+                  "Super Affiliate System Pro is exclusively available inside John Crestani&apos;s AI Marketing Club as of 2025.",
               },
             },
             {
@@ -65,39 +119,17 @@ export default function SuperAffiliateSystem() {
               name: "Can I buy SAS Pro without joining the AI Marketing Club?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "No. SAS Pro is offered only as an upsell inside the AI Marketing Club, starting at $27.",
+                text:
+                  "No, SAS Pro is only offered as an upsell through the AI Marketing Club.",
               },
             },
             {
               "@type": "Question",
-              name: "Is SAS Pro legit and worth it?",
+              name: "Is SAS Pro legit and effective?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. Created by John Crestani, providing robust training, buyer data and community support, enhanced with AI.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Are there complaints or scams?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Some find the upsell confusing or price steep, but a 100% money-back guarantee applies. The program is legit with real value.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What is the refund policy?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "60-day money-back guarantee via ClickBank supports your purchase risk-free.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "How does SAS Pro use AI to future-proof income?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Bundled with AI Marketing Club, SAS Pro teaches use of AI tools and automations for resilient, scalable affiliate income.",
+                text:
+                  "Yes; it is a thoroughly-tested program with active community support and continuous updates.",
               },
             },
             {
@@ -105,22 +137,42 @@ export default function SuperAffiliateSystem() {
               name: "Is SAS Pro a get-rich-quick scheme?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "No. It requires work and consistency, focusing on predictable, sustainable affiliate marketing.",
+                text:
+                  "No, it requires dedicated work and consistency to see results.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Does SAS Pro offer a refund?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Yes, a 60-day money-back guarantee via ClickBank is included for peace of mind.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How does SAS Pro leverage AI to future-proof income?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "It integrates AI-powered tools and automations to help build sustainable affiliate income streams.",
               },
             },
           ],
         }}
       />
 
-      {/* JSON-LD Product and Course */}
+      {/* JSON-LD for Product & Course */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
           "@type": ["Product", "Course"],
           name: "Super Affiliate System Pro",
-          description: "Comprehensive affiliate marketing course with AI integration for 2025 success, provided by John Crestani.",
+          description: pageDescription,
           url: pageCanonicalUrl,
-          image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
+          image:
+            "https://johnscrestani.me/new_super_affiliate_system_pro.webp",
           brand: { "@type": "Brand", name: "John Crestani" },
           offers: {
             "@type": "Offer",
@@ -135,29 +187,40 @@ export default function SuperAffiliateSystem() {
               returnMethod: "https://schema.org/ReturnByMail",
               merchantReturnLink: "https://support.clickbank.com/",
               merchantReturnDays: 60,
+              refundFees: "https://schema.org/NoRestockingFee",
               refundType: "https://schema.org/FullRefund",
-              returnFees: "https://schema.org/NoRestockingFee",
               returnPolicyCategory: "https://schema.org/MerchantReturnFiniteWindow",
             },
           },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1550" },
-          provider: { "@type": "Organization", name: "John Crestani", url: "https://johncrestani.me" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "1550",
+          },
+          provider: {
+            "@type": "Organization",
+            name: "John Crestani",
+            url: "https://johnscrestani.me",
+          },
         }}
       />
 
-      <main className="bg-black text-white min-h-screen px-6 py-12 max-w-6xl mx-auto">
-
+      <main className="bg-black text-white min-h-screen px-6 py-12 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 gradient-text leading-tight">
             Super Affiliate System Pro — A New Era for 2025
           </h1>
-          <p className="text-lg max-w-3xl mx-auto mb-8">
-            Step into your future with confidence. Join <strong>John Crestani’s AI Marketing Club</strong> today for just <strong>$27</strong> and unlock the powerful Super Affiliate System Pro upgrade at <strong>$197</strong>. Discover the path to stable, AI-powered affiliate income designed to beat economic uncertainty.
+          <p className="max-w-3xl mx-auto text-lg mb-8">
+            Step into your future with confidence. Join{" "}
+            <strong>John Crestani&apos;s AI Marketing Club</strong> today for
+            just <strong>$27</strong> and unlock the powerful Super Affiliate
+            System Pro upgrade at <strong>$197</strong>, to build resilient,
+            AI-powered affiliate income streams.
           </p>
           <div className="max-w-md mx-auto mb-8">
             <Image
-              src="/new_super_affiliate_system_pro_2025.webp"
+              src="/new_super_affiliate_system_pro.webp"
               alt="Super Affiliate System Pro 2025"
               width={600}
               height={400}
@@ -166,59 +229,65 @@ export default function SuperAffiliateSystem() {
             />
           </div>
           <p className="text-yellow-400 italic mb-6">
-            Official 2025 access is here — your gateway to financial control.
+            Official 2025 access — your gateway to financial control.
           </p>
-          <Link
-            href={affiliateLinks.aimc}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${noHoverLinkClass} inline-block bg-yellow-400 text-black font-semibold rounded-full px-8 py-3 transition text-lg mx-auto`}
+          <button
+            type="button"
+            onClick={(e) => handleAffiliateClick(e, affiliateLinks.aimc)}
+            className={`${ctaMainClass} w-full md:w-auto`}
             aria-label="Join John Crestani AI Marketing Club for $27"
           >
-            Join the Club Now for $27
-          </Link>
+            Join the Club — Just $27
+          </button>
         </section>
 
-        {/* Future-Proof Your Income Section */}
-        <section className="mb-16 max-w-4xl mx-auto text-center space-y-6">
+        {/* Future-Proof Income Section */}
+        <section className="mb-16 max-w-5xl mx-auto text-center space-y-6">
           <h2 className="text-3xl font-semibold gradient-text">
             Future-Proof Your Income with SASP &amp; AI
           </h2>
           <p>
-            In an unpredictable economy, protect your future by mastering affiliate marketing powered by AI. SASP offers tools and training designed to help you build multiple income streams, reducing reliance on uncertain employment.
+            Navigate uncertainty with skills that matter. SASP empowers you to
+            master AI-driven affiliate marketing and build multiple income
+            streams.
           </p>
           <p>
-            Gain indispensable digital skills that keep you relevant, productive, and in control — wherever the market leads.
+            Gain adaptability, resilience, and competitive edge in a changing
+            job market.
           </p>
           <p>
-            Join a thriving community, unlock premium coaching, and transform disruption into opportunity with SASP.
+            Join an active community and transform potential disruption into
+            growth.
           </p>
         </section>
 
         {/* What is SASP Section */}
         <section className="mb-16 max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold gradient-text mb-4">
-            What Is Super Affiliate System Pro?
+            What is Super Affiliate System Pro?
           </h2>
           <p className="mb-4">
-            Super Affiliate System Pro (SASP) is John Crestani’s flagship affiliate training program with over 50 hours of content, templates, buyer data, and active community support.
+            Super Affiliate System Pro (SASP) is an extensive, updated
+            affiliate marketing system with over 50 hours of training,
+            proprietary data, and community support.
           </p>
           <p>
-            Updated for 2025, SASP now integrates AI-powered strategies and automations, empowering marketers to work smarter and scale faster.
+            Now integrated with AI-driven tools, SASP prepares you for the
+            fastest evolving marketing landscape.
           </p>
         </section>
 
         {/* Curriculum Section */}
         <section className="mb-16 max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold gradient-text mb-4">
-            Course Curriculum &amp; Features
+            Course Highlights
           </h2>
           <ul className="list-disc list-inside space-y-3 text-gray-300">
-            <li><strong>AI-Powered Ad Creation &amp; Campaign Scaling</strong> — Step-by-step guides for creating and automating winning campaigns.</li>
-            <li><strong>Done-For-You AI-Optimized Assets</strong> — High-converting templates and swipe files, updated for 2025 trends.</li>
-            <li><strong>Exclusive Buyer Data &amp; Case Studies</strong> — Proven market insights that inform your strategy.</li>
-            <li><strong>VIP Coaching &amp; Community Access</strong> — Personalized support, live events, and networking.</li>
-            <li><strong>Lifetime Updates &amp; AI Club Integration</strong> — Continuous course refreshes keeping you at the cutting edge.</li>
+            <li>AI-powered ad creation and scaling strategies</li>
+            <li>Done-for-you, AI-optimized marketing assets</li>
+            <li>Exclusive buyer data &amp; proven case studies</li>
+            <li>VIP coaching &amp; community access</li>
+            <li>Lifetime updates &amp; AI club integration</li>
           </ul>
         </section>
 
@@ -228,48 +297,50 @@ export default function SuperAffiliateSystem() {
             Pricing &amp; Special Offer
           </h2>
           <p className="mb-4">
-            Enter the AI Marketing Club for just <strong>$27</strong> and begin your journey today.
+            Start your journey with the AI Marketing Club for just $27.
           </p>
           <p className="mb-6">
-            Upgrade to the full Super Affiliate System Pro course for a special one-time price of <strong>$197</strong>. This investment includes premium tools, coaching, and lifetime access.
+            Upgrade to SASP today for $197, including premium tools and lifetime
+            access.
           </p>
-          <Link
-            href={affiliateLinks.upgrade}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${noHoverLinkClass} inline-block bg-pink-600 text-white font-bold rounded-full px-10 py-3 transition text-lg mx-auto`}
-            aria-label="Upgrade to Super Affiliate System Pro for $197"
+          <button
+            type="button"
+            onClick={(e) => handleAffiliateClick(e, affiliateLinks.upgrade)}
+            className={`${ctaMainClass} cta-upgrade w-full md:w-auto`}
+            aria-label="Upgrade to SASP for $197"
           >
-            Upgrade &amp; Secure Your Spot for $197
-          </Link>
-          <p className="mt-4 text-sm italic text-gray-400">
-            60-day money-back guarantee included for peace of mind.
+            Upgrade Now — $197
+          </button>
+          <p className="mt-4 italic text-gray-400">
+            Includes a 60-day money-back guarantee
           </p>
         </section>
 
-        {/* Pros and Cons Section */}
+        {/* Pros and Cons */}
         <section className="mb-16 max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold gradient-text mb-4">Pros and Cons</h2>
+          <h2 className="text-3xl font-semibold gradient-text mb-4">
+            Pros &amp; Cons
+          </h2>
           <div className="grid md:grid-cols-2 gap-8 text-gray-300">
             <div>
               <h3 className="text-yellow-400 font-semibold mb-3">Pros</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Comprehensive step-by-step training</li>
-                <li>AI-powered tools and automation</li>
-                <li>Prebuilt assets and buyer data</li>
-                <li>VIP coaching and supportive community</li>
-                <li>Lifetime course updates</li>
-                <li>Focus on predictable income</li>
-                <li>Future-proof digital skills</li>
+                <li>Comprehensive, step-by-step course</li>
+                <li>AI-boosted marketing efficiency</li>
+                <li>Ready-to-use assets &amp; proprietary data</li>
+                <li>Active community &amp; expert coaching</li>
+                <li>Lifetime access and updates</li>
+                <li>Focus on stable, predictable income</li>
+                <li>Future-proof digital skill sets</li>
               </ul>
             </div>
             <div>
               <h3 className="text-pink-600 font-semibold mb-3">Cons</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Upsell structure can be confusing at first</li>
-                <li>The upgrade price may be a barrier for some</li>
-                <li>No get-rich-quick promises – requires effort</li>
-                <li>Some negative reviews addressed openly</li>
+                <li>Initial upsell introduction may confuse some</li>
+                <li>Significant upgrade price (discounted)</li>
+                <li>Requires dedication and consistent work</li>
+                <li>Some critical reviews addressed transparently</li>
               </ul>
             </div>
           </div>
@@ -277,72 +348,104 @@ export default function SuperAffiliateSystem() {
 
         {/* FAQ Section */}
         <section className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold gradient-text mb-6">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-3xl font-semibold gradient-text mb-6">FAQs</h2>
           {[
-            { question: "Is Super Affiliate System Pro a scam?", answer: "No. SASP is a legit program with proven results and active community support." },
-            { question: "Can I buy SAS Pro without joining the AI Marketing Club?", answer: "No, SAS Pro is only available through the AI Marketing Club membership." },
-            { question: "Where is SAS Pro available?", answer: "Access is exclusive through John Crestani’s official AI Marketing Club page." },
-            { question: "What is the price and refund policy?", answer: "The AI Marketing Club costs $27; upgrade $197; 60-day money-back guarantee applies." },
-            { question: "Is SAS Pro updated and future-proof?", answer: "Yes, updated regularly with AI tools to keep you competitive and future-proof your income." },
-            { question: "Is it a get-rich-quick program?", answer: "No, it requires work and consistency to build predictable affiliate income." },
-          ].map(({ question, answer }, idx) => (
-            <details className="mb-4 bg-gray-900 p-4 rounded" key={idx}>
+            {
+              question: "Is Super Affiliate System Pro a scam?",
+              answer:
+                "No, it&apos;s legit and backed by real users and results.",
+            },
+            {
+              question: "Can I buy SASP without the AI Marketing Club?",
+              answer: "No, SASP is available only inside the club.",
+            },
+            {
+              question: "Where do I get SASP?",
+              answer: "Only via John Crestani&apos;s AI Marketing Club.",
+            },
+            {
+              question: "What about refunds?",
+              answer: "60-day money-back guarantee via ClickBank.",
+            },
+            {
+              question: "Is SASP updated for future-proofing?",
+              answer: "Yes, continuously updated with AI strategies.",
+            },
+            {
+              question: "Is this a quick rich scheme?",
+              answer: "No, requires focus and work for results.",
+            },
+          ].map(({ question, answer }, i) => (
+            <details key={i} className="mb-4 bg-gray-900 p-4 rounded">
               <summary className="cursor-pointer font-semibold">{question}</summary>
               <p className="mt-2 text-gray-300">{answer}</p>
             </details>
           ))}
         </section>
 
-        {/* Testimonials Section */}
+        {/* Testimonials */}
         <section className="max-w-5xl mx-auto mb-16 px-4">
           <h2 className="text-3xl font-semibold gradient-text mb-6 text-center">
-            Hear From Real Members: Overcoming Fear, Gaining Control
+            Hear from Our Members
           </h2>
-          <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-12">
-            Genuine testimonials from members who gained financial independence and resilience through SASP and the AI Marketing Club.
+          <p className="max-w-3xl mx-auto text-center text-lg mb-12 text-gray-300">
+            Real stories from people moving beyond uncertainty into predictable income through SASP.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <article className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <p className="italic text-gray-200">
-                “Before SASP, I was uncertain about my tech career’s future. This program gave me practical tools and AI guidance to build steady income and regain my confidence.”
+                &quot;Before SASP, I was unsure of my path. The program gave me tools and confidence to secure my financial future.&quot;
               </p>
-              <footer className="mt-4 font-semibold text-yellow-400">– Emily T., Developer</footer>
-              <p className="mt-2 text-xs text-gray-500">Themes: Career transition, AI empowerment, financial control</p>
+              <footer className="mt-4 font-semibold text-yellow-400">
+                – Alicia R., Graphic Designer
+              </footer>
+              <p className="mt-2 text-xs text-gray-500">
+                Themes: Career pivot, skill-building, financial security
+              </p>
             </article>
             <article className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <p className="italic text-gray-200">
-                “SASP changed my life. I built multiple affiliate sites earning more monthly than my previous salary, all while learning to work smarter with AI.”
+                &quot;The AI tools and community support transformed my online business completely.&quot;
               </p>
-              <footer className="mt-4 font-semibold text-yellow-400">– Marcus L., Entrepreneur</footer>
-              <p className="mt-2 text-xs text-gray-500">Themes: Scalable income, AI tools, lifestyle freedom</p>
+              <footer className="mt-4 font-semibold text-yellow-400">
+                – Theo M., Online Entrepreneur
+              </footer>
+              <p className="mt-2 text-xs text-gray-500">
+                Themes: Business growth, AI empowerment, community
+              </p>
             </article>
             <article className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <p className="italic text-gray-200">
-                “The community is fantastic. The coaching and live events made me feel supported and helped me stay accountable during challenging times.”
+                &quot;Consistent coaching and proven strategies helped me build a reliable income stream.&quot;
               </p>
-              <footer className="mt-4 font-semibold text-yellow-400">– Priya S., Marketer</footer>
-              <p className="mt-2 text-xs text-gray-500">Themes: Community support, accountability, sustained growth</p>
+              <footer className="mt-4 font-semibold text-yellow-400">
+                – Samuel K., Freelance Writer
+              </footer>
+              <p className="mt-2 text-xs text-gray-500">
+                Themes: Coaching, sustainable income, content marketing
+              </p>
             </article>
             <article className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <p className="italic text-gray-200">
-                “I was skeptical about ‘get rich quick’ programs, but SASP is different — it focuses on real skills, steady growth, and empowers you for the AI-driven economy.”
+                &quot;SASP isn&apos;t a get rich quick scheme; it&apos;s a blueprint for real, lasting success.&quot;
               </p>
-              <footer className="mt-4 font-semibold text-yellow-400">– Jordan M., Analyst</footer>
-              <p className="mt-2 text-xs text-gray-500">Themes: Realistic expectations, AI economy, personal growth</p>
+              <footer className="mt-4 font-semibold text-yellow-400">
+                – Regina L., Marketing Analyst
+              </footer>
+              <p className="mt-2 text-xs text-gray-500">
+                Themes: Realistic goals, marketing expertise, financial independence
+              </p>
             </article>
           </div>
           <div className="mt-12 text-center">
-            <Link
-              href={affiliateLinks.final}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${noHoverLinkClass} inline-block bg-yellow-400 text-black font-bold rounded-full px-10 py-4 transition text-lg`}
-              aria-label="Join John Crestani’s AI Marketing Club and unlock SASP"
+            <button
+              type="button"
+              onClick={(e) => handleAffiliateClick(e, affiliateLinks.final)}
+              className={`${ctaMainClass} w-full md:w-auto`}
+              aria-label="Join the AI Marketing Club and start your journey"
             >
-              Join the AI Marketing Club &amp; Start Your Predictable Income Journey Now!
-            </Link>
+              Join the AI Marketing Club &amp; Start Your Journey
+            </button>
           </div>
         </section>
       </main>
