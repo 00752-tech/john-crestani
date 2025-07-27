@@ -7,14 +7,14 @@ import Image from "next/image";
 
 const PAGE_CANONICAL_URL = "https://johncrestani.me/super-affiliate-system-pro";
 
-// Updated optimized title and description
+// Optimized Meta Title and Description
 const PAGE_TITLE =
   "Super Affiliate System Pro (2025) Update: Access SAS Pro via John Crestani's AI Marketing Club & End Financial Fear.";
 
 const PAGE_DESCRIPTION =
   "Searching for John Crestani's Super Affiliate System Pro (SASP)? Get the updated 2025 SAS Pro inside his AI Marketing Club for just $27 (plus $197, originally $997). Future-proof income, overcome job fears, gain control.";
 
-// Exact affiliate link used for all CTA buttons
+// Exact affiliate link for all CTA buttons
 const AFFILIATE_LINK =
   "https://04c56v32f9av9wb68i4xfxbr3b.hop.clickbank.net/?&traffic_source=sasp_pg_ctas";
 
@@ -26,6 +26,7 @@ const BUTTON_UPGRADE_CLASS =
   "bg-pink-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75";
 
 export default function SuperAffiliateSystemProPage() {
+  // Opens affiliate link in a new tab without revealing URL on hover
   const openAffiliateLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -52,7 +53,7 @@ export default function SuperAffiliateSystemProPage() {
         <link rel="canonical" href={PAGE_CANONICAL_URL} />
       </Head>
 
-      {/* Breadcrumb structured data */}
+      {/* Breadcrumb JSON-LD */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -64,7 +65,7 @@ export default function SuperAffiliateSystemProPage() {
         }}
       />
 
-      {/* FAQ structured data */}
+      {/* FAQ JSON-LD */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -128,7 +129,7 @@ export default function SuperAffiliateSystemProPage() {
         }}
       />
 
-      {/* Product and Course JSON-LD with fixes */}
+      {/* Product & Course JSON-LD with fixes for GSC */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -147,7 +148,7 @@ export default function SuperAffiliateSystemProPage() {
             courseMode: "Online",
             url: PAGE_CANONICAL_URL,
             image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
-            courseWorkload: "PT50H",
+            courseWorkload: "PT50H", // 50 hours, ISO 8601 format
           },
 
           offers: {
@@ -207,6 +208,7 @@ export default function SuperAffiliateSystemProPage() {
               className="rounded-lg mx-auto shadow-lg"
             />
           </div>
+          {/* CTA BUTTON */}
           <button
             type="button"
             onClick={() => openAffiliateLink(AFFILIATE_LINK)}
@@ -223,8 +225,20 @@ export default function SuperAffiliateSystemProPage() {
           </p>
         </section>
 
-        {/* Additional sections of your landing page below */}
-        {/* Add the rest of your content sections here ensuring all CTAs use openAffiliateLink(AFFILIATE_LINK) similarly */}
+        {/* CLARITY & TRANSITION */}
+        <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
+          <h2 className="text-4xl font-semibold gradient-text leading-snug">
+            The Official Transition: New 2025 Access Point &mdash; AI Marketing Club
+          </h2>
+          <p className="text-xl leading-relaxed">
+            Wondering where Super Affiliate System Pro went? You&apos;re in the right place. The 2025 SAS Pro is now ONLY available as an upgrade via John Crestani&apos;s AI Marketing Club. This page bridges the info gap &mdash; no more outdated links, pricing confusion, or market noise.
+          </p>
+          <p className="text-xl leading-relaxed">
+            <strong>What&apos;s changed?</strong> Club entry is just <strong>$27</strong> (not $997 up front), with SAS Pro a limited-time <strong>$197</strong> upsell. This gives you full access to modern AI-powered affiliate skills, templates, and joined community momentum &mdash; at an accessible level for all.
+          </p>
+        </section>
+
+        {/* You can add more page content sections here as necessary */}
 
       </main>
     </>
