@@ -18,17 +18,16 @@ export default function AffiliateLinkCTROptimizerPage() {
   const pageTitle =
     "Boost Clicks, End Wasted Effort: Free AI-Powered Affiliate Link CTR Optimizer";
   const pageDesc =
-    "Stop losing money on ignored links! Our free AI-powered Affiliate Link CTR Optimizer helps you confidently predict click improvements & maximize earnings. Unlock predictable income with John Crestani's AI Marketing Club & Super Affiliate System Pro.";
+    "Stop losing money on ignored links! Our free AI-powered Affiliate Link CTR Optimizer helps you confidently predict click improvements & maximize earnings. Unlock predictable income with John Crestani’s AI Marketing Club & Super Affiliate System Pro.";
 
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(ctaUrl, "_blank", "noopener,noreferrer");
   };
 
-  // Testimonials researched & selected for high conversion framing
   const testimonials = [
     {
-      quote: "I made my first commissions in just 3 days after applying John's strategies. This program delivers!",
+      quote: "I made my first commissions in just 3 days after applying John’s strategies. This program delivers!",
       author: "Verified Student",
       role: "Quick-Start Success",
     },
@@ -138,12 +137,12 @@ export default function AffiliateLinkCTROptimizerPage() {
               name: "How accurate is the Affiliate Link CTR Optimizer?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It's best used as a guide for potential improvements rather than a guarantee of exact results.",
+                text: "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It’s best used as a guide for potential improvements rather than a guarantee of exact results.",
               },
             },
             {
               "@type": "Question",
-              name: "What's a good click-through rate for affiliate links?",
+              name: "What’s a good click-through rate for affiliate links?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "A good CTR for affiliate links can vary widely depending on your niche, audience, and placement. Generally, rates between 0.5% to 1% are considered average, while anything above 1% is good. Some highly optimized campaigns can achieve rates of 2-5% or even higher.",
@@ -154,7 +153,7 @@ export default function AffiliateLinkCTROptimizerPage() {
               name: "How can I improve my affiliate link click-through rates?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani's Super Affiliate System Pro offers in-depth training on these techniques and more.",
+                text: "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani’s Super Affiliate System Pro offers in-depth training on these techniques and more.",
               },
             },
             {
@@ -162,7 +161,7 @@ export default function AffiliateLinkCTROptimizerPage() {
               name: "How does the AI Marketing Club & SAS Pro help me go beyond estimated CTRs to actual profit?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You'll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
+                text: "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You’ll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
               },
             },
           ],
@@ -200,7 +199,7 @@ export default function AffiliateLinkCTROptimizerPage() {
               className="block text-5xl font-extrabold"
               style={{ fontWeight: 900 }}
             >
-              Unlock More Clicks, Maximize Earnings...
+              Unlock More Clicks, Maximize Earnings…
             </span>
             <span
               className="block mt-1 text-3xl font-light text-pink-400"
@@ -252,7 +251,7 @@ export default function AffiliateLinkCTROptimizerPage() {
               transition={{ duration: 0.5 }}
               className="text-2xl font-semibold mb-4 text-white"
             >
-              Instantly See Your Click Potential... How to Use This Optimizer
+              Instantly See Your Click Potential… How to Use This Optimizer
             </motion.h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-300">
               <li>Enter your current average Click-Through Rate (CTR) for an affiliate link.</li>
@@ -297,9 +296,9 @@ export default function AffiliateLinkCTROptimizerPage() {
               Real Results. Real People. Real AI Income.
             </h2>
             <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-12">
-              Don't just take our word for it. Hear directly from students who are
+              Don’t just take our word for it. Hear directly from students who are
               building profitable affiliate businesses and securing their financial future
-              with John Crestani's proven strategies and AI insights.
+              with John Crestani’s proven strategies and AI insights.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -348,32 +347,16 @@ export default function AffiliateLinkCTROptimizerPage() {
               and get exclusive access to SAS Pro with an <strong>$800 discount</strong>. Learn to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <motion.li
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-              >
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.8 }}>
                 <strong>Drive high-quality traffic</strong> with cutting-edge AI strategies.
               </motion.li>
-              <motion.li
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
-              >
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.9 }}>
                 <strong>Create irresistible offers</strong> that convert clicks into sales.
               </motion.li>
-              <motion.li
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-              >
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 1.0 }}>
                 <strong>Scale your income streams</strong> for long-term financial security.
               </motion.li>
-              <motion.li
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.1 }}
-              >
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 1.1 }}>
                 <strong>Master the latest AI marketing techniques</strong> before your competition.
               </motion.li>
             </ul>
@@ -402,23 +385,23 @@ export default function AffiliateLinkCTROptimizerPage() {
               {
                 question: "How accurate is the Affiliate Link CTR Optimizer?",
                 answer:
-                  "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It's best used as a guide for potential improvements rather than a guarantee of exact results.",
+                  "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It’s best used as a guide for potential improvements rather than a guarantee of exact results.",
               },
               {
-                question: "What's a good click-through rate for affiliate links?",
+                question: "What’s a good click-through rate for affiliate links?",
                 answer:
                   "A good CTR for affiliate links can vary widely depending on your niche, audience, and placement. Generally, rates between 0.5% to 1% are considered average, while anything above 1% is good. Some highly optimized campaigns can achieve rates of 2-5% or even higher.",
               },
               {
                 question: "How can I improve my affiliate link click-through rates?",
                 answer:
-                  "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani's Super Affiliate System Pro offers in-depth training on these techniques and more.",
+                  "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani’s Super Affiliate System Pro offers in-depth training on these techniques and more.",
               },
               {
                 question:
                   "How does the AI Marketing Club & SAS Pro help me go beyond estimated CTRs to actual profit?",
                 answer:
-                  "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You'll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
+                  "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You’ll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
               },
             ].map(({ question, answer }, idx) => (
               <details key={idx} className="mb-6 bg-gray-900 p-5 rounded cursor-pointer">
