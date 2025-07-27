@@ -17,7 +17,7 @@ const NicheProfitabilityCalculatorCore = () => {
         Niche Profitability Calculator
       </h2>
       <p className="text-center italic mb-4 text-lg">
-        Use this tool to estimate your niche's profitability and make smarter affiliate selections.
+        Use this tool to estimate your niche&apos;s profitability and make smarter affiliate selections.
       </p>
       {/* Insert your calculator UI here */}
       <div className="border border-gray-700 p-4 rounded-lg text-center text-gray-500">
