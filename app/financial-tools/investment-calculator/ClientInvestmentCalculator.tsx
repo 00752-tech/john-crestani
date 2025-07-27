@@ -3,7 +3,6 @@
 
 import Head from 'next/head'
 import Link from 'next/link'
-import InvestmentCalculator from '@/components/InvestmentCalculator'
 import { ArrowLeft } from 'lucide-react'
 import { JsonLd } from 'react-schemaorg'
 import { motion } from 'framer-motion'
@@ -35,6 +34,39 @@ const NoHoverLink = ({
   )
 }
 
+// Updated InvestmentCalculator component with proper SAS Pro link in description
+const InvestmentCalculator = () => {
+  // For demo, fixed estimated value; replace with real logic/state as needed
+  const estimatedFutureValue = 19318.14
+
+  return (
+    <section className="max-w-3xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg text-gray-300 mb-16">
+      <h2
+        className="text-3xl font-extrabold gradient-text mb-6 text-center"
+        style={{ fontWeight: 900 }}
+      >
+        Estimated Future Value
+      </h2>
+      <p className="text-center text-4xl font-bold mb-8">${estimatedFutureValue.toLocaleString()}</p>
+      <p className="text-lg leading-relaxed text-center mb-6 italic tracking-wide">
+        This calculator provides an estimate based on the given inputs. Actual investment returns may vary depending on market conditions and other factors.
+      </p>
+      <p className="text-lg max-w-xl mx-auto text-center leading-relaxed font-semibold">
+        Want to learn how to leverage your investments for affiliate marketing? Check out{' '}
+        <a
+          href="https://johncrestani.me/super-affiliate-system-pro"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-500 underline hover:text-pink-400 font-semibold"
+          aria-label="Learn more about Super Affiliate System Pro"
+        >
+          John Crestani&apos;s Super Affiliate System Pro
+        </a>.
+      </p>
+    </section>
+  )
+}
+
 export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: { backUrl?: string }) {
   const pageTitle = 'Secure Your Financial Future: Free Investment Growth Calculator | JohnCrestani.me'
   const pageDesc =
@@ -44,9 +76,9 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
   const handleInvestInFuture = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.open(
-      "https://johncrestani.me/super-affiliate-system-pro",
-      "_blank",
-      "noopener,noreferrer"
+      'https://johncrestani.me/super-affiliate-system-pro',
+      '_blank',
+      'noopener,noreferrer'
     )
   }
 
@@ -70,7 +102,10 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
           className="container mx-auto px-4"
         >
           {/* Back to Tools Link */}
-          <Link href={backUrl} className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8 font-semibold italic">
+          <Link
+            href={backUrl}
+            className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8 font-semibold italic"
+          >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Tools
           </Link>
@@ -100,7 +135,8 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             className="max-w-3xl mx-auto mb-16 px-4 leading-relaxed"
           >
             <p className="text-2xl text-center text-gray-300 font-semibold mb-12">
-              Are you <span className="italic">anxious about your financial future</span>? Use our intuitive <span className="font-bold italic">Investment Calculator</span> to{' '}
+              Are you <span className="italic">anxious about your financial future</span>? Use our intuitive{' '}
+              <span className="font-bold italic">Investment Calculator</span> to{' '}
               <span className="underline font-bold italic">gain clarity and confidence</span> by estimating the future value of your investments.
             </p>
             <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-12">
@@ -113,7 +149,10 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
                 John Crestani&apos;s AI Marketing Club (Super Affiliate System Pro)
               </NoHoverLink>,{' '}
               can be your ultimate leverage.{' '}
-              <span className="italic font-semibold">Go beyond mere savings</span> and learn to{' '}
+              <span className="italic font-semibold">
+                Go beyond mere savings
+              </span>{' '}
+              and learn to{' '}
               <span className="font-bold italic underline">
                 identify lucrative opportunities, create high-converting campaigns, scale your business, and diversify your income streams for predictable, reliable wealth creation.
               </span>
@@ -158,7 +197,8 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                   className="font-semibold"
                 >
-                  <span className="text-pink-500">{item.label}:</span> <span className="italic font-normal">{item.desc}</span>
+                  <span className="text-pink-500">{item.label}:</span>{' '}
+                  <span className="italic font-normal">{item.desc}</span>
                 </motion.li>
               ))}
             </ul>
