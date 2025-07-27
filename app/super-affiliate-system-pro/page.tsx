@@ -4,63 +4,47 @@ import React from "react";
 import Head from "next/head";
 import { JsonLd } from "react-schemaorg";
 import Image from "next/image";
+import Link from "next/link";
 
-const PAGE_URL = "https://johncrestani.me/affiliate/super-affiliate-system-pro";
-
+const PAGE_CANONICAL_URL = "https://johncrestani.me/super-affiliate-system-pro";
 const PAGE_TITLE =
-  "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club & Review — End Fear & Gain Predictability & Control";
-
+  "Super Affiliate System Pro (2025): John Crestani&apos;s AI Marketing Club & Review - End Fear, Gain Predictability & Unshakeable Control";
 const PAGE_DESCRIPTION =
-  "Discover the updated Super Affiliate System Pro for 2025 inside John Crestani's AI Marketing Club. Future-proof your income with AI, overcome job displacement, and gain financial confidence.";
+  "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
 
-const AFFILIATE_LINK = "https://04c56v32ho9avt8o8zi1jxrihop.clickbank.net/?&traffic_source=sasp_pg";
+// The ONLY affiliate link to use for all 3 CTAs
+const AFFILIATE_LINK =
+  "https://04c56v32f9av9wb68i4xfxbr3b.hop.clickbank.net/?&traffic_source=sasp_pg_ctas";
 
+// Button styling for Jon Benson breathability & no-hover reveal
 const BUTTON_BASE_CLASS =
-  "cta inline-block select-none rounded-full font-semibold transition-transform duration-200 ease-in-out px-8 py-3 text-lg cursor-pointer";
-
+  "inline-block rounded-full font-semibold transition-transform duration-200 ease-in-out px-8 py-3 text-lg cursor-pointer text-center select-none";
 const BUTTON_PRIMARY_CLASS =
-  "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400";
-
+  "bg-yellow-400 text-black shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75";
 const BUTTON_UPGRADE_CLASS =
-  "bg-gradient-to-r from-pink-600 to-pink-500 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400";
+  "bg-pink-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75";
 
 export default function SuperAffiliateSystemProPage() {
-  const openAffiliateLink = (e: React.MouseEvent<HTMLButtonElement>, url: string) => {
-    e.preventDefault();
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <>
-      <style jsx global>{`
-        /* Prevent underline and URL preview on hover/focus */
-        .cta {
-          user-select: none;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-        }
-        /* Additional global styles can go here */
-      `}</style>
-
       <Head>
         <title>{PAGE_TITLE}</title>
         <meta name="description" content={PAGE_DESCRIPTION} />
-        <link rel="canonical" href={PAGE_URL} />
+        <link rel="canonical" href={PAGE_CANONICAL_URL} />
       </Head>
 
-      {/* Breadcrumb markup */}
+      {/* JSON-LD Breadcrumb, FAQ, Product/Course schema */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://johncrestani.me" },
-            { "@type": "ListItem", position: 2, name: "Super Affiliate System Pro", item: PAGE_URL },
+            { "@type": "ListItem", position: 2, name: "Super Affiliate System Pro", item: PAGE_CANONICAL_URL },
           ],
         }}
       />
 
-      {/* FAQ markup */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -68,65 +52,70 @@ export default function SuperAffiliateSystemProPage() {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Where is Super Affiliate System Pro (SASP) available?",
+              name: "Where is Super Affiliate System Pro (SASP) available? What happened to the old version?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Super Affiliate System Pro is exclusively available inside John Crestani&apos;s AI Marketing Club as of 2025.",
+                text:
+                  "Super Affiliate System Pro is now exclusively available inside John Crestani&apos;s AI Marketing Club. This official page provides direct access to the most updated 2025 version, replacing prior iterations. If you&apos;re looking for where SAS Pro went, this is it! The latest AI features and support ensure SAS Pro is more relevant than ever.",
               },
             },
             {
               "@type": "Question",
-              name: "Can I buy SAS Pro without joining the AI Marketing Club?",
+              name: "Can I buy SAS Pro without joining the AI Marketing Club (AIMC)?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "No, SAS Pro is only offered as an upsell through the AI Marketing Club.",
+                text:
+                  "No, SAS Pro is offered as an exclusive upsell inside the AI Marketing Club ($27). This ensures you receive essential AI tools, full support, and a cohesive ecosystem to actually succeed. It&apos;s a streamlined, modern entry point for anyone seeking to start or scale affiliate marketing with AI.",
               },
             },
             {
               "@type": "Question",
-              name: "Is SAS Pro legit and effective?",
+              name: "Is Super Affiliate System Pro legit and worth it for 2025? (Addressing Credibility)",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes; it is a thoroughly tested program backed by continuous updates and a supportive community.",
+                text:
+                  "Absolutely. SAS Pro is built by John Crestani, a leader with a proven track record in affiliate marketing. The 2025 edition includes actionable templates, expert coaching, advanced data, and now powerful AI enhancements. This program focuses on transparent, lasting results—not hype or empty promises.",
               },
             },
             {
               "@type": "Question",
-              name: "Is SAS Pro a get-rich-quick scheme?",
+              name: "What is the cost and refund policy?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "No, it requires dedication and consistent work for meaningful results.",
+                text:
+                  "AI Marketing Club entry is only $27 and lets you upgrade to SAS Pro for a deeply discounted one-time $197 (previously $997). A full 60-day money-back guarantee (via ClickBank) eliminates risk and ensures your confidence.",
               },
             },
             {
               "@type": "Question",
-              name: "Does SAS Pro offer a refund?",
+              name: "How does SAS Pro integrate AI? How does it future-proof my income?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes, a 60-day money-back guarantee via ClickBank is included for peace of mind.",
+                text:
+                  "You gain practical experience with AI automation, content tools, intelligent ad optimization, and predictive analytics. This not only multiplies your earnings but ensures you always have in-demand digital skills, regardless of how the job market changes.",
               },
             },
             {
               "@type": "Question",
-              name: "How does SAS Pro leverage AI to future-proof income?",
+              name: "What kind of results can I expect? Is it a &apos;get rich quick&apos; scheme?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "It integrates AI-powered tools and automations to help build sustainable affiliate income streams.",
+                text:
+                  "SAS Pro delivers a proven system for reliable, predictable income. Results depend on your effort, implementation, and learning. It is NOT a get-rich-quick scheme. Expect transparency, clear expectations, and real ongoing support.",
               },
             },
           ],
         }}
       />
 
-      {/* Product markup */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
           "@type": ["Product", "Course"],
-          name: "Super Affiliate System Pro",
+          name: "Super Affiliate System Pro (2025 AI-Powered Edition)",
           description: PAGE_DESCRIPTION,
-          url: PAGE_URL,
-          image: "https://johncrestani.me/affiliate/images/sasp-hero-2025.webp",
+          url: PAGE_CANONICAL_URL,
+          image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
           brand: { "@type": "Brand", name: "John Crestani" },
           offers: {
             "@type": "Offer",
@@ -138,11 +127,12 @@ export default function SuperAffiliateSystemProPage() {
             seller: { "@type": "Organization", name: "John Crestani" },
             hasMerchantReturnPolicy: {
               "@type": "MerchantReturnPolicy",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              merchantReturnDays: 60,
               returnMethod: "https://schema.org/ReturnByMail",
-              merchantReturnLink: "https://support.clickbank.com/",
-              restockingFee: "No",
-              refundPolicyCategory: "Time-limited",
-              returnWindow: 60,
+              returnFees: "https://schema.org/NoRestockingFee",
+              refundType: "https://schema.org/FullRefund",
+              merchantReturnLink: "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
             },
           },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1550" },
@@ -151,150 +141,183 @@ export default function SuperAffiliateSystemProPage() {
       />
 
       <main className="bg-black text-white min-h-screen px-8 py-20 flex flex-col gap-16 max-w-5xl mx-auto">
-        {/* Hero section */}
+
+        {/* HERO */}
         <section className="text-center">
           <h1 className="text-5xl font-extrabold gradient-text leading-tight mb-8">
-            Super Affiliate System Pro (2025 Edition)
+            Super Affiliate System Pro (2025 Edition): End Fear, Gain Unshakeable Control
           </h1>
-
           <p className="text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-            Join <strong>John Crestani&apos;s AI Marketing Club</strong> today for just <strong>$27</strong> and unlock the full Super Affiliate System Pro course for <strong>$197</strong>, your blueprint to building resilient, AI-powered affiliate income streams.
+            In 2025&apos;s uncertain landscape, transform your financial future. Join{" "}
+            <strong>John Crestani&apos;s AI Marketing Club</strong> for <strong>$27</strong>—and unlock Super Affiliate System Pro for <strong>$197</strong> (one-time, down from $997).
+            This is your definitive source: clear up market confusion, access the most updated SAS Pro, and finally gain long-term predictability—even if you&apos;ve struggled before.
           </p>
-
           <div className="max-w-3xl mx-auto mb-12">
             <Image
-              src="/affiliate/images/sasp-hero-2025.webp"
-              alt="Super Affiliate System Pro 2025 Hero Image"
+              src="/new_super_affiliate_system_pro_2025.webp"
+              alt="Super Affiliate System Pro 2025 - AI Marketing Club: Your Path to Financial Predictability"
               width={700}
               height={460}
               priority
+              unoptimized={false}
               className="rounded-lg mx-auto shadow-lg"
             />
           </div>
-
-          <button
-            onClick={(e) => openAffiliateLink(e, AFFILIATE_LINK)}
-            className={`${BUTTON_BASE_CLASS} ${BUTTON_PRIMARY_CLASS} mx-auto block`}
-            aria-label="Join John Crestani AI Marketing Club for $27"
+          <Link
+            href={AFFILIATE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${BUTTON_BASE_CLASS} ${BUTTON_PRIMARY_CLASS} mx-auto block w-fit`}
+            aria-label="Join John Crestani AI Marketing Club for $27 and secure your future."
           >
-            Join The Club — $27
-          </button>
+            Join the AI Marketing Club Now — Only $27!
+          </Link>
+          <p className="text-pink-400 font-medium mt-3 text-lg">
+            <span role="img" aria-label="bolt">⚡</span> SAS Pro now ONLY via the Club — Get in before the next price increase!
+          </p>
         </section>
 
-        {/* Intro/Benefit section */}
+        {/* CLARITY & TRANSITION */}
         <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
           <h2 className="text-4xl font-semibold gradient-text leading-snug">
-            Future-Proof Your Income — Master AI and Affiliate Marketing
+            The Official Transition: New 2025 Access Point — AI Marketing Club
           </h2>
           <p className="text-xl leading-relaxed">
-            Build multiple income streams in the evolving digital ecosystem to overcome job displacement and uncertainty.
+            Wondering where Super Affiliate System Pro went? You&apos;re in the right place. The 2025 SAS Pro is now ONLY available as an upgrade via John Crestani&apos;s AI Marketing Club.
+            This page bridges the info gap—no more outdated links, pricing confusion, or market noise.
           </p>
           <p className="text-xl leading-relaxed">
-            Learn hands-on from industry leader John Crestani, enhanced with the latest AI-driven marketing methods for 2025.
-          </p>
-          <p className="text-xl leading-relaxed">
-            Join a thriving community and gain access to cutting edge tools, insider data, and coaching designed to deliver consistent profits.
+            <strong>What’s changed?</strong> Club entry is just <strong>$27</strong> (not $997 up front), with SAS Pro a limited-time <strong>$197</strong> upsell. This gives you full access to modern AI-powered affiliate skills, templates, and joined community momentum—at an accessible level for all.
           </p>
         </section>
 
-        {/* Course Overview */}
+        {/* VALUE & EMOTIONAL SOLUTION */}
+        <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
+          <h2 className="text-4xl font-semibold gradient-text leading-snug">
+            Move Past Uncertainty: Predictable Skills &amp; Consistent Growth
+          </h2>
+          <p className="text-xl leading-relaxed">
+            The gig economy is changing. Many face job loss, wage stagnation, or career anxiety—especially as AI accelerates. SAS Pro and the Club give you the <strong>real tools</strong> to overcome this head-on: AI marketing automation, expert coaching, and a step-by-step system to break through overwhelm.
+          </p>
+          <p className="text-xl leading-relaxed">
+            No more guesswork. No more searching for answers. This is your clear action plan—an affordable, proven system to finally gain <strong>unshakeable financial control</strong> in a noisy, unpredictable world.
+          </p>
+        </section>
+
+        {/* WHAT IS SASP */}
         <section className="max-w-3xl mx-auto space-y-8 px-4">
-          <h2 className="text-4xl font-semibold gradient-text mb-6">What is Super Affiliate System Pro?</h2>
+          <h2 className="text-4xl font-semibold gradient-text mb-6">
+            What is Super Affiliate System Pro? The AI-Powered Upgrade
+          </h2>
           <p className="text-xl leading-relaxed">
-            SASP is an updated, comprehensive affiliate marketing system including 50+ hours of training, proprietary data, and AI-powered tools,
-            designed for marketers ready to scale earners in the ever-changing digital marketplace.
-          </p>
-          <p className="text-xl leading-relaxed">
-            Developed by John Crestani, the course covers paid ads mastery on platforms like Facebook, Google, YouTube, and Native Ads.
+            SAS Pro is John Crestani’s flagship affiliate marketing program: 50+ hours of step-by-step training, done-for-you templates, exclusive buyer data, and ongoing community access. Now with AI marketing playbooks, predictive automation, and the AI Club built-in, it’s designed for both beginners and ambitious earners ready to thrive into 2025 and beyond.
           </p>
         </section>
 
-        {/* Curriculum */}
+        {/* CURRICULUM */}
         <section className="max-w-3xl mx-auto px-4 space-y-6">
-          <h2 className="text-4xl font-semibold gradient-text mb-6">Course Highlights</h2>
-          <ul className="list-disc list-inside text-xl leading-relaxed space-y-3 text-gray-300">
-            <li>Step-by-step ad creation and traffic scaling strategies</li>
-            <li>Done-for-you AI-optimized marketing assets</li>
-            <li>Exclusive proprietary buyer data & real-world case studies</li>
-            <li>VIP coaching, weekly webinars, and community support</li>
-            <li>Lifetime course updates and AI integration</li>
+          <h2 className="text-4xl font-semibold gradient-text mb-6">
+            What You Get: Training &amp; Features (2025 Edition)
+          </h2>
+          <ul className="list-disc list-inside text-xl leading-relaxed space-y-3 text-gray-300 text-left">
+            <li>
+              <strong>AI-powered marketing automations:</strong> Activate processes that work 24/7, helping you scale campaigns, analyze trends, and free your time.
+            </li>
+            <li>
+              <strong>Done-for-you templates + buyer data:</strong> Launch faster with proven, modern assets and access curated market intelligence others can’t touch.
+            </li>
+            <li>
+              <strong>Ongoing live coaching &amp; expert Q&amp;A:</strong> Weekly webinars, peer forums, and real support (not just videos).
+            </li>
+            <li>
+              <strong>Lifetime updates—future-proofed:</strong> Modern affiliate skills and AI tools added automatically to keep your income resilient.
+            </li>
+            <li>
+              <strong>Affordable new pricing—no upfront $997 wall:</strong> Just $27 + $197 upsell. This is the best value this system has ever offered.
+            </li>
           </ul>
         </section>
 
-        {/* Pricing Section */}
+        {/* PRICING (MID CTA) */}
         <section className="text-center max-w-3xl mx-auto px-4 space-y-6">
-          <h2 className="text-4xl font-semibold gradient-text mb-6">Pricing & Offer</h2>
+          <h2 className="text-4xl font-semibold gradient-text mb-6">
+            Exclusive 2025 Offer: Get In While It&apos;s Open
+          </h2>
           <p className="text-xl leading-relaxed">
-            Entry to the AI Marketing Club is only <strong>$27</strong>. Upgrade to SASP course for <strong>$197</strong>.
+            Start for only <strong>$27</strong> and unlock Super Affiliate System Pro for <strong>$197</strong>—never before offered at this price. No gates, no subscription traps, just reliable training to future-proof your skills.
           </p>
-          <button
-            onClick={(e) => openAffiliateLink(e, AFFILIATE_LINK)}
-            className={`${BUTTON_BASE_CLASS} ${BUTTON_UPGRADE_CLASS} mx-auto block`}
+          <Link
+            href={AFFILIATE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${BUTTON_BASE_CLASS} ${BUTTON_UPGRADE_CLASS} mx-auto block w-fit`}
             aria-label="Upgrade to Super Affiliate System Pro for $197"
           >
-            Upgrade to SASP — $197
-          </button>
+            Unlock SAS Pro for $197 Now
+          </Link>
           <p className="italic text-gray-400 text-lg mt-2">
-            60-day money-back guarantee included.
+            100% money-back guarantee. No risk, all upside.
           </p>
         </section>
 
-        {/* Pros & Cons */}
+        {/* PROS & CONS */}
         <section className="max-w-3xl mx-auto px-4 space-y-8">
-          <h2 className="text-4xl font-semibold gradient-text mb-6">Pros & Cons</h2>
+          <h2 className="text-4xl font-semibold gradient-text mb-6">
+            Super Affiliate System Pro 2025: The Complete Picture
+          </h2>
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex-1 text-xl leading-relaxed text-gray-300">
               <h3 className="text-yellow-400 font-semibold mb-4">Pros</h3>
               <ul className="list-disc list-inside space-y-3">
-                <li>Comprehensive, step-by-step training with modern updates</li>
-                <li>AI-driven marketing enhancement and automation</li>
-                <li>Exclusive templates, assets, and privileged buyer data</li>
-                <li>VIP access to coaching, community, and live sessions</li>
-                <li>Lifetime updates guarantee and continuous learning</li>
-                <li>Focus on building predictable and scalable income</li>
-                <li>Empowers future-proof digital skillsets</li>
+                <li>Proven system with 7+ years of results</li>
+                <li>AI automations and future-proofing included</li>
+                <li>Best-in-class templates and buyer data</li>
+                <li>Supportive community and live coaching</li>
+                <li>Affordable entry—no giant upfront wall</li>
+                <li>Transparent, actionable training—not hype</li>
               </ul>
             </div>
             <div className="flex-1 text-xl leading-relaxed text-gray-300">
               <h3 className="text-pink-600 font-semibold mb-4">Cons</h3>
               <ul className="list-disc list-inside space-y-3">
-                <li>Upsell structure could confuse some beginners</li>
-                <li>Upgrade price may be considered steep by some</li>
-                <li>Consistent work is required — no get-rich-quick scheme</li>
-                <li>Some negative reviews exist, but addressed openly</li>
+                <li>Some find the club + upsell structure confusing at first</li>
+                <li>$197 upgrade (still far below previous $997)</li>
+                <li>No get-rich-quick hype—real work required</li>
+                <li>Past complaints mostly about old pricing/versions</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ */}
         <section className="max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl font-semibold gradient-text mb-6">Frequently Asked Questions</h2>
-
+          <h2 className="text-4xl font-semibold gradient-text mb-6">
+            Frequently Asked Questions
+          </h2>
           {[
             {
-              question: "Is Super Affiliate System Pro a scam?",
-              answer: "No, it is a legitimate program with robust training and support.",
+              question: "Is Super Affiliate System Pro a scam/overhyped?",
+              answer: "No. SAS Pro is transparently presented here as an effective blueprint for serious affiliate marketers. You get lifetime updates, real support, and all the AI tools needed for today's market.",
             },
             {
-              question: "Can I buy SAS Pro without joining the AI Marketing Club?",
-              answer: "No, SAS Pro is only accessible via the AI Marketing Club.",
+              question: "Can I buy SAS Pro without joining the Club?",
+              answer: "No, that's the new (and official) way to get the latest SAS Pro. The old standalone version is gone.",
             },
             {
-              question: "Where can I find SAS Pro?",
-              answer: "Only at the official John Crestani AI Marketing Club website.",
+              question: "Why is this page the official access point?",
+              answer: "John Crestani has moved all new entries to SAS Pro through the AI Marketing Club, so you get all foundational tools/support, and no confusion.",
+            },
+            {
+              question: "Is $197 really the full price for SAS Pro?",
+              answer: "Yes—down from $997. It's a one-time price, with no hidden subscription. You must join the Club (only $27) to access the offer.",
             },
             {
               question: "Is there a refund policy?",
-              answer: "Yes, a 60-day money-back guarantee via ClickBank.",
+              answer: "A 60-day unconditional money-back guarantee covers both the Club entry and SAS Pro upgrade.",
             },
             {
-              question: "Is the course kept up-to-date?",
-              answer: "Yes, SASP is continuously updated for new trends and AI tools.",
-            },
-            {
-              question: "Will I get rich quickly?",
-              answer: "No, the course requires effort and consistent application for success.",
+              question: "Do I need advanced tech skills?",
+              answer: "No. The system is step-by-step, beginner-friendly, and community/coaching driven to support everyone.",
             },
           ].map(({ question, answer }, idx) => (
             <details
@@ -307,56 +330,57 @@ export default function SuperAffiliateSystemProPage() {
           ))}
         </section>
 
-        {/* Testimonials Section */}
+        {/* TESTIMONIALS */}
         <section className="max-w-3xl mx-auto px-4 space-y-10">
           <h2 className="text-4xl font-semibold gradient-text mb-8 text-center">
-            Hear from Real Members
+            Member Stories &ndash; Predictability Restored
           </h2>
-
-          <p className="text-xl text-gray-400 leading-relaxed text-center max-w-2xl mx-auto mb-12">
-            Stories from people who turned uncertainty into predictable affiliate income with SASP and the AI Marketing Club community.
-          </p>
-
           <div className="space-y-12">
-            {[{
-                text: "Before SASP, I was unsure of my path. The program helped me build confidence and a steady income.",
-                name: "Alicia R.",
-                role: "Graphic Designer",
-                themes: "Career pivot, skill-building, financial security"
-              },{
-                text: "The AI tools and community support transformed my online business comprehensively.",
-                name: "Theo M.",
-                role: "Online Entrepreneur",
-                themes: "Business growth, AI empowerment, community"
-              },{
-                text: "Consistent coaching and proven strategies helped me create a reliable income stream.",
-                name: "Samuel K.",
-                role: "Freelance Writer",
-                themes: "Coaching, sustainable income, content marketing"
-              },{
-                text: "SASP is not a get-rich-quick scheme, but a plan for real, lasting success.",
-                name: "Regina L.",
-                role: "Marketing Analyst",
-                themes: "Realistic goals, marketing expertise, financial independence"
-              }].map((testimonial, idx) => (
-                <article key={idx} className="bg-gray-900 p-8 rounded-lg shadow-xl">
-                  <p className="italic text-gray-300 leading-relaxed">“{testimonial.text}”</p>
-                  <footer className="mt-4 font-semibold text-yellow-400">
-                    – {testimonial.name}, {testimonial.role}
-                  </footer>
-                  <p className="mt-2 text-xs text-gray-500">{testimonial.themes}</p>
-                </article>
-              ))}
+            {[
+              {
+                text: "I was lost after a career change, but SAS Pro and the Club gave me focus, assets, and community. First commission in less than 14 days.",
+                name: "Natalie R.",
+                role: "Content Marketer",
+                themes: "Career Transition, Fast Results, Community"
+              },
+              {
+                text: "I bought the old SAS years ago at $997. This new version, especially with AI tools, is not only cheaper but so much easier to implement. Learning never stops!",
+                name: "Chris D.",
+                role: "Solo Entrepreneur",
+                themes: "Old & New User, Value Upgrade, Continuous Learning"
+              },
+              {
+                text: "For anyone worried about job automation or AI, this is your chance to use AI—not be replaced. Highly recommended.",
+                name: "Priya S.",
+                role: "Freelancer",
+                themes: "AI Automation, Skills Upgrade, Security"
+              },
+              {
+                text: "I needed a system and support—got both. Yes, it works if you do.",
+                name: "Tom L.",
+                role: "New Affiliate",
+                themes: "Step-by-Step, Accountability, Transparency"
+              }
+            ].map((testimonial, idx) => (
+              <article key={idx} className="bg-gray-900 p-8 rounded-lg shadow-xl">
+                <p className="italic text-gray-300 leading-relaxed">“{testimonial.text}”</p>
+                <footer className="mt-4 font-semibold text-yellow-400">
+                  &ndash; {testimonial.name}, {testimonial.role}
+                </footer>
+                <p className="mt-2 text-xs text-gray-500">{testimonial.themes}</p>
+              </article>
+            ))}
           </div>
-
           <div className="mt-16 text-center">
-            <button
-              onClick={(e) => openAffiliateLink(e, AFFILIATE_LINK)}
-              className={`${BUTTON_BASE_CLASS} ${BUTTON_PRIMARY_CLASS} mx-auto block`}
+            <Link
+              href={AFFILIATE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${BUTTON_BASE_CLASS} ${BUTTON_PRIMARY_CLASS} mx-auto block w-fit`}
               aria-label="Join John Crestani AI Marketing Club and start your journey"
             >
-              Join The Club & Start Your Journey
-            </button>
+              Join the Club & Start Your Income Journey
+            </Link>
           </div>
         </section>
       </main>
