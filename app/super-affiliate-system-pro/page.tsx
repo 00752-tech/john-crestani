@@ -8,10 +8,10 @@ import Image from "next/image";
 const PAGE_CANONICAL_URL = "https://johncrestani.me/super-affiliate-system-pro";
 
 const PAGE_TITLE =
-  "Super Affiliate System Pro (2025) - John Crestani's AI Marketing Club Review - End Fear, Gain Predictability & Unshakeable Control";
+  "Super Affiliate System Pro (2025) - John Crestani&apos;s AI Marketing Club Review - End Fear, Gain Predictability &amp; Unshakeable Control";
 
 const PAGE_DESCRIPTION =
-  "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani's AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
+  "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
 
 // Your exact affiliate link for all CTAs
 const AFFILIATE_LINK =
@@ -75,7 +75,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Super Affiliate System Pro is now exclusively available inside John Crestani's AI Marketing Club. This official page provides direct access to the most updated 2025 version, replacing prior iterations. If you're looking for where SAS Pro went, this is it! The latest AI features and support ensure SAS Pro is more relevant than ever.",
+                  "Super Affiliate System Pro is now exclusively available inside John Crestani&apos;s AI Marketing Club. This official page provides direct access to the most updated 2025 version, replacing prior iterations. If you&apos;re looking for where SAS Pro went, this is it! The latest AI features and support ensure SAS Pro is more relevant than ever.",
               },
             },
             {
@@ -84,7 +84,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "No, SAS Pro is offered as an exclusive upsell inside the AI Marketing Club ($27). This ensures you receive essential AI tools, full support, and a cohesive ecosystem to actually succeed. It's a streamlined, modern entry point for anyone seeking to start or scale affiliate marketing with AI.",
+                  "No, SAS Pro is offered as an exclusive upsell inside the AI Marketing Club ($27). This ensures you receive essential AI tools, full support, and a cohesive ecosystem to actually succeed. It&apos;s a streamlined, modern entry point for anyone seeking to start or scale affiliate marketing with AI.",
               },
             },
             {
@@ -168,8 +168,8 @@ export default function SuperAffiliateSystemProPage() {
             End Fear &amp; Gain Unshakeable Control
           </h1>
           <p className="text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-            In 2025's uncertain landscape, transform your financial future. Join{" "}
-            <strong>John Crestani's AI Marketing Club</strong> for <strong>$27</strong>—and unlock Super Affiliate System Pro for <strong>$197</strong> (one-time, down from $997). This is your definitive source: clear up market confusion, access the most updated SAS Pro, and finally gain long-term predictability—even if you've struggled before.
+            In 2025&apos;s uncertain landscape, transform your financial future. Join{" "}
+            <strong>John Crestani&apos;s AI Marketing Club</strong> for <strong>$27</strong>—and unlock Super Affiliate System Pro for <strong>$197</strong> (one-time, down from $997). This is your definitive source: clear up market confusion, access the most updated SAS Pro, and finally gain long-term predictability—even if you&apos;ve struggled before.
           </p>
           <div className="max-w-3xl mx-auto mb-12">
             <Image
@@ -203,7 +203,7 @@ export default function SuperAffiliateSystemProPage() {
             The Official Transition: New 2025 Access Point — AI Marketing Club
           </h2>
           <p className="text-xl leading-relaxed">
-            Wondering where Super Affiliate System Pro went? You're in the right place. The 2025 SAS Pro is now ONLY available as an upgrade via John Crestani's AI Marketing Club. This page bridges the info gap — no more outdated links, pricing confusion, or market noise.
+            Wondering where Super Affiliate System Pro went? You&apos;re in the right place. The 2025 SAS Pro is now ONLY available as an upgrade via John Crestani&apos;s AI Marketing Club. This page bridges the info gap — no more outdated links, pricing confusion, or market noise.
           </p>
           <p className="text-xl leading-relaxed">
             <strong>What’s changed?</strong> Club entry is just <strong>$27</strong> (not $997 up front), with SAS Pro a limited-time <strong>$197</strong> upsell. This gives you full access to modern AI-powered affiliate skills, templates, and joined community momentum—at an accessible level for all.
@@ -305,9 +305,7 @@ export default function SuperAffiliateSystemProPage() {
 
         {/* FAQ */}
         <section className="max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl font-semibold gradient-text mb-6 text-center">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-4xl font-semibold gradient-text mb-6 text-center">Frequently Asked Questions</h2>
           {[
             {
               question: "Is Super Affiliate System Pro a scam/overhyped?",
@@ -343,9 +341,7 @@ export default function SuperAffiliateSystemProPage() {
 
         {/* TESTIMONIALS */}
         <section className="max-w-3xl mx-auto px-4 space-y-10">
-          <h2 className="text-4xl font-semibold gradient-text mb-8 text-center">
-            Member Stories &ndash; Predictability Restored
-          </h2>
+          <h2 className="text-4xl font-semibold gradient-text mb-8 text-center">Member Stories &ndash; Predictability Restored</h2>
           <div className="space-y-12">
             {[
               {
