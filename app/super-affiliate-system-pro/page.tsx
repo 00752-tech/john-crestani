@@ -13,7 +13,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
 
-// Correct affiliate link for ALL CTAs:
+// The single correct affiliate link for all CTA buttons:
 const AFFILIATE_LINK =
   "https://04c56v32f9av9wb68i4xfxbr3b.hop.clickbank.net/?&traffic_source=sasp_pg_ctas";
 
@@ -25,7 +25,7 @@ const BUTTON_UPGRADE_CLASS =
   "bg-pink-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75";
 
 export default function SuperAffiliateSystemProPage() {
-  // Opens affiliate link in new tab without hover URL reveal
+  // Opens affiliate URL in new tab with no hover URL reveal
   const openAffiliateLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -52,19 +52,29 @@ export default function SuperAffiliateSystemProPage() {
         <link rel="canonical" href={PAGE_CANONICAL_URL} />
       </Head>
 
-      {/* Breadcrumb structured data */}
+      {/* Breadcrumb JSON-LD */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://johncrestani.me" },
-            { "@type": "ListItem", position: 2, name: "Super Affiliate System Pro", item: PAGE_CANONICAL_URL },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://johncrestani.me",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Super Affiliate System Pro",
+              item: PAGE_CANONICAL_URL,
+            },
           ],
         }}
       />
 
-      {/* FAQ structured data */}
+      {/* FAQ JSON-LD */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -117,7 +127,7 @@ export default function SuperAffiliateSystemProPage() {
             },
             {
               "@type": "Question",
-              name: "What kind of results can I expect? Is it a &apos;get rich quick&apos; scheme?",
+              name: "What kind of results can I expect? Is it a get rich quick scheme?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
@@ -128,7 +138,7 @@ export default function SuperAffiliateSystemProPage() {
         }}
       />
 
-      {/* Product and Course structured data */}
+      {/* Product and Course JSON-LD */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -148,16 +158,26 @@ export default function SuperAffiliateSystemProPage() {
             seller: { "@type": "Organization", name: "John Crestani" },
             hasMerchantReturnPolicy: {
               "@type": "MerchantReturnPolicy",
-              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              returnPolicyCategory:
+                "https://schema.org/MerchantReturnFiniteReturnWindow",
               merchantReturnDays: 60,
               returnMethod: "https://schema.org/ReturnByMail",
               returnFees: "https://schema.org/NoRestockingFee",
               refundType: "https://schema.org/FullRefund",
-              merchantReturnLink: "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
+              merchantReturnLink:
+                "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
             },
           },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1550" },
-          provider: { "@type": "Organization", name: "John Crestani", url: "https://johncrestani.me" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "1550",
+          },
+          provider: {
+            "@type": "Organization",
+            name: "John Crestani",
+            url: "https://johncrestani.me",
+          },
         }}
       />
 
@@ -171,7 +191,7 @@ export default function SuperAffiliateSystemProPage() {
           </h1>
           <p className="text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
             In 2025&apos;s uncertain landscape, transform your financial future. Join{" "}
-            <strong>John Crestani&apos;s AI Marketing Club</strong> for <strong>$27</strong>—and unlock Super Affiliate System Pro for <strong>$197</strong> (one-time, down from $997). This is your definitive source: clear up market confusion, access the most updated SAS Pro, and finally gain long-term predictability—even if you&apos;ve struggled before.
+            <strong>John Crestani&apos;s AI Marketing Club</strong> for <strong>$27</strong> — and unlock Super Affiliate System Pro for <strong>$197</strong> (one-time, down from $997). This is your definitive source: clear up market confusion, access the most updated SAS Pro, and finally gain long-term predictability — even if you&apos;ve struggled before.
           </p>
           <div className="max-w-3xl mx-auto mb-12">
             <Image
