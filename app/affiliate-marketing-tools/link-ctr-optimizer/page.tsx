@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Head from "next/head";
@@ -49,7 +50,8 @@ export default function AffiliateLinkOptimizerPage() {
         <meta name="twitter:description" content={pageDesc} />
       </Head>
 
-      {/* JSON-LD structured data */}
+      {/* JSON-LD structured data with ESLint disable on explicit any */}
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
@@ -90,6 +92,7 @@ export default function AffiliateLinkOptimizerPage() {
         }}
       />
 
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
