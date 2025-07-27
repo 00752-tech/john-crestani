@@ -7,13 +7,14 @@ import Image from "next/image";
 
 const PAGE_CANONICAL_URL = "https://johncrestani.me/super-affiliate-system-pro";
 
+// Updated optimized title and description
 const PAGE_TITLE =
-  "Super Affiliate System Pro 2025 - John Crestani&apos;s AI Marketing Club Review - End Fear &amp; Gain Unshakeable Control";
+  "Super Affiliate System Pro (2025) Update: Access SAS Pro via John Crestani's AI Marketing Club & End Financial Fear.";
 
 const PAGE_DESCRIPTION =
-  "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
+  "Searching for John Crestani's Super Affiliate System Pro (SASP)? Get the updated 2025 SAS Pro inside his AI Marketing Club for just $27 (plus $197, originally $997). Future-proof income, overcome job fears, gain control.";
 
-// Exact affiliate link used for ALL CTA buttons
+// Exact affiliate link used for all CTA buttons
 const AFFILIATE_LINK =
   "https://04c56v32f9av9wb68i4xfxbr3b.hop.clickbank.net/?&traffic_source=sasp_pg_ctas";
 
@@ -127,7 +128,7 @@ export default function SuperAffiliateSystemProPage() {
         }}
       />
 
-      {/* Product and Course structured data with fixes for GSC */}
+      {/* Product and Course JSON-LD with fixes */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -138,7 +139,6 @@ export default function SuperAffiliateSystemProPage() {
           image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
           brand: { "@type": "Brand", name: "John Crestani" },
 
-          // Added hasCourseInstance with courseWorkload (fixes GSC critical issues)
           hasCourseInstance: {
             "@type": "CourseInstance",
             name: "Super Affiliate System Pro 2025 Enrollment",
@@ -147,7 +147,7 @@ export default function SuperAffiliateSystemProPage() {
             courseMode: "Online",
             url: PAGE_CANONICAL_URL,
             image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
-            courseWorkload: "PT50H", // ISO 8601 duration format for 50 hours
+            courseWorkload: "PT50H",
           },
 
           offers: {
@@ -157,7 +157,7 @@ export default function SuperAffiliateSystemProPage() {
             price: "27",
             priceValidUntil: "2025-12-31",
             availability: "https://schema.org/InStock",
-            category: "Online Course", // Added category fixes GSC warning
+            category: "Online Course",
             seller: { "@type": "Organization", name: "John Crestani" },
             hasMerchantReturnPolicy: {
               "@type": "MerchantReturnPolicy",
@@ -166,14 +166,17 @@ export default function SuperAffiliateSystemProPage() {
               returnMethod: "https://schema.org/ReturnByMail",
               returnFees: "https://schema.org/NoRestockingFee",
               refundType: "https://schema.org/FullRefund",
-              merchantReturnLink: "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
+              merchantReturnLink:
+                "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
             },
           },
+
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.8",
             reviewCount: "1550",
           },
+
           provider: {
             "@type": "Organization",
             name: "John Crestani",
@@ -183,7 +186,7 @@ export default function SuperAffiliateSystemProPage() {
       />
 
       <main className="bg-black text-white min-h-screen px-8 py-20 flex flex-col gap-16 max-w-5xl mx-auto">
-        {/* HERO */}
+        {/* HERO SECTION */}
         <section className="text-center">
           <h1 className="text-5xl font-extrabold gradient-text leading-tight mb-8">
             Super Affiliate System Pro 2025
@@ -204,7 +207,6 @@ export default function SuperAffiliateSystemProPage() {
               className="rounded-lg mx-auto shadow-lg"
             />
           </div>
-          {/* CTA BUTTON */}
           <button
             type="button"
             onClick={() => openAffiliateLink(AFFILIATE_LINK)}
@@ -221,9 +223,8 @@ export default function SuperAffiliateSystemProPage() {
           </p>
         </section>
 
-        {/* Other sections omitted for brevity */}
-        {/* You may include your other sections for Clarity, Value, Curriculum, Pricing, etc. */}
-        {/* Make sure all other CTA buttons also use openAffiliateLink(AFFILIATE_LINK) */}
+        {/* Additional sections of your landing page below */}
+        {/* Add the rest of your content sections here ensuring all CTAs use openAffiliateLink(AFFILIATE_LINK) similarly */}
 
       </main>
     </>
