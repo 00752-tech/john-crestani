@@ -1,14 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import ClientROASCalculator from "./ClientROASCalculator";
 import { JsonLd } from "react-schemaorg";
-
-export const metadata = {
-  title: "Predictable Profits: AI-Powered ROAS Calculator",
-  description:
-    "Eliminate the guesswork from your ad spend. Our free AI-powered ROAS calculator helps you predict and optimize ad campaign performance for stable, profitable returns and confident marketing decisions.",
-};
 
 export default function ROASCalculatorPage() {
   const pageUrl = "https://johncrestani.me/advertising-tools/roas-calculator";
