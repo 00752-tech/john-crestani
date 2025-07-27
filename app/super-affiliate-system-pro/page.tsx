@@ -25,7 +25,7 @@ const BUTTON_UPGRADE_CLASS =
   "bg-pink-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75";
 
 export default function SuperAffiliateSystemProPage() {
-  // Opens affiliate URL in new tab without hover URL reveal
+  // Opens affiliate link in new tab without hover URL reveal
   const openAffiliateLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -128,7 +128,7 @@ export default function SuperAffiliateSystemProPage() {
         }}
       />
 
-      {/* Product and Course JSON-LD */}
+      {/* Product and Course structured data with fixes */}
       <JsonLd
         item={{
           "@context": "https://schema.org",
@@ -138,6 +138,19 @@ export default function SuperAffiliateSystemProPage() {
           url: PAGE_CANONICAL_URL,
           image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
           brand: { "@type": "Brand", name: "John Crestani" },
+
+          // Added to fix Missing hasCourseInstance error
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            name: "Super Affiliate System Pro 2025 Enrollment",
+            description:
+              "Access to the 2025 AI-powered Super Affiliate System Pro online course via John Crestani's AI Marketing Club.",
+            courseMode: "Online",
+            url: PAGE_CANONICAL_URL,
+            image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
+            // Optionally add startDate or endDate here
+          },
+
           offers: {
             "@type": "Offer",
             url: AFFILIATE_LINK,
@@ -145,6 +158,7 @@ export default function SuperAffiliateSystemProPage() {
             price: "27",
             priceValidUntil: "2025-12-31",
             availability: "https://schema.org/InStock",
+            category: "Online Course", // Added to fix Missing category warning
             seller: { "@type": "Organization", name: "John Crestani" },
             hasMerchantReturnPolicy: {
               "@type": "MerchantReturnPolicy",
@@ -153,11 +167,22 @@ export default function SuperAffiliateSystemProPage() {
               returnMethod: "https://schema.org/ReturnByMail",
               returnFees: "https://schema.org/NoRestockingFee",
               refundType: "https://schema.org/FullRefund",
-              merchantReturnLink: "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
+              merchantReturnLink:
+                "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
             },
           },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1550" },
-          provider: { "@type": "Organization", name: "John Crestani", url: "https://johncrestani.me" },
+
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "1550",
+          },
+
+          provider: {
+            "@type": "Organization",
+            name: "John Crestani",
+            url: "https://johncrestani.me",
+          },
         }}
       />
 
@@ -200,7 +225,7 @@ export default function SuperAffiliateSystemProPage() {
           </p>
         </section>
 
-        {/* CLARITY & TRANSITION SECTION */}
+        {/* CLARITY & TRANSITION */}
         <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
           <h2 className="text-4xl font-semibold gradient-text leading-snug">
             The Official Transition: New 2025 Access Point &mdash; AI Marketing Club
@@ -213,7 +238,7 @@ export default function SuperAffiliateSystemProPage() {
           </p>
         </section>
 
-        {/* VALUE & EMOTIONAL SOLUTION SECTION */}
+        {/* VALUE & EMOTIONAL SOLUTION */}
         <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
           <h2 className="text-4xl font-semibold gradient-text leading-snug">
             Move Past Uncertainty: Predictable Skills &amp; Consistent Growth
@@ -347,10 +372,7 @@ export default function SuperAffiliateSystemProPage() {
                 "No. The system is step-by-step, beginner-friendly, and community/coaching driven to support everyone.",
             },
           ].map(({ question, answer }, idx) => (
-            <details
-              key={idx}
-              className="mb-4 bg-gray-900 p-4 rounded cursor-pointer leading-relaxed"
-            >
+            <details key={idx} className="mb-4 bg-gray-900 p-4 rounded cursor-pointer leading-relaxed">
               <summary className="font-semibold">{question}</summary>
               <p className="mt-2 text-gray-300">{answer}</p>
             </details>
