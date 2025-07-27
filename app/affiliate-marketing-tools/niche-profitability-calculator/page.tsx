@@ -76,9 +76,9 @@ export default function NicheProfitabilityCalculatorPage() {
   };
 
   const pageTitle =
-    "Niche Profitability Calculator: Unlock SAS Pro & AI Marketing Club - End Uncertainty, Predict Earnings";
+    "Niche Profitability Calculator... Unlock SAS Pro & AI Marketing Club - End Uncertainty Predict Earnings";
   const pageDesc =
-    "Stop guessing & end financial fear! Our free AI-powered calculator helps you confidently identify profitable affiliate niches. Then, unlock John Crestani's AI Marketing Club & Super Affiliate System Pro for a clear path to predictable earnings & career resilience. Get your $800 SAS Pro discount here!";
+    "Stop guessing & end financial fear! Our free AI-powered calculator helps you confidently identify profitable affiliate niches. Then, unlock John Crestani&apos;s AI Marketing Club & Super Affiliate System Pro for a clear path to predictable earnings & career resilience. Get your $800 SAS Pro discount here!";
 
   return (
     <>
@@ -123,15 +123,20 @@ export default function NicheProfitabilityCalculatorPage() {
 
           {/* Heading */}
           <h1
-            className="text-4xl md:text-5xl font-extrabold mb-12 text-center gradient-text leading-relaxed tracking-wide"
-            style={{ fontWeight: 900 }}
+            className="mb-12 text-center leading-snug tracking-wide"
+            aria-label="Niche Profitability Calculator main heading"
           >
-            <span className="block mb-4" style={{ fontStyle: "italic" }}>
-              Discover Your Most Profitable Niche:
+            <span
+              className="block text-5xl font-extrabold"
+              style={{ fontWeight: 900 }}
+            >
+              Discover Your Most Profitable Niche...
             </span>
-            <span className="block" style={{ fontWeight: 900 }}>
-              Use Our Niche Profitability Calculator <br />
-              to Find Winning Affiliate Markets
+            <span
+              className="block mt-1 text-3xl font-light text-pink-400"
+              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
+            >
+              Use Our Niche Profitability Calculator to Find Winning Affiliate Markets
             </span>
           </h1>
 
@@ -334,7 +339,7 @@ export default function NicheProfitabilityCalculatorPage() {
               transition={{ duration: 0.5 }}
               className="text-2xl font-semibold mb-4 text-white"
             >
-              Gain Clarity Instantly: How to Use This Calculator
+              Gain Clarity Instantly... How to Use This Calculator
             </motion.h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-300">
               <li>Estimate average sales per month for your niche.</li>
@@ -353,7 +358,7 @@ export default function NicheProfitabilityCalculatorPage() {
             className="bg-gray-900 p-8 rounded-lg mb-10"
           >
             <h2 className="text-2xl font-semibold mb-4 text-white gradient-text">
-              Beyond the Numbers: How John Crestani&apos;s AI Marketing Club &amp; SAS Pro Transform Uncertainty into Predictability
+              Beyond the Numbers... How John Crestani&apos;s AI Marketing Club &amp; SAS Pro Transform Uncertainty into Predictability
             </h2>
             <p className="text-gray-300 mb-4">
               Calculating your potential profit is a great start, but what if you had a proven system to <strong>turn those numbers into real results?</strong> In today&apos;s AI-driven economy, data alone isn&apos;t enough — you need tools, strategies, and support to build predictable income.
