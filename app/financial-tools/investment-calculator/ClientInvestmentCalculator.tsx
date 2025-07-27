@@ -9,16 +9,42 @@ import { JsonLd } from 'react-schemaorg'
 import { motion } from 'framer-motion'
 import React from 'react'
 
+// No-hover link to prevent URL preview on hover like CTA buttons
+const NoHoverLink = ({
+  children,
+  url,
+}: {
+  children: React.ReactNode
+  url: string
+}) => {
+  const openUrl = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
+  return (
+    <button
+      onClick={openUrl}
+      className="text-pink-500 underline font-semibold hover:text-pink-400 cursor-pointer bg-transparent border-none p-0"
+      aria-label={`Open link to ${typeof children === 'string' ? children : 'link'}`}
+      type="button"
+      tabIndex={0}
+    >
+      {children}
+    </button>
+  )
+}
+
 export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: { backUrl?: string }) {
   const pageTitle = 'Secure Your Financial Future: Free Investment Growth Calculator | JohnCrestani.me'
   const pageDesc =
     'Predict your investment growth with our free calculator. Go beyond traditional investments by learning how to multiply your income through AI-powered affiliate marketing with John Crestani.'
 
-  // Updated: Open your custom affiliate link in new tab on CTA click
+  // CTA button opens your own SAS Pro landing page in a new tab
   const handleInvestInFuture = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.open(
-      "https://13ca6r8tex6r7q1adnc-0y5o19.hop.clickbank.net/?&traffic_source=invest_calc_pg_cta",
+      "https://johncrestani.me/super-affiliate-system-pro",
       "_blank",
       "noopener,noreferrer"
     )
@@ -66,7 +92,7 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             </span>
           </motion.h1>
 
-          {/* Intro Paragraph */}
+          {/* Intro Paragraph with no-hover link */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -83,7 +109,10 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             </p>
             <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto">
               Discover how <span className="font-bold underline italic">investing in your skills</span>, particularly in AI-powered affiliate marketing through{' '}
-              <span className="font-extrabold">John Crestani&apos;s AI Marketing Club (SAS Pro)</span>, can be your ultimate leverage.{' '}
+              <NoHoverLink url="https://johncrestani.me/super-affiliate-system-pro">
+                John Crestani&apos;s AI Marketing Club (Super Affiliate System Pro)
+              </NoHoverLink>,{' '}
+              can be your ultimate leverage.{' '}
               <span className="italic font-semibold">Go beyond mere savings</span> and learn to{' '}
               <span className="font-bold italic underline">
                 identify lucrative opportunities, create high-converting campaigns, scale your business, and diversify your income streams for predictable, reliable wealth creation.
