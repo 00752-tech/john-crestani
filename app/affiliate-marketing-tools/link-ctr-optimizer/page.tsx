@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Head from "next/head";
@@ -8,68 +7,57 @@ import { motion } from "framer-motion";
 import React from "react";
 import { JsonLd } from "react-schemaorg";
 
-import ClientLinkCTROptizer from "./ClientLinkCTROptizer";
-
-export const metadata = {
-  title: "Boost Clicks, End Wasted Effort: Free CTR Optimizer",
-  description:
-    "Stop losing clicks and wasted effort with our AI-powered Affiliate CTR Optimizer. Predict improvements, maximize earnings, then unlock AI-powered Affiliate training with John Crestani's proven system.",
-};
+import ClientLinkCTROptimizer from "./ClientLinkCTROptimizer";
 
 export default function AffiliateLinkOptimizerPage() {
-  const backUrl = "/affiliate-tools";
+  const backUrl = "/affiliate-marketing-tools";
   const ctaUrl =
-    "https://0a12bc34defghijklmnopqrs.hop.clickbank.net/?&traffic_source=ctr_optimize_pg";
+    "https://0b29ap10s8br7tff3kb85z1r70.hop.clickbank.net/?&traffic_source=ctr_optimizer_pg_aimc_sasp";
 
-  const pageTitle = "Unlock Your Affiliate Link CTR Edge & Maximize Earnings";
-  const pageDescription =
-    "Stop wasting affiliate traffic! Use our free AI-powered CTR Optimizer to predict how changes can boost clicks & commissions, then join John Crestani's AI Marketing Club and SAS Pro for proven income strategies — get your exclusive discount today.";
+  const pageTitle =
+    "Boost Clicks, End Wasted Effort: Free AI-Powered Affiliate Link CTR Optimizer";
+  const pageDesc =
+    "Stop losing clicks and wasted effort with our AI-powered Affiliate CTR Optimizer. Predict improvements, maximize earnings, then unlock AI-powered Affiliate training with John Crestani's proven system.";
 
-  // Open external link safely
-  const handleCTAClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(ctaUrl, "_blank", "noopener,noreferrer");
   };
-
-  // Sample testimonials - replace or extend with real data
-  const testimonials = [
-    {
-      name: "Jane D.",
-      role: "Affiliate Marketer",
-      quote:
-        "This CTR optimizer showed me exactly where my links were underperforming. After applying the insights and John’s training, my commissions doubled!",
-    },
-    {
-      name: "Michael S.",
-      role: "Content Creator",
-      quote:
-        "I never realized the impact of link placement until I used the optimizer. Guided by John Crestani’s system, I’m now making reliable five-figure months.",
-    },
-  ];
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="canonical" href="https://johncrestani.me/affiliate-tools/ctr-optimizer" />
+        <meta name="description" content={pageDesc} />
+        <link
+          rel="canonical"
+          href="https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer"
+        />
+
+        {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:url" content="https://johncrestani.me/affiliate-tools/ctr-optimizer" />
+        <meta property="og:description" content={pageDesc} />
+        <meta
+          property="og:url"
+          content="https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer"
+        />
         <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:description" content={pageDesc} />
       </Head>
 
+      {/* JSON-LD structured data */}
       <JsonLd<any>
         item={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "Affiliate Link CTR Optimizer",
           description:
-            "Unlock your affiliate link's full value by predicting CTR improvements with AI, analyze key factors affecting clicks, and boost your commissions.",
-          url: "https://johncrestani.me/affiliate-tools/ctr-optimizer",
+            "Unlock higher affiliate earnings by eliminating guesswork. Our free, AI-powered CTR Optimizer helps you confidently predict and achieve optimal click-through rates, turning more visitors into buyers.",
+          url: "https://johncrestani.me/affiliate-marketing-tools/link-ctr-optimizer",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           isAccessibleForFree: true,
@@ -92,12 +80,12 @@ export default function AffiliateLinkOptimizerPage() {
             "Analyze link placement impact",
             "Assess anchor text relevance",
             "Evaluate surrounding content quality",
-            "Predict potential CTR gains",
+            "Predict potential click gains",
           ],
           softwareHelp: {
             "@type": "CreativeWork",
-            name: "How To Use The Affiliate Link CTR Optimizer",
-            text: "Input your current CTR and adjust sliders to assess link placement, anchor text, and content quality to predict improvements and optimize your affiliate links.",
+            name: "How to Use Affiliate Link CTR Optimizer",
+            text: "Input your current click-through rate and adjust sliders for link placement, anchor text relevance, and surrounding content quality to estimate potential CTR improvements and optimize your affiliate links.",
           },
         }}
       />
@@ -112,202 +100,252 @@ export default function AffiliateLinkOptimizerPage() {
               name: "How accurate is the Affiliate Link CTR Optimizer?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "The optimizer uses industry best practices and AI to provide estimates. Actual results may vary but it helps pinpoint opportunities for improvement.",
+                text: "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It's best used as a guide for potential improvements rather than a guarantee of exact results.",
               },
             },
             {
               "@type": "Question",
-              name: "What is a good click-through rate for affiliate links?",
+              name: "What's a good click-through rate for affiliate links?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Generally, CTRs range from 0.5% to 1% as average. Higher rates (2% to 5%) are achievable with optimized strategies taught in John Crestani's training.",
+                text: "A good CTR for affiliate links can vary widely depending on your niche, audience, and placement. Generally, rates between 0.5% to 1% are considered average, while anything above 1% is good. Some highly optimized campaigns can achieve rates of 2-5% or even higher.",
               },
             },
             {
               "@type": "Question",
-              name: "How can I improve my affiliate link CTR?",
+              name: "How can I improve my affiliate link click-through rates?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Use this optimizer for insights, then apply proven strategies from John Crestani’s AI Marketing Club to refine your campaigns and drive more targeted traffic.",
+                text: "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani's Super Affiliate System Pro offers in-depth training on these techniques and more.",
               },
             },
             {
               "@type": "Question",
-              name: "How does AI Marketing Club and SAS Pro help beyond the optimizer?",
+              name: "How does the AI Marketing Club & SAS Pro help me go beyond estimated CTRs to actual profit?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "The club and SAS Pro provide in-depth training to monetize improvements, scale your affiliate business, and achieve consistent high-ticket commissions.",
+                text: "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You'll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
               },
             },
           ],
         }}
       />
 
-      <motion.main className="min-h-screen bg-black text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          {/* Back link */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="min-h-screen bg-black text-white py-20 px-6"
+      >
+        <motion.div
+          className="max-w-4xl mx-auto"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          {/* Back Link */}
+          <Link
+            href={backUrl}
+            className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-10 font-semibold italic"
+            aria-label="Back to Affiliate Marketing Tools"
           >
-            <Link
-              href={backUrl}
-              className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8 font-semibold italic"
-              aria-label="Back to Affiliate Tools"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" /> Back to Affiliate Tools
-            </Link>
-          </motion.div>
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Affiliate Marketing Tools
+          </Link>
 
           {/* Hero */}
-          <section className="text-center mb-16">
-            <motion.h1
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="font-extrabold leading-tight tracking-tight text-white gradient-text"
-            >
-              <div className="text-5xl md:text-6xl">Unlock Affiliate Link CTR Edge...</div>
-              <div className="text-3xl md:text-4xl font-light mt-2 text-pink-400">AI-Powered Optimizer & Proven Training</div>
-            </motion.h1>
-
-            <motion.p
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.7 }}
-              className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
-            >
-              Stop wasting traffic and effort. Predict how to boost clicks, then use John Crestani’s proven system to turn clicks into commissions — faster and smarter.
-            </motion.p>
-
-            <motion.button
-              onClick={handleCTAClick}
-              className="mt-8 inline-block whitespace-nowrap bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-extrabold uppercase rounded-full px-10 py-4 text-lg shadow-lg transition-all duration-300 outline-none focus:ring-4 focus:ring-pink-400 cursor-pointer"
-              aria-label="Join AI Marketing Club and claim your exclusive SAS Pro discount"
-            >
-              Unlock My AI CTR Edge &amp; SAS Pro Discount
-            </motion.button>
-          </section>
-
-          {/* Benefits */}
-          <section className="mb-20">
-            <motion.ul
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4 text-lg text-gray-300 max-w-4xl mx-auto list-disc list-inside"
-            >
-              <li><span className="font-bold italic underline">Identify exact weak points</span> limiting your clicks</li>
-              <li><span className="font-bold italic underline">Discover how small changes</span> to placement and context can skyrocket CTR</li>
-              <li><span className="font-bold italic underline">Make data-driven decisions</span> for faster affiliate sales growth</li>
-              <li><span className="font-bold italic underline">Step confidently into AI-powered</span> affiliate marketing strategies</li>
-            </motion.ul>
-          </section>
-
-          {/* Tool */}
-          <motion.section
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-20 bg-gray-900 p-8 rounded-lg"
+          <h1
+            className="mb-12 text-center leading-snug tracking-wide"
+            aria-label="Affiliate Link CTR Optimizer main heading"
           >
-            <ClientLinkCTROptizer />
-          </motion.section>
+            <span
+              className="block text-5xl font-extrabold"
+              style={{ fontWeight: 900 }}
+            >
+              Unlock More Clicks, Maximize Earnings...
+            </span>
+            <span
+              className="block mt-1 text-3xl font-light text-pink-400"
+              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
+            >
+              Your Free AI-Powered Affiliate Link CTR Optimizer
+            </span>
+          </h1>
 
-          {/* How to Use */}
-          <motion.section
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
+          {/* Intro paragraph */}
+          <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-16 px-4 leading-relaxed">
+            Are you seeing your affiliate links ignored, wasting precious traffic and effort? Stop the guesswork! Our free,{" "}
+            <strong className="text-pink-400">AI-powered Affiliate Link CTR Optimizer</strong> gives you
+            the clarity and confidence to predict click improvements. Quickly estimate how small tweaks can lead to{" "}
+            <strong className="text-pink-400">significantly higher earnings</strong> and turn more visitors into buyers.
+            This is your first step towards leveraging AI and proven systems for affiliate marketing success.
+          </p>
+
+          {/* Benefits list */}
+          <ul className="max-w-3xl mx-auto text-gray-300 text-lg list-disc list-inside mb-16 space-y-4 px-6 leading-relaxed">
+            <li>
+              <span className="font-bold italic underline">Pinpoint areas for improvement</span> in your link strategy.
+            </li>
+            <li>
+              Predict the <span className="font-bold italic underline">potential click uplift</span> from optimization.
+            </li>
+            <li>
+              Make <span className="font-bold italic underline">data-driven decisions</span> to boost conversions, not just traffic.
+            </li>
+            <li>
+              Save time and money by <span className="font-bold italic underline">focusing on what truly drives clicks</span>.
+            </li>
+          </ul>
+
+          {/* Calculator tool */}
+          <motion.div
+            className="bg-gray-900 p-8 rounded-lg mb-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mb-20 bg-gray-900 p-8 rounded-lg"
           >
-            <h2 className="text-3xl mb-6 font-semibold text-white gradient-text">How To Use The Optimizer</h2>
-            <ol className="list-decimal list-inside space-y-3 text-gray-300 text-lg max-w-3xl mx-auto">
-              <li>Enter your affiliate link’s current click-through rate</li>
-              <li>Adjust sliders rating link placement, anchor text relevance and content quality</li>
-              <li>Watch how small improvements can impact clicks and earnings</li>
-              <li>Use the data to boost links then unlock full traffic & conversion training</li>
-            </ol>
-          </motion.section>
+            <ClientLinkCTROptimizer />
+          </motion.div>
 
-          {/* Bridge */}
-          <motion.section
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mb-20 bg-gray-900 p-8 rounded-lg"
-          >
-            <h2 className="text-3xl mb-6 font-semibold text-white gradient-text">
-              From Clicks To Commissions — The Full Blueprint
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-6">
-              Knowing your link’s CTR potential is just the start — real affiliates master the full funnel. John Crestani’s AI Marketing Club and Super Affiliate System provide the proven strategies to build predictable high-ticket commissions and long term, AI-augmented success.
-            </p>
-            <ul className="list-disc list-inside space-y-3 text-gray-300 max-w-3xl mx-auto text-lg">
-              <li>Master high-impact, AI-powered traffic generation</li>
-              <li>Build sales funnels proven for massive affiliate commissions</li>
-              <li>Access exclusive coaching, templates & insider info</li>
-              <li>Unlock the $800 SAS Pro discount & step into the future of affiliate marketing</li>
-            </ul>
-          </motion.section>
-
-          {/* Testimonials */}
-          <motion.section
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
+          {/* How to Use Section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mb-20 max-w-4xl mx-auto"
+            className="bg-gray-900 p-8 rounded-lg mb-10"
           >
-            <h2 className="text-center mb-10 text-3xl font-semibold text-white gradient-text">
-              What Our Members Say
+            <h2 className="text-2xl font-semibold mb-4 text-white gradient-text">
+              Instantly See Your Click Potential... How to Use This Optimizer
             </h2>
-            <div className="space-y-8">
-              {testimonials.map(({ name, role, quote }, i) => (
-                <blockquote
-                  key={i}
-                  className="bg-gray-800 p-6 rounded-lg shadow-lg text-gray-300 italic font-medium"
-                >
-                  “{quote}”
-                  <footer className="mt-3 text-sm font-semibold not-italic text-pink-400">
-                    — {name}, {role}
-                  </footer>
-                </blockquote>
-              ))}
-            </div>
-          </motion.section>
+            <ol className="list-decimal list-inside space-y-2 text-gray-300">
+              <li>Enter your current average Click-Through Rate (CTR) for an affiliate link.</li>
+              <li>Adjust the sliders for factors like link placement, anchor text relevance, and surrounding content quality based on your assessment.</li>
+              <li>View your estimated potential CTR and predicted click increase instantly.</li>
+              <li>Use these insights to optimize your links for higher performance!</li>
+            </ol>
+          </motion.div>
 
-          {/* Final CTA */}
-          <motion.section
-            initial={{ opacity: 0, translateY: 20 }}
-            animate={{ opacity: 1, translateY: 0 }}
+          {/* Bridge to offer */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mb-40 text-center"
+            className="bg-gray-900 p-8 rounded-lg mb-10"
           >
-            <h2 className="mb-6 text-4xl font-extrabold tracking-tight gradient-text">
-              Ready To Transform Clicks Into Real Commissions?
+            <h2 className="text-2xl font-semibold mb-4 text-white gradient-text">
+              From Estimated Clicks to Consistent Commissions: How John Crestani’s AI Marketing Club & SAS Pro Transform Your Affiliate Business
             </h2>
-            <p className="mb-8 text-xl max-w-3xl mx-auto text-gray-300">
-              Don’t let your traffic go to waste — take advantage of our AI-powered tool and proven marketing system to maximize affiliate earnings and secure your financial future.
+            <p className="text-gray-300 mb-4">
+              Predicting click improvements is powerful, but what if you had a complete, proven system to{" "}
+              <strong>turn those clicks into predictable, high-ticket commissions?</strong> In today’s AI-driven economy, knowing your potential isn’t enough—you need the blueprint, tools, and community to actually generate consistent affiliate income.
             </p>
+            <p className="text-gray-300 mb-4">
+              That’s where <strong>John Crestani’s AI Marketing Club</strong> comes in. It’s the exclusive home of the advanced{" "}
+              <strong>Super Affiliate System Pro (SASP)</strong>, offering the exact strategies and AI-powered tactics to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
+              <li><strong>Master AI-driven traffic generation</strong> to flood your offers with qualified clicks.</li>
+              <li><strong>Learn high-converting sales funnels</strong> that reliably turn clicks into buyers.</li>
+              <li><strong>Get an exclusive $800 SASP discount</strong> after joining AIMC for just $27.</li>
+              <li><strong>Build multiple, scalable income streams</strong> for ultimate financial resilience.</li>
+            </ul>
+            <p className="text-gray-300 mb-4 font-bold">
+              Don’t just estimate clicks — <em>start generating predictable profits</em> confidently.
+            </p>
+          </motion.div>
+
+          {/* Main CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="bg-gray-900 p-8 rounded-lg"
+          >
+            <h2 className="text-2xl font-semibold mb-4 text-white">
+              Ready to Turn Clicks into Cash Flow? Get Your AI-Powered Blueprint!
+            </h2>
+            <p className="text-gray-300 mb-4">
+              Optimizing your CTR is crucial, but true <strong>financial freedom</strong> comes from having a proven, AI-driven blueprint for the entire affiliate process.
+              Join John Crestani’s AI Marketing Club and get exclusive access to SAS Pro with an <strong>$800 discount</strong>. Learn to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                <strong>Drive high-quality traffic</strong> with cutting-edge AI strategies.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                <strong>Create irresistible offers</strong> that convert clicks into sales.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
+                <strong>Scale your income streams</strong> for long-term financial security.
+              </motion.li>
+              <motion.li
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.1 }}
+              >
+                <strong>Master the latest AI marketing techniques</strong> before your competition.
+              </motion.li>
+            </ul>
             <motion.button
-              onClick={handleCTAClick}
-              className="inline-block whitespace-nowrap bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-extrabold uppercase rounded-full px-14 py-5 text-xl shadow-lg transition-all duration-300 outline-none focus:ring-4 focus:ring-pink-400 cursor-pointer"
-              aria-label="Join AI Marketing Club and claim SAS Pro exclusive discount"
+              onClick={handleCtaClick}
+              className="no-hover whitespace-nowrap inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-8 rounded-full text-xl uppercase font-extrabold tracking-wide select-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400 transition"
+              aria-label="Unlock Your AI Income Blueprint with $800 SAS Pro Discount"
               type="button"
             >
-              Unlock My CTR Edge & SAS Pro Discount
+              Unlock Your AI Income Blueprint
             </motion.button>
-            <p className="mt-4 text-gray-400 text-sm">
-              Join the AI Marketing Club for just $27 and get instant access to exclusive bonuses and the $800 SAS Pro discount.
+            <p className="text-sm text-center text-gray-400 mt-4 max-w-xl mx-auto">
+              Join the AI Marketing Club for $27, then upgrade to the full Super Affiliate System Pro for just $197 (original price $997).
             </p>
-          </motion.section>
-        </div>
-      </motion.main>
+          </motion.div>
+
+          {/* FAQ Section */}
+          <section className="max-w-3xl mx-auto mt-16 text-gray-300 px-4">
+            <h2 className="text-3xl font-semibold mb-8 gradient-text text-center">
+              Frequently Asked Questions
+            </h2>
+            {[
+              {
+                question: "How accurate is the Affiliate Link CTR Optimizer?",
+                answer:
+                  "This optimizer provides estimates based on general best practices and industry averages. Actual results may vary depending on your specific niche, audience, and content quality. It's best used as a guide for potential improvements rather than a guarantee of exact results.",
+              },
+              {
+                question: "What's a good click-through rate for affiliate links?",
+                answer:
+                  "A good CTR for affiliate links can vary widely depending on your niche, audience, and placement. Generally, rates between 0.5% to 1% are considered average, while anything above 1% is good. Some highly optimized campaigns can achieve rates of 2-5% or even higher.",
+              },
+              {
+                question: "How can I improve my affiliate link click-through rates?",
+                answer:
+                  "To improve your affiliate link CTR, focus on creating high-quality, relevant content, use compelling and honest anchor text, place links strategically within your content, ensure your links are mobile-friendly, and continuously test and optimize your approach. John Crestani's Super Affiliate System Pro offers in-depth training on these techniques and more.",
+              },
+              {
+                question: "How does the AI Marketing Club & SAS Pro help me go beyond estimated CTRs to actual profit?",
+                answer:
+                  "While this calculator helps you estimate potential, the AI Marketing Club and Super Affiliate System Pro provide the proven strategies, AI tools, and mentorship to implement changes, drive targeted traffic, and convert those clicks into consistent, high-ticket affiliate commissions. You'll learn to truly master link optimization, traffic generation, and scaling for predictable income.",
+              },
+            ].map(({ question, answer }, idx) => (
+              <details key={idx} className="mb-6 bg-gray-900 p-5 rounded cursor-pointer">
+                <summary className="font-semibold text-lg cursor-pointer">{question}</summary>
+                <p className="mt-2 leading-relaxed">{answer}</p>
+              </details>
+            ))}
+          </section>
+        </motion.div>
+      </motion.div>
     </>
   );
 }
