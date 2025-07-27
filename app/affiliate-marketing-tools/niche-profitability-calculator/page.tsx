@@ -292,9 +292,9 @@ export default function NicheProfitabilityCalculatorPage() {
                   disabled={!isInputValid}
                   className="flex-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50"
                   aria-disabled={!isInputValid}
-                  aria-label="Calculate Profitability"
+                  aria-label={isInputValid ? "Calculate Profitability" : "Complete Inputs"}
                 >
-                  Calculate Profitability
+                  {isInputValid ? "Calculate Profitability" : "Complete Inputs"}
                 </button>
                 <button
                   type="button"
@@ -410,13 +410,13 @@ export default function NicheProfitabilityCalculatorPage() {
             </ul>
 
             <motion.button
-  onClick={handleCtaClick}
-  className="no-hover whitespace-nowrap inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-8 rounded-full text-xl uppercase font-extrabold tracking-wide select-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400 transition"
-  aria-label="Unlock Your AI Income Blueprint with $800 SAS Pro Discount"
-  type="button"
->
-  Unlock Your AI Income Blueprint
-</motion.button>
+              onClick={handleCtaClick}
+              className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-10 rounded-full text-xl uppercase font-extrabold tracking-wide select-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-pink-400 transition"
+              aria-label="Get AI Marketing Club & unlock your 800 dollar SAS Pro discount now"
+              type="button"
+            >
+              {isInputValid ? "Unlock Your AI Income Blueprint" : "Complete Inputs"}
+            </motion.button>
 
             <p className="text-sm text-center text-gray-400 mt-4 max-w-xl mx-auto">
               Join the AI Marketing Club for $27, then upgrade to the full Super Affiliate System Pro for just $197 (original price $997).
