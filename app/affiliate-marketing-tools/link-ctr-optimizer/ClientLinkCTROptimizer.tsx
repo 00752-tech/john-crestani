@@ -24,7 +24,7 @@ export default function ClientLinkCTROptimizer({
   }
 
   const pageUrl = `https://johncrestani.me/${pageUrlPath}`
-  const pageTitle = 'Boost Clicks, End Wasted Effort: Free CTR Optimizer'
+  const pageTitle = 'Boost Clicks End Wasted Effort... Free CTR Optimizer'
 
   return (
     <motion.div
@@ -65,7 +65,7 @@ export default function ClientLinkCTROptimizer({
           whileInView={{ y: 0, opacity: 1 }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
         >
-          Stop Losing Clicks: Your AI-Powered Affiliate CTR Predictor
+          Stop Losing Clicks Your AI-Powered Affiliate CTR Predictor
         </motion.h1>
 
         <div className="max-w-3xl mx-auto mb-12">
