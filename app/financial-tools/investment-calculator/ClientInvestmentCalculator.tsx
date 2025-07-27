@@ -44,8 +44,8 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
           className="container mx-auto px-4"
         >
           {/* Back to Tools Link */}
-          <Link href={backUrl} className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+          <Link href={backUrl} className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8 font-semibold italic">
+            <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Tools
           </Link>
 
@@ -54,9 +54,16 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+            className="text-4xl md:text-5xl font-extrabold mb-14 text-center gradient-text leading-relaxed tracking-wide"
+            style={{ fontWeight: 900 }}
           >
-            Conquer Financial Uncertainty: Your Blueprint to Predictable Investment Growth &amp; Income
+            <span className="block mb-4" style={{ fontStyle: 'italic' }}>
+              Conquer Financial Uncertainty:
+            </span>
+            <span className="block" style={{ fontWeight: '900' }}>
+              Your Blueprint to Predictable <br />
+              Investment Growth &amp; Income
+            </span>
           </motion.h1>
 
           {/* Intro Paragraph */}
@@ -64,16 +71,23 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="max-w-3xl mx-auto mb-12"
+            className="max-w-3xl mx-auto mb-16 px-4 leading-relaxed"
           >
-            <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
-              Are you <strong>anxious about your financial future</strong>? Use our intuitive Investment Calculator to{' '}
-              <strong>gain clarity and confidence</strong> by estimating the future value of your investments. While traditional investments offer steady growth, true financial freedom comes from{' '}
-              <strong>exponentially growing your earning potential</strong>.<br />
-              <br />
-              Discover how <strong>investing in your skills</strong>, particularly in AI-powered affiliate marketing through{' '}
-              <strong>John Crestani&apos;s AI Marketing Club (SAS Pro)</strong>, can be your ultimate leverage.{' '}
-              <strong>Go beyond mere savings</strong> and learn to <strong>identify lucrative opportunities, create high-converting campaigns, scale your business, and diversify your income streams for predictable, reliable wealth creation.</strong>
+            <p className="text-2xl text-center text-gray-300 font-semibold mb-12">
+              Are you <span className="italic">anxious about your financial future</span>? Use our intuitive <span className="font-bold italic">Investment Calculator</span> to{' '}
+              <span className="underline font-bold italic">gain clarity and confidence</span> by estimating the future value of your investments.
+            </p>
+            <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-12">
+              While <span className="font-semibold italic">traditional investments offer steady growth</span>, true financial freedom comes from{' '}
+              <span className="font-bold italic underline">exponentially growing your earning potential</span>.
+            </p>
+            <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto">
+              Discover how <span className="font-bold underline italic">investing in your skills</span>, particularly in AI-powered affiliate marketing through{' '}
+              <span className="font-extrabold">John Crestani&apos;s AI Marketing Club (SAS Pro)</span>, can be your ultimate leverage.{' '}
+              <span className="italic font-semibold">Go beyond mere savings</span> and learn to{' '}
+              <span className="font-bold italic underline">
+                identify lucrative opportunities, create high-converting campaigns, scale your business, and diversify your income streams for predictable, reliable wealth creation.
+              </span>
             </p>
           </motion.div>
 
@@ -85,19 +99,23 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12 bg-gray-900 p-8 rounded-lg"
+            className="mt-20 bg-gray-900 p-10 rounded-lg shadow-lg"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-2xl sm:text-3xl font-semibold mb-4 max-w-3xl mx-auto text-center px-4 leading-snug break-words hyphens-auto"
-              style={{ wordBreak: 'break-word', hyphens: 'auto' }}
+              className="text-3xl sm:text-4xl font-extrabold mb-8 max-w-3xl mx-auto text-center px-4 leading-snug"
+              style={{ fontStyle: 'italic' }}
             >
-              Effortlessly Project Your Financial Growth: How to Use This Calculator
+              Effortlessly Project Your Financial Growth:
+              <br />
+              <span className="font-bold" style={{ textDecoration: 'underline' }}>
+                How to Use This Calculator
+              </span>
             </motion.h2>
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-6 text-gray-300 text-lg max-w-3xl mx-auto px-6 list-disc list-inside">
               {[
                 { label: 'Initial Investment', desc: `Enter the amount you're starting with or have already invested.` },
                 { label: 'Monthly Contribution', desc: 'The amount you plan to add to your investment each month.' },
@@ -109,8 +127,9 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                  className="font-semibold"
                 >
-                  <strong className="text-pink-500">{item.label}:</strong> {item.desc}
+                  <span className="text-pink-500">{item.label}:</span> <span className="italic font-normal">{item.desc}</span>
                 </motion.li>
               ))}
             </ul>
@@ -120,38 +139,46 @@ export default function ClientInvestmentCalculator({ backUrl = '/free-tools' }: 
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-8 bg-gray-900 p-8 rounded-lg"
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="mt-16 bg-gray-900 p-10 rounded-lg shadow-lg"
           >
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-2xl font-semibold mb-4"
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="text-3xl font-extrabold mb-6 leading-tight"
             >
-              Beyond Traditional Investments: Secure Your Future with Predictable AI Income Streams
+              Beyond Traditional Investments:
+              <br />
+              <span className="italic underline">Secure Your Future with Predictable AI Income Streams</span>
             </motion.h2>
-            <p className="text-gray-300 mb-4">
-              While calculating traditional investment growth is a start, true <strong>financial resilience and freedom</strong> come from creating <strong>multiple, predictable income streams</strong>. John Crestani&apos;s AI Marketing Club (SAS Pro) isn&apos;t just a course; it&apos;s your blueprint to{' '}
-              <strong>confidently secure reliable online income</strong> and <strong>regain control</strong> of your financial destiny. Discover how to:
+            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+              While calculating traditional investment growth is a start, true{' '}
+              <span className="font-bold italic underline">financial resilience and freedom</span> come from creating{' '}
+              <span className="font-bold underline">multiple, predictable income streams</span>. John Crestani&apos;s AI Marketing Club (SAS Pro) isn&apos;t just a course; it&apos;s your blueprint to{' '}
+              <span className="italic font-semibold">confidently secure reliable online income</span> and{' '}
+              <span className="font-extrabold italic underline">regain control</span> of your financial destiny. Discover how to:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }}>
-                <strong>Identify and seize lucrative AI-powered opportunities</strong>, turning market shifts into predictable profit.
-              </motion.li>
-              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}>
-                <strong>Craft high-converting campaigns effortlessly</strong> with AI tools, ensuring consistent engagement and sales.
-              </motion.li>
+            <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg mb-8 max-w-4xl mx-auto px-4">
               <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.8 }}>
-                <strong>Scale your business with confidence</strong>, building a long-term asset that provides stability.
+                <span className="font-bold underline italic">
+                  Identify and seize lucrative AI-powered opportunities
+                </span>, turning market shifts into predictable profit.
               </motion.li>
               <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.9 }}>
-                <strong>Diversify your income streams for true financial freedom</strong>, moving beyond single points of failure.
+                <span className="font-bold underline italic">Craft high-converting campaigns effortlessly</span> with AI tools, ensuring consistent engagement and sales.
+              </motion.li>
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 1 }}>
+                <span className="font-bold underline italic">Scale your business with confidence</span>, building a long-term asset that provides stability.
+              </motion.li>
+              <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 1.1 }}>
+                <span className="font-bold underline italic">Diversify your income streams for true financial freedom</span>, moving beyond single points of failure.
               </motion.li>
             </ul>
             <motion.button
               onClick={handleInvestInFuture}
-              className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300"
+              className="block mx-auto bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-pink-400 text-white font-extrabold py-4 px-12 rounded-full text-xl uppercase tracking-wide transition duration-300"
+              aria-label="Unlock Predictable AI Income Blueprint"
             >
               Unlock My Predictable AI Income Blueprint Now!
             </motion.button>
