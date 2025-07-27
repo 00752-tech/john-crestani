@@ -78,7 +78,7 @@ export default function NicheProfitabilityCalculatorPage() {
   const pageTitle =
     "Niche Profitability Calculator... Unlock SAS Pro & AI Marketing Club - End Uncertainty Predict Earnings";
   const pageDesc =
-    "Stop guessing & end financial fear! Our free AI-powered calculator helps you confidently identify profitable affiliate niches. Then, unlock John Crestani's AI Marketing Club & Super Affiliate System Pro for a clear path to predictable earnings & career resilience. Get your $800 SAS Pro discount here!";
+    "Stop guessing & end financial fear! Our free AI-powered calculator helps you confidently identify profitable affiliate niches. Then, unlock John Crestani’s AI Marketing Club & Super Affiliate System Pro for a clear path to predictable earnings & career resilience. Get your $800 SAS Pro discount here!";
 
   return (
     <>
@@ -143,9 +143,7 @@ export default function NicheProfitabilityCalculatorPage() {
           {/* Intro Paragraph */}
           <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto mb-12 px-4 leading-relaxed">
             Are you&nbsp;
-            <strong>
-              nervous about picking the right niche
-            </strong>
+            <strong>nervous about picking the right niche</strong>
             &nbsp;and wasting time or money? Eliminate the guesswork! Our free,&nbsp;
             <strong>Niche Profitability Calculator</strong> gives you the clarity and confidence to assess market potential.&nbsp;
             Quickly estimate your affiliate niche profit potential to identify lucrative opportunities and ensure predictable earnings.
@@ -358,13 +356,13 @@ export default function NicheProfitabilityCalculatorPage() {
             className="bg-gray-900 p-8 rounded-lg mb-10"
           >
             <h2 className="text-2xl font-semibold mb-4 text-white gradient-text">
-              Beyond the Numbers... How John Crestani's AI Marketing Club & SAS Pro Transform Uncertainty into Predictability
+              Beyond the Numbers... How John Crestani’s AI Marketing Club & SAS Pro Transform Uncertainty into Predictability
             </h2>
             <p className="text-gray-300 mb-4">
-              Calculating your potential profit is a great start, but what if you had a proven system to <strong>turn those numbers into real results?</strong> In today's AI-driven economy, data alone isn't enough — you need tools, strategies, and support to build predictable income.
+              Calculating your potential profit is a great start, but what if you had a proven system to <strong>turn those numbers into real results?</strong> In today’s AI-driven economy, data alone isn’t enough — you need tools, strategies, and support to build predictable income.
             </p>
             <p className="text-gray-300 mb-4">
-              That's where <strong>John Crestani's AI Marketing Club</strong> comes in. It provides the exclusive home of the advanced <strong>Super Affiliate System Pro (SASP)</strong>, offering:
+              That’s where <strong>John Crestani’s AI Marketing Club</strong> comes in. It provides the exclusive home of the advanced <strong>Super Affiliate System Pro (SASP)</strong>, offering:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <li><strong>Master AI marketing</strong> and future-proof your income.</li>
@@ -373,7 +371,7 @@ export default function NicheProfitabilityCalculatorPage() {
               <li><strong>Build multiple income streams</strong> and regain financial control.</li>
             </ul>
             <p className="text-gray-300 mb-4 font-bold">
-              Don't just estimate profits — <em>start generating them</em> confidently.
+              Don’t just estimate profits — <em>start generating them</em> confidently.
             </p>
           </motion.div>
 
@@ -394,7 +392,7 @@ export default function NicheProfitabilityCalculatorPage() {
             </motion.h2>
 
             <p className="text-gray-300 mb-4">
-              Knowing your niche potential is powerful, but true <strong>financial freedom</strong> comes from having a proven blueprint. Join John Crestani's AI Marketing Club and get exclusive access to SAS Pro with an <strong>$800 discount</strong>. Learn to:
+              Knowing your niche potential is powerful, but true <strong>financial freedom</strong> comes from having a proven blueprint. Join John Crestani’s AI Marketing Club and get exclusive access to SAS Pro with an <strong>$800 discount</strong>. Learn to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               <motion.li initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.8 }}>
@@ -435,12 +433,12 @@ export default function NicheProfitabilityCalculatorPage() {
               {
                 question: "How accurate is the Niche Profitability Calculator?",
                 answer:
-                  "The calculator provides estimates based on the data you input. Its accuracy depends on the realism of your inputs. It's a powerful tool to guide decisions but actual results can vary.",
+                  "The calculator provides estimates based on the data you input. Its accuracy depends on the realism of your inputs. It’s a powerful tool to guide decisions but actual results can vary.",
               },
               {
-                question: "What if I'm not sure about my niche or how to profit?",
+                question: "What if I’m not sure about my niche or how to profit?",
                 answer:
-                  "The calculator is a start. John Crestani's AI Marketing Club teaches how to find niches, build campaigns, and scale profits with AI-powered tools and the SAS Pro system.",
+                  "The calculator is a start. John Crestani’s AI Marketing Club teaches how to find niches, build campaigns, and scale profits with AI-powered tools and the SAS Pro system.",
               },
               {
                 question: "Can this calculator help avoid unprofitable niches?",
@@ -473,15 +471,15 @@ export default function NicheProfitabilityCalculatorPage() {
               name: "How accurate is the Niche Profitability Calculator?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "The calculator provides estimates based on the data you input. Its accuracy depends on the realism of your inputs. It's a powerful tool to guide decisions but actual results can vary.",
+                text: "The calculator provides estimates based on the data you input. Its accuracy depends on the realism of your inputs. It’s a powerful tool to guide decisions but actual results can vary.",
               },
             },
             {
               "@type": "Question",
-              name: "What if I'm not sure about my niche or how to profit?",
+              name: "What if I’m not sure about my niche or how to profit?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "The calculator is a start. John Crestani's AI Marketing Club teaches how to find niches, build campaigns, and scale profits with AI-powered tools and the SAS Pro system.",
+                text: "The calculator is a start. John Crestani’s AI Marketing Club teaches how to find niches, build campaigns, and scale profits with AI-powered tools and the SAS Pro system.",
               },
             },
             {
