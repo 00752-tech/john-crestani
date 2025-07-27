@@ -13,7 +13,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
 
-// The single correct affiliate link for all CTA buttons:
+// Correct affiliate link (used in all CTA buttons)
 const AFFILIATE_LINK =
   "https://04c56v32f9av9wb68i4xfxbr3b.hop.clickbank.net/?&traffic_source=sasp_pg_ctas";
 
@@ -25,7 +25,7 @@ const BUTTON_UPGRADE_CLASS =
   "bg-pink-600 text-white shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75";
 
 export default function SuperAffiliateSystemProPage() {
-  // Opens affiliate URL in new tab with no hover URL reveal
+  // Opens affiliate URL in new tab without hover URL reveal
   const openAffiliateLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -58,18 +58,8 @@ export default function SuperAffiliateSystemProPage() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://johncrestani.me",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Super Affiliate System Pro",
-              item: PAGE_CANONICAL_URL,
-            },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://johncrestani.me" },
+            { "@type": "ListItem", position: 2, name: "Super Affiliate System Pro", item: PAGE_CANONICAL_URL },
           ],
         }}
       />
@@ -127,7 +117,7 @@ export default function SuperAffiliateSystemProPage() {
             },
             {
               "@type": "Question",
-              name: "What kind of results can I expect? Is it a get rich quick scheme?",
+              name: "What kind of results can I expect? Is it a &apos;get rich quick&apos; scheme?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
@@ -158,31 +148,21 @@ export default function SuperAffiliateSystemProPage() {
             seller: { "@type": "Organization", name: "John Crestani" },
             hasMerchantReturnPolicy: {
               "@type": "MerchantReturnPolicy",
-              returnPolicyCategory:
-                "https://schema.org/MerchantReturnFiniteReturnWindow",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
               merchantReturnDays: 60,
               returnMethod: "https://schema.org/ReturnByMail",
               returnFees: "https://schema.org/NoRestockingFee",
               refundType: "https://schema.org/FullRefund",
-              merchantReturnLink:
-                "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
+              merchantReturnLink: "https://support.clickbank.com/hc/en-us/articles/220376267-Refund-Policy",
             },
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            reviewCount: "1550",
-          },
-          provider: {
-            "@type": "Organization",
-            name: "John Crestani",
-            url: "https://johncrestani.me",
-          },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1550" },
+          provider: { "@type": "Organization", name: "John Crestani", url: "https://johncrestani.me" },
         }}
       />
 
       <main className="bg-black text-white min-h-screen px-8 py-20 flex flex-col gap-16 max-w-5xl mx-auto">
-        {/* HERO SECTION */}
+        {/* HERO */}
         <section className="text-center">
           <h1 className="text-5xl font-extrabold gradient-text leading-tight mb-8">
             Super Affiliate System Pro 2025
@@ -203,6 +183,7 @@ export default function SuperAffiliateSystemProPage() {
               className="rounded-lg mx-auto shadow-lg"
             />
           </div>
+          {/* CTA BUTTON */}
           <button
             type="button"
             onClick={() => openAffiliateLink(AFFILIATE_LINK)}
@@ -331,11 +312,11 @@ export default function SuperAffiliateSystemProPage() {
           {[
             {
               question: "Is Super Affiliate System Pro a scam/overhyped?",
-              answer: "No. SAS Pro is transparently presented here as an effective blueprint for serious affiliate marketers. You get lifetime updates, real support, and all the AI tools needed for today's market.",
+              answer: "No. SAS Pro is transparently presented here as an effective blueprint for serious affiliate marketers. You get lifetime updates, real support, and all the AI tools needed for today&apos;s market.",
             },
             {
               question: "Can I buy SAS Pro without joining the Club?",
-              answer: "No, that's the new (and official) way to get the latest SAS Pro. The old standalone version is gone.",
+              answer: "No, that&apos;s the new (and official) way to get the latest SAS Pro. The old standalone version is gone.",
             },
             {
               question: "Why is this page the official access point?",
@@ -343,7 +324,7 @@ export default function SuperAffiliateSystemProPage() {
             },
             {
               question: "Is $197 really the full price for SAS Pro?",
-              answer: "Yes—down from $997. It's a one-time price, with no hidden subscription. You must join the Club (only $27) to access the offer.",
+              answer: "Yes&mdash;down from $997. It&apos;s a one-time price, with no hidden subscription. You must join the Club (only $27) to access the offer.",
             },
             {
               question: "Is there a refund policy?",
@@ -354,7 +335,10 @@ export default function SuperAffiliateSystemProPage() {
               answer: "No. The system is step-by-step, beginner-friendly, and community/coaching driven to support everyone.",
             },
           ].map(({ question, answer }, idx) => (
-            <details key={idx} className="mb-4 bg-gray-900 p-4 rounded cursor-pointer leading-relaxed">
+            <details
+              key={idx}
+              className="mb-4 bg-gray-900 p-4 rounded cursor-pointer leading-relaxed"
+            >
               <summary className="font-semibold">{question}</summary>
               <p className="mt-2 text-gray-300">{answer}</p>
             </details>
@@ -390,13 +374,13 @@ export default function SuperAffiliateSystemProPage() {
                 role: "New Affiliate",
                 themes: "Step-by-Step, Accountability, Transparency",
               },
-            ].map((t, idx) => (
+            ].map((testimonial, idx) => (
               <article key={idx} className="bg-gray-900 p-8 rounded-lg shadow-xl">
-                <p className="italic text-gray-300 leading-relaxed">“{t.text}”</p>
+                <p className="italic text-gray-300 leading-relaxed">“{testimonial.text}”</p>
                 <footer className="mt-4 font-semibold text-yellow-400">
-                  &ndash; {t.name}, {t.role}
+                  &ndash; {testimonial.name}, {testimonial.role}
                 </footer>
-                <p className="text-xs mt-2 text-gray-500">{t.themes}</p>
+                <p className="text-xs mt-2 text-gray-500">{testimonial.themes}</p>
               </article>
             ))}
           </div>
