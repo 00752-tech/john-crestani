@@ -1,5 +1,5 @@
-// File: app/blog/where-is-sas-pro-2025/page.tsx
-"use client;
+// File: app/where-is-sas-pro-2025/page.tsx
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -24,7 +24,6 @@ export default function WhereIsSASPro2025() {
   return (
     <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
-
         {/* Headline */}
         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-snug"
