@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import InfluencerEarningsCalculator from "@/components/InfluencerEarningsCalculator";
 
 export default function ClientInfluencerEarningsCalculator() {
   const handleLearnMore = () => {
@@ -14,7 +15,6 @@ export default function ClientInfluencerEarningsCalculator() {
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20">
-      {/* Global no-hover button styles */}
       <style jsx global>{`
         .no-hover,
         .no-hover:hover,
@@ -33,15 +33,10 @@ export default function ClientInfluencerEarningsCalculator() {
       `}</style>
 
       <div className="container mx-auto px-4">
-        {/* Replace the following placeholder with your actual InfluencerEarningsCalculator component */}
-        <div>
-          {/* Your Influencer Earnings Calculator component goes here */}
-          {/* Add relevant markup or import and render your actual calculator component */}
-          <p className="text-center text-gray-300 text-lg my-12">
-            [Influencer Earnings Calculator Component Placeholder]
-          </p>
-        </div>
+        {/* Main Influencer Earnings Calculator Component */}
+        <InfluencerEarningsCalculator />
 
+        {/* Main CTA Button */}
         <div className="mt-8 text-center">
           <button
             onClick={handleLearnMore}
