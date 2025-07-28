@@ -33,10 +33,10 @@ export default function ClientInfluencerEarningsCalculator() {
       `}</style>
 
       <div className="container mx-auto px-4">
-        {/* Main Influencer Earnings Calculator Component */}
+        {/* Core Influencer Earnings Calculator Component */}
         <InfluencerEarningsCalculator />
 
-        {/* Main CTA Button */}
+        {/* CTA Section */}
         <div className="mt-8 text-center">
           <button
             onClick={handleLearnMore}
