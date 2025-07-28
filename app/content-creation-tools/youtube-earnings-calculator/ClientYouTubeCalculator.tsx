@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+// File: app/content-creation-tools/youtube-earnings-calculator/ClientYouTubeCalculator.tsx
 "use client";
 
 import React from "react";
@@ -14,6 +14,12 @@ interface ClientYouTubeCalculatorProps {
   backUrl?: string;
   pageUrlPath?: string;
 }
+
+export const metadata = {
+  title: "Predict Your YouTube Income: Free AdSense Earnings Calculator",
+  description:
+    "Are you tired of guessing your YouTube income? Our free YouTube AdSense Earnings Calculator removes uncertainty, giving you predictable insights to forecast your channel's monthly and yearly earnings and gain financial control.",
+};
 
 export default function ClientYouTubeCalculator({
   backUrl = "/tools",
@@ -98,8 +104,14 @@ export default function ClientYouTubeCalculator({
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Are you tired of guessing your YouTube income potential? Our Free YouTube AdSense Earnings Calculator is designed to{" "}
-            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel’s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
+            Are you tired of guessing your YouTube income potential? Our Free
+            YouTube AdSense Earnings Calculator is designed to{" "}
+            <strong>remove uncertainty</strong> and give you{" "}
+            <strong>predictable insights</strong> into your channel’s
+            monetization. Simply input your estimated views, CTR, and CPM Rate
+            to instantly project your Monthly and Yearly Earnings.{" "}
+            <strong>Gain clarity and seize control</strong> of your YouTube
+            financial strategy today.
           </motion.p>
 
           {/* Embedded YouTube Calculator Component */}
@@ -184,8 +196,12 @@ export default function ClientYouTubeCalculator({
               Beyond AdSense: Secure Your Future with Predictable AI Income Streams
             </motion.h2>
             <p className="text-gray-300 mb-4">
-              AdSense is a start, but true financial resilience comes from diversifying. John Crestani’s AI Marketing Club (SAS Pro) offers the blueprint to{" "}
-              <strong>confidently secure reliable online income</strong> and <strong>regain control</strong> of your financial destiny. Discover how to:
+              AdSense is a start, but true financial resilience comes from
+              diversifying. John Crestani’s AI Marketing Club (SAS Pro) offers
+              the blueprint to{" "}
+              <strong>confidently secure reliable online income</strong> and{" "}
+              <strong>regain control</strong> of your financial destiny.
+              Discover how to:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               {[
@@ -204,6 +220,7 @@ export default function ClientYouTubeCalculator({
                 />
               ))}
             </ul>
+
             <button
               onClick={handleCtaClick}
               className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold transition-none select-none"
@@ -219,8 +236,11 @@ export default function ClientYouTubeCalculator({
             >
               Unlock My Predictable AI Income Blueprint Now!
             </button>
+
             <p className="text-sm text-gray-400 mt-4 text-center max-w-xl mx-auto">
-              Join the AI Marketing Club for $27, then upgrade to the full Super Affiliate System Pro for just $197 (original price $997) with an $800 saving!
+              Join the AI Marketing Club for $27, then upgrade to the full Super
+              Affiliate System Pro for just $197 (original price $997) with an
+              $800 saving!
             </p>
           </motion.section>
         </div>
@@ -277,7 +297,7 @@ export default function ClientYouTubeCalculator({
                 name: "How can I increase my YouTube earnings?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "To increase your YouTube earnings and secure a predictable income, focus on creating engaging, AI-optimized content, understanding your audience demographics, and diversifying income streams through high-ticket affiliate marketing and monetization strategies.",
+                  text: "To increase your YouTube earnings and secure a predictable income, focus on creating engaging, AI-optimized content, understanding your audience demographics, and diversifying income streams through high-ticket affiliate marketing and monetization strategies. John Crestani's AI Marketing Club (SAS Pro) provides the complete blueprint to master these methods and achieve consistent financial growth.",
                 },
               },
             ],
@@ -285,7 +305,10 @@ export default function ClientYouTubeCalculator({
         />
 
         {/* Related Tools */}
-        <RelatedTools currentToolUrl="/content-creation-tools/youtube-earnings-calculator" category="content" />
+        <RelatedTools
+          currentToolUrl="/content-creation-tools/youtube-earnings-calculator"
+          category="content"
+        />
       </div>
     </div>
   );
