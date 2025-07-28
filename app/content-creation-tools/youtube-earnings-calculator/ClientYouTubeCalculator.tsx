@@ -17,21 +17,15 @@ export default function ClientYouTubeCalculator({
   backUrl?: string;
   pageUrlPath?: string;
 }) {
-  // Use the affiliate URL as before
   const ctaAffiliateLink =
     "https://4147arbzmafm0s762q695w2v7q.hop.clickbank.net/?&traffic_source=youtube_earnings_calc";
 
   const pageUrl = `https://johncrestani.me${pageUrlPath}`;
   const pageTitle = "Predict Your YouTube Income: Free AdSense Calculator";
 
-  // The homepage pattern: Button with onClick opening the affiliate link
   const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.open(
-      ctaAffiliateLink,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open(ctaAffiliateLink, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -52,11 +46,13 @@ export default function ClientYouTubeCalculator({
           filter: none !important;
         }
       `}</style>
+
       <div className="container mx-auto px-4">
         {/* Back Link */}
         <Link
           href={backUrl}
           className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+          aria-label="Back to Tools"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Tools
@@ -68,15 +64,19 @@ export default function ClientYouTubeCalculator({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
+          aria-label="Reclaim Your Financial Future Free YouTube AdSense Earnings Calculator"
+          style={{ lineHeight: 1.25 }}
         >
-          Reclaim Your Financial Future: Free YouTube AdSense Earnings Calculator
+          <span>Reclaim Your Financial Future</span>
+          <br />
+          <span>Free YouTube AdSense Earnings Calculator</span>
         </motion.h1>
 
         {/* Introductory Paragraph */}
         <div className="max-w-3xl mx-auto mb-12">
           <p className="text-xl text-center mb-8 text-gray-300">
             Are you tired of guessing your YouTube income potential? Our Free YouTube AdSense Earnings Calculator is designed to{" "}
-            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel&apos;s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
+            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel’s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
           </p>
 
           {/* YouTube Calculator Component */}
@@ -106,10 +106,22 @@ export default function ClientYouTubeCalculator({
             </motion.h2>
             <ol className="space-y-4 text-gray-300 list-decimal list-inside">
               {[
-                "Average Views per Video",
-                "Click-Through Rate (CTR)",
-                "CPM Rate",
-                "Videos per Month",
+                {
+                  text: "Average Views per Video",
+                  desc: "Input the typical number of views each of your YouTube videos receives.",
+                },
+                {
+                  text: "Click-Through Rate (CTR)",
+                  desc: "This is the percentage of viewers who click on ads shown on your videos. A common range is 2% to 10%.",
+                },
+                {
+                  text: "CPM Rate",
+                  desc: "Cost Per Mille (thousand views) is what advertisers pay per 1,000 ad impressions. This varies greatly by niche and audience location, typically ranging from $1 to $10+.",
+                },
+                {
+                  text: "Videos per Month",
+                  desc: "Enter the average number of new videos you plan to publish each month.",
+                },
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -118,8 +130,7 @@ export default function ClientYouTubeCalculator({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <strong className="text-pink-500">{item}:</strong>{" "}
-                  {/* Additional descriptive text can go here if needed */}
+                  <strong className="text-pink-500">{item.text}:</strong> {item.desc}
                 </motion.li>
               ))}
             </ol>
@@ -148,10 +159,10 @@ export default function ClientYouTubeCalculator({
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               {[
-                "Monetize your channel with affiliate marketing, creating diversified, predictable income streams.",
-                "Create high-converting video content effortlessly with AI tools, ensuring consistent engagement.",
-                "Build and engage your audience, transforming viewers into loyal, long-term income sources.",
-                "Scale your online presence across platforms, securing your professional relevance and future.",
+                "Monetize your channel with <strong>affiliate marketing</strong>, creating <strong>diversified, predictable income streams</strong>.",
+                "Create <strong>high-converting video content effortlessly with AI tools</strong>, ensuring <strong>consistent engagement</strong>.",
+                "Build and engage your audience, transforming viewers into <strong>loyal, long-term income sources</strong>.",
+                "<strong>Scale your online presence</strong> across platforms, securing your <strong>professional relevance and future</strong>.",
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -159,12 +170,11 @@ export default function ClientYouTubeCalculator({
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  {item}
-                </motion.li>
+                  dangerouslySetInnerHTML={{ __html: item }}
+                />
               ))}
             </ul>
-            {/* CTA BUTTON: homepage style, NO exposed affiliate link */}
+            {/* CTA BUTTON */}
             <button
               onClick={handleCtaClick}
               className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold mt-2 transition-none select-none"
@@ -175,16 +185,19 @@ export default function ClientYouTubeCalculator({
                 textDecoration: "none",
                 outline: "none",
                 filter: "none",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               type="button"
             >
               Unlock My Predictable AI Income Blueprint Now!
             </button>
+            <p className="text-sm text-gray-400 mt-4 text-center max-w-xl mx-auto">
+              Join the AI Marketing Club for $27, then upgrade to the full Super Affiliate System Pro for just $197 (original price $997) with an $800 saving!
+            </p>
           </motion.div>
         </div>
 
-        {/* Schema Markups */}
+        {/* Structured Data */}
         <JsonLd<any>
           item={{
             "@context": "https://schema.org",
@@ -244,7 +257,7 @@ export default function ClientYouTubeCalculator({
                 name: "How can I increase my YouTube earnings?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "To increase your YouTube earnings, focus on creating engaging content, optimizing your video titles and thumbnails, understanding your audience demographics, and diversifying your income streams through methods like affiliate marketing and sponsored content.",
+                  text: "To increase your YouTube earnings and secure a predictable income, focus on creating engaging, AI-optimized content, understanding your audience demographics, and crucially, diversifying your income streams through high-ticket affiliate marketing and advanced monetization strategies. John Crestani's AI Marketing Club (SAS Pro) provides the complete blueprint to master these methods and achieve consistent financial growth.",
                 },
               },
             ],
