@@ -40,10 +40,7 @@ export default function ClientInfluencerEarningsCalculator() {
 
         <div className="space-y-6">
           <div>
-            <label
-              htmlFor="followers"
-              className="block text-gray-300 font-semibold mb-2"
-            >
+            <label htmlFor="followers" className="block text-gray-300 font-semibold mb-2">
               Number of Followers
             </label>
             <input
@@ -52,9 +49,7 @@ export default function ClientInfluencerEarningsCalculator() {
               min={0}
               step={1}
               value={followers}
-              onChange={(e) =>
-                setFollowers(e.target.value === "" ? "" : Number(e.target.value))
-              }
+              onChange={(e) => setFollowers(e.target.value === "" ? "" : Number(e.target.value))}
               className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="e.g. 10000"
               aria-label="Number of Followers"
@@ -62,10 +57,7 @@ export default function ClientInfluencerEarningsCalculator() {
           </div>
 
           <div>
-            <label
-              htmlFor="engagementRate"
-              className="block text-gray-300 font-semibold mb-2"
-            >
+            <label htmlFor="engagementRate" className="block text-gray-300 font-semibold mb-2">
               Average Engagement Rate (%)
             </label>
             <input
@@ -98,9 +90,7 @@ export default function ClientInfluencerEarningsCalculator() {
               step={0.01}
               value={earningsPerEngagement}
               onChange={(e) =>
-                setEarningsPerEngagement(
-                  e.target.value === "" ? "" : Number(e.target.value)
-                )
+                setEarningsPerEngagement(e.target.value === "" ? "" : Number(e.target.value))
               }
               className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="e.g. 0.10"
