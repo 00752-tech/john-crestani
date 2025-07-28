@@ -4,13 +4,15 @@
 import React, { useState } from "react";
 
 export default function ClientInfluencerEarningsCalculator() {
-  // Simple influencer earnings calculator logic example
-  // Inputs: followers count, avg engagement rate, estimated earnings per engagement
-
+  // State for inputs
   const [followers, setFollowers] = useState<number | "">("");
   const [engagementRate, setEngagementRate] = useState<number | "">("");
-  const [earningsPerEngagement, setEarningsPerEngagement] = useState<number | "">("");
-  const [estimatedEarnings, setEstimatedEarnings] = useState<number | null>(null);
+  const [earningsPerEngagement, setEarningsPerEngagement] = useState<
+    number | ""
+  >("");
+  const [estimatedEarnings, setEstimatedEarnings] = useState<number | null>(
+    null
+  );
 
   const handleCalculate = () => {
     if (
@@ -21,8 +23,8 @@ export default function ClientInfluencerEarningsCalculator() {
       engagementRate > 0 &&
       earningsPerEngagement > 0
     ) {
-      // Calculate estimated earnings = followers * (engagementRate/100) * earningsPerEngagement
-      const earnings = followers * (engagementRate / 100) * earningsPerEngagement;
+      const earnings =
+        followers * (engagementRate / 100) * earningsPerEngagement;
       setEstimatedEarnings(earnings);
     } else {
       setEstimatedEarnings(null);
@@ -37,7 +39,8 @@ export default function ClientInfluencerEarningsCalculator() {
           Influencer Earnings Calculator
         </h1>
         <p className="text-gray-400 mb-8 text-center">
-          Predict your potential influencer earnings based on followers and engagement.
+          Predict your potential influencer earnings based on followers and
+          engagement.
         </p>
 
         <div className="space-y-6">
@@ -77,7 +80,9 @@ export default function ClientInfluencerEarningsCalculator() {
               step={0.1}
               value={engagementRate}
               onChange={(e) =>
-                setEngagementRate(e.target.value === "" ? "" : Number(e.target.value))
+                setEngagementRate(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
               }
               className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="e.g. 5.5"
