@@ -19,7 +19,6 @@ export default function ClientInfluencerEarningsCalculator() {
       engagementRate > 0 &&
       earningsPerEngagement > 0
     ) {
-      // Calculated earnings formula
       const earnings = followers * (engagementRate / 100) * earningsPerEngagement;
       setEstimatedEarnings(earnings);
     } else {
@@ -93,9 +92,9 @@ export default function ClientInfluencerEarningsCalculator() {
 
           <button
             onClick={handleCalculate}
+            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full font-bold text-white text-xl hover:brightness-110 transition"
             type="button"
             aria-label="Calculate Influencer Earnings"
-            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full font-bold text-white text-xl hover:brightness-110 transition"
           >
             Calculate Earnings
           </button>
