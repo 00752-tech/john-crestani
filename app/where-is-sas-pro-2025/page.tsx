@@ -1,12 +1,4 @@
 // File: app/where-is-sas-pro-2025/page.tsx
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-const ctaAffiliateLink =
-  "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
 
 export const metadata = {
   title:
@@ -15,12 +7,21 @@ export const metadata = {
     "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
 };
 
-export default function WhereIsSASPro2025() {
-  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.open(ctaAffiliateLink, "_blank", "noopener,noreferrer");
-  };
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
+// Place the "use client" directive ONLY if this file needs to be a client component.
+// But since we export `metadata`, this must remain a server component. All interactive client pieces:
+// - If any hooks like useState/useEffect or event handlers, move them into a separate file and use a client subcomponent.
+
+const ctaAffiliateLink =
+  "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+
+export default function WhereIsSASPro2025() {
+  // Client-side event handler
+  // Since this is a server component, onClick won't work.
+  // If you want a button with JS, replace button below with a <a href target="_blank" rel="noopener noreferrer">
   return (
     <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
@@ -63,7 +64,7 @@ export default function WhereIsSASPro2025() {
                 You can start with AIMC today for just <strong>$27</strong>, gaining AI-powered marketing tools to automate, optimize, and scale your campaigns faster than ever.
               </p>
               <div className="text-center mt-6">
-                <CtaButton onClick={handleCtaClick}>
+                <CtaButton href={ctaAffiliateLink}>
                   Click Here to Get Started with AI Marketing Club (and Access SAS Pro!)
                 </CtaButton>
               </div>
@@ -88,7 +89,7 @@ export default function WhereIsSASPro2025() {
               </ul>
               <p className="mt-4">This isn’t just a course — it’s your complete affiliate business blueprint, now supercharged with AI.</p>
               <div className="text-center mt-6">
-                <CtaButton onClick={handleCtaClick}>
+                <CtaButton href={ctaAffiliateLink}>
                   Access Super Affiliate System Pro (with Your Exclusive $800 Discount!)
                 </CtaButton>
               </div>
@@ -156,7 +157,7 @@ export default function WhereIsSASPro2025() {
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
             Embrace the future with John Crestani's AI Marketing Club bundled with Super Affiliate System Pro — your unmatched affiliate marketing blueprint for 2025 and beyond.
           </p>
-          <CtaButton onClick={handleCtaClick}>
+          <CtaButton href={ctaAffiliateLink}>
             Unlock My Predictable AI Income Blueprint Now!
           </CtaButton>
         </motion.div>
@@ -179,6 +180,7 @@ export default function WhereIsSASPro2025() {
   );
 }
 
+// "Section" and "FaqItem" remain as server component helpers
 function Section({
   title,
   content,
@@ -202,18 +204,19 @@ function Section({
 }
 
 function CtaButton({
-  onClick,
+  href,
   children,
 }: {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  href: string;
   children: React.ReactNode;
 }) {
   return (
-    <button
-      onClick={onClick}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-bold select-none transition-none"
       aria-label="Unlock My Predictable AI Income Blueprint Now!"
-      type="button"
       style={{
         boxShadow: "none",
         textDecoration: "none",
@@ -223,7 +226,7 @@ function CtaButton({
       }}
     >
       {children}
-    </button>
+    </a>
   );
 }
 
