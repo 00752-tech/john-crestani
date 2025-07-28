@@ -1,5 +1,3 @@
-// File: app/where-is-sas-pro-2025/page.tsx
-
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +6,7 @@ export const metadata = {
   title:
     "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
   description:
-    "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
+    "Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an $800 SAS Pro discount!",
 };
 
 const ctaAffiliateLink =
@@ -28,7 +26,7 @@ export default function WhereIsSASPro2025() {
           aria-label="Where is Super Affiliate System Pro in 2025?"
         >
           Where is Super Affiliate System Pro in 2025? <br />
-          Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
+          Get Exclusive Access + a Secret Discount to John Crestani&apos;s AI Marketing Club
         </motion.h1>
 
         {/* Intro */}
@@ -39,7 +37,7 @@ export default function WhereIsSASPro2025() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new,
+          Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new,
           and how to get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
@@ -49,7 +47,7 @@ export default function WhereIsSASPro2025() {
           content={
             <>
               <p>
-                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads across Facebook, Google, YouTube, and more.
+                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani&apos;s flagship training on generating income through paid ads across Facebook, Google, YouTube, and more.
                 Packed with over 50 hours of content, templates, and data, it set the gold standard.
               </p>
               <p className="mt-4">
@@ -82,7 +80,7 @@ export default function WhereIsSASPro2025() {
                 <li>Proprietary buyer data for targeting profitable niches.</li>
                 <li>Active community and direct mentorship from John Crestani.</li>
               </ul>
-              <p className="mt-4">This isn’t just a course — it’s your complete affiliate business blueprint, now supercharged with AI.</p>
+              <p className="mt-4">This isn&apos;t just a course — it&apos;s your complete affiliate business blueprint, now supercharged with AI.</p>
               <div className="text-center mt-6">
                 <CtaButton href={ctaAffiliateLink}>
                   Access Super Affiliate System Pro (with Your Exclusive $800 Discount!)
@@ -124,15 +122,15 @@ export default function WhereIsSASPro2025() {
             <>
               <FaqItem
                 question="Is Super Affiliate System Pro still relevant in 2025?"
-                answer="Absolutely. SAS Pro combined with AI Marketing Club’s tools brings you both timeless paid ads fundamentals and modern AI-powered advantages."
+                answer="Absolutely. SAS Pro combined with AI Marketing Club&apos;s tools brings you both timeless paid ads fundamentals and modern AI-powered advantages."
               />
               <FaqItem
                 question="Can I buy SAS Pro without joining AI Marketing Club?"
                 answer="No, SAS Pro is now exclusively offered as an upgrade inside AIMC to ensure you have foundational AI tools needed for success."
               />
               <FaqItem
-                question="Is John Crestani's Super Affiliate System Pro legit?"
-                answer="Yes, it’s a comprehensive, proven system created by a recognized affiliate marketing expert with ongoing community support."
+                question="Is John Crestani&apos;s Super Affiliate System Pro legit?"
+                answer="Yes, it&apos;s a comprehensive, proven system created by a recognized affiliate marketing expert with ongoing community support."
               />
               <FaqItem
                 question="What about pricing and refund policies?"
@@ -154,7 +152,7 @@ export default function WhereIsSASPro2025() {
             Your Path to Predictable AI Income Starts Here
           </h2>
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
-            Embrace the future with John Crestani's AI Marketing Club bundled with Super Affiliate System Pro — your unmatched affiliate marketing blueprint for 2025 and beyond.
+            Embrace the future with John Crestani&apos;s AI Marketing Club bundled with Super Affiliate System Pro — your unmatched affiliate marketing blueprint for 2025 and beyond.
           </p>
           <CtaButton href={ctaAffiliateLink}>
             Unlock My Predictable AI Income Blueprint Now!
@@ -191,49 +189,4 @@ function Section({
 
 function CtaButton({
   href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-12 rounded-full text-xl font-bold select-none transition-none"
-      aria-label="Unlock My Predictable AI Income Blueprint Now!"
-      style={{
-        boxShadow: "none",
-        textDecoration: "none",
-        outline: "none",
-        filter: "none",
-        cursor: "pointer",
-      }}
-    >
-      {children}
-    </a>
-  );
-}
-
-function FaqItem({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
-  return (
-    <motion.div
-      className="mb-6"
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      aria-label={`FAQ: ${question}`}
-    >
-      <h3 className="font-semibold text-lg text-pink-500 mb-1">{question}</h3>
-      <p className="text-gray-300 leading-relaxed">{answer}</p>
-    </motion.div>
-  );
-}
+  children
