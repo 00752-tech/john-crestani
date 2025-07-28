@@ -8,6 +8,7 @@ import ShareButtons from "@/components/ShareButtons";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "react-schemaorg";
+import { SoftwareApplication, FAQPage } from "schema-dts"; // <--- ADD THIS IMPORT
 import RelatedTools from "@/components/RelatedTools";
 
 interface ClientYouTubeCalculatorProps {
@@ -15,11 +16,7 @@ interface ClientYouTubeCalculatorProps {
   pageUrlPath?: string;
 }
 
-export const metadata = {
-  title: "Predict Your YouTube Income: Free AdSense Earnings Calculator",
-  description:
-    "Are you tired of guessing your YouTube income? Our free YouTube AdSense Earnings Calculator removes uncertainty, giving you predictable insights to forecast your channel's monthly and yearly earnings and gain financial control.",
-};
+// REMOVE 'export const metadata' from here. It will be moved to page.tsx
 
 export default function ClientYouTubeCalculator({
   backUrl = "/tools",
@@ -246,7 +243,7 @@ export default function ClientYouTubeCalculator({
         </div>
 
         {/* JSON-LD Structured Data */}
-        <JsonLd<any>
+        <JsonLd<SoftwareApplication> // <--- SPECIFY TYPE HERE
           item={{
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
@@ -271,7 +268,7 @@ export default function ClientYouTubeCalculator({
           }}
         />
 
-        <JsonLd<any>
+        <JsonLd<FAQPage> // <--- SPECIFY TYPE HERE
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",
