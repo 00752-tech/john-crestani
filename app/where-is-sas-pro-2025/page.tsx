@@ -183,10 +183,3 @@ function Section({
         {title}
       </h2>
       <div className="prose prose-invert max-w-none">{content}</div>
-    </motion.section>
-  );
-}
-
-function CtaButton({
-  href,
-  children
