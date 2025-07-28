@@ -19,7 +19,7 @@ export default function ClientInfluencerEarningsCalculator() {
       engagementRate > 0 &&
       earningsPerEngagement > 0
     ) {
-      // Calculate estimated earnings = followers * (engagementRate/100) * earningsPerEngagement
+      // Calculated earnings formula
       const earnings = followers * (engagementRate / 100) * earningsPerEngagement;
       setEstimatedEarnings(earnings);
     } else {
@@ -67,9 +67,7 @@ export default function ClientInfluencerEarningsCalculator() {
               max={100}
               step={0.1}
               value={engagementRate}
-              onChange={(e) =>
-                setEngagementRate(e.target.value === "" ? "" : Number(e.target.value))
-              }
+              onChange={(e) => setEngagementRate(e.target.value === "" ? "" : Number(e.target.value))}
               className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="e.g. 5.5"
               aria-label="Average Engagement Rate"
@@ -77,10 +75,7 @@ export default function ClientInfluencerEarningsCalculator() {
           </div>
 
           <div>
-            <label
-              htmlFor="earningsPerEngagement"
-              className="block text-gray-300 font-semibold mb-2"
-            >
+            <label htmlFor="earningsPerEngagement" className="block text-gray-300 font-semibold mb-2">
               Estimated Earnings per Engagement ($)
             </label>
             <input
@@ -89,9 +84,7 @@ export default function ClientInfluencerEarningsCalculator() {
               min={0}
               step={0.01}
               value={earningsPerEngagement}
-              onChange={(e) =>
-                setEarningsPerEngagement(e.target.value === "" ? "" : Number(e.target.value))
-              }
+              onChange={(e) => setEarningsPerEngagement(e.target.value === "" ? "" : Number(e.target.value))}
               className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
               placeholder="e.g. 0.10"
               aria-label="Estimated Earnings per Engagement"
@@ -100,19 +93,15 @@ export default function ClientInfluencerEarningsCalculator() {
 
           <button
             onClick={handleCalculate}
-            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full font-bold text-white text-xl hover:brightness-110 transition"
             type="button"
             aria-label="Calculate Influencer Earnings"
+            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full font-bold text-white text-xl hover:brightness-110 transition"
           >
             Calculate Earnings
           </button>
 
           {estimatedEarnings !== null && (
-            <div
-              className="mt-6 text-center text-2xl font-semibold text-pink-400"
-              aria-live="polite"
-              role="status"
-            >
+            <div className="mt-6 text-center text-2xl font-semibold text-pink-400" aria-live="polite" role="status">
               Estimated Earnings: ${estimatedEarnings.toFixed(2)}
             </div>
           )}
