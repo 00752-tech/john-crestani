@@ -1,5 +1,9 @@
 // File: app/where-is-sas-pro-2025/page.tsx
 
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 export const metadata = {
   title:
     "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
@@ -7,34 +11,24 @@ export const metadata = {
     "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
 };
 
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-// Place the "use client" directive ONLY if this file needs to be a client component.
-// But since we export `metadata`, this must remain a server component. All interactive client pieces:
-// - If any hooks like useState/useEffect or event handlers, move them into a separate file and use a client subcomponent.
-
 const ctaAffiliateLink =
   "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
 
 export default function WhereIsSASPro2025() {
-  // Client-side event handler
-  // Since this is a server component, onClick won't work.
-  // If you want a button with JS, replace button below with a <a href target="_blank" rel="noopener noreferrer">
   return (
     <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
         {/* Headline */}
         <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-snug"
+          className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           aria-label="Where is Super Affiliate System Pro in 2025?"
         >
-          Where is Super Affiliate System Pro in 2025? <br /> Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
+          Where is Super Affiliate System Pro in 2025? <br />
+          Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
         </motion.h1>
 
         {/* Intro */}
@@ -45,7 +39,8 @@ export default function WhereIsSASPro2025() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an <strong>$800 SAS Pro discount!</strong>
+          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new,
+          and how to get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
         {/* Section: The Evolution */}
@@ -54,8 +49,8 @@ export default function WhereIsSASPro2025() {
           content={
             <>
               <p>
-                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads across Facebook, Google, YouTube, and more. Packed with
-                over 50 hours of content, templates, and data, it set the gold standard.
+                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads across Facebook, Google, YouTube, and more.
+                Packed with over 50 hours of content, templates, and data, it set the gold standard.
               </p>
               <p className="mt-4">
                 But marketing moves fast. To empower affiliates for the AI era, John created the <strong>AI Marketing Club (AIMC)</strong> — your launcher to the future of affiliate success, combining AI tools with proven strategies.
@@ -112,7 +107,11 @@ export default function WhereIsSASPro2025() {
                 <li><strong>Eliminate guesswork:</strong> AI-driven calculators and AI-assistance help target profitable niches and optimize campaigns.</li>
               </ul>
               <p className="mt-4">
-                For example, use our <Link href="https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator" className="text-pink-400 underline" target="_blank" rel="noopener noreferrer">Niche Profitability Calculator</Link> to project your earning potential before you invest a dime.
+                For example, use our{" "}
+                <Link href="https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator" className="text-pink-400 underline" target="_blank" rel="noopener noreferrer">
+                  Niche Profitability Calculator
+                </Link>{" "}
+                to project your earning potential before you invest a dime.
               </p>
             </>
           }
@@ -151,7 +150,7 @@ export default function WhereIsSASPro2025() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h2 className="text-3xl font-bold mb-6 gradient-text leading-snug">
+          <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug">
             Your Path to Predictable AI Income Starts Here
           </h2>
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
@@ -162,25 +161,10 @@ export default function WhereIsSASPro2025() {
           </CtaButton>
         </motion.div>
       </main>
-
-      {/* Gradient text style */}
-      <style jsx global>{`
-        .gradient-text {
-          background: linear-gradient(90deg, #ec4899, #a21caf);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-        }
-        a {
-          cursor: pointer;
-        }
-      `}</style>
     </article>
   );
 }
 
-// "Section" and "FaqItem" remain as server component helpers
 function Section({
   title,
   content,
@@ -197,7 +181,9 @@ function Section({
       transition={{ duration: 0.6 }}
       aria-label={title}
     >
-      <h2 className="text-2xl font-semibold mb-6 gradient-text">{title}</h2>
+      <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+        {title}
+      </h2>
       <div className="prose prose-invert max-w-none">{content}</div>
     </motion.section>
   );
