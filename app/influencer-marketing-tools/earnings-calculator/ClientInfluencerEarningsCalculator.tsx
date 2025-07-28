@@ -49,6 +49,7 @@ export default function ClientInfluencerEarningsCalculator({
       `}</style>
 
       <div className="container mx-auto px-4">
+        {/* Back Link */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -58,36 +59,47 @@ export default function ClientInfluencerEarningsCalculator({
           <Link
             href={backUrl}
             className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8"
+            aria-label="Back to Tools"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Tools
           </Link>
         </motion.div>
 
-        {/* Heading */}
+        {/* Jon Benson-style Heading */}
         <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-8 text-center gradient-text leading-relaxed pb-4"
+          className="text-center font-extrabold leading-snug tracking-tight max-w-3xl mx-auto mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          aria-label="End Income Uncertainty Your AI Powered Influencer Predictor Heading"
+          style={{ lineHeight: 1.25 }}
         >
-          End Income Uncertainty: Your AI-Powered Influencer Predictor
+          <span className="block text-4xl md:text-5xl">End Income Uncertainty</span>
+          <span className="block mt-4 text-3xl md:text-4xl font-light text-pink-400">
+            Your AI-Powered Influencer Predictor
+          </span>
         </motion.h1>
 
+        {/* Intro Paragraph */}
         <div className="max-w-3xl mx-auto mb-12">
-          {/* Intro paragraph */}
           <motion.p
-            className="text-xl text-center mb-8 text-gray-300"
+            className="text-xl text-center text-gray-300 mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Are you <strong>tired of fluctuating influencer income?</strong> Our free, AI-powered Influencer Predictor removes the guesswork, giving you the <strong>clarity and confidence</strong> to accurately forecast your potential earnings. Simply input your follower count, engagement rate, and monthly sponsored posts to instantly project your <strong>predictable monthly income.</strong> Gain control and make data-driven decisions for stable financial growth in your influencer career.
+            Are you <strong>tired of fluctuating influencer income?</strong> Our free,{' '}
+            <strong className="text-pink-400">AI-powered Influencer Predictor</strong> removes the guesswork,{' '}
+            giving you the <strong>clarity and confidence</strong> to accurately forecast your potential
+            earnings. Simply input your follower count, engagement rate, and monthly sponsored posts to
+            instantly project your <strong>predictable monthly income.</strong> Gain control and make
+            data-driven decisions for stable financial growth in your influencer career.
           </motion.p>
 
-          {/* Core calculator component */}
+          {/* Core Calculator Component */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,12 +109,12 @@ export default function ClientInfluencerEarningsCalculator({
             <InfluencerEarningsCalculator />
           </motion.div>
 
-          {/* Share buttons */}
+          {/* Share Buttons */}
           <div className="mt-8">
             <ShareButtons url={pageUrl} title={pageTitle} />
           </div>
 
-          {/* How to Use This Predictor */}
+          {/* How to Use This Predictor Section */}
           <motion.div
             className="mt-12 bg-gray-900 p-8 rounded-lg"
             initial={{ opacity: 0, y: 30 }}
@@ -151,7 +163,7 @@ export default function ClientInfluencerEarningsCalculator({
             </ol>
           </motion.div>
 
-          {/* Main CTA section */}
+          {/* Main CTA Section */}
           <motion.div
             className="mt-8 bg-gray-900 p-8 rounded-lg"
             initial={{ opacity: 0, y: 30 }}
@@ -175,7 +187,9 @@ export default function ClientInfluencerEarningsCalculator({
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              While influence is powerful, <strong>true financial freedom and stability</strong> come from generating <strong>multiple, predictable income streams.</strong> John Crestani&apos;s AI Marketing Club (SAS Pro) provides the complete blueprint to confidently <strong>navigate the AI economy, eliminate guesswork,</strong> and <strong>future-proof your career.</strong> Discover how to:
+              While influence is powerful, <strong>true financial freedom and stability</strong> come from generating{' '}
+              <strong>multiple, predictable income streams.</strong> John Crestani&apos;s AI Marketing Club (SAS Pro) provides the complete blueprint to confidently{' '}
+              <strong>navigate the AI economy, eliminate guesswork,</strong> and <strong>future-proof your career.</strong> Discover how to:
             </motion.p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
               {[
@@ -211,9 +225,13 @@ export default function ClientInfluencerEarningsCalculator({
             >
               Unlock My Predictable AI Income Blueprint Now!
             </button>
+            <p className="text-sm mt-2 text-gray-400 max-w-xl mx-auto text-center">
+              Join the AI Marketing Club for $27, then upgrade to the full Super Affiliate System Pro for just $197 (original price $997).
+            </p>
           </motion.div>
         </div>
 
+        {/* Related Tools */}
         <RelatedTools
           currentToolUrl="/influencer-marketing-tools/earnings-calculator"
           category="influencer"
