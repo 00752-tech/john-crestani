@@ -1,181 +1,141 @@
-// File: app/where-is-sas-pro-2025/page.tsx
+// File: app/influencer-marketing-tools/earnings-calculator/ClientInfluencerEarningsCalculator.tsx
+"use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import React, { useState } from "react";
 
-export const metadata = {
-  title:
-    "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
-  description:
-    "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
-};
+export default function ClientInfluencerEarningsCalculator() {
+  // State for inputs
+  const [followers, setFollowers] = useState<number | "">("");
+  const [engagementRate, setEngagementRate] = useState<number | "">("");
+  const [earningsPerEngagement, setEarningsPerEngagement] = useState<number | "">("");
+  const [estimatedEarnings, setEstimatedEarnings] = useState<number | null>(null);
 
-const ctaAffiliateLink =
-  "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+  const handleCalculate = () => {
+    if (
+      typeof followers === "number" &&
+      typeof engagementRate === "number" &&
+      typeof earningsPerEngagement === "number" &&
+      followers > 0 &&
+      engagementRate > 0 &&
+      earningsPerEngagement > 0
+    ) {
+      // Calculate estimated earnings = followers * (engagementRate/100) * earningsPerEngagement
+      const earnings = followers * (engagementRate / 100) * earningsPerEngagement;
+      setEstimatedEarnings(earnings);
+    } else {
+      setEstimatedEarnings(null);
+      alert("Please enter valid positive numbers for all fields.");
+    }
+  };
 
-export default function WhereIsSASPro2025() {
   return (
-    <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
-      <main className="max-w-4xl mx-auto">
-        {/* Hero */}
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          aria-label="Where is Super Affiliate System Pro in 2025?"
-        >
-          Where is Super Affiliate System Pro in 2025? <br />
-          Get Exclusive Access + a Secret Discount to John Crestani&apos;s AI Marketing Club
-        </motion.h1>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-8">
+      <div className="w-full max-w-lg bg-gray-900 rounded-lg shadow-lg p-8">
+        <h1 className="text-4xl font-bold mb-6 gradient-text text-center">
+          Influencer Earnings Calculator
+        </h1>
+        <p className="text-gray-400 mb-8 text-center">
+          Predict your potential influencer earnings based on followers and engagement.
+        </p>
 
-        <motion.p
-          className="text-xl text-gray-300 mb-10 leading-relaxed text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Searching for Super Affiliate System Pro? It&apos;s now inside the AI Marketing Club.
-          Discover access, what&apos;s new, and get an <strong>$800 SAS Pro discount!</strong>
-        </motion.p>
+        <div className="space-y-6">
+          <div>
+            <label
+              htmlFor="followers"
+              className="block text-gray-300 font-semibold mb-2"
+            >
+              Number of Followers
+            </label>
+            <input
+              id="followers"
+              type="number"
+              min={0}
+              step={1}
+              value={followers}
+              onChange={(e) =>
+                setFollowers(e.target.value === "" ? "" : Number(e.target.value))
+              }
+              className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="e.g. 10000"
+              aria-label="Number of Followers"
+            />
+          </div>
 
-        {/* Sections */}
-        <Section
-          title="The Evolution of SAS Pro: From Standalone to AI-Powered Powerhouse"
-          content={
-            <>
-              <p>For years, SAS Pro was John Crestani&apos;s flagship paid ads course.</p>
-              <p className="mt-4">
-                But marketing evolves. Now inside AIMC, it pairs proven systems with AI tools to turbocharge affiliate success.
-              </p>
-              <p className="mt-4">Start AIMC today for just <strong>$27</strong>.</p>
-              <div className="text-center mt-6">
-                <CtaButton href={ctaAffiliateLink}>
-                  Click Here to Get Started with AI Marketing Club
-                </CtaButton>
-              </div>
-            </>
-          }
-        />
+          <div>
+            <label
+              htmlFor="engagementRate"
+              className="block text-gray-300 font-semibold mb-2"
+            >
+              Average Engagement Rate (%)
+            </label>
+            <input
+              id="engagementRate"
+              type="number"
+              min={0}
+              max={100}
+              step={0.1}
+              value={engagementRate}
+              onChange={(e) =>
+                setEngagementRate(e.target.value === "" ? "" : Number(e.target.value))
+              }
+              className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="e.g. 5.5"
+              aria-label="Average Engagement Rate"
+            />
+          </div>
 
-        <Section
-          title="Unlocking Super Affiliate System Pro: Your Exclusive $800 Discount"
-          content={
-            <>
-              <p>Once inside AIMC, upgrade for just <strong>$197</strong> (normally $997) to unlock:</p>
-              <ul className="list-disc list-inside space-y-3 mt-4 text-gray-300">
-                <li>50+ hours of in-depth paid ads training</li>
-                <li>Done-for-you templates and creatives</li>
-                <li>Buyer data + mentorship with John Crestani</li>
-              </ul>
-              <div className="text-center mt-6">
-                <CtaButton href={ctaAffiliateLink}>Get My SAS Pro Discount Now!</CtaButton>
-              </div>
-            </>
-          }
-        />
+          <div>
+            <label
+              htmlFor="earningsPerEngagement"
+              className="block text-gray-300 font-semibold mb-2"
+            >
+              Estimated Earnings per Engagement ($)
+            </label>
+            <input
+              id="earningsPerEngagement"
+              type="number"
+              min={0}
+              step={0.01}
+              value={earningsPerEngagement}
+              onChange={(e) =>
+                setEarningsPerEngagement(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
+              }
+              className="w-full rounded-md bg-gray-800 border border-gray-700 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="e.g. 0.10"
+              aria-label="Estimated Earnings per Engagement"
+            />
+          </div>
 
-        <Section
-          title="Frequently Asked Questions"
-          content={
-            <>
-              <FaqItem
-                question="Is SAS Pro still relevant in 2025?"
-                answer="Yes. It's now upgraded with AIMC tools and community."
-              />
-              <FaqItem
-                question="Can I buy SAS Pro without AIMC?"
-                answer="No. It's exclusive to AIMC members."
-              />
-              <FaqItem
-                question="Is this legit?"
-                answer="Absolutely. It's been featured across major media outlets and backed by a 100% guarantee."
-              />
-            </>
-          }
-        />
+          <button
+            onClick={handleCalculate}
+            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full font-bold text-white text-xl hover:brightness-110 transition"
+            type="button"
+            aria-label="Calculate Influencer Earnings"
+          >
+            Calculate Earnings
+          </button>
 
-        {/* Final CTA */}
-        <motion.div
-          className="mt-12 text-center max-w-3xl mx-auto px-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug">
-            Your AI-Powered Income Starts Here
-          </h2>
-          <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
-            Get access to John Crestani&apos;s AI Marketing Club bundled with SAS Pro — your affiliate blueprint for 2025 and beyond.
-          </p>
-          <CtaButton href={ctaAffiliateLink}>Unlock My Income Blueprint Now!</CtaButton>
-        </motion.div>
-      </main>
-    </article>
-  );
-}
+          {estimatedEarnings !== null && (
+            <div
+              className="mt-6 text-center text-2xl font-semibold text-pink-400"
+              aria-live="polite"
+              role="status"
+            >
+              Estimated Earnings: ${estimatedEarnings.toFixed(2)}
+            </div>
+          )}
+        </div>
+      </div>
 
-function Section({
-  title,
-  content,
-}: {
-  title: string;
-  content: React.ReactNode;
-}) {
-  return (
-    <motion.section
-      className="mb-12 bg-gray-900 p-8 rounded-lg"
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      aria-label={title}
-    >
-      <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-        {title}
-      </h2>
-      <div className="space-y-4 text-gray-300 text-lg">{content}</div>
-    </motion.section>
-  );
-}
-
-function CtaButton({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={href}
-      className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-full hover:opacity-90 transition duration-300"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Unlock My Predictable AI Income Blueprint Now!"
-    >
-      {children}
-    </Link>
-  );
-}
-
-function FaqItem({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
-  return (
-    <details className="bg-gray-800 rounded-lg p-4 mb-4 group" open>
-      <summary className="cursor-pointer text-lg font-semibold text-pink-400 group-open:mb-2">
-        {question}
-      </summary>
-      <p className="text-gray-300 text-base leading-relaxed">{answer}</p>
-    </details>
+      <style jsx>{`
+        .gradient-text {
+          background: linear-gradient(90deg, #ec4899, #a21caf);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      `}</style>
+    </main>
   );
 }
