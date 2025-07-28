@@ -1,5 +1,5 @@
 // File: app/blog/where-is-sas-pro-2025/page.tsx
-"use client";
+"use client;
 
 import React from "react";
 import { motion } from "framer-motion";
