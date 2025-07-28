@@ -1,3 +1,5 @@
+// File: app/where-is-sas-pro-2025/page.tsx
+
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -6,11 +8,12 @@ export const metadata = {
   title:
     "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
   description:
-    "Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an $800 SAS Pro discount!",
+    "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
 };
 
 const ctaAffiliateLink =
   "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+
 export default function WhereIsSASPro2025() {
   return (
     <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
@@ -22,6 +25,7 @@ export default function WhereIsSASPro2025() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          aria-label="Where is Super Affiliate System Pro in 2025?"
         >
           Where is Super Affiliate System Pro in 2025? <br />
           Get Exclusive Access + a Secret Discount to John Crestani&apos;s AI Marketing Club
@@ -34,7 +38,8 @@ export default function WhereIsSASPro2025() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Searching for Super Affiliate System Pro? It&apos;s now inside the AI Marketing Club. Discover access, what&apos;s new, and get an <strong>$800 SAS Pro discount!</strong>
+          Searching for Super Affiliate System Pro? It&apos;s now inside the AI Marketing Club.
+          Discover access, what&apos;s new, and get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
         {/* Sections */}
@@ -67,9 +72,7 @@ export default function WhereIsSASPro2025() {
                 <li>Buyer data + mentorship with John Crestani</li>
               </ul>
               <div className="text-center mt-6">
-                <CtaButton href={ctaAffiliateLink}>
-                  Get My SAS Pro Discount Now!
-                </CtaButton>
+                <CtaButton href={ctaAffiliateLink}>Get My SAS Pro Discount Now!</CtaButton>
               </div>
             </>
           }
@@ -109,14 +112,13 @@ export default function WhereIsSASPro2025() {
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
             Get access to John Crestani&apos;s AI Marketing Club bundled with SAS Pro — your affiliate blueprint for 2025 and beyond.
           </p>
-          <CtaButton href={ctaAffiliateLink}>
-            Unlock My Income Blueprint Now!
-          </CtaButton>
+          <CtaButton href={ctaAffiliateLink}>Unlock My Income Blueprint Now!</CtaButton>
         </motion.div>
       </main>
     </article>
   );
 }
+
 function Section({
   title,
   content,
@@ -154,6 +156,7 @@ function CtaButton({
       className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-full hover:opacity-90 transition duration-300"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Unlock My Predictable AI Income Blueprint Now!"
     >
       {children}
     </Link>
