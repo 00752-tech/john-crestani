@@ -33,12 +33,12 @@ export default function ClientInfluencerEarningsCalculator({
       {/* Main Calculator component */}
       <InfluencerEarningsCalculator />
 
-      {/* Share buttons — ✅ correct props passed */}
+      {/* Share buttons */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
-      {/* Related Tools — ✅ correct props passed */}
+      {/* Related Tools */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
