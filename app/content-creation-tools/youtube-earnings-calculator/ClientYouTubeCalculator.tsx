@@ -115,9 +115,13 @@ export default function ClientInfluencerEarningsCalculator() {
       </div>
 
       {/* Related Tools */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <RelatedTools currentToolUrl="/influencer-marketing-tools/earnings-calculator" />
-      </motion.div>
+<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+  <RelatedTools 
+    currentToolUrl="/influencer-marketing-tools/earnings-calculator"
+    category="Influencer Marketing" // ✅ Add a valid category value here
+  />
+</motion.div>
+
     </div>
   );
 }
