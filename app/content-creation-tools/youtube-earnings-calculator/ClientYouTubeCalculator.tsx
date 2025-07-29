@@ -1,4 +1,3 @@
-// app/influencer-marketing-tools/earnings-calculator/ClientInfluencerEarningsCalculator.tsx
 'use client';
 
 import { useState } from 'react';
@@ -10,12 +9,10 @@ import ShareButtons from '@/components/ShareButtons';
 import RelatedTools from '@/components/RelatedTools';
 
 export default function ClientInfluencerEarningsCalculator() {
-  // State values
   const [followers, setFollowers] = useState<number>(10000);
   const [engagementRate, setEngagementRate] = useState<number>(3);
   const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
 
-  // Calculation logic
   const calculateEarnings = () => {
     const engagements = followers * (engagementRate / 100);
     const earningsPerPost = engagements * 0.01;
@@ -24,7 +21,6 @@ export default function ClientInfluencerEarningsCalculator() {
 
   const earnings = calculateEarnings();
 
-  // Share info
   const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator';
   const shareTitle = 'Influencer Earnings Calculator';
 
@@ -111,12 +107,12 @@ export default function ClientInfluencerEarningsCalculator() {
         <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share Buttons */}
+      {/* Share Buttons — fixed props */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
-      {/* Related Tools */}
+      {/* Related Tools — fixed props */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <RelatedTools
           currentToolUrl="/influencer-marketing-tools/earnings-calculator"
