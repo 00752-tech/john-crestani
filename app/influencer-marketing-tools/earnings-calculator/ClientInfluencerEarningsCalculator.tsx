@@ -17,7 +17,6 @@ export default function ClientInfluencerEarningsCalculator({
   backUrl = '/free-tools',
   pageUrlPath = '/influencer-marketing-tools/earnings-calculator',
 }: ClientInfluencerEarningsCalculatorProps) {
-  // ✅ Added required props for ShareButtons component
   const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator'
   const shareTitle = 'Influencer Earnings Calculator'
 
@@ -34,18 +33,21 @@ export default function ClientInfluencerEarningsCalculator({
       {/* Main Calculator component */}
       <InfluencerEarningsCalculator />
 
-      {/* Share buttons — ✅ passing props */}
+      {/* Share buttons — ✅ correct props passed */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
-      {/* Related Tools with animated fade-in */}
+      {/* Related Tools — ✅ correct props passed */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <RelatedTools currentPath={pageUrlPath} />
+        <RelatedTools
+          currentToolUrl={pageUrlPath}
+          category="influencer"
+        />
       </motion.div>
     </div>
   )
