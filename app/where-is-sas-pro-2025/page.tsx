@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
+  title: "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
   description:
-    "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
+    "Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an $800 SAS Pro discount!",
 };
 
 const ctaAffiliateLink =
@@ -40,7 +39,7 @@ export default function WhereIsSASPro2025() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an <strong>$800 SAS Pro discount!</strong>
+          Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
         {/* Section: The Evolution */}
@@ -49,11 +48,11 @@ export default function WhereIsSASPro2025() {
           content={
             <>
               <p>
-                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads across Facebook, Google, YouTube, and more. Packed with
+                For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani&apos;s flagship training on generating income through paid ads across Facebook, Google, YouTube, and more. Packed with
                 over 50 hours of content, templates, and data, it set the gold standard.
               </p>
               <p className="mt-4">
-                But marketing moves fast. To empower affiliates for the AI era, John created the <strong>AI Marketing Club (AIMC)</strong>&nbsp;— your launcher to the future of affiliate success, combining AI tools with proven strategies.
+                But marketing moves fast. To empower affiliates for the AI era, John created the <strong>AI Marketing Club (AIMC)</strong>&nbsp;&mdash; your launcher to the future of affiliate success, combining AI tools with proven strategies.
               </p>
               <p className="mt-4">
                 You can start with AIMC today for just <strong>$27</strong>, gaining AI-powered marketing tools to automate, optimize, and scale your campaigns faster than ever.
@@ -87,7 +86,7 @@ export default function WhereIsSASPro2025() {
                 <li>Active community and direct mentorship from John Crestani.</li>
               </ul>
               <p className="mt-4">
-                This isn’t just a course — it’s your complete affiliate business blueprint, now supercharged with AI.
+                This isn&apos;t just a course &mdash; it&apos;s your complete affiliate business blueprint, now supercharged with AI.
               </p>
               <div className="text-center mt-6">
                 <CtaButton href={ctaAffiliateLink}>
@@ -141,15 +140,15 @@ export default function WhereIsSASPro2025() {
             <>
               <FaqItem
                 question="Is Super Affiliate System Pro still relevant in 2025?"
-                answer="Absolutely. SAS Pro combined with AI Marketing Club’s tools brings you both timeless paid ads fundamentals and modern AI-powered advantages."
+                answer="Absolutely. SAS Pro combined with AI Marketing Club&apos;s tools brings you both timeless paid ads fundamentals and modern AI-powered advantages."
               />
               <FaqItem
                 question="Can I buy SAS Pro without joining AI Marketing Club?"
                 answer="No, SAS Pro is now exclusively offered as an upgrade inside AIMC to ensure you have foundational AI tools needed for success."
               />
               <FaqItem
-                question="Is John Crestani's Super Affiliate System Pro legit?"
-                answer="Yes, it’s a comprehensive, proven system created by a recognized affiliate marketing expert with ongoing community support."
+                question="Is John Crestani&apos;s Super Affiliate System Pro legit?"
+                answer="Yes, it&apos;s a comprehensive, proven system created by a recognized affiliate marketing expert with ongoing community support."
               />
               <FaqItem
                 question="What about pricing and refund policies?"
@@ -171,7 +170,7 @@ export default function WhereIsSASPro2025() {
             Your Path to Predictable AI Income Starts Here
           </h2>
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
-            Embrace the future with John Crestani's AI Marketing Club bundled with Super Affiliate System Pro — your unmatched affiliate marketing blueprint for 2025 and beyond.
+            Embrace the future with John Crestani&apos;s AI Marketing Club bundled with Super Affiliate System Pro &mdash; your unmatched affiliate marketing blueprint for 2025 and beyond.
           </p>
           <CtaButton href={ctaAffiliateLink}>
             Unlock My Predictable AI Income Blueprint Now!
