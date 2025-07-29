@@ -45,7 +45,7 @@ export default function ClientInfluencerEarningsCalculator() {
         Influencer Earnings Calculator
       </motion.h1>
 
-      {/* Inputs */}
+      {/* Input Fields */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -96,7 +96,7 @@ export default function ClientInfluencerEarningsCalculator() {
         </div>
       </motion.div>
 
-      {/* Earnings */}
+      {/* Earnings Display */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -107,12 +107,12 @@ export default function ClientInfluencerEarningsCalculator() {
         <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share Buttons — fixed props */}
+      {/* Share Buttons — with required props */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
-      {/* Related Tools — fixed props */}
+      {/* Related Tools — with required props */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <RelatedTools
           currentToolUrl="/influencer-marketing-tools/earnings-calculator"
