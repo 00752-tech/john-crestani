@@ -18,7 +18,6 @@ export default function WhereIsSASPro2025() {
   return (
     <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
-        {/* Headline */}
         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +31,6 @@ export default function WhereIsSASPro2025() {
           Get Exclusive Access + a Secret Discount to John Crestani&apos;s AI Marketing Club
         </motion.h1>
 
-        {/* Intro */}
         <motion.p
           className="text-xl text-gray-300 mb-10 leading-relaxed text-center max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
@@ -43,7 +41,6 @@ export default function WhereIsSASPro2025() {
           Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
-        {/* Section: The Evolution */}
         <Section
           title="The Evolution of SAS Pro: From Standalone to AI-Powered Powerhouse"
           content={
@@ -67,7 +64,6 @@ export default function WhereIsSASPro2025() {
           }
         />
 
-        {/* Section: Unlocking SAS Pro Discount */}
         <Section
           title="Unlocking Super Affiliate System Pro: Your Exclusive $800 Discount"
           content={
@@ -98,7 +94,6 @@ export default function WhereIsSASPro2025() {
           }
         />
 
-        {/* Section: Why This Is A Game-Changer */}
         <Section
           title="Why This New Model is a Game-Changer for Affiliates"
           content={
@@ -134,7 +129,6 @@ export default function WhereIsSASPro2025() {
           }
         />
 
-        {/* Section: FAQs */}
         <Section
           title="Frequently Asked Questions"
           content={
@@ -159,7 +153,6 @@ export default function WhereIsSASPro2025() {
           }
         />
 
-        {/* Final CTA */}
         <motion.div
           className="mt-12 text-center max-w-3xl mx-auto px-4"
           initial={{ opacity: 0, y: 20 }}
@@ -181,8 +174,6 @@ export default function WhereIsSASPro2025() {
     </article>
   );
 }
-
-// Helper components
 
 function Section({
   title,
