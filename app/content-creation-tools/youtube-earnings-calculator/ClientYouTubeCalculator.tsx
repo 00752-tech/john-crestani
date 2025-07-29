@@ -1,261 +1,118 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React from "react";
+import { useState } from "react";
+import { Users, ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import YouTubeCalculator from "@/components/YouTubeCalculator";
 import ShareButtons from "@/components/ShareButtons";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { JsonLd } from "react-schemaorg";
 import RelatedTools from "@/components/RelatedTools";
+import Link from "next/link";
 
-export default function ClientYouTubeCalculator({
-  backUrl = "/free-tools",
-  pageUrlPath = "/content-creation-tools/youtube-earnings-calculator",
-}: {
-  backUrl?: string;
-  pageUrlPath?: string;
-}) {
-  // Affiliate link for CTA button
-  const ctaAffiliateLink =
-    "https://4147arbzmafm0s762q695w2v7q.hop.clickbank.net/?&traffic_source=youtube_earnings_calc";
+export default function ClientInfluencerEarningsCalculator() {
+  // States for influencer metrics
+  const [followers, setFollowers] = useState<number>(10000);
+  const [engagementRate, setEngagementRate] = useState<number>(3);
+  const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
 
-  // Page URL and title for sharing
-  const pageUrl = `https://johncrestani.me${pageUrlPath}`;
-  const pageTitle = "Predict Your YouTube Income: Free AdSense Calculator";
-
-  // Open affiliate link safely
-  const handleCtaClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.open(ctaAffiliateLink, "_blank", "noopener,noreferrer");
+  // Simple earnings calculation example
+  const calculateEarnings = () => {
+    const engagements = followers * (engagementRate / 100);
+    const earningsPerPost = engagements * 0.01; // $0.01 per engagement (example)
+    const monthlyEarnings = earningsPerPost * postsPerMonth;
+    return monthlyEarnings;
   };
 
+  const earnings = calculateEarnings();
+
+  // Define share info for ShareButtons component
+  const shareUrl = "https://johncrestani.me/influencer-marketing-tools/earnings-calculator";
+  const shareTitle = "Influencer Earnings Calculator";
+
   return (
-    <div className="min-h-screen bg-black text-white pt-32 pb-20">
-      {/* Global button style overrides */}
-      <style jsx global>{`
-        .no-hover,
-        .no-hover:hover,
-        .no-hover:active,
-        .no-hover:focus,
-        .no-hover:visited {
-          background: linear-gradient(to right, #ec4899, #a21caf) !important;
-          color: #fff !important;
-          outline: none;
-          box-shadow: none !important;
-          text-decoration: none !important;
-          cursor: pointer !important;
-          transition: none !important;
-          filter: none !important;
-        }
-        .gradient-text {
-          background: linear-gradient(to right, #ec4899, #a21caf);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-        }
-      `}</style>
+    <div className="container mx-auto p-6 max-w-2xl bg-gray-900 text-white rounded-lg shadow-lg min-h-screen">
+      {/* Back link */}
+      <div className="mb-6 flex items-center space-x-2">
+        <ArrowLeft className="w-5 h-5 text-pink-500" />
+        <Link href="/free-tools" className="text-pink-500 hover:underline">
+          Back to Tools
+        </Link>
+      </div>
 
-      <div className="container mx-auto px-4">
-        {/* Back Link with icon */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link
-            href={backUrl}
-            className="inline-flex items-center text-pink-500 hover:text-pink-400 mb-8 font-semibold"
-            aria-label="Back to Tools"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Tools
-          </Link>
-        </motion.div>
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-3xl font-bold mb-6 flex items-center"
+      >
+        <Users className="mr-3 text-pink-500" /> Influencer Earnings Calculator
+      </motion.h1>
 
-        {/* Main Heading */}
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text leading-relaxed pb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          aria-label="Reclaim Your Financial Future Free YouTube AdSense Earnings Calculator"
-        >
-          Reclaim Your Financial Future: Free YouTube AdSense Earnings Calculator
-        </motion.h1>
-
-        {/* Intro Paragraph */}
-        <div className="max-w-3xl mx-auto mb-12">
-          <p className="text-xl text-center mb-8 text-gray-300">
-            Are you tired of guessing your YouTube income potential? Our Free YouTube AdSense Earnings Calculator is designed to{" "}
-            <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel&apos;s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
-          </p>
-
-          {/* YouTubeCalculator Component */}
-          <YouTubeCalculator />
-
-          {/* Share Buttons with required props */}
-          <div className="mt-8">
-            <ShareButtons url={pageUrl} title={pageTitle} />
-          </div>
-
-          {/* How To Use Section */}
-          <motion.section
-            className="mt-12 bg-gray-900 p-8 rounded-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <motion.h2
-              className="text-2xl font-semibold mb-4"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              Effortlessly Predict Your Income: How to Use This Calculator
-            </motion.h2>
-            <ol className="space-y-4 text-gray-300 list-decimal list-inside">
-              {[
-                "Average Views per Video:",
-                "Click-Through Rate (CTR):",
-                "CPM Rate:",
-                "Videos per Month:",
-              ].map((item, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                >
-                  <strong className="text-pink-500">{item}</strong>{" "}
-                  {/* Additional description can be added if needed */}
-                </motion.li>
-              ))}
-            </ol>
-          </motion.section>
-
-          {/* Maximize Income Section */}
-          <motion.section
-            className="mt-8 bg-gray-900 p-8 rounded-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <motion.h2
-              className="text-2xl font-semibold mb-4"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              Beyond AdSense: Secure Your Future with Predictable AI Income Streams
-            </motion.h2>
-            <p className="text-gray-300 mb-4">
-              AdSense is a start, but true financial resilience comes from diversifying. John Crestani&apos;s AI Marketing Club (SAS Pro) offers the blueprint to{" "}
-              <strong>confidently secure reliable online income</strong> and <strong>regain control</strong> of your financial destiny. Discover how to:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              {[
-                "Monetize your channel with affiliate marketing, creating diversified, predictable income streams.",
-                "Create high-converting video content effortlessly with AI tools, ensuring consistent engagement.",
-                "Build and engage your audience, transforming viewers into loyal, long-term income sources.",
-                "Scale your online presence across platforms, securing your professional relevance and future.",
-              ].map((item, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                >
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-
-            {/* CTA Button */}
-            <button
-              onClick={handleCtaClick}
-              className="no-hover inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 px-8 rounded-full text-lg font-semibold mt-2 transition-none select-none"
-              aria-label="Unlock My Predictable AI Income Blueprint Now!"
-              type="button"
-              style={{ boxShadow: "none", textDecoration: "none", outline: "none", filter: "none", cursor: "pointer" }}
-            >
-              Unlock My Predictable AI Income Blueprint Now!
-            </button>
-          </motion.section>
+      {/* Input Fields */}
+      <motion.div className="space-y-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 0.5 }}>
+        <div>
+          <label htmlFor="followers" className="block mb-1 font-medium text-gray-300">
+            Followers
+          </label>
+          <input
+            type="number"
+            id="followers"
+            min={0}
+            value={followers}
+            onChange={(e) => setFollowers(Number(e.target.value))}
+            className="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white"
+          />
         </div>
 
-        {/* Schema Markups (no schema-dts typing) */}
-        <JsonLd<any>
-          item={{
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "YouTube AdSense Earnings Calculator",
-            applicationCategory: "FinanceApplication",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            operatingSystem: "Any",
-            description:
-              "Empower yourself to predict YouTube earnings. Our free calculator removes uncertainty, helping you confidently forecast monthly and yearly income with ease.",
-            creator: { "@type": "Person", name: "John Crestani" },
-            featureList: [
-              "Calculate potential YouTube earnings",
-              "Estimate monthly and yearly revenue",
-              "Factor in video frequency",
-              "Consider CTR and CPM rates",
-            ],
-            softwareHelp: {
-              "@type": "CreativeWork",
-              name: "How to Use This Calculator",
-              text: "1. Enter average views per video. 2. Input your CTR percentage. 3. Set your CPM rate. 4. Specify videos per month.",
-            },
-          }}
-        />
+        <div>
+          <label htmlFor="engagementRate" className="block mb-1 font-medium text-gray-300">
+            Engagement Rate (%)
+          </label>
+          <input
+            type="number"
+            id="engagementRate"
+            min={0}
+            step={0.1}
+            value={engagementRate}
+            onChange={(e) => setEngagementRate(Number(e.target.value))}
+            className="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white"
+          />
+        </div>
 
-        <JsonLd<any>
-          item={{
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How accurate is the YouTube earnings calculator?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "This calculator provides estimates based on average YouTube AdSense rates. Actual earnings can vary based on factors such as niche, audience location, video length, and seasonality.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What is a good CTR for YouTube ads?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A good CTR for YouTube ads typically ranges from 2% to 10%. However, this can vary significantly based on your content niche, audience engagement, and ad placement.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How can I increase my YouTube earnings?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "To increase your YouTube earnings, focus on creating engaging content, optimizing your video titles and thumbnails, understanding your audience demographics, and diversifying your income streams through methods like affiliate marketing and sponsored content.",
-                },
-              },
-            ],
-          }}
-        />
+        <div>
+          <label htmlFor="postsPerMonth" className="block mb-1 font-medium text-gray-300">
+            Sponsored Posts per Month
+          </label>
+          <input
+            type="number"
+            id="postsPerMonth"
+            min={0}
+            value={postsPerMonth}
+            onChange={(e) => setPostsPerMonth(Number(e.target.value))}
+            className="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white"
+          />
+        </div>
+      </motion.div>
 
-        {/* Related Tools with correct prop name */}
-        <RelatedTools currentToolUrl="/content-creation-tools/youtube-earnings-calculator" category="content" />
+      {/* Earnings Display */}
+      <motion.div
+        className="mt-8"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        <h2 className="text-xl font-semibold mb-2">Estimated Monthly Earnings</h2>
+        <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
+      </motion.div>
+
+      {/* Share Buttons */}
+      <div className="my-6">
+        <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
+
+      {/* Related Tools */}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <RelatedTools currentToolUrl="/influencer-marketing-tools/earnings-calculator" />
+      </motion.div>
     </div>
   );
 }
