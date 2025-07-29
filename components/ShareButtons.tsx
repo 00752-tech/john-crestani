@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Share2, ArrowRightCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { Share2, ArrowRightCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -11,7 +11,7 @@ import {
   TwitterIcon,
   LinkedinIcon,
   WhatsappIcon,
-} from "react-share";
+} from 'react-share';
 
 interface ShareButtonsProps {
   url: string;
@@ -33,16 +33,18 @@ export default function ShareButtons({ url, title }: ShareButtonsProps) {
         <Share2 className="w-5 h-5 mr-2" />
         Share
       </span>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: staggerDelay * 1 }}
       >
-        <FacebookShareButton url={url} title={title}>
+        <FacebookShareButton url={url}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -53,16 +55,18 @@ export default function ShareButtons({ url, title }: ShareButtonsProps) {
           <TwitterIcon size={32} round />
         </TwitterShareButton>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: staggerDelay * 3 }}
       >
-        <LinkedinShareButton url={url} title={title}>
+        <LinkedinShareButton url={url}>
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -73,6 +77,7 @@ export default function ShareButtons({ url, title }: ShareButtonsProps) {
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
