@@ -95,7 +95,7 @@ export default function ClientYouTubeCalculator({
             <strong>remove uncertainty</strong> and give you <strong>predictable insights</strong> into your channel&apos;s monetization. Simply input your estimated views, CTR, and CPM Rate to instantly project your Monthly and Yearly Earnings. <strong>Gain clarity and seize control</strong> of your YouTube financial strategy today.
           </p>
 
-          {/* YouTubeCalculator Component*/}
+          {/* YouTubeCalculator Component */}
           <YouTubeCalculator />
 
           {/* Share Buttons with required props */}
