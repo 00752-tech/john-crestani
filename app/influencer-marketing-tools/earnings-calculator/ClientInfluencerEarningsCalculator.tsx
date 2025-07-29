@@ -8,17 +8,17 @@ import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
 
-interface ClientYouTubeCalculatorProps {
+interface ClientInfluencerCalculatorProps {
   backUrl?: string
   pageUrlPath?: string
 }
 
-export default function ClientYouTubeCalculator({
-  backUrl = '/tools',
-  pageUrlPath = '/tools/youtube-earning-calculator',
-}: ClientYouTubeCalculatorProps) {
-  const shareUrl = 'https://johncrestani.me/tools/youtube-earning-calculator'
-  const shareTitle = 'YouTube Earnings Calculator'
+export default function ClientInfluencerEarningsCalculator({
+  backUrl = '/free-tools',
+  pageUrlPath = '/influencer-marketing-tools/earnings-calculator',
+}: ClientInfluencerCalculatorProps) {
+  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator'
+  const shareTitle = 'Influencer Earnings Calculator'
 
   return (
     <div className="container mx-auto p-4">
@@ -31,7 +31,7 @@ export default function ClientYouTubeCalculator({
       </div>
 
       {/* Main Calculator component */}
-      <YouTubeEarningsCalculator />
+      <InfluencerEarningsCalculator />
 
       {/* Share buttons — ✅ correct props passed */}
       <div className="my-6">
@@ -46,7 +46,7 @@ export default function ClientYouTubeCalculator({
       >
         <RelatedTools
           currentToolUrl={pageUrlPath}
-          category="youtube"
+          category="influencer"
         />
       </motion.div>
     </div>
