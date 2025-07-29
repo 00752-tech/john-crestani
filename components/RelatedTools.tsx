@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react'
-import { useEffect } from 'react'
+import { Calculator, TrendingUp, DollarSign, Users, Youtube, Maximize2 } from 'lucide-react';
+import { useEffect } from 'react';
 
 const allTools = [
   {
@@ -60,23 +60,23 @@ const allTools = [
     icon: Maximize2,
     category: "affiliate"
   }
-]
+];
 
 interface RelatedToolsProps {
-  currentToolUrl: string
-  category: string
+  currentToolUrl: string;
+  category: string;
 }
 
 export default function RelatedTools({ currentToolUrl, category }: RelatedToolsProps) {
-  const sameCategryTools = allTools.filter(tool => 
+  const sameCategoryTools = allTools.filter(tool =>
     tool.category === category && tool.url !== currentToolUrl
-  )
+  );
 
-  const otherTools = allTools.filter(tool => 
+  const otherTools = allTools.filter(tool =>
     tool.category !== category && tool.url !== currentToolUrl
-  )
+  );
 
-  const relatedTools = [...sameCategryTools, ...otherTools].slice(0, 3)
+  const relatedTools = [...sameCategoryTools, ...otherTools].slice(0, 3);
 
   useEffect(() => {
     const toolsSchemaData = {
@@ -98,24 +98,24 @@ export default function RelatedTools({ currentToolUrl, category }: RelatedToolsP
           }
         }
       }))
-    }
+    };
 
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify(toolsSchemaData)
-    document.head.appendChild(script)
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(toolsSchemaData);
+    document.head.appendChild(script);
 
     return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="mt-12 bg-gray-900 p-8 rounded-lg">
       <h2 className="text-2xl font-semibold mb-6 text-white">Access Your Success Toolkit</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {relatedTools.map((tool) => {
-          const Icon = tool.icon
+          const Icon = tool.icon;
           return (
             <button 
               key={tool.name}
@@ -131,13 +131,11 @@ export default function RelatedTools({ currentToolUrl, category }: RelatedToolsP
                   {tool.name}
                 </h3>
               </div>
-              <p className="text-sm text-gray-400">
-                {tool.description}
-              </p>
+              <p className="text-sm text-gray-400">{tool.description}</p>
             </button>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
