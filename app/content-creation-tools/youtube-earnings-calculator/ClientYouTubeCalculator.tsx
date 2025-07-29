@@ -8,28 +8,25 @@ import Link from 'next/link';
 import ShareButtons from '@/components/ShareButtons';
 import RelatedTools from '@/components/RelatedTools';
 
-export default function ClientInfluencerEarningsCalculator() {
-  const [followers, setFollowers] = useState<number>(10000);
-  const [engagementRate, setEngagementRate] = useState<number>(3);
-  const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
+export default function ClientYouTubeCalculator() {
+  const [views, setViews] = useState<number>(100000);
+  const [rpm, setRpm] = useState<number>(5);
 
-  const calculateEarnings = () => {
-    const engagements = followers * (engagementRate / 100);
-    const earningsPerPost = engagements * 0.01;
-    return earningsPerPost * postsPerMonth;
+  const calculateIncome = () => {
+    return (views / 1000) * rpm;
   };
 
-  const earnings = calculateEarnings();
+  const income = calculateIncome();
 
-  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator';
-  const shareTitle = 'Influencer Earnings Calculator';
+  const shareUrl = 'https://johncrestani.me/content-creation-tools/youtube-earnings-calculator';
+  const shareTitle = 'Predict Your YouTube Income: Free AdSense Earnings Calculator';
 
   return (
     <div className="container mx-auto max-w-2xl p-6 bg-gray-900 text-white rounded-lg min-h-screen shadow-lg">
       {/* Navigation */}
       <div className="mb-6 flex items-center space-x-2">
         <ArrowLeft className="w-5 h-5 text-pink-500" />
-        <Link href="/free-tools" className="hover:underline text-pink-500">
+        <Link href="/content-creation-tools" className="hover:underline text-pink-500">
           Back to Tools
         </Link>
       </div>
@@ -42,7 +39,7 @@ export default function ClientInfluencerEarningsCalculator() {
         className="mb-6 text-3xl font-bold flex items-center"
       >
         <Users className="mr-3 text-pink-500" />
-        Influencer Earnings Calculator
+        YouTube Earnings Calculator
       </motion.h1>
 
       {/* Input Fields */}
@@ -53,44 +50,30 @@ export default function ClientInfluencerEarningsCalculator() {
         className="space-y-5"
       >
         <div>
-          <label htmlFor="followers" className="block mb-1 font-medium text-gray-300">
-            Followers
+          <label htmlFor="views" className="block mb-1 font-medium text-gray-300">
+            Monthly Views
           </label>
           <input
-            id="followers"
+            id="views"
             type="number"
             min={0}
-            value={followers}
-            onChange={(e) => setFollowers(Number(e.target.value))}
+            value={views}
+            onChange={(e) => setViews(Number(e.target.value))}
             className="w-full border border-gray-700 rounded bg-gray-800 p-2 text-white"
           />
         </div>
 
         <div>
-          <label htmlFor="engagementRate" className="block mb-1 font-medium text-gray-300">
-            Engagement Rate (%)
+          <label htmlFor="rpm" className="block mb-1 font-medium text-gray-300">
+            RPM (Revenue per 1000 views)
           </label>
           <input
-            id="engagementRate"
+            id="rpm"
             type="number"
             min={0}
-            step={0.1}
-            value={engagementRate}
-            onChange={(e) => setEngagementRate(Number(e.target.value))}
-            className="w-full border border-gray-700 rounded bg-gray-800 p-2 text-white"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="postsPerMonth" className="block mb-1 font-medium text-gray-300">
-            Sponsored Posts per Month
-          </label>
-          <input
-            id="postsPerMonth"
-            type="number"
-            min={0}
-            value={postsPerMonth}
-            onChange={(e) => setPostsPerMonth(Number(e.target.value))}
+            step={0.01}
+            value={rpm}
+            onChange={(e) => setRpm(Number(e.target.value))}
             className="w-full border border-gray-700 rounded bg-gray-800 p-2 text-white"
           />
         </div>
@@ -103,20 +86,20 @@ export default function ClientInfluencerEarningsCalculator() {
         transition={{ delay: 0.4, duration: 0.5 }}
         className="mt-8"
       >
-        <h2 className="mb-2 text-xl font-semibold">Estimated Monthly Earnings</h2>
-        <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
+        <h2 className="mb-2 text-xl font-semibold">Estimated Monthly Income</h2>
+        <p className="text-4xl font-bold text-pink-500">${income.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share Buttons — with required props */}
+      {/* Share Buttons */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
-      {/* Related Tools — with required props */}
+      {/* Related Tools */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <RelatedTools
-          currentToolUrl="/influencer-marketing-tools/earnings-calculator"
-          category="Influencer Marketing"
+          currentToolUrl="/content-creation-tools/youtube-earnings-calculator"
+          category="Content Creation"
         />
       </motion.div>
     </div>
