@@ -1,11 +1,13 @@
-"use client";
+// app/influencer-marketing-tools/earnings-calculator/ClientInfluencerEarningsCalculator.tsx
+'use client';
 
-import { useState } from "react";
-import { Users, ArrowLeft } from "lucide-react";
-import { motion } from "framer-motion";
-import ShareButtons from "@/components/ShareButtons";
-import RelatedTools from "@/components/RelatedTools";
-import Link from "next/link";
+import { useState } from 'react';
+import { Users, ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+import ShareButtons from '@/components/ShareButtons';
+import RelatedTools from '@/components/RelatedTools';
 
 export default function ClientInfluencerEarningsCalculator() {
   // State values
@@ -13,22 +15,22 @@ export default function ClientInfluencerEarningsCalculator() {
   const [engagementRate, setEngagementRate] = useState<number>(3);
   const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
 
-  // Simple earnings formula (example)
+  // Calculation logic
   const calculateEarnings = () => {
     const engagements = followers * (engagementRate / 100);
-    const earningsPerPost = engagements * 0.01; // Assume $0.01 per engagement
+    const earningsPerPost = engagements * 0.01;
     return earningsPerPost * postsPerMonth;
   };
 
   const earnings = calculateEarnings();
 
-  // Share info (required props)
-  const shareUrl = "https://johncrestani.me/influencer-marketing-tools/earnings-calculator";
-  const shareTitle = "Influencer Earnings Calculator";
+  // Share info
+  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator';
+  const shareTitle = 'Influencer Earnings Calculator';
 
   return (
     <div className="container mx-auto max-w-2xl p-6 bg-gray-900 text-white rounded-lg min-h-screen shadow-lg">
-      {/* Navigation back */}
+      {/* Navigation */}
       <div className="mb-6 flex items-center space-x-2">
         <ArrowLeft className="w-5 h-5 text-pink-500" />
         <Link href="/free-tools" className="hover:underline text-pink-500">
@@ -47,7 +49,7 @@ export default function ClientInfluencerEarningsCalculator() {
         Influencer Earnings Calculator
       </motion.h1>
 
-      {/* Input Section */}
+      {/* Inputs */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -98,7 +100,7 @@ export default function ClientInfluencerEarningsCalculator() {
         </div>
       </motion.div>
 
-      {/* Earnings Display */}
+      {/* Earnings */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -109,19 +111,18 @@ export default function ClientInfluencerEarningsCalculator() {
         <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share Buttons with required props */}
+      {/* Share Buttons */}
       <div className="my-6">
         <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
       {/* Related Tools */}
-<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-  <RelatedTools 
-    currentToolUrl="/influencer-marketing-tools/earnings-calculator"
-    category="Influencer Marketing" // ✅ Add a valid category value here
-  />
-</motion.div>
-
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <RelatedTools
+          currentToolUrl="/influencer-marketing-tools/earnings-calculator"
+          category="Influencer Marketing"
+        />
+      </motion.div>
     </div>
   );
 }
