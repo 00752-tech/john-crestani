@@ -253,7 +253,7 @@ export default function ClientYouTubeCalculator({
           }}
         />
 
-        {/* Related Tools with corrected prop name */}
+        {/* Related Tools with correct prop name */}
         <RelatedTools currentToolUrl="/content-creation-tools/youtube-earnings-calculator" category="content" />
       </div>
     </div>
