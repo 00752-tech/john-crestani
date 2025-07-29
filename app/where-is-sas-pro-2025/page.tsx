@@ -1,11 +1,12 @@
-// File: app/blog/where-is-sas-pro-2025/page.tsx
+// File: app/where-is-sas-pro-2025/page.tsx
 
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
+  title:
+    "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
   description:
     "Searching for Super Affiliate System Pro? John Crestani&apos;s legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what&apos;s new, and how to get an $800 SAS Pro discount!",
 };
@@ -58,9 +59,9 @@ export default function WhereIsSASPro2025() {
                 You can start with AIMC today for just <strong>$27</strong>, gaining AI-powered marketing tools to automate, optimize, and scale your campaigns faster than ever.
               </p>
               <div className="text-center mt-6">
-                <CtaButton href={ctaAffiliateLink}>
+                <CtaLink href={ctaAffiliateLink}>
                   Click Here to Get Started with AI Marketing Club (and Access SAS Pro!)
-                </CtaButton>
+                </CtaLink>
               </div>
             </>
           }
@@ -89,9 +90,9 @@ export default function WhereIsSASPro2025() {
                 This isn&apos;t just a course &mdash; it&apos;s your complete affiliate business blueprint, now supercharged with AI.
               </p>
               <div className="text-center mt-6">
-                <CtaButton href={ctaAffiliateLink}>
+                <CtaLink href={ctaAffiliateLink}>
                   Access Super Affiliate System Pro (with Your Exclusive $800 Discount!)
-                </CtaButton>
+                </CtaLink>
               </div>
             </>
           }
@@ -172,16 +173,16 @@ export default function WhereIsSASPro2025() {
           <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed mb-8">
             Embrace the future with John Crestani&apos;s AI Marketing Club bundled with Super Affiliate System Pro &mdash; your unmatched affiliate marketing blueprint for 2025 and beyond.
           </p>
-          <CtaButton href={ctaAffiliateLink}>
+          <CtaLink href={ctaAffiliateLink}>
             Unlock My Predictable AI Income Blueprint Now!
-          </CtaButton>
+          </CtaLink>
         </motion.div>
       </main>
     </article>
   );
 }
 
-// ========== Helper Components ==========
+// Helper components
 
 function Section({
   title,
@@ -207,7 +208,7 @@ function Section({
   );
 }
 
-function CtaButton({
+function CtaLink({
   href,
   children,
 }: {
