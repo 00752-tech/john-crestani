@@ -10,9 +10,14 @@ export default function InfluencerEarningsCalculator() {
   const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
 
   const calculateEarnings = (): number => {
-    const engagements = followers * (engagementRate / 100);
-    const earningsPerPost = engagements * 0.01; // Assuming $0.01 per engagement
-    return earningsPerPost * postsPerMonth;
+    const validFollowers = followers > 0 ? followers : 0;
+    const validEngagementRate =
+      engagementRate > 0 && engagementRate <= 100 ? engagementRate : 0;
+    const validPostsPerMonth = postsPerMonth > 0 ? postsPerMonth : 0;
+
+    const engagements = validFollowers * (validEngagementRate / 100);
+    const earningsPerPost = engagements * 0.01; // $0.01 per engagement
+    return earningsPerPost * validPostsPerMonth;
   };
 
   const earnings = calculateEarnings();
@@ -50,9 +55,15 @@ export default function InfluencerEarningsCalculator() {
           <input
             type="number"
             id="followers"
+            min={0}
+            step={1}
             value={followers}
-            onChange={(e) => setFollowers(Number(e.target.value))}
-            className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white"
+            onChange={(e) => {
+              const val = e.target.value;
+              setFollowers(val === "" ? 0 : Number(val));
+            }}
+            className="mt-1 block w-full rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+            aria-label="Number of Followers"
           />
         </div>
         <div>
@@ -65,9 +76,16 @@ export default function InfluencerEarningsCalculator() {
           <input
             type="number"
             id="engagementRate"
+            min={0}
+            max={100}
+            step={0.1}
             value={engagementRate}
-            onChange={(e) => setEngagementRate(Number(e.target.value))}
-            className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white"
+            onChange={(e) => {
+              const val = e.target.value;
+              setEngagementRate(val === "" ? 0 : Number(val));
+            }}
+            className="mt-1 block w-full rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+            aria-label="Engagement Rate"
           />
         </div>
         <div>
@@ -80,9 +98,15 @@ export default function InfluencerEarningsCalculator() {
           <input
             type="number"
             id="postsPerMonth"
+            min={0}
+            step={1}
             value={postsPerMonth}
-            onChange={(e) => setPostsPerMonth(Number(e.target.value))}
-            className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white"
+            onChange={(e) => {
+              const val = e.target.value;
+              setPostsPerMonth(val === "" ? 0 : Number(val));
+            }}
+            className="mt-1 block w-full rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+            aria-label="Sponsored Posts per Month"
           />
         </div>
       </motion.div>
@@ -92,10 +116,10 @@ export default function InfluencerEarningsCalculator() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         className="mt-6"
+        aria-live="polite"
+        role="status"
       >
-        <h3 className="text-xl font-semibold mb-2">
-          Estimated Monthly Earnings
-        </h3>
+        <h3 className="text-xl font-semibold mb-2">Estimated Monthly Earnings</h3>
         <motion.p
           className="text-4xl font-bold text-pink-500"
           whileInView={{ scale: [1, 1.1, 1] }}
@@ -113,23 +137,13 @@ export default function InfluencerEarningsCalculator() {
       >
         <h4 className="font-semibold mb-2">Understanding Your Results:</h4>
         <ul className="list-disc list-inside space-y-2">
-          <li>
-            This estimate is based on an average rate of $0.01 per engagement.
-          </li>
-          <li>
-            Actual earnings can vary based on your niche, audience quality, and
-            individual brand deals.
-          </li>
-          <li>
-            Higher engagement rates typically lead to better earning potential.
-          </li>
-          <li>
-            Consistent posting and audience growth can increase your earnings
-            over time.
-          </li>
+          <li>This estimate is based on an average rate of $0.01 per engagement.</li>
+          <li>Actual earnings can vary based on your niche, audience quality, and individual brand deals.</li>
+          <li>Higher engagement rates typically lead to better earning potential.</li>
+          <li>Consistent posting and audience growth can increase your earnings over time.</li>
         </ul>
         <p className="mt-4">
-          {`Want to learn how to maximize your influence and earnings? Check out John Crestani's`}{" "}
+          {`Want to learn how to maximize your influence and earnings? Check out John Crestani's `}{" "}
           <a href="/api/sale" className="text-pink-500 hover:underline">
             Super Affiliate System Pro
           </a>
