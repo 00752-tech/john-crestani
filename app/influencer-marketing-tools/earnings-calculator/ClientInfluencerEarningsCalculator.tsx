@@ -1,24 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import InfluencerEarningsCalculator from '@/components/InfluencerEarningsCalculator'
+import YouTubeEarningsCalculator from '@/components/YouTubeEarningsCalculator'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import ShareButtons from '@/components/ShareButtons'
 import RelatedTools from '@/components/RelatedTools'
 import { motion } from 'framer-motion'
 
-interface ClientInfluencerEarningsCalculatorProps {
+interface ClientYouTubeCalculatorProps {
   backUrl?: string
   pageUrlPath?: string
 }
 
-export default function ClientInfluencerEarningsCalculator({
-  backUrl = '/free-tools',
-  pageUrlPath = '/influencer-marketing-tools/earnings-calculator',
-}: ClientInfluencerEarningsCalculatorProps) {
-  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator'
-  const shareTitle = 'Influencer Earnings Calculator'
+export default function ClientYouTubeCalculator({
+  backUrl = '/tools',
+  pageUrlPath = '/tools/youtube-earning-calculator',
+}: ClientYouTubeCalculatorProps) {
+  const shareUrl = 'https://johncrestani.me/tools/youtube-earning-calculator'
+  const shareTitle = 'YouTube Earnings Calculator'
 
   return (
     <div className="container mx-auto p-4">
@@ -31,7 +31,7 @@ export default function ClientInfluencerEarningsCalculator({
       </div>
 
       {/* Main Calculator component */}
-      <InfluencerEarningsCalculator />
+      <YouTubeEarningsCalculator />
 
       {/* Share buttons — ✅ correct props passed */}
       <div className="my-6">
@@ -46,7 +46,7 @@ export default function ClientInfluencerEarningsCalculator({
       >
         <RelatedTools
           currentToolUrl={pageUrlPath}
-          category="influencer"
+          category="youtube"
         />
       </motion.div>
     </div>
