@@ -17,6 +17,10 @@ export default function ClientInfluencerEarningsCalculator({
   backUrl = '/free-tools',
   pageUrlPath = '/influencer-marketing-tools/earnings-calculator',
 }: ClientInfluencerEarningsCalculatorProps) {
+  // ✅ Added required props for ShareButtons component
+  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator'
+  const shareTitle = 'Influencer Earnings Calculator'
+
   return (
     <div className="container mx-auto p-4">
       {/* Back link using ArrowLeft and Link */}
@@ -30,9 +34,9 @@ export default function ClientInfluencerEarningsCalculator({
       {/* Main Calculator component */}
       <InfluencerEarningsCalculator />
 
-      {/* Share buttons */}
+      {/* Share buttons — ✅ passing props */}
       <div className="my-6">
-        <ShareButtons />
+        <ShareButtons url={shareUrl} title={shareTitle} />
       </div>
 
       {/* Related Tools with animated fade-in */}
