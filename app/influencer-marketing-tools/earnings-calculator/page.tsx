@@ -1,10 +1,10 @@
-import ClientYouTubeCalculator from './ClientYouTubeCalculator'
+import ClientInfluencerEarningsCalculator from './ClientInfluencerEarningsCalculator'
 
-export default function YouTubeCalculatorPage() {
+export default function InfluencerCalculatorPage() {
   return (
-    <ClientYouTubeCalculator
-      backUrl="/tools"
-      pageUrlPath="/tools/youtube-earning-calculator"
+    <ClientInfluencerEarningsCalculator
+      backUrl="/free-tools"
+      pageUrlPath="/influencer-marketing-tools/earnings-calculator"
     />
   )
 }
