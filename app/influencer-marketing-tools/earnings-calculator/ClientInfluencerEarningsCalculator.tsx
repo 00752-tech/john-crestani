@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import YouTubeEarningsCalculator from '@/components/YouTubeEarningsCalculator'
+import InfluencerEarningsCalculator from '@/components/InfluencerEarningsCalculator'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import ShareButtons from '@/components/ShareButtons'
