@@ -1,4 +1,3 @@
-// File: app/content-creation-tools/youtube-earnings-calculator/ClientYouTubeCalculator.tsx
 "use client";
 
 import React from "react";
@@ -8,7 +7,8 @@ import ShareButtons from "@/components/ShareButtons";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { JsonLd } from "react-schemaorg";
-import { SoftwareApplication, FAQPage } from "schema-dts"; // <--- ADD THIS IMPORT
+// Removed schema-dts imports here
+// import { SoftwareApplication, FAQPage } from "schema-dts";
 import RelatedTools from "@/components/RelatedTools";
 
 interface ClientYouTubeCalculatorProps {
@@ -16,7 +16,7 @@ interface ClientYouTubeCalculatorProps {
   pageUrlPath?: string;
 }
 
-// REMOVE 'export const metadata' from here. It will be moved to page.tsx
+// Removed 'export const metadata' as you mentioned
 
 export default function ClientYouTubeCalculator({
   backUrl = "/tools",
@@ -243,7 +243,8 @@ export default function ClientYouTubeCalculator({
         </div>
 
         {/* JSON-LD Structured Data */}
-        <JsonLd<SoftwareApplication> // <--- SPECIFY TYPE HERE
+        <JsonLd
+          // Removed type parameter here to avoid schema-dts dependency
           item={{
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
@@ -268,7 +269,8 @@ export default function ClientYouTubeCalculator({
           }}
         />
 
-        <JsonLd<FAQPage> // <--- SPECIFY TYPE HERE
+        <JsonLd
+          // Removed type parameter here as well
           item={{
             "@context": "https://schema.org",
             "@type": "FAQPage",
