@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+'use client';
 
 import { motion } from 'framer-motion'
 import AffiliateLinkCTROptimizer from '@/components/AffiliateLinkCTROptimizer'
