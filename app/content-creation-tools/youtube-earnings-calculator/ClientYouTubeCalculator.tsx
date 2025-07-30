@@ -8,7 +8,15 @@ import Link from 'next/link';
 import ShareButtons from '@/components/ShareButtons';
 import RelatedTools from '@/components/RelatedTools';
 
-export default function ClientInfluencerEarningsCalculator() {
+type ClientYouTubeCalculatorProps = {
+  backUrl: string;
+  pageUrlPath: string;
+};
+
+export default function ClientYouTubeCalculator({
+  backUrl,
+  pageUrlPath,
+}: ClientYouTubeCalculatorProps) {
   const [followers, setFollowers] = useState<number>(10000);
   const [engagementRate, setEngagementRate] = useState<number>(3);
   const [postsPerMonth, setPostsPerMonth] = useState<number>(10);
@@ -21,15 +29,12 @@ export default function ClientInfluencerEarningsCalculator() {
 
   const earnings = calculateEarnings();
 
-  const shareUrl = 'https://johncrestani.me/influencer-marketing-tools/earnings-calculator';
-  const shareTitle = 'Influencer Earnings Calculator';
-
   return (
     <div className="container mx-auto max-w-2xl p-6 bg-gray-900 text-white rounded-lg min-h-screen shadow-lg">
       {/* Navigation */}
       <div className="mb-6 flex items-center space-x-2">
         <ArrowLeft className="w-5 h-5 text-pink-500" />
-        <Link href="/free-tools" className="hover:underline text-pink-500">
+        <Link href={backUrl} className="hover:underline text-pink-500">
           Back to Tools
         </Link>
       </div>
@@ -42,7 +47,7 @@ export default function ClientInfluencerEarningsCalculator() {
         className="mb-6 text-3xl font-bold flex items-center"
       >
         <Users className="mr-3 text-pink-500" />
-        Influencer Earnings Calculator
+        YouTube Earnings Calculator
       </motion.h1>
 
       {/* Inputs */}
@@ -52,9 +57,10 @@ export default function ClientInfluencerEarningsCalculator() {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="space-y-5"
       >
+        {/* Followers */}
         <div>
           <label htmlFor="followers" className="block mb-1 font-medium text-gray-300">
-            Followers
+            Subscribers
           </label>
           <input
             id="followers"
@@ -66,6 +72,7 @@ export default function ClientInfluencerEarningsCalculator() {
           />
         </div>
 
+        {/* Engagement */}
         <div>
           <label htmlFor="engagementRate" className="block mb-1 font-medium text-gray-300">
             Engagement Rate (%)
@@ -81,9 +88,10 @@ export default function ClientInfluencerEarningsCalculator() {
           />
         </div>
 
+        {/* Posts */}
         <div>
           <label htmlFor="postsPerMonth" className="block mb-1 font-medium text-gray-300">
-            Sponsored Posts per Month
+            Monetized Videos per Month
           </label>
           <input
             id="postsPerMonth"
@@ -103,21 +111,18 @@ export default function ClientInfluencerEarningsCalculator() {
         transition={{ delay: 0.4, duration: 0.5 }}
         className="mt-8"
       >
-        <h2 className="mb-2 text-xl font-semibold">Estimated Monthly Earnings</h2>
+        <h2 className="mb-2 text-xl font-semibold">Estimated Monthly Revenue</h2>
         <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share Buttons — ✅ fixed with required props */}
+      {/* Share */}
       <div className="my-6">
-        <ShareButtons url={shareUrl} title={shareTitle} />
+        <ShareButtons url={`https://johncrestani.me${pageUrlPath}`} title="YouTube Earnings Calculator" />
       </div>
 
-      {/* Related Tools — ✅ fixed with required props */}
+      {/* Related */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <RelatedTools
-          currentToolUrl="/influencer-marketing-tools/earnings-calculator"
-          category="influencer"
-        />
+        <RelatedTools currentToolUrl={pageUrlPath} category="content-creation" />
       </motion.div>
     </div>
   );
