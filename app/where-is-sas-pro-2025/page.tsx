@@ -4,13 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export const metadata = {
-  title:
-    "Where is Super Affiliate System Pro in 2025? Get Exclusive Access + Secret Discount",
-  description:
-    "Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. Discover 2025 access, what's new, and how to get an $800 SAS Pro discount!",
-};
-
 const ctaAffiliateLink =
   "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
 
@@ -222,8 +215,3 @@ function FaqItem({
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <h3 className="text-lg font-semibold text-white mb-2">{question}</h3>
-      <p className="text-gray-300">{answer}</p>
-    </motion.div>
-  );
-}
