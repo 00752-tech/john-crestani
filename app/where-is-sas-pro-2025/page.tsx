@@ -211,4 +211,19 @@ function FaqItem({
   question,
   answer,
 }: {
-  question
+  question: string;
+  answer: string;
+}) {
+  return (
+    <motion.div
+      className="mb-6"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <h3 className="text-lg font-semibold text-white mb-2">{question}</h3>
+      <p className="text-gray-300">{answer}</p>
+    </motion.div>
+  );
+}
