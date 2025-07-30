@@ -200,3 +200,15 @@ function CtaLink({
       style={{
         boxShadow: "none",
         textDecoration: "none",
+      }}
+    >
+      {children}
+    </a>
+  );
+}
+
+function FaqItem({
+  question,
+  answer,
+}: {
+  question
