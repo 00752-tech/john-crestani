@@ -3,7 +3,6 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
@@ -42,14 +41,8 @@ export default function Home() {
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
-        {/* ✅ Added Google Fonts CDN for Poppins */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-        />
       </Head>
 
-      {/* Global styles and overrides */}
       <style jsx global>{`
         body {
           font-family: 'Poppins', sans-serif;
