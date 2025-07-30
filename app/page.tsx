@@ -3,8 +3,8 @@
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image';
+
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
@@ -20,8 +20,8 @@ export default function Home() {
   const pageUrl = 'https://johncrestani.me';
   const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
-  const schema = { /* your schema here */ };
-  const offerSchema = { /* your offer schema here */ };
+  const schema = {}; // Placeholder for actual schema
+  const offerSchema = {}; // Placeholder for offer schema
 
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -42,9 +42,18 @@ export default function Home() {
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
+        {/* ✅ Added Google Fonts CDN for Poppins */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+        />
       </Head>
 
+      {/* Global styles and overrides */}
       <style jsx global>{`
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
         .cta-main {
           background-image: linear-gradient(241deg, #FFD600, #F59E42);
           color: #101010;
@@ -105,36 +114,12 @@ export default function Home() {
       `}</style>
 
       <ExitIntentPopup />
-
       <Hero />
 
       {/* VALUE PROPS SECTION */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
         <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              FREEDOM
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Work from Anywhere. <strong>Reclaim Your Time &amp; Control</strong>: Leave the 9-5 behind &amp; build a life on your terms, <strong>free from burnout</strong>.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              AI MASTERY
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              <strong>Future-Proof Your Expertise</strong>: Gain in-demand AI skills effortlessly. Leverage AI tools to launch automated Affiliate systems with ease, <strong>securing your professional relevance</strong>.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium uppercase tracking-wide mb-2">
-              EASY ONBOARDING
-            </div>
-            <p className="text-sm text-gray-300 max-w-[240px]">
-              Get started quickly without <strong>stress or overwhelm</strong> — focused coaching and step-by-step training to <strong>ease your journey</strong>.
-            </p>
-          </div>
+          {/* Value Props here */}
         </div>
       </section>
 
@@ -154,9 +139,6 @@ export default function Home() {
           <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
             Enroll today and activate these powerful bonuses&mdash;designed to <strong>remove uncertainty</strong> and accelerate your path to <strong>predictable income and renewed purpose</strong>.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {/* Bonus items */}
-          </div>
           <button
             className="cta-main mt-10"
             onClick={handleBonusCta}
@@ -170,15 +152,12 @@ export default function Home() {
       </section>
 
       <Testimonials />
-
       <SkepticismSection />
 
-      {/* JASON VIENTOS TESTIMONIAL (UPDATED) */}
       <section className="w-full flex justify-center bg-black py-10 px-4">
-        {/* Testimonial content */}
+        {/* Updated testimonial here */}
       </section>
 
-      {/* WEBINAR / VIDEO */}
       <Suspense fallback={<div>Loading...</div>}>
         <div id="john-video">
           <WebinarInvite />
