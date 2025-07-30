@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+'use client';
 
 import ROASCalculator from '@/components/ROASCalculator'
 import Link from 'next/link'
