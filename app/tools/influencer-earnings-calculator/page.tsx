@@ -1,4 +1,5 @@
-import ClientInfluencerEarningsCalculator from "@/app/influencer-marketing-tools/earnings-calculator/ClientInfluencerEarningsCalculator";
+// File: app/tools/influencer-earnings-calculator/page.tsx
+
 export const metadata = {
   title: "Influencer Earnings Calculator | Super Affiliate System Pro",
   description:
@@ -7,9 +8,12 @@ export const metadata = {
 
 export default function InfluencerEarningsCalculatorPage() {
   return (
-    <ClientInfluencerEarningsCalculator
-      backUrl="/tools"
-      pageUrlPath="/tools/influencer-earnings-calculator"
-    />
+    <main className="min-h-screen flex flex-col items-center justify-center p-16 text-white bg-black">
+      <h1 className="text-3xl font-bold mb-4">Calculator Unavailable</h1>
+      <p className="text-gray-400 text-center max-w-xl">
+        This tool is currently offline while we upgrade our platform.
+        Check back soon for a more powerful version!
+      </p>
+    </main>
   );
 }
