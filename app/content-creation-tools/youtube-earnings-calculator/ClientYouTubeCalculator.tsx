@@ -57,7 +57,7 @@ export default function ClientYouTubeCalculator({
         transition={{ delay: 0.2, duration: 0.5 }}
         className="space-y-5"
       >
-        {/* Followers */}
+        {/* Subscribers */}
         <div>
           <label htmlFor="followers" className="block mb-1 font-medium text-gray-300">
             Subscribers
@@ -88,7 +88,7 @@ export default function ClientYouTubeCalculator({
           />
         </div>
 
-        {/* Posts */}
+        {/* Monetized Videos */}
         <div>
           <label htmlFor="postsPerMonth" className="block mb-1 font-medium text-gray-300">
             Monetized Videos per Month
@@ -104,7 +104,7 @@ export default function ClientYouTubeCalculator({
         </div>
       </motion.div>
 
-      {/* Earnings */}
+      {/* Estimated Earnings */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -115,12 +115,12 @@ export default function ClientYouTubeCalculator({
         <p className="text-4xl font-bold text-pink-500">${earnings.toFixed(2)}</p>
       </motion.div>
 
-      {/* Share */}
+      {/* Share Buttons */}
       <div className="my-6">
         <ShareButtons url={`https://johncrestani.me${pageUrlPath}`} title="YouTube Earnings Calculator" />
       </div>
 
-      {/* Related */}
+      {/* Related Tools */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <RelatedTools currentToolUrl={pageUrlPath} category="content-creation" />
       </motion.div>
