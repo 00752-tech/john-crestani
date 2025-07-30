@@ -1,4 +1,3 @@
-// File: app/content-creation-tools/youtube-earnings-calculator/page.tsx
 import { Metadata } from 'next';
 import ClientYouTubeCalculator from './ClientYouTubeCalculator'; // Import the client component
 
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/youtube-calculator-og.jpg", // Replace with actual OG image URL
+        url: "/images/youtube-calculator-og.jpg",
         width: 1200,
         height: 630,
         alt: "YouTube Earnings Calculator",
@@ -23,14 +22,25 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Predict Your YouTube Income: Free AdSense Earnings Calculator",
     description: "Are you tired of guessing your YouTube income? Our free YouTube AdSense Earnings Calculator removes uncertainty, giving you predictable insights to forecast your channel's monthly and yearly earnings and gain financial control.",
-    // image: "/images/youtube-calculator-twitter.jpg", // Optional Twitter image
   },
-  keywords: ["YouTube earnings calculator", "AdSense calculator", "YouTube income", "free YouTube tool", "YouTube monetization", "predict YouTube earnings"],
+  keywords: [
+    "YouTube earnings calculator",
+    "AdSense calculator",
+    "YouTube income",
+    "free YouTube tool",
+    "YouTube monetization",
+    "predict YouTube earnings"
+  ],
   alternates: {
     canonical: "https://johncrestani.me/content-creation-tools/youtube-earnings-calculator",
   },
 };
 
 export default function YouTubeEarningsCalculatorPageWrapper() {
-  return <ClientYouTubeCalculator />;
+  return (
+    <ClientYouTubeCalculator
+      backUrl="/content-creation-tools"
+      pageUrlPath="/content-creation-tools/youtube-earnings-calculator"
+    />
+  );
 }
