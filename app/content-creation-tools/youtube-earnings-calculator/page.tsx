@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ClientYouTubeCalculator from './ClientYouTubeCalculator'; // Import the client component
+import ClientYouTubeCalculator from './ClientYouTubeCalculator';
 
 export const metadata: Metadata = {
   title: "Predict Your YouTube Income: Free AdSense Earnings Calculator",
