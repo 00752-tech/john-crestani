@@ -1,9 +1,7 @@
 'use client';
-
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
@@ -16,12 +14,27 @@ import ExitIntentPopup from '@/components/ExitIntentPopup';
 const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
 
 export default function Home() {
+  // Static page details
   const pageUrl = 'https://johncrestani.me';
   const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
+  // Provide a minimal valid schema for SEO. You should replace '{}' with a real schema object.
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "url": pageUrl,
+    "description": "Discover John Crestani's AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
+  };
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "url": pageUrl,
+    "price": "27",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  };
 
-  const schema = {}; // Placeholder for actual schema
-  const offerSchema = {}; // Placeholder for offer schema
-
+  // CTA handler
   const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.open(
@@ -42,7 +55,6 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       </Head>
-
       <style jsx global>{`
         body {
           font-family: 'Poppins', sans-serif;
@@ -105,24 +117,20 @@ export default function Home() {
           color: #101010;
         }
       `}</style>
-
       <ExitIntentPopup />
       <Hero />
-
       {/* VALUE PROPS SECTION */}
       <section className="w-full flex justify-center bg-black py-8 px-4">
         <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           {/* Value Props here */}
         </div>
       </section>
-
       {/* STATS SECTION */}
       <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-b border-gray-800">
         <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
           {/* Stats items here */}
         </div>
       </section>
-
       {/* BONUS CTA */}
       <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
         <div className="w-full max-w-5xl flex flex-col items-center text-center">
@@ -143,36 +151,28 @@ export default function Home() {
           </button>
         </div>
       </section>
-
       <Testimonials />
       <SkepticismSection />
-
       <section className="w-full flex justify-center bg-black py-10 px-4">
         {/* Updated testimonial here */}
       </section>
-
       <Suspense fallback={<div>Loading...</div>}>
         <div id="john-video">
           <WebinarInvite />
         </div>
       </Suspense>
-
       {/* AI Growth In Focus Section */}
       <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center text-center">
         {/* AI Growth content */}
       </section>
-
       <p className="text-center text-xs text-gray-400 mt-2 mb-8">
         {/* Infographic credit */}
       </p>
-
       <FAQ />
       <CTA />
-
       <div className="container mx-auto px-4 py-8">
         <DynamicShareButtons url={pageUrl} title={pageTitle} />
       </div>
-
       <Footer />
     </main>
   );
