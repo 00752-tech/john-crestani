@@ -16,13 +16,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
+  title: "John Crestani's AI Marketing Club: Super Affiliate System Pro Access & Review",
   description:
-    "New 2025 launch: John Crestani's AI Club for $27! Get a FREE site ($297 value), 60-day guarantee. Secure predictable AI income, effortlessly. Ends in 4 days.",
+    "Unlock exclusive 2025 access to Super Affiliate System Pro inside John Crestani's AI Marketing Club. Future-proof your income: learn AI-powered affiliate marketing to end fear and gain predictability.",
   openGraph: {
-    title: "John Crestani's AI Club: $27 Early Bird + FREE Site!",
+    title: "John Crestani's AI Marketing Club: Super Affiliate System Pro Access & Review",
     description:
-      "New 2025 launch: John Crestani's AI Club for $27! Get a FREE site ($297 value), 60-day guarantee. Secure predictable AI income, effortlessly. Ends in 4 days.",
+      "Unlock exclusive 2025 access to Super Affiliate System Pro inside John Crestani's AI Marketing Club. Future-proof your income: learn AI-powered affiliate marketing to end fear and gain predictability.",
     images: [
       {
         url: "https://johncrestani.me/hero_man_hat.webp",
