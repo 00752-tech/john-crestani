@@ -8,8 +8,7 @@ const ctaAffiliateLink =
   "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
 
 export default function WhereIsSASPro2025() {
-  return (
-    <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
+  return (<article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
         <motion.h1
           className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
