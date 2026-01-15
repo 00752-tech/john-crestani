@@ -1,0 +1,9 @@
+{
+  "site": "johncrestani.me",
+  "version": "1.2",
+  "deployed": "2026-01-15",
+  "agentic": true,
+  "mcpServers": ["seo-agent", "affiliate-tools"],
+  "primaryCTA": "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net",
+  "verifiedBots": ["PerplexityBot", "OAI-SearchBot", "GoogleAgent-Mariner"]
+}
