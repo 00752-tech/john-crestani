@@ -1,0 +1,6 @@
+Site: johncrestani.me (John Crestani AI Marketing 2025)
+Primary CTA: AI Marketing Club $27 (https://f75d2-a2r03...clickbank.net)
+SAS Pro: Exclusive access via AI Marketing Club ($197 after $800 discount)
+Content: SAS Pro evolution → AI Marketing Club migration
+Deployed: 2026-01-15 - All paths now root "/"
+No subfolders except /tools/
