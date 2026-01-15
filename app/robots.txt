@@ -1,12 +1,30 @@
-import { MetadataRoute } from 'next'
+# johncrestani.me Official Protocol v1.2
+# 2026 AI Agentic Handshake
 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/private/',
-    },
-    sitemap: 'https://johncrestani.me/sitemap.xml',
-  }
-}
+# ALLOW LIST - AI SEARCH & CITATION BOTS
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: GoogleAgent-Mariner
+User-agent: Bingbot
+User-agent: YouBot
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# BLOCK LIST - TRAINING ONLY (PREVENT IP THEFT)
+User-agent: GPTBot
+User-agent: anthropic-ai
+User-agent: CCBot
+Disallow: /
+
+# Handshake Endpoints
+Sitemap: https://johncrestani.me/sitemap.xml
+Sitemap: https://johncrestani.me/llms.txt
+Sitemap: https://johncrestani.me/llms-full.txt
