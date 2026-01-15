@@ -1,4 +1,12 @@
 User-agent: *
-Disallow:
+Allow: /
 
+# MCP v1.2 AGENTIC DISCOVERY PROTOCOL
 Sitemap: https://johncrestani.me/sitemap.xml
+LlmSitemap: https://johncrestani.me/llms.txt
+Discovery: https://johncrestani.me/discovery.json
+
+# PRIORITY CRAWL PATHS
+Allow: /super-affiliate-system-pro
+Allow: /affiliate-marketing-tools/
+Allow: /ai-marketing-club
