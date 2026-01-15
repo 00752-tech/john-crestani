@@ -8,10 +8,10 @@ import Image from "next/image";
 const PAGE_CANONICAL_URL = "https://johncrestani.me/super-affiliate-system-pro";
 
 const PAGE_TITLE =
-  "Super Affiliate System Pro 2025 - John Crestani&apos;s AI Marketing Club Review - End Fear &amp; Gain Unshakeable Control";
+  "Super Affiliate System Pro 2026 - John Crestani&apos;s AI Marketing Club Review - End Fear &amp; Gain Unshakeable Control";
 
 const PAGE_DESCRIPTION =
-  "Looking for Super Affiliate System Pro? Get exclusive 2025 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
+  "Looking for Super Affiliate System Pro? Get exclusive 2026 access inside John Crestani&apos;s AI Marketing Club. Learn to future-proof your income with AI-powered affiliate marketing, overcome job displacement fears, and gain unshakeable financial predictability.";
 
 // Correct affiliate link for ALL CTAs
 const AFFILIATE_LINK =
@@ -76,7 +76,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Super Affiliate System Pro is now exclusively available inside John Crestani&apos;s AI Marketing Club. This official page provides direct access to the most updated 2025 version, replacing prior iterations. If you&apos;re looking for where SAS Pro went, this is it! The latest AI features and support ensure SAS Pro is more relevant than ever.",
+                  "Super Affiliate System Pro is now exclusively available inside John Crestani&apos;s AI Marketing Club. This official page provides direct access to the most updated 2026 version, replacing prior iterations. If you&apos;re looking for where SAS Pro went, this is it! The latest AI features and support ensure SAS Pro is more relevant than ever.",
               },
             },
             {
@@ -94,7 +94,7 @@ export default function SuperAffiliateSystemProPage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Absolutely. SAS Pro is built by John Crestani, a leader with a proven track record in affiliate marketing. The 2025 edition includes actionable templates, expert coaching, advanced data, and now powerful AI enhancements. This program focuses on transparent, lasting results — not hype or empty promises.",
+                  "Absolutely. SAS Pro is built by John Crestani, a leader with a proven track record in affiliate marketing. The 2026 edition includes actionable templates, expert coaching, advanced data, and now powerful AI enhancements. This program focuses on transparent, lasting results — not hype or empty promises.",
               },
             },
             {
@@ -142,9 +142,9 @@ export default function SuperAffiliateSystemProPage() {
           // Added to fix Missing hasCourseInstance error
           hasCourseInstance: {
             "@type": "CourseInstance",
-            name: "Super Affiliate System Pro 2025 Enrollment",
+            name: "Super Affiliate System Pro 2026 Enrollment",
             description:
-              "Access to the 2025 AI-powered Super Affiliate System Pro online course via John Crestani's AI Marketing Club.",
+              "Access to the 2026 AI-powered Super Affiliate System Pro online course via John Crestani's AI Marketing Club.",
             courseMode: "Online",
             url: PAGE_CANONICAL_URL,
             image: "https://johncrestani.me/new_super_affiliate_system_pro_2025.webp",
@@ -156,7 +156,7 @@ export default function SuperAffiliateSystemProPage() {
             url: AFFILIATE_LINK,
             priceCurrency: "USD",
             price: "27",
-            priceValidUntil: "2025-12-31",
+            priceValidUntil: "2026-12-31",
             availability: "https://schema.org/InStock",
             category: "Online Course", // Added to fix Missing category warning
             seller: { "@type": "Organization", name: "John Crestani" },
@@ -190,7 +190,7 @@ export default function SuperAffiliateSystemProPage() {
         {/* HERO SECTION */}
         <section className="text-center">
           <h1 className="text-5xl font-extrabold gradient-text leading-tight mb-8">
-            Super Affiliate System Pro 2025
+            Super Affiliate System Pro 2026
             <br />
             End Fear &amp; Gain Unshakeable Control
           </h1>
@@ -201,7 +201,7 @@ export default function SuperAffiliateSystemProPage() {
           <div className="max-w-3xl mx-auto mb-12">
             <Image
               src="/new_super_affiliate_system_pro_2025.webp"
-              alt="Super Affiliate System Pro 2025 - AI Marketing Club: Your Path to Financial Predictability"
+              alt="Super Affiliate System Pro 2026 - AI Marketing Club: Your Path to Financial Predictability"
               width={700}
               height={460}
               priority
@@ -228,7 +228,7 @@ export default function SuperAffiliateSystemProPage() {
         {/* CLARITY & TRANSITION */}
         <section className="text-center max-w-3xl mx-auto space-y-8 px-4">
           <h2 className="text-4xl font-semibold gradient-text leading-snug">
-            The Official Transition: New 2025 Access Point &mdash; AI Marketing Club
+            The Official Transition: New 2026 Access Point &mdash; AI Marketing Club
           </h2>
           <p className="text-xl leading-relaxed">
             Wondering where Super Affiliate System Pro went? You&apos;re in the right place. The 2025 SAS Pro is now ONLY available as an upgrade via John Crestani&apos;s AI Marketing Club. This page bridges the info gap &mdash; no more outdated links, pricing confusion, or market noise.
@@ -264,7 +264,7 @@ export default function SuperAffiliateSystemProPage() {
         {/* CURRICULUM */}
         <section className="max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="text-4xl font-semibold gradient-text mb-6">
-            What You Get: Training &amp; Features (2025 Edition)
+            What You Get: Training &amp; Features (2026 Edition)
           </h2>
           <ul className="list-disc list-inside text-xl leading-relaxed space-y-3 text-gray-300 text-left">
             <li>
@@ -288,7 +288,7 @@ export default function SuperAffiliateSystemProPage() {
         {/* PRICING (MID CTA) */}
         <section className="text-center max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="text-4xl font-semibold gradient-text mb-6">
-            Exclusive 2025 Offer: Get In While It&apos;s Open
+            Exclusive 2026 Offer: Get In While It&apos;s Open
           </h2>
           <p className="text-xl leading-relaxed">
             Start for only <strong>$27</strong> and unlock Super Affiliate System Pro for <strong>$197</strong> &mdash; never before offered at this price. No gates, no subscription traps, just reliable training to future-proof your skills.
@@ -309,7 +309,7 @@ export default function SuperAffiliateSystemProPage() {
         {/* PROS & CONS */}
         <section className="max-w-3xl mx-auto px-4 space-y-8">
           <h2 className="text-4xl font-semibold gradient-text mb-6">
-            Super Affiliate System Pro 2025: The Complete Picture
+            Super Affiliate System Pro 2026: The Complete Picture
           </h2>
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex-1 text-xl leading-relaxed text-gray-300">
