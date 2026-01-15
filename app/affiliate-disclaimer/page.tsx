@@ -20,7 +20,7 @@ export default function AffiliateDisclaimer() {
 
         <h1 className="text-4xl font-bold mb-8">Affiliate Disclaimer</h1>
         <div className="space-y-6 text-gray-300">
-          <p>Last updated: January 1, 2025</p>
+          <p>Last updated: January 1, 2026</p>
           
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-white">FTC Disclosure</h2>
