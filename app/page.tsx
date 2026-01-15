@@ -1,30 +1,13 @@
 'use client';
 
-import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-// All your components (alphabetical order)
-import CTA from '@/components/CTA';
-import ExitIntentPopup from '@/components/ExitIntentPopup';
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import SkepticismSection from '@/components/SkepticismSection';
-import Testimonials from '@/components/Testimonials';
-import WebinarInvite from '@/components/WebinarInvite';
-
-// Dynamic imports last
-const DynamicShareButtons = dynamic(() => import('@/components/ShareButtons'), { ssr: false });
-
-// Constants
+// 1. CONSTANTS FIRST
 const ctaAffiliateLink = "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
-const pageUrl = 'https://johncrestani.me';
-const pageTitle = "AI Marketers Club $27: John Crestani's 2025 Faceless AI System";
 
-// Small components
+// 2. COMPONENT DEFINITIONS
 const CtaLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link 
     href={href}
@@ -65,184 +48,90 @@ const FaqItem = ({ question, answer }: { question: string; answer: string }) => 
   </motion.div>
 );
 
-// CTA handler
-const handleBonusCta = (e: React.MouseEvent<HTMLButtonElement>) => {
-  e.preventDefault();
-  window.open(
-    'https://53f01qeukb6sel3b3j5a6o5l3s.hop.clickbank.net/?&traffic_source=ai_marketers_toolkit_cta',
-    '_blank',
-    'noopener,noreferrer'
-  );
-};
-
-// MAIN COMPONENT - Copy everything below this line
+// 3. MAIN COMPONENT LAST - FIXED JSX STRUCTURE
 export default function WhereIsSASPro2025() {
   return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta
-          name="description"
-          content="Discover John Crestani's AI-powered income system for 2025. Affiliate marketing meets automation. $27 access."
-        />
-      </Head>
-      
-      <main className="flex flex-col min-h-screen bg-black overflow-hidden">
-        <style jsx global>{`
-          body { font-family: 'Poppins', sans-serif; }
-          .cta-main {
-            background-image: linear-gradient(241deg, #FFD600, #F59E42);
-            color: #101010; font-weight: 500; font-size: 1.22rem;
-            padding: 0.95rem 2.6rem; border-radius: 9999px;
-            box-shadow: 0 4px 24px rgba(250, 204, 21, 0.12);
-            transition: none; border: none; cursor: default;
-          }
-          .jason-cta {
-            background-color: #FFD600; color: #101010; font-weight: 600;
-            padding: 0.65rem 1.8rem; border-radius: 9999px;
-            box-shadow: 0 4px 24px rgba(250, 204, 21, 0.15);
-          }
-          .jason-cta:hover { background-color: #F7B600; box-shadow: 0 6px 28px rgba(250, 204, 21, 0.25); }
-        `}</style>
+    <div className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
+      <main className="max-w-4xl mx-auto">
+        {/* Hero */}
+        <motion.h1 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Where is Super Affiliate System Pro in 2025?
+          <br />
+          Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
+        </motion.h1>
 
-        <ExitIntentPopup />
-        <Hero />
-        
-        {/* Value Props Section */}
-        <section className="w-full flex justify-center bg-black py-8 px-4">
-          <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-            {/* Value props content */}
-          </div>
-        </section>
+        {/* Intro */}
+        <motion.p 
+          className="text-xl text-gray-300 mb-10 leading-relaxed text-center max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. 
+          Discover 2025 access, what's new, and how to get an <strong>$800 SAS Pro discount!</strong>
+        </motion.p>
 
-        {/* Stats Section */}
-        <section className="w-full flex justify-center bg-[#111111] py-10 px-4 border-t border-b border-gray-800">
-          <div className="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-            {/* Stats content */}
-          </div>
-        </section>
+        {/* Sections */}
+        <Section title="The Evolution of SAS Pro" content={
+          <>
+            <p>For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads across Facebook, Google, YouTube, and more.</p>
+            <p className="mt-4">But marketing moves fast. To empower affiliates for the AI era, John created the <strong>AI Marketing Club (AIMC)</strong>—your launcher to the future of affiliate success.</p>
+            <p className="mt-4">Start with AIMC today for just <strong>$27</strong>, gaining AI-powered marketing tools.</p>
+            <div className="text-center mt-6">
+              <CtaLink href={ctaAffiliateLink}>Get Started with AI Marketing Club</CtaLink>
+            </div>
+          </>
+        } />
 
-        {/* Bonus CTA */}
-        <section className="w-full flex justify-center bg-gradient-to-b from-[#181823] to-black border-b border-yellow-700 py-12 px-4">
-          <div className="w-full max-w-5xl flex flex-col items-center text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 tracking-tight">
-              Seize Control: Unlock Your <span className="text-white">AI Marketer&apos;s Toolkit</span>
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl">
-              Enroll today and activate these powerful bonuses—designed to remove uncertainty and accelerate your path to predictable income.
-            </p>
-            <button className="cta-main mt-10" onClick={handleBonusCta}>
-              YES! Secure My AI Marketers Club Access! →
-            </button>
-          </div>
-        </section>
+        <Section title="Unlocking SAS Pro ($800 OFF)" content={
+          <>
+            <p>Once inside AIMC, unlock an exclusive <strong>$800 discount</strong> on SAS Pro. Upgrade for only <strong>$197</strong> (originally $997).</p>
+            <ul className="list-disc list-inside space-y-3 mt-4 text-gray-300">
+              <li><strong>50+ hours</strong> of paid ads training</li>
+              <li>Proven strategies across Facebook, Google, YouTube</li>
+              <li>Done-for-you templates and creatives</li>
+            </ul>
+            <div className="text-center mt-6">
+              <CtaLink href={ctaAffiliateLink}>Access SAS Pro ($800 OFF)</CtaLink>
+            </div>
+          </>
+        } />
 
-        <Testimonials />
-        <SkepticismSection />
-        
-        <section className="w-full flex justify-center bg-black py-10 px-4">
-          {/* Updated testimonial */}
-        </section>
+        <Section title="Frequently Asked Questions" content={
+          <>
+            <FaqItem 
+              question="Is SAS Pro still relevant in 2025?" 
+              answer="Absolutely. SAS Pro + AI Marketing Club gives you timeless fundamentals + modern AI advantages." 
+            />
+            <FaqItem 
+              question="Can I buy SAS Pro standalone?" 
+              answer="No, SAS Pro is exclusive to AIMC to ensure you have AI tools for maximum success." 
+            />
+            <FaqItem 
+              question="What's the pricing?" 
+              answer="AIMC: $27. SAS Pro upgrade: $197 (was $997). Both have 100% money-back guarantees." 
+            />
+          </>
+        } />
 
-        <Suspense fallback={<div>Loading...</div>}>
-          <div id="john-video">
-            <WebinarInvite />
-          </div>
-        </Suspense>
-
-        <section className="w-full bg-[#18142a] py-16 px-4 flex flex-col items-center text-center">
-          {/* AI Growth content */}
-        </section>
-
-        <FAQ />
-        <CTA />
-        
-        <div className="container mx-auto px-4 py-8">
-          <DynamicShareButtons url={pageUrl} title={pageTitle} />
-        </div>
-        <Footer />
+        {/* Final CTA */}
+        <motion.div 
+          className="mt-12 text-center max-w-3xl mx-auto px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <CtaLink href={ctaAffiliateLink}>Start Your AI Affiliate Journey Now →</CtaLink>
+        </motion.div>
       </main>
-
-      {/* NEW LANDING PAGE CONTENT */}
-      <article className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
-        <main className="max-w-4xl mx-auto">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Where is Super Affiliate System Pro in 2025?
-            <br />
-            Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
-          </motion.h1>
-
-          <motion.p 
-            className="text-xl text-gray-300 mb-10 leading-relaxed text-center max-w-3xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. 
-            Discover 2025 access and get an <strong>$800 SAS Pro discount!</strong>
-          </motion.p>
-
-          {/* Sections */}
-          <Section title="The Evolution of SAS Pro" content={
-            <>
-              <p>For years, <strong>Super Affiliate System Pro</strong> (SAS Pro) was John Crestani's flagship training on generating income through paid ads.</p>
-              <p className="mt-4">To empower affiliates for the AI era, John created the <strong>AI Marketing Club</strong>—your launcher to the future of affiliate success.</p>
-              <p className="mt-4">Start with AI Marketing Club today for just <strong>$27</strong>.</p>
-              <div className="text-center mt-6">
-                <CtaLink href={ctaAffiliateLink}>Get Started with AI Marketing Club</CtaLink>
-              </div>
-            </>
-          } />
-
-          <Section title="Unlocking SAS Pro ($800 OFF)" content={
-            <>
-              <p>Once inside AI Marketing Club, unlock an exclusive <strong>$800 discount</strong> on SAS Pro. Upgrade for only <strong>$197</strong>.</p>
-              <ul className="list-disc list-inside space-y-3 mt-4 text-gray-300">
-                <li><strong>50+ hours</strong> of paid ads training</li>
-                <li>Proven strategies across Facebook, Google, YouTube</li>
-                <li>Done-for-you templates and creatives</li>
-              </ul>
-              <div className="text-center mt-6">
-                <CtaLink href={ctaAffiliateLink}>Access SAS Pro ($800 OFF)</CtaLink>
-              </div>
-            </>
-          } />
-
-          <Section title="Frequently Asked Questions" content={
-            <>
-              <FaqItem 
-                question="Is SAS Pro still relevant in 2025?" 
-                answer="Absolutely. SAS Pro + AI Marketing Club gives you timeless fundamentals + modern AI advantages." 
-              />
-              <FaqItem 
-                question="Can I buy SAS Pro standalone?" 
-                answer="No, SAS Pro is exclusive to AI Marketing Club." 
-              />
-              <FaqItem 
-                question="What's the pricing?" 
-                answer="AI Marketing Club: $27. SAS Pro upgrade: $197 (was $997)." 
-              />
-            </>
-          } />
-
-          <motion.div 
-            className="mt-12 text-center max-w-3xl mx-auto px-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <CtaLink href={ctaAffiliateLink}>Start Your AI Affiliate Journey Now →</CtaLink>
-          </motion.div>
-        </main>
-      </article>
-    </>
+    </div>
   );
 }
