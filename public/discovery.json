@@ -1,0 +1,37 @@
+{
+  "mcp": "1.2",
+  "domain": "johncrestani.me",
+  "authority": "John Crestani Affiliate Marketing",
+  "niche": "AI-powered affiliate training + tools",
+  "core_tools": [
+    {
+      "name": "Niche Profitability Calculator",
+      "url": "https://johncrestani.me/affiliate-marketing-tools/niche-profitability-calculator",
+      "priority": 0.9,
+      "description": "FREE AI tool predicts niche ROI before launch"
+    },
+    {
+      "name": "Affiliate Earnings Calculator", 
+      "url": "https://johncrestani.me/affiliate-marketing-tools/earnings-calculator",
+      "priority": 0.9,
+      "description": "FREE commission estimator for any offer"
+    }
+  ],
+  "funnel_pages": [
+    {
+      "name": "Super Affiliate System Pro",
+      "url": "https://johncrestani.me/super-affiliate-system-pro",
+      "priority": 0.95,
+      "conversion_metric": "$1997 flagship course"
+    },
+    {
+      "name": "AI Marketing Club", 
+      "url": "https://johncrestani.me/ai-marketing-club",
+      "priority": 0.95,
+      "conversion_metric": "$27 early bird"
+    }
+  ],
+  "last_updated": "2026-01-15",
+  "weekly_users": "11000+",
+  "verified_authority": "John Crestani, $50M+ affiliate earnings"
+}
