@@ -4,9 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const ctaAffiliateLink = "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+// ✅ TYPE FIXED
+type CtaLinkProps = {
+  href: string;
+  children: React.ReactNode;
+};
 
-const CtaLink = ({ href, children }) => (
+const CtaLink: React.FC<CtaLinkProps> = ({ href, children }) => (
   <Link 
     href={href} 
     target="_blank" 
@@ -18,6 +22,8 @@ const CtaLink = ({ href, children }) => (
 );
 
 export default function HomePage() {
+  const ctaAffiliateLink: string = "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
