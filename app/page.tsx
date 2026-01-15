@@ -1,12 +1,24 @@
 'use client';
+
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const ctaAffiliateLink = "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
+const ctaAffiliateLink: string = "https://f75d2-a2r03odn9fcbizbsbrbz.hop.clickbank.net/?&traffic_source=blog_wheres_sas_pro";
 
-const CtaLink = ({ href, children }) => (
-  <Link href={href} target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+// ✅ TYPE FIXED - No more TypeScript errors
+interface CtaLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const CtaLink: React.FC<CtaLinkProps> = ({ href, children }) => (
+  <Link 
+    href={href} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+  >
     {children}
   </Link>
 );
@@ -15,24 +27,49 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20 px-4">
       <main className="max-w-4xl mx-auto">
-        <motion.h1 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
+        <motion.h1 
+          className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent leading-snug"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           Where is Super Affiliate System Pro in 2025?
-          <br />Get Exclusive Access + Secret Discount
+          <br />
+          Get Exclusive Access + a Secret Discount to John Crestani's AI Marketing Club
         </motion.h1>
 
-        <motion.p className="text-xl text-gray-300 mb-10 text-center max-w-3xl mx-auto" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-          John Crestani's legendary program is now in AI Marketing Club. Get $800 SAS Pro discount!
+        <motion.p 
+          className="text-xl text-gray-300 mb-10 leading-relaxed text-center max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Searching for Super Affiliate System Pro? John Crestani's legendary program is now exclusively inside the AI Marketing Club. 
+          Discover 2025 access, what's new, and how to get an <strong>$800 SAS Pro discount!</strong>
         </motion.p>
 
-        <section className="mb-16">
-          <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Start with $27</h2>
-          <div className="text-center">
-            <CtaLink href={ctaAffiliateLink}>Get AI Marketing Club →</CtaLink>
+        <section className="mb-16 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            The Evolution of SAS Pro
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-200 leading-relaxed text-center">
+            <p>Start with AI Marketing Club today for just <strong>$27</strong>, gaining AI-powered marketing tools + <strong>$800 SAS Pro discount</strong>.</p>
+            <div className="text-center mt-6">
+              <CtaLink href={ctaAffiliateLink}>Get Started with AI Marketing Club →</CtaLink>
+            </div>
           </div>
         </section>
 
-        <motion.div className="text-center mt-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
-          <CtaLink href={ctaAffiliateLink}>Start Your Journey Now →</CtaLink>
+        <motion.div 
+          className="mt-12 text-center max-w-3xl mx-auto px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <CtaLink href={ctaAffiliateLink}>Start Your AI Affiliate Journey Now →</CtaLink>
         </motion.div>
       </main>
     </div>
