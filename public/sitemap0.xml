@@ -1,0 +1,18 @@
+GitHub → https://github.com/00752-tech/john-crestani
+1. "Add file" → Name: `public/sitemap0.xml`
+2. PASTE:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://johncrestani.me/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://johncrestani.me/affiliate-disclosure</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
