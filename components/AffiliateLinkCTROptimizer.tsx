@@ -1,6 +1,5 @@
 'use client';
-
-export default function ROASCalculator() {
-  return <div>ROASCalculator placeholder</div>;
+interface AffiliateLinkCTROptimizerProps { /* add props if needed */ }
+export default function AffiliateLinkCTROptimizer({}: AffiliateLinkCTROptimizerProps) {
+  return <div>AffiliateLinkCTROptimizer placeholder</div>;
 }
-
