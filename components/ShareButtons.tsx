@@ -1,6 +1,10 @@
 'use client';
 
-export default function ROASCalculator() {
-  return <div>ROASCalculator placeholder</div>;
+interface ShareButtonsProps {
+  url: string;
+  title: string;
 }
 
+export default function ShareButtons({ url, title }: ShareButtonsProps) {
+  return <div>ShareButtons placeholder ({url}, {title})</div>;
+}
